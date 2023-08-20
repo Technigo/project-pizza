@@ -54,7 +54,7 @@ if (food == 1) {
       confirmation = parseInt(prompt(`One child-sized portion will be prepared for you. It will cost $10.
       Please enter 1-2 to confirm your order:
       1. Yes
-      2. No`));
+      2. No`)); // how to print the dish the client ordered in confirmation???
 
       // Order confirmation
       if (confirmation == 1) {
@@ -70,7 +70,7 @@ if (food == 1) {
       confirmation = parseInt(prompt(`One adult-sized portion will be prepared for you. It will cost $15.
       Please enter 1-2 to confirm your order:
       1. Yes
-      2. No`));
+      2. No`)); // how to print the dish the client ordered in confirmation???
 
       // Order confirmation
       if (confirmation == 1) {
@@ -114,7 +114,7 @@ if (food == 1) {
       confirmation = parseInt(prompt(`One child-sized portion will be prepared for you. It will cost $10.
       Please enter 1-2 to confirm your order:
       1. Yes
-      2. No`));
+      2. No`)); // how to print the dish the client ordered in confirmation???
 
       // Order confirmation
       if (confirmation == 1) {
@@ -130,7 +130,7 @@ if (food == 1) {
       confirmation = parseInt(prompt(`One adult-sized portion will be prepared for you. It will cost $15.
       Please enter 1-2 to confirm your order:
       1. Yes
-      2. No`));
+      2. No`)); // how to print the dish the client ordered in confirmation???
 
       // Order confirmation
       if (confirmation == 1) {
@@ -175,7 +175,7 @@ if (food == 1) {
       confirmation = parseInt(prompt(`One child-sized portion will be prepared for you. It will cost $10.
       Please enter 1-2 to confirm your order:
       1. Yes
-      2. No`));
+      2. No`)); // how to print the dish the client ordered in confirmation???
 
       // Order confirmation
       if (confirmation == 1) {
@@ -191,7 +191,7 @@ if (food == 1) {
       confirmation = parseInt(prompt(`One adult-sized portion will be prepared for you. It will cost $15.
       Please enter 1-2 to confirm your order:
       1. Yes
-      2. No`));
+      2. No`)); // how to print the dish the client ordered in confirmation???
 
       // Order confirmation
       if (confirmation == 1) {
