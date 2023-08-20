@@ -9,32 +9,150 @@ let message_name = prompt(`Please enter your name:`);
 alert(`Nice to meet you ${message_name}`);
 // Step 2 - Food choice
 // Your code goes here
-let menu = prompt(
-  `What type of food would you like to order? \n Enter a number: \n 1- Pizza \n 2- Pasta \n 3- Salad`
+let orderName = Number(
+  prompt(
+    `What type of food would you like to order? \nPlease enter a number: \n 1- Pizza \n 2- Pasta \n 3- Salad`
+  )
 );
-let food_type;
-switch (menu) {
-  case "1":
-    food_type = "Pizza";
+let typeFood;
+switch (orderName) {
+  case 1:
+    typeFood = "Pizza";
     break;
-  case "2":
-    food_type = "Pasta";
+  case 2:
+    typeFood = "Pasta";
     break;
-  case "3":
-    food_type = "Salad";
+  case 3:
+    typeFood = "Salad";
     break;
-
   default:
-    food_type = "invalid food type";
+    typeFood = "Invalid type";
     break;
 }
-alert(`You've choose ${food_type}!`);
+alert(`You've chosen ${typeFood} !`);
+let firstOption = typeFood;
+// // Step 3 - Subtype choice
+// // Your code goes here
+switch (firstOption) {
+  case "Pizza":
+    let pizza_type = Number(
+      prompt(
+        `Select a Pizza type: \n Enter a number:\n 1- Napolitana \n2- Hawaian \n3- Pepperoni`
+      )
+    );
+    let option_pizza;
+    switch (pizza_type) {
+      case 1:
+        option_pizza = "Napolitana";
+        break;
+      case 2:
+        option_pizza = "Hawaian";
+        break;
+      case 3:
+        option_pizza = "Pepperoni";
+        break;
+      default:
+        option_pizza = "Invalid pizza type";
+        break;
+    }
+    alert(`You've chosen ${option_pizza}`);
+    break;
 
-// Step 3 - Subtype choice
-// Your code goes here
+  case "Pasta":
+    let pasta_type = Number(
+      prompt(
+        `Select a pasta type : \n Enter a number \n 1- Spaghetti Carbonara \n2- Fettuccine Alfredo \n3- Cheesy Tortellini`
+      )
+    );
+    let option_pasta;
+    switch (pasta_type) {
+      case 1:
+        option_pasta = "Spaghetti Carbonara";
+        break;
+      case 2:
+        option_pasta = "Fettuccine Alfredo";
+        break;
+      case 3:
+        option_pasta = "Cheesy Tortellini";
+        break;
+
+      default:
+        option_pasta = `Invalid pasta type`;
+        break;
+    }
+    alert(`You've chosen ${option_pasta}`);
+    break;
+
+  case "Salad":
+    let salad_type = Number(
+      prompt(
+        `Select a salad type  \n Enter a number \n 1- Caesar Salad \n2- Caprese Salad \n3- Greek Salad`
+      )
+    );
+    let option_salad;
+    switch (salad_type) {
+      case 1:
+        option_salad = "Caesar Salad";
+        break;
+      case 2:
+        option_salad = "Caprese Salad";
+        break;
+      case 3:
+        option_salad = "Greek Salad";
+        break;
+
+      default:
+        option_salad = `Invalid salad type`;
+        break;
+    }
+    alert(`You've chosen ${option_salad}`);
+    break;
+}
 
 // Step 4 - Age
 // Your code goes here
+let age = Number(
+  prompt(`Is this food for a child or an adult? Type your age:`)
+);
+if (age <= 18) {
+  let child = parseInt(
+    prompt(
+      `One child sized will be prepared for you. That'll be €10. Are you sure you want to order this? \n Enter a number to confirm: \n1- Yes\n2- No`
+    )
+  );
+  console.log(child);
+} else {
+  parseInt(
+    prompt(
+      `One adult sized will be prepared for you. That'll be €15. Are you sure you want to order this? \n Enter a number to confirm: \n1- Yes\n2- No `
+    )
+  );
+  console.log(adult);
+}
 
 // Step 5 - Order confirmation
 // Your code goes here
+let confirm = 1;
+let cancle = 2;
+if (confirm) {
+  alert(
+    `Thank you for your order! Your delicious meal will be prepared. See you soon!👋`
+  );
+} else if (cancle) {
+  alert(`No problem, come back and order anytime you want.`);
+} else {
+  alert(`Invalid choice. Please select 1 Yes or 2 for No.`);
+}
+// switch (yes && no) {
+//   case 1:
+//     alert(
+//       `Thank you for your order! Your delicious meal will be prepared. See you soon!👋`
+//     );
+//     break;
+//   case 2:
+//     alert(`No problem, come back and order anytime you want.`);
+//     break;
+//   default:
+//     alert(`Invalid choice. Please select 1 Yes or 2 for No.`);
+//     break;
+// }
