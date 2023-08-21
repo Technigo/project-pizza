@@ -12,7 +12,16 @@ if (person != null) {
 }
 
 // Step 2 - Food choice
-// Your code goes here
+let foodOption = prompt("What would you like to order? \n 1 Pasta \n 2 Pizza \n 3 Meat");
+if (foodOption == 1) {
+  alert("Pizza is a great choise!");
+} else if (foodOption == 2) {
+  alert("Amazing! Pasta here is delicious!");
+} else if (foodOption == 3) {
+  alert("wow, meat, that is a great choise!");
+} else {
+  alert("Oh! are you not hungry? Please choose one of the options!")
+}
 
 // Step 3 - Subtype choice
 // Your code goes here
