@@ -74,7 +74,7 @@ let ageOption = prompt("How old are you?");
 if (ageOption >= 18) {
   alert("You have ordered a " + foodOptionText + " from the grown ups menu!");
 } else {
-  alert("you have ordered a " + oodOptionText + "from the childrens menu!");
+  alert("you have ordered a " + foodOptionText + "from the childrens menu!");
 }
 // Step 5 - Order confirmation
 // Your code goes here
