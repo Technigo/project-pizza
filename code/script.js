@@ -44,7 +44,7 @@ switch (foodChoice){
     + "\t3. Vongole\n"
     break;
   case 3:
-    "Select a Salad type: \n \n"
+    menuSubchoice = "Select a Salad type: \n \n"
     + "\tEnter a number:\n"
     + "\t1. Greek salad\n"
     + "\t2. Chicken salad\n"
