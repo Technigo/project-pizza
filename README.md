@@ -1,11 +1,8 @@
 # Project Name
-
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project name is Javascript Pizzeria. A pop-up will appear on your screen with welcome message, inviting you to start your journey in a fun and interactive way. This is just the beginning of using JavaScript to make things happen on a webpage!
 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+At the begnning, I did not immediatey recognize the data type. My approach involved using the "typeof" method to initially inspect the data. Subsequently, I utilized the "parseInt" and "Number" methods to address the issue at hand. During the debugging process, I consistently printed the results incrementally, allowing me to analyze the code's behavior at each step.
 
 ## View it live
-
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://javascriptpizzeria.netlify.app/
