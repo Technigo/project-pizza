@@ -72,9 +72,10 @@ if (foodOption == 1) {
 let ageOption = prompt("How old are you?");
 
 if (ageOption >= 18) {
-  alert("You have ordered a " + foodOptionText + " from the grown ups menu!");
+  alert("You have ordered a " + foodOption + " from the grown ups menu!");
 } else {
-  alert("you have ordered a " + foodOptionText + "from the childrens menu!");
+  alert("you have ordered a " + foodOption + "from the childrens menu!");
 }
 // Step 5 - Order confirmation
-// Your code goes here
+
+let confirmOption = prompt("One " + ageOption + foodOptionText + "will be prapared for you for only €15. Are you sure you want to order this? \n Enter a number to confirm: \n 1-yes \n 2-No")
