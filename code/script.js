@@ -114,45 +114,29 @@ switch (firstOption) {
 let age = Number(
   prompt(`Is this food for a child or an adult? Type your age:`)
 );
+let child;
+let adult;
 if (age <= 18) {
-  let child = parseInt(
+  child = Number(
     prompt(
       `One child sized will be prepared for you. That'll be €10. Are you sure you want to order this? \n Enter a number to confirm: \n1- Yes\n2- No`
     )
   );
-  console.log(child);
 } else {
-  parseInt(
+  adult = Number(
     prompt(
       `One adult sized will be prepared for you. That'll be €15. Are you sure you want to order this? \n Enter a number to confirm: \n1- Yes\n2- No `
     )
   );
-  console.log(adult);
 }
-
 // Step 5 - Order confirmation
 // Your code goes here
-let confirm = 1;
-let cancle = 2;
-if (confirm) {
+if (child == 1 || adult == 1) {
   alert(
     `Thank you for your order! Your delicious meal will be prepared. See you soon!👋`
   );
-} else if (cancle) {
+} else if (child == 2 || adult == 2) {
   alert(`No problem, come back and order anytime you want.`);
 } else {
   alert(`Invalid choice. Please select 1 Yes or 2 for No.`);
 }
-// switch (yes && no) {
-//   case 1:
-//     alert(
-//       `Thank you for your order! Your delicious meal will be prepared. See you soon!👋`
-//     );
-//     break;
-//   case 2:
-//     alert(`No problem, come back and order anytime you want.`);
-//     break;
-//   default:
-//     alert(`Invalid choice. Please select 1 Yes or 2 for No.`);
-//     break;
-// }
