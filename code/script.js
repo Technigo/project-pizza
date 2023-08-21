@@ -12,7 +12,7 @@ if (person != null) {
 }
 
 // Step 2 - Food choice
-let foodOption = prompt("What would you like to order? \n 1 Pasta \n 2 Pizza \n 3 Salad");
+let foodOption = prompt("What would you like to order? \n 1 Pizza \n 2 Pasta \n 3 Salad");
 if (foodOption == 1) {
   alert("Pizza is a great choice!");
 } else if (foodOption == 2) {
@@ -37,7 +37,7 @@ if (foodOption == 3) {
 }
 
 // Step 4 - Age
-// Your code goes here
+let ageOption = prompt("Is the food for a child or an adult?");
 
 // Step 5 - Order confirmation
 // Your code goes here
