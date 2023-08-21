@@ -17,7 +17,11 @@ Enter number 1-3 to choose among the followings:
 3. Sallad`
 ));
 
-let subtype;
+let foodName; // to print the name of food in confirmation
+
+let subtype; 
+
+let subtypeName; // to print the name of subtype in confirmation
 
 let age;
 
@@ -27,7 +31,9 @@ let confirmation;
 
 // Pizza
 if (food == 1) {
-  alert(`Thank you. Let's get you a pizza!`);
+  foodName = "pizza";
+  alert(`Thank you. Let's get you a ${foodName}!`);
+  
   // Subtype choice for pizza
   subtype = parseInt(prompt(
     `Please enter number 1-3 to select a pizza type:
@@ -36,25 +42,29 @@ if (food == 1) {
     3. Quattro Stagioni`
   ));
   if (subtype == 1) {
-    alert(`You selected a Hawaiian pizza!`);
+    subtypeName = "Hawaiian pizza";
+    alert(`You selected a ${subtypeName}!`);
   } else if (subtype == 2) {
-    alert(`You selected a Pepperoni pizza!`);
+    subtypeName = "Pepperoni pizza";
+    alert(`You selected a ${subtypeName}!`);
   } else if (subtype == 3) {
-    alert(`You selected a Quattro Stagioni pizza!`);
+    subtypeName = "Quattro Stagioni pizza";
+    alert(`You selected a ${subtypeName}!`);
   } else {
     alert(`Invalid choice. Please enter number 1-3 to choose among the dishes.`);
-    // go back to selecting pizza???
+    // how to go back to selecting pizza???
   }
+
 
   // Age
   if (subtype >= 1 && subtype <= 3) {
     age = parseInt(prompt(`Is this food for a child or an adult? Type your age:`));
     if (age >= 0 && age < 18) {
       // Child-size
-      confirmation = parseInt(prompt(`One child-sized portion will be prepared for you. It will cost $10.
+      confirmation = parseInt(prompt(`One child-sized ${subtypeName} will be prepared for you. It will cost $10.
       Please enter 1-2 to confirm your order:
       1. Yes
-      2. No`)); // how to print the dish the client ordered in confirmation???
+      2. No`));
 
       // Order confirmation
       if (confirmation == 1) {
@@ -62,15 +72,15 @@ if (food == 1) {
       } else if (confirmation == 2) {
         alert(`No problem. Go back and order anytime. See you then!`);
       } else {
-        alert(`Invalid choice. Please enter number 1-2 to confirm your order.`); // go back to confirming order???
+        alert(`Invalid choice. Please enter number 1-2 to confirm your order.`); // how to go back to confirming order???
       }
 
     } else if (age >= 18) {
       // Adult-size
-      confirmation = parseInt(prompt(`One adult-sized portion will be prepared for you. It will cost $15.
+      confirmation = parseInt(prompt(`One adult-sized ${subtypeName} will be prepared for you. It will cost $15.
       Please enter 1-2 to confirm your order:
       1. Yes
-      2. No`)); // how to print the dish the client ordered in confirmation???
+      2. No`));
 
       // Order confirmation
       if (confirmation == 1) {
@@ -78,17 +88,19 @@ if (food == 1) {
       } else if (confirmation == 2) {
         alert(`No problem. Go back and order anytime. See you then!`);
       } else {
-        alert(`Invalid choice. Please enter number 1-2 to confirm your order.`); // go back to confirming order???
+        alert(`Invalid choice. Please enter number 1-2 to confirm your order.`); // how to go back to confirming order???
       }
     } else {
       // Handling invalid answer for age
-      alert(`Invalid answer. Please enter a number equal or greater than 0.`) // go back to putting in age???
+      alert(`Invalid answer. Please enter a number equal or greater than 0.`) // how to go back to putting in age???
     }
   }
 
 // Pasta
 } else if (food == 2) {
-  alert(`Thank you. Let's get you a pasta!`);
+  foodName = "pasta";
+  alert(`Thank you. Let's get you a ${foodName}!`);
+  
   // Subtype choice for pasta
   subtype = parseInt(prompt(
     `Please enter number 1-3 to select a pasta type:
@@ -97,24 +109,28 @@ if (food == 1) {
     3. Pesto pasta`
   ));
   if (subtype == 1) {
-    alert(`You selected a Spaghetti Bolognese!`);
+    subtypeName = "Spaghetti Bolognese";
+    alert(`You selected a ${subtypeName}!`);
   } else if (subtype == 2) {
-    alert(`You selected a Fettuccine Alfredo!`);
+    subtypeName = "Fettuccine Alfredo";
+    alert(`You selected a ${subtypeName}!`);
   } else if (subtype == 3) {
-    alert(`You selected a Pesto pasta!`);
+    subtypeName = "Pesto pasta";
+    alert(`You selected a ${subtypeName}!`);
   } else {
     alert(`Invalid choice. Please enter number 1-3 to choose among the dishes.`);
-    // go back to selecting pasta???
+    // how to go back to selecting pasta???
   }
+
   // Age
   if (subtype >= 1 && subtype <= 3) {
     age = parseInt(prompt(`Is this food for a child or an adult? Type your age:`));
     if (age >= 0 && age < 18) {
       // Child-size
-      confirmation = parseInt(prompt(`One child-sized portion will be prepared for you. It will cost $10.
+      confirmation = parseInt(prompt(`One child-sized ${subtypeName} will be prepared for you. It will cost $10.
       Please enter 1-2 to confirm your order:
       1. Yes
-      2. No`)); // how to print the dish the client ordered in confirmation???
+      2. No`));
 
       // Order confirmation
       if (confirmation == 1) {
@@ -122,15 +138,15 @@ if (food == 1) {
       } else if (confirmation == 2) {
         alert(`No problem. Go back and order anytime. See you then!`);
       } else {
-        alert(`Invalid choice. Please enter number 1-2 to confirm your order.`); // go back to confirming order???
+        alert(`Invalid choice. Please enter number 1-2 to confirm your order.`); // how to go back to confirming order???
       }
 
     } else if (age >= 18) {
       // Adult-size
-      confirmation = parseInt(prompt(`One adult-sized portion will be prepared for you. It will cost $15.
+      confirmation = parseInt(prompt(`One adult-sized ${subtypeName} will be prepared for you. It will cost $15.
       Please enter 1-2 to confirm your order:
       1. Yes
-      2. No`)); // how to print the dish the client ordered in confirmation???
+      2. No`));
 
       // Order confirmation
       if (confirmation == 1) {
@@ -138,17 +154,19 @@ if (food == 1) {
       } else if (confirmation == 2) {
         alert(`No problem. Go back and order anytime. See you then!`);
       } else {
-        alert(`Invalid choice. Please enter number 1-2 to confirm your order.`); // go back to confirming order???
+        alert(`Invalid choice. Please enter number 1-2 to confirm your order.`); // how to go back to confirming order???
       }
     } else {
       // Handling invalid answer for age
-      alert(`Invalid answer. Please enter a number equal or greater than 0.`) // go back to putting in age???
+      alert(`Invalid answer. Please enter a number equal or greater than 0.`) // how to go back to putting in age???
     }
   }
 
 // Salad
 } else if (food == 3) {
-  alert(`Thank you. Let's get you a salad!`);
+  foodName = "salad";
+  alert(`Thank you. Let's get you a ${foodName}!`);
+  
   // Subtype choice for salad
   subtype = parseInt(prompt(
     `Please enter number 1-3 to select salad type:
@@ -157,14 +175,17 @@ if (food == 1) {
     3. Carprese Salad`
   ));
   if (subtype == 1) {
-    alert(`You selected a Caesar Salad!`);
+    subtypeName = "Caesar Salad";
+    alert(`You selected a ${subtypeName}!`);
   } else if (subtype == 2) {
-    alert(`You selected a Classic Green Salad!`);
+    subtypeName = "Classic Green Salad";
+    alert(`You selected a ${subtypeName}!`);
   } else if (subtype == 3) {
-    alert(`You selected a Carprese Salad!`);
+    subtypeName = "Carprese Salad";
+    alert(`You selected a ${subtypeName}!`);
   } else {
     alert(`Invalid choice. Please enter number 1-3 to choose among the dishes.`);
-    // go back to selecting salad
+    // how to go back to selecting salad???
   }
 
   // Age
@@ -172,10 +193,10 @@ if (food == 1) {
     age = parseInt(prompt(`Is this food for a child or an adult? Type your age:`));
     if (age >= 0 && age < 18) {
       // Child-size
-      confirmation = parseInt(prompt(`One child-sized portion will be prepared for you. It will cost $10.
+      confirmation = parseInt(prompt(`One child-sized ${subtypeName} will be prepared for you. It will cost $10.
       Please enter 1-2 to confirm your order:
       1. Yes
-      2. No`)); // how to print the dish the client ordered in confirmation???
+      2. No`));
 
       // Order confirmation
       if (confirmation == 1) {
@@ -183,15 +204,15 @@ if (food == 1) {
       } else if (confirmation == 2) {
         alert(`No problem. Go back and order anytime. See you then!`);
       } else {
-        alert(`Invalid choice. Please enter number 1-2 to confirm your order.`); // go back to confirming order
+        alert(`Invalid choice. Please enter number 1-2 to confirm your order.`); // how to go back to confirming order???
       }
 
     } else if (age >= 18) {
       // Adult-size
-      confirmation = parseInt(prompt(`One adult-sized portion will be prepared for you. It will cost $15.
+      confirmation = parseInt(prompt(`One adult-sized ${subtypeName} will be prepared for you. It will cost $15.
       Please enter 1-2 to confirm your order:
       1. Yes
-      2. No`)); // how to print the dish the client ordered in confirmation???
+      2. No`));
 
       // Order confirmation
       if (confirmation == 1) {
@@ -199,11 +220,11 @@ if (food == 1) {
       } else if (confirmation == 2) {
         alert(`No problem. Go back and order anytime. See you then!`);
       } else {
-        alert(`Invalid choice. Please enter number 1-2 to confirm your order.`); // go back to confirming order
+        alert(`Invalid choice. Please enter number 1-2 to confirm your order.`); // how to go back to confirming order
       }
     } else {
       // Handling invalid answer for age
-      alert(`Invalid answer. Please enter a number equal or greater than 0.`) // go back to putting in age???
+      alert(`Invalid answer. Please enter a number equal or greater than 0.`) // how to go back to putting in age???
     }
   }
 
