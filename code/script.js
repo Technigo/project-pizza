@@ -5,6 +5,11 @@
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
+let person = prompt("Please enter you name");
+
+if (person != null) {
+  alert("Hello " + person + "!" + " that is a really cool name!");
+}
 
 // Step 2 - Food choice
 // Your code goes here
