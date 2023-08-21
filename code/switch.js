@@ -118,16 +118,67 @@ switch (foodtype) {
         alert("One Caprese Salad, got it.");
         subChoice = "Caprese Salad";
         break;
-      case "1":
+      case "3":
         alert("One Greek Salad, got it.");
         subChoice = "Greek Salad";
         break;
     }
+    break;
+  default:
+    alert("That is not one of our dishes. Please try again from the start.");
     break;
 }
 
 // Step 4 - Age
 // Your code goes here
 
+let age = prompt(
+  `Who is this order for?
+1. Adult
+2. Child`
+);
+
 // Step 5 - Order confirmation
 // Your code goes here
+
+let confirmation;
+
+switch (age) {
+  case "1":
+    confirmation =
+      prompt(`Alright, so one adult-sized ${subChoice}. That will be $17.00. 
+  Is this what you want to order?
+  Enter a number to confirm:
+  1. Yes
+  2. No`);
+    break;
+  case "2":
+    confirmation =
+      prompt(`Alright, so one child-sized ${subChoice}. That will be $12.00. 
+  Is this what you want to order?
+  Enter a number to confirm:
+  1. Yes
+  2. No`);
+    break;
+  default:
+    alert(
+      "Sorry, there seems to have been an error somewhere. Please come back again."
+    );
+    break;
+}
+
+switch (confirmation) {
+  case "1":
+    alert(
+      `Thank you for your order! Your food is being prepared and will be ready in 10-15 minutes.`
+    );
+    break;
+  case "2":
+    alert(`That's alright, please feel free to order from us in the future!`);
+    break;
+  default:
+    alert(
+      "Sorry, there seems to have been an error somewhere. Please come back again."
+    );
+    break;
+}
