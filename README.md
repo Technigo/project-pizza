@@ -1,4 +1,4 @@
-# Project Name
+# Javascript Pizzeria
 This project name is Javascript Pizzeria. A pop-up will appear on your screen with welcome message, inviting you to start your journey in a fun and interactive way. This is just the beginning of using JavaScript to make things happen on a webpage!
 
 ## The problem
