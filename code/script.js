@@ -12,19 +12,29 @@ if (person != null) {
 }
 
 // Step 2 - Food choice
-let foodOption = prompt("What would you like to order? \n 1 Pasta \n 2 Pizza \n 3 Meat");
+let foodOption = prompt("What would you like to order? \n 1 Pasta \n 2 Pizza \n 3 Salad");
 if (foodOption == 1) {
-  alert("Pizza is a great choise!");
+  alert("Pizza is a great choice!");
 } else if (foodOption == 2) {
   alert("Amazing! Pasta here is delicious!");
 } else if (foodOption == 3) {
-  alert("wow, meat, that is a great choise!");
+  alert("wow, salad, that is a great choice!");
 } else {
-  alert("Oh! are you not hungry? Please choose one of the options!")
+  alert("Oh... are you not hungry? Please choose one of the options!");
 }
 
 // Step 3 - Subtype choice
-// Your code goes here
+if (foodOption == 1) {
+  let foodOption = prompt("Which Pizza would you like to order? \n 1 Pizza Bianca \n 2 Pizza con pomodorini \n 3 Quattro Stagioni");
+}
+if (foodOption == 2) {
+  let foodOption = prompt("Which pasta would you like to order? \n 1 Pasta Alio e Olio \n 2 Pasta con Pomodorini \n 3 Pasta allo Scoglio");
+}
+if (foodOption == 3) {
+  let foodOption = prompt("Which salad would you like to order? \n 1 Tuna Salad \n 2 Broccoli Salad \n 3 Fruit Salad");
+} else {
+  alert("Oh... are you not hungry? Please choose one of the options!");
+}
 
 // Step 4 - Age
 // Your code goes here
