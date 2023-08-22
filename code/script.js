@@ -97,7 +97,25 @@ if (foodChoice === 1) {
 alert(`You have chosen to order ${dishChosen}. Press OK to confirm your choice`)
 
 // Step 4 - Age
+let customerAge = prompt("Is this food for an adult or a child? Please enter your age:")
+let price
+let adultOrChild
+if (customerAge >= 18) {
+  price = 50
+  adultOrChild = "adult"
+}
+else {
+  price = 25
+  adultOrChild = "child"
+}
+let confirmOrderMessage = `One ${adultOrChild} sized ${dishChosen} will be prepared for you. That'll be ${price} SEK.` +
+"\n\tAre you sure you want to order this?\n" +
+"\tEnter a number to confirm:\n" +
+"\t1. Yes \n" +
+"\t2. No \n" 
+alert(confirmOrderMessage)
 // Your code goes here
+
 
 // Step 5 - Order confirmation
 // Your code goes here
