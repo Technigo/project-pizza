@@ -168,7 +168,7 @@ if (customerAgeInt >= 18) {
     alert(
       `Thank you for your order ${customerName}, the food will be with you in no time! Have a great day!`
     )
-  } else if (confirmAdultOrder == 2) {
+  } else if (confirmChildOrder == 2) {
     alert(
       `Sorry to see you go ${customerName}, come back an other time!`
     )

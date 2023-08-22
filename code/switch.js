@@ -23,7 +23,7 @@ const foodType = prompt(
   \n3. Salad`
 )
 
-// Chosen food is saved in a variable and then shown to the customer via an alert, using an switch statement
+// Chosen food is saved in a variable and then shown to the customer via an alert, using an switch case
 let chosenFood
 let pizzaType
 let pastaType
@@ -31,7 +31,7 @@ let saladType
 let subtypeChoice
 
 // Step 3 - Subtype choice
-// Nested switch statements for checking subtype choices at the same time as main choice. 
+// Nested switch case for checking subtype choices at the same time as main choice. 
 switch (foodType) {
   case "1":
     chosenFood = "Pizza"
