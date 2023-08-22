@@ -6,7 +6,10 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #0026ff;
+  /*background: #0026ff;*/
+  background-image: url("./images/cheesy-pizza.jpg");
+  background-size: cover;
+  background-position: 25% 50%;
   color: white;
   display: flex;
   justify-content: center;
@@ -17,4 +20,26 @@ body {
 
 p {
   font-size: 1.5em;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  color:#ffffff;
+  font-size: 12px; 
+  background-color: #990000;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+}
+
+.copyright img {
+  width: 30px;
+}
+
+footer a:link, a:visited {
+  font-size: 20px;
+  color: #ffffff;
 }
