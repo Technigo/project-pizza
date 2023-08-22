@@ -74,29 +74,24 @@ if (selectedOption === 1) {
 
 
 // Step 4 - Age
+
 var userInput = prompt("Is this meal for a child or an adult? Please enter your age");
 var age = parseInt(userInput);
 
 if (!isNaN(age)) {
-  if (age < 11) {
-    alert("You have selected child!");
-  } else if (age > 11) {
-    alert("You have selected adult!");
-  } else {
-    alert("Invalid input. Please enter a valid age.");
-  }
-
-  // Step 5 - Order confirmation
-
-  var confirmation = prompt("Would you like to confirm your order? \n1. Yes \n2. No");
-
-  if (confirmation === "1") {
-    alert("Thank you for your order! Your meal will be prepared. Enjoy!");
-  } else if (confirmation === "2") {
-    alert("Thank you for considering us. Feel free to return for future orders!");
-  }
+  var ageGroup = (age < 11) ? "child" : "adult";
 
 } else {
   alert("Invalid input. Please enter a valid age.");
+}
+
+// Step 5 - Order confirmation
+
+var price;
+
+if (ageGroup === "child") {
+  price = 7;
+} else {
+  price = 12; // Adult's price
 }
 
