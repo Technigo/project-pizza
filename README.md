@@ -9,6 +9,7 @@ Describe how you approached to problem, and what tools and techniques you used t
 - promt() to then save the value (saveed function in a variable by adding const and a variable name before the promt-funciton, then tested it by using console.log)
 - wanted a new line in the alert window, googled for answer \n 
 - how to store a value from multiple choices in a prompt, google - switch? The problem was that I didn't know how to write the choices in the prompt-function. I decided to instead make it an if-else statement, and then rain into the problem that my three === compared wrong, because it expected a number, so I had to change it to "3", as a string. Added a variable in each turn of the if-statement stat saved to value.
+- compare age (number) with a string (what is entered in the prompt) it was especially tricky doing this in a switch, I had no proiblems with the if/else
 
 ## View it live
 
