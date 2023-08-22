@@ -68,15 +68,23 @@ else if(food === "3" && choise === "1") {
 } else if(food === "3" && choise === "3") {
   alt = "Greek salad"
   alert("You have chosen " + alt);
+} else {
+  alert("Invalid choise. Please select a type");
 }
 
 // Step 4 - Age
 let age = prompt("Is this food for a child or an adult?\nHow old are you?");
-if(age <="12") {
-  prompt("One child size " + alt + " will be prepared for you. That will be €10.\nAre you sure you want to order this?\nEnter a number to confirm:\n1 - Yes\n2 - No");
+if(age <=12) {
+  confirm = prompt("One child size " + alt + " will be prepared for you. That will be €10.\nAre you sure you want to order this?\nEnter a number to confirm:\n1 - Yes\n2 - No");
 } else {
-  prompt("One adult size " + alt + " will be prepared for you. That will be €15.\nAre you sure you want to order this?\nEnter a number to confirm:\n1 - Yes\n2 - No");
+  confirm = prompt("One adult size " + alt + " will be prepared for you. That will be €15.\nAre you sure you want to order this?\nEnter a number to confirm:\n1 - Yes\n2 - No");
 }
 
 // Step 5 - Order confirmation
-// Your code goes here
+if(confirm === "1") {
+  alert("Thankt you for your order! Your food will be prepared. See you soon!");
+} else if(confirm === "2") {
+  alert("Your order had been not been placed. Come back anytime to make an order! Good bye!");
+} else {
+  alert("Invalid choice. Please select 1 for Yes or 2 for No.");
+}
