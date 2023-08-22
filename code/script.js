@@ -81,17 +81,54 @@ var age = parseInt(userInput);
 if (!isNaN(age)) {
   var ageGroup = (age < 11) ? "child" : "adult";
 
+
+  // Step 5 - Order confirmation
+
+  var foodTypeText;
+  var foodPrice;
+
+  if (selectedOption === 1) {
+    if (pizzaSubtype === "1") {
+      foodTypeText = "Margherita Pizza";
+    } else if (pizzaSubtype === "2") {
+      foodTypeText = "Pepperoni Pizza";
+    } else if (pizzaSubtype === "3") {
+      foodTypeText = "Veggie Pizza";
+    }
+  } else if (selectedOption === 2) {
+    if (pastaSubtype === "1") {
+      foodTypeText = "Spaghetti Pasta";
+    } else if (pastaSubtype === "2") {
+      foodTypeText = "Fettuccine Alfredo Pasta";
+    } else if (pastaSubtype === "3") {
+      foodTypeText = "Pasta Agli Oglio";
+    }
+  } else if (selectedOption === 3) {
+    if (saladSubtype === "1") {
+      foodTypeText = "Caesar Salad";
+    } else if (saladSubtype === "2") {
+      foodTypeText = "Greek Salad";
+    } else if (saladSubtype === "3") {
+      foodTypeText = "Garden Salad";
+    }
+  }
+
+  if (ageGroup === "child") {
+    foodPrice = 7;  // Child's price
+  } else {
+    foodPrice = 12; // Adult's price
+  }
+
+  var confirmationMessage = `You have chosen a ${ageGroup} ${foodTypeText} for $${foodPrice}. Would you like to confirm your order? \n1. Yes \n2. No`;
+
+  var confirmation = prompt(confirmationMessage);
+
+  if (confirmation === "1") {
+    alert("Thank you for choosing Javascript Pizzeria! Your order is now being made. Enjoy!")
+  } else if (confirmation === "2") {
+    alert("Thank you for considering us. Feel free to return for future orders!");
+  }
+
 } else {
   alert("Invalid input. Please enter a valid age.");
 }
-
-// Step 5 - Order confirmation
-
-var price;
-
-if (ageGroup === "child") {
-  price = 7;
-} else {
-  price = 12; // Adult's price
-}
-
