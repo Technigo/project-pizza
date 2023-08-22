@@ -1,11 +1,11 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Its a pizzeria in javascript. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+It was so hard to get the last touch which was one you've made your choices - get the code to say "You order -this- -age- for -this price-" but I googled, watched youtube, sat up alll night etc and finally I made it. 
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://fascinating-daifuku-914a17.netlify.app/
