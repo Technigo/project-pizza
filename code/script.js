@@ -8,7 +8,7 @@ alert(
 
 const userName = prompt("Please enter your name")
 
-alert(`Hi ${userName}!`)
+alert(`How are you ${userName}?`)
 
 
 // Step 2 - Food choice
@@ -39,6 +39,26 @@ alert(`You chose ${selectedFood}!`)
 
 // Step 3 - Subtype choice
 // Your code goes here
+
+//Select a pizza type: 
+//Enter a number: 
+//1 - Napolitana
+//2 - Hawaiian
+//3 - Pepperoni
+
+let selectedSubtype = "";
+
+switch (selectedFood) {
+  case "Pizza":
+    selectedSubtype = prompt(`Please select a pizza type:
+  1 - Napolitana
+  2 - Hawaii
+  3 - Pepperoni
+  Please enter the number of your choice.`);
+    break;
+}
+
+console.log(selectedSubtype)
 
 // Step 4 - Age
 // Your code goes here
