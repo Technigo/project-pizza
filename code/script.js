@@ -113,9 +113,13 @@ let confirmOrderMessage = `One ${adultOrChild} sized ${dishChosen} will be prepa
 "\tEnter a number to confirm:\n" +
 "\t1. Yes \n" +
 "\t2. No \n" 
-alert(confirmOrderMessage)
-// Your code goes here
-
+let confirmOrder = prompt(confirmOrderMessage)
 
 // Step 5 - Order confirmation
-// Your code goes here
+let finalOrderMessage
+if (parseInt(confirmOrder) === 1) {finalOrderMessage = "Thank you for your order! You will soon get a delicious meal 🍲"}
+else if (parseInt(confirmOrder) === 2) {finalOrderMessage = "We are so sorry that you no longer wish to order a meal. Come back another time 🤙🏼"}
+else {
+  alert("Invalid choice, please make your order again")
+  process.exit(1)
+}
