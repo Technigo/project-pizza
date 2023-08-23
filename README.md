@@ -6,6 +6,8 @@ Week 1 of Technigo boot camp. A basic set-up of the web page was given from Tech
 
 As a beginner I started out by reading the material, get a overview of the assignment and then work through it from top to bottom. Giving myself a structure helped. ChatGPT, Google, Stack Overflow and Slack was used. 
 
+I choose Switch instead of Else if in one of the attempts. Realizing that I had to develop further I had to change to Else if in order to make all the steps work.
+
 What technologies did you use? If you had more time, what would be next?
 
 ## View it live
