@@ -7,7 +7,9 @@ alert(
 )
 
 const userName = prompt("Please enter your name:");
-alert(`hello,${userName}! Let's get started.`);
+alert(`Hello,${userName}! Let's get started.`);
+
+
 
 // Step 2 - Food choice
 // Your code goes here
