@@ -6,6 +6,13 @@ alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
 
+const guestName = prompt("Dear guest, what is your name?")
+console.log(guestName)
+
+alert(
+  `Hi ${guestName}! We will happily take your order!`
+)
+
 // Step 2 - Food choice
 // Your code goes here
 
