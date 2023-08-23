@@ -3,7 +3,7 @@
 // Step 1 - Welcome and introduction
 // Welcome message display
 alert(
-  `Welcome to Javascript Pizzeria. 
+  `Welcome to Javascript Pizzeria. (if version)
   Ready to Start? - Click 'OK' to begin.`
 );
 //alert(`Does the button ok always show up in alert?`) The answer is YES.
