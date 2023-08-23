@@ -27,7 +27,7 @@ let foodOption = prompt(`What would you like to order?
     alert(`wow, salad, that is a great choice!`);
   } else {
     alert(`Oh... are you not hungry? 
-    Please choose one of the options!`);
+    Please choose a valid number`);
   }
 }
 // Step 3 - Subtype choice

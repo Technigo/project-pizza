@@ -28,5 +28,42 @@ switch (foodOption) {
         alert(`Wow, salad, so good!`);
         break;
     default:
-        alert(`Oh, not hungry? Please choose one of the provided options`)
+        alert(`Oh, not hungry? Please choose a valid number`)
+}
+// Step 3 - Subtype choice
+
+let pizzaOption = prompt(`Which Pizza would you like to order?
+1 - Pizza Bianca 
+2 - Pizza con pomodorini 
+3 - Quattro Stagioni`);
+
+switch (pizzaOption) {
+    case `1`:
+        alert(`You have choosen Pizza Bianca, amazing!`);
+        break;
+    case `2`:
+        alert(`You have choosen Pizza con Pomodorini, amazing!`);
+        break;
+    case `3`: (`You have choosen Quattro Stagioni, amazing!`);
+        break;
+    default:
+        alert(`Please choose a valid number`);
+}
+let pastaOption = prompt(`Which pasta would you like to order? 
+1 - Pasta Alio e Olio 
+2 - Pasta con Pomodorini 
+3 - Pasta allo Scoglio`);
+
+switch (pastaOption) {
+    case `1`:
+        alert(`You have choosen Pasta Alio e Olio, amazing!`);
+        break;
+    case `2`:
+        alert(`You have choosen Pasta con Pomodorini, amazing!`);
+        break;
+    case `3`:
+        alert(`You have choosen Pasta allo Scoglio, amazing!`);
+        break;
+    default:
+        alert(`Please choose a valid number`);
 }
