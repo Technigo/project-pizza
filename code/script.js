@@ -3,7 +3,7 @@
 // Step 1 - Welcome and introduction
 // Your code goes here
 alert(
-  `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
+  `Welcome to our Javascript Pizzeria. Ready to Start?? - Click 'OK' to begin.`
 )
 
 // Step 2 - Food choice
