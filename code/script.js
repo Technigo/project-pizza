@@ -41,40 +41,57 @@ if (foodName === "Pizza") {
 }
 
 //Determining the chosen subtype and providing feedback using alert method to confirm the selection.
+var finalchoice
+
 if (foodName === "Pizza") {
   if (specifyfood === "1") {
-    alert(`You choosed the ${foodName}: Spicy pizza`);
+    finalchoice = "Spicy pizza"
+    alert(`You choosed the ${foodName}: ${finalchoice}`);
   } else if (specifyfood === "2") {
-    alert(`You choosed the ${foodName}: Yummy Pizza`);
+    finalchoice = "Yummy pizza"
+    alert(`You choosed the ${foodName}: ${finalchoice}`);
   }
   else if (specifyfood === "3") {
-    alert(`You choosed the ${foodName}: Yummy yummy Pizza`);
+    finalchoice = "Yummy yummy pizza"
+    alert(`You choosed the ${foodName}: ${finalchoice}`);
   }
 } else if (foodName === "Pasta") {
   if (specifyfood === "1") {
-    alert(`You choosed the ${foodName}: Spicy spagetthi`);
+    finalchoice = "Spicy spagetthi"
+    alert(`You choosed the ${foodName}: ${finalchoice}`);
   } else if (specifyfood === "2") {
-    alert(`You choosed the ${foodName}: Yummy spagetthi`);
+    finalchoice = "Yummy spagetthi"
+    alert(`You choosed the ${foodName}: ${finalchoice}`);
   }
   else if (specifyfood === "3") {
-    alert(`You choosed the ${foodName}: Yummy yummy spagetthi`);
+    finalchoice = "Yummy yummy spagetthi"
+    alert(`You choosed the ${foodName}: ${finalchoice}`);
   }
 } else if (foodName === "Salad") {
   if (specifyfood === "1") {
-    alert(`You choosed the ${foodName}: Spicy salad`);
+    finalchoice = "Spicy salad"
+    alert(`You choosed the ${foodName}: ${finalchoice}`);
   } else if (specifyfood === "2") {
-    alert(`You choosed the ${foodName}: Yummy salad`);
+    finalchoice = "Yummy salad"
+    alert(`You choosed the ${foodName}: ${finalchoice}`);
   }
   else if (specifyfood === "3") {
-    alert(`You choosed the ${foodName}: Yummy yummy salad`);
+    finalchoice = "Yummy yummy salad"
+    alert(`You choosed the ${foodName}: ${finalchoice}`);
   }
 } else {
   alert(`Invalid choice. Please start over.`);
 }
 
+// Step 4 - Age. Adolescent/adult or child
+var age = prompt("Portion sizes differs depending on if it's a child or adolescent/adult.", "Please type your age here");
 
-// Step 4 - Age
-// Your code goes here
+if (age >= 16) {
+  alert(`One adult sized ${finalchoice} will be prepared for you. That'll be 10euros. Enter a number to confirm: 1: Yes, 2: No`)
+} else if (age <= 15) {
+  alert(`One child sized ${finalchoice} will be prepared for you. That'll be 7euros. Enter a number to confirm: 1: Yes, 2: No`)
+}
+
 
 // Step 5 - Order confirmation
 // Your code goes here
