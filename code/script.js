@@ -101,6 +101,10 @@ else if (foodSubType === "2") {
 else if (foodSubType === "3") {
   alert(`Awesome! You have chosen the ${foodOption[2]}.`);
 }
+else {
+  alert("Invalid choice. Please enter a valid number.");
+  process.exit(1);
+}
 
 // Step 4 - Age
 
@@ -113,35 +117,49 @@ let userAgeCategory ="";
 if (userAgeInput >= 15) {
   priceFood = "55 sek";
   userAgeCategory = "adult";
-} else {
+} else if (userAgeInput < 15 && userAgeInput > 0 ) {
   priceFood = "35 sek";
   userAgeCategory = "child";
 } 
+else {
+  alert("Invalid choice. Please enter a valid number.");
+  process.exit(1);
+}
 
 // Prompt that will ask the user to confirm their choices.
+let userConfirmation ="";
 
  if (foodSubType === "1") {
- prompt (`You have chosen one ${userAgeCategory} size ${foodOption[0]}! That will be ${priceFood}. Are you sure you want to order this?
- 1 - Yes
-  2 - No
- `)
+  userConfirmation = prompt (`You have chosen one ${userAgeCategory} size ${foodOption[0]}! That will be ${priceFood}. Are you sure you want to order this?
+  1 - Yes
+  2 - No`)
  }
 
 else if (foodSubType === "2") {
-prompt (`You have chosen one ${userAgeCategory} size ${foodOption[1]}! That will be ${priceFood}. Are you sure you want to order this?
-1 - Yes
-2 - No
-`)
+  userConfirmation = prompt (`You have chosen one ${userAgeCategory} size ${foodOption[1]}! That will be ${priceFood}. Are you sure you want to order this?
+  1 - Yes
+  2 - No`)
 }
 
 else if (foodSubType === "3") {
-prompt (`You have chosen one ${userAgeCategory} ${foodOption[2]}! That will be ${priceFood}. Are you sure you want to order this?
+  userConfirmation = prompt (`You have chosen one ${userAgeCategory} ${foodOption[2]}! That will be ${priceFood}. Are you sure you want to order this?
 1 - Yes
 2 - No
 `)
 }
 
 // Step 5 - Order confirmation
-// Your code goes here
+//  Confirmation messages for the user.
+if (userConfirmation === "1"){
+  alert (`Thank you for your order! Your delicious meal will be prepared. See you soon!`);
+}
+else if (userConfirmation === "2") {
+  alert(`No problem! Come back soon again!.`);
+} else {
+  alert("Invalid choice. Please enter a valid number.");
+  process.exit(1);
+} 
 //
 
+// TO-DO : Add more prices!
+// Choice for how many pizzas they want.
