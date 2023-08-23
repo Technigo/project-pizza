@@ -156,25 +156,34 @@ switch (selectedFood) {
 let age = 0;
 
 // Determine whether the food is for a child or an adult based on the user's input
-if (Number(subtype) >= 1 && Number(subtype) <= 3) {
-  age = Number(prompt(`Is this food for a child or an adult? Type your age:`));
-} else {
-  // If the user enters an invalid subtype, show an error message and exit the program
-  alert(`Invalid choice. Please enter number 1-3 to choose among the dishes.`);
-  process.exit(1);
+switch (subtype) {
+  case "1":
+  case "2":
+  case "3":
+    age = Number(prompt(`Is this food for a child or an adult? Type your age:`));
+    break;
+  default: 
+      // If the user enters an invalid subtype, show an error message and exit the program
+    alert(`Invalid choice. Please enter number 1-3 to choose among the dishes.`);
+    process.exit(1);
+    break;
 }
 
 // Display order message with associated cost based on age input
-if (age >= 0 && age < 18) {
-  // Child-size
-  alert(`One child-sized ${selectedSubtype} will be prepared for you. It will cost $10.`);
-} else if (age >= 18) {
-  // Adult-size
-  alert(`One adult-sized ${selectedSubtype} will be prepared for you. It will cost $15.`);
-} else {
-  // If the user enters an invalid age, show an error message and exit the program
-  alert(`Invalid answer. Please enter a number equal or greater than 0.`);
-  process.exit(1);
+switch (true) {
+  case age >= 0 && age < 18:
+    // Child-size
+    alert(`One child-sized ${selectedSubtype} will be prepared for you. It will cost $10.`);
+    break;
+  case age >= 18:
+    // Adult-size
+    alert(`One adult-sized ${selectedSubtype} will be prepared for you. It will cost $15.`);
+    break;
+  default:
+    // If the user enters an invalid age, show an error message and exit the program
+    alert(`Invalid answer. Please enter a number equal or greater than 0.`);
+    process.exit(1);
+    break;
 }
 
 // Step 5 - Order confirmation
