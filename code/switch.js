@@ -71,3 +71,68 @@ if (foodOption === `2`) {
             alert(`Please choose a valid number`);
     }
 }
+if (foodOption === `3`) {
+
+    let saladOption = prompt(`Which salad would you like to order? 
+  1 - Tuna Salad 
+  2 - Broccoli Salad 
+  3 - Fruit Salad`);
+
+    switch (saladOption) {
+
+        case `1`:
+            alert(`You have choosen Tuna Salad, amazing!`);
+            break;
+        case `2`:
+            alert(`You have choosen Broccoli Salad, amazing!`);
+            break;
+        case `3`:
+            foodOptionText = `Fruit Salad`
+            alert(`You have choosen Fruit Salad, amazing!`);
+            break;
+        default:
+            alert(`Please choose a valid number`);
+    }
+}
+// Step 4 - Age
+let ageOption = prompt(`How old are you?`);
+
+switch (ageOption) {
+    case `ageOption >= 18`:
+        alert(`You have ordered a ${foodOption} from the grown ups menu!`);
+        break;
+    default:
+        alert(`you have ordered a ${foodOption} from the childrens menu!`);
+}
+
+// Step 5 - Order confirmation
+
+if (ageOption >= 18) {
+    let confirmation = prompt(`One ${foodOptionText} will be prepared for you. That will be 15€. Are you sure you want to proceed with your order? 
+  Enter a number to confirm: 
+  1 - yes 
+  2 - no`);
+
+    switch (ageOption) {
+        case `1`:
+            alert(`Thank you for your order! This is you confirmation.`);
+            break;
+        case `2`:
+            alert(`Are you not hungry anymore? refresh the page to start over. Otherwise, hope to see you next time!`);
+            break;
+        default:
+            alert(`Please choose a valid number`);
+    }
+}
+let confirmation = prompt(`One ${foodOptionText} will be prepared for you. That will be 10€. Are you sure you want to proceed with your order?
+  Enter a number to confirm:
+   1 - yes
+   2 - no`);
+if (confirmation === `1`) {
+    alert(`Thank you for your order! This is you confirmation.`);
+} else if (confirmation === `2`) {
+    alert(`Are you not hungry anymore? refresh the page to start over. Otherwise, hope to see you next time!`)
+} else {
+    alert(`Please choose a valid number`);
+}
+

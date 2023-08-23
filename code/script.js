@@ -47,7 +47,7 @@ if (foodOption === `1`) {
     foodOptionText = "Quattro Stagioni"
     alert(`You have choosen Quattro Stagioni, amazing!`);
   } else {
-    alert(`Please choose a valid number`);
+    alert(`Not hungry? Please choose a valid number`);
   }
 } else if (foodOption === `2`) {
   let pastaOption = prompt(`Which pasta would you like to order? 
@@ -64,7 +64,7 @@ if (foodOption === `1`) {
     foodOptionText = `Pasta allo Scoglio`
     alert(`You have choosen Pasta allo Scoglio, amazing!`);
   } else {
-    alert(`Please choose a valid number`);
+    alert(`Not hungry? Please choose a valid number`);
   }
 
 } else if (foodOption === `3`) {
@@ -82,10 +82,8 @@ if (foodOption === `1`) {
     foodOptionText = `Fruit Salad`
     alert(`You have choosen Fruit Salad, amazing!`);
   } else {
-    alert(`Please choose a valid number`);
+    alert(`Not hungry? Please choose a valid number`);
   }
-} else {
-  alert(`Please choose a valid number`);
 }
 
 // Step 4 - Age
