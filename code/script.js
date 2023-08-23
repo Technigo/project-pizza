@@ -13,7 +13,7 @@ alert(`Good to have you here ${name} !`);
 
 // Step 2 - Food choice
 let evaluation = false;
-let choice;
+let choice = null;
 // declare here. if in while-loop not visible later in meal-switch
 while (evaluation == false) {
   // not only one =
@@ -24,16 +24,14 @@ while (evaluation == false) {
 `);
   // console.log(typeof (choice));
   // type of input is string
-  // choice = Number(choice);
-  // console.log(choice);
 
+  // evaluation of meal type choice
   if (choice != 1 && choice != 2 && choice != 3) {
     // not || ! test if all are wrong
     window.alert("Sorry, invalid choice, please pick 1-3.");
   } else {
     evaluation = true;
   }
-
   // --working as well but not cool--
   // switch (choice) {
   //   case 1:
@@ -49,84 +47,119 @@ while (evaluation == false) {
   // console.log(evaluation);
 };
 
-let meal;
+//confirmation user meal type choice
+let mealtype = null;
 choice = Number(choice);
 // ...because is string so far. switch uses strict =
 switch (choice) {
   case 1:
-    meal = "Pizza";
+    mealtype = "Pizza";
     break;
   case 2:
-    meal = "Pasta";
+    mealtype = "Pasta";
     break;
   case 3:
-    meal = "Salad";
+    mealtype = "Salad";
     break;
 }
-window.alert(`Got it, you picked ${meal}.`);
+window.alert(`Got it, you picked ${mealtype}.`);
 // Your code goes here
 
 // Step 3 - Subtype choice
-let subtypes;
-const subtypePizza = `
+const optionsForPizza = `
 1) Margherita
 2) Calzone
 3) Quattro formaggi`;
-const subtypePasta = `
+const optionsForPasta = `
 1) Bolognese
 2) al olio`;
-const subtypeSalad = `
+const optionsForSalad = `
 1) Salad greek style
 2) Asian rice salad
 3) Tuna salad
 4) Grandmas noodle salad`;
 
+let subtypes = null;
+// holds text options for subtypes of meals
 const mealSubtype = [];
-let dishes;
+// gets filled with specific meal options
+let ordersum = 0;
 switch (choice) {
   case 1:
-    subtypes = subtypePizza;
-    dishes = 3;
-    // !!! wird zu mealsubtype.length
+    subtypes = optionsForPizza;
     const pizzaSubtypes = ["Margharita", "Calzone", "Quattro formaggi"];
     for (let i = 0; i < pizzaSubtypes.length; i++) {
       mealSubtype.push(pizzaSubtypes[i]);
     }
+    ordersum = 15;
     break;
   case 2:
-    subtypes = subtypePasta;
-    dishes = 2;
+    subtypes = optionsForPasta;
     const pastaSubtypes = ["Bolognese", "al olio"];
     for (let i = 0; i < pastaSubtypes.length; i++) {
       mealSubtype.push(pastaSubtypes[i]);
     }
+    ordersum = 12;
     break;
   case 3:
-    subtypes = subtypeSalad;
-    dishes = 4;
+    subtypes = optionsForSalad;
     const saladSubtypes = ["Salad greek style", "Asian rice salad", "Tuna salad", "Grandmas noodle salad"];
     for (let i = 0; i < saladSubtypes.length; i++) {
       mealSubtype.push(saladSubtypes[i]);
     }
+    ordersum = 10;
 }
-console.log(mealSubtype);
 
-let subchoice;
+//evaluation user suboptions mealchoice 
+let subchoice = null;
+// is a number
 evaluation = false;
 // better reset value
 while (evaluation == false) {
-  let subchoice = window.prompt("Please enter the number of disired dish:" + subtypes);
-  if (isNaN(subchoice) || subchoice <= 0 || subchoice > dishes) {
-    window.alert(`Sorry, invalid choice, please pick 1-${dishes}`);
+  let usersubchoice = window.prompt("Please enter the number of disired dish:" + subtypes);
+  if (isNaN(usersubchoice) || usersubchoice <= 0 || usersubchoice > mealSubtype.length) {
+    window.alert(`Sorry, invalid choice, please pick 1-${mealSubtype.length}`);
   } else {
     evaluation = true;
   }
+  subchoice = usersubchoice - 1;
+  //otherwise value not visible outside. return not working.
 }
-
+window.alert(`Good choice! You picked: ${mealSubtype[subchoice]} `);
 // Your code goes here
 
 // Step 4 - Age
+
+//evaluation user age
+let age = null;
+evaluation = false;
+while (evaluation == false) {
+  let ageinput = window.prompt(`Please tell us your age, we need to make sure you have legal capacity.`);
+  if (isNaN(ageinput)) {
+    window.alert(`Sorry, please enter a number.`);
+  } else if (ageinput <= 0) {
+    window.alert("Sorry, you are not born yet, please order in 16 years.");
+    throw new Error("Order process terminated.");
+  } else if (ageinput > 0 && ageinput < 16) {
+    window.alert("Sorry, you are too youg for business, please ask your parents to order.")
+    throw new Error("Order process terminated.");
+  }
+  else if (ageinput > 122) {
+    window.alert("Whow! You are older than the oldest person who ever lived on earth! Or maybe a typo?");
+  } else
+    evaluation = true;
+}
+
+//order sum up
+window.alert(`OK, we are almost done.
+This is your order:
+${mealtype}, ${mealSubtype[subchoice]}, price: ${ordersum}`);
+
+//order confirmation
+let confirmation = window.confirm("Do you want to order the selected dish now?");
 // Your code goes here
 
 // Step 5 - Order confirmation
+
+
 // Your code goes here
