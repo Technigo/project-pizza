@@ -6,10 +6,9 @@ window.alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 );
 
-const name = window.prompt("Please fill in your first name: ");
-// console.log(name);
+let username = window.prompt("Please fill in your first name: ");
 
-alert(`Good to have you here ${name} !`);
+alert(`Good to have you here ${username} !`);
 
 // Step 2 - Food choice
 let evaluation = false;
@@ -118,7 +117,7 @@ evaluation = false;
 while (evaluation == false) {
   let usersubchoice = window.prompt("Please enter the number of disired dish:" + subtypes);
   if (isNaN(usersubchoice) || usersubchoice <= 0 || usersubchoice > mealSubtype.length) {
-    window.alert(`Sorry, invalid choice, please pick 1-${mealSubtype.length}`);
+    window.alert(`Sorry, invalid choice, please pick 1 - ${mealSubtype.length} `);
   } else {
     evaluation = true;
   }
@@ -153,13 +152,11 @@ while (evaluation == false) {
 //order sum up
 window.alert(`OK, we are almost done.
 This is your order:
-${mealtype}, ${mealSubtype[subchoice]}, price: ${ordersum}`);
-
-//order confirmation
-let confirmation = window.confirm("Do you want to order the selected dish now?");
+${mealtype}, ${mealSubtype[subchoice]}, price: ${ordersum} `);
 // Your code goes here
 
 // Step 5 - Order confirmation
-
-
+let confirmation = window.confirm("Do you want to order the selected dish now?");
+confirmation === true ? window.alert(`Thank you ${username}, we received your order!
+Our 5 star chef is now preparing your dish right away.`) : window.alert(`What a pity, we hope to see you soon again!`);
 // Your code goes here
