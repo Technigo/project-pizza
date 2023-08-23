@@ -84,4 +84,19 @@ if (ageOption >= 18) {
 }
 // Step 5 - Order confirmation
 
-let confirmOption = prompt("One " + ageOption + foodOptionText + "will be prapared for you for only €15. Are you sure you want to order this? \n Enter a number to confirm: \n 1-yes \n 2-No")
+if (ageOption >= 18) {
+  let confirmation = prompt("One " + foodOptionText + " will be prepared for you. That will be 15€. Are you sure you want to proceed with your order? \n Enter a number to confirm: \n 1- yes \n 2- no");
+  if (confirmation == 1) {
+    alert("Thank you for your order! This is you confirmation.");
+  } else if (confirmation == 2) {
+    alert("are you not hungry anymore? refresh the page to start over. Otherwise, hope to see you next time!")
+  }
+} else {
+  let confirmation = prompt("One " + foodOptionText + " will be prepared for you. That will be 10€. Are you sure you want to proceed with your order? \n Enter a number to confirm: \n 1- yes \n 2- no");
+  if (confirmation == 1) {
+    alert("Thank you for your order! This is you confirmation.");
+  } else if (confirmation == 2) {
+    alert("are you not hungry anymore? refresh the page to start over. Otherwise, hope to see you next time!")
+  }
+}
+
