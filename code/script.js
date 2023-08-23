@@ -73,7 +73,7 @@ switch (selectedFoodCategory) {
     2 - Pinsa with Zucchini, Ricotta, and Lemon
     3 - Classic Pinsa Romana
     Please enter a number from these 3 choices.`);
-    foodOption = ["Romana Ricetta Originale", "Pinsa with Zucchini, Ricotta, and Lemon", "PClassic Pinsa Romana"];
+    foodOption = ["Romana Ricetta Originale", "Pinsa with Zucchini, Ricotta, and Lemon", "Classic Pinsa Romana"];
     break;
     
   case "Dessert Pizza":
@@ -103,8 +103,45 @@ else if (foodSubType === "3") {
 }
 
 // Step 4 - Age
-// Your code goes here
+
+// Input where the user adds their age
+let userAgeInput = prompt(`Is this food for a child or an adult? Type your age:`);
+
+// If- statement that connects they users age to the size and proce of chosen item. 
+let priceFood  ="";
+let userAgeCategory ="";
+if (userAgeInput >= 15) {
+  priceFood = "55 sek";
+  userAgeCategory = "adult";
+} else {
+  priceFood = "35 sek";
+  userAgeCategory = "child";
+} 
+
+// Prompt that will ask the user to confirm their choices.
+
+ if (foodSubType === "1") {
+ prompt (`You have chosen one ${userAgeCategory} size ${foodOption[0]}! That will be ${priceFood}. Are you sure you want to order this?
+ 1 - Yes
+  2 - No
+ `)
+ }
+
+else if (foodSubType === "2") {
+prompt (`You have chosen one ${userAgeCategory} size ${foodOption[1]}! That will be ${priceFood}. Are you sure you want to order this?
+1 - Yes
+2 - No
+`)
+}
+
+else if (foodSubType === "3") {
+prompt (`You have chosen one ${userAgeCategory} ${foodOption[2]}! That will be ${priceFood}. Are you sure you want to order this?
+1 - Yes
+2 - No
+`)
+}
 
 // Step 5 - Order confirmation
 // Your code goes here
 //
+
