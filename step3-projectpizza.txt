@@ -1,0 +1,24 @@
+// Step 3 - Subtype choice
+//sub choice for pizza
+//I think I could do the following with an Array, but it might be too hard for me now
+
+let subtypeChoice = 0;
+do {
+  subtypeChoice = prompt("What do you want on your pizza?\nPlease type 1,2 or 3:\n(1) Margerita\n(2) Ham and Pineapple\n(3) Meat lovers\n(4) Vegorama \n(4) Supreme")
+  alert('You chose' + foodChoice)
+  if (SubtypeChoice == 1) {
+    alert('You have choosen Margerita')
+  } else if (subtypeChoice == 2) {
+    alert('You have choosen Ham and Pineapple')
+  } else if (subtypeChoice == 3) {
+    alert('You have choosen Meat Lovers')
+  } else if (subtypeChoice == 4) {
+    alert('You have choosen Vegorama')
+  } else if (subtypeChoice == 5) {
+    alert('You have choosen Supreme')
+  } else {
+    alert('Your choice is not available, please try again')
+  }
+}
+while (subtypeChoice >= 6);
+alert('we are now out of the loop for sub type')
