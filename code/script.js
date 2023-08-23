@@ -8,7 +8,7 @@ alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
 
-// A prompt so that the user enters their name.
+// A prompt asking the user for theit name.
 let userName = prompt(`What's your name?`);
 
 
