@@ -46,7 +46,7 @@ alert(`Thank you. Let's get you a ${selectedFood}!`);
 
 // Step 3 - Subtype choice
 let subtype = "";
-let selectedSubtype = "";
+let selectedSubtype = [];
 
 // Determine the selected subtype based on the user's input
 switch (selectedFood) {
@@ -57,29 +57,7 @@ switch (selectedFood) {
       2. Pepperoni
       3. Quattro Stagioni`
       );
-  
-    switch (subtype) {
-      case "1":
-        selectedSubtype = "Hawaiian pizza";
-        // Display the selected subtype
-        alert(`You selected a ${selectedSubtype}!`);
-        break;
-      case "2":
-        selectedSubtype = "Pepperoni pizza";
-        // Display the selected subtype
-        alert(`You selected a ${selectedSubtype}!`);
-        break;
-      case "3": 
-        selectedSubtype = "Quattro Stagioni pizza";
-        // Display the selected subtype
-        alert(`You selected a ${selectedSubtype}!`);
-        break;
-      default:
-        // If the user enters an invalid subtype choice, show an error message and exit the program
-        alert(`Invalid choice. Please enter number 1-3 to choose among the dishes.`);
-        process.exit(1);
-        break;
-    };
+    selectedSubtype = ["Hawaiian pizza", "Pepperoni pizza", "Quattro Stagioni pizza"];
     break;
 
   case "Pasta":
@@ -88,29 +66,7 @@ switch (selectedFood) {
       2. Fettuccine Alfredo
       3. Pesto pasta`
     );
-
-    switch(subtype) {
-      case "1":
-        selectedSubtype = "Spaghetti Bolognese";
-        // Display the selected subtype
-        alert(`You selected a ${selectedSubtype}!`);
-        break;
-      case "2":
-        selectedSubtype = "Fettuccine Alfredo";
-        // Display the selected subtype
-        alert(`You selected a ${selectedSubtype}!`);
-        break;
-      case "3":
-        selectedSubtype = "Pesto pasta";
-        // Display the selected subtype
-        alert(`You selected a ${selectedSubtype}!`);
-        break;
-      default:
-        // If the user enters an invalid subtype choice, show an error message and exit the program
-        alert(`Invalid choice. Please enter number 1-3 to choose among the dishes.`);
-        process.exit(1);
-        break;
-    };
+    selectedSubtype = ["Spaghetti Bolognese", "Fettuccine Alfredo", "Pesto pasta"];
     break; 
 
   case "Salad": 
@@ -119,33 +75,28 @@ switch (selectedFood) {
       2. Classic Green Salad
       3. Carprese Salad`
     );
-
-    switch (subtype) {
-      case "1":
-        selectedSubtype = "Caesar Salad";
-        // Display the selected subtype
-        alert(`You selected a ${selectedSubtype}!`);
-        break;
-      case "2":
-        selectedSubtype = "Classic Green Salad";
-        // Display the selected subtype
-        alert(`You selected a ${selectedSubtype}!`);
-        break;
-      case "3":
-        selectedSubtype = "Carprese Salad";
-        // Display the selected subtype
-        alert(`You selected a ${selectedSubtype}!`);
-        break;
-      default:
-        // If the user enters an invalid subtype choice, show an error message and exit the program
-        alert(`Invalid choice. Please enter number 1-3 to choose among the dishes.`);
-        process.exit(1);
-        break;
-    };
+    selectedSubtype = ["Caesar Salad", "Classic Green Salad", "Carprese Salad"];
     break;
     
   default:
     // If the user enters an invalid food choice, show an error message and exit the program
+    alert(`Invalid choice. Please enter number 1-3 to choose among the dishes.`);
+    process.exit(1);
+    break;
+}
+
+switch (subtype) {
+  case "1":
+    alert(`You selected a ${selectedSubtype[0]}`);
+    break;
+  case "2":
+    alert(`You selected a ${selectedSubtype[1]}`);
+    break;
+  case "3":
+    alert(`You selected a ${selectedSubtype[2]}`);
+    break;
+  default:
+    // If the user enters an invalid subtype choice, show an error message and exit the program
     alert(`Invalid choice. Please enter number 1-3 to choose among the dishes.`);
     process.exit(1);
     break;
