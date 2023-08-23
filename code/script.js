@@ -31,7 +31,37 @@ if (foodChoice === "1") {
 alert(`You've chosen ${selectedFoodChoice}!`);
 
 // Step 3 - Subtype choice
-// Your code goes here
+let foodType = ""
+let subtypeChoice = ""
+
+switch (selectedFoodChoice) {
+  case "Pizza":
+    foodType = prompt(`Select a Pizza type. Enter a number:
+    1- Napolitiana
+    2 - Hawaiian
+    3 - Pepperoni`);
+    subtypeChoice = ["Napolitiana", "Hawaiian", "Pepperoni"];
+    break;
+  case "Pasta":
+    foodType = prompt(`Select a Pasta type. Enter a number:
+  1 - Spaghetti Carbonara
+  2 - Fettuccine Alfredo
+  3 - Cheesy Tortellini`);
+    subtypeChoice = ["Spaghetti Carbonara", "Fettuccine Alfredo", "Cheesy Tortellin"];
+    break;
+  case "Salad":
+      foodType = prompt(`Select a Salad type. Enter a number:
+      1 - Ceasar Salad
+      2 - Caprese Salad
+      3 - Greek Salad`);
+      subtypeChoice = ["Ceasar Salad", "Caprese Salad", "Greek Salad"];
+      break;
+    default:
+      alert("Invalid choice.");
+      process.exit(1);
+}
+
+
 
 // Step 4 - Age
 // Your code goes here
