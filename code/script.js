@@ -4,7 +4,11 @@
 // Your code goes here
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
-)
+);
+
+var username = prompt("What's your name?", "Confused Developer");
+
+alert("Welcome! Let's order some yummy food " + username + "!");
 
 // Step 2 - Food choice
 // Your code goes here

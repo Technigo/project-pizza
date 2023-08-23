@@ -1,10 +1,12 @@
-# Project Name
+# Project: Javascript Pizzeria
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Week 1 of Technigo boot camp. A basic set-up of the web page was given from Technigo. The project was to develop the basic JavaScript part of the web page. Variables, conditionals and native methods.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+As a beginner I started out by reading the material, get a overview of the assignment and then work through it from top to bottom. Giving myself a structure helped. ChatGPT, Google, Stack Overflow and Slack was used. 
+
+What technologies did you use? If you had more time, what would be next?
 
 ## View it live
 
