@@ -70,7 +70,11 @@ switch (selectedCraft) {
       Please enter the number of your choice`);
       color = ["Tablecloth", "Wallhangings", "Badge"];
       break;        
+default:
+alert("invalid choice.");
+Process.exit(1);
 }
+
 
 // Step 4 - Age
 // Your code goes here
