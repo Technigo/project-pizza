@@ -7,7 +7,7 @@ alert(
 )
 
 const userName = prompt("Please enter your name:");
-alert(`Hello,${userName}! Let's get started.`);
+alert(`Hello, ${userName}! Let's get started.`);
 
 
 // Step 2 - Food choice
@@ -15,10 +15,11 @@ alert(`Hello,${userName}! Let's get started.`);
 
 const foodChoice = prompt(`Select your yummy food:
 
-  1 - Pizza
-  2 - pasta
-  3 - Sallad
-  Please enter the number of your choice:`);
+1 - Pizza
+2 - pasta
+3 - Sallad
+
+Please enter the number of your choice:`);
 
 let selectedFood = "";
 
