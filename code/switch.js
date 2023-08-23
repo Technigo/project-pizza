@@ -3,7 +3,7 @@
 // Step 1 - Welcome and introduction
 // Welcome message display
 alert(
-    `Welcome to Javascript Pizzeria. 
+    `Welcome to Javascript Pizzeria. (switch version) 
     Ready to Start? - Click 'OK' to begin.`
 );
 //alert(`Does the button ok always show up in alert?`) The answer is YES.
@@ -103,6 +103,7 @@ switch (selectedMenu) {
                 break;
             default: alert(`Invalid pizza choice`);
         }
+        break;
     case "Pasta":
         switch (pastaChoice) {
             case "1":
@@ -116,6 +117,7 @@ switch (selectedMenu) {
                 break;
             default: alert(`Invalid pasta choice`);
         }
+        break;
     case "Salad":
         switch (saladChoice) {
             case "1":
@@ -129,7 +131,9 @@ switch (selectedMenu) {
                 break;
             default: alert(`Invalid salad choice`);
         }
-        process.exit(1);
+        break;
+
+    default: process.exit(1);
 }
 
 // Display the selected food choice subtype
