@@ -22,10 +22,10 @@ alert(
 const userName = prompt(`What is your name?`);
 
 alert(
-  `Hi${userName}, don't you worry, we don't judge you like pineapple on your pizza :)`
-)
-let pizzaChoice = "Hawaiian";
-switch(pizzaChoice){
+  `Hi ${userName}! Don't worry, we don't judge you like pineapple on your pizza here:)`)
+
+  let pizzaChoice = "Hawaiian";
+switch (pizzaChoice) {
 case "Nodic smoked salmon pizza":
   console.log("You picked Nodic smoked salmon pizza.");
   break;
@@ -37,5 +37,6 @@ case "Spicy Italian pizza":
   break;
 case "Kimchi BBQ chicken pizza":
   console.log("You picked Kimchi BBQ chicken pizza.");
-  break;
+defalut:
+console.log(`Sorry, we are out of ${pizzaChoice}.`);
 }
