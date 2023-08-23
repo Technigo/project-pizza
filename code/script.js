@@ -21,27 +21,87 @@ let selectedOption = "";
 //Detmine selected foodchoise based on the users number choise. 
 if (options === "1") {
   selectedOption = "Pizza"
-  alert("You have chosen pizza")
 }
 else if (options === "2") {
   selectedOption = "Pasta"
-  alert("You have chosen Pasta")
 }
 else if (options === "3") {
   selectedOption = "Salad"
-  alert("You have chosen salad")
 }
 else if (options === "4") {
   selectedOption = "Dessert"
-  alert("You have chosen dessert")
 }
 else {
-  alert("Invalid choise. Please select a valid number");
+  alert("Invalid choise. Please select a valid number");//Message works. If invalid number is entered when choosing type of food the message appears.
   process.exit(1);
-}//Reminder: check why/if I need process.exit
+}
+
+alert(`You've chosen ${selectedOption}!`);
 
 // Step 3 - Subtype choice
 // Your code goes here
+
+let menuFoodSelected = "";
+let typeOf = ""; //array to store for later choises?  for selected type of food from first menu?
+
+switch (selectedOption) {
+  case "Pizza": //Dont remember the logic, read up on it.
+    menuFoodSelected = prompt(`Select a type of Pizza:
+    1 - Quattro Formaggi
+    2 - Pepperoni
+    3 - Margherita
+    4 - Calzone
+    Please enter the number of your choise:`);
+    typeOf = ["Quattro Formaggi", "Pepperoni", "Margherita", "Calzone"]; //obs, square baccets 
+    break;
+  case "Pasta":
+    menuFoodSelected = prompt(`Select type of pasta:
+    1- Carbonara
+    2 - Bolognaise 
+    3 - WoW
+    4 - Yum
+    Please enter the number of your choise:`);
+    typeOf = ["Carbonara", "Bolognaise", " WoW", "Yum"];
+    break;
+  case "Salad":
+    menuFoodSelected = prompt(`Select type of salad:
+    1 - Green
+    2 - Rainbow 
+    3 - Happy
+    4 - Yey
+    Please enter the number of your choise:`);
+    typeOf = ["Green", "Rainbow", "Happy", "Yey"];
+    break;
+  case "Dessert":
+    menuFoodSelected = prompt(`Select type of dessert:
+    1 - Tiramisu
+    2 - Gelato
+    3 - Chocolate Fondant
+    4 - Yummy in my tummy
+    Please enter the number of your choise:`);
+    typeOf = ["Tiramisu", "Gelato", "Chocolate Fondant", "Yummy in my tummy"];
+    break;
+  default: //Why is default and alert not working?
+    alert(`Invalid choise, Please refresh to try again`);
+    process.exit(1);
+}
+
+if (menuFoodSelected === "1") {
+  alert(
+    `Great Choice, You've chosen ${typeOf[0]} from the ${selectedOption} menu!`);
+} else if (menuFoodSelected === "2") {
+  alert(
+    `Great Choice, You've chosen ${typeOf[1]} from the ${selectedOption} menu!`);
+} else if (menuFoodSelected === "3") {
+  alert(
+    `Great Choice, You've chosen ${typeOf[2]}  from the ${selectedOption} menu!`);
+}
+else if (menuFoodSelected === "4") {
+  alert(
+    `Great Choice, You've chosen ${typeOf[3]} from the ${selectedOption} menu!`);
+
+}
+
 // Step 4 - Age
 // Your code goes here
 // Step 5 - Order confirmation
