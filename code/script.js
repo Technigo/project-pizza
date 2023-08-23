@@ -42,7 +42,7 @@ if (menuChoice === "1") {
 }
 
 //Display the selected menu
-alert(`You have chosen ${selectedMenu}.`)
+alert(`You have chosen a ${selectedMenu} menu.`)
 
 // Step 3 - Subtype choice
 // Your code goes here
@@ -114,12 +114,12 @@ if (selectedMenu === "Pizza") {
   }
 }
 else {
-  alert(`Invalid dish type.Please start over.`);
+  alert(`Invalid dish type.  Please start over.`);
   process.exit(1);
 }
 
 // Display the selected food choice subtype
-alert(`Great ${userName}!  You have chosen ${finalChoice}!`)
+alert(`Great ${userName}!  You have chosen a ${finalChoice}!`)
 
 
 // Step 4 - Age
