@@ -65,7 +65,7 @@ switch (foodSelected) {
 
 // Step 4 - Age
 // Your code goes here
-const foodPriceAdult = 20;
+const foodPriceAdult = 15;
 const foodPricechild = 10;
 const age = prompt(`Is this food for a child or for an adault? please enter your age: `);
 
