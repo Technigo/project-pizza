@@ -15,4 +15,18 @@ if (person != null) {
 let foodOption = prompt(`What would you like to order? 
   1 - Pizza
   2 - Pasta
-  3 - Salad`)
+  3 - Salad`);
+
+switch (foodOption) {
+    case `1`:
+        alert(`Pizza is a great choise!`);
+        break;
+    case `2`:
+        alert(`Amazing, pasta is a great option!`);
+        break;
+    case `3`:
+        alert(`Wow, salad, so good!`);
+        break;
+    default:
+        alert(`Oh, not hungry? Please choose one of the provided options`)
+}

@@ -47,7 +47,7 @@ if (foodOption === `1`) {
     foodOptionText = "Quattro Stagioni"
     alert(`You have choosen Quattro Stagioni, amazing!`);
   } else {
-    alert(`Please choose a number between 1-3`);
+    alert(`Please choose a valid number`);
   }
 } else if (foodOption === `2`) {
   let pastaOption = prompt(`Which pasta would you like to order? 
@@ -64,7 +64,7 @@ if (foodOption === `1`) {
     foodOptionText = `Pasta allo Scoglio`
     alert(`You have choosen Pasta allo Scoglio, amazing!`);
   } else {
-    alert(`Please choose a number between 1-3`);
+    alert(`Please choose a valid number`);
   }
 
 } else if (foodOption === `3`) {
@@ -82,10 +82,10 @@ if (foodOption === `1`) {
     foodOptionText = `Fruit Salad`
     alert(`You have choosen Fruit Salad, amazing!`);
   } else {
-    alert(`Please choose a number between 1-3`);
+    alert(`Please choose a valid number`);
   }
 } else {
-  alert(`Please choose a valid option!`);
+  alert(`Please choose a valid number`);
 }
 
 // Step 4 - Age
@@ -108,6 +108,8 @@ if (ageOption >= 18) {
     alert(`Thank you for your order! This is you confirmation.`);
   } else if (confirmation === `2`) {
     alert(`Are you not hungry anymore? refresh the page to start over. Otherwise, hope to see you next time!`)
+  } else {
+    alert(`Please choose a valid number`);
   }
 } else {
   let confirmation = prompt(`One ${foodOptionText} will be prepared for you. That will be 10€. Are you sure you want to proceed with your order?
@@ -118,6 +120,8 @@ if (ageOption >= 18) {
     alert(`Thank you for your order! This is you confirmation.`);
   } else if (confirmation === `2`) {
     alert(`Are you not hungry anymore? refresh the page to start over. Otherwise, hope to see you next time!`)
+  } else {
+    alert(`Please choose a valid number`);
   }
 }
 
