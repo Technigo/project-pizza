@@ -31,38 +31,79 @@ if (foodChoice === "1") {
 alert(`You've chosen ${selectedFoodChoice}!`);
 
 // Step 3 - Subtype choice
-let foodType = ""
+let pizzaType = ""
+let pastaType = ""
+let saladType = ""
 let subtypeChoice = ""
 
-switch (selectedFoodChoice) {
-  case "Pizza":
-    foodType = prompt(`Select a Pizza type. Enter a number:
-    1- Napolitiana
-    2 - Hawaiian
-    3 - Pepperoni`);
-    subtypeChoice = ["Napolitiana", "Hawaiian", "Pepperoni"];
-    break;
-  case "Pasta":
-    foodType = prompt(`Select a Pasta type. Enter a number:
+if (selectedFoodChoice === "Pizza")
+  pizzaType = prompt(
+    `Delicious! What kind of pizza do you want? Type a number.
+  1 - Napolitiana
+  2 - Hawaiian
+  3 - Pepperoni`
+  ); if (pizzaType == 1) {
+    subtypeChoice = "Napolitiana"
+    alert(
+      `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
+    )
+  } else if (pizzaType == 2) {
+    subtypeChoice = "Hawaiian"
+    alert(
+      `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
+    )
+  } else if (pizzaType == 3) {
+    subtypeChoice = "Pepperoni"
+    alert(
+      `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
+    )
+  }
+
+  if (selectedFoodChoice === "Pasta")
+  pastaType = prompt(
+    `Delicious! What kind of pasta do you want? Type a number.
   1 - Spaghetti Carbonara
   2 - Fettuccine Alfredo
-  3 - Cheesy Tortellini`);
-    subtypeChoice = ["Spaghetti Carbonara", "Fettuccine Alfredo", "Cheesy Tortellin"];
-    break;
-  case "Salad":
-      foodType = prompt(`Select a Salad type. Enter a number:
-      1 - Ceasar Salad
-      2 - Caprese Salad
-      3 - Greek Salad`);
-      subtypeChoice = ["Ceasar Salad", "Caprese Salad", "Greek Salad"];
-      break;
-    default:
-      alert("Invalid choice.");
-      process.exit(1);
-}
+  3 - Cheesy Tortellini`
+  ); if (pastaType == 1) {
+    subtypeChoice = "Spaghetti Carbonara"
+    alert(
+      `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
+    )
+  } else if (pastaType == 2) {
+    subtypeChoice = "Fettuccine Alfredo"
+    alert(
+      `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
+    )
+  } else if (pastaType == 3) {
+    subtypeChoice = "Cheesy Tortellini"
+    alert(
+      `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
+    )
+  }
 
-
-
+  if (selectedFoodChoice === "Salad")
+  saladType = prompt(
+    `Delicious! What kind of salad do you want? Type a number.
+  1 - Ceasar Salad
+  2 - Caprese Salad
+  3 - Greek Salad`
+  ); if (saladType == 1) {
+    subtypeChoice = "Ceasar Salad"
+    alert(
+      `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
+    )
+  } else if (saladType == 2) {
+    subtypeChoice = "Caprese Salad"
+    alert(
+      `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
+    )
+  } else if (saladType == 3) {
+    subtypeChoice = "Greek Salad"
+    alert(
+      `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
+    )
+  }
 // Step 4 - Age
 // Your code goes here
 
