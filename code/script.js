@@ -1,8 +1,5 @@
-// Start here
 
 // Step 1 - Welcome and introduction
-// Your code goes here
-
 window.onload = function () {
 
   alert(
@@ -10,7 +7,7 @@ window.onload = function () {
   )
 
   const guestName = prompt(`What is your name?`)
-  console.log(guestName)
+  // console.log(guestName)
 
   alert(
     `Hi ${guestName}! We will now take your order. `
@@ -34,7 +31,7 @@ window.onload = function () {
     selectedFood = "salad"
   } else {
     alert(`You haven't chosen a food. Please select a number from the list.`)
-    Process.exit(1)
+    process.exit(1)
   }
   alert(
     `You have chosen a yummy ${selectedFood}!`
@@ -43,7 +40,7 @@ window.onload = function () {
   // Step 3 - Subtype choice
 
   let subMenu = ""
-  let subDish = ""
+  let dishName = ""
   let selectedDish = ""
 
   switch (selectedFood) {
@@ -53,9 +50,7 @@ window.onload = function () {
     2 - Kebabpizza
     3 - Hawaii
     Please enter the number of your choice:`)
-      subDish = ["Mexicana", "Kebabpizza", "Hawaii"]
-      selectedDish = subDish[subMenu - 1]
-      console.log(subDish[0] + "," + subDish[1] + "," + subDish[2])
+      dishName = ["Mexicana", "Kebabpizza", "Hawaii"]
       break
 
     case "pasta":
@@ -64,7 +59,7 @@ window.onload = function () {
     2 - Pasta Carbonara
     3 - Pasta Scampi
     Please enter the number of your choice:`)
-      subDish = ["Spagetti Bolognese", "Pasta Carbonara", "Pasta Scampi"]
+      dishName = ["Spagetti Bolognese", "Pasta Carbonara", "Pasta Scampi"]
       break
 
     case "salad":
@@ -73,15 +68,16 @@ window.onload = function () {
     2 - Roasted Turkey Club Salad
     3 - Classic Greec Salad
     Please enter the number of your choice:`)
-      subDish = ["Caesar Salad", "Roasted Turkey Club Salad", "Classic Greec Salad"]
+      dishName = ["Caesar Salad", "Roasted Turkey Club Salad", "Classic Greec Salad"]
       break
     default:
       alert(`"Invalid Choice. Please select a number."`)
       process.exit(1)
   }
+  selectedDish = dishName[subMenu - 1]
+  console.log(`${dishName[0]}, ${dishName[1]}, ${dishName[2]}`)
+  alert(`You have chosen ${selectedDish}.`)
 
-  alert(`You have chosen ${selectedDish}`)
-  console.log(subDish)
 
 
 
