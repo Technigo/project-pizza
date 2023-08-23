@@ -64,12 +64,65 @@ switch (choice) {
     break;
 }
 window.alert(`Got it, you picked ${meal}.`);
-
-
-
 // Your code goes here
 
 // Step 3 - Subtype choice
+let subtypes;
+const subtypePizza = `
+1) Margherita
+2) Calzone
+3) Quattro formaggi`;
+const subtypePasta = `
+1) Bolognese
+2) al olio`;
+const subtypeSalad = `
+1) Salad greek style
+2) Asian rice salad
+3) Tuna salad
+4) Grandmas noodle salad`;
+
+const mealSubtype = [];
+let dishes;
+switch (choice) {
+  case 1:
+    subtypes = subtypePizza;
+    dishes = 3;
+    // !!! wird zu mealsubtype.length
+    const pizzaSubtypes = ["Margharita", "Calzone", "Quattro formaggi"];
+    for (let i = 0; i < pizzaSubtypes.length; i++) {
+      mealSubtype.push(pizzaSubtypes[i]);
+    }
+    break;
+  case 2:
+    subtypes = subtypePasta;
+    dishes = 2;
+    const pastaSubtypes = ["Bolognese", "al olio"];
+    for (let i = 0; i < pastaSubtypes.length; i++) {
+      mealSubtype.push(pastaSubtypes[i]);
+    }
+    break;
+  case 3:
+    subtypes = subtypeSalad;
+    dishes = 4;
+    const saladSubtypes = ["Salad greek style", "Asian rice salad", "Tuna salad", "Grandmas noodle salad"];
+    for (let i = 0; i < saladSubtypes.length; i++) {
+      mealSubtype.push(saladSubtypes[i]);
+    }
+}
+console.log(mealSubtype);
+
+let subchoice;
+evaluation = false;
+// better reset value
+while (evaluation == false) {
+  let subchoice = window.prompt("Please enter the number of disired dish:" + subtypes);
+  if (isNaN(subchoice) || subchoice <= 0 || subchoice > dishes) {
+    window.alert(`Sorry, invalid choice, please pick 1-${dishes}`);
+  } else {
+    evaluation = true;
+  }
+}
+
 // Your code goes here
 
 // Step 4 - Age
