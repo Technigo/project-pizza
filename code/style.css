@@ -10,6 +10,7 @@ body {
   background-image: url("./images/cheesy-pizza.jpg");
   background-size: cover;
   background-position: 25% 50%;
+  background-color: #990000;
   color: white;
   display: flex;
   justify-content: center;
