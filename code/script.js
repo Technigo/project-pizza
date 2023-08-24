@@ -72,7 +72,6 @@ if (selectedFood === "Pizza")
       `You chose ${subtypeName[2]} as your meal`);
 
   
-
   } else if (selectedFood === "Pasta") {
   alert(
     `You chose ${subtypeName[0]} as your meal`);
