@@ -25,7 +25,6 @@ if (foodChoice === "1") {
   selectedFoodChoice = "Salad";
 } else {
   alert("Invaild choice. Please select a number between 1 and 3.");
-  process.exit(1);
 }
 
 alert(`You've chosen ${selectedFoodChoice}!`);
@@ -57,7 +56,7 @@ if (selectedFoodChoice === "Pizza")
     alert(
       `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
     )
-  }
+  } 
 
   if (selectedFoodChoice === "Pasta")
   pastaType = prompt(
@@ -80,7 +79,7 @@ if (selectedFoodChoice === "Pizza")
     alert(
       `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
     )
-  }
+  } 
 
   if (selectedFoodChoice === "Salad")
   saladType = prompt(
@@ -103,9 +102,8 @@ if (selectedFoodChoice === "Pizza")
     alert(
       `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
     )
-  } else {
-    alert("Invaild choice. Please select a number between 1 and 3.");
   }
+
 // Step 4 - Age 
 // Price for regular sizes for portions for adults
 let foodCost = "";
@@ -124,9 +122,7 @@ switch (selectedFoodChoice) {
 let foodCostChild = price/2;
 
 // Ask for age from user
-const customerAge = prompt(
-  `Is this food order for an adult or a child? Enter your age in numbers down below please!`
-);
+const customerAge = prompt(`Is this food order for an adult or a child? Enter your age in numbers down below please!`);
 
 if (customerAge >= 18){
   alert(`You've selected ${subtypeChoice} ${selectedFoodChoice} regular size and the total will be ${price}kr! `);
@@ -138,4 +134,19 @@ if (customerAge >= 18){
 
 
 // Step 5 - Order confirmation
-// Your code goes here
+let orderConfirmation = prompt(`Do you want to confirm your order? Please select the number down below.
+1 - Yes
+2 - No`);
+
+// Convert the user input to a number
+orderConfirmation = parseInt(orderConfirmation);
+
+if (orderConfirmation === 1) {
+  alert(`Thank you for your order! We will start to prepare your meal now.`);
+} else if (orderConfirmation === 2) {
+  alert(`Sorry to see you go... Should you ever change your mind or have any questions in the future, please don't hesitate to reach out. Have a nice day!`);
+} else {
+  alert(`Invalid input. Please select either 1 or 2.`);
+}
+
+
