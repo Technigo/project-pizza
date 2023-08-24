@@ -1,23 +1,41 @@
-// Start here
-
-// Step 1 - Welcome and introduction
-// Your code goes here
-alert(
-  `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
-)
-
-var userName = prompt(`What is your name?`);
-
-alert (`Hi there ${userName}!`)
+var userName = prompt("What is your name?");
 
 // Step 2 - Food choice
-// Your code goes here
+var userChoice = prompt("What do you want today?\n1. Pizza\n2. Pasta\n3. Salad\nPlease write the number of your choice (1, 2, or 3).");
 
-// Step 3 - Subtype choice
-// Your code goes here
+var foodSubtypeChoice;
+switch (userChoice) {
+  case "1":
+    foodSubtypeChoice = "Superdelicious margarita";
+    break;
+  case "2":
+    foodSubtypeChoice = "The big favorite capricciosa";
+    break;
+  case "3":
+    foodSubtypeChoice = "A new and exciting experience: half margarita and half capricciosa";
+    break;
+}
 
 // Step 4 - Age
-// Your code goes here
+var ageConfirmation = prompt("Is this order for a child or an adult?");
+var orderMessage = generateOrderMessage(ageConfirmation, foodSubtypeChoice);
+alert(orderMessage);
 
 // Step 5 - Order confirmation
-// Your code goes here
+var confirmOrder = confirm(`Just to confirm:\nYou ordered a ${foodSubtypeChoice} from our ${userChoice} menu.\nIs this correct?`);
+
+if (confirmOrder) {
+  alert(`Your order has been confirmed, ${userName}!\nIt will be served shortly.`);
+} else {
+  alert(`No worries, ${userName}! If you'd like to make any changes, please let our staff know.`);
+}
+
+function generateOrderMessage(ageConfirmation, foodSubtypeChoice) {
+  if (ageConfirmation === "child") {
+    return `You've ordered a child's ${foodSubtypeChoice}. It will be prepared shortly.`;
+  } else if (ageConfirmation === "adult") {
+    return `You've ordered an adult ${foodSubtypeChoice}. It will be prepared shortly.`;
+  } else {
+    return "Your selection was not recognized. Please specify if this order is for a child or an adult.";
+  }
+}
