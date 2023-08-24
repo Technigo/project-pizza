@@ -103,9 +103,39 @@ if (selectedFoodChoice === "Pizza")
     alert(
       `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
     )
+  } else {
+    alert("Invaild choice. Please select a number between 1 and 3.");
   }
-// Step 4 - Age
-// Your code goes here
+// Step 4 - Age 
+// Price for regular sizes for portions for adults
+let foodCost = "";
+switch (selectedFoodChoice) {
+  case "Pizza":
+    price = "120";
+    break;
+  case "Pasta":
+    price = "110";
+    break;
+  case "Salad":
+    price = "105";
+    break;
+}
+// Cost for children is half the price
+let foodCostChild = price/2;
+
+// Ask for age from user
+const customerAge = prompt(
+  `Is this food order for an adult or a child? Enter your age in numbers down below please!`
+);
+
+if (customerAge >= 18){
+  alert(`You've selected ${subtypeChoice} ${selectedFoodChoice} regular size and the total will be ${price}kr! `);
+} else if (customerAge <= 18){
+  alert(`You've selected ${subtypeChoice} ${selectedFoodChoice} children size and the total will be ${foodCostChild}kr!`);
+} else {
+  alert(`Invaild input, please try again!`);
+}
+
 
 // Step 5 - Order confirmation
 // Your code goes here
