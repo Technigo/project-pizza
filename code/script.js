@@ -1,11 +1,10 @@
-// Start here
-
 // Step 1 - Welcome and introduction
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
 const firstName = prompt("Please enter your name:");
-alert (`Hello, ${firstName}! Let's get started.`);    
+alert (
+  `Hello, ${firstName}! Let's get started.`);    
 
 // Step 2 - Food choice
 alert(`Time to choose what food you want!`)
@@ -29,7 +28,7 @@ if (foodChoice === "1") {
 
 alert(`You've chosen ${selectedFoodChoice}!`);
 
-// Step 3 - Subtype choice
+// Step 3 - Subtype food choice
 let pizzaType = ""
 let pastaType = ""
 let saladType = ""
@@ -84,21 +83,21 @@ if (selectedFoodChoice === "Pizza")
   if (selectedFoodChoice === "Salad")
   saladType = prompt(
     `Delicious! What kind of salad do you want? Type a number.
-  1 - Ceasar Salad
-  2 - Caprese Salad
-  3 - Greek Salad`
+  1 - Ceasar 
+  2 - Caprese 
+  3 - Greek `
   ); if (saladType == 1) {
-    subtypeChoice = "Ceasar Salad"
+    subtypeChoice = "Ceasar"
     alert(
       `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
     )
   } else if (saladType == 2) {
-    subtypeChoice = "Caprese Salad"
+    subtypeChoice = "Caprese"
     alert(
       `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
     )
   } else if (saladType == 3) {
-    subtypeChoice = "Greek Salad"
+    subtypeChoice = "Greek"
     alert(
       `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
     )
@@ -115,7 +114,7 @@ switch (selectedFoodChoice) {
     price = "110";
     break;
   case "Salad":
-    price = "105";
+    price = "100";
     break;
 }
 // Cost for children is half the price
@@ -148,5 +147,3 @@ if (orderConfirmation === 1) {
 } else {
   alert(`Invalid input. Please select either 1 or 2.`);
 }
-
-

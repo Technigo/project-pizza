@@ -1,10 +1,14 @@
-# Project Name
+# Project Pizza
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This assignment was about learning JavaScript basics such as data types, variables and conditionals. The task was to create a pizzera handling customer orders. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I approached the problem by coding step by step. So after I finalised one step I pushed my progress to Github and then moved on to the next step.
+The techniques I used to solve the problem was to take help from Google mostly, chat gpt and the provided course material.
+Each time I sat down with the project I had different goals to complete different steps and if I did not solve them during that sitdown I wrote a note to continue with the problems I encountered. 
+
+If I had more time I would continue with the stretch goals!
 
 ## View it live
 
