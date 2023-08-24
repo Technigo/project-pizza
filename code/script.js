@@ -9,9 +9,28 @@ alert(
 const userName = prompt("Please enter your name:");
 alert(`Hi, ${userName}!`);
 
-
 // Step 2 - Food choice
 // Your code goes here
+const foodChoice = prompt(`Select food:
+1 - Pizza
+2 - Pasta
+3 - Salad
+Please enter the number of your choice:`);
+
+let selectedFood = "";
+
+if (foodChoice === "1") {
+    selectedFood = "Pizza";
+} else if (foodChoice === "2") {
+  selectedFood = "Pasta";
+} else if (foodChoice === "3") {
+  selectedFood = "Salad";
+} else {
+alert("Invalid choice. Please select a valid number");
+ProcessingInstruction.exit(1);
+}
+
+alert(`You have chosen ${selectedFood}`);
 
 // Step 3 - Subtype choice
 // Your code goes here
