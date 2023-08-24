@@ -60,7 +60,7 @@ if (foodOption === `1`) {
   } else if (pastaOption === `2`) {
     foodOptionText = `Pasta con Pomodorini`
     alert(`You have choosen Pasta con Pomodorini, amazing!`);
-  } else if (pastaOption === `1`) {
+  } else if (pastaOption === `3`) {
     foodOptionText = `Pasta allo Scoglio`
     alert(`You have choosen Pasta allo Scoglio, amazing!`);
   } else {
@@ -76,9 +76,9 @@ if (foodOption === `1`) {
   if (saladOption === `1`) {
     alert(`You have choosen Tuna Salad, amazing!`);
     foodOptionText = `Broccoli Salad`
-  } if (saladOption === `2`) {
+  } else if (saladOption === `2`) {
     alert(`You have choosen Broccoli Salad, amazing!`);
-  } if (saladOption === `3`) {
+  } else if (saladOption === `3`) {
     foodOptionText = `Fruit Salad`
     alert(`You have choosen Fruit Salad, amazing!`);
   } else {
