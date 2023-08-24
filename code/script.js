@@ -35,11 +35,12 @@ if (pizzaChoice === "1") {
   selectedPizza = "Fungi";
 
   } else if (pizzaChoice ==="4") {
-  selectedPizza = "Surprise"; 
-  }
-
+  selectedPizza = "Surprise";
+  
+  } else {
   alert ("invalid pizzaChoice, Please select a valid Number.");
   ProcessingInstruction.exit(1);
+}
 
 // Step 4 - Age
 // Your code goes here
