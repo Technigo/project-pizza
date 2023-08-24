@@ -12,6 +12,8 @@ if (person != null) {
 }
 
 // Step 2 - Food choice
+let foodOptionText;
+
 let foodOption = prompt(`What would you like to order? 
   1 - Pizza
   2 - Pasta
@@ -39,12 +41,16 @@ if (foodOption === `1`) {
 
     switch (pizzaOption) {
         case `1`:
+            foodOptionText = `Pizza Bianca`
             alert(`You have choosen Pizza Bianca, amazing!`);
             break;
         case `2`:
+            foodOptionText = `Pizza con Pomodorini`
             alert(`You have choosen Pizza con Pomodorini, amazing!`);
             break;
-        case `3`: (`You have choosen Quattro Stagioni, amazing!`);
+        case `3`:
+            foodOptionText = `Quattro Stagioni`
+            alert(`You have choosen Quattro Stagioni, amazing!`);
             break;
         default:
             alert(`Please choose a valid number`);
@@ -59,12 +65,15 @@ if (foodOption === `2`) {
 
     switch (pastaOption) {
         case `1`:
+            foodOptionText = `Pasta Alio e Olio`
             alert(`You have choosen Pasta Alio e Olio, amazing!`);
             break;
         case `2`:
+            foodOptionText = `Pasta con Pomodorini`
             alert(`You have choosen Pasta con Pomodorini, amazing!`);
             break;
         case `3`:
+            foodOptionText = `Pasta allo Scoglio`
             alert(`You have choosen Pasta allo Scoglio, amazing!`);
             break;
         default:
@@ -81,9 +90,11 @@ if (foodOption === `3`) {
     switch (saladOption) {
 
         case `1`:
+            foodOptionText = `Tuna Salad`
             alert(`You have choosen Tuna Salad, amazing!`);
             break;
         case `2`:
+            foodOptionText = `Broccoli Salad`
             alert(`You have choosen Broccoli Salad, amazing!`);
             break;
         case `3`:
@@ -94,45 +105,53 @@ if (foodOption === `3`) {
             alert(`Please choose a valid number`);
     }
 }
+
 // Step 4 - Age
+
 let ageOption = prompt(`How old are you?`);
 
 switch (ageOption) {
+
     case `ageOption >= 18`:
-        alert(`You have ordered a ${foodOption} from the grown ups menu!`);
+        alert(`You have ordered a ${foodOptionText} from the grown ups menu!`);
         break;
     default:
-        alert(`you have ordered a ${foodOption} from the childrens menu!`);
+        alert(`you have ordered a ${foodOptionText} from the childrens menu!`);
 }
 
 // Step 5 - Order confirmation
 
 if (ageOption >= 18) {
     let confirmation = prompt(`One ${foodOptionText} will be prepared for you. That will be 15€. Are you sure you want to proceed with your order? 
-  Enter a number to confirm: 
-  1 - yes 
-  2 - no`);
+    Enter a number to confirm: 
+    1 - yes 
+    2 - no`);
 
-    switch (ageOption) {
+    switch (confirmation) {
         case `1`:
             alert(`Thank you for your order! This is you confirmation.`);
             break;
         case `2`:
-            alert(`Are you not hungry anymore? refresh the page to start over. Otherwise, hope to see you next time!`);
+            alert(`Are you not hungry anymore? refresh the page to start over. Otherwise, hope to see you next time!`)
             break;
         default:
             alert(`Please choose a valid number`);
     }
-}
-let confirmation = prompt(`One ${foodOptionText} will be prepared for you. That will be 10€. Are you sure you want to proceed with your order?
-  Enter a number to confirm:
-   1 - yes
-   2 - no`);
-if (confirmation === `1`) {
-    alert(`Thank you for your order! This is you confirmation.`);
-} else if (confirmation === `2`) {
-    alert(`Are you not hungry anymore? refresh the page to start over. Otherwise, hope to see you next time!`)
 } else {
-    alert(`Please choose a valid number`);
+    let confirmation = prompt(`One ${foodOptionText} will be prepared for you. That will be 10€. Are you sure you want to proceed with your order?
+    Enter a number to confirm:
+     1 - yes
+     2 - no`);
+
+    switch (confirmation) {
+        case `1`:
+            alert(`Thank you for your order! This is you confirmation.`);
+            break;
+        case `2`:
+            alert(`Are you not hungry anymore? refresh the page to start over. Otherwise, hope to see you next time!`)
+            break;
+        default:
+            alert(`Please choose a valid number`);
+    }
 }
 
