@@ -9,4 +9,4 @@ The most difficult part was to find a way to keep the rest of the code from runn
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://pizzeria-conditionals.netlify.app/
