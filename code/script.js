@@ -38,6 +38,9 @@ if (pizzaChoice === "1") {
   selectedPizza = "Surprise"; 
   }
 
+  alert ("invalid pizzaChoice, Please select a valid Number.");
+  ProcessingInstruction.exit(1);
+
 // Step 4 - Age
 // Your code goes here
 
