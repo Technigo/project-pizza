@@ -6,6 +6,10 @@ alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
 
+const userName = prompt("Please enter your name:");
+alert(`Hi, ${userName}!`);
+
+
 // Step 2 - Food choice
 // Your code goes here
 
