@@ -24,16 +24,18 @@ while (evaluation == false) {
 2) Pasta
 3) Salad
 `);
-  // console.log(typeof (choice));
-  // type of input is string
+  // console.log(typeof (choice)), type of input is string
 
   // evaluation of meal type choice
-  if (choice != 1 && choice != 2 && choice != 3) {
+  if (choice === null) {
+    throw new Error("Order process terminated.");
+  } else if (choice != 1 && choice != 2 && choice != 3) {
     // not || ! test if all are wrong
     window.alert("Sorry, invalid choice, please pick 1-3.");
   } else {
     evaluation = true;
   }
+
   // --working as well but not cool--
   // switch (choice) {
   //   case 1:
