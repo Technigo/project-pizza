@@ -1,10 +1,10 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This assigment is about a virtuell pizzeria where you make your order thru pop up alerts.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+This projects was already structed for us with the steps and the requirments needed. This made it alot more easier for me to plan and think about how i will contunie with it. When i approched problems i watch the recordings from the coding session and also turned to stack and google alot. 
 
 ## View it live
 
