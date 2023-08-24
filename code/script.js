@@ -15,7 +15,7 @@ let foodChoiceNum = 0;
 let choiceFood = "Pizza";
 do {
   //Present menu options (Pizza, Pasta, Salad)
-  foodChoiceNum = prompt("What would you like to eat?\nPlease type 1,2 or 3:\n(1) Pizza\n(2) Pasta\n(3) Salad")
+  foodChoiceNum = prompt("What would you like to eat?\nPlease type 1,2 or 3:\n(1) Pizza\n(2) Pasta\n(3) Salad") //found the \n for new line option before our Tuesday lesson, will use Diego's example for the next prompt
   if (foodChoiceNum == 1) {
     alert('You have choosen Pizza!')
     choiceFood = "Pizza";
@@ -30,8 +30,7 @@ do {
   }
 }
 while (foodChoiceNum >= 4); //do...while loop if user does not enter a valid option (1,2 or 3)
-alert('we are now out of the loop')
-console.log(foodChoiceNum + choiceFood)
+console.log(foodChoiceNum + choiceFood) //for testing
 
 // // Step 3 - Subtype choice
 
@@ -68,25 +67,34 @@ do {
     4 - Caesar Salad`);
       subtypeChoiceFood = ["Garden Salad", "Greek Salad", "Caprese Salad", "Caesar Salad"];
       break;
-    default:
-      // If an invalid option is chosen, show an error message and exit the program.
-      alert("Invalid choice.");
-      process.exit(1);
+    default: //i don't think I need this
+    // If an invalid option is chosen, show an error message and exit the program.
+    //alert("Invalid choice.");
+    //process.exit(1);
   }
 }
 while (subtypeChoiceNum >= 5); //do...while loop if user does not enter a valid option (1,2 or 3)
-alert(`Great Choice, You chose ${subtypeChoiceNum} ${subtypeChoiceFood[subtypeChoiceNum]} . Your food will be prepared ASAP!`);
-alert('we are now out of the loop')
+alert(`Great Choice, You chose ${subtypeChoiceNum} ${subtypeChoiceFood[subtypeChoiceNum - 1]}`);
 
 // Step 4 - Age
 
-const userAge = prompt("So that we can prepare the correct size. Please tell us your age?")
-const pizzaSize = userAge >= 18 ? "Adult size" : "Child sized"
-if (userAge >= 18) {
-  alert("You are an adult. We will prepare you an adult size portion")
-} else {
-  alert("You are a child. We will prepare you an child size portion")
+do {
+  let userAgeAlert = "Adult"
+  var containsOnlyDigits = /^[0-9]+$/; // one or more of digits 0 to 9
+  const userAgeNum = prompt("So that we can prepare the correct size. Please tell us your age?")
+  //const pizzaSize = userAgeNum >= 18 ? "Adult size" : "Child sized"
+  if (userAgeNum >= 18) {
+    alert("You are an adult. We will prepare you an adult size portion")
+    userAgeAlert = "Adult"
+  } else {
+    alert("You are a child. We will prepare you an child size portion")
+    userAgeAlert = "Child"
+  }
 }
+while (!isNaN(question))
+
 
 // Step 5 - Order confirmation
-// Your code goes here
+
+const orderConfirm = alert(`You have ordered a`)// ${userAgeAlert} portion of the ${choiceFood} - ${subtypeChoiceFood[subtypeChoiceNum]}
+//Enjoy your meal!`);
