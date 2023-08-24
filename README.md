@@ -47,7 +47,7 @@ Fullfill the requirements described in step 1-5.
 - CSS custom properties
 - editor: visual studio code
 
-### What I learned
+### What I learned 
 
 Using different types of loops and condition checking, evaluating user inputs, handling cancel selections from popup boxes thru a triggered error (throw Error).
 
