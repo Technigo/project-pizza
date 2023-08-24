@@ -1,14 +1,17 @@
 // Start here
 
 // Step 1 - Welcome and introduction
-// Your code goes here
 window.alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 );
 
-let username = window.prompt("Please fill in your name: ");
-
-alert(`Good to have you here ${username} !`);
+//input and validation for username
+let username = "";
+do {
+  username = window.prompt("Please fill in your name, minimum 3 characters: ");
+} while (username.length < 3)
+window.alert(`Good to have you here ${username} !`);
+// Your code goes here
 
 // Step 2 - Food choice
 let evaluation = false;
