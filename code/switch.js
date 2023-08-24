@@ -91,8 +91,10 @@ switch (pastaType) {
     alert(`You chose Penne .`);
     break;
      default:
-        alert(`Invalid pasta type selection.`);
-      }
+    alert(`Invalid pasta type selection.`);
+    break
+}
+break
 case "Salad":
    saladType = prompt(`CHoose a type of Salad
   1 - Caesar
@@ -119,28 +121,33 @@ switch (saladType) {
 
 // Step 4 - Age
 // Your code goes here
-// const ageChoice = prompt(`Who order? Write your age`)
+ const ageChoice = prompt(`Who order? Write your age`)
 
-// let orderMessage;
-// let prise;
-
-// if (ageChoice >= 18) {
-//   orderMessage = `You've ordered a adult size ${foodType}. That will be 130 SEK`;
-// } else if (ageChoice < 18){
-//   orderMessage = `You've ordered a child size ${foodType}. That will be 100 SEK`;
-// } else {
-//   orderMessage = "Invalid choice. Please specify 'child' or 'adult'.";
-// }
-// alert(orderMessage);
+let orderMessage;
+switch (true) {
+case ageChoice >= 18:
+  orderMessage = `You've ordered a adult size ${foodType}. That will be 130 SEK`;
+  break;
+  case ageChoice < 18:
+    orderMessage = `You've ordered a child size ${foodType}. That will be 100 SEK`;
+    break;
+default:
+  orderMessage = "Invalid choice. Please specify 'child' or 'adult'.";
+}
+alert(orderMessage);
 
 // Step 5 - Order confirmation
 // Your code goes here
-// const confirmation = prompt("Would you like to confirm your order? (Yes/No)");
+const confirmation = prompt("Would you like to confirm your order? (Yes/No)");
 
-// if (confirmation === "yes") {
-//   alert(`Thank you for your order !`)
-// } else if (confirmation === "no") {
-//   alert(`We hope to serve you again in the future.`)
-// } else {
-//   alert("Invalid choice. Please specify 'Yes' or 'No'.");
-// }
+switch (confirmation) {
+  case "yes":
+  alert(`Thank you for your order !`)
+    break;
+case"no":
+    alert(`We hope to serve you again in the future.`)
+    break
+default:
+    alert("Invalid choice. Please specify 'Yes' or 'No'.");
+    break
+}
