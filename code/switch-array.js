@@ -114,6 +114,9 @@ if (subMenuChoice === "1") {
     alert(`Great ${userName}!  You have chosen ${finalChoice[1]} from the ${selectedMenu} menu!`)
 } else if (subMenuChoice === "3") {
     alert(`Great ${userName}!  You have chosen ${finalChoice[2]} from the ${selectedMenu} menu!`)
+}
+else {
+    alert(`Invalid dish choice.  Please start over.`)
     process.exit(1)
 }
 
@@ -129,25 +132,32 @@ let costFood = (userAge >= 12) ? "15" : "9";
 let costAge = (costFood === "15") ? "adult" : "child";
 
 //Display the selected dish and the associated cost
-alert(`One ${costAge} ${finalChoice} will be prepared for you.  That will be ${costFood} euros.`)
-
+if (subMenuChoice === "1") {
+    alert(`One ${costAge} ${finalChoice[0]} will be prepared for you.  That will be ${costFood} euros.`)
+} else if (subMenuChoice === "2") {
+    alert(`One ${costAge} ${finalChoice[1]} will be prepared for you.That will be ${costFood} euros.`)
+} else if (subMenuChoice === "3") {
+    alert(`One ${costAge} ${finalChoice[2]} will be prepared for you.That will be ${costFood} euros.`)
+    process.exit(1)
+}
 
 //Prompt the client to confirm their order
-let confirmation = prompt(`Are you sure this is what you want to order?
-    1- Yes
-    2- No 
-    Enter a number to confirm:`);
+
+let confirmation = prompt(`Are you sure this is what you want to order ?
+        1 - Yes
+    2 - No 
+    Enter a number to confirm: `);
 
 // Step 5 - Order confirmation
 
 //Determine the client's confirmation
 
 if (confirmation === "1") {
-    alert(`Thank you ${userName} for placing your order!  Please wait while your food is being prepared (approx. ${waitingTime} min).  Bon apétit!`)
+    alert(`Thank you ${userName} for placing your order!  Please wait while your food is being prepared(approx.${waitingTime} min).Bon apétit!`)
 } else if (confirmation === "2") {
-    alert(`No worries ${userName}!  Welcome back anytime to try our menu!`)
+    alert(`No worries ${userName} !Welcome back anytime to try our menu!`)
 } else {
-    alert(`Invalid choice.  Please choose between 1 or 2.`)
+    alert(`Invalid choice.Please choose between 1 or 2.`)
     process.exit(1);
 }
 
