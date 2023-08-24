@@ -9,6 +9,10 @@ if (name != null) {
     `Hey there ${name}, are you ready to order?`
     )
   }
+else {
+  alert("Invalid choice, please try again!")
+  process.exit(1)
+}
 
 // Step 2 - Food choice
 let menuChoices = "What type of food would you like to order? \n \n"
@@ -18,13 +22,17 @@ let menuChoices = "What type of food would you like to order? \n \n"
 + "\t3. Salad \n"
 
 let foodChoice = Number(prompt(menuChoices, "Ex. 1"))
-let foodName =""
-if (foodChoice === 1) {foodName = "pizza"}
-else if (foodChoice === 2) {foodName = "pasta"}
-else if (foodChoice === 3) {foodName = "salad"}
-else {foodName = "an invalid number"}
+let foodTypeNames = ["pizza", "pasta", "salad"]
 
-alert(`You have chosen ${foodName}`)
+if (foodChoice === 1 || foodChoice === 2 || foodChoice ===3) {
+  foodName = foodTypeNames[foodChoice - 1]
+  alert(`You have chosen ${foodName}`)
+}
+else {
+  foodName = "an invalid number"
+  alert(`You have chosen ${foodName}`)
+  process.exit(1)
+}
 
 // Step 3 - Subtype choice
 let menuSubchoice;
@@ -53,7 +61,7 @@ switch (foodChoice){
 }
 let foodSubchoice;
 if (menuSubchoice != null){
-  foodSubchoice = Number(prompt(menuSubchoice, "Ex. 1"))
+  foodSubchoice = Number(prompt(menuSubchoice))
 }
 
 let dishChosen
@@ -98,8 +106,7 @@ alert(`You have chosen to order ${dishChosen}. Press OK to confirm your choice`)
 
 // Step 4 - Age
 let customerAge = prompt("Is this food for an adult or a child? Please enter your age:")
-let price
-let adultOrChild
+let price, adultOrChild
 if (customerAge >= 18) {
   price = 50
   adultOrChild = "adult"
@@ -108,11 +115,14 @@ else {
   price = 25
   adultOrChild = "child"
 }
-let confirmOrderMessage = `One ${adultOrChild} sized ${dishChosen} will be prepared for you. That'll be ${price} SEK.` +
+
+let confirmOrderMessage = 
+`One ${adultOrChild} sized ${dishChosen} will be prepared for you. That'll be ${price} SEK.` +
 "\n\tAre you sure you want to order this?\n" +
 "\tEnter a number to confirm:\n" +
 "\t1. Yes \n" +
 "\t2. No \n" 
+
 let confirmOrder = prompt(confirmOrderMessage)
 
 // Step 5 - Order confirmation
@@ -123,3 +133,5 @@ else {
   alert("Invalid choice, please make your order again")
   process.exit(1)
 }
+
+alert(finalOrderMessage)
