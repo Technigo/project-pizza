@@ -48,7 +48,7 @@ if (foodType === "Pizza") {
   pizzaType= prompt(`Choose a type of Pizza
   1 - Margherita
   2 - Pepperoni
-  3 - Veggie `);
+  3 - Vegetarian `);
 
   if (pizzaType === "1") {
         alert(`You chose Margherita pizza.`);
@@ -62,14 +62,14 @@ if (foodType === "Pizza") {
 } else if (foodType === "Pasta") {
   pastaType = prompt(`Choose a type of Pasta
   1 - Spaghetti
-  2 - Penne
-  3 - Alfredo`);
+  2 - Alfredo
+  3 - Penne`);
   if (pastaType === "1") {
         alert(`You chose Spaghetti.`);
       } else if (pastaType === "2") {
-        alert(`You chose Fettuccine Alfredo.`);
+        alert(`You chose Alfredo.`);
       } else if (pastaType === "3") {
-        alert(`You chose Penne Arrabbiata.`);
+        alert(`You chose Penne .`);
       } else {
         alert(`Invalid pasta type selection.`);
       }
@@ -83,7 +83,7 @@ if (foodType === "Pizza") {
       } else if (saladType === "2") {
         alert(`You chose Greek Salad.`);
       } else if (saladType === "3") {
-        alert(`You chose Caprese Salad.`);
+        alert(`You chose Garden Salad.`);
       } else {
         alert(`Invalid salad type selection.`);
       }
@@ -91,72 +91,30 @@ if (foodType === "Pizza") {
   alert("Something went wrong. Please try again.");
 };
 
-
-
-// if (foodChoice === "1") {
-//   // Step 3 - Pizza subtype choice
-//   alert(`You chose  pizza.`);
-//   const pizzaType = prompt(`Choose a type of pizza:
-//   1 - Margherita
-//   2 - Pepperoni
-//   3 - Vegetarian`);
-  
-//   if (pizzaType === "1") {
-//     alert(`You chose Margherita pizza.`);
-//   } else if (pizzaType === "2") {
-//     alert(`You chose Pepperoni pizza.`);
-//   } else if (pizzaType === "3") {
-//     alert(`You chose Vegetarian pizza.`);
-//   } else {
-//     alert(`Invalid pizza type selection.`);
-//   }
-// } else if (foodName === "2") {
-//   // Step 3 - Pasta subtype choice
-//   alert(`You chose  pasta.`);
-//   const pastaType = prompt(`Choose a type of pasta:
-//   1 - Spaghetti
-//   2 - Fettuccine Alfredo
-//   3 - Penne Arrabbiata`);
-  
-//   if (pastaType === "1") {
-//     alert(`You chose Spaghetti.`);
-//   } else if (pastaType === "2") {
-//     alert(`You chose Fettuccine Alfredo.`);
-//   } else if (pastaType === "3") {
-//     alert(`You chose Penne Arrabbiata.`);
-//   } else {
-//     alert(`Invalid pasta type selection.`);
-//   }
-// } else if (foodName === "3") {
-//   // Step 3 - Salad subtype choice
-//   alert(`You chose  salad.`);
-//   const saladType = prompt(`Choose a type of salad:
-//   1 - Caesar Salad
-//   2 - Greek Salad
-//   3 - Caprese Salad`);
-  
-//   if (saladType === "1") {
-//     alert(`You chose Caesar Salad.`);
-//   } else if (saladType === "2") {
-//     alert(`You chose Greek Salad.`);
-//   } else if (saladType === "3") {
-//     alert(`You chose Caprese Salad.`);
-//   } else {
-//     alert(`Invalid salad type selection.`);
-//   }
-// } else {
-//   alert(`You didn't make a valid food choice.`);
-// }
-
 // Step 4 - Age
 // Your code goes here
-// const ageChoice = prompt(`Who order? Write your age`)
+const ageChoice = prompt(`Who order? Write your age`)
 
-// if (ageChoice >= 18) {
-//   alert(`You  choose  paid 14 sek`)
-// } else {
-//   alert(`Sorry, you can't pay`)
-// }
+let orderMessage;
+// let prise;
+
+if (ageChoice >= 18) {
+  orderMessage = `You've ordered a adult size ${foodType}. That will be 130 SEK`;
+} else if (ageChoice < 18){
+  orderMessage = `You've ordered a child size ${foodType}. That will be 100 SEK`;
+} else {
+  orderMessage = "Invalid choice. Please specify 'child' or 'adult'.";
+}
+alert(orderMessage);
 
 // Step 5 - Order confirmation
 // Your code goes here
+const confirmation = prompt("Would you like to confirm your order? (Yes/No)");
+
+if (confirmation === "yes") {
+  alert(`Thank you for your order !`)
+} else if (confirmation === "no") {
+  alert(`We hope to serve you again in the future.`)
+} else {
+  alert("Invalid choice. Please specify 'Yes' or 'No'.");
+}
