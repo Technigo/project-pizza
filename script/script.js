@@ -151,7 +151,7 @@ while (evaluation == false) {
 //order sum up
 window.alert(`OK, we are almost done.
 This is your order:
-${mealtype}, ${mealSubtype[subchoice]}, price: ${ordersum} `);
+${mealtype}, ${mealSubtype[subchoice]}, price: ${ordersum} Euro.`);
 // Your code goes here
 
 // Step 5 - Order confirmation
