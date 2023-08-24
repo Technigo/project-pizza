@@ -92,12 +92,10 @@ switch (subType) {
 alert(`You've chosen ${bestChoice}!`);
 // Step 4 - Age
 // Your code goes here
-const age = Number(
-  prompt(`Is this food for a child or an adult? Type your age:`)
-);
+const age = prompt(`Is this food for a child or an adult? Type your age:`);
 let child = "";
 let adult = "";
-if (age <= 16) {
+if (age <= "16") {
   child = prompt(
     `One child sized ${bestChoice} will be prepared for you. That'll be €10. Are you sure you want to order this? \n Enter a number to confirm: \n1- Yes\n2- No`
   );
