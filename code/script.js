@@ -23,8 +23,6 @@ const menuChoice = prompt(`Please select your menu:
 3- Salad
 Please enter the number of your choice:`)
 
-//the prompt method displays the string message exactly like written in the js code (Upper/Lowercase, à la ligne)
-
 //Create a variable storing the selected menu
 let selectedMenu;
 
@@ -45,7 +43,6 @@ if (menuChoice === "1") {
 alert(`You have chosen a ${selectedMenu} menu.`)
 
 // Step 3 - Subtype choice
-// Your code goes here
 
 //Prompt the client to select a subtype of the previously selected food
 let pizzaChoice;

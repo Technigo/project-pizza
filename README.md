@@ -4,13 +4,20 @@ Javascript basics to order a menu (x**2 alternatives) using:
 * prompt (here- string inputs)
 * alert methods
 * template strings
+* ternary operators
 
 Used:
 Conditional statements + nested cond. statements
 (Stretched goals) Switch statements
 
-Note: to switch between script.js and switch.js html links, please
-activate or deactivate with <!--   -->.
+Note: to switch between:
+* script.js
+* switch.js
+* switch-array.js 
+please activate or deactivate corresponding defer links in html with <!--   -->.
+
+//alert(`Does the button ok always show up in alert?`) The answer is YES.
+//the prompt method displays the string message exactly like written in the js code (Upper/Lowercase, à la ligne).
 
 ## The problem
 
