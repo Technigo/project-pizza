@@ -22,7 +22,21 @@ const foodChoice = prompt("What food would you like to order today? Enter a numb
 // Step 3 - Subtype choice
 // Your code goes here
 
+let selectedFood
 
+if (foodChoice === "1") {
+  selectedFood = "Pizza";
+} else if (foodChoice === "2") {
+  selectedFood = "Pasta";
+} else if (foodChoice === "3") {
+  selectedFood = "Salad";
+} else {
+  alert("Invalid choice. Please select a valid number.");
+  process.exit(1);
+}
+
+
+alert(`You've choosen ${selectedFood}!`)
 
 // Step 4 - Age
 // Your code goes here
