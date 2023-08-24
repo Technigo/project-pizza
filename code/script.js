@@ -69,6 +69,21 @@ switch (selectedFood) {
     process.exit(1);
   }
 
+  
+  if (chosenFood === "1") {
+    alert(
+      `Great Choice, You've order a ${foodNames[0]}!`
+    );
+  } else if (chosenFood === "2") {
+    alert(
+      `Great Choice, You've order a ${foodNames[1]}!`
+    );
+  } else if (chosenFood === "3") {
+    alert(
+      `Great Choice, You've order a ${foodNames[2]}!`
+    );
+  }
+
 // Step 4 - Age
 // Your code goes here
 
