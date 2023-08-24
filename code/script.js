@@ -26,7 +26,9 @@ Choose a number from the following:
   ""
 );
 
+//A variable that gets loaded with the value of what the customer chooses as their main category
 let orderConfirmation = "";
+
 if (order === "1") {
   orderConfirmation = "Pizza";
 } else if (order === "2") {
@@ -43,7 +45,9 @@ if (orderConfirmation != "") {
   // Step 3 - Subtype choice
   // Your code goes here
 
+  //The actual dish the customer wants to order
   let subtype = "";
+
   if (orderConfirmation === "Pizza") {
     let subPrompt = prompt(
       `What pizza do you want?
@@ -115,6 +119,8 @@ if (orderConfirmation != "") {
     );
     // Step 5 - Order confirmation
     // Your code goes here
+
+    //A variable that keeps track of if the customer wants to confirm their order or cancel it
     let confirmation = "";
 
     if (age === "1") {
