@@ -14,6 +14,12 @@ alert(`Hi ${userName}! Click 'OK' to choose type of food.`);
 // Step 2 - Food choice
 // Your code goes here
 
+let selectedFood = prompt(`What food do you want?:
+  1 - Pizza
+  2 - Pasta
+  3 - Salad
+  Please enter the number of your choice:`);
+
 // Step 3 - Subtype choice
 // Your code goes here
 
