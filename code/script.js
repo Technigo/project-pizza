@@ -20,7 +20,7 @@ const pizzaChoice = prompt(`Please select your pizza:
   Please enter the number of your choice:`);
 
 alert (
-  `Great you choose, ${pizzaChoice}! Now for the delivery.`);
+  `Great you choose, ${pizzaChoice}! Now for the size.`);
 
 // Step 3 - Subtype choice
 let selectedPizza = "";
@@ -36,14 +36,16 @@ if (pizzaChoice === "1") {
 
   } else if (pizzaChoice ==="4") {
   selectedPizza = "Surprise";
-  
+
   } else {
   alert ("invalid pizzaChoice, Please select a valid Number.");
   ProcessingInstruction.exit(1);
 }
 
+alert (`Fantastic you have choosen ${selectedPizza}!`);
+
 // Step 4 - Age
-// Your code goes here
+const age = prompt(`Pizza for Adult of child`)
 
 // Step 5 - Order confirmation
 // Your code goes here
