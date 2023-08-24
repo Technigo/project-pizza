@@ -76,15 +76,37 @@ window.onload = function () {
   }
   selectedDish = dishName[subMenu - 1]
   console.log(`${dishName[0]}, ${dishName[1]}, ${dishName[2]}`)
-  alert(`You have chosen ${selectedDish}.`)
-
-
-
-
+  alert(`You have chosen ${selectedDish}!`)
 
   // Step 4 - Age
-  // Your code goes here
+  const guestAge = parseInt(
+     prompt(`Is this food for a child or an adult? Type your age:`)
+   )
 
+  let orderMessage = ""
+  if (guestAge <= 12) {
+    orderMessage = `You have chosen a small ${selectedDish}. That will be 70 kr.`
+  } else if (guestAge >= 13) {
+    orderMessage = `You have chosen a normal portion of ${selectedDish}. That will be 110 kr.`
+  } else {
+    alert(`Invalid age choice. Please insert a number.`)
+     process.exit(1)
+  }
+  
   // Step 5 - Order confirmation
-  // Your code goes here
+  const confirmationChice = parseInt(
+    prompt(`${orderMessage}
+      Choose a numer to confirm:
+      1 - Yes, please
+      2 - No, thanks
+    `)
+  )
+  if (confirmationChice === 1) {
+    alert("Thank you for your order. Your food is being prepared and will soon be ready")
+  } else if (confirmationChice === 2) {
+    alert("No worries, hope to see you back soon!")
+  } else {
+    alert("Invalid choice. Please select 1 or 2 above.")
+  }
+
 };
