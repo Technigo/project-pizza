@@ -36,6 +36,6 @@ Given more time, the project could be enhanced by:
 
 ## View it Live
 
-The project can be viewed live [here](link_to_deployed_project).
+The project can be viewed live [here](https://stenlisuryadinata.github.io/project-pizza/code/index.html).
 
-(Note: Replace `link_to_deployed_project` with the actual link to the deployed project, if available.)
+
