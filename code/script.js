@@ -74,37 +74,46 @@ if (selectedFood === "Pizza") {
   switch (selectedSubtype) {
     case "1":
       subtypeName = "Capricciosa"
-      break
+      break;
     case "2":
       subtypeName = "Vegeteriana"
-      break
+      break;
     case "3":
       subtypeName = "Quattro Formaggio"
-      break
+      break;
+    default:
+      alert("Invalid choice.")
+      process.exit(1);
   }
 } else if (selectedFood === "Pasta") {
   switch (selectedSubtype) {
     case "1":
       subtypeName = "Pasta Carbonara"
-      break
+      break;
     case "2":
       subtypeName = "Pasta Puttanesca"
-      break
+      break;
     case "3":
       subtypeName = "Pasta Bolognese"
-      break
+      break;
+    default:
+      alert("Invalid choice.");
+      process.exit(1);
   }
 } else if (selectedFood === "Salad") {
   switch (selectedSubtype) {
     case "1":
       subtypeName = "Caprese salad"
-      break
+      break;
     case "2":
       subtypeName = "Caesar salad"
-      break
+      break;
     case "3":
       subtypeName = "Nicoise salad"
-      break
+      break;
+    default:
+      alert("Invalid choice.");
+      process.exit(1);
   }
 }
 
@@ -117,18 +126,27 @@ const age = prompt(`Is this food for a child or an adult? Type your age`);
 
 console.log(age)
 
-let price = (age >= 18) ? 120 : 60;
-let ageType = (age >= 18 ? "adult" : "child")
+let price = (age >= 12) ? 120 : 60;
+let ageType = (age >= 12 ? "adult" : "child")
 
 console.log(price)
 console.log(ageType)
 
-const confirm = prompt(`One ${ageType} sized ${subtypeName} will be prepared for you. That'll be ${price}SEK. Are you sure you want to order this?
+// Step 5 - Order confirmation
+// Your code goes here
+
+const confirm = prompt(`One ${ageType} sized ${subtypeName} will be prepared for you. That'll be ${price} SEK. Are you sure you want to order this?
 Enter a number to confirm:
 1 - Yes
 2 - No`)
 
 console.log(confirm);
 
-// Step 5 - Order confirmation
-// Your code goes here
+if (confirm === "1") {
+  alert("That's great, your meal will be prepared shortly.")
+} else if (confirm === "2") {
+  alert("Sorry to hear that, you're welcome back any time to make a new order!")
+} else {
+  alert("Invalid choice. Please select valid number.");
+  process.exit(1);
+}
