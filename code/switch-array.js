@@ -138,13 +138,15 @@ if (subMenuChoice === "1") {
     alert(`One ${costAge} ${finalChoice[1]} will be prepared for you.That will be ${costFood} euros.`)
 } else if (subMenuChoice === "3") {
     alert(`One ${costAge} ${finalChoice[2]} will be prepared for you.That will be ${costFood} euros.`)
+} else {
+    alert(`Invalid dish choice.  Please start again.`)
     process.exit(1)
 }
 
 //Prompt the client to confirm their order
 
 let confirmation = prompt(`Are you sure this is what you want to order ?
-        1 - Yes
+   1 - Yes
     2 - No 
     Enter a number to confirm: `);
 
