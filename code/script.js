@@ -67,6 +67,8 @@ switch (selectedFood) {
     default:
     alert("Invalid choice.");
     process.exit(1);
+  }
+
 // Step 4 - Age
 // Your code goes here
 
