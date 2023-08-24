@@ -4,7 +4,7 @@
 
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`);
-  
+
 // Enter username
 const userName = prompt("Please enter your name");
 
@@ -20,11 +20,23 @@ const pizzaChoice = prompt(`Please select your pizza:
   Please enter the number of your choice:`);
 
 alert (
-  `Great you choose, ${pizzaChoice}! Now for the time.`);
+  `Great you choose, ${pizzaChoice}! Now for the delivery.`);
 
 // Step 3 - Subtype choice
-// Your code goes here
+let selectedPizza = "";
 
+if (pizzaChoice === "1") {
+  selectedPizza = "Margarita";
+  
+  } else if (pizzaChoice ==="2") {
+  } selectedPizza = "kebab"; {
+
+  }else if (pizzaChoice ==="3") {
+  } selectedPizza = "Fungi";
+
+  {else if (pizzaChoice ==="4") {
+  } selectedPizza = "Surprise"; 
+  }
 // Step 4 - Age
 // Your code goes here
 
