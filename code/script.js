@@ -40,8 +40,6 @@ alert(`Yum! Youve chosen ${selectedFood}!`);
 // Step 3 - Subtype choice
 // Your code goes here
 
-//For this iteration, the focus is on enabling the user to choose a subtype of the selected food type. Depending on the previously chosen food type (Pizza, Pasta, Salad), the program should present the user with subtype options specific to that food type. The prompt() method should be used to get the user's input. The program should then determine the chosen subtype and provide feedback using the alert() method to confirm the selection. Tip: Use conditional statements for this.
-
 let chosen = "";
 let options = ""; 
 
@@ -89,12 +87,44 @@ if (chosen === "1") {
     );
 }
 
-
-
-
-
 // Step 4 - Age
 // Your code goes here
 
+//In this iteration, the program should prompt the user to specify if the food is intended for a child or an adult. 
+//The prompt() method should be used to present the question and get the user's input. 
+//Based on the user's answer, an appropriate order message should be constructed. 
+//The program should use the alert() method to display the order message and the associated cost. 
+//The user's confirmation should be obtained using the prompt() method.
+
+const age = prompt(
+  `Is the dish for a child or an adult? Please type your age`);
+
+let ageBracket = "";
+
+if (age <= 17) {
+  alert(`You have chosen a child sized meal!`)
+} else if (age > 17 && age < 100) {
+  alert(`You have chosen an adult sized meal!`)
+} else {
+  alert(`I'm afraid we only serve between ages 1-100!`)
+}
+
+
+// Note to self, you use the numbers to "target" what the choice is to the code, the answer you write separately, you dont "pull" the answer-word from the prompt
+
+
+
+// if 
+//alert(`Yum! You're ordering the ${ageBracket[0]-sized }! ${options[0]}-${selectedFood}`);
+// alert(`Yum! You're ordering the ${ageBracket[0]-sized }! ${options[0]}-${selectedFood}`);
+// alert(`Yum! You're ordering the ${ageBracket[0]-sized }! ${options[0]}-${selectedFood}`);
+
+// One adult sized Caprese salad will be prepared for you. That'll be €15. Are you sure you want to order this?
+//Enter a number to confirm: 
+//1 - Ye'
+//2 - No
+
+
+
 // Step 5 - Order confirmation
-// Your code goes here
+// Your code goes her
