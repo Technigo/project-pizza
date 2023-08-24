@@ -105,7 +105,8 @@ if (ageOption >= 18) {
   if (confirmation === `1`) {
     alert(`Thank you for your order! This is you confirmation.`);
   } else if (confirmation === `2`) {
-    alert(`Are you not hungry anymore? refresh the page to start over. Otherwise, hope to see you next time!`)
+    alert(`Are you not hungry anymore? 
+    refresh the page to start over if you are. Otherwise, hope to see you next time!`)
   } else {
     alert(`Please choose a valid number`);
   }
@@ -117,7 +118,8 @@ if (ageOption >= 18) {
   if (confirmation === `1`) {
     alert(`Thank you for your order! This is you confirmation.`);
   } else if (confirmation === `2`) {
-    alert(`Are you not hungry anymore? refresh the page to start over. Otherwise, hope to see you next time!`)
+    alert(`Are you not hungry anymore? 
+    refresh the page to start over if you are. Otherwise, hope to see you next time!`)
   } else {
     alert(`Please choose a valid number`);
   }
