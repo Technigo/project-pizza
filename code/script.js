@@ -99,10 +99,10 @@ if (Number(subtype) >= 1 && Number(subtype) <= 3) {
 // Display order message with associated cost based on age input
 if (age >= 0 && age < 18) {
   // Child-size
-  alert(`One child-sized ${selectedSubtype} will be prepared for you. It will cost $10.`);
+  alert(`One child-sized ${selectedSubtype[Number(subtype) - 1]} will be prepared for you. It will cost $10.`);
 } else if (age >= 18) {
   // Adult-size
-  alert(`One adult-sized ${selectedSubtype} will be prepared for you. It will cost $15.`);
+  alert(`One adult-sized ${selectedSubtype[Number(subtype) - 1]} will be prepared for you. It will cost $15.`);
 } else {
   // If the user enters an invalid food choice, show an error message and exit the program
   alert(`Invalid answer. Please enter a number equal or greater than 0.`);
