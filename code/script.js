@@ -87,11 +87,16 @@ if (foodName === "Pizza") {
 var age = prompt("Portion sizes differs depending on if it's a child or adolescent/adult.", "Please type your age here");
 
 if (age >= 16) {
-  alert(`One adult sized ${finalchoice} will be prepared for you. That'll be 10euros. Enter a number to confirm: 1: Yes, 2: No`)
+  alert(`One adult sized ${finalchoice}. That'll be 10euros.`)
 } else if (age <= 15) {
-  alert(`One child sized ${finalchoice} will be prepared for you. That'll be 7euros. Enter a number to confirm: 1: Yes, 2: No`)
+  alert(`One child sized ${finalchoice}. That'll be 7euros.`)
 }
 
-
 // Step 5 - Order confirmation
-// Your code goes here
+var confirmation = prompt("Enter a number to confirm: 1: Yes, 2: No.");
+
+if (confirmation === "1") {
+  alert(`Your ${finalchoice} is being prepared. Yummy!`)
+} else {
+  alert(`Ok, we'll be happy to prepare a ${finalchoice} or another yummy meal for you another time! Welcome back!`)
+}
