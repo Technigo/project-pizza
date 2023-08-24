@@ -14,7 +14,7 @@ alert(
 );
 
 // Step 2 - Food choice
-let foodChoice = prompt(
+let foodCategory = prompt(
     `What type of food would you like to order?
     Please enter a number:
 
@@ -23,78 +23,73 @@ let foodChoice = prompt(
     3. Kebab`
 );
 
-let foodCategory = 'Pizza';
+if (foodCategory === '1') {
+    alert(`You have chosen Pizza`);
+}
 
 if (foodChoice === '2') {
-    foodCategory = 'Salad';
+    alert(`You have chosen Salad`);
 };
 
 if (foodChoice === '3') {
-    foodCategory = 'Kebab';
+    alert(`You have chosen Kebab`);
 };
-
-alert(`You have chosen ${foodCategory}`);
 
 // Step 3 - Subtype choice
-let foodName = '';
+let chosenFoodName = '';
 
-if (foodChoice === '1') {
-    let typeOfPizza = prompt(
-        `What kind of pizza would you like?
-        Please enter a number:
-        1. Kebab Pizza
-        2. Hawaii Pizza
-        3. Calzone`
-    );
+switch (foodCategory) {
+    case "1":
+        let pizzaChoice = prompt('What kind of pizza would you like?')
+        switch (pizzaChoice) {
+            case "1":
+                chosenFoodName = "Kebab Pizza";
+                break;
+            case "2":
+                chosenFoodName = "Hawaii Pizza";
+                break;
+            case "3":
+                chosenFoodName = "Calzone";
+                break;
+            default:
+                alert(`Invalid pizza choice`)
+        }
+        break;
+    case "2":
+        let saladChoice = prompt('What kind if salad would you like?')
+        switch (saladChoice) {
+            case "1":
+                chosenFoodName = "Ceasar Salad";
+                break;
+            case "2":
+                chosenFoodName = "Avocado Salad";
+                break;
+            case "3":
+                chosenFoodName = "Tuna Salad";
+                break;
+            default:
+                alert(`Invalid salad choice`)
+        }
+        break;
+    case "3":
+        let kebabChoice = prompt('What kind if kebab would you like?')
+        switch (kebabChoice) {
+            case "1":
+                chosenFoodName = "Meat Kebab";
+                break;
+            case "2":
+                chosenFoodName = "Chicken Kebab";
+                break;
+            case "3":
+                chosenFoodName = "Vegetarian Kebab";
+                break;
+            default:
+                alert(`Invalid kebab choice`);
+        }
+        break;
+}
 
-    foodName = 'Kebab';
-
-    if (typeOfPizza === '2') {
-        foodName = 'Hawaii';
-    }
-
-    if (typeOfPizza === '3') {
-        foodName = 'Calzone';
-    }
-} else if (foodChoice === '2') {
-    let typeOfSalad = prompt(
-        `What kind of salad would you like?
-        Please enter a number:
-        1. Ceasar Salad
-        2. Avocado Salad
-        3. Tuna Salad`
-    );
-
-    foodName = 'Ceasar';
-
-    if (typeOfSalad === '2') {
-        foodName = 'Avocado';
-    }
-
-    if (typeOfSalad === '3') {
-        foodName = 'Tuna';
-    }
-} else {
-    let typeOfKebab = prompt(
-        `What kind of kebab would you like?
-        Please enter a number:
-        1. Meat Kebab
-        2. Chicken Kebab
-        3. Vegetarian Kebab`
-    );
-
-    foodName = 'Meat';
-
-    if (typeOfKebab === '2') {
-        foodName = 'Chicken';
-    }
-
-    if (typeOfKebab === '3') {
-        foodName = 'Vegetarian';
-    }
-};
-
-alert(`You have chosen ${foodName} ${foodCategory}!`)
+alert(`you hav chosen ${chosenFoodName}!`)
 
 // Step 4 - Age
 // Your code goes here
