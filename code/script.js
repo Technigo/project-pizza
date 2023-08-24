@@ -42,7 +42,7 @@ alert(`You've chosen ${foodType}!`);
 // // Step 3 - Subtype choice
 // // Your code goes here
 let subType = "";
-let subTypeChoice = "";
+let subTypeChoice = ""; // store subtype choice here
 
 switch (foodType) {
   case "Pizza":
@@ -73,6 +73,7 @@ switch (foodType) {
     alert("Invalid choice.");
     process.exit(1);
 }
+// store the choice for the sub menu
 let bestChoice = "";
 switch (subType) {
   case "1":
@@ -96,13 +97,13 @@ const age = Number(
 );
 let child = "";
 let adult = "";
-if (age <= 18) {
+if (age <= 16) {
   child = prompt(
     `One child sized ${bestChoice} will be prepared for you. That'll be €10. Are you sure you want to order this? \n Enter a number to confirm: \n1- Yes\n2- No`
   );
 } else {
   adult = prompt(
-    `One adult sized ${bestChoice}will be prepared for you. That'll be €15. Are you sure you want to order this? \n Enter a number to confirm:\n1- Yes\n2- No `
+    `One adult sized ${bestChoice} will be prepared for you. That'll be €15. Are you sure you want to order this? \n Enter a number to confirm:\n1- Yes\n2- No `
   );
 }
 // Step 5 - Order confirmation
