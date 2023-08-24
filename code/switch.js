@@ -100,6 +100,7 @@ case "Salad":
   1 - Caesar
   2 - Greek
   3 - Garden`);
+    
 switch (saladType) {
   case "1":
     alert(`You chose Caesar Salad.`);
@@ -113,7 +114,8 @@ switch (saladType) {
   default:
     alert(`Invalid salad type selection.`);
     break;
-      }
+}
+break
  default:
   alert("Something went wrong. Please try again.");
   break
