@@ -69,7 +69,7 @@ if (selectedMenu === "Pizza") {
   2- Caesar salad
   3- Goatcheese salad`)
 } else {
-  alert(`Invalid dish type.Please start over.`);
+  alert(`Invalid dish type.  Please start over.`);
   process.exit(1);
 }
 

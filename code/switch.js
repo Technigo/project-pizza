@@ -82,7 +82,7 @@ switch (selectedMenu) {
         Please enter the number of your choice:
         `);
         break;
-    default: alert(`Invalid choice.Please start over.`);
+    default: alert(`Invalid choice.  Please start over.`);
         process.exit(1);
 }
 
@@ -132,8 +132,8 @@ switch (selectedMenu) {
             default: alert(`Invalid salad choice`);
         }
         break;
-
-    default: process.exit(1);
+    default: alert(`Invalid menu choice.  Please start over.`);
+        process.exit(1);
 }
 
 // Display the selected food choice subtype
@@ -141,7 +141,6 @@ alert(`Great ${userName}!  You have chosen ${finalChoice}!`)
 
 
 // Step 4 - Age
-// Your code goes here
 
 // Prompt the client to enter their age:
 const userAge = prompt(`Please enter your age (years):`)
@@ -163,7 +162,7 @@ let confirmation = prompt(`Are you sure this is what you want to order?
     Enter a number to confirm:`);
 
 // Step 5 - Order confirmation
-// Your code goes here
+
 //Determine the client's confirmation
 
 if (confirmation === "1") {
