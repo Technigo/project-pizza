@@ -29,14 +29,15 @@ if (pizzaChoice === "1") {
   selectedPizza = "Margarita";
   
   } else if (pizzaChoice ==="2") {
-  } selectedPizza = "kebab"; {
+  selectedPizza = "kebab";
 
-  }else if (pizzaChoice ==="3") {
-  } selectedPizza = "Fungi";
+  } else if (pizzaChoice ==="3") {
+  selectedPizza = "Fungi";
 
-  {else if (pizzaChoice ==="4") {
-  } selectedPizza = "Surprise"; 
+  } else if (pizzaChoice ==="4") {
+  selectedPizza = "Surprise"; 
   }
+
 // Step 4 - Age
 // Your code goes here
 
