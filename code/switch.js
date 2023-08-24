@@ -87,13 +87,13 @@ switch (selectedFood) {
 
 switch (subtype) {
   case "1":
-    alert(`You selected a ${selectedSubtype[0]}`);
+    alert(`You selected a ${selectedSubtype[Number(subtype) - 1]}!`);
     break;
   case "2":
-    alert(`You selected a ${selectedSubtype[1]}`);
+    alert(`You selected a ${selectedSubtype[Number(subtype) - 1]}!`);
     break;
   case "3":
-    alert(`You selected a ${selectedSubtype[2]}`);
+    alert(`You selected a ${selectedSubtype[Number(subtype) - 1]}!`);
     break;
   default:
     // If the user enters an invalid subtype choice, show an error message and exit the program

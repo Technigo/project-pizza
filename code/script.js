@@ -52,23 +52,7 @@ if (selectedFood === "Pizza") {
     3. Quattro Stagioni`
     );
   
-  if (subtype === "1") {
-    selectedSubtype = "Hawaiian pizza";
-    // Display the selected subtype
-    alert(`You selected a ${selectedSubtype}!`);
-  } else if (subtype === "2") {
-    selectedSubtype = "Pepperoni pizza";
-    // Display the selected subtype
-    alert(`You selected a ${selectedSubtype}!`);
-  } else if (subtype === "3") {
-    selectedSubtype = "Quattro Stagioni pizza";
-    // Display the selected subtype
-    alert(`You selected a ${selectedSubtype}!`);
-  } else {
-    // If the user enters an invalid food choice, show an error message and exit the program
-    alert(`Invalid choice. Please enter number 1-3 to choose among the dishes.`);
-    process.exit(1);
-  }
+    selectedSubtype = ["Hawaiian pizza", "Pepperoni pizza", "Quattro Stagioni pizza"];
 
 } else if (selectedFood === "Pasta") {
   subtype = prompt(`Please enter number 1-3 to select a pasta type:
@@ -77,23 +61,7 @@ if (selectedFood === "Pizza") {
     3. Pesto pasta`
   );
 
-  if (subtype === "1") {
-    selectedSubtype = "Spaghetti Bolognese";
-    // Display the selected subtype
-    alert(`You selected a ${selectedSubtype}!`);
-  } else if (subtype === "2") {
-    selectedSubtype = "Fettuccine Alfredo";
-    // Display the selected subtype
-    alert(`You selected a ${selectedSubtype}!`);
-  } else if (subtype === "3") {
-    selectedSubtype = "Pesto pasta";
-    // Display the selected subtype
-    alert(`You selected a ${selectedSubtype}!`);
-  } else {
-    // If the user enters an invalid food choice, show an error message and exit the program
-    alert(`Invalid choice. Please enter number 1-3 to choose among the dishes.`);
-    process.exit(1);
-  } 
+  selectedSubtype = ["Spaghetti Bolognese", "Fettuccine Alfredo", "Pesto pasta"];
 
 } else if (selectedFood === "Salad") {
   subtype = prompt(`Please enter number 1-3 to select salad type:
@@ -102,24 +70,18 @@ if (selectedFood === "Pizza") {
     3. Carprese Salad`
   );
 
-  if (subtype === "1") {
-    selectedSubtype = "Caesar Salad";
-    // Display the selected subtype
-    alert(`You selected a ${selectedSubtype}!`);
-  } else if (subtype === "2") {
-    selectedSubtype = "Classic Green Salad";
-    // Display the selected subtype
-    alert(`You selected a ${selectedSubtype}!`);
-  } else if (subtype === "3") {
-    selectedSubtype = "Carprese Salad";
-    // Display the selected subtype
-    alert(`You selected a ${selectedSubtype}!`);
-  } else {
-    // If the user enters an invalid food choice, show an error message and exit the program
-    alert(`Invalid choice. Please enter number 1-3 to choose among the dishes.`);
-    process.exit(1);
-  }
+  selectedSubtype = ["Caesar Salad", "Classic Green Salad", "Carprese Salad"];
 }
+
+// Display the selected subtype
+if (subtype === "1" || subtype === "2" || subtype === "3") {
+  alert(`You selected a ${selectedSubtype[Number(subtype) - 1]}!`);
+} else {
+  // If the user enters an invalid food choice, show an error message and exit the program
+  alert(`Invalid choice. Please enter number 1-3 to choose among the dishes.`);
+  process.exit(1);
+}
+
 
 // Step 4 - Age
 // Initialize a variable to store the age
