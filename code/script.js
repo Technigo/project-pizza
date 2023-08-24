@@ -4,10 +4,12 @@
 
 // Step 1 - Welcome and introduction
 // Your code goes here
-window.onload = function () { //Tillägg av Sus.
+//Slows down the first alert to make everything have time to load
+window.onload = function () { 
+  setTimeout(function() {
 
 alert(
-  `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
+  `Welcome to our Pizzeria The Cheesy Slice! Ready to Start? - Click 'OK' to begin.`
 )
 
 const guestName = prompt("Dear guest, what is your name?")
@@ -47,7 +49,7 @@ alert(
 // Your code goes here
 let subMenu = ""
 let dishName = ""
-let selectedDish = "" //Tillägg från Sus.
+let selectedDish = ""
 
 switch (selectedFood) {
   case "pizza": 
@@ -86,11 +88,46 @@ console.log(dishName)
 alert(
   `You have chosen to order a yummy ${selectedDish}!`
 )
-  
 
 // Step 4 - Age
 // Your code goes here
+const guestAge = parseInt(
+  prompt("To estimate how big your appetite is - if you're a child or an adult, please tell us your age.")
+)
+
+let orderMessage = ""
+
+if (guestAge <= 12) {
+  orderMessage = `You have ordered a small ${selectedDish}. That will be 100 SEK. Are you happy with this order?`
+} else if (guestAge >= 13) {
+  orderMessage = `You have ordered a large ${selectedDish}. That will be 130 SEK. Are you happy with this order?`
+} else {
+  alert("We can't identify your age. Remember - it's just a number! Please enter how old you are below.")
+  process.exit(1)
+}
+
 
 // Step 5 - Order confirmation
 // Your code goes here
+const orderConfirmation = parseInt(
+  prompt(`${orderMessage}
+    Enter a number to confirm or decline your order
+    1 - Confirm
+    2 - Decline
+    `)
+)
+
+if (orderConfirmation === 1) {
+  alert(
+    "Thank you for your order! Your meal is being cooked. Welcome!"
+  )
+} else if (orderConfirmation === 2) {
+  alert("No worries! We hope you'll come back and try our food some other time!")
+} else {
+  alert("Invalid choice. Enter 1 to confirm your order or 2 to decline.")
+}
+
+//The delay of the first alert in milliseconds
+}, 1000)
+
 }
