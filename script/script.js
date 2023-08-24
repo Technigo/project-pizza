@@ -6,7 +6,7 @@ window.alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 );
 
-let username = window.prompt("Please fill in your first name: ");
+let username = window.prompt("Please fill in your name: ");
 
 alert(`Good to have you here ${username} !`);
 
@@ -111,7 +111,7 @@ switch (choice) {
 
 //evaluation user suboptions mealchoice 
 let subchoice = null;
-// is a number
+// holds a number
 evaluation = false;
 // better reset value
 while (evaluation == false) {
@@ -128,7 +128,6 @@ window.alert(`Good choice! You picked: ${mealSubtype[subchoice]} `);
 // Your code goes here
 
 // Step 4 - Age
-
 //evaluation user age
 let age = null;
 evaluation = false;
