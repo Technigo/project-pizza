@@ -27,7 +27,7 @@ if (foodChoice === "1") {
   selectedFood = "Salad";
 } else {
 alert("Invalid choice. Please select a valid number");
-ProcessingInstruction.exit(1);
+process.exit(1);
 }
 
 alert(`You have chosen ${selectedFood}`);
