@@ -1,41 +1,117 @@
 // Step 1 - Welcome and introduction
+//a
 alert(
-  `Welcome to this chick Javascript Pizzeria! Ready to Start? - Click 'OK' to begin.`
+  `Welcome to this chick JavaScript Pizzeria! Ready to Start? - Click 'OK' to begin.`
 );
 
-// Customers name
-const customerName = prompt(
-  "Please enter your name:"
-);
+//b
+const customerName = prompt("Enter your name:");
 
-alert(
-  `Hi, ${customerName}!
-  In the next step, you will chose what to order.`
-);
+//c
+alert(`Hi, ${customerName}! Proceed to place an order.`);
 
-// Step 2 - Food choice --------------------
+
+// Step 2 - Food choice
 const foodType = prompt(
-  `This is what we have.
+  `What type of food would you like to order?
   Enter a number:
   1 - Pizza
   2 - Pasta
-  3 - Fish`
+  3 - Salad`
 );
 
-// Chosen food
-let chosenFood;
+let chosenFoodType;
 
 if (foodType == 1) {
-  chosenFood = "Pizza";
-  alert(`You've chosen ${chosenFood}!`);
+  chosenFoodType = "Pizza";
 } else if (foodType == 2) {
-  chosenFood = "Pasta";
-  alert(`You've chosen ${chosenFood}!`);
+  chosenFoodType = "Pasta";
 } else if (foodType == 3) {
-  chosenFood = "Fish";
-  alert(`You've chosen ${chosenFood}!`);
+  chosenFoodType = "Salad";
 } else {
-  alert (`I don't have the choice you made.
-  Please refresh and pick a number between 1-3.`);
+  alert("Invalid choice. Refresh and try again.");
+  process.exit(1);
 }
+
+alert (`You've chosen ${chosenFoodType}!`);
+
+// 3 - Subtype choice
+let pizzaType;
+let pastaType;
+let saladType;
+
+if (chosenFoodType == "Pizza") {
+  pizzaType = prompt(
+    `Select a Pizza type.
+    Enter a number:
+    1 - Hawaiian
+    2 - Pepperoni
+    3 - Veggie`
+  );
+} else if (chosenFoodType == "Pasta") {
+  pastaType = prompt(
+    `Select a Pasta type.
+    Enter a number:
+    1 - Napolitana
+    2 - Penne Alla Vodka
+    3 - Creamy Tomato With Burrata`
+  );
+} else if (chosenFoodType == "Salad") {
+  saladType = prompt(
+    `Select a Salad type.
+    Enter a number:
+    1 - Greek
+    2 - Caesar
+    3 - Fruit`
+  );
+} else {
+  alert("Invalid choice. Refresh and try again.");
+  process.exit(1);
+}
+
+let finalOrder;
+
+if (chosenFoodType == "Pizza") {
+  if (pizzaType == 1) {
+    finalOrder = "Hawaiian pizza";
+  } else if (pizzaType == 2) {
+    finalOrder = "Pepperoni pizza";
+  } else if (pizzaType == 3) {
+    finalOrder = "Veggie pizza";
+  } else {
+    alert("Invalid pizza choice. Refresh and try again.");
+    process.exit(1);
+  }
+} else if (chosenFoodType == "Pasta") {
+  if (pastaType == 1) {
+    finalOrder = "Napolitana pasta";
+  } else if (pastaType == 2) {
+    finalOrder = "Penne Alla Vodka pasta";
+  } else if (pastaType == 3) {
+    finalOrder = "Creamy Tomato With Burrata pasta";
+  } else {
+    alert("Invalid pasta choice. Refresh and try again.");
+    process.exit(1);
+  }
+} else if (chosenFoodType == "Salad") {
+  if (saladType == 1) {
+    finalOrder = "Greek salad";
+  } else if (saladType == 2) {
+    finalOrder = "Caesar salad";
+  } else if (saladType == 3) {
+    finalOrder = "Fruit salad";
+  } else {
+    alert("Invalid salad choice. Refresh and try again.");
+    process.exit(1);
+  }
+} else {
+  alert("Invalid choice. Refresh and try again.");
+  process.exit(1);
+}
+
+alert(
+  `Great ${customerName}, you've chosen a ${finalOrder}!`
+  );
+
+
 
