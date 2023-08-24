@@ -23,6 +23,39 @@ let selectedFood = prompt(`What food do you want?:
 // Step 3 - Subtype choice
 // Your code goes here
 
+let dishType = "";
+let dishNames = "";
+
+switch (selectedFood) {
+    case "1":
+        dishType = prompt(`What type of pizza do you want?:
+          1 - Margherita
+          2 - Capricciosa
+          3 - Hawaii
+          Please enter the number of your choice:`);
+        dishNames = ["Margherita", "Capricciosa", "Hawaii"];
+        break;
+    case "2":
+        dishType = prompt(`What type of pasta do you want?:
+          1 - Arrabbiata
+          2 - Vongole
+          3 - Ravioli
+          Please enter the number of your choice:`);
+        dishNames = ["Arrabbiata", "Vongole", "Ravioli"];
+        break;
+    case "3":
+        dishType = prompt(`What type of salad do you want?:
+          1 - Caesar
+          2 - Greek
+          3 - Waldorf
+          Please enter the number of your choice:`);
+        dishNames = ["Caesar", "Greek", "Waldorf"];
+        break;
+    default:
+        alert("Invalid choice.");
+        process.exit(1);
+}
+
 // Step 4 - Age
 // Your code goes here
 
