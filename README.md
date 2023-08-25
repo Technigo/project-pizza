@@ -1,15 +1,13 @@
 # Project: Javascript Pizzeria
 
-Week 1 of Technigo boot camp. A basic set-up of the web page was given from Technigo. The project was to develop the basic JavaScript part of the web page. Variables, conditionals and native methods.
+Week 1 of Technigo boot camp. A basic set-up of the web page was given from Technigo. The project was to develop the basic JavaScript part of the web page.
 
 ## The problem
 
 As a beginner I started out by reading the material, get a overview of the assignment and then work through it from top to bottom. Giving myself a structure helped. ChatGPT, Google, Stack Overflow and Slack was used. 
 
-I choose Switch instead of Else if in one of the attempts. Realizing that I had to develop further I had to change to Else if in order to make all the steps work.
-
-What technologies did you use? If you had more time, what would be next?
+The challenge was to grasp the JavaScript since this was the first week of it. Next step would be to go for the stretch-goals and clean up my code.
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+View it live: 
