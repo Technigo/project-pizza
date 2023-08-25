@@ -98,7 +98,7 @@ window.onload = function () {
 
     let orderMessage = ""
     if (guestAge <= 12) {
-      orderMessage = `You have chosen a smaller size portion of ${subDish}. That will be £7.`
+      orderMessage = `You have chosen a smaller size portion of ${subDish}. That will be £8.`
     } else if (guestAge >= 13) {
       orderMessage = `You have chosen a regular size portion of ${subDish}. That will be £11.`
     } else {
@@ -109,14 +109,14 @@ window.onload = function () {
     // Step 5 - Order confirmation
     const confirmationChice = parseInt(
       prompt(`${orderMessage}
-        Choose a number to confirm:
+        Would you like to place your order:
         1 - Yes, please!
         2 - No, I changed my mind.
       `)
     )
 
     if (confirmationChice === 1) {
-      alert("Thank you for your order. Your food is being prepared and will be ready in 15 minutes!🍕🍝🥗")
+      alert("Thank you for your order. Your food is being prepared and will be ready in about 15 minutes!🍕🍝🥗")
     } else if (confirmationChice === 2) {
       alert("No worries, we hope to see you back soon! 🍕🍝🥗")
     } else {
