@@ -52,14 +52,23 @@ else if (chosenFoodType == "salad") {
   2. Caprese
   3. Greek salad`);
 }
-
-
-
+alert (`Great choice!`);
 
 // Step 4 - Age
-// Your code goes here
+let age = prompt (`is this for a child or an adult? Please enter you age below:`);
 
-//let age = prompt (`is this for a child or an adult? Please enter you age below:`);
+if (age >= 18) {
+  alert (`you've chosen an adultsized pizza, the total vill be 99 SEK. Do you confirm?
+  Please enter 1 for yes and 2 for no
+  1.Yes
+  2.No `); 
+}
+else if (age < 18) {
+  alert (`you've chosen an childsized pizza, the total vill be 75 SEK. Do you confirm?
+  Please enter 1 for yes and 2 for no
+  1.Yes
+  2.No `); 
+}
 
 // Step 5 - Order confirmation
-// Your code goes here
+
