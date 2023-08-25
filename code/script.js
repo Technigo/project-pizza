@@ -4,9 +4,9 @@
 // Your code goes here
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
-)
+);
 
-var Name = prompt("What is your name?");
+let Name = prompt("What is your name?");
 if (Name !== null) {
   alert("Hi, " + Name + "! Welcome!");
 } else {
@@ -14,15 +14,18 @@ if (Name !== null) {
 }
 
 // Step 2 - Food choice
-var userInput = prompt("Please select a food type:\n1. Pizza\n2. Pasta\n3. Salad");
+let userInput = prompt("Please select a food type:\n1. Pizza\n2. Pasta\n3. Salad");
 
-var selectedOption = parseInt(userInput);
+let selectedOption = parseInt(userInput);
+
+// Declare the following variables outside the if-else blocks
+let pizzaSubtype, pastaSubtype, saladSubtype;
 
 if (selectedOption === 1) {
   alert("You have selected Pizza!");
 
   // Step 3 - Subtype choice
-  var pizzaSubtype = prompt("Please select a pizza subtype:\n1. Margherita\n2. Pepperoni\n3. Veggie");
+  pizzaSubtype = prompt("Please select a pizza subtype:\n1. Margherita\n2. Pepperoni\n3. Veggie");
 
   if (pizzaSubtype === "1") {
     alert("You have selected Margherita Pizza!");
@@ -34,12 +37,11 @@ if (selectedOption === 1) {
     alert("Invalid choice. Please select a valid subtype.");
   }
 
-  // Step 2 - Food choice
 } else if (selectedOption === 2) {
   alert("You have selected Pasta!");
 
   // Step 3 - Subtype choice
-  var pastaSubtype = prompt("Please select a pasta:\n1. Spaghetti\n2. Fettuccine Alfredo\n3. Pasta Agli Oglio");
+  pastaSubtype = prompt("Please select a pasta:\n1. Spaghetti\n2. Fettuccine Alfredo\n3. Pasta Agli Oglio");
 
   if (pastaSubtype === "1") {
     alert("You have selected Spaghetti Pasta!");
@@ -51,12 +53,11 @@ if (selectedOption === 1) {
     alert("Invalid choice. Please select a valid subtype.");
   }
 
-  // Step 2 - Food choice
 } else if (selectedOption === 3) {
   alert("You have selected Salad!");
 
   // Step 3 - Subtype choice
-  var saladSubtype = prompt("Please select a salad:\n1. Caesar Salad\n2. Greek Salad\n3. Garden Salad");
+  saladSubtype = prompt("Please select a salad:\n1. Caesar Salad\n2. Greek Salad\n3. Garden Salad");
 
   if (saladSubtype === "1") {
     alert("You have selected Caesar Salad!");
@@ -71,21 +72,16 @@ if (selectedOption === 1) {
   alert("Invalid choice. Please select a valid option.");
 }
 
-
-
 // Step 4 - Age
-
-var userInput = prompt("Is this meal for a child or an adult? Please enter your age");
-var age = parseInt(userInput);
+let userInputAge = prompt("Is this meal for a child or an adult? Please enter your age");
+let age = parseInt(userInputAge);
 
 if (!isNaN(age)) {
-  var ageGroup = (age < 11) ? "child" : "adult";
-
+  let ageGroup = (age < 11) ? "child" : "adult";
 
   // Step 5 - Order confirmation
-
-  var foodTypeText;
-  var foodPrice;
+  let foodTypeText;
+  let foodPrice;
 
   if (selectedOption === 1) {
     if (pizzaSubtype === "1") {
@@ -119,12 +115,12 @@ if (!isNaN(age)) {
     foodPrice = 12; // Adult's price
   }
 
-  var confirmationMessage = `You have chosen a ${ageGroup} ${foodTypeText} for $${foodPrice}. Would you like to confirm your order? \n1. Yes \n2. No`;
+  let confirmationMessage = `You have chosen a ${ageGroup} ${foodTypeText} for $${foodPrice}. Would you like to confirm your order? \n1. Yes \n2. No`;
 
-  var confirmation = prompt(confirmationMessage);
+  let confirmation = prompt(confirmationMessage);
 
   if (confirmation === "1") {
-    alert("Thank you for choosing Javascript Pizzeria! Your order is now being made. Enjoy!")
+    alert("Thank you for choosing Javascript Pizzeria! Your order is now being made. Enjoy!");
   } else if (confirmation === "2") {
     alert("Thank you for considering us. Feel free to return for future orders!");
   }
