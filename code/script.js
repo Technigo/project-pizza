@@ -66,7 +66,7 @@ if (selectedFoodCategory === "Pizza") {
   2 - Pizza Funghi 
   3 - Pizza Quattro formaggi
   Please enter a number from these 3 choices.`);
-  foodOption = ["Pizza Margherita", "Pizza Funghi", "Pizza Quattro formaggi"],  // Pizza choices
+  foodOption = ["Pizza Margherita", "Pizza Funghi", "Pizza Quattro formaggi"];  // Pizza choices
   foodPrice =[
   ["70", "80", "75"],   // Price for adult size, sek
   ["40", "45", "42"],   //Price for child size, sek
@@ -77,26 +77,26 @@ if (selectedFoodCategory === "Pizza") {
   2 - Pinsa with Zucchini, Ricotta, and Lemon
   3 - Classic Pinsa Romana
   Please enter a number from these 3 choices.`);
-  foodOption = ["Romana Ricetta Originale", "Pinsa with Zucchini, Ricotta, and Lemon", "Classic Pinsa Romana"],  //Pinsa choices
+  foodOption = ["Romana Ricetta Originale", "Pinsa with Zucchini, Ricotta, and Lemon", "Classic Pinsa Romana"];  //Pinsa choices
   foodPrice = [
   ["60", "70", "65"],   // Price for adult size, sek
   ["35", "40", "38"],   //Price for child size, sek
   ];
-} else if (selectedFoodCategory === "Dessert") {
+} else if (selectedFoodCategory === "Dessert Pizza") {
   foodSubType = prompt(`Select the dessert pizza that you wanna order:
   1 - Cinnamon roll Pizza
   2 - Berry Marscapone Pizza
   3 - Nutella and Strawberry Pizza
   Please enter a number from these 3 choices.`);
-  foodOption = ["Cinnamon roll Pizza", "Berry Marscapone Pizza", "Nutella and Strawberry Pizza"], // Dessert choices
+  foodOption = ["Cinnamon roll Pizza", "Berry Marscapone Pizza", "Nutella and Strawberry Pizza"]; // Dessert choices
   foodPrice = [
   ["65", "70", "60"],   // Price for adult size, sek
   ["38", "40", "35"],   //Price for child size, sek
   ];
 } else {
   // If an invalid option is chosen, show an error message and exit the program.       
-  alert("Invalid choice. Please enter a valid number.");   
-  process.exit(1);
+  alert("Invalid choice. Please enter a valid number.");
+  process.exit(1);  
 }
 
 
@@ -113,8 +113,8 @@ else if (foodSubType === "3") {
   alert(`Awesome! You have chosen the ${foodOption[2]}.`);
 }
 else {
-  alert("Invalid choice. Please enter a valid number.");
-  process.exit(1);
+    alert("Invalid choice. Please enter a valid number.");
+    process.exit(1);
 }
 
 // Step 4 - Age
