@@ -59,5 +59,24 @@ switch (selectedFood) {
 // Step 4 - Age
 // Your code goes here
 
+let customerType = prompt(`Is the food for a child or an adult?
+  1 - Child
+  2 - Adult
+  Please enter the number of your choice:`);
+
+let orderMessage = `You are ordering a ${customerType === "1" ? 'child' : 'adult'}s ${dishNames[dishType - 1]} ${selectedFood === "1" ? 'pizza' : selectedFood === "2" ? 'pasta' : 'salad'}.`;
+
+let totalPrice = 0;
+
+if (customerType === "1") {
+    totalPrice = 5;
+} else if (customerType === "2") {
+    totalPrice = 10;
+}
+
+orderMessage += ` The total price is ${totalPrice}€.`;
+
+alert(orderMessage);
+
 // Step 5 - Order confirmation
 // Your code goes here
