@@ -62,7 +62,7 @@ switch (selectedMenu) {
         pizzaChoice = prompt(`Select a pizza:
         1- Margarita
         2- Vesuvio
-        3- 4-cheese
+        3- Quattro formaggi
         Please enter the number of your choice:
       `);
         break;
@@ -99,7 +99,7 @@ switch (selectedMenu) {
                 finalChoice = "Vesuzio";
                 break;
             case "3":
-                finalChoice = "4-cheese";
+                finalChoice = "Quattro formaggi";
                 break;
             default: alert(`Invalid pizza choice`);
         }
@@ -138,7 +138,6 @@ switch (selectedMenu) {
 
 // Display the selected food choice subtype
 alert(`Great ${userName}!  You have chosen ${finalChoice}!`)
-
 
 // Step 4 - Age
 

@@ -49,7 +49,7 @@ alert(`You have chosen ${selectedMenu}.`)
 //Prompt the customer to select a specific dish from the previously selected food
 
 let subMenuChoice;
-let finalChoice;
+let finalChoice = [];
 
 
 switch (selectedMenu) {
@@ -57,10 +57,10 @@ switch (selectedMenu) {
         subMenuChoice = prompt(`Select a pizza:
         1- Margarita
         2- Vesuvio
-        3- 4-cheese pizza
+        3- Quattro formaggi
         Please enter the number of your choice:
       `);
-        finalChoice = ["Margarita", "Vesuvio", "4-cheese pizza"]
+        finalChoice = ["Margarita", "Vesuvio", "Quattro formaggi"]
         //Determine the food choice subtype using array
         break;
     case "Pasta":
@@ -135,9 +135,9 @@ let costAge = (costFood === "15") ? "adult" : "child";
 if (subMenuChoice === "1") {
     alert(`One ${costAge} ${finalChoice[0]} will be prepared for you.  That will be ${costFood} euros.`)
 } else if (subMenuChoice === "2") {
-    alert(`One ${costAge} ${finalChoice[1]} will be prepared for you.That will be ${costFood} euros.`)
+    alert(`One ${costAge} ${finalChoice[1]} will be prepared for you.  That will be ${costFood} euros.`)
 } else if (subMenuChoice === "3") {
-    alert(`One ${costAge} ${finalChoice[2]} will be prepared for you.That will be ${costFood} euros.`)
+    alert(`One ${costAge} ${finalChoice[2]} will be prepared for you.  That will be ${costFood} euros.`)
 } else {
     alert(`Invalid dish choice.  Please start again.`)
     process.exit(1)
@@ -146,7 +146,7 @@ if (subMenuChoice === "1") {
 //Prompt the client to confirm their order
 
 let confirmation = prompt(`Are you sure this is what you want to order ?
-   1 - Yes
+    1 - Yes
     2 - No 
     Enter a number to confirm: `);
 
@@ -155,11 +155,11 @@ let confirmation = prompt(`Are you sure this is what you want to order ?
 //Determine the client's confirmation
 
 if (confirmation === "1") {
-    alert(`Thank you ${userName} for placing your order!  Please wait while your food is being prepared(approx.${waitingTime} min).Bon apétit!`)
+    alert(`Thank you ${userName} for placing your order!  Please wait while your food is being prepared (approx. ${waitingTime} min). Buon appetito!`)
 } else if (confirmation === "2") {
-    alert(`No worries ${userName} !Welcome back anytime to try our menu!`)
+    alert(`No worries ${userName} !  Welcome back anytime to try our menu!`)
 } else {
-    alert(`Invalid choice.Please choose between 1 or 2.`)
+    alert(`Invalid choice.  Please choose between 1 or 2.`)
     process.exit(1);
 }
 

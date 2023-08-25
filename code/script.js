@@ -53,7 +53,7 @@ if (selectedMenu === "Pizza") {
   pizzaChoice = prompt(`Select a pizza:
     1- Margarita
     2- Vesuvio
-    3- 4-cheese
+    3- Quattro formaggi
     `)
 } else if (selectedMenu === "Pasta") {
   pastaChoice = prompt(`Select a pasta dish:
@@ -80,7 +80,7 @@ if (selectedMenu === "Pizza") {
   } else if (pizzaChoice === "2") {
     finalChoice = " Vesuvio";
   } else if (pizzaChoice === "3") {
-    finalChoice = " 4-cheese";
+    finalChoice = " Quattro formaggi";
   } else {
     alert(`Invalid pizza choice.  Please start over.`)
     process.exit(1);
@@ -136,9 +136,10 @@ alert(`One ${costAge} ${finalChoice} will be prepared for you.  That will be ${c
 
 //Prompt the client to confirm their order
 let confirmation = prompt(`Are you sure this is what you want to order?
-Enter a number to confirm:
 1- Yes
-2- No `);
+2- No 
+Enter a number to confirm:
+`);
 
 // Step 5 - Order confirmation
 // Your code goes here
