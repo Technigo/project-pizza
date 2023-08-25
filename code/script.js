@@ -25,15 +25,15 @@ let foodType;
 
 if (foodChoice === "1") {
   foodType = "Pizza";
-  alert(`You chose  pizza.`);
+  alert(`You chosen  pizza.`);
 } else if (foodChoice === "2") {
   foodType = "Pasta";
-  alert(`You chose  pasta.`);
+  alert(`You chosen  pasta.`);
 } else if (foodChoice === "3") {
   foodType = "Salad";
-  alert(`You chose salad.`);
+  alert(`You chosen salad.`);
 } else {
-  alert("Invalid choice. Please select a valid option.");
+  alert("Please select again.");
 };
 
 
@@ -51,11 +51,11 @@ if (foodType === "Pizza") {
   3 - Vegetarian `);
 
   if (pizzaType === "1") {
-        alert(`You chose Margherita pizza.`);
+        alert(`You chosen Margherita pizza.`);
       } else if (pizzaType === "2") {
-        alert(`You chose Pepperoni pizza.`);
+        alert(`You chosen Pepperoni pizza.`);
       } else if (pizzaType === "3") {
-        alert(`You chose Vegetarian pizza.`);
+        alert(`You chosen Vegetarian pizza.`);
       } else {
         alert(`Invalid pizza type selection.`);
       }
@@ -65,11 +65,11 @@ if (foodType === "Pizza") {
   2 - Alfredo
   3 - Penne`);
   if (pastaType === "1") {
-        alert(`You chose Spaghetti.`);
+        alert(`You chosen Spaghetti.`);
       } else if (pastaType === "2") {
-        alert(`You chose Alfredo.`);
+        alert(`You chosen Alfredo.`);
       } else if (pastaType === "3") {
-        alert(`You chose Penne .`);
+        alert(`You chosen Penne .`);
       } else {
         alert(`Invalid pasta type selection.`);
       }
@@ -79,11 +79,11 @@ if (foodType === "Pizza") {
   2 - Greek
   3 - Garden`);
   if (saladType === "1") {
-        alert(`You chose Caesar Salad.`);
+        alert(`You chosen Caesar Salad.`);
       } else if (saladType === "2") {
-        alert(`You chose Greek Salad.`);
+        alert(`You chosen Greek Salad.`);
       } else if (saladType === "3") {
-        alert(`You chose Garden Salad.`);
+        alert(`You chosen Garden Salad.`);
       } else {
         alert(`Invalid salad type selection.`);
       }

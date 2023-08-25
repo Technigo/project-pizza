@@ -26,18 +26,18 @@ let foodType;
 switch (foodChoice) {
   case "1":
    foodType = "Pizza";
-    alert(`You chose  pizza.`);
+    alert(`You chosen  pizza.`);
     break;
  case  "2" :
   foodType = "Pasta";
-  alert(`You chose  pasta.`);
+  alert(`You chosen  pasta.`);
   break;
  case  "3":
   foodType = "Salad";
-  alert(`You chose salad.`);
+  alert(`You chosen salad.`);
   break;
   default:
-  alert("Invalid choice. Please select a valid option.");
+  alert("Please select again.");
   break;
 };
 
@@ -58,15 +58,15 @@ switch (foodType) {
 
     switch (pizzaType) {
       case "1":
-        alert(`You chose Margherita pizza.`);
+        alert(`You chosen Margherita pizza.`);
         break;
       case "2":
       
-          alert(`You chose Pepperoni pizza.`);
+          alert(`You chosen Pepperoni pizza.`);
         break;
       case "3":
     
-        alert(`You chose Vegetarian pizza.`);
+        alert(`You chosen Vegetarian pizza.`);
         break;
       default:
         alert(`Invalid pizza type selection.`);
@@ -82,13 +82,13 @@ case "Pasta":
 
 switch (pastaType) {
   case "1":
-    alert(`You chose Spaghetti.`);
+    alert(`You chosen Spaghetti.`);
     break;
   case "2":
-    alert(`You chose Alfredo.`);
+    alert(`You chosen Alfredo.`);
     break;
   case "3":
-    alert(`You chose Penne .`);
+    alert(`You chosen Penne .`);
     break;
      default:
     alert(`Invalid pasta type selection.`);
@@ -96,20 +96,20 @@ switch (pastaType) {
 }
 break
 case "Salad":
-   saladType = prompt(`CHoose a type of Salad
+   saladType = prompt(`Choose a type of Salad
   1 - Caesar
   2 - Greek
   3 - Garden`);
     
 switch (saladType) {
   case "1":
-    alert(`You chose Caesar Salad.`);
+    alert(`You chosen Caesar Salad.`);
     break;
   case "2":
-    alert(`You chose Greek Salad.`);
+    alert(`You chosen Greek Salad.`);
     break;
   case "3":
-    alert(`You chose Garden Salad.`);
+    alert(`You chosen Garden Salad.`);
     break;
   default:
     alert(`Invalid salad type selection.`);
@@ -134,13 +134,13 @@ case ageChoice >= 18:
     orderMessage = `You've ordered a child size ${foodType}. That will be 100 SEK`;
     break;
 default:
-  orderMessage = "Invalid choice. Please specify 'child' or 'adult'.";
+  orderMessage = "Invalid choice. Please specify your age'.";
 }
 alert(orderMessage);
 
 // Step 5 - Order confirmation
 // Your code goes here
-const confirmation = prompt("Would you like to confirm your order? (Yes/No)");
+const confirmation = prompt("Would you like to confirm your order? (yes/no)");
 
 switch (confirmation) {
   case "yes":
@@ -150,6 +150,6 @@ case"no":
     alert(`We hope to serve you again in the future.`)
     break
 default:
-    alert("Invalid choice. Please specify 'Yes' or 'No'.");
+    alert("Invalid choice. Please specify 'yes' or 'no'.");
     break
 }
