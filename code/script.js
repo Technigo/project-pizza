@@ -35,8 +35,43 @@ if (foodChoice === "1") {
   process.exit(1);
 }
 
+alert(`You've chosen ${selectedFood}!`);
+
+
 // Step 3 - Subtype choice
 // Your code goes here
+switch (selectedFood) {
+  case "Pizza":
+    subFood = prompt(`Select your pizza type:
+    1 - Margherita
+    2 - Napolitana
+    3 - Bianca 
+    Please enter the number of your choice:`);
+    foodNames = ["Margherita", "Napolitana", "Bianca"];
+    break;
+
+  case "Pasta":
+    subFood = prompt(`Select your pasta type:
+    1 - Cacio e pepe
+    2 - Vongole
+    3 -  Carbonara 
+    Please enter the number of your choice:`);
+    foodNames = ["Cacio e pepe", "Vongole", "Carbonara"];
+    break;
+
+  case "Salad":
+    subFood = prompt(`Select your salad type:
+    1 - Pomodoro e basilico
+    2 - Buratta
+    3 - Melon e peperoncino
+    Please enter the number of your choice:`);
+    foodNames = ["Pomodoro e basilico", "Buratta", "Melon e peperoncino"];
+    break;
+
+
+}
+
+
 
 // Step 4 - Age
 // Your code goes here
