@@ -61,8 +61,8 @@ switch (selectedFoodCategory) {
       2 - Pizza Funghi 
       3 - Pizza Quattro formaggi
       Please enter a number from these 3 choices.`);
-      foodOption = [
-      ["Pizza Margherita", "Pizza Funghi", "Pizza Quattro formaggi"],  // Pizza choices
+      foodOption = ["Pizza Margherita", "Pizza Funghi", "Pizza Quattro formaggi"],  // Pizza choices
+      foodPrice =[
       ["70", "80", "75"],   // Price for adult size, sek
       ["40", "45", "42"],   //Price for child size, sek
       ];
@@ -74,8 +74,8 @@ switch (selectedFoodCategory) {
       2 - Pinsa with Zucchini, Ricotta, and Lemon
       3 - Classic Pinsa Romana
       Please enter a number from these 3 choices.`);
-      foodOption = [
-      ["Romana Ricetta Originale", "Pinsa with Zucchini, Ricotta, and Lemon", "Classic Pinsa Romana"],  //Pinsa choices
+      foodOption = ["Romana Ricetta Originale", "Pinsa with Zucchini, Ricotta, and Lemon", "Classic Pinsa Romana"],  //Pinsa choices
+      foodPrice = [
       ["60", "70", "65"],   // Price for adult size, sek
       ["35", "40", "38"],   //Price for child size, sek
       ];
@@ -87,8 +87,8 @@ switch (selectedFoodCategory) {
       2 - Berry Marscapone Pizza
       3 - Nutella and Strawberry Pizza
       Please enter a number from these 3 choices.`);
-      foodOption = [
-      ["Cinnamon roll Pizza", "Berry Marscapone Pizza", "Nutella and Strawberry Pizza"], // Dessert choices
+      foodOption = ["Cinnamon roll Pizza", "Berry Marscapone Pizza", "Nutella and Strawberry Pizza"], // Dessert choices
+      foodPrice = [
       ["65", "70", "60"],   // Price for adult size, sek
       ["38", "40", "35"],   //Price for child size, sek
       ];
@@ -105,13 +105,13 @@ switch (selectedFoodCategory) {
 //Gives a confirmation message to the user based on the choice of food.
 
 if (foodSubType === "1") {
-  alert(`Awesome! You have chosen the ${foodOption[0][0]}.`);
+  alert(`Awesome! You have chosen the ${foodOption[0]}.`);
 } 
 else if (foodSubType === "2") {
-  alert(`Awesome! You have chosen the ${foodOption[0][1]}.`);
+  alert(`Awesome! You have chosen the ${foodOption[1]}.`);
 } 
 else if (foodSubType === "3") {
-  alert(`Awesome! You have chosen the ${foodOption[0][2]}.`);
+  alert(`Awesome! You have chosen the ${foodOption[2]}.`);
 }
 else {
   alert("Invalid choice. Please enter a valid number.");
@@ -137,28 +137,28 @@ else {
 let userConfirmation ="";
 
 if (foodSubType === "1" && userAgeCategory === "adult")  {
-  userConfirmation = prompt (`You have chosen one ${userAgeCategory} size ${foodOption[0][0]}! That will be ${foodOption[1][0]} kr. Are you sure you want to order this?
+  userConfirmation = prompt (`You have chosen one ${userAgeCategory} size ${foodOption[0]}! That will be ${foodPrice[0][0]} kr. Are you sure you want to order this?
   1 - Yes
   2 - No`)
  } else if (foodSubType === "2" && userAgeCategory === "adult") {
-  userConfirmation = prompt (`You have chosen one ${userAgeCategory} size ${foodOption[0][1]}! That will be ${foodOption[1][1]} kr. Are you sure you want to order this?
+  userConfirmation = prompt (`You have chosen one ${userAgeCategory} size ${foodOption[1]}! That will be ${foodPrice[0][1]} kr. Are you sure you want to order this?
   1 - Yes
   2 - No`)
 } else if (foodSubType === "3" && userAgeCategory === "adult") {
-  userConfirmation = prompt (`You have chosen one ${userAgeCategory} size ${foodOption[0][2]}! That will be ${foodOption[1][2]} kr. Are you sure you want to order this?
+  userConfirmation = prompt (`You have chosen one ${userAgeCategory} size ${foodOption[2]}! That will be ${foodPrice[0][2]} kr. Are you sure you want to order this?
 1 - Yes
 2 - No
 `)
 } else if (foodSubType === "1" && userAgeCategory === "child")  {
-  userConfirmation = prompt (`You have chosen one ${userAgeCategory} size ${foodOption[0][0]}! That will be ${foodOption[2][0]} kr. Are you sure you want to order this?
+  userConfirmation = prompt (`You have chosen one ${userAgeCategory} size ${foodOption[0]}! That will be ${foodPrice[1][0]} kr. Are you sure you want to order this?
   1 - Yes
   2 - No`)
  } else if (foodSubType === "2" && userAgeCategory === "child") {
-  userConfirmation = prompt (`You have chosen one ${userAgeCategory} size ${foodOption[0][1]}! That will be ${foodOption[2][1]} kr. Are you sure you want to order this?
+  userConfirmation = prompt (`You have chosen one ${userAgeCategory} size ${foodOption[1]}! That will be ${foodPrice[1][1]} kr. Are you sure you want to order this?
   1 - Yes
   2 - No`)
 } else {
-  userConfirmation = prompt (`You have chosen one ${userAgeCategory} size ${foodOption[0][2]}! That will be ${foodOption[2][2]} kr. Are you sure you want to order this?
+  userConfirmation = prompt (`You have chosen one ${userAgeCategory} size ${foodOption[2]}! That will be ${foodPrice[1][2]} kr. Are you sure you want to order this?
 1 - Yes
 2 - No
 `)
