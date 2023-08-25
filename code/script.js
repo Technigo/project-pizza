@@ -105,6 +105,7 @@ if (orderConfirmation != "") {
     }
   }
 
+  //A check that prevents code from running if a subtype hasn't been chosen
   if (subtype != "") {
     alert(`One ${subtype}, got it!`);
 
