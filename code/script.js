@@ -80,20 +80,19 @@ if (foodName === "Pizza") {
   alert(`Invalid choice. Please start over.`); process.exit(1);
 }
 
-// Step 4 - Age. Adolescent/adult or child
-let age = prompt("Portion sizes differs depending on if it's a child or adolescent/adult.", "Please type your age here");
+// Step 4 and 5 - Age. Adolescent/adult or child. And
+let age = prompt("Portion sizes differ depending on if it's a child or adolescent/adult.", "Please type your age here");
+let confirmation;
 
 if (age >= 16) {
-  alert(`One adult sized ${finalchoice}. That'll be 10euros. Confirm in next box please.`)
+  confirmation = prompt(`One regular sized ${finalchoice}. That'll be 10 euros.\nEnter a number to confirm: 1: Yes, 2: No.`);
 } else if (age <= 15) {
-  alert(`One child sized ${finalchoice}. That'll be 7euros. Confirm in next box please`)
+  confirmation = prompt(`One child sized ${finalchoice}. That'll be 7 euros.\nEnter a number to confirm: 1: Yes, 2: No.`);
 }
 
-// Step 5 - Order confirmation
-let confirmation = prompt("Enter a number to confirm: 1: Yes, 2: No.");
-
 if (confirmation === "1") {
-  alert(`Your ${finalchoice} is being prepared. Yummy!`)
+  alert(`Your ${finalchoice} is being prepared. Yummy!`);
 } else {
-  alert(`Ok, we'll be happy to prepare a ${finalchoice} or another yummy meal for you another time! Welcome back!`); process.exit(1);
+  alert(`Ok, we'll be happy to prepare a ${finalchoice} or another yummy meal for you another time! Welcome back!`);
+  process.exit(1);
 }
