@@ -103,29 +103,29 @@ if (ageOption >= 18) {
 
 if (ageOption >= 18) {
   let confirmation = prompt(`One ${foodOptionText} will be prepared for you. 
-  That will be 15€. Are you sure you want to proceed with your order? 
-  Enter a number to confirm: 
-  1 - yes 
-  2 - no`);
+That will be 15€. Are you sure you want to proceed with your order? 
+Enter a number to confirm: 
+  1 - Yes 
+  2 - No`);
   if (confirmation === `1`) {
-    alert(`Thank you for your order, this is you confirmation.`);
+    alert(`Thank you for your order, this is you confirmation. Enjoy your ${foodOptionText}!`);
   } else if (confirmation === `2`) {
     alert(`Are you not hungry anymore? 
-    refresh the page to start over if you are. Otherwise, hope to see you next time!`)
+  refresh the page to start over if you are. Otherwise, hope to see you next time!`)
   } else {
     alert(`Please choose a valid number`);
   }
 } else {
   let confirmation = prompt(`One ${foodOptionText} will be prepared for you.
-  That will be 10€. Are you sure you want to proceed with your order?
-  Enter a number to confirm:
-   1 - yes
-   2 - no`);
+That will be 10€. Are you sure you want to proceed with your order?
+Enter a number to confirm:
+   1 - Yes
+   2 - No`);
   if (confirmation === `1`) {
-    alert(`Thank you for your order, this is you confirmation.`);
+    alert(`Thank you for your order, this is you confirmation. Enjoy your ${foodOptionText}!`);
   } else if (confirmation === `2`) {
     alert(`Are you not hungry anymore? 
-    refresh the page to start over if you are. Otherwise, hope to see you next time!`)
+  refresh the page to start over if you are. Otherwise, hope to see you next time!`)
   } else {
     alert(`Please choose a valid number`);
   }

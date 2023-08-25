@@ -9,7 +9,7 @@ let person = prompt(`Please enter you name`);
 let enterName = true;
 
 switch (enterName) {
-    case `person != null`:
+    case person != null && enterName:
         alert(`Hello ${person}! that is a really cool name!`);
 
 }
@@ -42,9 +42,9 @@ switch (foodOption) {
 switch (foodOption) {
     case `1`:
         let pizzaOption = prompt(`Which Pizza would you like to order?
-1 - Pizza Bianca 
-2 - Pizza con pomodorini 
-3 - Quattro Stagioni`);
+     1 - Pizza Bianca 
+     2 - Pizza con pomodorini 
+     3 - Quattro Stagioni`);
 
         switch (pizzaOption) {
             case `1`:
@@ -65,9 +65,9 @@ switch (foodOption) {
         break;
     case `2`:
         let pastaOption = prompt(`Which pasta would you like to order? 
-1 - Pasta Alio e Olio 
-2 - Pasta con Pomodorini 
-3 - Pasta allo Scoglio`);
+    1 - Pasta Alio e Olio 
+    2 - Pasta con Pomodorini 
+    3 - Pasta allo Scoglio`);
 
         switch (pastaOption) {
             case `1`:
@@ -88,9 +88,9 @@ switch (foodOption) {
         break;
     case `3`:
         let saladOption = prompt(`Which salad would you like to order? 
-  1 - Tuna Salad 
-  2 - Broccoli Salad 
-  3 - Fruit Salad`);
+    1 - Tuna Salad 
+    2 - Broccoli Salad 
+    3 - Fruit Salad`);
 
         switch (saladOption) {
 
@@ -115,9 +115,9 @@ switch (foodOption) {
 
 let ageOption = prompt(`How old are you?`);
 
-switch (ageOption) {
+switch (true) {
 
-    case `ageOption >= 18`:
+    case ageOption >= 18:
         alert(`You have ordered a ${foodOptionText} from the grown ups menu!`);
         break;
     default:
@@ -126,33 +126,36 @@ switch (ageOption) {
 
 // Step 5 - Order confirmation
 
-switch (ageOption) {
+switch (true) {
 
-    case `ageOption >= 18`:
+    case ageOption >= 18:
         let confirmAdult = prompt(`One ${foodOptionText} will be prepared for you. That will be 15€. Are you sure you want to proceed with your order? 
     Enter a number to confirm: 
-    1 - yes 
-    2 - no`);
+    1 - Yes 
+    2 - No`);
 
         switch (confirmAdult) {
             case `1`:
-                alert(`Thank you for your order! This is you confirmation.`);
+                alert(`Thank you for your order, this is you confirmation. Enjoy your ${foodOptionText}!`);
                 break;
             case `2`:
-                alert(`Are you not hungry anymore? refresh the page to start over if you are.
-                 Otherwise, hope to see you next time!`)
+                alert(`Are you not hungry anymore? 
+                refresh the page to start over if you are.
+                Otherwise, hope to see you next time!`)
                 break;
             default:
                 alert(`Please choose a valid number`);
         }
+        break;
+    default:
         let confirmChild = prompt(`One ${foodOptionText} will be prepared for you. That will be 10€. Are you sure you want to proceed with your order?
     Enter a number to confirm:
-     1 - yes
-     2 - no`);
+    1 - Yes
+    2 - No`);
 
         switch (confirmChild) {
             case `1`:
-                alert(`Thank you for your order! This is you confirmation.`);
+                alert(`Thank you for your order, this is you confirmation. Enjoy your ${foodOptionText}!`);
                 break;
             case `2`:
                 alert(`Are you not hungry anymore? 
