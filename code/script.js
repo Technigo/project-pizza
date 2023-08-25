@@ -62,7 +62,7 @@ switch (selectedFood) {
 // Step 4 - Age
 // Your code goes here
 
-// Asks who the food is for, creates an order message with chosen dish, food type, and price, and shows it in an alert.
+// Asks who the food is for, creates an order message with chosen dish, and price, and shows it in an alert.
 
 let customerType = prompt(`Is the food for a child or an adult?
   1 - Child
