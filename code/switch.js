@@ -1,12 +1,13 @@
 // Start here
 
 const invalidChoise = (selectionOption) => {
-  alert(`Invalid choice. Please select ${selectionOption}`);
+  alert(`Invalid choice. Please ${selectionOption}`);
   // process.exsit(1);
 };
 
-const selectNumOneToThree = "a number between 1 and 3";
-const selectNumOneAndTwo = "a number 1 or 2";
+const selectNumOneToThree = "select a number between 1 and 3";
+const selectNumOneAndTwo = "select a number 1 or 2";
+const selectAge = "type your age";
 
 // Step 1 - Welcome and introduction
 // Your code goes here
@@ -20,30 +21,34 @@ alert(`Wellcome to Technigo pizzaria, ${userName}`);
 // Step 2 - Food choice
 // Your code goes here
 
-const chooseFromThreeOpt = (answerNum, choiceQuestion, choiceArr) => {
-  const choice = choiceArr.map((el, index) => "  " + (index + 1) + " - " + el + "\n");
-  answerNum = parseInt(
+// Here you can  ask a question in prompt. parameter is an object which contains key words, question and choiceArr.
+// I use this in step 2 and 3.
+
+const chooseOption = (obj) => {
+  const choice = obj.choiceArr.map((el, index) => "  " + (index + 1) + " - " + el + "\n");
+  const answerNum = parseInt(
     prompt(
-      `${choiceQuestion}
+      `${obj.question}
 Enter a number:
 ${choice.join("")}`
     )
   );
-  console.log(answerNum);
+
+  return answerNum;
 };
 
-const foodChoiceQuestion = "What type of food would you like to eat?";
-const foodChoiceArr = ["Pizza", "Salad", "Pasta"];
-let foodTypeNum;
+// This is a object for a prompt asking what type of food you want to eat. Used in chooseOption function
+const foodTypeChoiceObj = {
+  question: "What type of food would you like to eat?",
+  choiceArr: ["Pizza", "Salad", "Pasta"],
+};
+
+let foodTypeNum = chooseOption(foodTypeChoiceObj);
 let foodType;
 
-chooseFromThreeOpt(foodTypeNum, foodChoiceQuestion, foodChoiceArr);
-
 while (foodTypeNum !== 1 && foodTypeNum !== 2 && foodTypeNum !== 3) {
-  console.log("hello");
-  console.log(foodTypeNum, "Hi");
   invalidChoise(selectNumOneToThree);
-  chooseFromThreeOpt(foodTypeNum, foodChoiceQuestion, foodChoiceArr);
+  foodTypeNum = chooseOption(foodTypeChoiceObj);
 }
 
 switch (foodTypeNum) {
@@ -56,8 +61,6 @@ switch (foodTypeNum) {
   case 3:
     foodType = "Pasta";
     break;
-  default:
-    invalidChoise(selectNumOneToThree);
 }
 
 // confirming what type of food you want to eat
@@ -70,17 +73,23 @@ alert(`Would you want to eat ${foodType}? Click "ok" to confirm`);
 
 let dishNum;
 let yourDish;
+let dishChoiceObj;
+
+const loopCorrectDishNum = () => {
+  while (dishNum !== 1 && dishNum !== 2 && dishNum !== 3) {
+    invalidChoise(selectNumOneToThree);
+    dishNum = chooseOption(dishChoiceObj);
+  }
+};
 
 if (foodType === "Pizza") {
-  dishNum = parseInt(
-    prompt(
-      `Which food would like to order? 
-      Enter a number:
-       1 - Vegan Pizza
-       2 - Vegan Cheese Pizza 
-       3 - Vegetarian Pizza`
-    )
-  );
+  dishChoiceObj = {
+    question: "Which food would like to order? ",
+    choiceArr: ["Vegan Pizza", "Vegan Cheese Pizza", "Vegetarian Pizza"],
+  };
+
+  dishNum = chooseOption(dishChoiceObj);
+  loopCorrectDishNum();
 
   switch (dishNum) {
     case 1:
@@ -92,19 +101,15 @@ if (foodType === "Pizza") {
     case 3:
       yourDish = "Vevetarian Pizza";
       break;
-    default:
-      invalidChoise(selectNumOneToThree);
   }
 } else if (foodType === "Salad") {
-  dishNum = parseInt(
-    prompt(
-      `Which food would like to order? 
-       Enter a number: 
-       1 - Vegan Feta Salad
-       2 - Italian Salad 
-       3 - Grilled Vegan Cheese Salad`
-    )
-  );
+  dishChoiceObj = {
+    question: "Which food would like to order? ",
+    choiceArr: ["Vegan Feta Salad", "talian Salad ", "Grilled Vegan Cheese Salad`"],
+  };
+
+  dishNum = chooseOption(dishChoiceObj);
+  loopCorrectDishNum();
 
   switch (dishNum) {
     case 1:
@@ -116,19 +121,15 @@ if (foodType === "Pizza") {
     case 3:
       yourDish = "Grilled Vegan Cheese Salad";
       break;
-    default:
-      invalidChoise(selectNumOneToThree);
   }
 } else if (foodType === "Pasta") {
-  dishNum = parseInt(
-    prompt(
-      `Which food would like to order? 
-      Enter a number: 
-      1 - Tomato Pasta
-      2 - Vegan Cream Pasta 
-      3 - Ruccola and Dryed Tomato Pasta`
-    )
-  );
+  dishChoiceObj = {
+    question: "Which food would like to order? ",
+    choiceArr: ["Tomato Pasta", "Vegan Cream Pasta ", "Ruccola and Dryed Tomato Pasta`"],
+  };
+
+  dishNum = chooseOption(dishChoiceObj);
+  loopCorrectDishNum();
 
   switch (dishNum) {
     case 1:
@@ -140,8 +141,6 @@ if (foodType === "Pizza") {
     case 3:
       yourDish = "Ruccola and Dryed Tomato Pasta";
       break;
-    default:
-      invalidChoise(selectNumOneToThree);
   }
 }
 
@@ -157,9 +156,13 @@ let age = parseInt(prompt(`Is this dish for a child or an adult? - Enter your ag
 
 let isChild;
 
-// over 12 years order an adult sized dish
+// over 16 years order an adult sized dish
+while (age <= 0 && age > 130) {
+  invalidChoise(selectAge);
+  age = parseInt(prompt(`Is this dish for a child or an adult? - Enter your age.`));
+}
 
-age >= 12 ? (isChild = false) : (isChild = true);
+age >= 16 ? (isChild = false) : (isChild = true);
 
 ///////////////////////////////////////////////////////////////////////////////
 // Step 5 - Order confirmation
