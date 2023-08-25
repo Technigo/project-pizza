@@ -44,24 +44,31 @@ const foodTypeChoiceObj = {
 };
 
 let foodTypeNum = chooseOption(foodTypeChoiceObj);
-let foodType;
 
 while (foodTypeNum !== 1 && foodTypeNum !== 2 && foodTypeNum !== 3) {
   invalidChoise(selectNumOneToThree);
   foodTypeNum = chooseOption(foodTypeChoiceObj);
 }
 
-switch (foodTypeNum) {
-  case 1:
-    foodType = "Pizza";
-    break;
-  case 2:
-    foodType = "Salad";
-    break;
-  case 3:
-    foodType = "Pasta";
-    break;
-}
+// function to evaluate three conditions
+
+const evaluateThreeConditions = (checker, obj) => {
+  let answer;
+  switch (checker) {
+    case 1:
+      answer = obj.choiceArr[0];
+      return answer;
+
+    case 2:
+      answer = obj.choiceArr[1];
+      return answer;
+    case 3:
+      answer = obj.choiceArr[2];
+      return answer;
+  }
+};
+
+const foodType = evaluateThreeConditions(foodTypeNum, foodTypeChoiceObj);
 
 // confirming what type of food you want to eat
 
@@ -91,17 +98,7 @@ if (foodType === "Pizza") {
   dishNum = chooseOption(dishChoiceObj);
   loopCorrectDishNum();
 
-  switch (dishNum) {
-    case 1:
-      yourDish = " Vegan Pizza";
-      break;
-    case 2:
-      yourDish = "Vegan Cheese Pizza";
-      break;
-    case 3:
-      yourDish = "Vevetarian Pizza";
-      break;
-  }
+  yourDish = evaluateThreeConditions(dishNum, dishChoiceObj);
 } else if (foodType === "Salad") {
   dishChoiceObj = {
     question: "Which food would like to order? ",
@@ -111,17 +108,7 @@ if (foodType === "Pizza") {
   dishNum = chooseOption(dishChoiceObj);
   loopCorrectDishNum();
 
-  switch (dishNum) {
-    case 1:
-      yourDish = " Vegan Feta Salad";
-      break;
-    case 2:
-      yourDish = "Italian Salad";
-      break;
-    case 3:
-      yourDish = "Grilled Vegan Cheese Salad";
-      break;
-  }
+  yourDish = evaluateThreeConditions(dishNum, dishChoiceObj);
 } else if (foodType === "Pasta") {
   dishChoiceObj = {
     question: "Which food would like to order? ",
@@ -131,17 +118,7 @@ if (foodType === "Pizza") {
   dishNum = chooseOption(dishChoiceObj);
   loopCorrectDishNum();
 
-  switch (dishNum) {
-    case 1:
-      yourDish = " Tomato Pasta";
-      break;
-    case 2:
-      yourDish = "Vegan cream Pasta";
-      break;
-    case 3:
-      yourDish = "Ruccola and Dryed Tomato Pasta";
-      break;
-  }
+  yourDish = evaluateThreeConditions(dishNum, dishChoiceObj);
 }
 
 // confirming which dish you want to eat
@@ -157,7 +134,7 @@ let age = parseInt(prompt(`Is this dish for a child or an adult? - Enter your ag
 let isChild;
 
 // over 16 years order an adult sized dish
-while (age <= 0 && age > 130) {
+while ((age < 0 && age > 130) || age === NaN) {
   invalidChoise(selectAge);
   age = parseInt(prompt(`Is this dish for a child or an adult? - Enter your age.`));
 }
