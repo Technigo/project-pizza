@@ -21,7 +21,7 @@ const foodChoice = prompt(`What food would you like to order today? Enter a numb
 2.Pasta 
 3.Salad`);
 
-let selectedFood
+let selectedFood = ""
 
 if (foodChoice === "1") {
   selectedFood = "Pizza";
@@ -80,55 +80,69 @@ switch (selectedFood) {
     process.exit(1);
 }
 
-if (selectedFood === "1") {
+if (foodSlot === "1") {
   alert(
     `Nice ${userName} , you've choosen ${foodOption[0]}!`);
 }
-else if (selectedFood === "2") {
+else if (foodSlot === "2") {
   alert(`Nice ${userName} , you've choosen ${foodOption[1]}!`);
 }
-else if (selectedFood === "3") {
+else if (foodSlot === "3") {
   alert(`Nice ${userName} , you've choosen ${foodOption[2]}!`);
 }
-{
+else {
   alert(`Invalid choice. Please select a valid number ${userName}`);
 }
 
+let finalChoice = "";
+switch (foodSlot) {
+  case "1":
+    finalChoice = foodOption[0];
+    break;
+  case "2":
+    finalChoice = foodOption[1];
+    break;
+  case "3":
+    finalChoice = foodOption[2];
+    break;
+
+  default: alert(`Invalid choice. Please select a valid number`)
+    process.exit(1);
+
+}
 
 // Step 4 - Age
 // Your code goes here
 
 const age = prompt(`Is this food for an adult or a child. Please enter your age.`);
 if (age >= 15) {
-  const confirmation = prompt(`One adult sized ${selectedFood} will be prepared for you. That'll be €20. 
-Are you sure you want to order this? 
-Enter a number to confirm: 
-1. Yes 
-2. No`);
+  const confirmation = alert(`One adult sized ${finalChoice} will be prepared for you. That'll be €20. `);
 }
 
 else {
-  const confirmation = prompt(`One child size ${selectedFood} will be prepared for you. That'll be €10. 
-  Are you sure you want to order this? 
-  Enter a numer to confirm: 
-  1. Yes 
-  2. No`);
+  const confirmation = alert(`One child size ${finalChoice} will be prepared for you. That'll be €10. `);
 }
 
 // Step 5 - Order confirmation
 // Your code goes here
 
-let orderConfirmation = "";
-if (orderConfirmation === "1") {
-  orderConfirmation = "Yes",
-    alert(`Thank you for your order! Your meal will be prepared shortly. See you soon!`);
+let confirmation = prompt(` Are you sure you want to order this? 
+Enter a number to confirm: 
+1. Yes 
+2. No`)
+
+if (confirmation === "1") {
+  alert(`Thank you for your order! 
+  Your ${finalChoice} will be prepared shortly. 
+  See you soon!`);
 }
 
-else if (orderConfirmation === "2") {
-  orderConfirmation = "No",
-    alert(`No problem, welcome back and order any time you want! See you!`)
+else if (confirmation === "2") {
+
+  alert(`No problem, come back again next time, you're alwats welcome !`)
 }
 
 else {
   alert(`Invalid choice. Please select a valid number ${userName}`)
 }
+
