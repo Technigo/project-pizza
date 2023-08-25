@@ -7,13 +7,14 @@ alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
 
-// Asks for the user's name using prompt and stores the answer in a variable
+// Asks for the user's name using prompt and stores the answer in a variable.
 const userName = prompt(`Please enter your name:`);
 alert(`Hi ${userName}! Click 'OK' to choose type of food.`);
 
 // Step 2 - Food choice
 // Your code goes here
 
+// Prompts the user to choose a food item by entering a corresponding number.
 let selectedFood = prompt(`What do you want to order?:
   1 - Pizza
   2 - Pasta
@@ -22,6 +23,8 @@ let selectedFood = prompt(`What do you want to order?:
 
 // Step 3 - Subtype choice
 // Your code goes here
+
+// A switch statement to prompt the user for a specific type of dish based on the previously selected food item.
 
 let dishType = "";
 let dishNames = "";
@@ -59,6 +62,8 @@ switch (selectedFood) {
 // Step 4 - Age
 // Your code goes here
 
+// Asks who the food is for, creates an order message with chosen dish, food type, and price, and shows it in an alert.
+
 let customerType = prompt(`Is the food for a child or an adult?
   1 - Child
   2 - Adult
@@ -80,6 +85,8 @@ alert(orderMessage);
 
 // Step 5 - Order confirmation
 // Your code goes here
+
+// Seeks order confirmation through numeric input and responds with a message.
 
 let confirmation = prompt(`Please confirm your order.
   1 - Yes
