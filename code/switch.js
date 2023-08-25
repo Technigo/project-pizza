@@ -23,6 +23,7 @@ let foodOption = prompt(`What would you like to order?
   2 - Pasta
   3 - Salad`);
 
+// Alert foodOption answer
 switch (foodOption) {
     case `1`:
         alert(`Pizza is a great choise!`);
@@ -38,7 +39,7 @@ switch (foodOption) {
 }
 
 // Step 3 - Subtype choice
-
+//prompt pizzaOption
 switch (foodOption) {
     case `1`:
         let pizzaOption = prompt(`Which Pizza would you like to order?
@@ -46,6 +47,7 @@ switch (foodOption) {
      2 - Pizza con pomodorini 
      3 - Quattro Stagioni`);
 
+        // Alert pizzaOption answer
         switch (pizzaOption) {
             case `1`:
                 foodOptionText = `Pizza Bianca`
@@ -63,12 +65,14 @@ switch (foodOption) {
                 alert(`Please choose a valid number`);
         }
         break;
+    //prompt pastaOption
     case `2`:
         let pastaOption = prompt(`Which pasta would you like to order? 
     1 - Pasta Alio e Olio 
     2 - Pasta con Pomodorini 
     3 - Pasta allo Scoglio`);
 
+        // Alert pastaOption answer
         switch (pastaOption) {
             case `1`:
                 foodOptionText = `Pasta Alio e Olio`
@@ -86,14 +90,15 @@ switch (foodOption) {
                 alert(`Please choose a valid number`);
         }
         break;
+    //prompt saladOption
     case `3`:
         let saladOption = prompt(`Which salad would you like to order? 
     1 - Tuna Salad 
     2 - Broccoli Salad 
     3 - Fruit Salad`);
 
+        // Alert saladOption answer
         switch (saladOption) {
-
             case `1`:
                 foodOptionText = `Tuna Salad`
                 alert(`You have choosen Tuna Salad, amazing!`);
@@ -115,8 +120,8 @@ switch (foodOption) {
 
 let ageOption = prompt(`How old are you?`);
 
+// Alert ageOption answer
 switch (true) {
-
     case ageOption >= 18:
         alert(`You have ordered a ${foodOptionText} from the grown ups menu!`);
         break;
@@ -125,15 +130,15 @@ switch (true) {
 }
 
 // Step 5 - Order confirmation
-
+//Prompt confirmation if bigger or equal than 18
 switch (true) {
-
     case ageOption >= 18:
         let confirmAdult = prompt(`One ${foodOptionText} will be prepared for you. That will be 15€. Are you sure you want to proceed with your order? 
     Enter a number to confirm: 
     1 - Yes 
     2 - No`);
 
+        // Alert confirmation answer
         switch (confirmAdult) {
             case `1`:
                 alert(`Thank you for your order, this is you confirmation. Enjoy your ${foodOptionText}!`);
@@ -147,12 +152,14 @@ switch (true) {
                 alert(`Please choose a valid number`);
         }
         break;
+    //Prompt confirmation if less than 18
     default:
         let confirmChild = prompt(`One ${foodOptionText} will be prepared for you. That will be 10€. Are you sure you want to proceed with your order?
     Enter a number to confirm:
     1 - Yes
     2 - No`);
 
+        // Alert confirmation answer
         switch (confirmChild) {
             case `1`:
                 alert(`Thank you for your order, this is you confirmation. Enjoy your ${foodOptionText}!`);
@@ -165,4 +172,4 @@ switch (true) {
                 alert(`Please choose a valid number`);
         }
 }
-
+// End

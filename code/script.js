@@ -19,6 +19,7 @@ let foodOption = prompt(`What would you like to order?
 2 - Pasta 
 3 - Salad`); {
 
+  // Alert foodOption answer
   if (foodOption === `1`) {
     alert(`Pizza is a great choice!`);
   } else if (foodOption === `2`) {
@@ -30,14 +31,16 @@ let foodOption = prompt(`What would you like to order?
     Please choose a valid number`);
   }
 }
-// Step 3 - Subtype choice
 
+// Step 3 - Subtype choice
+//prompt pizzaOption
 if (foodOption === `1`) {
   let pizzaOption = prompt(`Which Pizza would you like to order?
   1 - Pizza Bianca 
   2 - Pizza con pomodorini 
   3 - Quattro Stagioni`);
 
+  // Alert pizzaOption answer
   if (pizzaOption === `1`) {
     foodOptionText = `Pizza Bianca`
     alert(`You have choosen Pizza Bianca, amazing!`);
@@ -50,12 +53,15 @@ if (foodOption === `1`) {
   } else {
     alert(`Not hungry? Please choose a valid number`);
   }
+
+  //prompt pastaOption
 } else if (foodOption === `2`) {
   let pastaOption = prompt(`Which pasta would you like to order? 
   1 - Pasta Alio e Olio 
   2 - Pasta con Pomodorini 
   3 - Pasta allo Scoglio`);
 
+  // Alert pastaOption answer
   if (pastaOption === `1`) {
     foodOptionText = `Pasta Alio e Olio`
     alert(`You have choosen Pasta Alio e Olio, amazing!`);
@@ -68,19 +74,19 @@ if (foodOption === `1`) {
   } else {
     alert(`Not hungry? Please choose a valid number`);
   }
-
+  //prompt saladOption
 } else if (foodOption === `3`) {
   let saladOption = prompt(`Which salad would you like to order? 
   1 - Tuna Salad 
   2 - Broccoli Salad 
   3 - Fruit Salad`);
 
-
+  // Alert saladOption answer
   if (saladOption === `1`) {
     foodOptionText = `Tuna Salad`
     alert(`You have choosen Tuna Salad, amazing!`);
-    foodOptionText = `Broccoli Salad`
   } else if (saladOption === `2`) {
+    foodOptionText = `Broccoli Salad`
     alert(`You have choosen Broccoli Salad, amazing!`);
   } else if (saladOption === `3`) {
     foodOptionText = `Fruit Salad`
@@ -93,6 +99,7 @@ if (foodOption === `1`) {
 // Step 4 - Age
 let ageOption = prompt(`How old are you?`);
 
+// Alert ageOption answer
 if (ageOption >= 18) {
   alert(`You have ordered a ${foodOptionText} from the grown ups menu!`);
 } else {
@@ -100,13 +107,15 @@ if (ageOption >= 18) {
 }
 
 // Step 5 - Order confirmation
-
+//Prompt confirmation if bigger or equal than 18
 if (ageOption >= 18) {
   let confirmation = prompt(`One ${foodOptionText} will be prepared for you. 
 That will be 15€. Are you sure you want to proceed with your order? 
 Enter a number to confirm: 
   1 - Yes 
   2 - No`);
+
+  // Alert confirmation answer
   if (confirmation === `1`) {
     alert(`Thank you for your order, this is you confirmation. Enjoy your ${foodOptionText}!`);
   } else if (confirmation === `2`) {
@@ -115,12 +124,17 @@ Enter a number to confirm:
   } else {
     alert(`Please choose a valid number`);
   }
-} else {
+
+}
+//Prompt confirmation if less than 18
+else {
   let confirmation = prompt(`One ${foodOptionText} will be prepared for you.
 That will be 10€. Are you sure you want to proceed with your order?
 Enter a number to confirm:
    1 - Yes
    2 - No`);
+
+  // Alert confirmation answer
   if (confirmation === `1`) {
     alert(`Thank you for your order, this is you confirmation. Enjoy your ${foodOptionText}!`);
   } else if (confirmation === `2`) {
@@ -130,4 +144,4 @@ Enter a number to confirm:
     alert(`Please choose a valid number`);
   }
 }
-
+// End
