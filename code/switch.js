@@ -36,7 +36,7 @@ switch (foodOption) {
         break;
     default:
         alert(`Oh, not hungry? Please choose a valid number`);
-        throw new Error(`Invalid choise`);
+        throw new Error(`Invalid number`); //Stops the code from running if invalid
 }
 
 // Step 3 - Subtype choice
@@ -64,7 +64,7 @@ switch (foodOption) {
                 break;
             default:
                 alert(`Please choose a valid number`);
-                throw new Error(`Invalid choise`);
+                throw new Error(`Invalid number`); //Stops the code from running if invalid
         }
         break;
     //prompt pastaOption
@@ -90,7 +90,7 @@ switch (foodOption) {
                 break;
             default:
                 alert(`Please choose a valid number`);
-                throw new Error(`Invalid choise`);
+                throw new Error(`Invalid number`); //Stops the code from running if invalid
         }
         break;
     //prompt saladOption
@@ -116,7 +116,7 @@ switch (foodOption) {
                 break;
             default:
                 alert(`Please choose a valid number`);
-                throw new Error(`Invalid choise`);
+                throw new Error(`Invalid number`); //Stops the code from running if invalid
         }
 }
 
@@ -154,7 +154,7 @@ switch (true) {
                 break;
             default:
                 alert(`Please choose a valid number`);
-                throw new Error(`Invalid choise`);
+                throw new Error(`Invalid number`); //Stops the code from running if invalid
         }
         break;
     //Prompt confirmation if less than 18
@@ -175,7 +175,7 @@ switch (true) {
                 break;
             default:
                 alert(`Please choose a valid number`);
-                throw new Error(`Invalid choise`);
+                throw new Error(`Invalid number`); //Stops the code from running if invalid
         }
 }
 // End

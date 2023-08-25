@@ -28,8 +28,8 @@ let foodOption = prompt(`What would you like to order?
     alert(`wow, salad, that is a great choice!`);
   } else {
     alert(`Oh... are you not hungry? 
-    Please choose a valid number`);
-    throw new Error(`Invalid choise`);
+  Please choose a valid number`);
+    throw new Error(`Invalid number`); //Stops the code from running if invalid
   }
 }
 
@@ -53,7 +53,7 @@ if (foodOption === `1`) {
     alert(`You have choosen Quattro Stagioni, amazing!`);
   } else {
     alert(`Not hungry? Please choose a valid number`);
-    throw new Error(`Invalid choise`);
+    throw new Error(`Invalid number`); //Stops the code from running if invalid
   }
 
   //prompt pastaOption
@@ -75,7 +75,7 @@ if (foodOption === `1`) {
     alert(`You have choosen Pasta allo Scoglio, amazing!`);
   } else {
     alert(`Not hungry? Please choose a valid number`);
-    throw new Error(`Invalid choise`);
+    throw new Error(`Invalid number`); //Stops the code from running if invalid
   }
   //prompt saladOption
 } else if (foodOption === `3`) {
@@ -96,7 +96,7 @@ if (foodOption === `1`) {
     alert(`You have choosen Fruit Salad, amazing!`);
   } else {
     alert(`Not hungry? Please choose a valid number`);
-    throw new Error(`Invalid choise`);
+    throw new Error(`Invalid number`); //Stops the code from running if invalid
   }
 }
 
@@ -127,7 +127,7 @@ Enter a number to confirm:
   refresh the page to start over if you are. Otherwise, hope to see you next time!`)
   } else {
     alert(`Please choose a valid number`);
-    throw new Error(`Invalid choise`);
+    throw new Error(`Invalid number`);
   }
 
 }
@@ -147,7 +147,7 @@ Enter a number to confirm:
   refresh the page to start over if you are. Otherwise, hope to see you next time!`)
   } else {
     alert(`Please choose a valid number`);
-    throw new Error(`Invalid choise`);
+    throw new Error(`Invalid number`); //Stops the code from running if invalid
   }
 }
 // End
