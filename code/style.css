@@ -4,13 +4,14 @@
   padding: 0;
 }
 
+/* Set a backround image and a background color. If the image doesn't load then the background color will show instead.  */
+
 body {
   font-family: "Montserrat", sans-serif;
   background: black;
   background-image: url("./images/pizza.jpg");
   background-size: cover;
   background-position: 50% 50%;
-
   color: white;
   display: flex;
   justify-content: center;
