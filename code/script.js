@@ -80,3 +80,14 @@ alert(orderMessage);
 
 // Step 5 - Order confirmation
 // Your code goes here
+
+let confirmation = prompt(`Please confirm your order.
+  1 - Yes
+  2 - No
+  Please enter the number of your choice:`);
+
+if (confirmation === "1") {
+    alert("Thank you for your order! Your meal will now be prepared. Enjoy!");
+} else {
+    alert("Thank you for considering us. We hope to serve you in the future. Have a great day!");
+}
