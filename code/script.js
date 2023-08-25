@@ -42,7 +42,7 @@ alert (`You have selected ${selectedMenu}.`)
 // Step 3 - Subtype choice
 // Initiate an array to store different menu
 let foodName = "";
-let selectedChoice = "";
+let selectedChoice = [];
 
 //select pizza
 switch (selectedMenu) {
@@ -76,7 +76,7 @@ switch (selectedMenu) {
       alert("Please select again.");
       process.exit(1);
 }
-alert(`You have selected ${selectedChoice[0]}.`)
+alert(`You have selected ${selectedChoice[]}.`)
 
 // Step 4 - Age
 // Set food price
@@ -100,9 +100,9 @@ let childPrice = price/2;
 let userAge = prompt (`Is this an order for a child or an adult? Please enter the age.`);
 
   if(userAge >= 18){
-    alert(`You have selected ${selectedChoice[0]}, and the total will be ${price}kr.`);
+    alert(`You have selected ${selectedChoice[]}, and the total will be ${price}kr.`);
   } else if(userAge <= 18){
-    alert(`You have selected ${selectedChoice[0]}, and the total will be ${childPrice}kr.`);
+    alert(`You have selected ${selectedChoice[]}, and the total will be ${childPrice}kr.`);
   } else {
     alert(`Please select again.`);
     process.exit(1);
@@ -113,10 +113,11 @@ let userAge = prompt (`Is this an order for a child or an adult? Please enter th
   2 - No `);
   // Triger different action according to user last answer
   let farewellMsg = "";
-    if (farewellMsg === 1){
-      alert(`Thank you! Your order confirmation will be send to your email shortly.`)
-    };
-    else if(farewellMsg === 2){
+
+    if (confirmation === "1"){
+      alert(`Thank you! Your order confirmation will be send to your email shortly.`);
+    }
+    else if (confirmation === "2"){
       alert(`Please select your order again.`)
       process.exit(1);
     }
