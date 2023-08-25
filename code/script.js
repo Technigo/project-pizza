@@ -96,5 +96,5 @@ let confirmation = prompt(`Please confirm your order.
 if (confirmation === "1") {
     alert("Thank you for your order! Your meal will now be prepared. Enjoy!");
 } else {
-    alert("Thank you for considering us. We hope to serve you in the future. Have a great day!");
+    alert("We hope to see you in the future. Have a great day!");
 }
