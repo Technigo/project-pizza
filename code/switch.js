@@ -74,51 +74,51 @@ switch (foodType) {
     }
   break;
 
-case `Pasta`:
-  pastaType = prompt(`Choose a type of Pasta
+  case `Pasta`:
+    pastaType = prompt(`Choose a type of Pasta
   1 - Spaghetti
   2 - Alfredo
   3 - Penne`);
 
-switch (pastaType) {
-  case `1`:
-    alert(`You chosen Spaghetti.`);
+    switch (pastaType) {
+      case `1`:
+        alert(`You chosen Spaghetti.`);
+        break;
+      case `2`:
+        alert(`You chosen Alfredo.`);
+        break;
+      case `3`:
+        alert(`You chosen Penne .`);
+        break;
+      default:
+        alert(`Invalid pasta type selection.`);
+        break;
+    }
     break;
-  case `2`:
-    alert(`You chosen Alfredo.`);
-    break;
-  case `3`:
-    alert(`You chosen Penne .`);
-    break;
-     default:
-    alert(`Invalid pasta type selection.`);
-    break
-}
-break
-case `Salad`:
-   saladType = prompt(`Choose a type of Salad
+  case `Salad`:
+    saladType = prompt(`Choose a type of Salad
   1 - Caesar
   2 - Greek
   3 - Garden`);
     
-switch (saladType) {
-  case `1`:
-    alert(`You chosen Caesar Salad.`);
-    break;
-  case `2`:
-    alert(`You chosen Greek Salad.`);
-    break;
-  case `3`:
-    alert(`You chosen Garden Salad.`);
+    switch (saladType) {
+      case `1`:
+        alert(`You chosen Caesar Salad.`);
+        break;
+      case `2`:
+        alert(`You chosen Greek Salad.`);
+        break;
+      case `3`:
+        alert(`You chosen Garden Salad.`);
+        break;
+      default:
+        alert(`Invalid salad type selection.`);
+        break;
+    }
     break;
   default:
-    alert(`Invalid salad type selection.`);
+    alert(`Something went wrong. Please try again.`);
     break;
-}
-break
- default:
-  alert(`Something went wrong. Please try again.`);
-  break
 };
 
 // Step 4 - Age
@@ -146,10 +146,10 @@ switch (confirmation) {
   case `yes`:
   alert(`Thank you for your order !`)
     break;
-case`no`:
+  case `no`:
     alert(`We hope to serve you again in the future.`)
-    break
-default:
+    break;
+  default:
     alert(`Invalid choice. Please specify 'yes' or 'no'.`);
-    break
+    break;
 }
