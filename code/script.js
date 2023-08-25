@@ -19,33 +19,59 @@ const pizzaChoice = prompt(`Please select your pizza:
   4 - Surprise
   Please enter the number of your choice:`);
 
+// convert the input to a number
+const pizzaNumber = parseInt(pizzaChoice);
+
 alert (
-  `Great you choose, ${pizzaChoice}! Now for the size.`);
+  `Great you chose nr.${pizzaChoice}!`);
 
 // Step 3 - Subtype choice
 let selectedPizza = "";
 
 if (pizzaChoice === "1") {
   selectedPizza = "Margarita";
-  
-  } else if (pizzaChoice ==="2") {
+} 
+else if (pizzaChoice ==="2") {
   selectedPizza = "kebab";
-
-  } else if (pizzaChoice ==="3") {
+} 
+else if (pizzaChoice ==="3") {
   selectedPizza = "Fungi";
-
-  } else if (pizzaChoice ==="4") {
+} 
+else if (pizzaChoice ==="4") {
   selectedPizza = "Surprise";
-
-  } else {
+} 
+else {
   alert ("invalid pizzaChoice, Please select a valid Number.");
-  ProcessingInstruction.exit(1);
+  Process.exit(1);
 }
 
-alert (`Fantastic you have choosen ${selectedPizza}!`);
+alert (
+  `Fantastic you have chosen ${pizzaChoice}!`);
 
 // Step 4 - Age
-const age = prompt(`Pizza for Adult of child`)
+let age = prompt(`Pizza for Adult or child? Enter age:`)
+
+// Convert the input to a number
+age = parseInt(age);
+
+// Check for age
+if (age >= 18) {
+  alert("Big pizza for an Adult incoming!")
+} else {
+  alert ("A kids pizza for you, sorry... it's still good though!")
+}
 
 // Step 5 - Order confirmation
-// Your code goes here
+if (selectedPizza[pizzaNumber]) {
+  alert (`Great, you chose ${selectedPizza[pizzaNumber]}`)
+    let confirmed = confirm("You have selected: " + selectedPizza + ". Do you want to confirm your order?");
+    
+    if (confirmed) {
+        alert("Thank you for your order! Your " + selectedPizza + " will be prepared in 15 minutes.");
+    } else {
+        alert("Thank you for considering us. Have a great day, boss!");
+    }
+} else {
+    alert("Invalid choice. Please select one of our selected pizzas.");
+    process.exit(1);
+}
