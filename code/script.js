@@ -33,7 +33,7 @@ window.onload = function () {
     } else if (foodChoice === "3") {
       selectedFood = "salad"
     } else {
-      alert(`You haven't chosen any food. Please select a number from the list.`)
+      alert(`You didn't pick any food. Please select a number from the list.`)
       process.exit(1)
     }
     alert(
@@ -44,7 +44,7 @@ window.onload = function () {
 
     let subMenu = ""
     let dishName = ""
-    let selectedDish = ""
+    let subDish = ""
 
     switch (selectedFood) {
       case "pizza":
@@ -77,16 +77,20 @@ window.onload = function () {
         dishName = ["Caesar Salad", "Roasted Turkey Club Salad", "Classic Greec Salad"]
         break
       default:
-        alert(`"Invalid Choice. You need to select a number."`)
+        alert(
+          `Invalid Choice. You need to select a number.`
+          )
         process.exit(1)
     }
-    selectedDish = dishName[subMenu - 1]
-    alert(`You have chosen a delicious ${selectedDish}!`)
+    subDish = dishName[subMenu - 1]
+    alert(
+      `You have chosen a delicious ${subDish}!`
+      )
 
-    // Step 4 - Check age to define which portion size the customer wants
+    // Step 4 - Checking age to define which portion size the customer wants
 
     const guestAge = parseInt(
-      prompt(`To determine the portion size, please type your age:`)
+      prompt(`To determine which portion size to prepare, please type your age:`)
     )
 
     // The order message that defines what the customer has ordered and how much
@@ -94,9 +98,9 @@ window.onload = function () {
 
     let orderMessage = ""
     if (guestAge <= 12) {
-      orderMessage = `You have chosen a smaller size of ${selectedDish}. That will be £7 euros.`
+      orderMessage = `You have chosen a smaller size portion of ${subDish}. That will be £7.`
     } else if (guestAge >= 13) {
-      orderMessage = `You have chosen a regular size portion of ${selectedDish}. That will be £11 euros.`
+      orderMessage = `You have chosen a regular size portion of ${subDish}. That will be £11.`
     } else {
       alert(`Invalid age choice. Please insert a number.`)
       process.exit(1)
@@ -112,7 +116,7 @@ window.onload = function () {
     )
 
     if (confirmationChice === 1) {
-      alert("Thank you for your order. Your food is being prepared and will soon be ready!🍕🍝🥗")
+      alert("Thank you for your order. Your food is being prepared and will be ready in 15 minutes!🍕🍝🥗")
     } else if (confirmationChice === 2) {
       alert("No worries, we hope to see you back soon! 🍕🍝🥗")
     } else {

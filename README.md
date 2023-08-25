@@ -12,7 +12,7 @@ One issue was to determine which conditional statement to use. With a litte rese
 
 There was an issue completing the project, I didn't realise that step 4 and 5 was connected together. So trying to get my head around that after a long day of work and studies wasn't easy. Couldn't have made it without my fellow students.
 
-If I had more time I would like to add a footer to the page, to "own" it. I would also like to add an additional script as the strech goals adresses and seperate the two conditional statements into different scripts.
+If I had more time I would like to add a footer to the page, to "own" it. I would also like to add an additional script as the stretch goals adresses and seperate the two conditional statements into different scripts.
 
 ## View it live
 
