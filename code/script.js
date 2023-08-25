@@ -37,8 +37,9 @@ if (foodOption === `1`) {
   1 - Pizza Bianca 
   2 - Pizza con pomodorini 
   3 - Quattro Stagioni`);
-  foodOptionText = `Pizza Bianca`
+
   if (pizzaOption === `1`) {
+    foodOptionText = `Pizza Bianca`
     alert(`You have choosen Pizza Bianca, amazing!`);
   } else if (pizzaOption === `2`) {
     foodOptionText = `Pizza con Pomodorini`
@@ -54,6 +55,7 @@ if (foodOption === `1`) {
   1 - Pasta Alio e Olio 
   2 - Pasta con Pomodorini 
   3 - Pasta allo Scoglio`);
+
   if (pastaOption === `1`) {
     foodOptionText = `Pasta Alio e Olio`
     alert(`You have choosen Pasta Alio e Olio, amazing!`);
@@ -72,8 +74,10 @@ if (foodOption === `1`) {
   1 - Tuna Salad 
   2 - Broccoli Salad 
   3 - Fruit Salad`);
-  foodOptionText = `Tuna Salad`
+
+
   if (saladOption === `1`) {
+    foodOptionText = `Tuna Salad`
     alert(`You have choosen Tuna Salad, amazing!`);
     foodOptionText = `Broccoli Salad`
   } else if (saladOption === `2`) {
@@ -98,12 +102,13 @@ if (ageOption >= 18) {
 // Step 5 - Order confirmation
 
 if (ageOption >= 18) {
-  let confirmation = prompt(`One ${foodOptionText} will be prepared for you. That will be 15€. Are you sure you want to proceed with your order? 
+  let confirmation = prompt(`One ${foodOptionText} will be prepared for you. 
+  That will be 15€. Are you sure you want to proceed with your order? 
   Enter a number to confirm: 
   1 - yes 
   2 - no`);
   if (confirmation === `1`) {
-    alert(`Thank you for your order! This is you confirmation.`);
+    alert(`Thank you for your order, this is you confirmation.`);
   } else if (confirmation === `2`) {
     alert(`Are you not hungry anymore? 
     refresh the page to start over if you are. Otherwise, hope to see you next time!`)
@@ -111,12 +116,13 @@ if (ageOption >= 18) {
     alert(`Please choose a valid number`);
   }
 } else {
-  let confirmation = prompt(`One ${foodOptionText} will be prepared for you. That will be 10€. Are you sure you want to proceed with your order?
+  let confirmation = prompt(`One ${foodOptionText} will be prepared for you.
+  That will be 10€. Are you sure you want to proceed with your order?
   Enter a number to confirm:
    1 - yes
    2 - no`);
   if (confirmation === `1`) {
-    alert(`Thank you for your order! This is you confirmation.`);
+    alert(`Thank you for your order, this is you confirmation.`);
   } else if (confirmation === `2`) {
     alert(`Are you not hungry anymore? 
     refresh the page to start over if you are. Otherwise, hope to see you next time!`)
