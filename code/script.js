@@ -18,15 +18,17 @@ Enter a number:
 let selectedFoodChoice = "";
 if (foodChoice === "1") {
   selectedFoodChoice = "Pizza";
+  alert(`You've chosen ${selectedFoodChoice}!`);
 } else if (foodChoice === "2") {
   selectedFoodChoice = "Pasta";
+  alert(`You've chosen ${selectedFoodChoice}!`);
 } else if (foodChoice === "3") {
   selectedFoodChoice = "Salad";
+  alert(`You've chosen ${selectedFoodChoice}!`);
 } else {
   alert("Invaild choice. Please select a number between 1 and 3.");
 }
 
-alert(`You've chosen ${selectedFoodChoice}!`);
 
 // Step 3 - Subtype food choice
 let pizzaType = ""
@@ -104,7 +106,7 @@ if (selectedFoodChoice === "Pizza")
   }
 
 // Step 4 - Age 
-// Price for regular sizes for portions for adults
+// Price for regular sizes for adults
 let foodCost = "";
 switch (selectedFoodChoice) {
   case "Pizza":
