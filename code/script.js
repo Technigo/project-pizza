@@ -40,6 +40,10 @@ alert(`You've chosen ${selectedFood}!`);
 
 // Step 3 - Subtype choice
 // Your code goes here
+
+let subFood = ""
+let foodNames = ""
+
 switch (selectedFood) {
   case "Pizza":
     subFood = prompt(`Select your pizza type:
@@ -68,8 +72,21 @@ switch (selectedFood) {
     foodNames = ["Pomodoro e basilico", "Buratta", "Melon e peperoncino"];
     break;
 
-
+  default:
+    alert("Invalid choice.");
+    process.exit(1);
 }
+
+if (subFood === "1") {
+  alert(`Great choice, You've selected ${foodNames[0]} for your ${selectedFood}!`)
+} else if (subFood === "2") {
+  alert(`Great choice, You've selected ${foodNames[1]} for your ${selectedFood}!`)
+} else if (subFood === "3") {
+  alert(`Great choice, You've selected ${foodNames[2]} for your ${selectedFood}!`)
+}
+
+
+
 
 
 
