@@ -2,9 +2,11 @@
 
 Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
+Our objective was to get a grasp of fundamental JavaScript concepts such as variables, conditionals, and native methods.
+
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I watched the coding session video, and applied some of techniques from that. And once again I've found W3Schools a good information source. If I had more time, I would give the option to change the dishes (extra Parmesan, etc.).
 
 ## View it live
 
