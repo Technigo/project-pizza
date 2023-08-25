@@ -63,21 +63,13 @@ switch (selectedFood) {
 // To Technigo, I have tried out different codes now. The problem is that the subtypeName is tied to the variable selectedFood and I can't get it to change. I tried doing and if/if else under every variable, added
 //It's probably supereasy but I think my mind is just stuck at the moment/took water over my head etc etc
 
-if (selectedFood === "Pizza")
-{
-  alert(
-  `You chose ${subtypeName[0]} as your meal`);
-  
-  } else if (selectedFood === "Pasta") {
-  alert(
-    `You chose ${subtypeName[1]} as your meal`);
+if (selectedFood === "Pizza") {
+  alert(`You chose ${selectedFood} and ${subtypeName[parseInt(subtype) - 1]} as your meal.`);
+} else if (selectedFood === "Pasta") {
+  alert(`You chose ${selectedFood} and ${subtypeName[parseInt(subtype) - 1]} as your meal.`);
+} else if (selectedFood === "Salad") {
+  alert(`You chose ${selectedFood} and ${subtypeName[parseInt(subtype) - 1]} as your meal.`);
 }
-
-else if (selectedFood === "Salad") {
-alert (
-      `You chose ${subtypeName[2]} as your meal`);
-}
-
 // Step 4 - Age
 // Your code goes here
 
@@ -96,17 +88,17 @@ else if (age<=18) {
 if (selectedFood === "Pizza")
 {
   alert(
-  `You chose ${selectedFood} and ${subtypeName} as your meal.`);
+  `You chose ${selectedFood} and ${subtypeName[parseInt(subtype) - 1]} as your meal.`);
   
 
   } else if (selectedFood === "Pasta") {
   alert(
-    `You chose ${selectedFood} and ${subtypeName} as your meal.`);
+    `You chose ${selectedFood} and ${subtypeName[parseInt(subtype) - 1]} as your meal.`);
 }
 
 else if (selectedFood === "Salad") {
 alert(
-  `You chose ${selectedFood} and ${subtypeName} as your meal.`);
+  `You chose ${selectedFood} and ${subtypeName[parseInt(subtype) - 1]} as your meal.`);
 }
 
 let order = prompt ("Do you want to place an order? Yes or no")
