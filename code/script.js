@@ -34,6 +34,7 @@ alert(`You have good taste! You've chosen ${selectedFood}!`);
 // Step 3 - Subtype choice
 // Your code goes here
 let mealChoice="";
+let mealOption="";
 switch (selectedFood) 
 {case "Pizza":
 mealChoice=prompt(`Which pizza do you like to order?
@@ -41,7 +42,7 @@ mealChoice=prompt(`Which pizza do you like to order?
 2-Tomatobased pizza with mushrooms
 3-Sweet nutellapizza with berries
 Please enter the number of your choice:`);
-mealChoice=["Bianco with mozzarella cheese and ham", "Tomatobased pizza with mushrooms", "Sweet nutellapizza with berries"];
+mealOption=["Bianco with mozzarella cheese and ham", "Tomatobased pizza with mushrooms", "Sweet nutellapizza with berries"];
 break;
 case "Kebab":
 mealChoice=prompt(`What kebab-dish do you like to order?
@@ -49,7 +50,7 @@ mealChoice=prompt(`What kebab-dish do you like to order?
 2-Kebab with pommes frites
 3-Kebab of the house
 Please enter the number of your choice:`)
-mealChoice=["Kebab with bread", "Kebab with pommes frites", "Kebab of the house"];
+mealOption=["Kebab with bread", "Kebab with pommes frites", "Kebab of the house"];
 break;
 case "Salad":
 mealChoice=prompt(`Which salad do you like to order?
@@ -57,22 +58,32 @@ mealChoice=prompt(`Which salad do you like to order?
 2-Ceasar salad
 3-Tuna salad
 Please enter the number of your choice:`)
-mealChoice=prompt["Greek salad", "Ceasar salad", "Tuna salad"]
+mealOption=prompt["Greek salad", "Ceasar salad", "Tuna salad"]
 
 }
+
 if(mealChoice==="1")
-{alert(`Good choice! You've selected ${mealChoice [0]}`);}
+alert(`Good choice! You've selected ${mealOption [0]}`);
 else if(mealChoice==="2")
-{alert(`Good choice! You've selected ${mealChoice [1]}`);}
+alert(`Good choice! You've selected ${mealOption [1]}`);
 else if(mealChoice==="3")
-{alert(`Good choice, You've selected ${mealChoice [2]}`);}
+alert(`Good choice, You've selected ${mealOption [2]}`);
 else
-{alert("Oops, that is an invalid choice, please choose between number 1, 2 or 3");}
+alert("Oops, that is an invalid choice, please choose between number 1, 2 or 3");
 
 // Step 4 - Age
 // Your code goes here
 let age=prompt(`Please enter your age for current price!`)
+if(age>=18)
+{alert `You pay adult price, that will be 17€!`}
+else 
+{alert `You pay reduced price for kidz and teenager, that will be 12€!`}
 
 
 // Step 5 - Order confirmation
 // Your code goes here
+let confirmation=prompt(`Do you want to order? Please type 1 to order or 2 to cancel order.`)
+if(confirmation==="1")
+alert `Your order is confirmed!`
+else 
+alert `Your order is canceled, welcome back another time`
