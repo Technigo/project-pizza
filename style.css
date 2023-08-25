@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: rgb(211, 136, 104);
+  color: rgb(100, 121, 52);
+  text-shadow: 2px 1px 1px white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url(images/restaurantimage.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-blend-mode: multiply;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+/* footer ----------------------------------------------------------*/
+#footerdiv {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.8em;
+}
+
+div#footerdiv p {
+  display: inline-block;
+  padding: 10px;
+  color: white;
+  font-size: 1rem;
+  text-shadow: none;
+}
+
+a,
+a:visited {
+  color: lightgreen;
+}
