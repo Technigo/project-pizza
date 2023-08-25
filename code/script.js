@@ -6,18 +6,18 @@ alert(
 
 // Asking for the customer name and storing it in a variable
 const customerName = prompt(
-  `Hi and welcome! First and foremost, what is you name?`
+  `Hi and welcome! First and foremost, what is your name?`
 )
 
 // Gretting the customer with an alert
 alert(
-  `Happy to see you here, ${customerName}!`
+  `Happy to see you here, ${customerName}! Now, let's get ordering!`
 )
 
 // Step 2 - Food choice
 // Customer is given three food alternatives, promting the customer to choose one number
 const foodType = prompt(
-  `What do you feel like eating today? Type a number.
+  `What do you feel like eating today? Type a number 1-3.
   \n1. Pizza
   \n2. Pasta
   \n3. Salad`
@@ -29,17 +29,17 @@ let chosenFood
 if (foodType == 1) {
   chosenFood = "Pizza"
   alert(
-    `You've chosen ${chosenFood}!`
+    `Great choice - you've chosen ${chosenFood}!`
   )
 } else if (foodType == 2) {
   chosenFood = "Pasta"
   alert(
-    `You've chosen ${chosenFood}!`
+    `Delicious - you've chosen ${chosenFood}!`
   )
 } else if (foodType == 3) {
   chosenFood = "Salad"
   alert(
-    `You've chosen ${chosenFood}!`
+    `Always great with greens - you've chosen ${chosenFood}!`
   )
 } else {
   alert(
@@ -130,18 +130,19 @@ if (chosenFood == "Pizza") {
 // Step 4 - Age
 // Step 5 - Order confirmation
 // I decided to nest the if/else statments here aswell, so steps 4-5 are in the same section
-let foodCost = 11
+let adultFoodCost = 17
+let childFoodCost = 10
 let confirmAdultOrder
 let confirmChildOrder
 const customerAge = prompt(
-  `Is this food for an adult or a child? Enter your age down below please!`
+  `Is this food for an adult or a child? Enter your age down below, please!`
 )
 // Turns the string entered into the prompt into a number instead, for easy comparison down below
 const customerAgeInt = parseInt(customerAge)
 
-if (customerAgeInt >= 18) {
+if (customerAgeInt >= 15) {
   confirmAdultOrder = prompt(
-    `You've chosen an adult sized ${subtypeChoice} ${chosenFood}. The total amount will be €${foodCost}. Are you sure you want to order this? Enter a number to confirm:
+    `You've chosen an adult sized ${subtypeChoice} ${chosenFood}. The total amount will be €${adultFoodCost}. Are you sure you want to order this? Enter a number to confirm:
     \n1. Yes
     \n2. No`
   )
@@ -160,7 +161,7 @@ if (customerAgeInt >= 18) {
   }
 } else if (customerAgeInt < 18) {
   confirmChildOrder = prompt(
-    `You've chosen one child sized ${subtypeChoice} ${chosenFood}. Please note, an adult must make the order for you. The total amount will be €${foodCost}. Are you sure you want to order this? Enter a number to confirm:
+    `You've chosen one child sized ${subtypeChoice} ${chosenFood}. Please note, an adult must make the order for you. The total amount will be €${childFoodCost}. Are you sure you want to order this? Enter a number to confirm:
   \n1. Yes
   \n2. No`
   )
