@@ -85,13 +85,18 @@ if (subFood === "1") {
   alert(`Great choice, You've selected ${foodNames[2]} for your ${selectedFood}!`)
 }
 
-
-
-
-
-
 // Step 4 - Age
 // Your code goes here
+
+const ageNumber = prompt("Is this food for a child or an adult? Type your age:");
+
+
+
+
+
+
+
+
 
 // Step 5 - Order confirmation
 // Your code goes here
