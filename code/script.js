@@ -118,5 +118,5 @@ window.onload = function () {
     } else {
       alert("Invalid choice. Please select 1 or 2 above.")
     }
-  }, 1000)
-};
+  }, 1200)
+}

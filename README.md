@@ -16,4 +16,4 @@ If I had more time I would like to add a footer to the page, to "own" it. I woul
 
 ## View it live
 
-Link is coming!
+Link to deployed site: https://taras-pizzeria.netlify.app/
