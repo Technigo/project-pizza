@@ -1,4 +1,10 @@
-// Start here
+// ## Stretch Goals
+
+// So you’ve completed all the steps above? Great job! Make sure you've committed and pushed a version of your project before starting on the stretch goals. Remember that the stretch goals are optional.
+
+// As a challenge to enhance your coding skills, consider refactoring the entire code by replacing the existing if, else-if, and else conditionals with a more streamlined and organized approach using JavaScript's switch case structure. By doing so, you'll improve code readability and maintainability, making it easier to manage various scenarios and outcomes in a more structured manner.
+
+// We recommend creating an extra script.js file under the name `switch.js` to have both code syntaxes available.
 
 // Step 1 - Welcome and introduction
 alert(`Welcome to The Aussie Pizza House! Ready to Start? - Click 'OK' to begin.`);
@@ -9,6 +15,7 @@ alert(`Hi, ${userName}! Hungry? We are glad you are here.
 Follow the prompts to order your food.`);
 
 // Step 2 - Food choice
+
 let foodChoiceNum = 0;
 let choiceFood = "Pizza";
 do {
@@ -28,11 +35,12 @@ do {
     alert('Your choice is not available, Please try again');
   }
 }
-while (foodChoiceNum >= 4); //do...while loop if user does not enter a valid option (1,2 or 3) they are asked again. this only checks for numbers, if they type a word it doesnt work and goes to pizza. I don't know how to fix this
+while (foodChoiceNum >= 4); //do...while loop if user does not enter a valid option (1,2 or 3) they are asked again
 
 // // Step 3 - Subtype choice
+
 let subtypeChoiceNum = 1;
-let subtypeChoiceFood = []; //allocate an empty array using []
+let subtypeChoiceFood = [];//allocate an empty array using []
 
 // User selects their options based on Pizza, Pasta or Salad.
 do {
@@ -64,15 +72,19 @@ do {
     4 - Caesar Salad`);
       subtypeChoiceFood = ["Garden Salad", "Greek Salad", "Caprese Salad", "Caesar Salad"];
       break;
-    default: //i don't think I need this? If an invalid option is chosen, show an error message and exit the program. //alert("Invalid choice."); //process.exit(1);
+    default: //i don't think I need this
+    // If an invalid option is chosen, show an error message and exit the program.
+    //alert("Invalid choice.");
+    //process.exit(1);
   }
 }
 while (subtypeChoiceNum >= 5); //do...while loop if user does not enter a valid option (1,2 or 3)
-
 alert(`Great Choice, You chose Number ${subtypeChoiceNum} - ${subtypeChoiceFood[subtypeChoiceNum - 1]}`);
 
 // Step 4 - Age
+
 let userAgeAlert = "Adult"
+var containsOnlyDigits = /^[0-9]+$/; // one or more of digits 0 to 9
 const userAgeNum = prompt("So that we can prepare the correct size. Please tell us your age?")
 if (userAgeNum >= 18) {
   alert("You are an adult. We will prepare you an adult size portion")
@@ -85,12 +97,6 @@ if (userAgeNum >= 18) {
 //I want to write code for the above prompt to verify that the user enters a number.
 
 // Step 5 - Order confirmation
-let userConfirm = "no";
-userConfirm = prompt(`You have ordered a ${userAgeAlert} portion of the ${choiceFood} - ${subtypeChoiceFood[subtypeChoiceNum - 1]}
-Is your order correct? Please type YES to confirm your order, or NO to cancel`);
-if (userConfirm === "yes") {
-  alert("Thank you, your order is confirmed and will be prepared ASAP. Thank you for visiting The Aussie Pizza House!");
-} else {
-  alert("Your order has been cancelled. We hope to welcome you back again soon");
-}
 
+const orderConfirm = alert(`You have ordered a ${userAgeAlert} portion of the ${choiceFood} - ${subtypeChoiceFood[subtypeChoiceNum - 1]}`)
+Please;
