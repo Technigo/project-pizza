@@ -5,17 +5,17 @@
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 );
-let name = prompt (
+const name = prompt (
   "What is your name?"
-);
+  );
 alert(
-  "Hi, " + name + "!"
+  `Hi, ${name}!`
 );
 
 // Step 2 - Food choice
 let food = prompt(
-  "What food would you like to order?\nEnter a number:\n1 - Pizza\n2 - Pasta\n3 - Salad");
-  let choise
+    "What food would you like to order?\nEnter a number:\n1 - Pizza\n2 - Pasta\n3 - Salad");
+
 if (food ==="1") {
   alert("You have chosen the delicous pizza!");
 } else if (food ==="2") {
@@ -24,6 +24,7 @@ if (food ==="1") {
   alert("You have chosen the healthy salad!");
 } else {
   alert("Invalid choise");
+  process.exit(1);
 }
 
 // Step 3 - Subtype choice
@@ -35,6 +36,7 @@ if(food === "1"){
   choise = prompt("Select a salad type:\nEnter a number:\n1 - Caesar salad\n2 - Shrimp salad\n3 - Greek salad");
 } else {
   alert("You have not made a choise of food type");
+  process.exit(1);
 }
   //Pizza
 if(food === "1" && choise === "1") {
@@ -70,6 +72,7 @@ else if(food === "3" && choise === "1") {
   alert("You have chosen " + alt);
 } else {
   alert("Invalid choise. Please select a type");
+  process.exit(1);
 }
 
 // Step 4 - Age
@@ -82,9 +85,9 @@ if(age <=12) {
 
 // Step 5 - Order confirmation
 if(confirm === "1") {
-  alert("Thankt you for your order! Your food will be prepared. See you soon!");
+  alert("Thank you for your order! Your food will be prepared. See you soon!");
 } else if(confirm === "2") {
   alert("Your order had been not been placed. Come back anytime to make an order! Good bye!");
 } else {
   alert("Invalid choice. Please select 1 for Yes or 2 for No.");
-}
+} process.exit(1);
