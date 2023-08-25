@@ -29,6 +29,7 @@ let foodOption = prompt(`What would you like to order?
   } else {
     alert(`Oh... are you not hungry? 
     Please choose a valid number`);
+    throw new Error(`Invalid choise`);
   }
 }
 
@@ -52,6 +53,7 @@ if (foodOption === `1`) {
     alert(`You have choosen Quattro Stagioni, amazing!`);
   } else {
     alert(`Not hungry? Please choose a valid number`);
+    throw new Error(`Invalid choise`);
   }
 
   //prompt pastaOption
@@ -73,6 +75,7 @@ if (foodOption === `1`) {
     alert(`You have choosen Pasta allo Scoglio, amazing!`);
   } else {
     alert(`Not hungry? Please choose a valid number`);
+    throw new Error(`Invalid choise`);
   }
   //prompt saladOption
 } else if (foodOption === `3`) {
@@ -93,6 +96,7 @@ if (foodOption === `1`) {
     alert(`You have choosen Fruit Salad, amazing!`);
   } else {
     alert(`Not hungry? Please choose a valid number`);
+    throw new Error(`Invalid choise`);
   }
 }
 
@@ -123,6 +127,7 @@ Enter a number to confirm:
   refresh the page to start over if you are. Otherwise, hope to see you next time!`)
   } else {
     alert(`Please choose a valid number`);
+    throw new Error(`Invalid choise`);
   }
 
 }
@@ -142,6 +147,7 @@ Enter a number to confirm:
   refresh the page to start over if you are. Otherwise, hope to see you next time!`)
   } else {
     alert(`Please choose a valid number`);
+    throw new Error(`Invalid choise`);
   }
 }
 // End
