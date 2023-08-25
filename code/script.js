@@ -4,7 +4,6 @@ alert(
 )
 let person = prompt ("Please enter your name");
 
-
 // Step 2 - Food choice
 let foodType = prompt (`What type of food would you like to order?
 Please enter a number: 
@@ -27,7 +26,6 @@ else if (foodType == 3) {
 else {
   alert ("Invalid choice, please try again.");
 }
-
 
 // Step 3 - Subtype choice
 let subtype;
@@ -57,18 +55,25 @@ alert (`Great choice!`);
 // Step 4 - Age
 let age = prompt (`is this for a child or an adult? Please enter you age below:`);
 
+let confirm;
+
 if (age >= 18) {
-  alert (`you've chosen an adultsized pizza, the total vill be 99 SEK. Do you confirm?
+  confirm = prompt (`you've chosen an adultsized pizza, the total vill be 99 SEK. Do you confirm?
   Please enter 1 for yes and 2 for no
-  1.Yes
-  2.No `); 
+  1. Yes
+  2. No `); 
 }
 else if (age < 18) {
-  alert (`you've chosen an childsized pizza, the total vill be 75 SEK. Do you confirm?
+  confirm = prompt (`you've chosen an childsized pizza, the total vill be 75 SEK. Do you confirm?
   Please enter 1 for yes and 2 for no
-  1.Yes
-  2.No `); 
+  1. Yes
+  2. No `); 
 }
 
 // Step 5 - Order confirmation
-
+if (confirm ==1) {
+  alert (`Your order is confirmed. Have a nice day!`);
+}
+else if (confirm ==2) {
+  alert (`Your order is cancelled. You're welcome back anytime!`);
+}
