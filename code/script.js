@@ -90,11 +90,11 @@ if (subFood === "1") {
 
 const ageNumber = prompt("Is this food for a child or an adult? Type your age:");
 
-
-
-
-
-
+if (ageNumber >= 18) {
+  alert("You're an adult!, your order will cost 15€")
+} else {
+  alert("You're a teenager! your order will cost 7€")
+}
 
 
 
