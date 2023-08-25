@@ -4,10 +4,10 @@ Week 1 of Technigo boot camp. A basic set-up of the web page was given from Tech
 
 ## The problem
 
-As a beginner I started out by reading the material, get a overview of the assignment and then work through it from top to bottom. Giving myself a structure helped. ChatGPT, Google, Stack Overflow and Slack was used. 
+I started out by reading the material, get a overview of the assignment and then work through it from top to bottom. Giving myself a structure helped. ChatGPT, Google, Stack Overflow and Slack was used. 
 
-The challenge was to grasp the JavaScript since this was the first week of it. Next step would be to go for the stretch-goals and clean up my code.
+The challenge was to grasp the JavaScript. Next step would be to go for the stretch-goals and clean up my code.
 
 ## View it live
 
-View it live: 
+View it live: https://project-pizza-idah-collin.netlify.app/
