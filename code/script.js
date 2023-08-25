@@ -106,8 +106,28 @@ alert("Invalid choice. Please select a valid number");
 process.exit(1);
 }
 
-alert(`You have chosen ${selectedAge} and the cost is ${cost} euros`);
+alert(`You have chosen ${selectedAge} and the cost is ${cost} euros.`);
 
+
+let confir = prompt(`Do you confirmed your order?
+1 - Yes
+2 - No
+Please enter your number of choice.`)
+
+let selectedConfir = "";
+
+if (confir === "1") {
+  alert(
+    `Thank you for your order, your meal is being prepared!`
+  );
+} else if (confir === "2") {
+  alert(
+    `Thank for your time, you are welcome to come back!`
+  );
+} else {
+  alert("Invalid choice. Please select a valid number");
+  process.exit(1);
+  }
 
 
 // Step 5 - Order confirmation
