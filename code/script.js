@@ -5,10 +5,15 @@
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start?? - Click 'OK' to begin.`
 )
+
+//CAN I make it so only letters will be accepted? 
+//HOW can I make the first letter a capital?
 let firstName = prompt("Please enter your first name", "First Name")
 let lastName = prompt("Please enter your last name", "Last Name")
 alert("Welcome " + firstName + " " + lastName + "!")
-//I dont need to devide first and last name in separate strings
+//I dont need to devide first and last name in two separate strings, should i make one "yourname" string instead?
+
+
 // Step 2 - Food choice
 // Your code goes here
 const options = prompt(`Please select an option you would like to order:
@@ -18,7 +23,7 @@ const options = prompt(`Please select an option you would like to order:
 4 - Dessert`);
 //Variable to store selected foodchoise? 
 let selectedOption = "";
-//Detmine selected foodchoise based on the users number choise. 
+//Determine selected foodchoise based on the users number choise. 
 if (options === "1") {
   selectedOption = "Pizza"
 }
@@ -38,6 +43,8 @@ else {
 
 alert(`You've chosen ${selectedOption}!`);
 
+
+
 // Step 3 - Subtype choice
 // Your code goes here
 
@@ -45,14 +52,14 @@ let menuFoodSelected = "";
 let typeOf = ""; //array to store for later choises?  for selected type of food from first menu?
 
 switch (selectedOption) {
-  case "Pizza": //Dont remember the logic, read up on it.
+  case "Pizza":
     menuFoodSelected = prompt(`Select a type of Pizza:
     1 - Quattro Formaggi
     2 - Pepperoni
     3 - Margherita
     4 - Calzone
     Please enter the number of your choise:`);
-    typeOf = ["Quattro Formaggi", "Pepperoni", "Margherita", "Calzone"]; //obs, square baccets 
+    typeOf = ["Quattro Formaggi", "Pepperoni", "Margherita", "Calzone"]; //obs, don't forget square baccets 
     break;
   case "Pasta":
     menuFoodSelected = prompt(`Select type of pasta:
@@ -77,9 +84,9 @@ switch (selectedOption) {
     1 - Tiramisu
     2 - Gelato
     3 - Chocolate Fondant
-    4 - Yummy in my tummy
+    4 - Yummy in my tummy 
     Please enter the number of your choise:`);
-    typeOf = ["Tiramisu", "Gelato", "Chocolate Fondant", "Yummy in my tummy"];
+    typeOf = ["Tiramisu", "Gelato", "Chocolate Fondant", "Yummy in my tummy"]; //HOW to have less than four choises and getting a default message if I enter 4?
     break;
   default: //Why is default and alert not working?
     alert(`Invalid choise, Please refresh to try again`);
@@ -99,10 +106,31 @@ if (menuFoodSelected === "1") {
 else if (menuFoodSelected === "4") {
   alert(
     `Great Choice, You've chosen ${typeOf[3]} from the ${selectedOption} menu!`);
-
 }
+
+
 
 // Step 4 - Age
 // Your code goes here
+let answer = "";
+let yourAge = prompt("Enter your age")
+if (yourAge <= 18) {
+  answer = prompt(`You have chosen a child sized ${typeOf}. That will be €15.
+    Enter Y for Yes
+    Enter N for No`);
+}
+else if (yourAge >= 18) {
+  answer = prompt(`You have chosen an adult sized ${typeOf}. That will be €25.
+  Enter Y for Yes
+  Enter N for No`);
+}
+//SOMETHING IS WRONG INSIDE ${typeOf}., THIS IS THE MESSAGE I GET: You have chosen a child sized Quattro Formaggi,Pepperoni,Margherita,Calzone. That will be €15. Enter Y for Yes Enter N for No
+
+// HOW CAN I make everything but numbers to give a default alert?
+
+
+
 // Step 5 - Order confirmation
 // Your code goes here
+//The final iteration involves confirming the user's order based on their previous choices. The program should evaluate the user's confirmation and if the user confirms, a thank you message should be displayed using the alert() method, indicating that their meal will be prepared. If the user declines, a polite farewell message should be displayed using the alert() method, encouraging them to return for future orders.
+
