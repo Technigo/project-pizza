@@ -1,19 +1,24 @@
-# Project Name
+# Project-pizza
 
-Javascript basics to order a menu (x**2 alternatives) using:
+
+Javascript basics has been used to order a menu (x<sup>2</sup> alternatives) using:
+```
 * prompt (here- string inputs)
 * alert methods
 * template strings
 * ternary operators
+```
 
 Used:
-Conditional statements + nested cond. statements
-(Stretched goals) Switch statements
+**Conditional statements** + nested cond. statements (_to be avoided- but used for the exercise_)
+(Stretched goals) **Switch statements** and an attempt to **array method**
 
-Note: to switch between:
+**Note:** to switch between:
+```
 * script.js
 * switch.js
 * switch-array.js 
+```
 please activate or deactivate corresponding defer links in html with <!--   -->.
 
 //alert(`Does the button ok always show up in alert?`) The answer is YES.
@@ -30,8 +35,10 @@ Debugging:
 (i.e. variable pastaChoice and pertaining alert msg invalid pasta choice etc)
 e.g. missed/left undefined values for selectedMenu variable in the code, making the machine read it as false and continuing executing the code, resulting in an unexpected alert message not pertaining to the right block of code (unvisible to the eye if same alert msg for each alternative). 
 
-* Omitted by error some break; (within first degree conditional statement) resulting in above outcome.
+* Omitted by error some break; (within first degree conditional statement) resulting in above outcome -same solution.
 
 ## View it live
 
 Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://javascript-pizzeria.netlify.app/
