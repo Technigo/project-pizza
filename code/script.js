@@ -17,23 +17,23 @@ Please enter a number:
 
 // Step 3 - Subtype choice
 // Your code goes here
-//let food = prompt (`Which pizza would you like to order?
-//Please enter a number: 
-//1. Calzone
-//2. Vezuvio
-//3. Hawaii`);
+let pizza = prompt (`Which pizza would you like to order?
+Please enter a number: 
+1. Calzone
+2. Vezuvio
+3. Hawaii`);
 
-//let food = prompt (`Which pasta would you like to order?
-//Please enter a number: 
-//1. Bolognese
-//2. Carbonara
-//3. Vegetarian`);
+let pasta = prompt (`Which pasta would you like to order?
+Please enter a number: 
+1. Bolognese
+2. Carbonara
+3. Vegetarian`);
 
-//let food = prompt (`Which salad would you like to order?
-//Please enter a number: 
-//1. Ceasar
-//2. Caprese
-//3. Greek salad`);
+let salad = prompt (`Which salad would you like to order?
+Please enter a number: 
+1. Ceasar
+2. Caprese
+3. Greek salad`);
 
 // Step 4 - Age
 // Your code goes here
