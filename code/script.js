@@ -10,7 +10,7 @@ alert(`Hallo ${username} lets make your order!`);
 
 // Step 2 - Food choice
 //
-// ... (your previous code)
+
 
 // Step 2 - Food choice
 // Your code goes here
