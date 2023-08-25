@@ -1,10 +1,10 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to use javascript for pop-up-messages for a pizzeria, with different food and also different price depending on age. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I looked at the videos and was taking a lot of nots, when I run into problem I asked other students for help and just trying and trying over again until it worked the way I wanted to. 
 
 ## View it live
 
