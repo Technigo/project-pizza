@@ -14,7 +14,7 @@ alert(`Hi ${userName}! Click 'OK' to choose type of food.`);
 // Step 2 - Food choice
 // Your code goes here
 
-let selectedFood = prompt(`What food do you want?:
+let selectedFood = prompt(`What do you want to order?:
   1 - Pizza
   2 - Pasta
   3 - Salad
