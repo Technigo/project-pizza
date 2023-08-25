@@ -8,4 +8,4 @@ This projects was already structed for us with the steps and the requirments nee
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://hamdis-js-pizzeria.netlify.app/ 
