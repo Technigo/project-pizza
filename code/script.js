@@ -70,13 +70,12 @@ switch (chosenFood) {
     process.exit(1);
 }
 
-// ... (your previous code)
 
 // Step 4 - Age
 // Your code goes here
 const age = prompt(`Please enter your age`);
 
-// Calculate selectedDishNumber here
+// Calculate selectedDishNumber 
 const selectedDishNumber = Number(selectedDish) - 1;
 
 
