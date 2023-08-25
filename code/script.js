@@ -95,18 +95,19 @@ if (chosenFoodType) {
 }
 
 // Step 4 - Age
-//Use ternary ?
-const age = prompt(`Is this pizza for a child or an adult? Type your age:`);
+
+const age = parseInt(prompt(`Is this pizza for a child or an adult? Type your age:`));
 
 let dishSize;
 if (age <= 18) {
-  dishSize = prompt(`One child sized ${chosenSubtype} ${subtypeMessage} will be prepared for you. That'll be €10. Are you sure you want to order this? \nEnter a number to confirm: \n1 - Yes \n2 - No`);
+  dishSize = parseInt(prompt(`One child sized ${chosenSubtype} ${subtypeMessage} will be prepared for you. That'll be €10. Are you sure you want to order this? \nEnter a number to confirm: \n1 - Yes \n2 - No`));
 } else {
-  dishSize = prompt(`One adult sized ${chosenSubtype} ${subtypeMessage} will be prepared for you. That'll be €15. Are you sure you want to order this? \nEnter a number to confirm: \n1 - Yes \n2 - No`);
+  dishSize = parseInt(prompt(`One adult sized ${chosenSubtype} ${subtypeMessage} will be prepared for you. That'll be €15. Are you sure you want to order this? \nEnter a number to confirm: \n1 - Yes \n2 - No`));
 }
 
 // Step 5 - Order confirmation
+//Use ternary?
 
-
-//alert(`Thank you for your order! Your delicious meal will be prepared. see you soon!`)
-//alert(`No problem, come back and order anytime you want.`)
+const orderConfirmation = dishSize === 1
+? alert(`Thank you for your order! Your delicious meal will be prepared. see you soon!`)
+: alert(`No problem, come back and order anytime you want.`);
