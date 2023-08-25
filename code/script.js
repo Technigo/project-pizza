@@ -87,12 +87,12 @@ switch (selectedFood) {
 
 // Step 4 - Age
 // Your code goes here
-const age = promt(`Is the food intended for a child or an adult?
+let age = prompt(`Is the food intended for a child or an adult?
 1 - Adult
 2 - Child
 Please enter the number for your choice:`);
 
-let selectedAge = "";
+ let selectedAge = "";
 let cost = "0";
 
 if (age === "1") {
@@ -106,7 +106,9 @@ alert("Invalid choice. Please select a valid number");
 process.exit(1);
 }
 
-alert(`You have chosen ${selectedAge} and the cost is ${cost}`);
+alert(`You have chosen ${selectedAge} and the cost is ${cost} euros`);
+
+
 
 // Step 5 - Order confirmation
 // Your code goes here
