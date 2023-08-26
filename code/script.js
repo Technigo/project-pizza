@@ -36,13 +36,14 @@ let pastaType = ""
 let saladType = ""
 let subtypeChoice = ""
 
-if (selectedFoodChoice === "Pizza")
+if (selectedFoodChoice === "Pizza") {
   pizzaType = prompt(
     `Delicious! What kind of pizza do you want? Type a number.
-  1 - Napolitiana
-  2 - Hawaiian
-  3 - Pepperoni`
-  ); if (pizzaType == 1) {
+    1 - Napolitiana
+    2 - Hawaiian
+    3 - Pepperoni`
+  );
+  if (pizzaType == 1) {
     subtypeChoice = "Napolitiana"
     alert(
       `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
@@ -57,53 +58,65 @@ if (selectedFoodChoice === "Pizza")
     alert(
       `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
     )
-  } 
+  } else {
+    alert("Invalid choice. Please select a number between 1 and 3.");
+  }
+}
 
-  if (selectedFoodChoice === "Pasta")
+if (selectedFoodChoice === "Pasta") {
   pastaType = prompt(
     `Delicious! What kind of pasta do you want? Type a number.
-  1 - Spaghetti Carbonara
-  2 - Fettuccine Alfredo
-  3 - Cheesy Tortellini`
-  ); if (pastaType == 1) {
+    1 - Spaghetti Carbonara
+    2 - Fettuccine Alfredo
+    3 - Cheesy Tortellini`
+  );
+  if (pastaType == 1) {
     subtypeChoice = "Spaghetti Carbonara"
     alert(
-      `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
+      `You chose ${subtypeChoice} ${selectedFoodChoice}.`
     )
   } else if (pastaType == 2) {
     subtypeChoice = "Fettuccine Alfredo"
     alert(
-      `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
+      `You chose ${subtypeChoice} ${selectedFoodChoice}.`
     )
   } else if (pastaType == 3) {
     subtypeChoice = "Cheesy Tortellini"
     alert(
-      `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
+      `You chose ${subtypeChoice} ${selectedFoodChoice}.`
     )
-  } 
+  } else {
+    alert("Invalid choice. Please select a number between 1 and 3.");
+  }
+}
 
-  if (selectedFoodChoice === "Salad")
+if (selectedFoodChoice === "Salad") {
   saladType = prompt(
     `Delicious! What kind of salad do you want? Type a number.
-  1 - Ceasar 
-  2 - Caprese 
-  3 - Greek `
-  ); if (saladType == 1) {
-    subtypeChoice = "Ceasar"
+    1 - Caesar 
+    2 - Caprese 
+    3 - Greek`
+  );
+  if (saladType == 1) {
+    subtypeChoice = "Caesar"
     alert(
-      `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
+      `You chose ${subtypeChoice} ${selectedFoodChoice}.`
     )
   } else if (saladType == 2) {
     subtypeChoice = "Caprese"
     alert(
-      `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
+      `You chose ${subtypeChoice} ${selectedFoodChoice}.`
     )
   } else if (saladType == 3) {
     subtypeChoice = "Greek"
     alert(
-      `You chose a ${subtypeChoice} ${selectedFoodChoice}.`
+      `You chose ${subtypeChoice} ${selectedFoodChoice}.`
     )
+  } else {
+    alert("Invalid choice. Please select a number between 1 and 3.");
   }
+}
+
 
 // Step 4 - Age 
 // Price for regular sizes for adults
@@ -127,7 +140,7 @@ const customerAge = prompt(`Is this food order for an adult or a child? Enter yo
 
 if (customerAge >= 18){
   alert(`You've selected ${subtypeChoice} ${selectedFoodChoice} regular size and the total will be ${price}kr! `);
-} else if (customerAge <= 18){
+} else if (customerAge < 18){
   alert(`You've selected ${subtypeChoice} ${selectedFoodChoice} children size and the total will be ${foodCostChild}kr!`);
 } else {
   alert(`Invaild input, please try again!`);
