@@ -61,7 +61,7 @@ if (foodOption === `1`) {
     alert(`You have choosen ${pizzaOptions[2]}, amazing!`);
   } else {
     alert(`Not hungry ? Please choose a valid number`);
-    throw new Error(`Invalid food choise`); //Stops the code from running if invalid
+    throw new Error(`Invalid food choice`); //Stops the code from running if invalid
   }
 
 
@@ -84,7 +84,7 @@ if (foodOption === `1`) {
     alert(`You have choosen ${pastaOptions[2]}, amazing!`);
   } else {
     alert(`Not hungry ? Please choose a valid number`);
-    throw new Error(`Invalid food choise`); //Stops the code from running if invalid
+    throw new Error(`Invalid food choice`); //Stops the code from running if invalid
   }
   //prompt saladOption
 } else if (foodOption === `3`) {
@@ -105,7 +105,7 @@ if (foodOption === `1`) {
     alert(`You have choosen ${saladOptions[2]}, amazing!`);
   } else {
     alert(`Not hungry ? Please choose a valid number`);
-    throw new Error(`Invalid food choise`); //Stops the code from running if invalid
+    throw new Error(`Invalid food choice`); //Stops the code from running if invalid
   }
 }
 
@@ -135,7 +135,7 @@ That will be 15€. Are you sure you want to proceed with your order ?
     alert(`Are you not hungry anymore ?
   refresh the page to start over if you are.Otherwise, hope to see you next time!`)
   } else {
-    throw new Error(`Invalid food choise`); //Stops the code from running if invalid
+    throw new Error(`Invalid food choice`); //Stops the code from running if invalid
   }
 
 }
@@ -155,7 +155,7 @@ That will be 10€. Are you sure you want to proceed with your order ?
   refresh the page to start over if you are.Otherwise, hope to see you next time!`)
   } else {
     alert(`Please choose a valid number`);
-    throw new Error(`Invalid food choise`); //Stops the code from running if invalid
+    throw new Error(`Invalid food choice`); //Stops the code from running if invalid
   }
 }
 // End
