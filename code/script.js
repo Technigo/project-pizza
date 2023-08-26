@@ -21,6 +21,8 @@ const craftChoice = prompt(`Select your craft:
 
 // Step 3 - Subtype choice
 // Your code goes here
+
+//user select craft
 let selectedCraft = "";
 
 if (craftChoice === "1") {
@@ -33,6 +35,7 @@ if (craftChoice === "1") {
 
 alert(`You've chosen ${selectedCraft}`);
 
+//user selects item, subtype
 let item = "";
 let color = [];
 
@@ -67,6 +70,8 @@ switch (selectedCraft) {
     alert("invalid choice.");
     Process.exit(1);
 }
+
+//determine the users choice
 if (item === "1") {
   alert(`Great choice, you've chosen ${selectedCraft} and ${color[0]}`);
 } else if (item === "2") {
@@ -77,7 +82,7 @@ if (item === "1") {
 
 // Step 4 - Age
 // Your code goes here
-
+// User specifys age and based on the answer they get lecture for adults or child.
 const age = prompt(`Please enter your age`);
 let cost = 0;
 
@@ -92,7 +97,7 @@ if (age >= 18) {
     `Hey! You will attend the lecture for youngsters! That'll be ${cost} euros.`
   );
 }
-
+//confirmation from user too proceed or exit
 let userInput = prompt("Do you want to proceed? Type yes or no");
 
 if (userInput === "yes") {
@@ -104,7 +109,7 @@ if (userInput === "yes") {
 
 // Step 5 - Order confirmation
 // Your code goes here
-
+//Bookinginfo based on previous answer
 if (craftChoice === "1") {
   alert(
     `Wonderful! You've reserved a spot at ${selectedCraft} class to do a ${color[0]} to a cost of ${cost} euros. In the next step you will confirm if this is correct.`
@@ -118,7 +123,7 @@ if (craftChoice === "1") {
     `Wonderful! You've reserved a spot at ${selectedCraft} class to do a ${color[2]} to a cost of ${cost} euros. In the next step you will confirm if this is correct.`
   );
 }
-
+//confirmation
 let getUserInput = prompt("Is the booking correct? Type yes or no");
 
 if (getUserInput === "yes") {
@@ -129,5 +134,5 @@ if (getUserInput === "yes") {
   alert("Okay, so not this time but we hope to see you in the future!");
   Process.exit(1);
 }
-
+//goodbyemessage
 alert("Goodbye and have a great day!");
