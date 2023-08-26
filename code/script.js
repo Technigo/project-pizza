@@ -3,13 +3,13 @@
 // Step 1 - Welcome and introduction
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
-)
+);
 
 //Ask user for their name using prompt method (when using conts the variable name doesn't appear in the alert. it says that it's deprecated)
-const userName = prompt(`What's your name? - ex. Maria`)
+const userName = prompt(`What's your name? - ex. Maria`);
 
 //Display a greeting to confirm users name
-alert(`Hi ${userName}! Welcome to Javascript Pizzeria.`)
+alert(`Hi ${userName}! Welcome to Javascript Pizzeria.`);
 
 
 // Step 2 - Food choice
