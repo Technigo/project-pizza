@@ -1,33 +1,16 @@
-// Start here
+////////////////////////////////////////////////////////////////////////////////
+// Functions and Variables
+
+// This is a function to alert when a user made an invalid choice in prompt.
+// You can use selectNumOnetoThree in step 2 and 3 as a parameter.
+const selectNumOneToThree = "select a number between 1 and 3";
 
 const invalidChoise = (selectionOption) => {
   alert(`Invalid choice. Please ${selectionOption}`);
-  // process.exsit(1);
 };
 
-const selectNumOneToThree = "select a number between 1 and 3";
-const selectNumOneAndTwo = "select a number 1 or 2";
-const selectAge = "type your age";
-
-// Step 1 - Welcome and introduction
-// Your code goes here
-
-alert(`Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`);
-let userName = prompt("What is your name?");
-
-while (!userName) {
-  invalidChoise("type your name");
-  userName = prompt("What is your name?");
-}
-
-const welcome = alert(`Welcome to Technigo Pizzaria, ${userName}`);
-
-///////////////////////////////////////////////////////////////////////////////
-// Step 2 - Food choice
-// Your code goes here
-
-// Here you can  ask a question in prompt. parameter is an object which contains key words, question and choiceArr.
-// I use this in step 2 and 3.
+// Here you can  ask a question in prompt. parameter is an object which contains question and choiceArr as its key words.
+//  use this in step 2 and 3.
 
 const chooseOption = (obj) => {
   const choice = obj.choiceArr.map((el, index) => "  " + (index + 1) + " - " + el + "\n");
@@ -42,20 +25,7 @@ ${choice.join("")}`
   return answerNum;
 };
 
-// This is a object for a prompt asking what type of food you want to eat. Used in chooseOption function
-const foodTypeChoiceObj = {
-  question: "What type of food would you like to eat?",
-  choiceArr: ["Pizza", "Salad", "Pasta"],
-};
-
-let foodTypeNum = chooseOption(foodTypeChoiceObj);
-
-while (foodTypeNum !== 1 && foodTypeNum !== 2 && foodTypeNum !== 3) {
-  invalidChoise(selectNumOneToThree);
-  foodTypeNum = chooseOption(foodTypeChoiceObj);
-}
-
-// function to evaluate three conditions
+// function to evaluate three conditions. Use it in step 2 and 3.
 
 const evaluateThreeConditions = (checker, obj) => {
   let answer;
@@ -72,17 +42,7 @@ const evaluateThreeConditions = (checker, obj) => {
       return answer;
   }
 };
-
-const foodType = evaluateThreeConditions(foodTypeNum, foodTypeChoiceObj);
-
-// confirming what type of food you want to eat
-
-alert(`Would you want to eat ${foodType}? Click "ok" to confirm`);
-
-///////////////////////////////////////////////////////////////////////////////
-// Step 3 - Subtype choice
-// Your code goes here
-
+// Validating if a user put a correct unmber( 1, 2 or 3) if not, prompt show up again. This is for step 3. Used it in if("Pizza"/"Pasta"/"Salad")
 let dishNum;
 let yourDish;
 let dishChoiceObj;
@@ -94,33 +54,86 @@ const loopCorrectDishNum = () => {
   }
 };
 
+///////////////////////////////////////////////////////////////////////////////
+// Step 1 - Welcome and introduction
+// Your code goes here
+
+alert(`Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`);
+let userName = prompt("What is your nick name?");
+
+// Validatibg if a user type something.
+while (!userName) {
+  invalidChoise("type your name");
+  userName = prompt("What is your nick name?");
+}
+
+// Welcoming a user.
+const welcome = alert(`Welcome to Technigo Pizzaria, ${userName}`);
+
+///////////////////////////////////////////////////////////////////////////////
+// Step 2 - Food choice
+// Your code goes here
+
+// This is a object for chooseOption function. It will should what kind of food you want to eat in prompt.
+const foodTypeChoiceObj = {
+  question: "What type of food would you like to eat?",
+  choiceArr: ["Pizza", "Salad", "Pasta"],
+};
+
+// I made a variable for revolking a chooseOption function.
+let foodTypeNum = chooseOption(foodTypeChoiceObj);
+
+// Validating if a user put a correct unmber( 1, 2 or 3) if not, prompt show up again.
+while (foodTypeNum !== 1 && foodTypeNum !== 2 && foodTypeNum !== 3) {
+  invalidChoise(selectNumOneToThree);
+  foodTypeNum = chooseOption(foodTypeChoiceObj);
+}
+
+// Here I am checking which food you want to eat from a number that a user chose in chooseOption function
+const foodType = evaluateThreeConditions(foodTypeNum, foodTypeChoiceObj);
+
+// confirming what type of food you want to eat
+alert(`Would you want to eat ${foodType}? Click "ok" to confirm`);
+
+///////////////////////////////////////////////////////////////////////////////
+// Step 3 - Subtype choice
+// Your code goes here
+
+//
 if (foodType === "Pizza") {
+  // Pizza type object for chooseOption function
   dishChoiceObj = {
     question: "Which food would like to order? ",
     choiceArr: ["Vegan Pizza", "Vegan Cheese Pizza", "Vegetarian Pizza"],
   };
 
+  // Show a prompt to ask which pizza.
   dishNum = chooseOption(dishChoiceObj);
+  // validating and ask again when it is not valid
   loopCorrectDishNum();
 
   yourDish = evaluateThreeConditions(dishNum, dishChoiceObj);
 } else if (foodType === "Salad") {
+  // Salad type object for chooseOption function
   dishChoiceObj = {
     question: "Which food would like to order? ",
     choiceArr: ["Vegan Feta Salad", "talian Salad ", "Grilled Vegan Cheese Salad"],
   };
 
   dishNum = chooseOption(dishChoiceObj);
+  // validating and ask again when it is not valid
   loopCorrectDishNum();
 
   yourDish = evaluateThreeConditions(dishNum, dishChoiceObj);
 } else if (foodType === "Pasta") {
+  // Pasta type object for chooseOption function
   dishChoiceObj = {
     question: "Which food would like to order? ",
     choiceArr: ["Tomato Pasta", "Vegan Cream Pasta ", "Ruccola and Dryed Tomato Pasta"],
   };
 
   dishNum = chooseOption(dishChoiceObj);
+  // validating and ask again when it is not valid
   loopCorrectDishNum();
 
   yourDish = evaluateThreeConditions(dishNum, dishChoiceObj);
@@ -162,7 +175,7 @@ let isSure = parseInt(
 );
 
 while (isSure !== 1 && isSure !== 2) {
-  invalidChoise(selectNumOneAndTwo);
+  invalidChoise("select a number 1 or 2");
   isSure = parseInt(
     prompt(
       `One ${isChild ? "child" : "adult"} sized ${yourDish} will be prepared for you. That'll be ${
