@@ -1,5 +1,7 @@
 // Start here
 
+// This version is one I only used if statement. No switch statement.
+
 // Step 1 - Welcome and introduction
 // Your code goes here
 
@@ -22,21 +24,19 @@ const foodTypeNum = parseInt(
   )
 );
 
+// convert number to a word
+
 let foodType;
 
-switch (foodTypeNum) {
-  case 1:
-    foodType = "Pizza";
-    break;
-  case 2:
-    foodType = "Salad";
-    break;
-  case 3:
-    foodType = "Pasta";
-    break;
-  default:
-    alert("Invalid choice. Please select a number between 1 and 3");
-    process.exsit(1);
+if (foodTypeNum === 1) {
+  foodType = "Pizza";
+} else if (foodTypeNum === 2) {
+  foodType = "Salad";
+} else if (foodTypeNum === 3) {
+  foodType = "Pasta";
+} else {
+  alert("Invalid choice. Please select a number between 1 and 3");
+  process.exsit(1);
 }
 
 // confirming what type of food you want to eat
@@ -60,19 +60,15 @@ if (foodType === "Pizza") {
     )
   );
 
-  switch (dishNum) {
-    case 1:
-      yourDish = " Vegan Pizza";
-      break;
-    case 2:
-      yourDish = "Vegan Cheese Pizza";
-      break;
-    case 3:
-      yourDish = "Vevetarian Pizza";
-      break;
-    default:
-      alert("Invalid choice. Please select a number between 1 and 3");
-      process.exsit(1);
+  if (dishNum === 1) {
+    yourDish = " Vegan Pizza";
+  } else if (dishNum === 2) {
+    yourDish = "Vegan Cheese Pizza";
+  } else if (dishNum === 3) {
+    yourDish = "Vevetarian Pizza";
+  } else {
+    alert("Invalid choice. Please select a number between 1 and 3");
+    process.exsit(1);
   }
 } else if (foodType === "Salad") {
   dishNum = parseInt(
@@ -85,19 +81,15 @@ if (foodType === "Pizza") {
     )
   );
 
-  switch (dishNum) {
-    case 1:
-      yourDish = " Vegan Feta Salad";
-      break;
-    case 2:
-      yourDish = "Italian Salad";
-      break;
-    case 3:
-      yourDish = "Grilled Vegan Cheese Salad";
-      break;
-    default:
-      alert("Invalid choice. Please select a number between 1 and 3");
-      process.exsit(1);
+  if (dishNum === 1) {
+    yourDish = " Vegan Feta Salad";
+  } else if (dishNum === 2) {
+    yourDish = "Italian Salad";
+  } else if (dishNum === 3) {
+    yourDish = "Grilled Vegan Cheese Salad";
+  } else {
+    alert("Invalid choice. Please select a number between 1 and 3");
+    process.exsit(1);
   }
 } else if (foodType === "Pasta") {
   dishNum = parseInt(
@@ -110,19 +102,15 @@ if (foodType === "Pizza") {
     )
   );
 
-  switch (dishNum) {
-    case 1:
-      yourDish = " Tomato Pasta";
-      break;
-    case 2:
-      yourDish = "Vegan cream Pasta";
-      break;
-    case 3:
-      yourDish = "Ruccola and Dryed Tomato Pasta";
-      break;
-    default:
-      alert("Invalid choice. Please select a number between 1 and 3");
-      process.exsit(1);
+  if (dishNum === 1) {
+    yourDish = " Tomato Pasta";
+  } else if (dishNum === 2) {
+    yourDish = "Vegan cream Pasta";
+  } else if (dishNum === 3) {
+    yourDish = "Ruccola and Dryed Tomato Pasta";
+  } else {
+    alert("Invalid choice. Please select a number between 1 and 3");
+    process.exsit(1);
   }
 }
 
@@ -159,14 +147,11 @@ let isSure = parseInt(
   )
 );
 
-switch (isSure) {
-  case 1:
-    alert("Thank you for your Order. See you again!");
-    break;
-  case 2:
-    alert("No problem! You can come back anytime when you want to order!");
-    break;
-  default:
-    alert("Invalid choise. Please enter a number 1 or 2.");
-    process.exsit(1);
+if (isSure === 1) {
+  alert("Thank you for your Order. See you again!");
+} else if (isSure === 2) {
+  alert("No problem! You can come back anytime when you want to order!");
+} else {
+  alert("Invalid choise. Please enter a number 1 or 2.");
+  process.exsit(1);
 }
