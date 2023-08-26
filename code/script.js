@@ -1,4 +1,4 @@
-// Start here
+// Start here - with if/else and arrays 
 
 
 // Step 1 - Welcome and introduction
