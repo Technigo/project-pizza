@@ -174,6 +174,8 @@ let isSure = parseInt(
   )
 );
 
+// validating a num in a user type one or two, otherwise prompt again.
+
 while (isSure !== 1 && isSure !== 2) {
   invalidChoise("select a number 1 or 2");
   isSure = parseInt(
@@ -187,6 +189,8 @@ while (isSure !== 1 && isSure !== 2) {
     )
   );
 }
+
+// Depends on a user's choice, one of these will show.
 
 switch (isSure) {
   case 1:
