@@ -1,11 +1,18 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Making popupwindows for an order with alertmessage.
+Due to the lecture with Diego were he was making popups about festivals I interpreted that we could do this project about what we wanted so I did it about Arts and craft.
+I hope that was okey.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I followed the instructions and looked att the teachingmaterial in notion. I have used google and stack overflow to find answers on problems.
+I also tried chat gpt to help me discover errors that I couln't find. I wasn't familliar with Chat gpt but found it handy to detect why there was errors. Mostly it was errors like Declaration or Statement expected and I've put a semicolon were it shouldn't be.
+
+If I had more time I whould have tried out other soulotions to have the same result. I feel like I just was trying to make this work and I think I've taken some detours in the code.
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+github: https://github.com/FridafridaL/project-pizza
+
+Netlify: https://gleaming-bonbon-445195.netlify.app/
