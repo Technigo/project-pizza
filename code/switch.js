@@ -28,7 +28,7 @@ let foodOption = prompt(`What would you like to order?
 switch (foodOption) {
     case `1`:
         validOption = true;
-        alert(`Pizza is a great choise!`);
+        alert(`Pizza is a great choice!`);
         break;
     case `2`:
         validOption = true;
@@ -40,7 +40,7 @@ switch (foodOption) {
         break;
     default:
         alert(`Oh, not hungry? Please choose a valid number`);
-        throw new Error(`Invalid food choise`); //Stops the code from running if invalid
+        throw new Error(`Invalid food choice`); //Stops the code from running if invalid
 }
 
 
@@ -72,7 +72,7 @@ switch (foodOption) {
                 break;
             default:
                 alert(`Please choose a valid number`);
-                throw new Error(`Invalid food choise`); //Stops the code from running if invalid
+                throw new Error(`Invalid food choice`); //Stops the code from running if invalid
         }
         break;
     //prompt pastaOption
@@ -102,7 +102,7 @@ switch (foodOption) {
             default:
                 validOption = true;
                 alert(`Please choose a valid number`);
-                throw new Error(`Invalid food choise`); //Stops the code from running if invalid
+                throw new Error(`Invalid food choice`); //Stops the code from running if invalid
         }
         break;
     //prompt saladOption
@@ -131,7 +131,7 @@ switch (foodOption) {
                 break;
             default:
                 alert(`Please choose a valid number`);
-                throw new Error(`Invalid food choise`); //Stops the code from running if invalid
+                throw new Error(`Invalid food choice`); //Stops the code from running if invalid
         }
 }
 
@@ -170,7 +170,7 @@ switch (true) {
                 break;
             default:
                 alert(`Please choose a valid number`);
-                throw new Error(`Invalid food choise`); //Stops the code from running if invalid
+                throw new Error(`Invalid food choice`); //Stops the code from running if invalid
         }
         break;
     //Prompt confirmation if less than 18
@@ -191,7 +191,7 @@ switch (true) {
                 break;
             default:
                 alert(`Please choose a valid number`);
-                throw new Error(`Invalid food choise`); //Stops the code from running if invalid
+                throw new Error(`Invalid food choice`); //Stops the code from running if invalid
         }
 }
 // End
