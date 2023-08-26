@@ -1,4 +1,4 @@
-// Start here
+// Start here - with switch/case
 
 // Step 1 - Welcome and introduction
 // Your code goes here
@@ -17,6 +17,7 @@ switch (enterName) {
 // Step 2 - Food choice
 
 let foodOptionText;
+let validOption = false;
 
 let foodOption = prompt(`What would you like to order? 
   1 - Pizza
@@ -26,18 +27,22 @@ let foodOption = prompt(`What would you like to order?
 // Alert foodOption answer
 switch (foodOption) {
     case `1`:
+        validOption = true;
         alert(`Pizza is a great choise!`);
         break;
     case `2`:
+        validOption = true;
         alert(`Amazing, pasta is a great option!`);
         break;
     case `3`:
+        validOption = true;
         alert(`Wow, salad, so good!`);
         break;
     default:
         alert(`Oh, not hungry? Please choose a valid number`);
-        throw new Error(`Invalid number`); //Stops the code from running if invalid
+        throw new Error(`Invalid food choise`); //Stops the code from running if invalid
 }
+
 
 // Step 3 - Subtype choice
 //prompt pizzaOption
@@ -51,20 +56,23 @@ switch (foodOption) {
         // Alert pizzaOption answer
         switch (pizzaOption) {
             case `1`:
+                validOption = true;
                 foodOptionText = `Pizza Bianca`
                 alert(`You have choosen Pizza Bianca, amazing!`);
                 break;
             case `2`:
+                validOption = true;
                 foodOptionText = `Pizza con Pomodorini`
                 alert(`You have choosen Pizza con Pomodorini, amazing!`);
                 break;
             case `3`:
+                validOption = true;
                 foodOptionText = `Quattro Stagioni`
                 alert(`You have choosen Quattro Stagioni, amazing!`);
                 break;
             default:
                 alert(`Please choose a valid number`);
-                throw new Error(`Invalid number`); //Stops the code from running if invalid
+                throw new Error(`Invalid food choise`); //Stops the code from running if invalid
         }
         break;
     //prompt pastaOption
@@ -77,20 +85,24 @@ switch (foodOption) {
         // Alert pastaOption answer
         switch (pastaOption) {
             case `1`:
+                validOption = true;
                 foodOptionText = `Pasta Alio e Olio`
                 alert(`You have choosen Pasta Alio e Olio, amazing!`);
                 break;
             case `2`:
+                validOption = true;
                 foodOptionText = `Pasta con Pomodorini`
                 alert(`You have choosen Pasta con Pomodorini, amazing!`);
                 break;
             case `3`:
+                validOption = true;
                 foodOptionText = `Pasta allo Scoglio`
                 alert(`You have choosen Pasta allo Scoglio, amazing!`);
                 break;
             default:
+                validOption = true;
                 alert(`Please choose a valid number`);
-                throw new Error(`Invalid number`); //Stops the code from running if invalid
+                throw new Error(`Invalid food choise`); //Stops the code from running if invalid
         }
         break;
     //prompt saladOption
@@ -103,20 +115,23 @@ switch (foodOption) {
         // Alert saladOption answer
         switch (saladOption) {
             case `1`:
+                validOption = true;
                 foodOptionText = `Tuna Salad`
                 alert(`You have choosen Tuna Salad, amazing!`);
                 break;
             case `2`:
+                validOption = true;
                 foodOptionText = `Broccoli Salad`
                 alert(`You have choosen Broccoli Salad, amazing!`);
                 break;
             case `3`:
+                validOption = true;
                 foodOptionText = `Fruit Salad`
                 alert(`You have choosen Fruit Salad, amazing!`);
                 break;
             default:
                 alert(`Please choose a valid number`);
-                throw new Error(`Invalid number`); //Stops the code from running if invalid
+                throw new Error(`Invalid food choise`); //Stops the code from running if invalid
         }
 }
 
@@ -145,6 +160,7 @@ switch (true) {
         // Alert confirmation answer
         switch (confirmAdult) {
             case `1`:
+                validOption = true;
                 alert(`Thank you for your order, this is you confirmation. Enjoy your ${foodOptionText}!`);
                 break;
             case `2`:
@@ -154,7 +170,7 @@ switch (true) {
                 break;
             default:
                 alert(`Please choose a valid number`);
-                throw new Error(`Invalid number`); //Stops the code from running if invalid
+                throw new Error(`Invalid food choise`); //Stops the code from running if invalid
         }
         break;
     //Prompt confirmation if less than 18
@@ -175,7 +191,7 @@ switch (true) {
                 break;
             default:
                 alert(`Please choose a valid number`);
-                throw new Error(`Invalid number`); //Stops the code from running if invalid
+                throw new Error(`Invalid food choise`); //Stops the code from running if invalid
         }
 }
 // End
