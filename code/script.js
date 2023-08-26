@@ -9,7 +9,7 @@ alert(
 // A prompt asking the user for their name.
 const userName = prompt(`What's your name?`);
 
-// If-statement with a prompt asking the user for their name. If they enter nothing, there will be an alert message telling them to re-enter their name.
+// If-statement with a greeting to the user if they filled in the field. If they enter nothing, there will be an alert message telling them to re-enter their name.
 if (userName === "") {
   alert("Sorry, didn't catch your name. Please enter you name again.");
   // The process.exit(1) command is used to exit a Node.js program with a non-zero exit code.
@@ -22,7 +22,6 @@ if (userName === "") {
 }
 
 // Step 2 - Food choice
-// Variable with the different food choices and a prompt asking the user to make a food choice.
 
 // Variables for food categories and corresponding user choice
 let foodCategory = "";  //pizza, pinsa, dessert pizza
@@ -35,7 +34,7 @@ foodCategory = prompt(`What would you like to order today?
   2 - Pinsa
   3 - Dessert Pizza`);
 
-// If-statement to relate the different food categories with the user's choice. An error message will appear if they choose something else. I am thinking of storing the error message in its own variable (since they look very much the same with  small variations) but I will leave this as it is for the moment since I'm not sure what is better/easier to read.
+// If-statement to relate the different food categories with the user's choice. An error message will appear if they choose something else. I am thinking of storing the error message in its own variable (since they look very much the same with small variations) but I will leave this as it is for the moment since I'm not sure what is better/easier to read.
 if (foodCategory === "1") {
   selectedFoodCategory = "Pizza";
 } else if (foodCategory === "2") {
@@ -50,7 +49,7 @@ if (foodCategory === "1") {
 // Message and confirmation to the user about their selected food category.
 alert(`You've chosen ${selectedFoodCategory}! What a great choice ${userName}!`);
 
-// Initializing variables related to menu choices for the different food categories and corresponding proces for children and adult size pizzas respectively (string and arrays).
+// Initializing variables related to menu choices for the different food categories and corresponding prices for children and adult size pizzas respectively (string and arrays).
 let foodSubType = "";
 let foodOption = [];
 let foodPrice = [];
@@ -62,9 +61,9 @@ if (selectedFoodCategory === "Pizza") {
   foodSubType = prompt(`Select the pizza that you wanna order:
   1 - Pizza Margherita
   2 - Pizza Funghi 
-  3 - Pizza Quattro formaggi
+  3 - Pizza Quattro Formaggi
   Please enter the number of your choice.`);
-  foodOption = ["Pizza Margherita", "Pizza Funghi", "Pizza Quattro formaggi"];  // Pizza choices
+  foodOption = ["Pizza Margherita", "Pizza Funghi", "Pizza Quattro Formaggi"];  // Pizza choices
   foodPrice = [
     ["70", "80", "75"],   // Price for adult size, sek
     ["40", "45", "42"],   // Price for child size, sek
@@ -82,11 +81,11 @@ if (selectedFoodCategory === "Pizza") {
   ];
 } else if (selectedFoodCategory === "Dessert Pizza") {
   foodSubType = prompt(`Select the dessert pizza that you wanna order:
-  1 - Cinnamon roll Pizza
+  1 - Cinnamon Roll Pizza
   2 - Berry Marscapone Pizza
   3 - Nutella and Strawberry Pizza
   Please enter the number of your choice.`);
-  foodOption = ["Cinnamon roll Pizza", "Berry Marscapone Pizza", "Nutella and Strawberry Pizza"]; // Dessert choices
+  foodOption = ["Cinnamon Roll Pizza", "Berry Marscapone Pizza", "Nutella and Strawberry Pizza"]; // Dessert choices
   foodPrice = [
     ["65", "70", "60"],   // Price for adult size, sek
     ["38", "40", "35"],   // Price for child size, sek
@@ -97,9 +96,8 @@ if (selectedFoodCategory === "Pizza") {
 }
 
 // Step 3 - Subtype choice
-// One variable that stores which food the user chooses and one variable that stores which subtype of food the user chooses.
 
-// If statement that relates the input from the user regarding their choice of meal to the values stored in the variable foodOption, and assigns and stores a value based on this in the 
+// If-statement that relates the input from the user regarding their choice of meal to the values stored in the variable foodOption, and assigns and stores a value based on this in the 
 // variable foodOrder. This is done so that I can keep only one alert message later for the user (since I only need one variable now), instead of three separate ones for each type of food. 
 // The default message shouldn't happen since the errors should be caught in previous conditional statements so maybe it isn't needed?
 // The goal of this step is to give a confirmation message to the user based on their choice of meal.
@@ -124,11 +122,11 @@ alert(`Awesome! You have chosen the ${foodOrder}.`);
 let userAgeInput = prompt(`Is this food for a child (younger than 15 years old) or an adult? 
 Type your age:`);
 
-// If-statement that relates the user's age to an age category; child or adult. This is later related to meal prices.
+// Initializing variables for pizza size and price.
 let pizzaSize = ""; // adult or child size
 let price = "";
 
-let userAgeCategory = "";
+// If-statement that relates the user's age to a pizzaSize category: child or adult. This is later related to meal prices.
 if (userAgeInput >= 15) {
   pizzaSize = "adult";
 } else if (userAgeInput < 15 && userAgeInput > 0) {
@@ -138,8 +136,8 @@ if (userAgeInput >= 15) {
   process.exit(1);
 }
 
-// If-statement, that depending on the pizzaSize value, two different switch statements will execute (adult vs child). In each case the pizzaSize variable relates to individual prices for the different meals. These prices are found in array further up in the code (line 73 - 98).
-if (userAgeCategory === "adult") {
+// If-statement that, depending on the pizzaSize value, will execute nested if-statements. In each case the pizzaSize variable relates to individual prices for the different meals. These prices are found in array further up in the code.
+if (pizzaSize === "adult") {
   if (foodSubType === "1") {
     price = foodPrice[0][0];
   } else if (foodSubType === "2") {
@@ -147,7 +145,7 @@ if (userAgeCategory === "adult") {
   } else if (foodSubType === "3") {
     price = foodPrice[0][2];
   }
-} else if (userAgeCategory === "child") {
+} else if (pizzaSize === "child") {
   if (foodSubType === "1") {
     price = foodPrice[1][0];
   } else if (foodSubType === "2") {
@@ -168,8 +166,7 @@ let userConfirmation = prompt(`You have chosen one ${pizzaSize} size ${foodOrder
 //  Confirmation messages for the user.
 if (userConfirmation === "1") {
   alert(`Thank you for your order! Your delicious meal will be prepared. See you soon!`);
-}
-else if (userConfirmation === "2") {
+} else if (userConfirmation === "2") {
   alert(`No problem! Come back soon again!.`);
 } else {
   alert("Invalid confirmation choice. Please enter a number (1) or (2).");
