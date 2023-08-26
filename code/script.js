@@ -20,7 +20,7 @@ Enter a number:
 2 - Pasta
 3 - Salad`);
 
-//Why do I already need to define these 2 in step2?
+//Why do I already need to define these 2 in step2? Probably this code would look lot cleaner if I had used an array.
 let chosenSubtype; //subtype choice - define dish based on user's choice to alert in next step
 let subtypeMessage; //Prepare for next step because I need 2 variables in the condition to define the correct message 
 
@@ -42,6 +42,7 @@ if (foodType === 1) {
 }
 
 // Step 3 - Subtype choice
+
 if (chosenFoodType) {
   let subtype;
 
@@ -59,7 +60,7 @@ if (chosenFoodType) {
     alert("Invalid food choice.");
   }
 
-  // Based on the chosen subtype, set the subtype message
+  // Based on the chosen subtype, set the confirmation message
   if (chosenFoodType === "Pizza") {
     if (subtype === "1") {
       chosenSubtype = "Margherita";
@@ -98,6 +99,9 @@ if (chosenFoodType) {
 
 const age = parseInt(prompt(`Is this pizza for a child or an adult? Type your age:`));
 
+//I hwas struggeling here to get the prompt to work, 
+//the error message i got was that chosenSubtype and subtypeMessage wasn't defined
+//I found out that bu specifying the variables earlier in the code I could avoid this, but I do not know why?!
 let dishSize;
 if (age <= 18) {
   dishSize = parseInt(prompt(`One child sized ${chosenSubtype} ${subtypeMessage} will be prepared for you. That'll be €10. Are you sure you want to order this? \nEnter a number to confirm: \n1 - Yes \n2 - No`));
