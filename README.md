@@ -1,11 +1,10 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+JavaScript Pizza-Project
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I had problems understanding the structures of the whole code in terms of when to close/open with curly brackets {}. Sometimes I had to put the code in CodePen in order to get help. I put my code in ChatGPT and asked if it could simplify my code. The next step would be to play with that in order to understand it properly. The next thing I would do is to understand how to add a while loop that makes the user go back to the choices if invalid option.
 
 ## View it live
-
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+[https://pizza-project-java-script.netlify.app/](https://pizza-project-java-script.netlify.app)https://pizza-project-java-script.netlify.app
