@@ -1,4 +1,4 @@
-# Project Name
+# Project-Pizza
 
 The assignment was to use javascript for pop-up-messages for a pizzeria, with different food and also different price depending on age. 
 
