@@ -81,23 +81,30 @@ switch (selectedMenu) {
 // It showed the whole array instead of the selected choice according to its position.
 // I learned from another classmate at the her demo, I can store the user's choice at this step.
 // It works! 
+ 
+let selectedFood = selectedChoice[foodName-1];
+alert(`You have selected ${selectedFood}}.`);
 
-if (foodName === "1"){
-  alert(`You have selected ${selectedChoice [0]}.`);
-  selectedFood =  selectedChoice [0] ;
-}
-else if (foodName === "2"){
-  alert(`You have selected ${selectedChoice [1]}.`);
-  selectedFood =  selectedChoice [1] ;
-}
-else if (foodName === "3"){
-  alert(`You have selected ${selectedChoice [2]}.`);
-  selectedFood =  selectedChoice [2] ;
-}
-else if (foodName === "4"){
-  alert(`You have selected ${selectedChoice [3]}.`);
-  selectedFood =  selectedChoice [3] ;
-}
+// Below is the original code I wrote, I updated with the above method which I learnt from my team
+// if (foodName === "1"){
+//   // if (foodName === "1"){
+//   alert(`You have selected ${selectedChoice [0]}.`);
+//   selectedFood =  selectedChoice [0] ;
+// }
+// else if (foodName === "2"){
+//   alert(`You have selected ${selectedChoice [1]}.`);
+//   selectedFood =  selectedChoice [1] ;
+// }
+// else if (foodName === "3"){
+//   alert(`You have selected ${selectedChoice [2]}.`);
+//   selectedFood =  selectedChoice [2] ;
+// }
+// else if (foodName === "4"){
+//   alert(`You have selected ${selectedChoice [3]}.`);
+//   selectedFood =  selectedChoice [3] ;
+// }
+
+
 // Step 4 - Age
 // Set food price
 // I only use let and switch here which I don't think is the optimal solution
@@ -106,14 +113,14 @@ else if (foodName === "4"){
 let price = "";
 switch(selectedMenu){
   case "Pizza":
-  price = "110";
-  break;
+    price = "110";
+   break;
   case "Pasta":
-  price = "130";
-  break;
+    price = "130";
+    break;
   case "Salad":
-  price = "120";
-  break;
+    price = "120";
+    break;
 }
 
 //Lazy solution to set the price for half portion
