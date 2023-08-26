@@ -6,7 +6,10 @@ Javascript basics has been used to order a menu (x<sup>2</sup> alternatives) usi
 * prompt (here- string inputs)
 * alert methods
 * template strings
+* logical operators
+* logical NOT operator
 * ternary operators
+* explicit conversions
 ```
 
 Used:

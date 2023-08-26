@@ -8,7 +8,12 @@ alert(
 );
 
 // Prompt the customer to input their name 
-const userName = prompt(`Please enter your name below:`);
+let userName = prompt(`Please enter your name below:`);
+
+if (userName !== "" || userName.length <= 1) {
+    userName = "CustomerA";
+    alert(`No worries!  Your anonymous name will be ${userName}`)
+}
 
 // Greeting message including the customer's name
 alert(`Hi ${userName}! Please proceed to place an order. `)
@@ -49,6 +54,7 @@ alert(`You have chosen ${selectedMenu}.`)
 //Prompt the customer to select a specific dish from the previously selected food
 
 let subMenuChoice;
+// finalChoice's values will be attributed using array method
 let finalChoice = [];
 
 
@@ -61,7 +67,6 @@ switch (selectedMenu) {
         Please enter the number of your choice:
       `);
         finalChoice = ["Margarita", "Vesuvio", "Quattro formaggi"]
-        //Determine the food choice subtype using array
         break;
     case "Pasta":
         subMenuChoice = prompt(`Select a pasta dish:
@@ -71,7 +76,6 @@ switch (selectedMenu) {
         Please enter the number of your choice:
         `);
         finalChoice = ["Pasta Bolognese", "Freshly-made tortellini", "Pasta Carbonara"];
-        //Determine the food choice subtype using array
         break;
     case "Salad":
         subMenuChoice = prompt(`Select a salad:
@@ -81,7 +85,6 @@ switch (selectedMenu) {
         Please enter the number of your choice:
         `);
         finalChoice = ["Nicoise salad", "Caesar salad", "Goatcheese salad"];
-        //Determine the food choice subtype using array
         break;
     default: alert(`Invalid menu choice.  Please start over.`);
         process.exit(1);
@@ -123,21 +126,21 @@ else {
 // Step 4 - Age
 
 // Prompt the client to enter their age:
-const userAge = prompt(`Please enter your age (years):`)
+const userAge = Number(prompt(`Please enter your age (years):`))
 
 // Determine the cost of the selected dish according to the client's age
 let costFood = (userAge >= 12) ? "15" : "9";
 
 // Determine the word choice in confirmation message display
-let costAge = (costFood === "15") ? "adult" : "child";
+let costAge = (costFood === "15") ? "adult-sized" : "child-sized";
 
 //Display the selected dish and the associated cost
 if (subMenuChoice === "1") {
-    alert(`One ${costAge} ${finalChoice[0]} will be prepared for you.  That will be ${costFood} euros.`)
+    alert(`One ${costAge} ${finalChoice[0]} will be prepared for you.  That will be ${costFood}€.`)
 } else if (subMenuChoice === "2") {
-    alert(`One ${costAge} ${finalChoice[1]} will be prepared for you.  That will be ${costFood} euros.`)
+    alert(`One ${costAge} ${finalChoice[1]} will be prepared for you.  That will be ${costFood}€.`)
 } else if (subMenuChoice === "3") {
-    alert(`One ${costAge} ${finalChoice[2]} will be prepared for you.  That will be ${costFood} euros.`)
+    alert(`One ${costAge} ${finalChoice[2]} will be prepared for you.  That will be ${costFood}€.`)
 } else {
     alert(`Invalid dish choice.  Please start again.`)
     process.exit(1)
@@ -148,14 +151,14 @@ if (subMenuChoice === "1") {
 let confirmation = prompt(`Are you sure this is what you want to order ?
     1 - Yes
     2 - No 
-    Enter a number to confirm: `);
+    Enter a number between 1-2 to confirm: `);
 
 // Step 5 - Order confirmation
 
 //Determine the client's confirmation
 
 if (confirmation === "1") {
-    alert(`Thank you ${userName} for placing your order!  Please wait while your food is being prepared (approx. ${waitingTime} min). Buon appetito!`)
+    alert(`Thank you ${userName} for placing your order!  Please wait while your food is being prepared (approx. ${waitingTime}min). Buon appetito!`)
 } else if (confirmation === "2") {
     alert(`No worries ${userName} !  Welcome back anytime to try our menu!`)
 } else {
