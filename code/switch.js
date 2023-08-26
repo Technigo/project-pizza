@@ -13,9 +13,14 @@ const selectAge = "type your age";
 // Your code goes here
 
 alert(`Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`);
-const userName = prompt("What is your name?");
+let userName = prompt("What is your name?");
 
-alert(`Wellcome to Technigo pizzaria, ${userName}`);
+while (!userName) {
+  invalidChoise("type your name");
+  userName = prompt("What is your name?");
+}
+
+const welcome = alert(`Welcome to Technigo Pizzaria, ${userName}`);
 
 ///////////////////////////////////////////////////////////////////////////////
 // Step 2 - Food choice
@@ -102,7 +107,7 @@ if (foodType === "Pizza") {
 } else if (foodType === "Salad") {
   dishChoiceObj = {
     question: "Which food would like to order? ",
-    choiceArr: ["Vegan Feta Salad", "talian Salad ", "Grilled Vegan Cheese Salad`"],
+    choiceArr: ["Vegan Feta Salad", "talian Salad ", "Grilled Vegan Cheese Salad"],
   };
 
   dishNum = chooseOption(dishChoiceObj);
@@ -112,7 +117,7 @@ if (foodType === "Pizza") {
 } else if (foodType === "Pasta") {
   dishChoiceObj = {
     question: "Which food would like to order? ",
-    choiceArr: ["Tomato Pasta", "Vegan Cream Pasta ", "Ruccola and Dryed Tomato Pasta`"],
+    choiceArr: ["Tomato Pasta", "Vegan Cream Pasta ", "Ruccola and Dryed Tomato Pasta"],
   };
 
   dishNum = chooseOption(dishChoiceObj);
@@ -133,12 +138,12 @@ let age = parseInt(prompt(`Is this dish for a child or an adult? - Enter your ag
 
 let isChild;
 
-// over 16 years order an adult sized dish
+// Validating age. If it is age<0, age>130 or not a number, prompt will show again.
 while ((age < 0 && age > 130) || age === NaN) {
   invalidChoise(selectAge);
   age = parseInt(prompt(`Is this dish for a child or an adult? - Enter your age.`));
 }
-
+// over 16 years order an adult sized dish
 age >= 16 ? (isChild = false) : (isChild = true);
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -156,6 +161,20 @@ let isSure = parseInt(
   )
 );
 
+while (isSure !== 1 && isSure !== 2) {
+  invalidChoise(selectNumOneAndTwo);
+  isSure = parseInt(
+    prompt(
+      `One ${isChild ? "child" : "adult"} sized ${yourDish} will be prepared for you. That'll be ${
+        isChild ? 10 : 15
+      } euro. Are you sure to order this?
+     Enter a number to confirm: 
+    1 - Yes
+    2 - No`
+    )
+  );
+}
+
 switch (isSure) {
   case 1:
     alert("Thank you for your Order. See you again!");
@@ -163,6 +182,4 @@ switch (isSure) {
   case 2:
     alert("No problem! You can come back anytime when you want to order!");
     break;
-  default:
-    invalidChoise(selectNumOneAndTwo);
 }
