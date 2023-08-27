@@ -6,11 +6,10 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  /*background: #0026ff;*/
   background-image: url("./images/cheesy-pizza.jpg");
   background-size: cover;
-  background-position: 25% 50%;
-  background-color: #990000;
+  background-position: 25% 50%; /*For it to focus on the pizza slice in mobile view*/
+  background-color: #990000; /*Will show if the background-image can't load*/
   color: white;
   display: flex;
   justify-content: center;
