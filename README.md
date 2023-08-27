@@ -1,10 +1,10 @@
-# Project Name
+# Pizza Project Vera
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to practice js, to use variables and create if/else statements and switch statements.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I had some trouble with getting my code to run smoothly through the document, it got stuck after the second step. That was because I first made a function in the second step; I wanted to get that part of the code to run again if the user put in an invalid value. I had to take that part out, and then it ran just fine. 
 
 ## View it live
 
