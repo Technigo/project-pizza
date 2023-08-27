@@ -8,4 +8,4 @@ The challenge was to write the code corectly in order to get it working in the b
 
 ## View it live
 
-The deployed version can be viewed here: 
+https://transcendent-toffee-ffd600.netlify.app/
