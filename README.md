@@ -1,6 +1,6 @@
 # Project Pizza
 
-I got to do use JS variables, conditionals, and native methods.
+I got to use JS variables, conditionals, and native methods.
 
 ## The problem
 
