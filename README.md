@@ -1,11 +1,11 @@
-# Project Name
+# pizza-project
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A project to practice the basic of Javascript and order yummy italian food, of course.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I had problems towards the end, since I am a total beginner of this I am still learning the logic in all of this. I had problem connecting my "order" variable with the "age" prompt. I google a lot, trying to understand the storage of a variable. Ask my awesome team mates when I got really stuck and my brain did not function. 
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://pizza-project-evelyndelcarmen.netlify.app/
