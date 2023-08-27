@@ -11,7 +11,7 @@ const userName = prompt(`What's your name?`);
 
 // If-statement with a greeting to the user if they filled in the field. If they enter nothing, there will be an alert message telling them to re-enter their name.
 if (userName === "") {
-  alert("Sorry, didn't catch your name. Please enter you name again.");
+  alert("Sorry, didn't catch your name. Please enter your name again.");
   // The process.exit(1) command is used to exit a Node.js program with a non-zero exit code.
   // It immediately ends the program's execution and indicates that something went wrong or an error occurred.
   process.exit(1);
@@ -99,7 +99,7 @@ switch (selectedFoodCategory) {
     ];
     break;
   default:
-    alert("Invalid menu choice. Please enter (1), (2) or (3).");
+    alert("Invalid menu choice.");
     process.exit(1);
 }
 
@@ -107,10 +107,8 @@ switch (selectedFoodCategory) {
 
 // Switch-statement that relates the input from the user regarding their choice of meal to the values stored in the variable foodOption, and assigns and stores a value based on this in the 
 // variable foodOrder. This is done so that I can keep only one alert message later for the user (since I only need one variable now), instead of three separate ones for each type of food. 
-// The default message shouldn't happen since the errors should be caught in previous conditional statements so maybe it isn't needed?
 // The goal of this step is to give a confirmation message to the user based on their choice of meal.
-
-let foodOrder = "";
+foodOrder = "";
 
 switch (foodSubType) {
   case "1":
@@ -123,10 +121,11 @@ switch (foodSubType) {
     foodOrder = foodOption[2];
     break;
   default:
-    alert("Invalid choice. Please enter a valid number.");
+    alert("Invalid menu choice. Please enter (1), (2) or (3).");
     process.exit(1);
     break;
 }
+
 alert(`Awesome! You have chosen the ${foodOrder}.`);
 
 // Step 4 - Age
@@ -139,12 +138,12 @@ Type your age:`);
 let pizzaSize = ""; // adult or child size
 let price = "";
 
-// Using a ternary conditional operator to assign an age category to the pizzaSize variable. This is later related to meal prices. I wanted to add process.exit(1); after the alert message, but I'm guessing I would have to use a function then for it to work.
+// Using a ternary conditional operator to assign an age category to the pizzaSize variable. This is later related to meal prices. I wanted to add process.exit(1); after the alert message, but I'm guessing I would have to use a function then for it to work. So if the user enters an invalid number at the moment the process will not stop and the next step will still happen and the pizzaSize will be undefined. I still wanted to try using the ternary operator here for learning purposes. 
 pizzaSize = userAgeInput < 15 && userAgeInput > 0 ? "child"
   : userAgeInput >= 15 ? "adult"
-  : alert("Oops, looks like you tried to enter an invalid number.");
+    : alert("Oops, looks like you tried to enter an invalid number.");
 
-// If-statement with  nested switch statements. Depending on the pizzaSize value, one of two different switch statements will execute (adult vs child). In each case the pizzaSize variable relates to individual prices for the different meals. These prices are found in arrays further up in the code.
+// Depending on the pizzaSize value, one of two different switch statements will execute (adult vs child). In each case the pizzaSize variable relates to individual prices for the different meals. These prices are found in arrays further up in the code.
 if (pizzaSize === "adult") {
   switch (foodSubType) {
     case "1": price = foodPrice[0][0];
@@ -191,6 +190,6 @@ switch (userConfirmation) {
     alert(`No problem! Come back soon again!.`);
     break;
   default:
-    alert("Invalid confirmation choice. Please enter a number (1) or (2).");
+    alert("Invalid confirmation choice. Please start over again.");
     process.exit(1);
 }

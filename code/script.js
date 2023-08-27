@@ -11,7 +11,7 @@ const userName = prompt(`What's your name?`);
 
 // If-statement with a greeting to the user if they filled in the field. If they enter nothing, there will be an alert message telling them to re-enter their name.
 if (userName === "") {
-  alert("Sorry, didn't catch your name. Please enter you name again.");
+  alert("Sorry, didn't catch your name. Please enter your name again.");
   // The process.exit(1) command is used to exit a Node.js program with a non-zero exit code.
   // It immediately ends the program's execution and indicates that something went wrong or an error occurred.
   process.exit(1);
@@ -91,7 +91,7 @@ if (selectedFoodCategory === "Pizza") {
     ["38", "40", "35"],   // Price for child size, sek
   ];
 } else {
-  alert("Invalid menu choice. Please enter (1), (2) or (3).");
+  alert("Invalid menu choice.");
   process.exit(1);
 }
 
@@ -99,10 +99,9 @@ if (selectedFoodCategory === "Pizza") {
 
 // If-statement that relates the input from the user regarding their choice of meal to the values stored in the variable foodOption, and assigns and stores a value based on this in the 
 // variable foodOrder. This is done so that I can keep only one alert message later for the user (since I only need one variable now), instead of three separate ones for each type of food. 
-// The default message shouldn't happen since the errors should be caught in previous conditional statements so maybe it isn't needed?
 // The goal of this step is to give a confirmation message to the user based on their choice of meal.
 
-let foodOrder = "";
+let = foodOrder ="";
 
 if (foodSubType === "1") {
   foodOrder = foodOption[0];
@@ -111,7 +110,7 @@ if (foodSubType === "1") {
 } else if (foodSubType === "3") {
   foodOrder = foodOption[2]
 } else {
-  alert("Invalid choice. Please enter a valid number.");
+  alert("Invalid menu choice. Please enter (1), (2) or (3).");
   process.exit(1);
 }
 alert(`Awesome! You have chosen the ${foodOrder}.`);
@@ -136,7 +135,7 @@ if (userAgeInput >= 15) {
   process.exit(1);
 }
 
-// If-statement that, depending on the pizzaSize value, will execute nested if-statements. In each case the pizzaSize variable relates to individual prices for the different meals. These prices are found in array further up in the code.
+// The pizzaSize variable relates to individual prices for the different meals. These prices are found in array further up in the code.
 if (pizzaSize === "adult") {
   if (foodSubType === "1") {
     price = foodPrice[0][0];
@@ -169,6 +168,6 @@ if (userConfirmation === "1") {
 } else if (userConfirmation === "2") {
   alert(`No problem! Come back soon again!.`);
 } else {
-  alert("Invalid confirmation choice. Please enter a number (1) or (2).");
+  alert("Invalid confirmation choice. Please start over again.");
   process.exit(1);
 }
