@@ -16,8 +16,8 @@ alert(`Hello, ${userName}! Let's get started.`);
 const foodChoice = prompt(`Select your yummy food:
 
 1 - Pizza
-2 - pasta
-3 - Sallad
+2 - Pasta
+3 - Salad
 
 Please enter the number of your choice:`);
 
@@ -46,30 +46,36 @@ let foodNames = ""
 
 switch (selectedFood) {
   case "Pizza":
-    subFood = prompt(`Select your pizza type:
-      1 - Margherita
-      2 - Napolitana
-      3 - Bianca 
-    Please enter the number of your choice:`);
+    subFood = prompt(`Select your Pizza type:
+
+1 - Margherita
+2 - Napolitana
+3 - Bianca 
+
+Please enter the number of your choice:`);
     foodNames = ["Margherita", "Napolitana", "Bianca"];
     break;
 
   case "Pasta":
-    subFood = prompt(`Select your pasta type:
-      1 - Cacio e pepe
-      2 - Vongole
-      3 -  Carbonara 
-    Please enter the number of your choice:`);
-    foodNames = ["Cacio e pepe", "Vongole", "Carbonara"];
+    subFood = prompt(`Select your Pasta type:
+
+1 - Cacio e Pepe
+2 - Vongole
+3 - Carbonara 
+
+Please enter the number of your choice:`);
+    foodNames = ["Cacio e Pepe", "Vongole", "Carbonara"];
     break;
 
   case "Salad":
-    subFood = prompt(`Select your salad type:
-      1 - Pomodoro e basilico
-      2 - Buratta
-      3 - Melon e peperoncino
-    Please enter the number of your choice:`);
-    foodNames = ["Pomodoro e basilico", "Buratta", "Melon e peperoncino"];
+    subFood = prompt(`Select your Salad type:
+
+1 - Pomodoro e basilico
+2 - Buratta
+3 - Melon e Peperoncino
+
+Please enter the number of your choice:`);
+    foodNames = ["Pomodoro e basilico", "Buratta", "Melon e Peperoncino"];
     break;
 
   default:
@@ -91,35 +97,37 @@ if (subFood === "1") {
 
 let age = prompt("Is this food for a child or an adult? Type your age:");
 
-if (age >= 18) {
-  prompt(`You've chosen a regular sized ${foodNames[parseInt(subFood) - 1]}! This will cost you 15€. Are you sure you want to order this?
+let order = "";
 
-  
-  1 - Yes
-  2 - No
-  
-  Please enter a number to confirm:`);
+if (age >= 18) {
+  order = prompt(`You've chosen a regular sized ${foodNames[parseInt(subFood) - 1]}! This will cost you 15€. Are you sure you want to order this?
+ 
+1 - Yes
+2 - No
+
+Please enter a number to confirm:`);
 
 } else if (age <= 18) {
-  prompt(`You've chosen a small sized ${foodNames[parseInt(subFood) - 1]}! This will cost you 10€. Are you sure you want to order this? 
+  order = prompt(`You've chosen a small sized ${foodNames[parseInt(subFood) - 1]}! This will cost you 10€. Are you sure you want to order this? 
 
-  1 - Yes
-  2 - No
-  
-  Please enter a number to confirm:`);
+1 - Yes
+2 - No
+
+Please enter a number to confirm:`);
 }
-
-// Step 5 - Order confirmation
-// Your code goes here 
-
-let order = "";
 
 if (order === "1") {
   alert(`Thank you for your order.`);
 }
 else if (order === "2") {
   alert(`Hope to see you again!`);
+} else {
+  alert("Invalid choice. Please select a valid number.");
+  process.exit(1);
 }
+
+
+
 
 
 
