@@ -10,7 +10,7 @@ alert(
 const customerName = prompt("Please enter your name:");
 
 // Display a greeting for the customer
-alert(`It's nice to have you here, ${customerName}! We hope you are hungry!`);
+alert(`It's nice to have you, ${customerName}! Hope you're hungry!`);
 
 // Step 2 - Food choice
 //Ask the user to choose a type of food.
@@ -47,35 +47,59 @@ alert(`You have chosen ${selectedFood}!`);
 
 //Initialize an array to store subtypes for the selected food type. 
 let chosenSubtype = "";
-let subtypes = "";
+let pizzaSubtypes = "";
+let pastaSubtypes = "";
+let saladSubtypes = "";
+let finalChoice = "";
 
 //Switch case 
 switch (selectedFood) {
   case "Pizza":
-    chosenSubtype = prompt(`Select a type of pizza: 
-  1 - Margerita
-  2 - Fungi
-  3 - Capriciossa
-  Please enter the number of your choice:`);
-    subtypes = ["Margerita", "Fungi", "Capriciossa"];
+    chosenSubtype = prompt(`Choose from our pizza menu: 
+    1 - Margerita
+    2 - Fungi
+    3 - Capriciossa
+    Please enter the number of your choice:`);
+    pizzaSubtypes = ["Margerita", "Fungi", "Capriciossa"];
+    if (chosenSubtype === "1") {
+      alert(`You have chosen ${pizzaSubtypes[0]}!`);
+    } else if (chosenSubtype === "2") {
+      alert(`You have chosen ${pizzaSubtypes[1]}!`);
+    } else if (chosenSubtype === "3") {
+      alert(`You have chosen ${pizzaSubtypes[2]}!`);
+    }
     break;
 
   case "Pasta":
-    chosenSubtype = prompt(`Select a type of pasta:
+    chosenSubtype = prompt(`Choose from our pasta menu:
     1 - Bolognese
     2 - Carbonara 
     3 - Marinara
     Please enter the number of your choice:`)
-    subtypes = ["Bolognese", "Carbonara", "Marinara"];
+    pastaSubtypes = ["Bolognese", "Carbonara", "Marinara"];
+    if (chosenSubtype === "1") {
+      alert(`You have chosen ${pastaSubtypes[0]}!`);
+    } else if (chosenSubtype === "2") {
+      alert(`You have chosen ${pastaSubtypes[1]}!`);
+    } else if (chosenSubtype === "3") {
+      alert(`You have chosen ${pastaSubtypes[2]}!`);
+    }
     break;
 
   case "Salad":
-    chosenSubtype = prompt(`Select a type of salad:
+    chosenSubtype = prompt(`Choose from our salad menu:
       1 - Ceasar
       2 - Greek
       3 - Shrimp
       Please enter the number of your choice:`)
-    subtypes = ["Ceasar", "Greek", "Shrimp"];
+    saladSubtypes = ["Ceasar", "Greek", "Shrimp"];
+    if (chosenSubtype === "1") {
+      alert(`You have chosen ${saladSubtypes[0]}!`);
+    } else if (chosenSubtype === "2") {
+      alert(`You have chosen ${saladSubtypes[1]}!`);
+    } else if (chosenSubtype === "3") {
+      alert(`You have chosen ${saladSubtypes[2]}!`);
+    }
     break;
   default:
     //If an invalid subtype is chosen, show an error message.
@@ -83,21 +107,21 @@ switch (selectedFood) {
     process.exit(1);
 }
 
-//Display the chosen subtype.
-alert(`You have chosen ${chosenSubtype}!`);
-
 // Step 4 - Age
 // 
-const customerAge = prompt(`Select the age of the customer:
+
+let customerAge = "";
+
+customerAge = prompt(`Select the age of the customer:
 1 - Adult
 2 - Child
 Please enter the number of your choice:`);
 
-alert(`Your order is a ${chosenSubtype} for a ${customerAge}
-Order total = €20.00`);
-
-
-
+if (customerAge === "1") {
+  alert(`Your order is an adult sized ${chosenSubtype} and your order total is $20.00`);
+} else if (customerAge === "2") {
+  alert(`Your order is a child sized ${chosenSubtype} and your order total is $20.00`);
+}
 
 // Step 5 - Order confirmation
 // Your code goes here
