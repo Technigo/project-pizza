@@ -1,10 +1,10 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The task was to take orders for a pizzeria using mainly alert() and prompt().
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Since you don't have a lot of possibilities when working with javascript-prompts and alerts. I thought it was challenging to give many opportunities when there are very little chance of customizing them.
 
 ## View it live
 
