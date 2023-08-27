@@ -1,7 +1,6 @@
 // Start here
 
 // Step 1 - Welcome and introduction
-// Your code goes here
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
@@ -39,20 +38,17 @@ if (foodChoice === "1") {
 //Display the chosen food type.
 alert(`You have chosen ${selectedFood}!`);
 
-//
-
-
 // Step 3 - Subtype choice
 // Ask the user to select a subtype based on their chosen type of food.
 
-//Initialize an array to store subtypes for the selected food type. 
+//Initialize arrays to store subtypes for the selected food type. 
 let chosenSubtype = "";
 let pizzaSubtypes = "";
 let pastaSubtypes = "";
 let saladSubtypes = "";
 let finalChoice = "";
 
-//Switch case 
+//Switch case creating variable for the final choice of food
 switch (selectedFood) {
   case "Pizza":
     chosenSubtype = prompt(`Choose from our pizza menu: 
@@ -81,13 +77,13 @@ switch (selectedFood) {
     Please enter the number of your choice:`)
     pastaSubtypes = ["Bolognese", "Carbonara", "Marinara"];
     if (chosenSubtype === "1") {
-      finalChoice = pizzaSubtypes[0];
+      finalChoice = pastaSubtypes[0];
       alert(`You have chosen ${finalChoice}!`);
     } else if (chosenSubtype === "2") {
-      finalChoice = pizzaSubtypes[1];
+      finalChoice = pastaSubtypes[1];
       alert(`You have chosen ${finalChoice}!`);
     } else if (chosenSubtype === "3") {
-      finalChoice = pizzaSubtypes[2];
+      finalChoice = pastaSubtypes[2];
       alert(`You have chosen ${finalChoice}!`);
     }
     break;
@@ -100,13 +96,13 @@ switch (selectedFood) {
       Please enter the number of your choice:`)
     saladSubtypes = ["Ceasar", "Greek", "Shrimp"];
     if (chosenSubtype === "1") {
-      finalChoice = pizzaSubtypes[0];
+      finalChoice = saladSubtypes[0];
       alert(`You have chosen ${finalChoice}!`);
     } else if (chosenSubtype === "2") {
-      finalChoice = pizzaSubtypes[1];
+      finalChoice = saladSubtypes[1];
       alert(`You have chosen ${finalChoice}!`);
     } else if (chosenSubtype === "3") {
-      finalChoice = pizzaSubtypes[2];
+      finalChoice = saladSubtypes[2];
       alert(`You have chosen ${finalChoice}!`);
     }
     break;
@@ -117,7 +113,7 @@ switch (selectedFood) {
 }
 
 // Step 4 - Age
-// 
+// determine the size of the meal depending on customers reply to a prompt asking if it's for a child or an adult.
 
 let customerAge = "";
 
@@ -128,6 +124,7 @@ Please enter the number of your choice:`);
 //initialize the final food choice
 let confirmation = "";
 
+//prompt the customer to confirm order or not.
 if (customerAge === "1") {
   confirmation = prompt(`Your order is an adult sized ${finalChoice} and your order total is $20.00. Is this correct?
   1 - Yes
@@ -139,7 +136,7 @@ if (customerAge === "1") {
 }
 
 // Step 5 - Order confirmation
-// Your code goes here
+// Display a message to the customer depending on their confirmation or denial of previous prompt.
 if (confirmation === "1") {
   alert(`Thank you for your order. We will now start preparing your meal!`);
 } else if (confirmation === "2") {
