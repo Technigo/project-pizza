@@ -62,11 +62,14 @@ switch (selectedFood) {
     Please enter the number of your choice:`);
     pizzaSubtypes = ["Margerita", "Fungi", "Capriciossa"];
     if (chosenSubtype === "1") {
-      alert(`You have chosen ${pizzaSubtypes[0]}!`);
+      finalChoice = pizzaSubtypes[0];
+      alert(`You have chosen ${finalChoice}!`);
     } else if (chosenSubtype === "2") {
-      alert(`You have chosen ${pizzaSubtypes[1]}!`);
+      finalChoice = pizzaSubtypes[1];
+      alert(`You have chosen ${finalChoice}!`);
     } else if (chosenSubtype === "3") {
-      alert(`You have chosen ${pizzaSubtypes[2]}!`);
+      finalChoice = pizzaSubtypes[2];
+      alert(`You have chosen ${finalChoice}!`);
     }
     break;
 
@@ -78,11 +81,14 @@ switch (selectedFood) {
     Please enter the number of your choice:`)
     pastaSubtypes = ["Bolognese", "Carbonara", "Marinara"];
     if (chosenSubtype === "1") {
-      alert(`You have chosen ${pastaSubtypes[0]}!`);
+      finalChoice = pizzaSubtypes[0];
+      alert(`You have chosen ${finalChoice}!`);
     } else if (chosenSubtype === "2") {
-      alert(`You have chosen ${pastaSubtypes[1]}!`);
+      finalChoice = pizzaSubtypes[1];
+      alert(`You have chosen ${finalChoice}!`);
     } else if (chosenSubtype === "3") {
-      alert(`You have chosen ${pastaSubtypes[2]}!`);
+      finalChoice = pizzaSubtypes[2];
+      alert(`You have chosen ${finalChoice}!`);
     }
     break;
 
@@ -94,11 +100,14 @@ switch (selectedFood) {
       Please enter the number of your choice:`)
     saladSubtypes = ["Ceasar", "Greek", "Shrimp"];
     if (chosenSubtype === "1") {
-      alert(`You have chosen ${saladSubtypes[0]}!`);
+      finalChoice = pizzaSubtypes[0];
+      alert(`You have chosen ${finalChoice}!`);
     } else if (chosenSubtype === "2") {
-      alert(`You have chosen ${saladSubtypes[1]}!`);
+      finalChoice = pizzaSubtypes[1];
+      alert(`You have chosen ${finalChoice}!`);
     } else if (chosenSubtype === "3") {
-      alert(`You have chosen ${saladSubtypes[2]}!`);
+      finalChoice = pizzaSubtypes[2];
+      alert(`You have chosen ${finalChoice}!`);
     }
     break;
   default:
@@ -116,12 +125,25 @@ customerAge = prompt(`Select the age of the customer:
 1 - Adult
 2 - Child
 Please enter the number of your choice:`);
+//initialize the final food choice
+let confirmation = "";
 
 if (customerAge === "1") {
-  alert(`Your order is an adult sized ${chosenSubtype} and your order total is $20.00`);
+  confirmation = prompt(`Your order is an adult sized ${finalChoice} and your order total is $20.00. Is this correct?
+  1 - Yes
+  2 - No`);
 } else if (customerAge === "2") {
-  alert(`Your order is a child sized ${chosenSubtype} and your order total is $20.00`);
+  confirmation = prompt(`Your order is a child sized ${finalChoice} and your order total is $20.00. Is this correct?
+  1 - Yes
+  2 - No`);
 }
 
 // Step 5 - Order confirmation
 // Your code goes here
+if (confirmation === "1") {
+  alert(`Thank you for your order. We will now start preparing your meal!`);
+} else if (confirmation === "2") {
+  alert(`No problem, you are welcome back anytime!`);
+} else {
+  alert(`error`);
+}
