@@ -1,11 +1,11 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+In this project I made a pizza ordering system with javascript, using browser alert/prompt popups to get input in form of multiple choice, YES/NO, Ok, cancel. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The challenge was to write the code corectly in order to get it working in the browser. More often there were missing brackets or wrongly assigned variables that resulted in the code not being executed / or stuck at a certain stage. 
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://transcendent-toffee-ffd600.netlify.app/
