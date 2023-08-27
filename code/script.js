@@ -1,5 +1,3 @@
-// Start here
-
 // Step 1 - Welcome and introduction
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
@@ -68,7 +66,6 @@ switch (selectedFood) {
       alert(`You have chosen ${finalChoice}!`);
     }
     break;
-
   case "Pasta":
     chosenSubtype = prompt(`Choose from our pasta menu:
     1 - Bolognese
@@ -87,7 +84,6 @@ switch (selectedFood) {
       alert(`You have chosen ${finalChoice}!`);
     }
     break;
-
   case "Salad":
     chosenSubtype = prompt(`Choose from our salad menu:
       1 - Ceasar
