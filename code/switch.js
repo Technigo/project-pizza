@@ -20,19 +20,23 @@ let foodChoiceNum = 0;
 let choiceFood = "Pizza";
 do {
   //Present menu options (Pizza, Pasta, Salad)
-  foodChoiceNum = prompt("What would you like to eat?\nPlease type 1,2 or 3:\n(1) Pizza\n(2) Pasta\n(3) Salad");
+  foodChoiceNum = prompt("What would you like to eat? Please type 1,2 or 3:\n(1) Pizza\n(2) Pasta\n(3) Salad");
   // I found the \n for new line option before our Tuesday lesson
-  if (foodChoiceNum == 1) {
-    alert('You have choosen Pizza!');
-    choiceFood = "Pizza";
-  } else if (foodChoiceNum == 2) {
-    alert('You have choosen Pasta!');
-    choiceFood = "Pasta";
-  } else if (foodChoiceNum == 3) {
-    alert('You have choosen Salad!');
-    choiceFood = "Salad";
-  } else {
-    alert('Your choice is not available, Please try again');
+  switch (foodChoiceNum) {
+    case 1:
+      alert('You have choosen Pizza!');
+      choiceFood = "Pizza";
+      break;
+    case 2:
+      alert('You have choosen Pasta!');
+      choiceFood = "Pasta";
+      break;
+    case 3:
+      alert('You have choosen Salad!');
+      choiceFood = "Salad";
+      break;
+    default:
+      alert('Your choice is not available, Please try again');
   }
 }
 while (foodChoiceNum >= 4); //do...while loop if user does not enter a valid option (1,2 or 3) they are asked again
@@ -72,31 +76,41 @@ do {
     4 - Caesar Salad`);
       subtypeChoiceFood = ["Garden Salad", "Greek Salad", "Caprese Salad", "Caesar Salad"];
       break;
-    default: //i don't think I need this
-    // If an invalid option is chosen, show an error message and exit the program.
-    //alert("Invalid choice.");
-    //process.exit(1);
+    default: // to show an error message. I don't think I need this as I have the switch statement inside a do...while loop
+    // If an invalid option is chosen, show an error message and exit the program. alert("Invalid choice."); process.exit(1);
   }
 }
-while (subtypeChoiceNum >= 5); //do...while loop if user does not enter a valid option (1,2 or 3)
+while (subtypeChoiceNum > 3 || subtypeChoiceNum < 3); //do...while loop if user does not enter a valid option (1,2, 3 or 4) they are asked again. It does not work if user inputs text. Diego has helped with tips and advice on how to check if a variable is a number.
+
 alert(`Great Choice, You chose Number ${subtypeChoiceNum} - ${subtypeChoiceFood[subtypeChoiceNum - 1]}`);
 
 // Step 4 - Age
 
 let userAgeAlert = "Adult"
-var containsOnlyDigits = /^[0-9]+$/; // one or more of digits 0 to 9
 const userAgeNum = prompt("So that we can prepare the correct size. Please tell us your age?")
-if (userAgeNum >= 18) {
-  alert("You are an adult. We will prepare you an adult size portion")
-  userAgeAlert = "Adult"
-} else {
-  alert("You are a child. We will prepare you an child size portion")
-  userAgeAlert = "Child"
+switch (userAgeNum) {
+  case userAgeNum >= 18:
+    alert("You are an adult. We will prepare you an adult size portion");
+    userAgeAlert = "Adult";
+    break;
+  case userAgeNum < 18:
+    alert("You are a child. We will prepare you an child size portion");
+    userAgeAlert = "Child";
+    break;
+  default:
+    alert('Invalid input. Please enter a valid number (1, 2, or 3)');
 }
 
-//I want to write code for the above prompt to verify that the user enters a number.
-
 // Step 5 - Order confirmation
-
-const orderConfirm = alert(`You have ordered a ${userAgeAlert} portion of the ${choiceFood} - ${subtypeChoiceFood[subtypeChoiceNum - 1]}`)
-Please;
+let userConfirm = "no";
+//display the user's order and ask for confirmation
+userConfirm = prompt(`You have ordered a ${userAgeAlert} portion of the ${choiceFood} - ${subtypeChoiceFood[subtypeChoiceNum - 1]}
+Is your order correct? Please type YES to confirm your order, or NO to cancel`);
+switch (userConfirm) {
+  case userConfirm === "yes":
+    alert("Thank you, your order is confirmed and will be prepared ASAP. Thank you for visiting The Aussie Pizza House!");
+    break;
+  default:
+    alert("Your order has been cancelled. We hope to welcome you back again soon");
+}
+//does not error check the user's input, they must put in 'yes' or 'no'
