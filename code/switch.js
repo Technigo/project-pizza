@@ -110,10 +110,10 @@ let age = prompt("Portion sizes differ depending on if it's a child or adolescen
 let confirmation;
 
 const priceMessage = age >= 16
-    ? `One regular sized ${finalchoice}. That'll be 10 euros.`
-    : `One child sized ${finalchoice}. That'll be 7 euros.`;
+    ? `One regular sized ${finalchoice}. That'll be 10 euros. Enter a number to confirm: 1: Yes, 2: No`
+    : `One child sized ${finalchoice}. That'll be 7 euros. Enter a number to confirm: 1: Yes, 2: No`;
 
-confirmation = prompt(priceMessage, 'Enter a number to confirm: 1: Yes, 2: No.');
+confirmation = prompt(priceMessage);
 
 if (confirmation === "1") {
     alert(`Your ${finalchoice} is being prepared. Yummy!`);
