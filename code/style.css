@@ -6,7 +6,8 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #0026ff;
+  background: #FAEBD7;
+  /* I had to change the blue, it was hurting my eyes! */
   color: white;
   display: flex;
   justify-content: center;
