@@ -108,7 +108,7 @@ switch (selectedFoodCategory) {
 // Switch-statement that relates the input from the user regarding their choice of meal to the values stored in the variable foodOption, and assigns and stores a value based on this in the 
 // variable foodOrder. This is done so that I can keep only one alert message later for the user (since I only need one variable now), instead of three separate ones for each type of food. 
 // The goal of this step is to give a confirmation message to the user based on their choice of meal.
-foodOrder = "";
+let foodOrder = "";
 
 switch (foodSubType) {
   case "1":
