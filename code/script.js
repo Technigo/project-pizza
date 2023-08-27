@@ -29,7 +29,7 @@ if (food ==="1") {
 
 // Step 3 - Subtype choice
 if(food === "1"){
-  choise = prompt("Select a pizza type:\nEnter a number:\n1 - Funghi\n2 - Hawaian\n3 - Kebab");
+  choise = prompt("Select a pizza type:\nEnter a number:\n1 - Funghi\n2 - Hawaiian\n3 - Kebab");
 } else if(food === "2") {
   choise = prompt("Select a pasta type:\nEnter a number:\n1 - Chicken\n2 - Veggie\n3 - Carbonara");
 } else if(food === "3") {
@@ -87,7 +87,7 @@ if(age <=12) {
 if(confirm === "1") {
   alert("Thank you for your order! Your food will be prepared. See you soon!");
 } else if(confirm === "2") {
-  alert("Your order had been not been placed. Come back anytime to make an order! Good bye!");
+  alert("Your order has been not been placed. Come back anytime to make an order! Good bye!");
 } else {
   alert("Invalid choice. Please select 1 for Yes or 2 for No.");
 } process.exit(1);
