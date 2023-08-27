@@ -1,6 +1,9 @@
+// Start here
+
 // Step 1 - Welcome and introduction
+// Your code goes here
 alert(
-  `Welcome to this chick JavaScript Pizzeria! Ready to Start? - Click 'OK' to begin.`
+  `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 );
 
 const customerName = prompt("Enter your name:");
@@ -9,6 +12,7 @@ alert(`Hi, ${customerName}! Proceed to place an order.`);
 
 
 // Step 2 - Food choice
+// Your code goes here
 const foodType = prompt(
   `What type of food would you like to order?
 Enter a number:
@@ -33,7 +37,8 @@ if (foodType == 1) {
 alert(`You've chosen ${chosenFoodType}!`);
 
 
-// 3 - Subtype choice
+// Step 3 - Subtype choice
+// Your code goes here
 let pizzaType;
 let pastaType;
 let saladType;
@@ -114,6 +119,7 @@ alert(
 
 
 // Step 4 - Age
+// Your code goes here
 // parseInt for storing inputs in number- instead of string format
 const customerAge = parseInt(prompt(
   `Is this food for a child or an adult?
@@ -137,6 +143,7 @@ if (customerAge >= 8) {
 
 
 // Step 5 - Order confirmation
+// Your code goes here
 const orderConfirmation = prompt(
   `One ${size} sized ${finalOrder} will be prepared for you. That'll be ${cost}. Are you sure you want to order this?
 Enter number 1 to confirm:`
