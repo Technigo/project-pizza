@@ -1,11 +1,13 @@
-# Project Name
+# Project Pizza
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+I got to do use JS variables, conditionals, and native methods.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I thought about the what we learn by ourselves and with Diego, I looked att the booking tyckets for the concert code and try to understand it and apply it to my project, I tried to keep it simple so I could finish the project, I use google and ChatGPT to understand some of the steps I couldn't do by my self.
 
 ## View it live
 
 Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+https://genuine-manatee-9f6bf9.netlify.app
