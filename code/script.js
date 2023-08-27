@@ -1,3 +1,5 @@
+//This script is using else.if. The script switch.js is connected with html where some switch and ternary operator is added.
+
 // Step 1 - Welcome and introduction
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
@@ -19,7 +21,7 @@ if (choosefood === "1") {
 } else if (choosefood === "3") {
   foodName = "Salad";
 } else {
-  alert(`Sorry, invalid number. Please start over.`); process.exit(1);
+  alert(`Sorry, invalid number/choice. Please start over.`); process.exit(1);
 }
 
 alert("Yummy! " + foodName + "! What a great choice!");
@@ -80,14 +82,14 @@ if (foodName === "Pizza") {
   alert(`Invalid choice. Please start over.`); process.exit(1);
 }
 
-// Step 4 and 5 - Age. Adolescent/adult or child. And
+// Step 4 and 5 - Age. Adolescent/adult or child. And confirmation.
 let age = prompt("Portion sizes differ depending on if it's a child or adolescent/adult.", "Please type your age here");
 let confirmation;
 
 if (age >= 16) {
-  confirmation = prompt(`One regular sized ${finalchoice}. That'll be 10 euros.\nEnter a number to confirm: 1: Yes, 2: No.`);
+  confirmation = prompt(`One regular sized ${finalchoice}. That'll be 10 euros.`, `Enter a number to confirm: 1: Yes, 2: No.`);
 } else if (age <= 15) {
-  confirmation = prompt(`One child sized ${finalchoice}. That'll be 7 euros.\nEnter a number to confirm: 1: Yes, 2: No.`);
+  confirmation = prompt(`One child sized ${finalchoice}. That'll be 7 euros.`, `Enter a number to confirm: 1: Yes, 2: No.`);
 }
 
 if (confirmation === "1") {
