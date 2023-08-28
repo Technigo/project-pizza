@@ -1,11 +1,15 @@
-# Project Name
+# Project: Javascript Pizzeria
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Week 1 of Technigo bootcamp. A basic set-up of the web page was given. The project was to develop the basic JavaScript part of the web page.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started out by reading the material, get a overview of the assignment and then work through it from top to bottom. Giving myself a structure helped. Course material, ChatGPT, Google, Stack Overflow and Slack was used. 
+
+The challenge was to grasp the JavaScript. VScode was used. Alert () method, else-if, switch, ternary operators was added to the javaScript. With more time a more cleaned code would have been added.
+
+Two javaScript files are included. I started out with the script.js to save the first code. The swith.js is connected with the html.
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+View it live: https://project-pizza-idah-collin.netlify.app/
