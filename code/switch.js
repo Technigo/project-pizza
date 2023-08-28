@@ -37,7 +37,7 @@ switch (foodType) {
         process.exit(1);
 }
 
-alert(`You have chosen ${foodTypeConfirm}. Click ok to see the menu.`);
+alert(`You have chosen ${foodTypeSelected}. Click ok to see the menu.`);
   
 // Step 3 - Subtype choice
   
