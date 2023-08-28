@@ -116,7 +116,7 @@ switch (orderConfirmation) {
         confirmationMessage = 'Thank you for your order! Your meal will be prepared. See you soon!';
         break;
     case '2':
-        confirmationMessage = 'No worries, come back and order another time!Chicken Kebab';
+        confirmationMessage = 'No worries, come back and order another time!';
         break;
     default:
         alert('Invalid confirmation');
