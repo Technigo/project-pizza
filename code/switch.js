@@ -151,10 +151,10 @@ alert(`You have ordered the ${foodOrder}! That'll be ${foodPrice} €, thank you
   let orderConfirmation;
   
   if (age <= 16) {
-    orderConfirmation = prompt(`Best ${person}! You have ordered the small ${foodTypeConfirm} ${foodOrder} for only ${babyPrice}. Is this correct? Enter 1.`)
+    orderConfirmation = prompt(`Best ${person}! You have ordered the small ${foodTypeSelected} ${foodOrder} for only ${babyPrice}. Is this correct? Enter 1.`)
   } 
   else if (age > 16) {
-    orderConfirmation = prompt(`Best ${person}! You have ordered a ${foodTypeConfirm} ${foodOrder} for ${foodPrice}. Is this correct? Enter 1`)
+    orderConfirmation = prompt(`Best ${person}! You have ordered a ${foodTypeSelected} ${foodOrder} for ${foodPrice}. Is this correct? Enter 1`)
   } 
   else {alert(`So sorry we got I wrong, please try again!`)
   }
