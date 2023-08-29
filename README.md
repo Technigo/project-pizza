@@ -1,4 +1,4 @@
-# Project Name
+# Project Pizza
 
 A basic project meant to showcase a basic understanding of conditionals. One way to run the code is through if/else statements in script.js and the other is through switch-cases in switch.js.
 
