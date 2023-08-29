@@ -27,7 +27,8 @@ let options = prompt(`Please select what you would like by entering the number o
 3 - Salad
 4 - Desserts`);
 
-//I need to choose words that are simpler and that explain the variable betetr
+//I need to choose words that are simpler and that explain the variable better
+//I want to do the do...while loop here
 let selectedOption = "";
 
 if (options === "1") {
