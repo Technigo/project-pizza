@@ -1,41 +1,71 @@
+// Start here
+
 // Step 1 - Welcome and introduction
 alert(
-  `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
-);
-
-let username = prompt("What's your name?");
-
-if (username != null) {
-  alert("Welcome " + username + "!")
-  };
-
-
+    `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
+  );
+  
+  let name = prompt("What's your name?");
+  
+  if (name != null) {
+    alert("Welcome " + name + "!")
+    };
+  
 // Step 2 - Food choice
-// I found out that using parseInt is super handy with this as the user's inputs are numbers.
-// During this section I also learned that using backticks is essential to make a line break within the strings.
 
-let foodChoice = parseInt(prompt(
-  `What would you like to eat today? Choose a number
-  1 - Pizza
-  2 - Pasta
-  3 - Salad`
-));
+  let foodChoice = parseInt(prompt(
+    `What would you like to eat today? Choose a number
+    1 - Pizza
+    2 - Pasta
+    3 - Salad`
+  ));
 
-if (foodChoice === 1) {
-  alert(`You have chosen Pizza. Good choice!`);
-} else if (foodChoice === 2) {
-  alert(`You have chosen Pasta. Good choice!`);
-} else if (foodChoice === 3) {
-  alert(`You have chosen Salad. Good choice!`);
-} else {
-  alert(`Please choose a number between 1-3 to continue.`);
+  switch (foodChoice) {
+
+    case 1:
+        foodChoice = alert('You chose Pizza. Good choice!');
+        break;
+    case 2:
+        foodChoice = alert('You chose Pasta. Good choice!');
+        break;
+    case 3:
+        foodChoice = alert('You chose Salad. Good choice!');
+    default:
+        foodChoice = 'not found';
+        break;
 }
-
-
-
+  
 // Step 3 - Subtype choice
 
 let subtypeChoice;
+let subtype;
+
+switch (subtypeChoice) {
+
+    case 1:
+        subtype = parseInt(prompt(`What kind of Pizza would you like today? 
+        1 - Margherita 
+        2 - Veggie Pizza 
+        3 - White Pizza`
+        ));
+        
+        switch (subtype) {
+            case 1:
+                alert(`You have chosen Margherita.`);
+                break;
+            case 2:
+                alert(`You have chosen Veggie Pizza.`);
+                break;
+            case 3:
+                alert(`You have chosen White Pizza.`);
+                break;
+            default:
+                alert(`Please choose a number between 1-3 to continue.`);
+                break;
+        };
+
+        break;
+};
 
 if (foodChoice === 1) {
   subtypeChoice = parseInt(prompt(`What kind of Pizza would you like today? 
