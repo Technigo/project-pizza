@@ -4,6 +4,7 @@ The assignment was to create a pizzeria handling orders simply by using Javascri
 
 ## The problem
 
+- One little thing is I wanted to add a break between the choices in the prompts, and found I could do it with "\n"
 - I was first a little confused regarding how the prompt would be saved. I first wrote it excactly as alert(), but then quickly realized I needed to add const or let before it in order to save the value that the customer writes into the prompt. I tested this, and basically everything using console.log()
 - I wanted my choices to be presented in new lines in the prompt-window, and found through google that \n works for this.
 - When doing the if/else-statement, I ran into a problem with "===" comparing excactly what was typed into the prompt-window = which was a string not a number. In some cases I changed for example 'xxx === 3' to 'xxx == 3', I also tried changing 3 for "3", and later I made a new variable using the method parseInt. In the future I will choose one way to do this and stick to it, but here I wanted to utilize different ways to do it, and also show you guys I know different ways to solve this issue.
