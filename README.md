@@ -1,11 +1,11 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This assigment is about a virtuell pizzeria where you make your order thru pop up alerts.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+This projects was already structed for us with the steps and the requirments needed. This made it alot more easier for me to plan and think about how i will contunie with it. I faced alot of problems especially with step 4 and 5. When i approched problems i watch the recordings from the coding session and also turned to stack and google alot.My team also helped, we helped each other and discussed issues and how to fix it 
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://hamdis-js-pizzeria.netlify.app/ 
