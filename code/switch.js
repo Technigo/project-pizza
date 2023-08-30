@@ -23,17 +23,22 @@ const foodChoice = prompt(`What food would you like to order?
 
 let foodType;
 
-if (foodChoice === `1`) {
-  foodType = `Pizza`;
-  alert(`You chosen  pizza.`);
-} else if (foodChoice === `2`) {
+switch (foodChoice) {
+  case `1`:
+   foodType = `Pizza`;
+    alert(`You chosen  pizza.`);
+    break;
+ case  `2` :
   foodType = `Pasta`;
   alert(`You chosen  pasta.`);
-} else if (foodChoice === `3`) {
+  break;
+ case  `3`:
   foodType = `Salad`;
   alert(`You chosen salad.`);
-} else {
+  break;
+  default:
   alert(`Please select again.`);
+  break;
 };
 
 
@@ -44,77 +49,107 @@ let pizzaType;
 let pastaType;
 let saladType;
 
-if (foodType === `Pizza`) {
+switch (foodType) {
+  case `Pizza`:
   pizzaType= prompt(`Choose a type of Pizza
   1 - Margherita
   2 - Pepperoni
   3 - Vegetarian `);
 
-  if (pizzaType === `1`) {
+    switch (pizzaType) {
+      case `1`:
         alert(`You chosen Margherita pizza.`);
-      } else if (pizzaType === `2`) {
-        alert(`You chosen Pepperoni pizza.`);
-      } else if (pizzaType === `3`) {
+        break;
+      case `2`:
+      
+          alert(`You chosen Pepperoni pizza.`);
+        break;
+      case `3`:
+    
         alert(`You chosen Vegetarian pizza.`);
-      } else {
+        break;
+      default:
         alert(`Invalid pizza type selection.`);
-      }
-} else if (foodType === `Pasta`) {
-  pastaType = prompt(`Choose a type of Pasta
+        break;
+    }
+  break;
+
+  case `Pasta`:
+    pastaType = prompt(`Choose a type of Pasta
   1 - Spaghetti
   2 - Alfredo
   3 - Penne`);
-  if (pastaType === `1`) {
+
+    switch (pastaType) {
+      case `1`:
         alert(`You chosen Spaghetti.`);
-      } else if (pastaType === `2`) {
+        break;
+      case `2`:
         alert(`You chosen Alfredo.`);
-      } else if (pastaType === `3`) {
+        break;
+      case `3`:
         alert(`You chosen Penne .`);
-      } else {
+        break;
+      default:
         alert(`Invalid pasta type selection.`);
-      }
-} else if (foodType === `Salad`) {
-  saladType = prompt(`CHoose a type of Salad
+        break;
+    }
+    break;
+  case `Salad`:
+    saladType = prompt(`Choose a type of Salad
   1 - Caesar
   2 - Greek
   3 - Garden`);
-  if (saladType === `1`) {
+    
+    switch (saladType) {
+      case `1`:
         alert(`You chosen Caesar Salad.`);
-      } else if (saladType === `2`) {
+        break;
+      case `2`:
         alert(`You chosen Greek Salad.`);
-      } else if (saladType === `3`) {
+        break;
+      case `3`:
         alert(`You chosen Garden Salad.`);
-      } else {
+        break;
+      default:
         alert(`Invalid salad type selection.`);
-      }
-} else {
-  alert(`Something went wrong. Please try again.`);
+        break;
+    }
+    break;
+  default:
+    alert(`Something went wrong. Please try again.`);
+    break;
 };
 
 // Step 4 - Age
 // Your code goes here
-const ageChoice = prompt(`Who order? Write your age`)
+ const ageChoice = prompt(`Who order? Write your age`)
 
 let orderMessage;
-// let prise;
-
-if (ageChoice >= 18) {
+switch (true) {
+case ageChoice >= 18:
   orderMessage = `You've ordered a adult size ${foodType}. That will be 130 SEK`;
-} else if (ageChoice < 18){
-  orderMessage = `You've ordered a child size ${foodType}. That will be 100 SEK`;
-} else {
-  orderMessage = `Invalid choice. Please specify 'child' or 'adult'.`;
+  break;
+  case ageChoice < 18:
+    orderMessage = `You've ordered a child size ${foodType}. That will be 100 SEK`;
+    break;
+default:
+  orderMessage = `Invalid choice. Please specify your age'.`;
 }
 alert(orderMessage);
 
 // Step 5 - Order confirmation
 // Your code goes here
-const confirmation = prompt(`Would you like to confirm your order? (Yes/No)`);
+const confirmation = prompt(`Would you like to confirm your order? (yes/no)`);
 
-if (confirmation === `yes`) {
+switch (confirmation) {
+  case `yes`:
   alert(`Thank you for your order !`)
-} else if (confirmation === `no`) {
-  alert(`We hope to serve you again in the future.`)
-} else {
-  alert(`Invalid choice. Please specify 'Yes' or 'No'.`);
+    break;
+  case `no`:
+    alert(`We hope to serve you again in the future.`)
+    break;
+  default:
+    alert(`Invalid choice. Please specify 'yes' or 'no'.`);
+    break;
 }
