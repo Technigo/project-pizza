@@ -73,7 +73,7 @@ switch (foodType) {
     alert("Invalid choice.");
     process.exit(1);
 }
-// store the choice for the sub menu
+// initilize the variable to store the choice for the sub menu
 let bestChoice = "";
 switch (subType) {
   case "1":
@@ -92,25 +92,31 @@ switch (subType) {
 alert(`You've chosen ${bestChoice}!`);
 // Step 4 - Age
 // Your code goes here
-const age = prompt(`Is this food for a child or an adult? Type your age:`);
+const age = parseInt(
+  prompt(`Is this food for a child or an adult? Type your age:`)
+);
 let child = "";
 let adult = "";
-if (age <= "16") {
+if (age <= 16 && age > 0) {
   child = prompt(
     `One child sized ${bestChoice} will be prepared for you. That'll be €10. Are you sure you want to order this? \n Enter a number to confirm: \n1- Yes\n2- No`
   );
-} else {
+} else if (age < 100) {
   adult = prompt(
     `One adult sized ${bestChoice} will be prepared for you. That'll be €15. Are you sure you want to order this? \n Enter a number to confirm:\n1- Yes\n2- No `
   );
+} else {
+  alert(`Invalid value, please enter a number between 0 and 100 `);
+  process.exit(1);
 }
 // Step 5 - Order confirmation
 // Your code goes here
-if (child === "1" || adult == "1") {
+
+if (child === "1" || adult === "1") {
   alert(
     `Thank you for your order! Your delicious meal will be prepared. See you soon!👋`
   );
-} else if (child == "2" || adult === "2") {
+} else if (child === "2" || adult === "2") {
   alert(`No problem, come back and order anytime you want.😊`);
 } else {
   alert(`Invalid choice. Please select 1 Yes or 2 for No❗️`);
