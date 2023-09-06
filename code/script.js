@@ -64,7 +64,7 @@ Please enter the number of your choice:`);
 3 - Carbonara 
 
 Please enter the number of your choice:`);
-    foodNames = ["Cacio e Pepe", "Vongole", "Carbonara"];
+    foodNames = ["Cacio e Pepe", "Vongol", "Carbonara"];
     break;
 
   case "Salad":
