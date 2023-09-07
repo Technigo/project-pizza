@@ -1,4 +1,4 @@
-// Start here
+141621// Start here
 
 // Step 1 - Welcome and introduction
 // Your code goes here
@@ -52,16 +52,15 @@ switch (selectedFood) {
     subtypeName = ["Margherita", "Veggie", "Nutella"];
     break;
     case "Pasta":
-      subtype = prompt ('Select the type of pizza you want: 1 - Shrimppasta 2 - Veggiepasta 3 - Elf style pasta Please enter the number of your choice:');
+      subtype = prompt ('Select the type of pasta you want: 1 - Shrimppasta 2 - Veggiepasta 3 - Elf style pasta Please enter the number of your choice:');
       subtypeName = ["Shrimp", "Veggie", "Elf style"];
       break;
       case "Salad":
-        subtype = prompt ('Select the type of pizza you want: 1 - Shrimpsalad 2 - Greeksalad 3 - Tomatosalad Please enter the number of your choice:');
+        subtype = prompt ('Select the type of salad you want: 1 - Shrimpsalad 2 - Greeksalad 3 - Tomatosalad Please enter the number of your choice:');
         subtypeName = ["Shrimp", "Greek", "Tomato"];
         break;
 }
-// To Technigo, I have tried out different codes now. The problem is that the subtypeName is tied to the variable selectedFood and I can't get it to change. I tried doing and if/if else under every variable, added
-//It's probably supereasy but I think my mind is just stuck at the moment/took water over my head etc etc
+
 
 if (selectedFood === "Pizza") {
   alert(`You chose ${selectedFood} and ${subtypeName[parseInt(subtype) - 1]} as your meal.`);
@@ -73,8 +72,8 @@ if (selectedFood === "Pizza") {
 // Step 4 - Age
 // Your code goes here
 
-let age = prompt ("Type your age in numbers")
-if (age>=18) {
+let age = prompt ("Type your age in numbers to help med figure out if you want a kid size or an adult size portion")
+if (age>=19) {
   alert (`The price is 150 SEK`);
 }
 else if (age<=18) {
