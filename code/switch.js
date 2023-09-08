@@ -109,7 +109,7 @@ switch (true) {
             subChoice = "Lasagna";
             alert(`One ${subChoice}, got it.`);
             break;
-          case "1":
+          case "3":
             subChoice = "Pasta Bolognese";
             alert(`One ${subChoice}, got it.`);
             break;
