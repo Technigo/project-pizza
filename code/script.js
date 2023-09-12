@@ -151,7 +151,6 @@ else if (age <= 18) {
 
 // Step 5 - Order confirmation
 // Your code goes here
-//How to make is so it dosn't matter if a capital letter is entered or a small letter?
 
 if (order === "y") {
   alert(`Thank you for your order! We will start preparing it right away. We hope you enjoy it!`);
