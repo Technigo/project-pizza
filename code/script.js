@@ -10,11 +10,12 @@ alert(
 )
 
 let firstName = prompt("Please enter your first name", "First Name")
+firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1);
 let lastName = prompt("Please enter your last name", "Last Name")
-alert("Welcome " + firstName + "!")
-//I dont need to devide first and last name in two separate strings, should i make one "yourName" string instead? Edit: I decided to keep them separated but to only use firstName in the greeting. Code used before: alert("Welcome " + firstName + " " + lastName + "")
+lastName = lastName.charAt(0).toUpperCase() + lastName.slice(1);
+alert("Welcome " + firstName + " " + lastName + "!");
+//I dont need to devide first and last name in two separate strings, should i make one "yourName" string instead? Edit: I decided to keep them separated.
 
-//HOW can I change the fist letter in the imput to automatically change to a capital letter? I tested some things, but they did not work.
 //CAN I make it so only letters will be accepted? Tested; did not figure it out. 
 
 
@@ -132,12 +133,19 @@ if (age >= 18) {
 
   Enter Y for "Yes" to confirm.
   Enter N for "No" to decline`);
+
+  if (order.toLowerCase() === "y") {
+  }
 }
 else if (age <= 18) {
   order = prompt(`You have chosen an child sized ${typeOf[parseInt(menuFoodSelected) - 1]} ${selectedOption}. That will be €15.
-  
+
   Enter Y for "Yes" to confirm.
   Enter N for "No" to decline`);
+
+  if (order.toLowerCase() === "y") {
+  }
+
 }
 //I spent a lot of time trying to figgure out the right way to write the code so that the typeOf array chosen earlier would be the same here as well. I kept trying with ${typeOf[0]} ${typeOf[0, 1 , 2 , 3]} and so on. I got help on slack and during the demos! Not sure if I copletly understand the "parseInt" yet, but for now it works. 
 
@@ -145,13 +153,13 @@ else if (age <= 18) {
 // Your code goes here
 //How to make is so it dosn't matter if a capital letter is entered or a small letter?
 
-if (order === "Y") {
+if (order === "y") {
   alert(`Thank you for your order! We will start preparing it right away. We hope you enjoy it!`);
 }
-else if (order === "N") {
+else if (order === "n") {
   alert(`Not hungry? No worries, we'll be ready for your order when you are!`);
 }
 else {
   alert(`ERROR. Your order was not placed. If you still want to order please try again and enter Y to comfirm`)
 }
-
+// if (order.toLowerCase() === "y") didnt work until I changed if (order === "Y") to if (order === "y")
