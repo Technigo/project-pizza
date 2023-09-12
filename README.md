@@ -11,6 +11,10 @@ I'm not good at asking for help, so doing so in slack was for me the hardest par
 
 I tried a few things (that didn´t work) by making a duplicate of the code where I tested things. The reason for this is that I ruined a lot during the pre-course by "testing" and had a hard time figuring out how to "go back" to where the problems started. 
 
+added after: capital letter in name in alert, order confirmation tolowercase
+
+to do? stretch goals?
+
 ## View it live
 
 Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
