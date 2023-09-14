@@ -1,6 +1,7 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+ZUUM'S Pizzeria
+Welcome to the squared Pizzeria! To order your square, please follow the instructions on your screen :)
 
 ## The problem
 
