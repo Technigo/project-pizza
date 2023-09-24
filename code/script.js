@@ -3,7 +3,7 @@
 // Step 1 - Welcome and introduction
 // Your code goes here
 alert(
-  `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
+  `Welcome to our Zuum's Pizzeria. "Ok"`
 );
 
 const userName = prompt("Let me know your Name!");
@@ -14,19 +14,19 @@ alert(
 
 // Step 2 - Food choice
 const foodOption = prompt(`Using a number, what would you like to eat today?
-1 - Buuz
-2 - Tsuiwan
-3 - Guraltai Shul`);
+1 - Margeritha
+2 - Salame
+3 - Vegano`);
 
 // Step 3 - Subtype choice
 let selectedFood = "";
 
 if (foodOption === "1") {
-    selectedFood = "Buuz";
+    selectedFood = "Margeritha";
   } else if (foodOption === "2") {
-    selectedFood = "Tsuiwan";
+    selectedFood = "Salume";
   } else if (foodOption === "3") {
-    selectedFood = "Guraltai Shul";
+    selectedFood = "Vegano";
   } else {
     alert("Please choose a number between 1-3 :)");
     process.exit(1);
