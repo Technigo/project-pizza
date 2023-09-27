@@ -7,7 +7,7 @@ alert(
 );
 //alert("Please enter your name here:");
 let Name = prompt("Enter your name: ");
-alert("hi " + Name + "!");
+alert("Hi and welcome " + Name + "!");
 // Step 2 - Food choice
 // Your code goes here
 let choice = prompt(
@@ -25,7 +25,8 @@ switch (choice) {
     food = "Salad";
     break;
   default:
-    food = "Invalid choice";
+    alert("Invalid choice, please reload the page to start again.");
+    exit;
 }
 alert("You selected: " + food);
 
@@ -42,32 +43,35 @@ if (choice == "1") {
   } else if (subtype == "3") {
     subtypeText = "Hawaii";
   } else {
+    alert("Invalid choice, please reload the page to start again.");
     exit;
   }
 } else if (choice == "2") {
   subtype = prompt("Choose Pasta:\nSpaghetti = 1, Lasagne = 2, Macaroni = 3");
-  if (subtype == "2") {
+  if (subtype == "1") {
     subtypeText = "Spaghetti";
   } else if (subtype == "2") {
     subtypeText = "Lasagne";
   } else if (subtype == "3") {
     subtypeText = "Macaroni";
   } else {
+    alert("Invalid choice, please reload the page to start again.");
     exit;
   }
 } else if (choice == "3") {
   subtype = prompt("Choose Sallad:\nChicken = 1, Greek = 2, Cesar = 3");
-  if (subtype == "2") {
+  if (subtype == "1") {
     subtypeText = "Chicken";
   } else if (subtype == "2") {
     subtypeText = "Greek";
   } else if (subtype == "3") {
     subtypeText = "Cesar";
   } else {
+    alert("Invalid choice, please reload the page to start again.");
     exit;
   }
 } else {
-  alert("Invalid choice");
+  alert("Invalid choice, please reload the page to start again.");
 }
 
 //Also add cost to make it more realistic
@@ -130,7 +134,7 @@ switch (age) {
     ageChoice = "adult";
     break;
   default:
-    ageChoice = "Invalid choice";
+    ageChoice = "adult"; //if they mistype, normal prices will apply.
 }
 
 //If it´s a child, let´s take 5$ off the price
@@ -152,3 +156,16 @@ let confirmOrder = prompt(
 
 // Step 5 - Order confirmation
 // Your code goes here
+switch (confirmOrder) {
+  case "1":
+    alert("Thank you for the order! Your meal is now being prepared for you.");
+    break;
+  case "2":
+    alert(
+      "You did not confirm your order.\nPlease reload the page to make a new order.\nWelcome back anytime!"
+    );
+    break;
+
+  default:
+    alert("Something went wrong! Please reload the page to start over.");
+}
