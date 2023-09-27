@@ -8,6 +8,7 @@ alert(
 
 // Step 2 - Food choice
 // Your code goes here
+alert(`Nice to meet you, ${prompt(`Please enter your name:`)}!`);
 
 // Step 3 - Subtype choice
 // Your code goes here
