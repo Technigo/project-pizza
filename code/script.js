@@ -70,10 +70,85 @@ if (choice == "1") {
   alert("Invalid choice");
 }
 
+//Also add cost to make it more realistic
+let cost;
+switch (choice) {
+  case "1":
+    switch (subtype) {
+      case "1":
+        cost = 15;
+        break;
+      case "2":
+        cost = 18;
+        break;
+      case "3":
+        cost = 20;
+        break;
+    }
+    break;
+  case "2":
+    switch (subtype) {
+      case "1":
+        cost = 14;
+        break;
+      case "2":
+        cost = 18;
+        break;
+      case "3":
+        cost = 22;
+        break;
+    }
+  case "3":
+    switch (subtype) {
+      case "1":
+        cost = 13;
+        break;
+      case "2":
+        cost = 14;
+        break;
+      case "3":
+        cost = 12;
+        break;
+    }
+}
+
 alert("You selected: " + subtypeText);
 
 // Step 4 - Age
 // Your code goes here
+
+let age = prompt(
+  "Are you a child (0-14y) or adult (+15 years)?:\n Enter a number (Child = 1, Adult = 2):"
+);
+
+let ageChoice;
+switch (age) {
+  case "1":
+    ageChoice = "child";
+    break;
+  case "2":
+    ageChoice = "adult";
+    break;
+  default:
+    ageChoice = "Invalid choice";
+}
+
+//If it´s a child, let´s take 5$ off the price
+if (ageChoice == "child") {
+  cost = cost - 5;
+}
+
+let confirmOrder = prompt(
+  "One " +
+    ageChoice +
+    " sized " +
+    subtypeText +
+    " " +
+    food +
+    " will be made for you. That will be " +
+    `${cost}` +
+    "$.\nPlease confirm your order:\n1 - Yes\n2 - No"
+);
 
 // Step 5 - Order confirmation
 // Your code goes here
