@@ -6,9 +6,27 @@ alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 );
 
+alert(`Nice to meet you, ${prompt(`Please enter your name:`)}!`);
+
 // Step 2 - Food choice
 // Your code goes here
-alert(`Nice to meet you, ${prompt(`Please enter your name:`)}!`);
+const foodChoice = prompt(`
+  What type of food would you like to order?
+  Enter a number:
+  1: Pizza 🍕
+  2: Pasta 🍝
+  3: Salad 🥗
+ `);
+
+if (foodChoice == 1) {
+  alert(`You´ve chosen Pizza!`);
+} else if (foodChoice == 2) {
+  alert(`You´ve chosen Pasta!`);
+} else if (foodChoice == 3) {
+  alert(`You´ve chosen Salad!`);
+} else {
+  alert(`Invalid choice. Please select a number between 1 and 3.`);
+}
 
 // Step 3 - Subtype choice
 // Your code goes here
