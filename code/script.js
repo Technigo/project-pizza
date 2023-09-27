@@ -27,12 +27,30 @@ if (foodChoice === pizza) {
 } else if (foodChoice === salad) {
   alert(`Great you have chosen salad`);
 } else {
-  alert("Invalid number! Please try again.");
+  alert("Invalid number! Please select between the numbers 1 and 3.");
 }
 
 // Step 3 - Subtype choice
 // Your code goes here
 
+if (foodChoice === pizza) {
+  prompt(`Please select which pizza you would like to order. Enter only the number:
+  1 - Margarita
+  2 - Spicy Chicken
+  3 - Vegetarian`);
+} else if (foodChoice === pasta) {
+  prompt(`Please select which pizza you would like to order. Enter only the number:
+1 - Creamy Mushroom Pasta
+2 - Bolenaise
+3 - Pomodoro`);
+} else if (foodChoice === salad) {
+  prompt(`Please select which pizza you would like to order. Enter only the number:
+1 - Avocado and salmon 
+2 - Chévre and walnuts
+3 - Ceasar`);
+} else {
+  alert("Invalid number! Please select between the numbers 1 and 3.");
+}
 // Step 4 - Age
 // Your code goes here
 
