@@ -9,3 +9,4 @@ Tools used: VSCode, Git. Programming language: JavaScript
 
 ## View it live
 
+https://projectpizza-hp.netlify.app/
