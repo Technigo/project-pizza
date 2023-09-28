@@ -1,9 +1,8 @@
-// Start here
-
 // Step 1 - Welcome and introduction
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 );
+
 const userName = prompt(`Please enter your name:`);
 alert(`Nice to meet you, ${userName}!`);
 
@@ -75,7 +74,7 @@ switch (foodSelected) {
       2: Carprese Salad 🍅
       3: Greek Salad 🇬🇷 `
     );
-    foodTypeNames = ["Ceaser Salad", "Carprese Salad", "Greek Salad"];
+    foodTypeNames = ["Ceaser", "Carprese", "Greek"];
     break;
 
   default:
@@ -87,14 +86,14 @@ let userData = [];
 
 // Determine the type of foodType based on the user's choice
 if (foodTypeSelection === "1") {
-  userData.push(foodTypeNames[0]);
-  alert(`You've chosen ${foodTypeNames[0]} ${foodSelected}!`);
+  userData.push(foodTypeNames[0], foodSelected);
+  alert(`You've chosen ${foodTypeNames[0]} pizza!`);
 } else if (foodTypeSelection === "2") {
-  userData.push(foodTypeNames[1]);
-  alert(`You've chosen ${foodTypeNames[1]} ${foodSelected}!`);
+  userData.push(foodTypeNames[1], foodSelected);
+  alert(`You've chosen ${foodTypeNames[1]} pasta!`);
 } else if (foodTypeSelection === "3") {
-  userData.push(foodTypeNames[2]);
-  alert(`You've chosen ${foodTypeNames[2]} ${foodSelected}!`);
+  userData.push(foodTypeNames[2], foodSelected);
+  alert(`You've chosen ${foodTypeNames[2]}!`);
 } else {
   alert(`Invalid choice. Please select a number between 1 and 3.`);
   exit(1);
@@ -113,16 +112,17 @@ if (userAge <= 16) {
   exit(1);
 }
 
+console.log(userData);
+// Step 5 - Order confirmation
 // Ask the user to confirm the order
 const orderConfirmation = prompt(`
-  One ${userData[1]} sized ${userData[0]} ${foodSelected} will be prepared for you. 
-  That'll be €${userData[2]}. Are you sure you want to order this?
+  One ${userData[2]} sized ${userData[0]} ${userData[1]} will be prepared for you. 
+  That'll be €${userData[3]}. Are you sure you want to order this?
   Enter a number to confirm:
   1 - Yes
   2 - No
   `);
 
-// Step 5 - Order confirmation
 if (orderConfirmation === "1") {
   alert(
     `Thank you for your order! Your delicious meal will be prepared. See you soon! 👋🏼`
