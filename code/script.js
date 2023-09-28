@@ -1,10 +1,6 @@
 // Start here
 
 const pizzeriaName = "Naima's Pizzeria";
-const numberOne = "1";
-const numberTwo = "2";
-const numberThree = "3";
-
 let subtype;
 
 // Step 1 - Welcome and introduction
@@ -22,11 +18,11 @@ const foodChoice = prompt(
   3 - Salad`
 );
 
-if (foodChoice === numberOne) {
+if (foodChoice === "1") {
   alert(`Great! You have chosen pizza.`);
-} else if (foodChoice === numberTwo) {
+} else if (foodChoice === "2") {
   alert(`Great! You have chosen pasta`);
-} else if (foodChoice === numberThree) {
+} else if (foodChoice === "3") {
   alert(`Great you have chosen salad`);
 } else {
   alert("Invalid number! Please select between the numbers 1 and 3.");
@@ -35,46 +31,46 @@ if (foodChoice === numberOne) {
 // Step 3 - Subtype choice
 // Your code goes here
 
-if (foodChoice === numberOne) {
+if (foodChoice === "1") {
   subtype =
     prompt(`Please select which pizza you would like to order. Enter only the number:
   1 - Margarita
   2 - Spicy Chicken
   3 - Vegetarian`);
 
-  if (subtype === numberOne) {
+  if (subtype === "1") {
     alert("You chose Margarita Pizza!");
-  } else if (subtype === numberTwo) {
+  } else if (subtype === "2") {
     alert("You chose Spicy Chicken Pizza");
-  } else if (subtype === numberThree) {
+  } else if (subtype === "3") {
     alert("You chose Vegetarian Pizza");
   }
-} else if (foodChoice === numberTwo) {
+} else if (foodChoice === "2") {
   subtype =
     prompt(`Please select which pasta you would like to order. Enter only the number:
 1 - Creamy Mushroom Pasta
 2 - Bolenaise Spaghetti
 3 - Pomodoro Fettucini`);
 
-  if (subtype === numberOne) {
+  if (subtype === "1") {
     alert("You chose Creamy Mushroom Pasta");
-  } else if (subtype === numberTwo) {
+  } else if (subtype === "2") {
     alert("You chose Bolenaise Spaghetti");
-  } else if (subtype === numberThree) {
+  } else if (subtype === "3") {
     alert("You chose Pomodoro Fettucini");
   }
-} else if (foodChoice === numberThree) {
+} else if (foodChoice === "3") {
   subtype =
     prompt(`Please select which salad you would like to order. Enter only the number:
 1 - Avocado and salmon salad
 2 - Chévre and walnut salad
 3 - Caesar salad`);
 
-  if (subtype === numberOne) {
+  if (subtype === "1") {
     alert("You chose Avocado and salmon salad");
-  } else if (subtype === numberTwo) {
+  } else if (subtype === "2") {
     alert("You chose Chévre and walnut salad");
-  } else if (subtype === numberThree) {
+  } else if (subtype === "3") {
     alert("You chose Caesar salad");
   }
 } else {
@@ -82,15 +78,21 @@ if (foodChoice === numberOne) {
 }
 // Step 4 - Age
 // Your code goes here
-const age = prompt(
-  "Is this a children's or an adult order? Please type your age:"
-);
+const age = prompt("Is this a child or an adult order? Please type your age:");
 age;
 
 if (age >= 18) {
-  alert("One adult order");
+  prompt(
+    `Ok, one adult sized order. That will be 150 euros. Would you like to proceed with the order?
+    Enter a number to confirm the order.
+    1 - Yes
+    2 - No`
+  );
 } else if (age > 18) {
-  alert("One child order");
+  alert(`Ok, one child sized order. That will be 150 euros. Would you like to proceed with the order?
+  Enter a number to confirm the order.
+  1 - Yes
+  2 - No`);
 } else {
   alert("Invalid number!");
 }
