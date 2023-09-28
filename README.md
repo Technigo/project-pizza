@@ -10,4 +10,4 @@ To validate the input various Conditional statements have been used.
 ## View it live
 
 A demo of the project is deployed on Netlify on the following link:
-https://fluffy-elf-47490d.netlify.app/
+https://radiant-jalebi-3ec123.netlify.app/
