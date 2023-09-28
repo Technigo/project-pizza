@@ -21,13 +21,13 @@ let foodSelected = "";
 
 // Determine the type of food based on the user's choice
 switch (foodSelection) {
-  case 1:
+  case "1":
     foodSelected = "Pizza";
     break;
-  case 2:
+  case "2":
     foodSelected = "Pasta";
     break;
-  case 3:
+  case "3":
     foodSelected = "Salad";
     break;
   default:
@@ -91,16 +91,16 @@ let userData = [];
 // Determine the type of foodType based on the user's choice
 switch (foodSelected) {
   case "Pizza":
-    userData.push(foodTypeNames[0], foodSelected);
-    alert(`You've chosen ${foodTypeNames[0]} pizza!`);
+    userData.push(foodTypeNames[foodTypeSelection], foodSelected);
+    alert(`You've chosen ${foodTypeNames[foodTypeSelection - 1]} pizza!`);
     break;
   case "Pasta":
-    userData.push(foodTypeNames[1], foodSelected);
-    alert(`You've chosen ${foodTypeNames[1]} pasta!`);
+    userData.push(foodTypeNames[foodTypeSelection], foodSelected);
+    alert(`You've chosen ${foodTypeNames[foodTypeSelection - 1]} pasta!`);
     break;
   case "Salad":
-    userData.push(foodTypeNames[2], foodSelected);
-    alert(`You've chosen ${foodTypeNames[2]} salad!`);
+    userData.push(foodTypeNames[foodTypeSelection], foodSelected);
+    alert(`You've chosen ${foodTypeNames[foodTypeSelection - 1]} salad!`);
     break;
   default:
     alert(`Invalid choice. Please select a number between 1 and 3.`);
@@ -109,9 +109,11 @@ switch (foodSelected) {
 
 // Step 4 - Age
 // Check if the user is adult or child
-let userAge = prompt("Is this food for a child or an adult? Type your age:");
+let userAge = Number(
+  prompt("Is this food for a child or an adult? Type your age:")
+);
 
-switch (userAge) {
+switch (true) {
   case userAge <= 16:
     userData.push("child", 10);
     break;
