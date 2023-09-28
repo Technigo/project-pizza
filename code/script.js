@@ -112,7 +112,6 @@ if (userAge <= 16) {
   exit(1);
 }
 
-console.log(userData);
 // Step 5 - Order confirmation
 // Ask the user to confirm the order
 const orderConfirmation = prompt(`
