@@ -1,10 +1,9 @@
 // Start here
 
-const pizzeriaName = "Naima's Pizzeria";
-let subtype;
-
 // Step 1 - Welcome and introduction
 // Your code goes here
+
+const pizzeriaName = "Naima's Pizzeria";
 alert(`Welcome to ${pizzeriaName}. Ready to Start? - Click 'OK' to begin.`);
 const customerName = prompt("Please enter your name.");
 alert(`Nice to meet you, ${customerName}!`);
@@ -26,76 +25,103 @@ if (foodChoice === "1") {
   alert(`Great you have chosen salad`);
 } else {
   alert("Invalid number! Please select between the numbers 1 and 3.");
+  exit(1);
 }
 
 // Step 3 - Subtype choice
 // Your code goes here
+let subtype;
+let subtypeChoices = [];
 
 if (foodChoice === "1") {
   subtype =
     prompt(`Please select which pizza you would like to order. Enter only the number:
-  1 - Margarita
-  2 - Spicy Chicken
-  3 - Vegetarian`);
+      1 - Margarita
+      2 - Spicy Chicken
+      3 - Vegetarian`);
+  subtypeChoices = ["Margarita,", "Spicy Chicken", "Vegetarian"];
 
   if (subtype === "1") {
-    alert("You chose Margarita Pizza!");
+    alert(`You have chosen ${subtypeChoices[0]} pizza`);
   } else if (subtype === "2") {
-    alert("You chose Spicy Chicken Pizza");
+    alert(`You have chosen ${subtypeChoices[1]} pizza`);
   } else if (subtype === "3") {
-    alert("You chose Vegetarian Pizza");
+    alert(`You have chosen ${subtypeChoices[2]} pizza`);
   }
 } else if (foodChoice === "2") {
   subtype =
     prompt(`Please select which pasta you would like to order. Enter only the number:
-1 - Creamy Mushroom Pasta
-2 - Bolenaise Spaghetti
-3 - Pomodoro Fettucini`);
+    1 - Creamy Mushroom Pasta
+    2 - Bolognese Spaghetti
+    3 - Pomodoro Fettucini`);
+
+  subtypeChoices = [
+    "Creamy Mushroom Pasta,",
+    "Bolognese Spaghetti",
+    "Pomodoro Fettucini",
+  ];
 
   if (subtype === "1") {
-    alert("You chose Creamy Mushroom Pasta");
+    alert(`You have chosen ${subtypeChoices[0]}`);
   } else if (subtype === "2") {
-    alert("You chose Bolenaise Spaghetti");
+    alert(`You have chosen ${subtypeChoices[1]}`);
   } else if (subtype === "3") {
-    alert("You chose Pomodoro Fettucini");
+    alert(`You have chosen ${subtypeChoices[0]}`);
   }
 } else if (foodChoice === "3") {
   subtype =
     prompt(`Please select which salad you would like to order. Enter only the number:
-1 - Avocado and salmon salad
-2 - Chévre and walnut salad
-3 - Caesar salad`);
-
+    1 - Avocado and salmon salad
+    2 - Chévre and walnut salad
+    3 - Caesar salad`);
+  subtypeChoices = [
+    "Avocado and salmon salad,",
+    "Chévre and walnut salad",
+    "Caesar salad",
+  ];
   if (subtype === "1") {
-    alert("You chose Avocado and salmon salad");
+    alert(`You have chosen ${subtypeChoices[0]}`);
   } else if (subtype === "2") {
-    alert("You chose Chévre and walnut salad");
+    alert(`You have chosen ${subtypeChoices[1]}`);
   } else if (subtype === "3") {
-    alert("You chose Caesar salad");
+    alert(`You have chosen ${subtypeChoices[2]}`);
   }
 } else {
   alert("Invalid number! Please select between the numbers 1 and 3.");
+  exit(1);
 }
 // Step 4 - Age
 // Your code goes here
-const age = prompt("Is this a child or an adult order? Please type your age:");
-age;
+const age = Number(
+  prompt("Is this a child or an adult order? Please type your age:")
+);
+let confirmation = "";
 
 if (age >= 18) {
-  prompt(
-    `Ok, one adult sized order. That will be 150 euros. Would you like to proceed with the order?
+  confirmation = prompt(
+    `Ok, one adult sized ${
+      subtypeChoices[Number(subtype) - 1]
+    } order. That will be €15. Would you like to proceed with the order?
     Enter a number to confirm the order.
     1 - Yes
     2 - No`
   );
-} else if (age > 18) {
-  alert(`Ok, one child sized order. That will be 150 euros. Would you like to proceed with the order?
+} else if (age < 18) {
+  confirmation = prompt(`Ok, one child sized ${
+    subtypeChoices[Number(subtype) - 1]
+  } order. That will be €10 . Would you like to proceed with the order?
   Enter a number to confirm the order.
   1 - Yes
   2 - No`);
 } else {
   alert("Invalid number!");
+  exit(1);
 }
 
 // Step 5 - Order confirmation
 // Your code goes here
+if (confirmation === "1") {
+  alert("Your order is complete and will be delivered soon. 🚗");
+} else if (confirmation === "2") {
+  alert("Ok, no problem! Come back another day. 😃");
+}
