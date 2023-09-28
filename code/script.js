@@ -4,8 +4,8 @@
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 );
-
-alert(`Nice to meet you, ${prompt(`Please enter your name:`)}!`);
+const userName = prompt(`Please enter your name:`);
+alert(`Nice to meet you, ${userName}!`);
 
 // Step 2 - Food choice
 // Ask the user to choose a type of food
@@ -105,15 +105,16 @@ if (foodTypeSelection === "1") {
 let userAge = prompt("Is this food for a child or an adult? Type your age:");
 
 if (userAge <= 16) {
-  userData.push("child", "10");
+  userData.push("child", 10);
 } else if (userAge >= 16) {
-  userData.push("adult", "15");
+  userData.push("adult", 15);
 } else {
   alert(`Invalid age choice. Please type a number`);
   exit(1);
 }
 
-const answer = prompt(`
+// Ask the user to confirm the order
+const orderConfirmation = prompt(`
   One ${userData[1]} sized ${userData[0]} ${foodSelected} will be prepared for you. 
   That'll be €${userData[2]}. Are you sure you want to order this?
   Enter a number to confirm:
@@ -122,4 +123,13 @@ const answer = prompt(`
   `);
 
 // Step 5 - Order confirmation
-// Your code goes here
+if (orderConfirmation === "1") {
+  alert(
+    `Thank you for your order! Your delicious meal will be prepared. See you soon! 👋🏼`
+  );
+} else if (orderConfirmation === "2") {
+  alert(`No problem, come back and order anytime you want.`);
+} else {
+  alert(`Invalid choice. Please select 1 for Yes or 2 for No.`);
+  exit(1);
+}
