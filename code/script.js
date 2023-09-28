@@ -82,13 +82,18 @@ switch (foodSelected) {
     alert(`Invalid ${foodSelected} type choice.`);
     exit(1);
 }
+// Save all user data in a variable
+let userData = [];
 
-// Determine the type of food based on the user's choice
+// Determine the type of foodType based on the user's choice
 if (foodTypeSelection === "1") {
+  userData.push(foodTypeNames[0]);
   alert(`You've chosen ${foodTypeNames[0]} ${foodSelected}!`);
 } else if (foodTypeSelection === "2") {
+  userData.push(foodTypeNames[1]);
   alert(`You've chosen ${foodTypeNames[1]} ${foodSelected}!`);
 } else if (foodTypeSelection === "3") {
+  userData.push(foodTypeNames[2]);
   alert(`You've chosen ${foodTypeNames[2]} ${foodSelected}!`);
 } else {
   alert(`Invalid choice. Please select a number between 1 and 3.`);
@@ -96,7 +101,25 @@ if (foodTypeSelection === "1") {
 }
 
 // Step 4 - Age
-// Your code goes here
+// Check if the user is adult or child
+let userAge = prompt("Is this food for a child or an adult? Type your age:");
+
+if (userAge <= 16) {
+  userData.push("child", "10");
+} else if (userAge >= 16) {
+  userData.push("adult", "15");
+} else {
+  alert(`Invalid age choice. Please type a number`);
+  exit(1);
+}
+
+const answer = prompt(`
+  One ${userData[1]} sized ${userData[0]} ${foodSelected} will be prepared for you. 
+  That'll be €${userData[2]}. Are you sure you want to order this?
+  Enter a number to confirm:
+  1 - Yes
+  2 - No
+  `);
 
 // Step 5 - Order confirmation
 // Your code goes here
