@@ -97,7 +97,8 @@ const confirmation = prompt(`Please confirm your order by typing the appropriate
   1 - Confirm order
   2 - Cancel order
 `)
-console.log(confirmation);
+// Step 5 - Order confirmation
+//Use a prompt to ask if the user wants to confirm the order and give appropriate message for each response
 
 if (confirmation == 1) {
   alert('Great, your order is being prepared!')
@@ -105,8 +106,3 @@ if (confirmation == 1) {
   alert('Sorry to see you go. Start a new order by refreshing the page!')
 }
 
-// Step 5 - Order confirmation
-
-//Use a prompt to ask if the user wants to confirm the order and give appropriate message for each response
-
-// Your code goes here
