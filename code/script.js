@@ -38,38 +38,40 @@ alert(`You've ordered ${foodChoices[foodChoiceOfUser - 1][0]} for a cost of ${fo
 const pizzaToppings = ['Pineapple', 'Banana', 'Ketchup'];
 const pastaToppings = ['Olives', 'Feta cheese', 'Sun-dried tomatoes'];
 const saladToppings = ['Grapes', 'Avocado', 'Red onion'];
+let toppingChoiceNumber;
 let toppingChoice;
-
-console.log(foodChoiceOfUser);
 
 switch (foodChoiceOfUser){
   case '1':
-    toppingChoice = prompt(`
+    toppingChoiceNumber = prompt(`
     Choose your pizza toppings by writing the number corresponding to the topping you like:
       - 1 Pineapple
       - 2 Banana
       - 3 Ketchup`);
-      alert(`You've chosen ${foodChoices[foodChoiceOfUser - 1][0]} with ${pizzaToppings[toppingChoice -1]}. `)
+      alert(`You've chosen ${foodChoices[foodChoiceOfUser - 1][0]} with ${pizzaToppings[toppingChoiceNumber -1]}. `)
+      toppingChoice = pizzaToppings[toppingChoiceNumber -1];
   break;
   
   case '2':
-    toppingChoice = prompt(`
+    toppingChoiceNumber = prompt(`
     Choose your pasta toppings by writing the number corresponding to the topping you like:
       - 1 Olives
       - 2 Feta cheese
       - 3 Sun-dried tomatoes
     `);
-    alert(`You've chosen ${foodChoices[foodChoiceOfUser - 1][0]} with ${pastaToppings[toppingChoice -1]}. `)
+    alert(`You've chosen ${foodChoices[foodChoiceOfUser - 1][0]} with ${pastaToppings[toppingChoiceNumber -1]}. `)
+    toppingChoice = pizzaToppings[toppingChoiceNumber -1];
   break;
   
   case '3':
-    toppingChoice = prompt(`
+    toppingChoiceNumber = prompt(`
     Choose your salad toppings by writing the number corresponding to the topping you like:
      - 1 Grapes
      - 2 Avocado
      - 3 Red onion
       `);
-      alert(`You've chosen ${foodChoices[foodChoiceOfUser - 1][0]} with ${saladToppings[toppingChoice -1]}. `)
+      alert(`You've chosen ${foodChoices[foodChoiceOfUser - 1][0]} with ${saladToppings[toppingChoiceNumber -1]}. `)
+      toppingChoice = pizzaToppings[toppingChoiceNumber -1];
   break;
 
   default:
@@ -78,10 +80,33 @@ switch (foodChoiceOfUser){
 }
 
 
-
-// const subFoodChoices = prompt(`Choose your toppings by writing the number corresponding to the topping you like:`)
 // Step 4 - Age
-// Your code goes here
+
+//Use the prompt to let the user enter their age
+
+const userAge = prompt(`Write your age as a number to determine portion size.`);
+
+// Use alert to display the order and cost
+if (userAge > '18'){
+  alert(`Awesome, you've ordered a full size portion of ${foodChoices[foodChoiceOfUser -1][0]} with ${toppingChoice} for ${foodChoices[foodChoiceOfUser - 1][1]} €.`)
+} else {
+  alert(`Awesome, you've ordered a children's portion of ${foodChoices[foodChoiceOfUser - 1][0]} with ${toppingChoice} for ${foodChoices[foodChoiceOfUser - 1][1]} €.`)
+}
+
+const confirmation = prompt(`Please confirm your order by typing the appropriate number below:
+  1 - Confirm order
+  2 - Cancel order
+`)
+console.log(confirmation);
+
+if (confirmation == 1) {
+  alert('Great, your order is being prepared!')
+} else {
+  alert('Sorry to see you go. Start a new order by refreshing the page!')
+}
 
 // Step 5 - Order confirmation
+
+//Use a prompt to ask if the user wants to confirm the order and give appropriate message for each response
+
 // Your code goes here
