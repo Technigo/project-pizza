@@ -34,37 +34,37 @@ alert("You selected: " + food);
 // Your code goes here
 let subtype;
 let subtypeText;
-if (choice == "1") {
+if (choice === "1") {
   subtype = prompt("Choose Pizza:\nCalzone = 1, Capriciosa = 2, Hawaii = 3");
-  if (subtype == "1") {
+  if (subtype === "1") {
     subtypeText = "Calzone";
-  } else if (subtype == "2") {
+  } else if (subtype === "2") {
     subtypeText = "Capriciosa";
-  } else if (subtype == "3") {
+  } else if (subtype === "3") {
     subtypeText = "Hawaii";
   } else {
     alert("Invalid choice, please reload the page to start again.");
     exit;
   }
-} else if (choice == "2") {
+} else if (choice === "2") {
   subtype = prompt("Choose Pasta:\nSpaghetti = 1, Lasagne = 2, Macaroni = 3");
-  if (subtype == "1") {
+  if (subtype === "1") {
     subtypeText = "Spaghetti";
-  } else if (subtype == "2") {
+  } else if (subtype === "2") {
     subtypeText = "Lasagne";
-  } else if (subtype == "3") {
+  } else if (subtype === "3") {
     subtypeText = "Macaroni";
   } else {
     alert("Invalid choice, please reload the page to start again.");
     exit;
   }
-} else if (choice == "3") {
+} else if (choice === "3") {
   subtype = prompt("Choose Sallad:\nChicken = 1, Greek = 2, Cesar = 3");
-  if (subtype == "1") {
+  if (subtype === "1") {
     subtypeText = "Chicken";
-  } else if (subtype == "2") {
+  } else if (subtype === "2") {
     subtypeText = "Greek";
-  } else if (subtype == "3") {
+  } else if (subtype === "3") {
     subtypeText = "Cesar";
   } else {
     alert("Invalid choice, please reload the page to start again.");
@@ -138,7 +138,7 @@ switch (age) {
 }
 
 //If it´s a child, let´s take 5$ off the price
-if (ageChoice == "child") {
+if (ageChoice === "child") {
   cost = cost - 5;
 }
 
