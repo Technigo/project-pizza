@@ -3,11 +3,13 @@
 // Step 1 - Welcome and introduction
 // Your code goes here
 alert(
-  `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
-)
+	`Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
+);
 
 // Step 2 - Food choice
-// Your code goes here
+const userName = prompt("Please enter your name beloved customer");
+
+alert(`Welcome to our mighty fine pizzeria ${userName}`);
 
 // Step 3 - Subtype choice
 // Your code goes here
