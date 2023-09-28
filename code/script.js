@@ -85,15 +85,15 @@ switch (foodSelected) {
 let userData = [];
 
 // Determine the type of foodType based on the user's choice
-if (foodTypeSelection === "1") {
+if (foodSelected === "Pizza") {
   userData.push(foodTypeNames[0], foodSelected);
   alert(`You've chosen ${foodTypeNames[0]} pizza!`);
-} else if (foodTypeSelection === "2") {
+} else if (foodSelected === "Pasta") {
   userData.push(foodTypeNames[1], foodSelected);
   alert(`You've chosen ${foodTypeNames[1]} pasta!`);
-} else if (foodTypeSelection === "3") {
+} else if (foodSelected === "Salad") {
   userData.push(foodTypeNames[2], foodSelected);
-  alert(`You've chosen ${foodTypeNames[2]}!`);
+  alert(`You've chosen ${foodTypeNames[2]} salad!`);
 } else {
   alert(`Invalid choice. Please select a number between 1 and 3.`);
   exit(1);
