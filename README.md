@@ -1,11 +1,13 @@
-# Project Name
+# Project Pizza
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A JavaScript project for a pizzeria using console prompts in the browser.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+To display information to the user the alert() function was used and to get input from the user the prompt() function was used.
+To validate the input various Conditional statements have been used.
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+A demo of the project is deployed on Netlify on the following link:
+https://fluffy-elf-47490d.netlify.app/
