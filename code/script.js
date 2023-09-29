@@ -6,8 +6,16 @@ alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
 
+const userName = prompt("Please enter your name:");
+
+if (userName !== null) {
+  alert("Hello, " + userName + "!");
+} else {
+  alert("You didn't enter a name.");
+}
+
 // Step 2 - Food choice
-// Your code goes here
+
 
 // Step 3 - Subtype choice
 // Your code goes here
