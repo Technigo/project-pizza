@@ -10,4 +10,4 @@ I pretty much wrote the code from top to bottom, step by step. I used the switch
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+Look at the site here: https://radiant-beignet-42fae0.netlify.app
