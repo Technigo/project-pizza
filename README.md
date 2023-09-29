@@ -1,10 +1,14 @@
-# Project Name
+# Gustino Pizzeria
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+If you pass our door, your nostrils will be intoxicated by the delicate smell of our dough just out of the oven and our products coming directly from our best Italian producers...
 
-## The problem
+With a beautiful roundness of 31 cm, our pizzas are ultra gourmet and generous. We like it when pizzas stick out a little from the plate 🤤
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+All our products are fresh, quality products, carefully selected.
+
+And our dough? It is airy, soft and slightly crunchy to the bite.
+
+Are you starting to get hungry? Come visit us!
 
 ## View it live
 
