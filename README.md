@@ -1,11 +1,18 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This is Technigo's project for the first week. The premise is pretty simple, we have to create a 
+pizzeria order page, getting the user's selection through JS prompts. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+There's a very simple way of doing this. We could just do a series of if/else statements and/or
+switch statements. I tried to make this a bit more complicated by storing the menu options in JS 
+Objects and dynamically generating the menu options.
+
+There's still a couple of things in this project that is hardcoded but it's possible to refactor this
+so that there's minimal hardcoding involved and everything is generated based on the JS Objects. Doing it this way will make future updates easy as we will only need to update the JS Objects should
+there be menu changes.
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+View it live on Github Pages: [https://themisterkai.github.io/project-pizza/code/index.html](https://themisterkai.github.io/project-pizza/code/index.html)
