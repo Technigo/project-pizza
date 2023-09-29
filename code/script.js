@@ -30,6 +30,7 @@ const foodChoiceNum = prompt(
 );
 
 const foodChoice = foodChoices.find(choice => choice.key === foodChoiceNum)
+// if the number that the user entered is invalid, foodChoice will be undefined
 if (!foodChoice) {
   alert(`Invalid answer. Please select a number between 1 and ${foodChoices.length}`)
   exit(1)
@@ -55,6 +56,7 @@ const subtypeChoiceNumber = prompt(
 // Step 3.5 - Get the user's final choice
 // we get the user's final choice based on the selected food choice and subtype choice.
 const finalChoice = foodChoice.subchoice.find(choice => choice.key === subtypeChoiceNumber);
+// if the number that the user entered is invalid, finalChoice will be undefined
 if (!finalChoice) {
   alert(`Invalid ${foodChoice.name} type choice`)
   exit(1)
@@ -72,11 +74,12 @@ if (age < 0 || age > 150 || isNaN(age) && isNaN(parseFloat(age))) {
   exit(1)
 }
 const isAdult = age >= 18;
+const price = isAdult ? finalChoice.adultPrice.toFixed(2) : finalChoice.kidsPrice.toFixed(2);
 
 // Step 5 - Order confirmation
 const orderConfirmation = prompt(
   `One ${isAdult ? `adult` : `child`} sized ${finalChoice.name} ${foodChoice.name} will be prepared for you.
-That will be €${isAdult ? finalChoice.adultPrice.toFixed(2) : finalChoice.kidsPrice.toFixed(2)}. Are you sure you want to order this?
+That will be €${price}. Are you sure you want to order this?
 
     Enter a number to confirm:
     1 - Yes
@@ -86,7 +89,7 @@ That will be €${isAdult ? finalChoice.adultPrice.toFixed(2) : finalChoice.kids
 
 if (orderConfirmation === "1") {
   alert(`Thank you for your order! Your delicious ${finalChoice.name} ${foodChoice.name} will be prepared.
-Please prepare 💶€${isAdult ? finalChoice.adultPrice.toFixed(2) : finalChoice.kidsPrice.toFixed(2)}. See you soon 👋🏽`);
+Please prepare 💶€${price}. See you soon 👋🏽`);
 } else if (orderConfirmation === "2") {
   alert(`No problem, come back and order anytime you want.`);
 } else {
