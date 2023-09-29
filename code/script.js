@@ -58,8 +58,14 @@ if (!finalChoice) {
 const age = prompt(
   `Is this order for a child or an adult? Type your age:`
 )
-
+// validate the age. We only accept positive numeric values under 150
+if (age < 0 || age > 150 || isNaN(age) && isNaN(parseFloat(age))) {
+  alert(`Invalid age entered!`)
+  exit(1)
+}
 const isAdult = age >= 18;
+
+
 
 // Step 5 - Order confirmation
 const orderConfirmation = prompt(
