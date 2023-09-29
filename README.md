@@ -1,18 +1,16 @@
-# Project Name
+# Pizzeria
 
-This is Technigo's project for the first week. The premise is pretty simple, we have to create a 
+This is Technigo's project for the first week. The premise is pretty simple: we have to create a 
 pizzeria order page, getting the user's selection through JS prompts. 
 
 ## The problem
 
 There's a very simple way of doing this. We could just do a series of if/else statements and/or
-switch statements. I tried to make this a bit more complicated by storing the menu options in JS 
-Objects and dynamically generating the menu options.
-
-There's still a couple of things in this project that is hardcoded but it's possible to refactor this
-so that there's minimal hardcoding involved and everything is generated based on the JS Objects. Doing it this way will make future updates easy as we will only need to update the JS Objects should
-there be menu changes.
+switch statements. I wanted to not hardcode anything in the code, so I stored the menu choices in
+JS objects (stored in a separate file called variables.js). If we want to make changes to the menu,
+we only need to update the menu choices in the variables.js file and the code should still work
+as designed.
 
 ## View it live
 
-View it live on Github Pages: [https://themisterkai.github.io/project-pizza/code/index.html](https://themisterkai.github.io/project-pizza/code/index.html)
+This project is deployed on Github Pages: [https://themisterkai.github.io/project-pizza/code/index.html](https://themisterkai.github.io/project-pizza/code/index.html)
