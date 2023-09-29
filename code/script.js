@@ -6,14 +6,19 @@ alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 );
 
-const userName = prompt (
+const userName = prompt(
   `Please, type your name below and click 'OK' to continue.`
 );
 
-alert (`Hello ${userName}! Thank you for choosing us today - Click 'OK' to choose your meal of the day!`);
+alert (`Hello ${userName}! Thank you for visiting us today! - Click 'OK' to choose your meal.`);
 
 // Step 2 - Food choice
-// Your code goes here
+const foodType = prompt(
+  `Please choose one of the options below by typing the corresponding number:
+  1 - Pizza
+  2 - Pasta
+  3 - Salad`
+)
 
 // Step 3 - Subtype choice
 // Your code goes here
