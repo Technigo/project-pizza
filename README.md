@@ -15,4 +15,4 @@ there be menu changes.
 
 ## View it live
 
-https://themisterkai.github.io/project-pizza/code/index.html
+View it live on Github Pages: [https://themisterkai.github.io/project-pizza/code/index.html](https://themisterkai.github.io/project-pizza/code/index.html)
