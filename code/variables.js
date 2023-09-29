@@ -1,7 +1,7 @@
 const foodChoices = {
-  1: "Pizza",
-  2: "Pasta",
-  3: "Salad"
+  1: "Pizza 🍕",
+  2: "Pasta 🍝",
+  3: "Salad 🥗"
 };
 
 // Dynamically generate the food choices we have
@@ -28,12 +28,6 @@ const pizzaSubchoice = [{
   },
 ];
 
-// Dynamically generate the food choices we have
-let pizzaSubchoiceText = "\n";
-pizzaSubchoice.forEach(choice => {
-  pizzaSubchoiceText += `${choice.key} - ${choice.name} \n`;
-});
-
 const pastaSubchoice = [{
   key: "1",
   name: "Spaghetti Carbonara",
@@ -51,12 +45,6 @@ const pastaSubchoice = [{
   kidsPrice: 8
 },
 ];
-
-// Dynamically generate the food choices we have
-let pastaSubchoiceText = "\n";
-pastaSubchoice.forEach(choice => {
-pastaSubchoiceText += `${choice.key} - ${choice.name} \n`;
-});
 
 const saladSubchoice = [{
     key: "1",
@@ -81,13 +69,39 @@ const saladSubchoice = [{
   },
 ];
 
-// Dynamically generate the food choices we have
-let saladSubchoiceText = "\n";
-saladSubchoice.forEach(choice => {
-saladSubchoiceText += `${choice.key} - ${choice.name} \n`;
-});
+// Helper function to generate the subchoice options that we have.
+const getSubchoiceText = foodChoice => {
+  let subchoiceText = "\n";
+  let subchoice;
 
-const getChoice = (foodChoice, subtypeChoice) => {
+  // TODO: refactor
+  // There's probably a better way to do this instead of hardcoding
+  switch(foodChoices[foodChoice]) {
+    // pizza
+    case foodChoices["1"]:
+      subchoice = pizzaSubchoice;
+      break;
+    // pasta
+    case foodChoices["2"]:
+      subchoice = pastaSubchoice;
+      break;
+    // salad
+    case foodChoices["3"]:
+      subchoice = saladSubchoice;
+      break;
+  }
+  subchoice.forEach(choice => {
+    subchoiceText += `${choice.key} - ${choice.name} \n`;
+  });
+  return subchoiceText;
+}
+
+// Helper function to that will give us the final choice of the user based on the
+// food choice and subtype choice
+const getFinalChoice = (foodChoice, subtypeChoice) => {
+
+  // TODO: refactor
+  // There's probably a better way to do this instead of hardcoding
   switch(foodChoices[foodChoice]) {
     // pizza
     case foodChoices["1"]:
