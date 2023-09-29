@@ -73,7 +73,8 @@ That will be €${isAdult ? finalChoice.adultPrice.toFixed(2) : finalChoice.kids
 )
 
 if (orderConfirmation === "1") {
-  alert(`Thank you for your order! Your delicious ${finalChoice.name}  will be prepared. See you soon! 👋🏼`);
+  alert(`Thank you for your order! Your delicious ${finalChoice.name} ${foodChoices[foodChoice]} will be prepared.
+Please prepare 💶€${isAdult ? finalChoice.adultPrice.toFixed(2) : finalChoice.kidsPrice.toFixed(2)}. See you soon 👋🏽`);
 } else if (orderConfirmation === "2") {
   alert(`No problem, come back and order anytime you want.`);
 } else {
