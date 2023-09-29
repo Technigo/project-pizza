@@ -7,7 +7,7 @@ alert(
 );
 
 const userName = prompt(
-  `Please, type your name below and click 'OK' to continue.`
+  "Please, type your name below and click 'OK' to continue."
 );
 
 alert (`Hello ${userName}! Thank you for visiting us today! - Click 'OK' to choose your meal.`);
@@ -19,9 +19,29 @@ const foodType = prompt(
   2 - Pasta
   3 - Salad`
 )
+let foodSelection;
 
+if(foodType === "1") {
+  foodSelection = "Pizza";
+  alert(`Great! You have choosen ${foodSelection}!`)
+} else if(foodType === "2") {
+  foodSelection = "Pasta";
+  alert(`Great! You have choosen ${foodSelection}!`)
+} else if(foodType === "3") {
+  foodSelection = "Salad";
+  alert(`Great! You have choosen ${foodSelection}!`)
+} else {
+  alert("Invalid option, process ended. Bye!")
+}
 // Step 3 - Subtype choice
 // Your code goes here
+
+// const foodSubType;
+
+// switch (foodSubType) {
+//   case 1
+
+// }
 
 // Step 4 - Age
 // Your code goes here
