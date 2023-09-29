@@ -117,8 +117,9 @@ switch (true) {
   case userAge <= 16:
     userData.push("child", 10);
     break;
-  case userAge >= 16:
+  case userAge > 16:
     userData.push("adult", 15);
+    break;
   default:
     alert(`Invalid age choice. Please type a number`);
     exit(1);
