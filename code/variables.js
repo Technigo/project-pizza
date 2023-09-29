@@ -86,3 +86,17 @@ let saladSubchoiceText = "\n";
 saladSubchoice.forEach(choice => {
 saladSubchoiceText += `${choice.key} - ${choice.name} \n`;
 });
+
+const getChoice = (foodChoice, subtypeChoice) => {
+  switch(foodChoices[foodChoice]) {
+    // pizza
+    case foodChoices["1"]:
+      return pizzaSubchoice.find(choice => choice.key === subtypeChoice)
+    // pasta
+    case foodChoices["2"]:
+      return pastaSubchoice.find(choice => choice.key === subtypeChoice)
+    // salad
+    case foodChoices["3"]:
+      return saladSubchoice.find(choice => choice.key === subtypeChoice)
+  }
+}

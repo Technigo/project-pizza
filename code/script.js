@@ -21,8 +21,9 @@ const foodChoice = prompt(
   `
 )
 
-if (foodChoices[foodChoice] == undefined) {
-  alert(`Invalid answer. please select a number between 1 and ${Object.entries(foodChoices).length}`);
+if (!foodChoices[foodChoice]) {
+  alert(`Invalid answer. please select a number between 1 and ${Object.entries(foodChoices).length}`)
+  location.reload()
 } else {
   alert(`You've chosen ${foodChoices[foodChoice]} `)
 }
@@ -51,8 +52,37 @@ const subtypeChoice = prompt(
   `
 )
 
+const finalChoice = getChoice(foodChoice, subtypeChoice);
+
+if (!finalChoice) {
+  alert(`Invalid ${foodChoices[foodChoice]} type choice`)
+  location.reload()
+} else {
+  alert(`You've chosen ${finalChoice.name} ${foodChoices[foodChoice]}!`)
+}
+
 // Step 4 - Age
-// Your code goes here
+const age = prompt(
+  `Is this order for a child or an adult? Type your age:`
+)
+
+const isAdult = age >= 18;
 
 // Step 5 - Order confirmation
-// Your code goes here
+const orderConfirmation = prompt(
+  `One ${isAdult ? `adult` : `child`} sized ${finalChoice.name} ${foodChoices[foodChoice]} will be prepared for you.
+That will be €${isAdult ? finalChoice.adultPrice : finalChoice.kidsPrice}. Are you sure you want to order this?
+
+    Enter a number to confirm:
+    1 - Yes
+    2 - No
+  `
+)
+
+if (orderConfirmation === "1") {
+  alert(`Thank you for your order! Your delicious meal will be prepared. See you soon! 👋🏼`);
+} else if (orderConfirmation === "2") {
+  alert(`No problem, come back and order anytime you want.`);
+} else {
+  alert(`Invalid choice. Please select 1 for Yes or 2 for No.`)
+}
