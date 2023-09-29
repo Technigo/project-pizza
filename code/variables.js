@@ -1,15 +1,4 @@
-const foodChoices = {
-  1: "Pizza 🍕",
-  2: "Pasta 🍝",
-  3: "Salad 🥗"
-};
-
-// Dynamically generate the food choices we have
-let foodChoiceText = "\n";
-Object.entries(foodChoices).forEach(choice => {
-  foodChoiceText += `${choice[0]} - ${choice[1]} \n`;
-});
-
+// pizza menu sub choices
 const pizzaSubchoice = [{
     key: "1",
     name: "Margherita",
@@ -25,27 +14,46 @@ const pizzaSubchoice = [{
     name: "Pepperoni",
     adultPrice: 18,
     kidsPrice: 9
+  }, {
+    key: "4",
+    name: "Four Cheese",
+    adultPrice: 15,
+    kidsPrice: 7.5
+  },
+  {
+    key: "5",
+    name: "Hawaiian",
+    adultPrice: 17,
+    kidsPrice: 8.50
+  },
+  {
+    key: "6",
+    name: "Supreme Meat",
+    adultPrice: 21,
+    kidsPrice: 10.50
   },
 ];
 
+// pasta menu sub choices
 const pastaSubchoice = [{
-  key: "1",
-  name: "Spaghetti Carbonara",
-  adultPrice: 13,
-  kidsPrice: 6.50
-}, {
-  key: "2",
-  name: "Fettucini Alfredo",
-  adultPrice: 15,
-  kidsPrice: 7.50
-}, {
-  key: "3",
-  name: "Cheesy Tortellini",
-  adultPrice: 16,
-  kidsPrice: 8
-},
+    key: "1",
+    name: "Spaghetti Carbonara",
+    adultPrice: 13,
+    kidsPrice: 6.50
+  }, {
+    key: "2",
+    name: "Fettucini Alfredo",
+    adultPrice: 15,
+    kidsPrice: 7.50
+  }, {
+    key: "3",
+    name: "Cheesy Tortellini",
+    adultPrice: 16,
+    kidsPrice: 8
+  },
 ];
 
+// salad menu subchoices
 const saladSubchoice = [{
     key: "1",
     name: "Ceasar",
@@ -69,48 +77,18 @@ const saladSubchoice = [{
   },
 ];
 
-// Helper function to generate the subchoice options that we have.
-const getSubchoiceText = foodChoice => {
-  let subchoiceText = "\n";
-  let subchoice;
-
-  // TODO: refactor
-  // There's probably a better way to do this instead of hardcoding
-  switch(foodChoices[foodChoice]) {
-    // pizza
-    case foodChoices["1"]:
-      subchoice = pizzaSubchoice;
-      break;
-    // pasta
-    case foodChoices["2"]:
-      subchoice = pastaSubchoice;
-      break;
-    // salad
-    case foodChoices["3"]:
-      subchoice = saladSubchoice;
-      break;
-  }
-  subchoice.forEach(choice => {
-    subchoiceText += `${choice.key} - ${choice.name} \n`;
-  });
-  return subchoiceText;
-}
-
-// Helper function to that will give us the final choice of the user based on the
-// food choice and subtype choice
-const getFinalChoice = (foodChoice, subtypeChoice) => {
-
-  // TODO: refactor
-  // There's probably a better way to do this instead of hardcoding
-  switch(foodChoices[foodChoice]) {
-    // pizza
-    case foodChoices["1"]:
-      return pizzaSubchoice.find(choice => choice.key === subtypeChoice)
-    // pasta
-    case foodChoices["2"]:
-      return pastaSubchoice.find(choice => choice.key === subtypeChoice)
-    // salad
-    case foodChoices["3"]:
-      return saladSubchoice.find(choice => choice.key === subtypeChoice)
-  }
-}
+// main food category choices
+const foodChoices = [{
+    key: "1",
+    name: "Pizza 🍕",
+    subchoice: pizzaSubchoice,
+  }, {
+    key: "2",
+    name: "Pasta 🍝",
+    subchoice: pastaSubchoice,
+  }, {
+    key: "3",
+    name: "Salad 🥗",
+    subchoice: saladSubchoice,
+  },
+];
