@@ -4,7 +4,13 @@
 // Your code goes here
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
-)
+);
+
+const userName = prompt (
+  `Please, type your name below and click 'OK' to continue.`
+);
+
+alert (`Hello ${userName}! Thank you for choosing us today - Click 'OK' to choose your meal of the day!`);
 
 // Step 2 - Food choice
 // Your code goes here
