@@ -6,7 +6,9 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #0026ff;
+  background-image: url("/code/pizza_bg.jpg");
+  background-repeat: no-repeat;
+  background-color: #1b171b;
   color: white;
   display: flex;
   justify-content: center;
@@ -15,6 +17,14 @@ body {
   min-height: 100vh;
 }
 
-p {
-  font-size: 1.5em;
+#pizzeria-name {
+  margin-right: 30%;
+}
+
+@media only screen and (max-width: 600px) {
+  #pizzeria-name {
+    max-width: 0%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
