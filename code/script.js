@@ -44,7 +44,7 @@ function chooseSalad() {
 
 // Function to determine if food is for adult or child
 function determineAge(selectedFood, selectedFoodType) {
-  let age = parseInt(prompt("How old are you?"));
+  let age = parseInt(prompt("Is this food for a child or an adult? Type your age:"));
   if (!isNaN(age)) {
     if (age >= 18) {
       let adultAge = prompt(`One adult sized ${selectedFoodType} ${selectedFood} will be prepared for you. That will be 150 SEK. Are you sure you want to order this?\nEnter a number to confirm:\n1 - Yes\n2 - No`);
@@ -79,31 +79,27 @@ let selectedFoodType = null; // Variable to store selected food type
 welcomeMessage();
 
 let userName = getUserName();
-let selectedItems = []; // Array to store selected items
 
 if (userName !== null) {
   let foodChoice = chooseFood();
 
-  switch(foodChoice) {
+  switch (foodChoice) {
     case "1":
       alert("You've chosen pizza!");
       selectedFood = "Pizza";
       selectedFoodType = choosePizza(); // Store the selected pizza type
-      selectedItems.push("Pizza: " + selectedFoodType);
       break;
 
     case "2":
       alert("You've chosen Pasta");
       selectedFood = "Pasta";
       selectedFoodType = choosePasta(); // Store the selected pasta type
-      selectedItems.push("Pasta: " + selectedFoodType);
       break;
 
     case "3":
       alert("You've chosen Salad");
       selectedFood = "Salad";
       selectedFoodType = chooseSalad(); // Store the selected salad type
-      selectedItems.push("Salad: " + selectedFoodType);
       break;
 
     default:
