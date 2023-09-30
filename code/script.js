@@ -40,7 +40,7 @@ switch (foodChoice) {
         alert(`You have chosen ${subtypeChoices[1]} pizza`);
         break;
       case "3":
-        alert(`You have chosen ${subtypeChoices[0]} pizza`);
+        alert(`You have chosen ${subtypeChoices[2]} pizza`);
         break;
       default:
         alert("Invalid number! Please select between the numbers 1 and 3.");
