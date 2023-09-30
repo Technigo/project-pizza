@@ -1,6 +1,6 @@
 
 
-# Pizzaro
+# Pizzeria
 
 Pizza order
 
