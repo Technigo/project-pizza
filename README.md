@@ -2,7 +2,7 @@
 
 # Pizzeria
 
-Pizza order
+Pizza order in restaurant.
 
 ## The problem
 
