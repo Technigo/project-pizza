@@ -53,17 +53,20 @@ else {
   3 - Griego `);
 };
 
-
-
-
-
-
-
-
-
-
 // Step 4 - Age
 // Your code goes here
-
+let age = prompt("Is this food for a child or an adult? Type your age:");
+let adultOrChild="";
+let cost = "";
+if(parseInt(age)<18){
+adultOrChild = "child";
+cost = "10";
+}
+else{
+adultOrChild ="adult";
+cost = "15";
+}
+alert(`One ${adultOrChild} ${subTypeFood} ${nameFood} `);
+prompt();
 // Step 5 - Order confirmation
 // Your code goes here
