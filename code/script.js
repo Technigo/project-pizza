@@ -11,7 +11,7 @@ alert(
 const selectedFood = prompt(
   "What would you like to eat? 1 - Pizza, 2 - Pasta, 3 - Salad"
 );
-console.log("selectedFood name", selectedFoodName);
+
 // Step 3 - Subtype choice
 if (selectedFood === "1") {
   selectedFoodName = "pizza";
@@ -28,6 +28,9 @@ if (selectedFood === "1") {
     case "3":
       selectedSubtypeName = "Shrimp";
       break;
+    default:
+      alert("wrong!");
+      exit(1);
   }
 }
 
@@ -46,6 +49,9 @@ if (selectedFood === "2") {
     case "3":
       selectedSubtypeName = "cheese";
       break;
+    default:
+      alert("wrong!");
+      exit(1);
   }
 }
 if (selectedFood === "3") {
@@ -64,7 +70,15 @@ if (selectedFood === "3") {
     case "3":
       selectedSubtypeName = "bacon";
       break;
+    default:
+      alert("wrong!");
+      exit(1);
   }
+}
+
+if (selectedFood !== "1" && selectedFood !== "2" && selectedFood !== "3") {
+  alert("Try again!");
+  exit(1);
 }
 
 // Step 4 - Age
@@ -79,8 +93,10 @@ const confirmation = prompt(
 );
 if (confirmation === "1") {
   alert(`Thank you for your order!`);
-} else {
+} else if (confirmation === "2") {
   alert("I see, please reload the page to make a new order");
+} else {
+  alert("You'll have to start again (please follow the prompts!)");
 }
 
 //prompt: alert and save user input in a variable
