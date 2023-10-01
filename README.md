@@ -1,11 +1,17 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Project to build a JavaScript Pizzaria, to exercise concepts like variables, conditionals, and native methods, prompting and alerting the user
+in a simulation of a simple version of an online food order process.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Created the code entirely with prompt and alerts, using "if...else" and switch conditional statements. Innitialized steps 1-4, and after code
+was properly functional, after adding step 5, I also improved the code as possible, substituting part of previous codes to reduce code lines
+and logic.
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+Code deployed in Netlify 
+
+and available on GitHub in repository:
+https://github.com/vanessa-arruda/project-pizza
