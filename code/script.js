@@ -42,6 +42,7 @@ else
 
 // Step 3 - Subtype choice
 let subChoiceName
+let adultPrice, childPrice
 
 if (choiceName === "Pizza")
 {
@@ -50,12 +51,18 @@ if (choiceName === "Pizza")
   switch (pizzaType) {
     case "1":
       subChoiceName = "Vegetarian"
+      adultPrice = 100 
+      childPrice = 50
       break
     case "2":
       subChoiceName = "Fungi"
+      adultPrice = 95 
+      childPrice = 50
       break
     case "3":
       subChoiceName = "Falafel"
+      adultPrice = 85 
+      childPrice = 35
       break
     default:
       subChoiceName = "Invalid"
@@ -69,12 +76,18 @@ else if (choiceName === "Pasta")
   switch (pastaType) {
     case "1":
       subChoiceName = "Macaroni"
+      adultPrice = 60 
+      childPrice = 30
       break
     case "2":
       subChoiceName = "Spaghetti Carbonara"
+      adultPrice = 105 
+      childPrice = 50
       break
     case "3":
       subChoiceName = "Cheesy Italian"
+      adultPrice = 149 
+      childPrice = 60
       break
     default:
       subChoiceName = "Invalid"
@@ -88,12 +101,18 @@ else if (choiceName === "Salad")
   switch (saladType) {
     case "1":
       subChoiceName = "Greek"
+      adultPrice = 65 
+      childPrice = 30
       break
     case "2":
       subChoiceName = "Mexican"
+      adultPrice = 85 
+      childPrice = 40
       break
     case "3":
       subChoiceName = "Indian"
+      adultPrice = 75 
+      childPrice = 35
       break
     default:
       subChoiceName = "Invalid"
@@ -111,7 +130,19 @@ else
 }
 
 // Step 4 - Age
-// Your code goes here
+userQuestion = "Is this food for a child or adult? Please enter age: "
+const age = prompt(userQuestion)
+if (age >= 18)
+{
+ orderMessage = `One adult sized ${subChoiceName} ${choiceName.toLowerCase()} will be prepared for you. That'll be ${adultPrice} SEK`
+}
+else
+{
+  orderMessage = `One child sized ${subChoiceName} ${choiceName.toLowerCase()} will be prepared for you. That'll be ${childPrice} SEK`
+}
+
+userQuestion = `${orderMessage}. Are you sure you want to order this? Enter a number to confirm: \n 1 - Yes \n 2 - No`
+prompt(userQuestion)
 
 // Step 5 - Order confirmation
 // Your code goes here
