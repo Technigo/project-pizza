@@ -6,8 +6,8 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #0026ff;
-  color: white;
+  background: #dad1c4;
+  color: red;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,4 +17,8 @@ body {
 
 p {
   font-size: 1.5em;
+}
+
+img {
+  width: 25%;
 }
