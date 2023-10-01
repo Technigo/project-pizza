@@ -142,7 +142,18 @@ else
 }
 
 userQuestion = `${orderMessage}. Are you sure you want to order this? Enter a number to confirm: \n 1 - Yes \n 2 - No`
-prompt(userQuestion)
+const confirmationChoice = prompt(userQuestion)
 
 // Step 5 - Order confirmation
-// Your code goes here
+if (confirmationChoice === "1")
+{
+  alert(`Thankyou for your order! Your delicious meal will be prepared. See you soon!!`)
+}
+else if (confirmationChoice === "2")
+{
+  alert(`No worries! Comeback and order anytime soon!`)
+}
+else
+{
+  alert(`Invalid choice! Please choose between 1 or 2!`) 
+}
