@@ -93,13 +93,13 @@ let order_comfirmed
  if (age<=10){
   order_comfirmed = prompt(`one child sized ${food_subchoice} will be prepared for you.
     That will be 70SEK.Are you sure you want to order this?
-    enter a number to comfirm:
+enter a number to comfirm:
     1 - Yes
     2 - No`)
   }
   else{
     order_comfirmed = prompt(`One adult sized ${food_subchoice} will be prepared for you.
-    That will be 100SEK.Are you sure you want to order this?
+That will be 100SEK.Are you sure you want to order this?
     enter a number to comfirm:
     1 - Yes
     2 - No`)
@@ -109,3 +109,9 @@ let order_comfirmed
 
 // Step 5 - Order confirmation
 // Your code goes here
+if (order_comfirmed==1){
+  alert(`Thank you for your order! Your delicious meal will be prepared. See you soon! 👋🏼`)
+}
+else{
+  alert(`No problem, come back and order anytime you want.`)
+}
