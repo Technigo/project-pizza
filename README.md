@@ -11,7 +11,8 @@ and logic.
 
 ## View it live
 
-Code deployed in Netlify 
+Code deployed in Netlify
+https://main--boisterous-maamoul-65dee9.netlify.app/
 
 and available on GitHub in repository:
 https://github.com/vanessa-arruda/project-pizza
