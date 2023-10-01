@@ -1,11 +1,13 @@
-# Project Name
+Proyect pizza 
+the proyect was about an aplication where you can order food
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The problem was when to use const and let, how to use if else and alert and prompt.
+I started only with let and at the end I checked what variables was constant or not.
+If I had more time I would have used the switch technique
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+https://carolinas-pizzaplace.netlify.app/
+
