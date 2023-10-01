@@ -11,10 +11,40 @@ alert(
 const customerName = prompt('Please enter your name for your order:');
 
 //Alert to say hello to customer
-alert(`Hi there ${customerName}! What would you like to order?`);
+alert(`Hi there ${customerName}!`);
 
 // Step 2 - Food choice
 // Your code goes here
+
+//Asking the customer what food option the want.
+const foodOption = prompt(`What would you like to order?
+1 - Pizza 🍕
+2 - Pasta 🍝
+3 - Salad 🥗
+`);
+
+// Store the selected food in a variable
+let selectedFood = "";
+
+//Determine the costumer´s input of food option, type of food.
+if (foodOption === "1") {
+  selectedFood = "Pizza";
+} 
+else if (foodOption === "2") {
+  selectedFood = "Pasta";
+}
+else if (foodOption === "3") {
+  selectedFood = "Salad";
+}
+
+else {
+  alert("Option does not exist. Please try again and select your food option 👩🏼‍🍳");
+  exit(1);
+}
+
+// Display of costumer´s selected food
+alert(`You choose a ${selectedFood}`);
+
 
 // Step 3 - Subtype choice
 // Your code goes here
