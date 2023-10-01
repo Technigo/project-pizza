@@ -8,7 +8,7 @@ alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 );
 //Asking/prompt the customer to put in their name
-const customerName = prompt('Please enter your name for your order:');
+const customerName = prompt(`Please enter your name for your order:`);
 
 //Alert to say hello to customer
 alert(`Hi there ${customerName}!`);
@@ -157,6 +157,30 @@ switch (selectedFood) {
 
 // Step 4 - Age
 // Your code goes here
+const costumerAge = prompt(`Please enter if you are an Adult or a child:
+1 - Adult
+2 - Child
+`);
+
+let selectedAge = "";
+
+if (costumerAge === "1") {
+  selectedAge = "Adult";
+  price = 12;
+}
+else if(costumerAge === "2") {
+  selectedAge = "Child";
+  price = 6;
+}
+else { alert("Option does not exist. Please try again 👩🏼‍🍳");
+exit(1);}
+
+alert(`You are an or a ${selectedAge} and pay $ ${price} for the food, thank you!`);
+
+
+
+
+
 
 // Step 5 - Order confirmation
 // Your code goes here
