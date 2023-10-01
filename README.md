@@ -1,11 +1,11 @@
-# Project Name
+# Virtual Pizzaria
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This is a web application that allows users to order pizza, pasta and burger online. The user can choose the type of food and as per their age the child meal/adult meal will be served.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I tried to solve it by myself first and then google and ChatGPT helped me to find bugs in my code. If I had more time I think I would have make and addition for drinks and dessert option as well and may be some logic about giving tips for the service. 
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+https://poetic-jelly-e09bc4.netlify.app/
