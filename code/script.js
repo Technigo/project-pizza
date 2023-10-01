@@ -1,6 +1,6 @@
 // Step 1 - Welcome and introduction
 alert(`
-  🍕 Welcome to Petra's Pizzeria 🍕
+  🍕 Welcome to Mamma Mia Pizzeria 🍕
          Click 'OK' to order food`);
 
 let customerName = prompt("Please enter your name:");
