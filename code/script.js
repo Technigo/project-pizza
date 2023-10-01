@@ -4,8 +4,6 @@ alert("Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin
 var name = prompt("What is your name?");
 alert("Hi, " + name + "!");
 
-// Food price
-
 let pizzacost = 20
 let pastacost = 30
 let saladcost = 40
@@ -77,10 +75,12 @@ var pizzaChoice = prompt("What pizza would you like to order?\n1. Margherita\n2.
   alert("Invalid choice. Please refresh and select a number between 1 and 3.");
 }
 
-// Age
+// Age & cost
 var age = prompt("Is this food for a child or an adult? Type your age:");
 if (age < 18) {
   cost *= 0.95;
+  
+  // Order confirmation
   
  var confirmation = prompt("One child size " + ordermessage + " will be prepared for you. That'll be €" + cost + "\nAre you sure you want to order this?\nEnter a number to confirm:\n1. Yes\n2. No");
 
@@ -98,3 +98,7 @@ if (age < 18) {
       alert("We are sorry to see you leave. Come back anytime you want.");
     }
   }
+
+ 
+
+
