@@ -25,18 +25,13 @@ if (food_choice == 1) {
   3 - Hawaian`)
   if(food_subchoice==1){
     alert(`you have choosen Margarita`)
-  }
-  else if(food_subchoice==2){
+  } else if(food_subchoice==2){
     alert(`you have choosen Pepperonni`)
-  }
-  else if(food_subchoice==3){
+  } else if(food_subchoice==3){
     alert(`you have choosen Hawaian`)
-  }
-  else {
+  } else {
   alert(`Invalid pizza type choice.`)
   }
-
-
 } else if (food_choice == 2) {
   alert(`You have chosen Pasta`)
   food_subchoice = prompt(`Select a pasta type:
@@ -93,6 +88,24 @@ if (food_choice == 1) {
 
 // Step 4 - Age
 // Your code goes here
+age = prompt(`Is this food for a child or an adult? Type your age:`)
+let order_comfirmed
+ if (age<=10){
+  order_comfirmed = prompt(`one child sized ${food_subchoice} will be prepared for you.
+    That will be 70SEK.Are you sure you want to order this?
+    enter a number to comfirm:
+    1 - Yes
+    2 - No`)
+  }
+  else{
+    order_comfirmed = prompt(`One adult sized ${food_subchoice} will be prepared for you.
+    That will be 100SEK.Are you sure you want to order this?
+    enter a number to comfirm:
+    1 - Yes
+    2 - No`)
+  }
+
+
 
 // Step 5 - Order confirmation
 // Your code goes here
