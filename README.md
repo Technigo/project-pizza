@@ -12,4 +12,4 @@ If I had more time (and knowledge) I would probably create some kind of loop to 
 
 ## View it live
 
-https://sarahosterhed.se/project-pizza/code/
+https://eclectic-salamander-d1891d.netlify.app/
