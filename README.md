@@ -1,11 +1,13 @@
-# Project Name
+# Build a JavaScript Pizzeria
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week's project is to build a website where you can order food by clicking through a number of choices. If the order goes well, the procedure ends with the user confirming or canceling the order.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Alerts and prompts are used to interact with the user, information about the user's choices is saved in variables.
+Depending on the choices the user makes, the order flow takes different paths, this is handled with conditional statements such as switch and if statements.
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+You can try ordering food yourself here:
+https://mammamia-pizzeria.netlify.app/
