@@ -85,7 +85,6 @@ if (selectedFood !== "1" && selectedFood !== "2" && selectedFood !== "3") {
 const age = prompt("Please write the age of the person the order is for: ");
 
 age >= 13 ? (ageCategory = "adult") : (ageCategory = "kids");
-console.log("selectedFood name", selectedFoodName);
 
 // Step 5 - Order confirmation
 const confirmation = prompt(
