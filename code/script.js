@@ -6,6 +6,10 @@ alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
 
+let userQuestion = "Please enter your name:"
+const userName = prompt(userQuestion)
+alert(`Hi ${userName}!`)
+
 // Step 2 - Food choice
 // Your code goes here
 
