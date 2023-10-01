@@ -41,7 +41,74 @@ else
 }
 
 // Step 3 - Subtype choice
-// Your code goes here
+let subChoiceName
+
+if (choiceName === "Pizza")
+{
+  userQuestion = "Select a Pizza type.\n Enter a number: \n 1 - Vegetarian \n 2 - Fungi \n 3 - Falafel"
+  const pizzaType = prompt(userQuestion)
+  switch (pizzaType) {
+    case "1":
+      subChoiceName = "Vegetarian"
+      break
+    case "2":
+      subChoiceName = "Fungi"
+      break
+    case "3":
+      subChoiceName = "Falafel"
+      break
+    default:
+      subChoiceName = "Invalid"
+      break
+  } 
+}
+else if (choiceName === "Pasta")
+{
+  userQuestion = "Select a Pasta type.\n Enter a number: \n 1 - Macaroni \n 2 - Spaghetti Carbonara \n 3 - Cheesy Italian"
+  const pastaType = prompt(userQuestion)
+  switch (pastaType) {
+    case "1":
+      subChoiceName = "Macaroni"
+      break
+    case "2":
+      subChoiceName = "Spaghetti Carbonara"
+      break
+    case "3":
+      subChoiceName = "Cheesy Italian"
+      break
+    default:
+      subChoiceName = "Invalid"
+      break
+  } 
+}
+else if (choiceName === "Salad")
+{
+  userQuestion = "Select a Salad type.\n Enter a number: \n 1 - Greek \n 2 - Mexican \n 3 - Indian"
+  const saladType = prompt(userQuestion)
+  switch (saladType) {
+    case "1":
+      subChoiceName = "Greek"
+      break
+    case "2":
+      subChoiceName = "Mexican"
+      break
+    case "3":
+      subChoiceName = "Indian"
+      break
+    default:
+      subChoiceName = "Invalid"
+      break
+  } 
+}
+
+if (subChoiceName === "Invalid")
+{
+  alert(`Invalid choice! Please choose between 1 - 3!`)
+}
+else
+{
+  alert(`You've chosen ${subChoiceName}!`)
+}
 
 // Step 4 - Age
 // Your code goes here
