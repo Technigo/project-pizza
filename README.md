@@ -8,4 +8,4 @@ I was using switch to jump between options and if/else to check if data is ready
 
 ## View it live
 
-
+https://scintillating-youtiao-d56c34.netlify.app/
