@@ -1,6 +1,8 @@
 # Project Name
+Javascript Pizzeria
+The goal was to create a service to order food with three different options and subtypes of those options
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+//Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
