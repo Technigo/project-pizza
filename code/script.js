@@ -60,13 +60,16 @@ let adultOrChild="";
 let cost = "";
 if(parseInt(age)<18){
 adultOrChild = "child";
-cost = "10";
+cost = "€10";
 }
 else{
 adultOrChild ="adult";
-cost = "15";
+cost = "€15";
 }
-alert(`One ${adultOrChild} ${subTypeFood} ${nameFood} `);
-prompt();
+alert(`One ${adultOrChild} sized ${subTypeFood} ${nameFood} will be prepared for you. That will be ${cost}`);
+prompt(`Are you sure you want to order this?
+Enter a number to confirm:
+1 - Yes
+2 - No` );
 // Step 5 - Order confirmation
 // Your code goes here
