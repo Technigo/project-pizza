@@ -12,4 +12,4 @@ Are you starting to get hungry? Come visit us!
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+<a href="https://brilliant-hamster-b3df75.netlify.app/code/index.html">Gustino Pizzeria</a
