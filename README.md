@@ -12,4 +12,4 @@ Are you starting to get hungry? Come visit us!
 
 ## View it live
 
-<a href="https://brilliant-hamster-b3df75.netlify.app/code/index.html">Gustino Pizzeria</a
+<a href="https://brilliant-hamster-b3df75.netlify.app/code/index.html">Gustino Pizzeria</a>
