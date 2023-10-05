@@ -43,72 +43,13 @@ else {
 }
 
 // Display of costumer´s selected food
-alert(`You choose a ${selectedFood}`);
+alert(`You choose a ${selectedFood}!`);
 
 
 // Step 3 - Subtype choice
 // Your code goes here
 
-const foodDish = prompt(
-  `Please enter the number of your food order:
-
-Pizza:
-  1 - Quattro Stagioni
-  2 - Capricciosa
-  3 - Siciliana
-
-Pasta: 
-  4 - Spaghetti Carbonara
-  5 - Shrimp Alfredo
-  6 - Spaghetti Bolognese
-
-Salad:
-  7 - Cobb Salad
-  8 - Ceaser Salad
-  9 - Salad Caprese
-`);
-
-
-let foodName = "";
-
-if (foodDish === "1") {
-  foodName = "Quattro Stagioni";
-}
-else if (foodDish === "2") {
-  foodName = "Capricciosa";
-}
-else if (foodDish === "3") {
-  foodName = "Siciliana";
-}
-else if (foodDish === "4") {
-  foodName = "Spaghetti Carbonara";
-}
-else if (foodDish === "5") {
-  foodName = "Shrimp Alfredo";
-}
-else if (foodDish === "6") {
-  foodName = "Spaghetti Bolognese";
-}
-else if (foodDish === "7") {
-  foodName = "Cobb Salad";
-}
-else if (foodDish === "8") {
-  foodName = "Ceaser Salad";
-}
-else if (foodDish === "9") {
-  foodName = "Salad Caprese";
-}
-
-else {
-  alert("Option does not exist. Please try again and select your food option 👩🏼‍🍳");
-  exit(1);
-}
-
-alert(`You picked ${foodName}`);
-
-
-
-/*
+// Here the customer get to choose different foodType depending on their selectedFood.
 let foodType = "";
 let foodName = [];
 
@@ -151,36 +92,50 @@ switch (selectedFood) {
     default: 
     alert("Option does not exist. Please try again and select your food option 👩🏼‍🍳");
     exit(1);
-}*/
+    }
 
-
+alert(`You have selected ${foodName[parseInt(foodType)-1]}!`);
 
 // Step 4 - Age
 // Your code goes here
-const costumerAge = prompt(`Please enter if you are an Adult or a child:
-1 - Adult
-2 - Child
+
+// Determening the age of the customer and how much they should pay based on their age.
+const costumerAge = prompt(`Is this food for a child or an adult? Type your age:
 `);
 
 let selectedAge = "";
 
-if (costumerAge === "1") {
+if (costumerAge >= 18) {
   selectedAge = "Adult";
   price = 12;
 }
-else if(costumerAge === "2") {
+else if(costumerAge < 18) {
   selectedAge = "Child";
   price = 6;
 }
 else { alert("Option does not exist. Please try again 👩🏼‍🍳");
 exit(1);}
 
-alert(`You are an or a ${selectedAge} and pay $ ${price} for the food, thank you!`);
-
-
-
-
 
 
 // Step 5 - Order confirmation
 // Your code goes here
+
+//Comfirmation of customers order
+const orderConfirmation = prompt(`One ${selectedAge} sized ${foodName[parseInt(foodType)-1]} will be prepared for you. That will be $${price}. Would you like to place this order?
+    Enter a number to confirm:
+    1 - Yes
+    2 - No`);
+
+if (orderConfirmation === "1") {
+  alert(`Thank you for your order! Your meal is being prepared. Enjoy your meal!`);
+} 
+else if (orderConfirmation === "2") {
+  alert(`Your order has been canceled.Welcome back to order another time.`);
+}
+else {
+  alert(`Invalid choice. Please choose 1 for Yes or 2 for No.`);
+}
+
+
+
