@@ -1,11 +1,16 @@
-# Project Name
+# Virtual Pizza Place 
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment for this project was to build a program that based on the user´s input would determine the chosen food type and based on age create the appropriate order for a child or adult.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I approached this project step by step by using the comments to guide me. 
+To interact with the user I used function calls prompt() and alert(). 
+To make decisions based on the user´s input I used conditional statements 'if-else' and a 'switch'
+
+If I had more time I would have made the user interface more visually appealing and user-friendly. 
+Also implemented more error handling and validation.
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+https://main--pernilla-sterner.netlify.app/)https://main--pernilla-sterner.netlify.app/
