@@ -5,36 +5,37 @@ alert(
   "Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin."
 );
 const userName = prompt(
-  "Please, type your name below and click 'OK' to continue."
+  "Please, type your name below and click 'OK' to continue.😊"
 );
 if(!userName){
-  alert("Sorry, but we need a name to register the order. Please come back when you are ready.")
+  alert("😵 Sorry, but we need a name to register the order. Please come back when you are ready.")
   exit(1);
 }
 alert(
-  `Hello, ${userName}! The order will be registered now. Click 'OK' and follow the steps to choose your meal.`
+  `Hello, ${userName}! The order will be registered now. 👍 
+  Click 'OK' and follow the steps to choose your meal.`
 );
 // Step 2 - Food choice
 const foodType = prompt(
   `Select one of the options below by typing the corresponding number:
-  1 - Pizza
-  2 - Pasta
-  3 - Salad`
+  1 - Pizza 🍕
+  2 - Pasta 🍝
+  3 - Salad 🥗`
 )
 let foodSelection = "";
 
 switch (foodType){
   case "1":
     foodSelection = "pizza";
-    alert(`Great choice! You selected ${foodSelection}.`);
+    alert(`Great choice!👍 You selected ${foodSelection}.`);
     break;
   case "2":
     foodSelection = "pasta";
-    alert(`Mamma Mia! Great choice! You selected ${foodSelection}.`);
+    alert(`Mamma Mia! 🤌 Great choice! You selected ${foodSelection}.`);
     break;
   case "3":
     foodSelection = "salad";
-    alert(`You selected ${foodSelection}. Something fresh and light, right?`);
+    alert(`You selected ${foodSelection}. Something fresh and light, right? 👌`);
     break;
   default:
     alert("Invalid option, process ended. Please start again when you want. Bye! 👋")
@@ -75,15 +76,14 @@ switch (foodSelection){
     );
     subTypeSelection = ["Caesar Salad", "Greek Salad", "Coleslaw"];
     break;
-  default:
-    alert("Invalid option, process ended. Please start again when you want. Bye! 👋");
-    exit(1);
 }
-
-alert(`You have selected ${subTypeSelection[parseInt(foodSubType) - 1]}!`);
-
+if(foodSubType >= 1 && foodSubType <= 3){
+  alert(`You have selected ${subTypeSelection[parseInt(foodSubType) - 1]}!`);
+} else {
+  alert(`Invalid option, process ended. Please start again when you want. Bye! 👋`);
+  exit(1);
+}
 // Step 4 - Age | Portion Size
-
 //portion price variables
 const adultPortionFee = 169;
 const childPortionFee = 99;
@@ -92,8 +92,8 @@ let portionFeeSelection = 0;
 //portion size code
 let portionSize = prompt(
   `Which meal size do you want?
-  1 - adult portion
-  2 - child portion
+  1 - adult portion 🧔‍♂️
+  2 - child portion 👶
   Please, type the corresponding number.`
 );
 
@@ -105,6 +105,7 @@ if(portionSize === "1"){
   portionFeeSelection = childPortionFee;
 } else {
   alert("Invalid option, process ended. Please start again when you want. Bye! 👋")
+  exit(1);
 }
 //evaluate order choices and alert specific response according to it
 
@@ -113,12 +114,12 @@ alert(`The order is ${subTypeSelection[parseInt(foodSubType) - 1]} in ${portionS
 // Step 5 - Order confirmation
 const portionConfirmation = prompt(
   `Do you confirm everything is correct and that you wish to proceed?
-  1 - Yes
-  2 - No`
+  1 - Yes 👍
+  2 - No 👎`
 );
 
 if(portionConfirmation === "1"){
-  alert("Great! Order confirmed. Thank you. We'll start preparing your meal right now.")
+  alert("Great!🎉 Order confirmed 👍. Thank you. We'll start preparing your meal right now. 🕚")
 } else {
-  alert(`Order not confirmed. We hope to have you back when you are ready. Process ended now. Bye!👋`);
+  alert(`Order not confirmed.👎 We hope to have you back when you are ready. Process ended now. Bye!👋`);
 }
