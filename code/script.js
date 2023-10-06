@@ -53,7 +53,7 @@ if (selectedFoodName === "pizza") {
   }
 }
 
-if (selectedFoodName === "Pasta") {
+if (selectedFoodName === "pasta") {
   selectedSubtype = prompt(
     `Good choice with the ${selectedFoodName}! \n What would you like on your pasta? Please enter a number: \n 1 - Meat \n 2 - Vegetables \n 3 - Cheese`
   );
@@ -102,9 +102,17 @@ alert(`You have chosen ${selectedFoodName} with ${selectedSubtypeName}!`);
 // Step 4 - Age
 const age = prompt("Please write the age of the person the order is for: ");
 
-age >= 13
-  ? (ageCategory = "adult") && (price = 200)
-  : (ageCategory = "kids") && (price = 100);
+//if no age -> error
+if (!age) {
+  alert("Invalid - please enter age");
+  exit(1);
+} else if (age >= 13) {
+  ageCategory = "adult";
+  price = 200;
+} else {
+  ageCategory = "kids";
+  price = 100;
+}
 
 // Step 5 - Order confirmation
 const confirmation = prompt(
