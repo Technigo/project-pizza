@@ -14,24 +14,25 @@ const pizzaSubchoice = [{
     name: "Pepperoni",
     adultPrice: 18,
     kidsPrice: 9
-  }, {
-    key: "4",
-    name: "Four Cheese",
-    adultPrice: 15,
-    kidsPrice: 7.5
   },
-  {
-    key: "5",
-    name: "Hawaiian",
-    adultPrice: 17,
-    kidsPrice: 8.50
-  },
-  {
-    key: "6",
-    name: "Supreme Meat",
-    adultPrice: 21,
-    kidsPrice: 10.50
-  },
+  // {
+  //   key: "4",
+  //   name: "Four Cheese",
+  //   adultPrice: 15,
+  //   kidsPrice: 7.5
+  // },
+  // {
+  //   key: "5",
+  //   name: "Hawaiian",
+  //   adultPrice: 17,
+  //   kidsPrice: 8.50
+  // },
+  // {
+  //   key: "6",
+  //   name: "Supreme Meat",
+  //   adultPrice: 21,
+  //   kidsPrice: 10.50
+  // },
 ];
 
 // pasta menu sub choices
@@ -69,12 +70,13 @@ const saladSubchoice = [{
     name: "Waldorf",
     adultPrice: 14,
     kidsPrice: 7
-  }, {
-    key: "4",
-    name: "Caprese",
-    adultPrice: 10.50,
-    kidsPrice: 5.25
   },
+  // {
+  //   key: "4",
+  //   name: "Caprese",
+  //   adultPrice: 10.50,
+  //   kidsPrice: 5.25
+  // },
 ];
 
 // main food category choices
