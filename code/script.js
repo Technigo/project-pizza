@@ -116,7 +116,7 @@ if (!age) {
 
 // Step 5 - Order confirmation
 const confirmation = prompt(
-  `You've ordered the ${ageCategory} order of ${selectedFoodName} with ${selectedSubtypeName}. That will be ${price} SEK \n Please confirm: \n 1 - OK \n 2 - Not what I wanted `
+  `You've ordered the ${ageCategory} order of ${selectedFoodName} with ${selectedSubtypeName}. \nThat will be ${price} SEK. \n Please confirm: \n 1 - OK \n 2 - Not what I wanted `
 );
 if (confirmation === "1") {
   alert(`Thank you for your order, ${userName}!`);
