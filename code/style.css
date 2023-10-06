@@ -5,10 +5,9 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  background-image: url('./images/pexels-natasha-filippovskaya-4394612.jpg');
-  background-position: center;
-  background-size: cover;
+  font-family: "Montserrat", sans-serif; 
+  background-color: #c4541f;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
