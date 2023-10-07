@@ -13,4 +13,4 @@ Also implemented more error handling and validation.
 
 ## View it live
 
-https://main--pernilla-sterner.netlify.app/)https://main--pernilla-sterner.netlify.app/
+https://development--technigo-project-library.netlify.app/
