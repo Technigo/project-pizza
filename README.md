@@ -9,3 +9,11 @@ Describe how you approached to problem, and what tools and techniques you used t
 ## View it live
 
 Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+
+## Adding my deployed version:
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ebd293d6-eb54-4422-961f-1c65b0d6d631/deploy-status)](https://app.netlify.com/sites/effervescent-pegasus-3e979d/deploys) 
+
+http://127.0.0.1:5500/project-pizza/code/
+
+
