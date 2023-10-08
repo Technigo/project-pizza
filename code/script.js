@@ -13,56 +13,73 @@ alert(
 )
 // Step 2 - Food choice
 
-let foodChoice = prompt("What would you like to order? For Pizza enter 1. For Pasta enter 2. For Salad enter 3.")
-
-if (foodChoice == 1) {
-  alert(
-    `You have ordered pizza!`
-  )
-} else if (foodChoice == 2) {
-  alert(
-    `You have ordered Pasta!`
-  )
-} else if (foodChoice == 3) {
-  alert(
-    `You have ordered Salad!`
-  )
+const foodChoice = prompt("What would you like to order? For Pizza enter 1. For Pasta enter 2. For Salad enter 3.");
+let selectedFood = "";
+console.log(foodChoice);
+if (foodChoice === "1") {
+  selectedFood = "Pizza";
+} else if (foodChoice === "2") {
+  selectedFood = "Pasta";
+} else if (foodChoice === "3") {
+  selectedFood = "Salad";
 } else {
   alert(
     `You haven't ordered any food!`
-  )
+  );
+  exit(1);
 };
+
+alert(
+  `You have ordered ${selectedFood}!`
+)
 
 // Step 3 - Subtype choice
 
-let subQuestion= "What would you like to order with your"
-if (foodChoice == 1) {
-  let subChoice = prompt(`${subQuestion} pizza? Choices: Coke. Pizza salad. Bread`)
-    alert(`You ordered ${subChoice} with your pizza.`);
- } else if (foodChoice == 2) {
-  subChoice = prompt(`${subQuestion} pasta? Choices: Coke. Side salad. Bread`)
-    alert(`You ordered ${subChoice} with your pasta.`);
- } else if (foodChoice == 3) {
-  subChoice = prompt(`${subQuestion} salad? Choices: Coke. Bread. Hummus.`)
-  alert(`You ordered ${subChoice} with your salad.`);
+alert(`What would you like to order with your ${selectedFood}?`);
+let subChoice;
+if (selectedFood === "Pizza") {
+subChoice = prompt("Choices: Coke. Pizza salad. Bread");
+if (subChoice === null || subChoice === "") {
+  alert("You didn't order a side");
+ } else {
+    alert(`You ordered ${subChoice} with your pizza.`);}
+ } else if (selectedFood === "Pasta") {
+  subChoice = prompt("Choices: Coke. Side salad. Bread");
+  if (subChoice === null || subChoice === "") {
+    alert("You didn't order a side");
+   } else {
+    alert(`You ordered ${subChoice} with your pasta.`);}
+ } else if (selectedFood === "Salad") {
+  subChoice = prompt("Choices: Coke. Bread. Hummus.");
+  if (subChoice === null || subChoice === "") {
+    alert("You didn't order a side");
+   } else {
+  alert(`You ordered ${subChoice} with your salad.`);}
  };
+
 
 // Step 4 - Age
 let age = prompt(`Is the food order intended for an adult or child? Enter 1 for adult. Enter 2 for child.`)
-if (age == 1) {
-  alert(`You ordered an adult sized meal`);
+let size = "";
+if (age === "1") {
+  size = "adult";
+  alert(`You ordered an ${size} sized meal`);
+} else if (age === "2") {
+  size = "child";
+  alert(`You ordered an ${size} sized meal`);
 } else {
-  alert(`You ordered an child sized meal`);
+  alert(`You didn't pick the size of the meal. Please try again to order.`);
+  exit(1);
 };
+
 
 // Step 5 - Order confirmation
 // Your code goes here
 
-alert(`Thank you for your order:
- Food: ${foodChoice} 
- Sides: ${subChoice}
- Size: ${age == 1 ? 'Adult' : 'Child'}
- 
- We are now preparing your food. Hope to see you again soon`);
+  alert(`Thank you for your order:
+  Food: ${selectedFood} 
+  Sides: ${subChoice !== "" ? subChoice : "No sides"}
+  Size: ${size}
+  `);
 
 
