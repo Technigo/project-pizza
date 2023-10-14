@@ -72,15 +72,11 @@ function determineAge(selectedFood, selectedFoodType) {
   }
 }
 
+
 let selectedFood = null; // Variable to store selected food
 let selectedFoodType = null; // Variable to store selected food type
 
-// Main execution
-welcomeMessage();
-
-let userName = getUserName();
-
-if (userName !== null) {
+function foodSelection() {
   let foodChoice = chooseFood();
 
   switch (foodChoice) {
@@ -104,7 +100,19 @@ if (userName !== null) {
 
     default:
       alert("Invalid choice. Please enter 1, 2, or 3.");
+      foodSelection();
   }
+}
 
-  determineAge(selectedFood, selectedFoodType); // Pass selectedFood and selectedFoodType
+// Main execution
+welcomeMessage();
+
+let userName = getUserName();
+
+if (userName !== null) {
+  foodSelection();
+
+  if (selectedFood !== null) {
+    determineAge(selectedFood, selectedFoodType); // Pass selectedFood and selectedFoodType
+  }
 }
