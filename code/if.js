@@ -33,25 +33,18 @@ let courseChoice = prompt(
 );
 
 // Check if user input is valid and assign appropriate food type name to the courseChoice variable based on the users choice
-switch (courseChoice.toLowerCase()) {
-  case ("1"):
-  case ("starter"):
-    courseChoice = "starter";
-    break;
-  case ("2"):
-  case ("main"):
-    courseChoice = "main";
-    break;
-  case ("3"):
-  case ("dessert"):
-    courseChoice = "dessert";
-    break;
-  default:
-    alert(
-      `You entered an invalid selection.
-      Please start again by refreshing the page.`
-    );
-    exit(1);
+if ((courseChoice === "1") || (courseChoice.toLowerCase() === "starter")) {
+  courseChoice = "starter";
+} else if ((courseChoice === "2") || (courseChoice.toLowerCase() === "main")) {
+  courseChoice = "main";
+} else if ((courseChoice === "3") || (courseChoice.toLowerCase() === "dessert")) {
+  courseChoice = "dessert";
+} else {
+  alert(
+    `You entered an invalid selection.
+    Please start again by refreshing the page.`
+  );
+  exit(1);
 }
 
 alert(`Let me get you the ${courseChoice} menu...`);
@@ -64,29 +57,25 @@ let foodOption3;
 
 // Depending on the users previous input assign appropriate names to the variables for their available options
 // This step could be combined into the previous step
-switch (courseChoice) {
-  case ("starter"):
-    foodOption1 = "Salad";
-    foodOption2 = "Bread";
-    foodOption3 = "Cheese";
-    break;
-  case ("main"):
-    foodOption1 = "Pizza";
-    foodOption2 = "Pasta";
-    foodOption3 = "Salad";
-    break;
-  case ("dessert"):
-    foodOption1 = "Ice cream";
-    foodOption2 = "Cake";
-    foodOption3 = "Jelly";
-    break;
-  default:
-    // This else statement is optional as the variable should be a valid one as if it has got this far as it should have had a valid variable assigned in the previous step
-    alert(
-      `You entered an invalid selection.
-      Please start again by refreshing the page.`
-    );
-    exit(1);
+if (courseChoice === "starter") {
+  foodOption1 = "Salad";
+  foodOption2 = "Bread";
+  foodOption3 = "Cheese";
+} else if (courseChoice === "main") {
+  foodOption1 = "Pizza";
+  foodOption2 = "Pasta";
+  foodOption3 = "Salad";
+} else if (courseChoice === "dessert") {
+  foodOption1 = "Ice cream";
+  foodOption2 = "Cake";
+  foodOption3 = "Jelly";
+} else {
+  // This else statement is optional as the variable should be a valid one as if it has got this far as it should have had a valid variable assigned in the previous step
+  alert(
+    `You entered an invalid selection.
+    Please start again by refreshing the page.`
+  );
+  exit(1);
 }
 
 let foodChoice = prompt(
@@ -98,25 +87,18 @@ let foodChoice = prompt(
 );
 
 // Check the users choice and assign an appropriate name for the variable of their choice
-switch (foodChoice.toLowerCase()) {
-  case ("1"):
-  case (foodOption1.toLowerCase()):
-    foodChoice = foodOption1.toLowerCase();
-    break;
-  case ("2"):
-  case (foodOption2.toLowerCase()):
-    foodChoice = foodOption2.toLowerCase();
-    break;
-  case ("3"):
-  case (foodOption3.toLowerCase()):
-    foodChoice = foodOption3.toLowerCase();
-    break;
-  default:
-    alert(
-      `You entered an invalid selection.
-      Please start again by refreshing the page.`
-    );
-    exit(1);
+if ((foodChoice === "1") || (foodChoice.toLowerCase() === foodOption1.toLowerCase())) {
+  foodChoice = foodOption1.toLowerCase();
+} else if ((foodChoice === "2") || (foodChoice.toLowerCase() === foodOption2.toLowerCase())) {
+  foodChoice = foodOption2.toLowerCase();
+} else if ((foodChoice === "3") || (foodChoice.toLowerCase() === foodOption3.toLowerCase())) {
+  foodChoice = foodOption3.toLowerCase();
+} else {
+  alert(
+    `You entered an invalid selection.
+    Please start again by refreshing the page.`
+  );
+  exit(1);
 }
 
 alert(`Some ${foodChoice}, a fine choice!`);
