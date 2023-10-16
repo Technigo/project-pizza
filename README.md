@@ -8,4 +8,4 @@ I tried to solve it by myself first and then google and ChatGPT helped me to fin
 
 ## View it live
 
-https://poetic-jelly-e09bc4.netlify.app/
+virtual-pizzaria-priya.netlify.app
