@@ -26,16 +26,23 @@ let typeOfFood = prompt(
 
 let selectedFoodType = "";
 
-if (typeOfFood === "1" || typeOfFood.toLowerCase() === "pizza") {
-  selectedFoodType = "Pizza";
-} else if (typeOfFood === "2" || typeOfFood.toLowerCase() === "pasta") {
-  selectedFoodType = "Pasta";
-} else if (typeOfFood === "3" || typeOfFood.toLowerCase() === "salad") {
-  selectedFoodType = "Salad";
-} else {
-  alert(`You didn't choose anything from the list ${userName}, please start over and try again.
+switch (typeOfFood.toLowerCase()) {
+  case "1":
+  case "pizza":
+    selectedFoodType = "Pizza";
+    break;
+  case "2":
+  case "pasta":
+    selectedFoodType = "Pasta"
+    break;
+  case "3":
+  case "salad":
+    selectedFoodType = "Salad"
+    break;
+  default:
+    alert(`You didn't choose anything from the list ${userName}, please start over and try again.
     `);
-  exit(1);
+    exit(1);
 }
 
 
@@ -89,12 +96,28 @@ switch (selectedFoodType) {
 
 //Set the name of the choice
 
-if (subMenu === "1" || subMenu.toLowerCase() === "margherita" || subMenu.toLowerCase() === "carbonara" || subMenu.toLowerCase() === "greek salad") {
-  menuSelection = subMenuSlot[0];
-} else if (subMenu === "2" || subMenu.toLowerCase() === "vesuvio" || subMenu.toLowerCase() === "alfredo" || subMenu.toLowerCase() === "halloumi salad") {
-  menuSelection = subMenuSlot[1];
-} else if (subMenu === "3" || subMenu.toLowerCase() === "hawaii" || subMenu.toLowerCase() === "bolognese" || subMenu.toLowerCase() === "caprese salad") {
-  menuSelection = subMenuSlot[2];
+let menuSelection = "";
+
+switch (subMenu.toLowerCase()) {
+  case "1":
+  case "margherita":
+  case "carbonara":
+  case "greek salad":
+    menuSelection = subMenuSlot[0];
+    break;
+  case "2":
+  case "vesuvio":
+  case "alfredo":
+  case "halloumi salad":
+    menuSelection = subMenuSlot[1];
+    break;
+  case "3":
+  case "hawaii":
+  case "bolognese":
+  case "caprese salad":
+    menuSelection = subMenuSlot[2];
+    break;
+
 }
 
 // Step 4 - Age
@@ -104,13 +127,8 @@ const adultPrice = 120;
 const childPrice = adultPrice - 60;
 let price = "";
 
-if (userAge >= 15) {
-  price = adultPrice;
-  alert(`A regular size then, it costs ${price} kr.`);
-} else {
-  price = childPrice;
-  alert(`A child size then, it costs ${price} kr.`);
-}
+price = userAge >= 15 ? adultPrice : childPrice;
+alert(userAge >= 15 ? `A regular size then, it costs ${price} kr.` : `A child size then, it costs ${price} kr.`);
 
 // Step 5 - Order confirmation
 
@@ -122,14 +140,17 @@ confirmation = prompt(
   Write 'OK' to confirm
   `);
 
-if (confirmation.toLowerCase() === "ok") {
-  alert(`Your ${selectedFoodType} is being prepared ${userName}!
-  You will soon be able to enjoy your ${menuSelection}.
-  We will debit you ${price} kr.
 
-  Thanks for using Javascript Pizzeria and have a lovely day ${userName}!
-  `);
-} else {
-  alert(`No order for you ${userName}? We hope you will visit us again!`);
-  exit(1);
+switch (confirmation.toLowerCase()) {
+  case "ok":
+    alert(`Your ${selectedFoodType} is being prepared ${userName}!
+    You will soon be able to enjoy your ${menuSelection}.
+    We will debit you ${price} kr.
+
+    Thanks for using Javascript Pizzeria and have a lovely day ${userName}!
+    `);
+    break;
+  default:
+    alert(`No order for you ${userName}? We hope you will visit us again!`);
+    exit(1);
 }
