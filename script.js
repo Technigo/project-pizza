@@ -1,15 +1,8 @@
-// Start here
-
 // Step 1 - Welcome and introduction
-// Your code goes here
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 );
-// Asking for name
-
   let userName = prompt("What is your name?");
-
-// follow up greeting with name
 
 if (userName) {
   alert(`Hello ${userName}! Welcome!`);
@@ -18,8 +11,6 @@ if (userName) {
 }
 
 // Step 2 - Food choice
-
-//asking for userChoice
 let chosenPizza;
 
 while (true) {
@@ -46,8 +37,6 @@ if (userChoice === "1") {
 alert(`You chose a ${chosenPizza} pizza`);
 
 // Step 3 - Subtype choice
-// Your code goes here
-
 let chosenSize;
 
 while (true) {
@@ -76,17 +65,11 @@ alert(`Thank you for choosing the ${chosenSize} ${chosenPizza} pizza`);
 
 
 // Step 4 - Age
-// Asking for age and giving tiered price based on answer
-
 let userAge = prompt("Please enter your age:");
 
-//user input converted into number
 userAge = parseInt(userAge);
 
-// checking that input is Not a "not a number" input
-
 if (!isNaN(userAge)) {
-  // then if that is ok - determined tiered price
   let price;
   if (userAge < 19) {
     price = 10; //Child price
@@ -96,7 +79,6 @@ if (!isNaN(userAge)) {
     price = 15; //senior price
   }
 
-//Adjust the price according to size - late fix  
 let priceAdjust= "";
 
 if (chosenSize === "Small") {
@@ -107,30 +89,29 @@ if (chosenSize === "Small") {
   price*=1.5
 }
 
-// Now display an alert telling user the price based on given input
 
 alert(`Based on your age, the price will e ${price}.`);
 
 // Step 5 - Order confirmation
-// Your code goes here
-//bug fix - step 5 could be initiated once the curly bracket on line 74 was closed by the bracket online 105
+let orderConfirmation =
+ `You have ordered the ${chosenSize} ${chosenPizza} for ${price}. Would you like to confirm?`;
 
-let orderConfirmation = `You have ordered the ${chosenSize} ${chosenPizza} for ${price}. Would you like to confirm?`;
+let isorderCorrect = (confirm(orderConfirmation));
 
-let isorderCorrect = true; //need to assign a value to the variable
 
-confirm(orderConfirmation);
+
+
 if (isorderCorrect) {
   alert(`Thank you ${userName}, your order is confirmed. Please see your order details below:
   Pizza: ${chosenPizza}
   Size: ${chosenSize}
   Price: ${price}` )
 }
-else {
-  // Reset variables or display a cancellation message
+else if (!isorderCorrect) {
   chosenPizza = "";
   chosenSize = "";
   price = 0;
-  alert("Order cancelled. Your selections have been reset.");
+  alert("Order is cancelled. We look forward to seeing you soon!");
 }
 }
+;
