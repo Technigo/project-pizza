@@ -1,10 +1,12 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The project's aim was to build an order form, in this case for ordering either pizza, pasta or salad.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+In this project we focused mainly on vanilla-js, HTML and CSS. This was the first real project we did during the bootcamp and it was a struggle back then to connect the pages together and getting the prompts right.
+
+This project is an easy start for people who wants to learn the basics. It's clean cut and no installations are needed. 
 
 ## View it live
 
