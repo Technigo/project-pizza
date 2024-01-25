@@ -47,13 +47,12 @@ switch (selectedFood) {
         break;
 }
 
-// You can refactor the following alert into a single line outside the switch, as it's the same for all cases.
 alert(`You chose to order a  ${subtypeName[parseInt(subtype) - 1]} ${selectedFood} . Good choice!!.`);
 
 // Step 4 - Age
 let age = prompt("Type your age in numbers to help me figure out if you want a kid's size or an adult size portion");
 
-// Refactor to Switch Case
+
 switch (true) {
     case age >= 19:
         alert(`You chose and adult size portion. The price is 150 SEK`);
