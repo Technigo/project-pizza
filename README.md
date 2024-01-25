@@ -8,6 +8,9 @@ In this project we focused mainly on vanilla-js, HTML and CSS. This was the firs
 
 This project is an easy start for people who wants to learn the basics. It's clean cut and no installations are needed. 
 
+## Execute
+Open the index.html file 
+
 ## View it live
 
 Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
