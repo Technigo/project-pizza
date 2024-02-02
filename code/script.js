@@ -101,4 +101,10 @@ else{
   var portion = "adult "
 }
 
-alert("To comfirm your order " + name + ", One " + portion + subName +", coming right up!")
+let confirm = prompt("To comfirm your order " + name + ", One " + portion + subName +", is this correct?\n1. Yes\n2. No")
+if (confirm === "1" || "Yes"){
+  alert("The order will be delivered shortly. Thank you!")
+}
+else {
+  alert("You are welcome to place a new order anytime.")
+}
