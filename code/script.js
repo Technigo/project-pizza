@@ -89,5 +89,7 @@ alert(subName + " is a great choice!")
 // Step 4 - Age
 // Your code goes here
 
+let age = prompt(name + ", we need to verify your age to determine the portion size:")
+
 // Step 5 - Order confirmation
 // Your code goes here
