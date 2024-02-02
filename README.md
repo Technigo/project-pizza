@@ -15,4 +15,4 @@ Before hand in I will go through it again to make it DRY and more clean.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/9fb8f014-858f-4b60-91f4-8e292195b1ca/deploy-status)](https://app.netlify.com/sites/sofias-pizza/deploys)
 
-https://sofias-pizza.netflify.app
+https://sofias-pizza.netlify.app
