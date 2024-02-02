@@ -93,3 +93,12 @@ let age = prompt(name + ", we need to verify your age to determine the portion s
 
 // Step 5 - Order confirmation
 // Your code goes here
+
+if (age <= 12){
+  var portion = "child "
+}
+else{
+  var portion = "adult "
+}
+
+alert("To comfirm your order " + name + ", One " + portion + subName +", coming right up!")
