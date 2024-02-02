@@ -30,31 +30,6 @@ Choose a number:
 
 //Confirm choice
 
-// // WITH SWITCH
-// switch (foodChoice) {
-//   case '1':
-//     alert(`Sure thing! We'll make you a Pizza🍕`);
-//     break;
-
-//   case '2':
-//     alert(`Good choice! One pasta coming up🤤`);
-//     break;
-
-//   case '3':
-//     alert(`Can't go wrong with a salad!🥗`)
-//     break;
-
-//   default:
-//     foodChoice = prompt(`Sorry, that's not on the menu. These are your choices:
-
-//       1. Pizza
-// 2. Pasta
-// 3. Salad`
-//     );
-// }
-
-
-//WITH IF ELSE
 if (foodChoice === '1') {
   foodChoice = 'pizza';
   alert(`Sure thing, ${customerName}! We'll make you a pizza🍕`);
