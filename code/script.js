@@ -6,7 +6,7 @@ let price = ``;
 let portionSize = ``;
 
 // Step 1 - Welcome and introduction
-// Your code goes here
+
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`);
 
@@ -16,25 +16,21 @@ alert(`Happy to meet you, ${customer}!`);
 
 
 // Step 2 - Food choice
-// Your code goes here
 
 let foodType = parseInt(prompt(`What type of food would you like to order? \n  Please enter a number: \n  1 - Pizza \n  2 - Pasta \n  3 - Salad`))
 
 if (foodType === 1) {
   alert(`You've chosen Pizza!`);
-
 } else if (foodType === 2) {
   alert(`You've chosen Pasta!`);
-
 } else if (foodType === 3) {
   alert(`You've chosen Salad!`);
-
 } else {
   alert(`Invalid food type. Please refresh site and try again.`);
+  throw new Error(`Invalid choice`);
 }
 
 // Step 3 - Subtype choice
-// Your code goes here
 
 // Pizza 
 if (foodType === 1) {
@@ -47,8 +43,8 @@ if (foodType === 1) {
     orderedFood = `Capricciosa`;
   } else {
     alert(`Invalid pizza type. Please refresh site and try again`);
+    throw new Error(`Invalid choice`);
   }
-  alert(`You've chosen ${orderedFood}!`);
 
 // Pasta 
 } else if (foodType === 2) {
@@ -61,8 +57,8 @@ if (foodType === 1) {
     orderedFood = `Frutti de Mare`;
   } else {
     alert(`Invalid pasta type. Please refresh site and try again`);
+    throw new Error(`Invalid choice`);
   }
-  alert(`You've chosen ${orderedFood}!`);
 
   // Salad 
 } else if (foodType === 3) {
@@ -75,17 +71,17 @@ if (foodType === 1) {
     orderedFood = `Waldorf Salad`;
   } else {
     alert(`Invalid salad type. Please refresh site and try again`);
+    throw new Error(`Invalid choice`);
   }
-  alert(`You've chosen ${orderedFood}!`);
 } 
 
+alert(`You've chosen ${orderedFood}!`);
+
+
 // Step 4 - Age
-// Your code goes here
 
 let age = (prompt(`Is this food for a child or an adult? Type your age:`));
 
-// Step 5 - Order confirmation
-// Your code goes here
 
 if (age <= 17) {
   price = `€10`;
@@ -94,6 +90,8 @@ if (age <= 17) {
   price = `€15`;
   portionSize = `adult-sized`;
 } 
+
+// Step 5 - Order confirmation
 
 let confirmOrder = parseInt(prompt(`One ${portionSize} ${orderedFood} will be prepared for you. That'll be ${price}. Are you sure you want to order this? \n  Enter a number to confirm: \n 1 - Yes \n 2 - No`));
 
