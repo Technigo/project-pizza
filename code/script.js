@@ -98,5 +98,5 @@ let confirmOrder = parseInt(prompt(`One ${portionSize} ${orderedFood} will be pr
 if (confirmOrder === 1) {
   alert(`Thank you for your order! Your meal will be prepared.`); 
 } else {
-  alert(`No worries, we'll be here if you change your mind.`)
+  alert(`No worries, we'll be here if you change your mind.`);
 }
