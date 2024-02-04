@@ -1,6 +1,6 @@
-# Project Name
+# Restaurant ordering process
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Excercise with javascript methods and variables to produce a "place order" process for a virtual restaurant.
 
 ## The problem
 
