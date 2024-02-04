@@ -1,6 +1,6 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project provides a sequence of questions for ordering pizza. The script utilizes prompts and alerts to interact with the user and switch statement to handle different cases based on user input.
 
 ## The problem
 
@@ -8,4 +8,4 @@ I tried to loop the switch statement but it doesn't seem to be that easy. I will
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+https://yifan-wang-project-pizza.netlify.app
