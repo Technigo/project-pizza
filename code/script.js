@@ -161,7 +161,7 @@ if (Number(userConfirm) === 1) {
     "Thank you for your order! Your delicious meal will be prepared. See you soon!"
   );
 } else if (Number(userConfirm) === 2) {
-  alert("Alrght! Thank you for visiting. See you next time!");
+  alert("Alright! Thank you for visiting. See you next time!");
 } else {
   alert("Invalid number. Please enter number 1 or 2.");
 }
