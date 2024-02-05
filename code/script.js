@@ -30,13 +30,13 @@ Choose a number:
 
 //Confirm choice
 
-if (foodChoice === '1') {
+if (foodChoice == '1') {
   foodChoice = 'pizza';
   alert(`Sure thing, ${customerName}! We'll make you a pizza🍕`);
-} else if (foodChoice === '2') {
+} else if (foodChoice == '2') {
   foodChoice = 'pasta';
   alert(`Good choice! One pasta coming up🤤`);
-} else if (foodChoice === '3') {
+} else if (foodChoice == '3') {
   foodChoice = 'salad';
   alert(`Can't go wrong with a salad!🥗`);
 } else {
@@ -55,13 +55,13 @@ if (foodChoice === '1') {
 // Let customer choose sub type of dish
 let subType;
 
-if (foodChoice === 'pizza') {
+if (foodChoice == 'pizza') {
   subType = prompt(`What kind of pizza would you like, ${customerName}?
 
   1. With pineapple
   2. Without pineapple`);
 
-  if (subType === '1') {
+  if (subType == '1') {
     subType = 'with pinapple';
   } else {
     subType = 'without pinapple';
@@ -73,7 +73,7 @@ if (foodChoice === 'pizza') {
   1. Spagetti
   2. Penne`);
 
-  if (subType === '1') {
+  if (subType == '1') {
     subType = 'spagetti';
   } else {
     subType = 'penne';
@@ -85,7 +85,7 @@ if (foodChoice === 'pizza') {
   1. Chicken
   2. Vegitarian`);
 
-  if (subType === '1') {
+  if (subType == '1') {
     subType = 'with chicken';
   } else {
     subType = 'without chicken';
