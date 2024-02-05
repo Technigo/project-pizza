@@ -35,7 +35,7 @@ alert(`You've chosen ${foodChoice}!`);
 
 // Step 3 - Subtype choice
 const pizzaSubtypes = ["Napolitana", "Hawaian", "Pepperoni"];
-const pastsSubtypes = [
+const pastaSubtypes = [
   "Spaghetti Carbonara",
   "Fettucine Alfredo",
   "Cheesy Tortellini",
@@ -67,9 +67,9 @@ let subtypeChoice = prompt(`
 // Translate number into corresponding subtype
 if (subtypeChoice === "1") {
   subtypeChoice = `${pizzaSubtypes[subtypeChoice - 1]}`;
-} else if (foodChoice === "2") {
+} else if (subtypeChoice === "2") {
   subtypeChoice = `${pastaSubtypes[subtypeChoice - 1]}`;
-} else if (foodChoice === "3") {
+} else if (subtypeChoice === "3") {
   subtypeChoice = `${saladSubtypes[subtypeChoice - 1]}`;
 } else {
   alert(`Invalid choice. Please select a number between 1 and 3.`);
@@ -81,16 +81,18 @@ alert(`You've chosen ${subtypeChoice}!`);
 let userAge = prompt(`Is this food for a child or adult? Type your age:`);
 let price;
 
-if (userAge <= "18") {
+// Check if user is adult or child
+if (userAge > 5 && userAge <= "18") {
   userAge = "child";
   price = 10;
-} else if (userAge > "18") {
+} else if (userAge > "18" && userAge < 110) {
   userAge = "adult";
   price = 15;
 } else {
-  alert(`Invalid choice. Please select 1 for Yes or 2 for No.`);
+  alert(`Oops, invalid choice.`);
 }
 
+// Ask user to confirm order
 let confirmOrder = prompt(`
   One ${userAge} sized ${foodChoice} will be prepared for you. That´ll be €${price}.
   Are you sure you want to order this?
@@ -102,10 +104,13 @@ let confirmOrder = prompt(`
 `);
 
 // Step 5 - Order confirmation
-
-/*
-
-Thank you for your order! Your delicous meal will be prepared.
-See you soon! 👋
-
- */
+if (confirmOrder === "1") {
+  alert(`
+    Thank you for your order! Your delicous meal will be prepared.
+    See you soon! 👋
+  `);
+} else if (confirmOrder === "2") {
+  alert(`No problem, come back and order anytime you want.`);
+} else {
+  alert(`Invalid choice. Please select 1 for Yes or 2 for No.`);
+}
