@@ -74,6 +74,7 @@ if (foodType === 1) {
   }
 
   // Salad 
+  
 } else if (foodType === 3) {
   const saladType = parseInt(prompt(`Please select a Salad. \n  Enter a number: \n  1 - Caesar Salad \n  2 - Salade Niçoise \n  3 - Waldorf Salad`))
   switch (saladType) {
