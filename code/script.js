@@ -16,7 +16,23 @@ alert(
 
 let food = prompt(`What type of food would you like to order? 
 Enter a number: 
-1-Pizza, 2-Pasta, 3-Salad`)
+1-Pizza, 
+2-Pasta, 
+3-Salad`)
+
+if (food === "1") {
+  alert(
+    `You've chosen pizza!`
+  )
+} else if (food === "2") {
+  alert(
+    `You've chosen pasta!`
+  )
+} else if (food === "3") {
+  alert(
+    `You've chosen salad!`
+  )
+}
 
 // Step 3 - Subtype choice
 // Your code goes here
