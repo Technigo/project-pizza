@@ -1,14 +1,14 @@
 // Start here
 
 // Step 1 - Welcome and introduction
-alert(
-  `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
-);
+// alert(
+//   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
+// );
 
 // Store name in variable and greet new user
-const username = prompt(`Please enter your name:`);
+// const username = prompt(`Please enter your name:`);
 
-alert(`Nice to meet you, ${username}!`);
+// alert(`Nice to meet you, ${username}!`);
 
 // Step 2 - Food choice
 let foodChoice = prompt(`
@@ -78,20 +78,34 @@ if (subtypeChoice === "1") {
 alert(`You've chosen ${subtypeChoice}!`);
 
 // Step 4 - Age
-// Your code goes here
+let userAge = prompt(`Is this food for a child or adult? Type your age:`);
+let price;
+
+if (userAge <= "18") {
+  userAge = "child";
+  price = 10;
+} else if (userAge > "18") {
+  userAge = "adult";
+  price = 15;
+} else {
+  alert(`Invalid choice. Please select 1 for Yes or 2 for No.`);
+}
+
+let confirmOrder = prompt(`
+  One ${userAge} sized ${foodChoice} will be prepared for you. That´ll be €${price}.
+  Are you sure you want to order this?
+
+  Enter a number:
+  1. Yes
+  2. No
+
+`);
 
 // Step 5 - Order confirmation
-// Your code goes here
 
 /*
 
-Select a ${foodChoice} type
-
-Enter a number:
-1. From array
-2. From array
-3. From array
-
-
+Thank you for your order! Your delicous meal will be prepared.
+See you soon! 👋
 
  */
