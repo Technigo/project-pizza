@@ -1,10 +1,12 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The task was to familiarise ouselves with variables, conditionals, and native methods within JavaScript by coding an ordering system for a pizzeria.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I have done some programming before, so I was already somewhat familiar with variables and if/else/else if statements. However, I had not seen the switch and ternary operators before. The description and examples on the Week 1 Notion page were very helpful and easy to understand. After finishing the assignment using if statments, I therefore decided to try out the stretch goalas in switchc.js, which was fun. 
+
+With more time, I would have looked into how to write a version using arrays.
 
 ## View it live
 
