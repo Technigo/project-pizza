@@ -5,7 +5,7 @@
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
-
+alert(`Hi, ` + prompt(`What is your name?`) + `!`)
 // Step 2 - Food choice
 // Your code goes here
 
