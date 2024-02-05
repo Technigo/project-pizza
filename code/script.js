@@ -14,6 +14,10 @@ alert(
 // Step 2 - Food choice
 // Your code goes here
 
+let food = prompt(`What type of food would you like to order? 
+Enter a number: 
+1-Pizza, 2-Pasta, 3-Salad`)
+
 // Step 3 - Subtype choice
 // Your code goes here
 
