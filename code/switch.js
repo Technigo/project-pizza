@@ -1,7 +1,5 @@
-// Start here
-
 // Step 1 - Welcome and introduction
-// Your code goes here
+
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 );
@@ -11,7 +9,6 @@ let person = prompt("What's your name?", "Vittoria Matteoli");
 alert(`Hi ${person}!`);
 
 // Step 2 - Food choice
-// Your code goes here
 let foodChoice = prompt(
   `What would you like to order?
     Choose a number:
@@ -43,7 +40,6 @@ switch (foodChoice) {
 alert(`You choosed ${foodName}!`);
 
 // Step 3 - Subtype choice
-// Your code goes here
 
 let foodOrderPizza;
 let foodOrderPasta;
@@ -120,6 +116,8 @@ switch (foodOrderPizza) {
     pizzaType = " Pizza 4 Formaggi";
     alert(`You choosed ${pizzaType}`);
     break;
+  default:
+    throw alert("pizzaaaaaaa");
 }
 
 // created a switch for foodOrderPasta with 4 cases.
@@ -141,7 +139,9 @@ switch (foodOrderPasta) {
   case "4":
     pastaType = "Pasta alla diavola";
     alert(`You choosed ${pastaType}!`);
+    break;
   default:
+    throw alert("pastaaaaa");
 }
 
 // created a switch for foodOrderSalad with 4 cases.
@@ -163,6 +163,8 @@ switch (foodOrderSalad) {
     saladType = "Vegetarian Salad";
     alert(`You choosed ${saladType}!`);
     break;
+  default:
+    throw alert("saladdddd");
 }
 
 // created a switch for foodOrderSoup with 4 cases.
@@ -186,6 +188,7 @@ switch (foodOrderSoup) {
     alert(`You choosed ${soupType}!`);
     break;
   default:
+    throw alert("soupppp");
 }
 
 let age = prompt(
@@ -257,6 +260,3 @@ switch (confirmation) {
   default:
     throw alert("invalid choice: choose a number between 1 and 2");
 }
-
-typeof age;
-console.log(typeof age);
