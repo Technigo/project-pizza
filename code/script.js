@@ -1,14 +1,12 @@
-// Start here
-
 // Step 1 - Welcome and introduction
-// alert(
-//   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
-// );
+alert(
+  `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
+);
 
 // Store name in variable and greet new user
-// const username = prompt(`Please enter your name:`);
+const username = prompt(`Please enter your name:`);
 
-// alert(`Nice to meet you, ${username}!`);
+alert(`Nice to meet you, ${username}!`);
 
 // Step 2 - Food choice
 let foodChoice = prompt(`
