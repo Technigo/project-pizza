@@ -6,9 +6,9 @@ alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
 
-let name = prompt("What's your name?");
+let customerName = prompt("What's your name?");
 alert(
-  `Hi ${name}!`
+  `Hi ${customerName}!`
 )
 
 // Step 2 - Food choice
