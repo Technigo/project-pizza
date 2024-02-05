@@ -10,6 +10,7 @@ body {
   background-image: url("./assets/pizzeria.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   color: white;
   display: flex;
   justify-content: center;
@@ -17,6 +18,25 @@ body {
   flex-direction: column;
   text-align: center;
   min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(39, 40, 26, 0.56);
+}
+
+h1,
+p {
+  position: relative;
+  z-index: 10;
+}
+
+h1 {
+  font-size: 3rem;
 }
 
 p {
