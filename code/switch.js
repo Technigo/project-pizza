@@ -37,9 +37,9 @@ switch (foodChoice) {
     foodName = "Soup";
     break;
   default:
-    foodName = "An Invalid Number";
-    break;
+    throw alert("invalid choice: choose a number between 1 and 4");
 }
+
 alert(`You choosed ${foodName}!`);
 
 // Step 3 - Subtype choice
@@ -141,7 +141,7 @@ switch (foodOrderPasta) {
   case "4":
     pastaType = "Pasta alla diavola";
     alert(`You choosed ${pastaType}!`);
-    break;
+  default:
 }
 
 // created a switch for foodOrderSalad with 4 cases.
@@ -185,6 +185,7 @@ switch (foodOrderSoup) {
     soupType = "Pumpkin Soup";
     alert(`You choosed ${soupType}!`);
     break;
+  default:
 }
 
 let age = prompt(
@@ -197,13 +198,16 @@ let pizzaSize = age >= "18" ? "One adult sized" : "One child sized";
 let pastaSize = age >= "18" ? "One adult sized" : "One child sized";
 let saladSize = age >= "18" ? "One adult sized" : "One child sized";
 let soupSize = age >= "18" ? "One adult sized" : "One child sized";
+let pizzaPrice = age >= "18" ? "€15" : "€10";
+let pastaPrice = age >= "18" ? "€15" : "€10";
+let saladPrice = age >= "18" ? "€15" : "€10";
+let soupPrice = age >= "18" ? "€15" : "€10";
 
-// to fix all the code underneath this line!!!!
-let confirmationPizza;
-switch (age) {
-  case age >= "18":
-    confirmationPizza = prompt(
-      `${pizzaSize} ${pizzaType} will be prepared for you. That'll be €15.
+let confirmation;
+switch (foodName) {
+  case `Pizza`:
+    confirmation = prompt(
+      `${pizzaSize} ${pizzaType} will be prepared for you. That'll be ${pizzaPrice}.
         Are you sure you want to order this?
         Please enter a number to confirm:
         1 - Yes
@@ -211,27 +215,19 @@ switch (age) {
       `2`
     );
     break;
-  case age < "18":
-    confirmationPizza = prompt(
-      `${pizzaSize} ${pizzaType} will be prepared for you. That'll be €10.
-            Are you sure you want to order this?
-            Please enter a number to confirm:
-            1 - Yes
-            2 - No`,
+  case `Pasta`:
+    confirmation = prompt(
+      `${pastaSize} ${pastaType} will be prepared for you. That'll be ${pastaPrice}.
+          Are you sure you want to order this?
+          Please enter a number to confirm:
+          1 - Yes
+          2 - No`,
       `2`
     );
     break;
-  default:
-    alert("Refresh the page");
-    break;
-}
-
-// created 1 switch for age with 2 cases that prompt confirmationPasta (for Pasta only)
-let confirmationPasta;
-switch (true) {
-  case age >= "18":
-    confirmationPasta = prompt(
-      `${pastaSize} ${pastaType} will be prepared for you. That'll be €15.
+  case `Salad`:
+    confirmation = prompt(
+      `${saladSize} ${saladType} will be prepared for you. That'll be ${saladPrice}.
         Are you sure you want to order this?
         Please enter a number to confirm:
         1 - Yes
@@ -239,27 +235,9 @@ switch (true) {
       `2`
     );
     break;
-  case age < "18":
-    confirmationPasta = prompt(
-      `${pastaSize} ${pastaType} will be prepared for you. That'll be €10.
-            Are you sure you want to order this?
-            Please enter a number to confirm:
-            1 - Yes
-            2 - No`,
-      `2`
-    );
-    break;
-  default:
-    alert("Refresh the page");
-    break;
-}
-
-// created 1 switch for age with 2 cases that prompt confirmationSalad (for Salad only)
-let confirmationSalad;
-switch (true) {
-  case age >= "18":
-    confirmationSalad = prompt(
-      `${saladSize} ${saladType} will be prepared for you. That'll be €15.
+  case `Soup`:
+    confirmation = prompt(
+      `${soupSize} ${soupType} will be prepared for you. That'll be ${soupPrice}.
         Are you sure you want to order this?
         Please enter a number to confirm:
         1 - Yes
@@ -267,50 +245,9 @@ switch (true) {
       `2`
     );
     break;
-  case age < "18":
-    confirmationSalad = prompt(
-      `${saladSize} ${saladType} will be prepared for you. That'll be €10.
-            Are you sure you want to order this?
-            Please enter a number to confirm:
-            1 - Yes
-            2 - No`,
-      `2`
-    );
-    break;
-  default:
-    alert("Refresh the page");
-    break;
 }
 
-// created 1 switch for age with 2 cases that prompt confirmationSoup  (for Soup only)
-let confirmationSoup;
-switch (age) {
-  case age >= "18":
-    confirmationSoup = prompt(
-      `${soupSize} ${soupType} will be prepared for you. That'll be €15.
-        Are you sure you want to order this?
-        Please enter a number to confirm:
-        1 - Yes
-        2 - No`,
-      `2`
-    );
-    break;
-  case age < "18":
-    confirmationSoup = prompt(
-      `${soupSize} ${soupType} will be prepared for you. That'll be €10.
-            Are you sure you want to order this?
-            Please enter a number to confirm:
-            1 - Yes
-            2 - No`,
-      `2`
-    );
-    break;
-  default:
-    alert("Refresh the page");
-    break;
-}
-
-switch (confirmationPasta) {
+switch (confirmation) {
   case "1":
     alert(`Thank you for your order, your meal will be prepared soon!`);
     break;
@@ -318,6 +255,8 @@ switch (confirmationPasta) {
     alert(`Ok, come back if you change your mind!`);
     break;
   default:
-    alert("Refresh the page");
-    break;
+    throw alert("invalid choice: choose a number between 1 and 2");
 }
+
+typeof age;
+console.log(typeof age);
