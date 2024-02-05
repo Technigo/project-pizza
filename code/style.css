@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,13 +6,16 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  background: #0026ff;
+  font-family: "Italiana", sans-serif;
+  background-image: url("./assets/pizzeria.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
   min-height: 100vh;
 }
 
