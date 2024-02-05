@@ -8,14 +8,14 @@ let orderedFood = ``;
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`);
 
-let customer = prompt(`Please enter your name:`); 
+const customer = prompt(`Please enter your name:`); 
 
 alert(`Happy to meet you, ${customer}!`);
 
 
 // Step 2 - Food choice
 
-let foodType = parseInt(prompt(`What type of food would you like to order? \n  Please enter a number: \n  1 - Pizza \n  2 - Pasta \n  3 - Salad`))
+const foodType = parseInt(prompt(`What type of food would you like to order? \n  Please enter a number: \n  1 - Pizza \n  2 - Pasta \n  3 - Salad`))
 
 switch (foodType) {
     case 1:
@@ -38,7 +38,7 @@ switch (foodType) {
 // Pizza 
 
 if (foodType === 1) {
-    let pizzaType = parseInt(prompt(`Please select a type of Pizza. \n  Enter a number: \n  1 - Vesuvius \n  2 - Hawaii \n  3 - Capricciosa`))
+    const pizzaType = parseInt(prompt(`Please select a type of Pizza. \n  Enter a number: \n  1 - Vesuvius \n  2 - Hawaii \n  3 - Capricciosa`))
     switch (pizzaType) {
         case 1:
             orderedFood = `Vesuvius`;
@@ -57,7 +57,7 @@ if (foodType === 1) {
 // Pasta 
 
 } else if (foodType === 2) {
-  let pastaType = parseInt(prompt(`Please select a Pasta dish. \n  Enter a number: \n  1 - Spaghetti Bolognese \n  2 - Penne all’Arrabbiata \n  3 - Frutti de Mare`))
+  const pastaType = parseInt(prompt(`Please select a Pasta dish. \n  Enter a number: \n  1 - Spaghetti Bolognese \n  2 - Penne all’Arrabbiata \n  3 - Frutti de Mare`))
   switch (pastaType) {
     case 1:
         orderedFood = `Spaghetti Bolognese`;
@@ -75,7 +75,7 @@ if (foodType === 1) {
 
   // Salad 
 } else if (foodType === 3) {
-  let saladType = parseInt(prompt(`Please select a Salad. \n  Enter a number: \n  1 - Caesar Salad \n  2 - Salade Niçoise \n  3 - Waldorf Salad`))
+  const saladType = parseInt(prompt(`Please select a Salad. \n  Enter a number: \n  1 - Caesar Salad \n  2 - Salade Niçoise \n  3 - Waldorf Salad`))
   switch (saladType) {
     case 1:
         orderedFood = `Caesar Salad`;
@@ -97,16 +97,16 @@ alert(`You've chosen ${orderedFood}!`);
 
 // Step 4 - Age
 
-let age = (prompt(`Is this food for a child or an adult? Type your age:`));
+const age = (prompt(`Is this food for a child or an adult? Type your age:`));
 
-let portionSize = age <= 17 ? `child-sized` : `adult-sized`;
+const portionSize = age <= 17 ? `child-sized` : `adult-sized`;
 
-let price = age <= 17 ? `€10` : `€15`;
+const price = age <= 17 ? `€10` : `€15`;
 
 
 // Step 5 - Order confirmation
 
-let confirmOrder = parseInt(prompt(`One ${portionSize} ${orderedFood} will be prepared for you. That'll be ${price}. Are you sure you want to order this? \n  Enter a number to confirm: \n 1 - Yes \n 2 - No`));
+const confirmOrder = parseInt(prompt(`One ${portionSize} ${orderedFood} will be prepared for you. That'll be ${price}. Are you sure you want to order this? \n  Enter a number to confirm: \n 1 - Yes \n 2 - No`));
 
 switch (confirmOrder) {
     case 1:
