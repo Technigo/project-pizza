@@ -18,10 +18,10 @@ window.addEventListener("load", function () {
   }
 
   let foodChoice;
-
   while (true) {
     // Step 2 - Food choice
-    foodChoice = prompt(`
+    foodChoice = parseInt(
+      prompt(`
     What type of food would you like to order?
 
     Enter a number:
@@ -29,16 +29,17 @@ window.addEventListener("load", function () {
     2. Pasta
     3. Salad
 
-`);
+`)
+    );
 
     switch (foodChoice) {
-      case "1":
+      case 1:
         foodChoice = "Pizza";
         break;
-      case "2":
+      case 2:
         foodChoice = "Pasta";
         break;
-      case "3":
+      case 3:
         foodChoice = "Salad";
         break;
       default:
@@ -75,7 +76,8 @@ window.addEventListener("load", function () {
 
   while (true) {
     // Prompt the subtypes corresponding food choice
-    let subtypeChoice = prompt(`
+    let subtypeChoice = parseInt(
+      prompt(`
     Select a ${foodChoice} type
 
     Enter a number:
@@ -83,17 +85,18 @@ window.addEventListener("load", function () {
     2. ${foodSubtypes[1]}
     3. ${foodSubtypes[2]}
 
-    `);
+    `)
+    );
 
     // Translate number into corresponding subtype
     switch (subtypeChoice) {
-      case "1":
+      case 1:
         subtypeChoice = `${pizzaSubtypes[subtypeChoice - 1]}`;
         break;
-      case "2":
+      case 2:
         subtypeChoice = `${pastaSubtypes[subtypeChoice - 1]}`;
         break;
-      case "3":
+      case 3:
         subtypeChoice = `${saladSubtypes[subtypeChoice - 1]}`;
         break;
       default:
@@ -109,13 +112,15 @@ window.addEventListener("load", function () {
   let price;
   while (true) {
     // Step 4 - Age
-    userAge = prompt(`Is this food for a child or adult? Type your age:`);
+    userAge = parseInt(
+      prompt(`Is this food for a child or adult? Type your age:`)
+    );
 
     // Check if user is adult or child
-    if (userAge >= 5 && userAge <= "18") {
+    if (userAge >= 5 && userAge <= 18) {
       userAge = "child";
       price = 10;
-    } else if (userAge > "18" && userAge < "110") {
+    } else if (userAge > 18 && userAge <= 110) {
       userAge = "adult";
       price = 15;
     } else if (userAge < 5) {
@@ -123,8 +128,11 @@ window.addEventListener("load", function () {
         `Oops, you are too little to make an order. Please ask a grown-up for assistance.`
       );
       continue;
-    } else {
+    } else if (userAge > 110) {
       alert(`Oops, the age entered seems too high. Please enter a valid age.`);
+      continue;
+    } else {
+      alert(`Oops, not a valid number`);
       continue;
     }
     break;
@@ -133,7 +141,8 @@ window.addEventListener("load", function () {
   let confirmOrder;
   while (true) {
     // Ask user to confirm order
-    confirmOrder = prompt(`
+    confirmOrder = parseInt(
+      prompt(`
     One ${userAge} sized ${foodChoice} will be prepared for you. That´ll be €${price}.
     Are you sure you want to order this?
 
@@ -141,18 +150,19 @@ window.addEventListener("load", function () {
     1. Yes
     2. No
 
-`);
+`)
+    );
 
     // Step 5 - Order confirmation
     switch (confirmOrder) {
-      case "1":
+      case 1:
         alert(`
         Thank you for your order! Your delicous meal will be 
         prepared.
         See you soon! 👋
       `);
         break;
-      case "2":
+      case 2:
         alert(`No problem, come back and order anytime you want.`);
         break;
       default:
