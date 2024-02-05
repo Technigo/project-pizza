@@ -11,21 +11,19 @@ alert(
 let customerName = prompt(`What's your name?`);
 
 //step 1-c, Greet customer
-// while (customerName.length < 1) {
-//   customerName = prompt(`Please, enter your name to order`);
-// }
-alert(`Yey, great to see you ${customerName}!`);
+alert(`YEY, great to see you ${customerName}!`);
 
 // Step 2 - Food choice
 // Your code goes here
 
 //Ask customer for good choice
-let foodChoice = prompt(`What would you like to eat, ${customerName}?
+let foodChoice = prompt(
+  `What would you like to eat, ${customerName}?
 
-Choose a number:
-1. Pizza
-2. Pasta
-3. Salad`
+  Choose a number:
+  1. Pizza
+  2. Pasta
+  3. Salad`
 );
 
 // Confirm choice and convert menu number to text
@@ -33,21 +31,22 @@ Choose a number:
 switch (foodChoice) {
   case '1':
     foodChoice = 'pizza';
-    alert(`Sure thing! We'll make you a Pizza🍕`);
+    alert(`Sure thing! We'll make you a Pizza 🍕`);
     break;
 
   case '2':
     foodChoice = 'pasta';
-    alert(`Good choice! One pasta coming up🤤`);
+    alert(`Good choice! One pasta coming up 🤤`);
     break;
 
   case '3':
     foodChoice = 'salad';
-    alert(`Can't go wrong with a salad!🥗`)
+    alert(`Can't go wrong with a salad! 🥗`)
     break;
 
   default:
-    foodChoice = prompt(`Sorry, that's not on the menu. These are your choices:
+    foodChoice = prompt(
+      `Sorry, that's not on the menu. These are your choices:
 
       1. Pizza
       2. Pasta
@@ -67,8 +66,8 @@ switch (foodChoice) {
         break;
 
       default:
-        foodChoice = 'pizza';
-        break;
+        alert(`OK. Nothing for you then...`);
+        throw Error('Not on the menu');
     };
 }
 
@@ -98,11 +97,9 @@ switch (foodChoice) {
         break;
 
       default:
-        subType = prompt(
-          `You got go choose!
-          What kind of pizza would you like?
-          1. With pineapple
-          2. Without pineapple`);
+        subType = 'with pinapple';
+        alert(
+          `You'll get pinapple 😘`);
         break;
     };
     break;
@@ -125,10 +122,9 @@ switch (foodChoice) {
         break;
 
       default:
-        subType = prompt(`You got to choose!
-        What type of pasta?
-        1. Spagetti
-        2. Penne`);
+        subType = 'spagetti';
+        alert(
+          `You'll get spagetti 😘`);
         break;
     };
     break;
@@ -138,7 +134,7 @@ switch (foodChoice) {
     subType = prompt(`Which salad do you prefer, ${customerName}?
 
     1. Chicken
-    2. Vegitarian`);
+    2. Vegetarian`);
 
     // Convert menu number to text
     switch (subType) {
@@ -151,10 +147,10 @@ switch (foodChoice) {
         break;
 
       default:
-        subType = prompt(`You got to choose!
-        Which salad do you prefer, ${customerName}?
-        1. Chicken
-        2. Vegitarian`);
+        subType = 'without chicken';
+        alert(
+          `You'll get a vegetarian 😘`
+        );
         break;
     };
     break;
@@ -165,9 +161,11 @@ alert(`Awesome, ${subType} it is.`)
 // Your code goes here
 
 // Ask for age
-const age = prompt(`Depending on your age, we'll make a child or adult size portion. (No, you can't descide on your own).
+const age = prompt(
+  `Depending on your age, we'll make you a child or adult size portion. (No, you can't descide on your own).
 
-How old are you, ${customerName}?`);
+  How old are you, ${customerName}?`
+);
 
 // Descide child or adult size portion
 const isChild = (age < 18); // Is the customer under 18 yo?
@@ -191,10 +189,15 @@ switch (foodChoice) {
 }
 
 // Confirm price
-const priceConfirmation = prompt(`That'll be ${price} SEK, please. Is that OK?`);
+const priceConfirmation = prompt(
+  `That'll be ${price} SEK. Is that OK?
+  
+  YES
+  NO`
+);
 
 switch (priceConfirmation) {
-  case 'OK':
+  case 'YES':
     alert('Great!');
     break;
 
@@ -207,15 +210,24 @@ switch (priceConfirmation) {
 // Your code goes here
 
 // Ask customer to onfirm order
-const orderConfirmation = prompt(`Ok, so you've ordern a ${portionSize} portion of ${foodChoice} ${subType}. Sounds good?
+const orderConfirmation = prompt(
+  `Ok, so you've ordered ${portionSize} portion of ${foodChoice} ${subType} at ${price} SEK. Sounds good?
 
 YES
-NO`);
+NO`
+);
 
 // Display thank you
 switch (orderConfirmation) {
   case 'YES':
     alert('Awesome! See you soon.');
+    const displayOrder = () => {
+      let p = document.getElementById('message');
+      p.innerText = `Your Order:
+      ${portionSize} portion of ${foodChoice} ${subType} at ${price} SEK`;
+    };
+
+    displayOrder();
     break;
   case 'NO':
     alert('No worries, come back another time.');
@@ -225,3 +237,4 @@ switch (orderConfirmation) {
     alert(`We'll take that as a yes, ${customerName}.`)
     break;
 }
+

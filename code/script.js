@@ -11,9 +11,6 @@ alert(
 let customerName = prompt(`What's your name?`);
 
 //step 1-c, Greet customer
-// while (customerName.length < 1) {
-//   customerName = prompt(`Please, enter your name to order`);
-// }
 alert(`Yey, great to see you ${customerName}!`);
 
 // Step 2 - Food choice
@@ -83,7 +80,7 @@ if (foodChoice == 'pizza') {
   subType = prompt(`Which salad do you prefer, ${customerName}?
 
   1. Chicken
-  2. Vegitarian`);
+  2. Vegetarian`);
 
   if (subType == '1') {
     subType = 'with chicken';
@@ -142,7 +139,7 @@ if (priceConfirmation === 'OK' || priceConfirmation === '') {
 // Your code goes here
 
 // Ask customer to onfirm order
-const orderConfirmation = prompt(`Ok, so you've ordern a ${portionSize} portion of ${foodChoice} ${subType}. Sounds good?
+const orderConfirmation = prompt(`Ok, so you've ordered a ${portionSize} portion of ${foodChoice} ${subType} at ${price} SEK. Sounds good?
 
 YES
 NO`);
@@ -150,6 +147,11 @@ NO`);
 // Display thank you
 if (orderConfirmation === 'YES') {
   alert('Awesome! See you soon.');
+  const displayOrder = () => {
+    let p = document.getElementById('message');
+    p.innerText = `Your Order:
+    ${portionSize} portion of ${foodChoice} ${subType} at ${price} SEK`;
+  };
 } else if (orderConfirmation === 'NO') {
   alert('No worries, come back another time.');
 } else {
