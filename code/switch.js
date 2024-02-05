@@ -104,46 +104,61 @@ window.addEventListener("load", function () {
     alert(`You've chosen ${subtypeChoice}!`);
     break;
   }
+
+  let userAge;
+  let price;
+  while (true) {
+    // Step 4 - Age
+    userAge = prompt(`Is this food for a child or adult? Type your age:`);
+
+    // Check if user is adult or child
+    if (userAge >= 5 && userAge <= "18") {
+      userAge = "child";
+      price = 10;
+    } else if (userAge > "18" && userAge < "110") {
+      userAge = "adult";
+      price = 15;
+    } else if (userAge < 5) {
+      alert(
+        `Oops, you are too little to make an order. Please ask a grown-up for assistance.`
+      );
+      continue;
+    } else {
+      alert(`Oops, the age entered seems too high. Please enter a valid age.`);
+      continue;
+    }
+    break;
+  }
+
+  let confirmOrder;
+  while (true) {
+    // Ask user to confirm order
+    confirmOrder = prompt(`
+    One ${userAge} sized ${foodChoice} will be prepared for you. That´ll be €${price}.
+    Are you sure you want to order this?
+
+    Enter a number:
+    1. Yes
+    2. No
+
+`);
+
+    // Step 5 - Order confirmation
+    switch (confirmOrder) {
+      case "1":
+        alert(`
+        Thank you for your order! Your delicous meal will be 
+        prepared.
+        See you soon! 👋
+      `);
+        break;
+      case "2":
+        alert(`No problem, come back and order anytime you want.`);
+        break;
+      default:
+        alert(`Invalid choice. Please select 1 for Yes or 2 for No.`);
+        continue;
+    }
+    break;
+  }
 });
-
-//   // Step 4 - Age
-//   let userAge = prompt(`Is this food for a child or adult? Type your age:`);
-//   let price;
-
-//   // Check if user is adult or child
-//   if (userAge > 5 && userAge <= "18") {
-//     userAge = "child";
-//     price = 10;
-//   } else if (userAge > "18" && userAge < 110) {
-//     userAge = "adult";
-//     price = 15;
-//   } else {
-//     alert(`Oops, invalid choice.`);
-//   }
-
-//   // Ask user to confirm order
-//   let confirmOrder = prompt(`
-//   One ${userAge} sized ${foodChoice} will be prepared for you. That´ll be €${price}.
-//   Are you sure you want to order this?
-
-//   Enter a number:
-//   1. Yes
-//   2. No
-
-// `);
-
-//   // Step 5 - Order confirmation
-//   switch (confirmOrder) {
-//     case "1":
-//       alert(`
-//     Thank you for your order! Your delicous meal will be prepared.
-//     See you soon! 👋
-//   `);
-//       break;
-//     case "2":
-//       alert(`No problem, come back and order anytime you want.`);
-//       break;
-//     default:
-//       alert(`Invalid choice. Please select 1 for Yes or 2 for No.`);
-//   }
-// }
