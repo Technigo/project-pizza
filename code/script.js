@@ -6,8 +6,30 @@ alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
 
+let yourName = prompt("What is your name?");
+
+alert('Welcome, ' + yourName + '!');
+
 // Step 2 - Food choice
-// Your code goes here
+let menuItem = prompt(
+  `What would you like to order?
+    Enter a number:
+    1. Pizza  
+    2. Pasta 
+    3. Salad`
+);
+
+
+if (menuItem = 1) {
+  alert('You selected Pizza');
+} else if (menuItem = 2) {
+  alert('You selected Pasta');
+} else {
+  alert('You selected Salad');
+};
+
+
+
 
 // Step 3 - Subtype choice
 // Your code goes here
