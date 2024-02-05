@@ -21,6 +21,10 @@ if (orderFood == 1 ){
 
 // Step 3 - Subtype choice
 // Your code goes here
+prompt(`Select a Pizza type: enter a number: 1. Napolitana 2. Hawaian 3. Pepperoni`)
+
+
+
 
 // Step 4 - Age
 // Your code goes here
