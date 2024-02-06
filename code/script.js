@@ -97,8 +97,40 @@ if (food === "3") {
   
   }
 
+
+
 // Step 4 - Age
 // Your code goes here
+
+let age = prompt(`Is this food for a child or an adulf?
+  Type your age:`) 
+age = parseInt(age)
+
+// food: 1, 2, 3
+// pizzaType: 1, 2, 3
+// pastaType: 1, 2, 3
+// saladType: 1, 2, 3
+// age
+
+  if (age < 18) {
+    alert(`you're a child`);
+  } else  {
+    alert(`youre an adult`);
+
+  }
+ 
+  let priceChild = 10
+  let priceAdulf = 15
+
+
+
+  
+
+
+  
+
+
+
 
 // Step 5 - Order confirmation
 // Your code goes here
