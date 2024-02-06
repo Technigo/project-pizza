@@ -95,159 +95,170 @@ Choose a number:
     break;
 }
 
-// created a switch for foodOrderPizza with 4 cases.
-
 let pizzaType;
-
-switch (foodOrderPizza) {
-  case "1":
-    pizzaType = "Pizza Margherita";
-    alert(`You choosed ${pizzaType}`);
-    break;
-  case "2":
-    pizzaType = " Pizza Capricciosa";
-    alert(`You choosed ${pizzaType}`);
-    break;
-  case "3":
-    pizzaType = " Pizza Napoletana";
-    alert(`You choosed ${pizzaType}`);
-    break;
-  case "4":
-    pizzaType = " Pizza 4 Formaggi";
-    alert(`You choosed ${pizzaType}`);
-    break;
-  default:
-    throw alert("pizzaaaaaaa");
-}
-
-// created a switch for foodOrderPasta with 4 cases.
 let pastaType;
-
-switch (foodOrderPasta) {
-  case "1":
-    pastaType = "Pasta al pomodoro";
-    alert(`You choosed ${pastaType}!`);
-    break;
-  case "2":
-    pastaType = "Pasta cacio e pepe";
-    alert(`You choosed ${pastaType}!`);
-    break;
-  case "3":
-    pastaType = "Pasta alla carbonara";
-    alert(`You choosed ${pastaType}!`);
-    break;
-  case "4":
-    pastaType = "Pasta alla diavola";
-    alert(`You choosed ${pastaType}!`);
-    break;
-  default:
-    throw alert("pastaaaaa");
-}
-
-// created a switch for foodOrderSalad with 4 cases.
 let saladType;
-
-switch (foodOrderSalad) {
-  case "1":
-    saladType = "Tuna Salad";
-    alert(`You choosed ${saladType}!`);
-    break;
-  case "2":
-    saladType = "Ceasar Salad";
-    alert(`You choosed ${saladType}!`);
-    break;
-  case "3":
-    saladType = "Greek Salad";
-    alert(`You choosed ${saladType}!`);
-  case "4":
-    saladType = "Vegetarian Salad";
-    alert(`You choosed ${saladType}!`);
-    break;
-  default:
-    throw alert("saladdddd");
-}
-
-// created a switch for foodOrderSoup with 4 cases.
 let soupType;
 
-switch (foodOrderSoup) {
-  case "1":
-    soupType = "Chicken Soup";
-    alert(`You choosed ${soupType}!`);
+switch (foodName) {
+  case "Pizza":
+    switch (foodOrderPizza) {
+      case "1":
+        pizzaType = "Pizza Margherita";
+        alert(`You choosed ${pizzaType}`);
+        break;
+      case "2":
+        pizzaType = " Pizza Capricciosa";
+        alert(`You choosed ${pizzaType}`);
+        break;
+      case "3":
+        pizzaType = " Pizza Napoletana";
+        alert(`You choosed ${pizzaType}`);
+        break;
+      case "4":
+        pizzaType = " Pizza 4 Formaggi";
+        alert(`You choosed ${pizzaType}`);
+        break;
+      default:
+        throw alert("invalid choice: choose a number between 1 and 4");
+    }
     break;
-  case "2":
-    soupType = "Veggie Soup";
-    alert(`You choosed ${soupType}!`);
+
+  case "Pasta":
+    switch (foodOrderPasta) {
+      case "1":
+        pastaType = "Pasta al pomodoro";
+        alert(`You choosed ${pastaType}!`);
+        break;
+      case "2":
+        pastaType = "Pasta cacio e pepe";
+        alert(`You choosed ${pastaType}!`);
+        break;
+      case "3":
+        pastaType = "Pasta alla carbonara";
+        alert(`You choosed ${pastaType}!`);
+        break;
+      case "4":
+        pastaType = "Pasta alla diavola";
+        alert(`You choosed ${pastaType}!`);
+        break;
+      default:
+        throw alert("invalid choice: choose a number between 1 and 4");
+    }
     break;
-  case "3":
-    soupType = "Carrot Soup";
-    alert(`You choosed ${soupType}!`);
+
+  case "Salad":
+    switch (foodOrderSalad) {
+      case "1":
+        saladType = "Tuna Salad";
+        alert(`You choosed ${saladType}!`);
+        break;
+      case "2":
+        saladType = "Ceasar Salad";
+        alert(`You choosed ${saladType}!`);
+        break;
+      case "3":
+        saladType = "Greek Salad";
+        alert(`You choosed ${saladType}!`);
+        break;
+      case "4":
+        saladType = "Vegetarian Salad";
+        alert(`You choosed ${saladType}!`);
+        break;
+      default:
+        throw "invalid choice: choose a number between 1 and 4";
+    }
     break;
-  case "4":
-    soupType = "Pumpkin Soup";
-    alert(`You choosed ${soupType}!`);
+  case "Soup":
+    switch (foodOrderSoup) {
+      case "1":
+        soupType = "Chicken Soup";
+        alert(`You choosed ${soupType}!`);
+        break;
+      case "2":
+        soupType = "Veggie Soup";
+        alert(`You choosed ${soupType}!`);
+        break;
+      case "3":
+        soupType = "Carrot Soup";
+        alert(`You choosed ${soupType}!`);
+        break;
+      case "4":
+        soupType = "Pumpkin Soup";
+        alert(`You choosed ${soupType}!`);
+        break;
+
+      default:
+        throw alert("invalid choice: choose a number between 1 and 4");
+    }
+
     break;
   default:
-    throw alert("soupppp");
+    throw alert("invalid choice: choose a number between 1 and 4");
 }
 
 let age = prompt(
   `Is the order for a child or an adult?
   Type your age:`,
-  `10`
+  "2"
 );
+age = parseInt(age);
 
-let pizzaSize = age >= "18" ? "One adult sized" : "One child sized";
-let pastaSize = age >= "18" ? "One adult sized" : "One child sized";
-let saladSize = age >= "18" ? "One adult sized" : "One child sized";
-let soupSize = age >= "18" ? "One adult sized" : "One child sized";
-let pizzaPrice = age >= "18" ? "€15" : "€10";
-let pastaPrice = age >= "18" ? "€15" : "€10";
-let saladPrice = age >= "18" ? "€15" : "€10";
-let soupPrice = age >= "18" ? "€15" : "€10";
+let pizzaSize = age >= 18 ? "One adult sized" : "One child sized";
+let pastaSize = age >= 18 ? "One adult sized" : "One child sized";
+let saladSize = age >= 18 ? "One adult sized" : "One child sized";
+let soupSize = age >= 18 ? "One adult sized" : "One child sized";
+let pizzaPrice = age >= 18 ? "€15" : "€10";
+let pastaPrice = age >= 18 ? "€15" : "€10";
+let saladPrice = age >= 18 ? "€15" : "€10";
+let soupPrice = age >= 18 ? "€15" : "€10";
 
 let confirmation;
-switch (foodName) {
-  case `Pizza`:
+switch (foodName && age) {
+  case foodName === "Pizza" && age:
     confirmation = prompt(
       `${pizzaSize} ${pizzaType} will be prepared for you. That'll be ${pizzaPrice}.
         Are you sure you want to order this?
-        Please enter a number to confirm:
-        1 - Yes
-        2 - No`,
+        Please enter a number to confirm:        
+      1 - Yes
+      2 - No`,
       `2`
     );
     break;
-  case `Pasta`:
+
+  case foodName === "Pasta" && age:
     confirmation = prompt(
       `${pastaSize} ${pastaType} will be prepared for you. That'll be ${pastaPrice}.
-          Are you sure you want to order this?
-          Please enter a number to confirm:
+           Are you sure you want to order this?
+          Please enter a number to confirm:           
           1 - Yes
           2 - No`,
       `2`
     );
     break;
-  case `Salad`:
+  case foodName === "Salad" && age:
     confirmation = prompt(
       `${saladSize} ${saladType} will be prepared for you. That'll be ${saladPrice}.
-        Are you sure you want to order this?
+         Are you sure you want to order this?
         Please enter a number to confirm:
         1 - Yes
         2 - No`,
       `2`
     );
     break;
-  case `Soup`:
+  case foodName === "Soup" && age:
     confirmation = prompt(
       `${soupSize} ${soupType} will be prepared for you. That'll be ${soupPrice}.
-        Are you sure you want to order this?
-        Please enter a number to confirm:
-        1 - Yes
-        2 - No`,
+         Are you sure you want to order this?
+         Please enter a number to confirm:
+         1 - Yes
+         2 - No`,
       `2`
     );
     break;
+
+  default:
+    throw alert("invalid choice: type your age in numbers");
 }
 
 switch (confirmation) {
