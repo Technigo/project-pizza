@@ -11,12 +11,13 @@ alert(
 let customerName = prompt(`What's your name?`);
 
 //step 1-c, Greet customer
+customerName = customerName == '' ? 'friend' : customerName;
 alert(`YEY, great to see you ${customerName}!`);
 
 // Step 2 - Food choice
 // Your code goes here
 
-//Ask customer for good choice
+//Ask customer for food choice
 let foodChoice = prompt(
   `What would you like to eat, ${customerName}?
 
@@ -41,9 +42,14 @@ switch (foodChoice) {
 
   case '3':
     foodChoice = 'salad';
-    alert(`Can't go wrong with a salad! 🥗`)
+    alert(`Can't go wrong with a salad! 🥗`);
     break;
 
+  case null:
+    alert(`Don't you want anything?`);
+    break;
+
+  // If no value is entered, ask again. I still no, cancel.
   default:
     foodChoice = prompt(
       `Sorry, that's not on the menu. These are your choices:
@@ -52,7 +58,7 @@ switch (foodChoice) {
       2. Pasta
       3. Salad`
     );
-    switch (foodChoice) {
+    switch (foodChoice) { // Translate
       case '1':
         foodChoice = 'pizza';
         break;
@@ -70,6 +76,8 @@ switch (foodChoice) {
         throw Error('Not on the menu');
     };
 }
+
+order.foodChoice = foodChoice;
 
 // Step 3 - Subtype choice
 // Your code goes here
@@ -188,33 +196,36 @@ switch (foodChoice) {
     break;
 }
 
-// Confirm price
-const priceConfirmation = prompt(
-  `That'll be ${price} SEK. Is that OK?
-  
-  YES
-  NO`
-);
+// Order message, alert price
+alert(`That'll be ${price} SEK.`);
 
-switch (priceConfirmation) {
-  case 'YES':
-    alert('Great!');
-    break;
+// // Confirm price
+// const priceConfirmation = prompt(
+//   `Is that OK?
 
-  default:
-    alert(`Well... that's what it costs anyway...`);
-    break;
-}
+//   YES
+//   NO`
+// );
+
+// switch (priceConfirmation) {
+//   case 'YES':
+//     alert('Great!');
+//     break;
+
+//   default:
+//     alert(`Well... that's what it costs anyway...`);
+//     break;
+// }
 
 // Step 5 - Order confirmation
 // Your code goes here
 
 // Ask customer to onfirm order
 const orderConfirmation = prompt(
-  `Ok, so you've ordered ${portionSize} portion of ${foodChoice} ${subType} at ${price} SEK. Sounds good?
+  `Ok, so you've ordered ${portionSize} portion of ${foodChoice} ${subType} for ${price} SEK. Sounds good?
 
-YES
-NO`
+- YES
+- NO`
 );
 
 // Display thank you
@@ -222,9 +233,9 @@ switch (orderConfirmation) {
   case 'YES':
     alert('Awesome! See you soon.');
     const displayOrder = () => {
-      let p = document.getElementById('message');
-      p.innerText = `Your Order:
-      ${portionSize} portion of ${foodChoice} ${subType} at ${price} SEK`;
+      const orderMessage = document.getElementById('message');
+      orderMessage.innerText = `Your Order:
+      ${portionSize} portion of ${foodChoice} ${subType} for ${price} SEK`;
     };
 
     displayOrder();
