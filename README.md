@@ -1,11 +1,13 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Goal of this project is to learn the basics of JavaScript by creating a virtual pizzaria ordering platform with simple inputs.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+First I had to get familiar with the JS functions.
+I tried to use first if and else if functions. After I changed moste of the part with switch. I left the only if function for the pricing calculation. 
+My problem currently is to combine JS and HTML display. That certain information are print after confirming.
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+You will see the link here as soon as I'm done.
