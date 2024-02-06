@@ -9,8 +9,16 @@ let subSalad;
 let subName;
 let portion;
 
+let confirmedOrder = false;
+
+//Step 0 - Loop to 
+
+while(confirmedOrder === false) {
+
 // Step 1 - Welcome and introduction
 // Your code goes here
+
+
 
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
@@ -110,7 +118,10 @@ else{
 let confirm = prompt("To comfirm your order " + name + ", One " + portion + subName +", is this correct?\n1. Yes\n2. No")
 if (confirm === "1" || confirm === "Yes" || confirm === "yes"){
   alert("That will be €1! The order will be delivered shortly. Thank you!")
+  confirmedOrder = true;
 }
 else {
   alert("You are welcome to place a new order anytime.")
+}
+
 }
