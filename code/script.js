@@ -16,6 +16,10 @@ prompt(
     document.getElementById(elementId, string) ="Hello" + person + "Nice to meet you!"
   }
 
+  alert (
+    `Hi and Welcome [$person]`
+    )
+
 // Step 2 - Food choice
 // Your code goes here
 
