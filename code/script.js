@@ -11,7 +11,6 @@ alert(`Hi ${customerName}!`);
 
 // Step 2 - Food choice
 
-
 let food = prompt(`What type of food would you like to order? 
   Enter a number: 
 1 - Pizza 
@@ -33,7 +32,6 @@ if (food === "1") {
 }
 
 // Step 3 - Subtype choice
-
 
 let subtype;
 
@@ -120,11 +118,9 @@ if (food === "salad") {
 
 // Step 4 - Age
 
-
 let age = prompt(`Is this food for a child or an adulf?
   Type your age:`);
 age = parseInt(age);
-
 
 if (age < 18) {
   price = 10;
@@ -135,7 +131,6 @@ if (age < 18) {
 }
 
 // Step 5 - Order confirmation
-
 
 let order = prompt(
   `One ${size} ${food} ${subtype} will be prepared for you. That will be € ${price}. Are you sure you want to order this? Press 1 for yes and 2 for no:`

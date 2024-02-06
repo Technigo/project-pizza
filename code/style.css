@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,14 +7,22 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
-  background: #0026ff;
+  font-family: "Protest Guerrilla";
+  background-image: url("pizza.jpg");
+  background-size: cover;
   color: white;
+  font-size: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
+}
+
+div {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  text-align: center;
 }
 
 p {
