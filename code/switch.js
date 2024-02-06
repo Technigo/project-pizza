@@ -37,7 +37,7 @@ switch (foodChoice) {
     throw alert("invalid choice: choose a number between 1 and 4");
 }
 
-alert(`You choosed ${foodName}!`);
+alert(`You chose ${foodName}!`);
 
 // Step 3 - Subtype choice
 
@@ -105,19 +105,19 @@ switch (foodName) {
     switch (foodOrderPizza) {
       case "1":
         pizzaType = "Pizza Margherita";
-        alert(`You choosed ${pizzaType}`);
+        alert(`You chose ${pizzaType}`);
         break;
       case "2":
         pizzaType = " Pizza Capricciosa";
-        alert(`You choosed ${pizzaType}`);
+        alert(`You chose ${pizzaType}`);
         break;
       case "3":
         pizzaType = " Pizza Napoletana";
-        alert(`You choosed ${pizzaType}`);
+        alert(`You chose ${pizzaType}`);
         break;
       case "4":
         pizzaType = " Pizza 4 Formaggi";
-        alert(`You choosed ${pizzaType}`);
+        alert(`You chose ${pizzaType}`);
         break;
       default:
         throw alert("invalid choice: choose a number between 1 and 4");
@@ -128,19 +128,19 @@ switch (foodName) {
     switch (foodOrderPasta) {
       case "1":
         pastaType = "Pasta al pomodoro";
-        alert(`You choosed ${pastaType}!`);
+        alert(`You chose ${pastaType}!`);
         break;
       case "2":
         pastaType = "Pasta cacio e pepe";
-        alert(`You choosed ${pastaType}!`);
+        alert(`You chose ${pastaType}!`);
         break;
       case "3":
         pastaType = "Pasta alla carbonara";
-        alert(`You choosed ${pastaType}!`);
+        alert(`You chose ${pastaType}!`);
         break;
       case "4":
         pastaType = "Pasta alla diavola";
-        alert(`You choosed ${pastaType}!`);
+        alert(`You chose ${pastaType}!`);
         break;
       default:
         throw alert("invalid choice: choose a number between 1 and 4");
@@ -151,19 +151,19 @@ switch (foodName) {
     switch (foodOrderSalad) {
       case "1":
         saladType = "Tuna Salad";
-        alert(`You choosed ${saladType}!`);
+        alert(`You chose ${saladType}!`);
         break;
       case "2":
         saladType = "Ceasar Salad";
-        alert(`You choosed ${saladType}!`);
+        alert(`You chose ${saladType}!`);
         break;
       case "3":
         saladType = "Greek Salad";
-        alert(`You choosed ${saladType}!`);
+        alert(`You chose ${saladType}!`);
         break;
       case "4":
         saladType = "Vegetarian Salad";
-        alert(`You choosed ${saladType}!`);
+        alert(`You chose ${saladType}!`);
         break;
       default:
         throw "invalid choice: choose a number between 1 and 4";
@@ -173,19 +173,19 @@ switch (foodName) {
     switch (foodOrderSoup) {
       case "1":
         soupType = "Chicken Soup";
-        alert(`You choosed ${soupType}!`);
+        alert(`You chose ${soupType}!`);
         break;
       case "2":
         soupType = "Veggie Soup";
-        alert(`You choosed ${soupType}!`);
+        alert(`You chose ${soupType}!`);
         break;
       case "3":
         soupType = "Carrot Soup";
-        alert(`You choosed ${soupType}!`);
+        alert(`You chose ${soupType}!`);
         break;
       case "4":
         soupType = "Pumpkin Soup";
-        alert(`You choosed ${soupType}!`);
+        alert(`You chose ${soupType}!`);
         break;
 
       default:

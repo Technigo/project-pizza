@@ -40,7 +40,7 @@ switch (foodChoice) {
     foodName = "An Invalid Number";
     break;
 }
-alert(`You choosed ${foodName}!`);
+alert(`You chose ${foodName}!`);
 
 // Step 3 - Subtype choice
 // Your code goes here
@@ -91,61 +91,61 @@ if (foodName === "Pizza") {
 let pizzaType;
 if (foodName === "Pizza" && foodOrder === "1") {
   pizzaType = "Pizza Margherita";
-  alert(`You choosed ${pizzaType}`);
+  alert(`You chose ${pizzaType}`);
 } else if (foodName === "Pizza" && foodOrder === "2") {
   pizzaType = " Pizza Capricciosa";
-  alert(`You choosed ${pizzaType}`);
+  alert(`You chose ${pizzaType}`);
 } else if (foodName === "Pizza" && foodOrder === "3") {
   pizzaType = " Pizza Napoletana";
-  alert(`You choosed ${pizzaType}`);
+  alert(`You chose ${pizzaType}`);
 } else if (foodName === "Pizza" && foodOrder === "4") {
   pizzaType = " Pizza 4 Formaggi";
-  alert(`You choosed ${pizzaType}`);
+  alert(`You chose ${pizzaType}`);
 }
 
 let pastaType;
 if (foodName === "Pasta" && foodOrder === "1") {
   pastaType = "Pasta al pomodoro";
-  alert(`You choosed ${pastaType}!`);
+  alert(`You chose ${pastaType}!`);
 } else if (foodName === "Pasta" && foodOrder === "2") {
   pastaType = "Pasta cacio e pepe";
-  alert(`You choosed ${pastaType}!`);
+  alert(`You chose ${pastaType}!`);
 } else if (foodName === "Pasta" && foodOrder === "3") {
   pastaType = "Pasta alla carbonara";
-  alert(`You choosed ${pastaType}!`);
+  alert(`You chose ${pastaType}!`);
 } else if (foodName === "Pasta" && foodOrder === "4") {
   pastaType = "Pasta alla diavola";
-  alert(`You choosed ${pastaType}!`);
+  alert(`You chose ${pastaType}!`);
 }
 
 let saladType;
 if (foodName === "Salad" && foodOrder === "1") {
   saladType = "Tuna Salad";
-  alert(`You choosed ${saladType}!`);
+  alert(`You chose ${saladType}!`);
 } else if (foodName === "Salad" && foodOrder === "2") {
   saladType = "Ceasar Salad";
-  alert(`You choosed ${saladType}!`);
+  alert(`You chose ${saladType}!`);
 } else if (foodName === "Salad" && foodOrder === "3") {
   saladType = "Greek Salad";
-  alert(`You choosed ${saladType}!`);
+  alert(`You chose ${saladType}!`);
 } else if (foodName === "Salad" && foodOrder === "4") {
   saladType = "Vegetarian Salad";
-  alert(`You choosed ${saladType}!`);
+  alert(`You chose ${saladType}!`);
 }
 
 let soupType;
 if (foodName === "Soup" && foodOrder === "1") {
   soupType = "Chicken Soup";
-  alert(`You choosed ${soupType}!`);
+  alert(`You chose ${soupType}!`);
 } else if (foodName === "Soup" && foodOrder === "2") {
   soupType = "Veggie Soup";
-  alert(`You choosed ${soupType}!`);
+  alert(`You chose ${soupType}!`);
 } else if (foodName === "Soup" && foodOrder === "3") {
   soupType = "Carrot Soup";
-  alert(`You choosed ${soupType}!`);
+  alert(`You chose ${soupType}!`);
 } else if (foodName === "Soup" && foodOrder === "4") {
   soupType = "Pumpkin Soup";
-  alert(`You choosed ${soupType}!`);
+  alert(`You chose ${soupType}!`);
 }
 
 // Step 4 - Age
@@ -230,7 +230,7 @@ Please enter a number to confirm:
   );
 } else if (foodName === "Soup" && age < "18") {
   confirmation = prompt(
-    `${soupSize} ${soupType} will be prepared for you. That'll be €10.
+    `${soupSize} ${soupType} will be prepared for you. git at'll be €10.
 Are you sure you want to order this?
 Please enter a number to confirm:
 1 - Yes
