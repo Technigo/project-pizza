@@ -3,8 +3,18 @@
 // Step 1 - Welcome and introduction
 // Your code goes here
 alert(
-  `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
+  "Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin."
 )
+
+prompt(
+  "Please enter your name"
+  )
+
+  let person = prompt("Please enter your name")
+
+  if (person != null) {
+    document.getElementById(elementId, string) ="Hello" + person + "Nice to meet you!"
+  }
 
 // Step 2 - Food choice
 // Your code goes here
