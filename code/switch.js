@@ -1,35 +1,35 @@
 // Start here
 
 // Defining some useful variables 
-let orderedFood = ``;
+let orderedFood = "";
 
 // Step 1 - Welcome and introduction
 
 alert(
-  `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`);
+  "Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.");
 
-const customer = prompt(`Please enter your name:`); 
+const customer = prompt("Please enter your name:");
 
 alert(`Happy to meet you, ${customer}!`);
 
 
 // Step 2 - Food choice
 
-const foodType = parseInt(prompt(`What type of food would you like to order? \n  Please enter a number: \n  1 - Pizza \n  2 - Pasta \n  3 - Salad`))
+const foodType = parseInt(prompt("What type of food would you like to order? \n  Please enter a number: \n  1 - Pizza \n  2 - Pasta \n  3 - Salad"))
 
 switch (foodType) {
     case 1:
-        alert(`You've chosen Pizza!`);
+        alert("You've chosen Pizza!");
         break;
     case 2:
-        alert(`You've chosen Pasta!`);
+        alert("You've chosen Pasta!");
         break;
     case 3:
-        alert(`You've chosen Salad!`);
+        alert("You've chosen Salad!");
         break;
     default:
-        alert(`Invalid food type. Please refresh site and try again.`);
-        throw new Error(`Invalid choice`);
+        alert("Invalid food type. Please refresh site and try again.");
+        throw new Error("Invalid choice");
 }
 
 
@@ -38,58 +38,58 @@ switch (foodType) {
 // Pizza 
 
 if (foodType === 1) {
-    const pizzaType = parseInt(prompt(`Please select a type of Pizza. \n  Enter a number: \n  1 - Vesuvius \n  2 - Hawaii \n  3 - Capricciosa`))
+    const pizzaType = parseInt(prompt("Please select a type of Pizza. \n  Enter a number: \n  1 - Vesuvius \n  2 - Hawaii \n  3 - Capricciosa"))
     switch (pizzaType) {
         case 1:
-            orderedFood = `Vesuvius`;
+            orderedFood = "Vesuvius";
             break;
         case 2:
-            orderedFood = `Hawaii`;
+            orderedFood = "Hawaii";
             break;
         case 3:
-            orderedFood = `Capricciosa`;
+            orderedFood = "Capricciosa";
             break;
         default:
-            alert(`Invalid pizza type. Please refresh site and try again`);
-            throw new Error(`Invalid choice`);      
+            alert("Invalid pizza type. Please refresh site and try again");
+            throw new Error("Invalid choice");      
     }
 
 // Pasta 
 
 } else if (foodType === 2) {
-  const pastaType = parseInt(prompt(`Please select a Pasta dish. \n  Enter a number: \n  1 - Spaghetti Bolognese \n  2 - Penne all’Arrabbiata \n  3 - Frutti de Mare`))
+  const pastaType = parseInt(prompt("Please select a Pasta dish. \n  Enter a number: \n  1 - Spaghetti Bolognese \n  2 - Penne all’Arrabbiata \n  3 - Frutti de Mare"))
   switch (pastaType) {
     case 1:
-        orderedFood = `Spaghetti Bolognese`;
+        orderedFood = "Spaghetti Bolognese";
         break;
     case 2:
-        orderedFood = `Penne all’Arrabbiata`;
+        orderedFood = "Penne all’Arrabbiata";
         break;
     case 3:
-        orderedFood = `Frutti de Mare`;
+        orderedFood = "Frutti de Mare";
         break;
     default:
-        alert(`Invalid pasta type. Please refresh site and try again`);
-        throw new Error(`Invalid choice`);
+        alert("Invalid pasta type. Please refresh site and try again");
+        throw new Error("Invalid choice");
   }
 
   // Salad 
   
 } else if (foodType === 3) {
-  const saladType = parseInt(prompt(`Please select a Salad. \n  Enter a number: \n  1 - Caesar Salad \n  2 - Salade Niçoise \n  3 - Waldorf Salad`))
+  const saladType = parseInt(prompt("Please select a Salad. \n  Enter a number: \n  1 - Caesar Salad \n  2 - Salade Niçoise \n  3 - Waldorf Salad"))
   switch (saladType) {
     case 1:
-        orderedFood = `Caesar Salad`;
+        orderedFood = "Caesar Salad";
         break;
     case 2:
-        orderedFood = `Salade Niçoise`;
+        orderedFood = "Salade Niçoise";
         break;
     case 3:
-        orderedFood = `Waldorf Salad`;
+        orderedFood = "Waldorf Salad";
         break;
     default: 
-        alert(`Invalid salad type. Please refresh site and try again`);
-        throw new Error(`Invalid choice`);        
+        alert("Invalid salad type. Please refresh site and try again");
+        throw new Error("Invalid choice");        
   }
 } 
 
@@ -98,11 +98,11 @@ alert(`You've chosen ${orderedFood}!`);
 
 // Step 4 - Age
 
-const age = (prompt(`Is this food for a child or an adult? Type your age:`));
+const age = (prompt("Is this food for a child or an adult? Type your age:"));
 
-const portionSize = age <= 17 ? `child-sized` : `adult-sized`;
+const portionSize = age <= 17 ? "child-sized" : "adult-sized";
 
-const price = age <= 17 ? `€10` : `€15`;
+const price = age <= 17 ? "€10" : "€15";
 
 
 // Step 5 - Order confirmation
@@ -111,12 +111,12 @@ const confirmOrder = parseInt(prompt(`One ${portionSize} ${orderedFood} will be 
 
 switch (confirmOrder) {
     case 1:
-        alert(`Thank you for your order! Your meal will be prepared.`); 
+        alert("Thank you for your order! Your meal will be prepared."); 
         break;
     case 2: 
-        alert(`No worries, we'll be here if you change your mind.`);
+        alert("No worries, we'll be here if you change your mind.");
         break;  
     default:
-        alert(`Apologies, but that was neither a 'yes' nor a 'no'. Please try again.`)
+        alert("Apologies, but that was neither a 'yes' nor a 'no'. Please try again.")
         break;
 }
