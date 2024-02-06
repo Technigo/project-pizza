@@ -45,7 +45,7 @@ if (foodType === "1") {
     1 - Vesuvius  
     2 - Hawaii 
     3 - Capricciosa`)
-    
+        
   if (pizzaType === "1") {
     orderedFood = "Vesuvius";
   } else if (pizzaType === "2") {
@@ -104,7 +104,6 @@ alert(`You've chosen ${orderedFood}!`);
 // Step 4 - Age
 
 const age = (prompt("Is this food for a child or an adult? Type your age:"));
-
 
 if (age <= 17) {
   price = "€10";

@@ -138,4 +138,4 @@ switch (confirmOrder) {
     default:
         alert("Apologies, but that was neither a 'yes' nor a 'no'. Please try again.")
         break;
-}
+} 
