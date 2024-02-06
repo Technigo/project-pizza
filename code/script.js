@@ -9,7 +9,19 @@ alert("Hi " + firstName + "!");
 
 // Step 2 - Food choice
 let orderFood = prompt("What type of food would you like to order?");
-
+let foodType;
+switch (choice); {
+  case 1:
+    foodType = "Pizza";
+    break;
+  case 2:
+    foodType = "Pasta";
+    break;
+  case 3:
+    foodType = "Salad";
+    break;
+}
+alert("You have chosen: " + foodType); 
 
 // Step 3 - Subtype choice
 // Your code goes here
