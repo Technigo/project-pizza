@@ -41,18 +41,17 @@ Enter a number:
 3-Pepperoni`)
 
 switch (pizzaType) {
-  case 1
+  case "1":
   alert(`You've chosen napolitana!`
   )
   break; 
-    case 2
-    alert(`You've chosen hawian!"
+    case "2":
+    alert(`You've chosen hawian!"`
    )
   break; 
-  alert(
-    case "3"
-    pizzaType = "You've chosen pepperoni!"
-  )
+    case "3":
+  alert(`You've chosen pepperoni!`
+    )
   break; 
 }
 
