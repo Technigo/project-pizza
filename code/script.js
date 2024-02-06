@@ -34,6 +34,28 @@ if (food === "1") {
   )
 }
 
+let pizzaType = prompt(`Select a pizza type
+Enter a number:
+1-Napolitana,
+2-Hawaian,
+3-Pepperoni`)
+
+switch (pizzaType) {
+  case 1
+  alert(`You've chosen napolitana!`
+  )
+  break; 
+    case 2
+    alert(`You've chosen hawian!"
+   )
+  break; 
+  alert(
+    case "3"
+    pizzaType = "You've chosen pepperoni!"
+  )
+  break; 
+}
+
 // Step 3 - Subtype choice
 // Your code goes here
 
