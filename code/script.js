@@ -21,9 +21,21 @@ let menuSelect = prompt(
 
 // let selectedItem = ""
 
+let selectedItem = ""
+
 if (menuSelect === "1") {
-  alert('You selected Pizza');
+  selectedItem = "pizza";
 } else if (menuSelect === "2") {
+  selectedItem = "pasta";
+} else {
+  selectedItem = "salad"
+}
+
+
+
+if (selectedItem === "pizza") {
+  alert('You selected Pizza');
+} else if (selectedItem === "pasta") {
   alert('You selected Pasta');
 } else {
   alert('You selected Salad');
@@ -31,15 +43,15 @@ if (menuSelect === "1") {
 
 
 // Step 3 - Subtype choice
-if (menuSelect === "1") {
+if (selectedItem === "1") {
   prompt(
     `Select the type of pizza:
     Enter a number:
     1. Hawaiian
-    2. Margherito
+    2. Margherita
     3. Pepperoni`
   )
-} else if (menuSelect === "2") {
+} else if (selectedItem === "2") {
   prompt(
     `Select the type of pasta:
     Enter a number:
@@ -57,12 +69,27 @@ if (menuSelect === "1") {
   )
 }
 
+let subItem = ""
 
-
-
+if (selectedItem === "1") {
+  subItem = "hawaiian";
+} else if (selectedItem === "2") {
+  subItem = "margherita";
+} else {
+  subItem = "pepperoni"
+}
 
 // Step 4 - Age
-// Your code goes here
+let age = prompt("Is your order for a child or an adult? Please enter your age:")
+
+if (age >= 11) {
+  prompt(`You chose one adult sized ${subItem} ${selectedItem}). Your total is $20. Do you confirm this ordwer?
+  Enter a number:
+  1. Yes
+  2. No`)
+}
+
+// }
 
 // Step 5 - Order confirmation
 // Your code goes here
