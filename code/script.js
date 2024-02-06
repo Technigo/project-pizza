@@ -1,7 +1,7 @@
 // Start here
 
 // Step 1 - Welcome and introduction
-// Your code goes here
+
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 );
@@ -10,7 +10,7 @@ let customerName = prompt("What's your name?");
 alert(`Hi ${customerName}!`);
 
 // Step 2 - Food choice
-// Your code goes here
+
 
 let food = prompt(`What type of food would you like to order? 
   Enter a number: 
@@ -33,7 +33,7 @@ if (food === "1") {
 }
 
 // Step 3 - Subtype choice
-// Your code goes here
+
 
 let subtype;
 
@@ -119,17 +119,12 @@ if (food === "salad") {
 }
 
 // Step 4 - Age
-// Your code goes here
+
 
 let age = prompt(`Is this food for a child or an adulf?
   Type your age:`);
 age = parseInt(age);
 
-// food: 1, 2, 3
-// pizzaType: 1, 2, 3
-// pastaType: 1, 2, 3
-// saladType: 1, 2, 3
-// age
 
 if (age < 18) {
   price = 10;
@@ -140,7 +135,7 @@ if (age < 18) {
 }
 
 // Step 5 - Order confirmation
-// Your code goes here
+
 
 let order = prompt(
   `One ${size} ${food} ${subtype} will be prepared for you. That will be € ${price}. Are you sure you want to order this? Press 1 for yes and 2 for no:`
