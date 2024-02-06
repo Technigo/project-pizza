@@ -121,7 +121,7 @@ else if (pastaType == 2) {
 }
 
 
-else if(pastaType == 1) {
+else if(pastaType == 3) {
     typeChosen = "Carbonara"
     alert(
       `A delicious ${foodChosen} ${typeChosen}, love it!`
