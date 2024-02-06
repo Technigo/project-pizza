@@ -12,8 +12,12 @@ alert(
 
 const customer = prompt("Please enter your name:"); 
 
-alert(`Happy to meet you, ${customer}!`);
-
+if (!customer) {
+  alert("That's not a name. Please refresh site and try again.");
+  exit(1);
+} else {
+  alert(`Happy to meet you, ${customer}!`);
+}
 
 // Step 2 - Food choice
 
