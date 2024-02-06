@@ -12,11 +12,11 @@ alert(`Hi, ` + prompt(`What is your name?`) + `!`)
 const orderFood = prompt(`What type of food would you like to order? Please enter the number of the food. 1. Pizza 2. Pasta 3. Salad`);
 
 if (orderFood == 1 ){
-  console.log (alert (`You have chosen pizza! Good choice!`));
+  console.log (alert (`You have chosen pizza! Good choice!`))
 } else if (orderFood == 2){
-  console.log (alert (`You have chosen pasta! Good choice!`));
+  console.log (alert (`You have chosen pasta! Good choice!`))
 } else if (orderFood == 3){
-  console.log (alert ( `You have chosen salad! Good choice!`));
+  console.log (alert ( `You have chosen salad! Good choice!`))
 } else {console.log (alert (`Invalid typing, please enter the number of food.`))}
 
 // Step 3 - Subtype choice
