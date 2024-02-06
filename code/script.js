@@ -27,12 +27,15 @@ if (food === "1") {
 } else if (food === "3") {
   alert(`You've chosen salad!`);
   food = "salad";
+} else {
+  alert(`Invalid choice!`);
+  throw new Error("invalid");
 }
 
 // Step 3 - Subtype choice
 // Your code goes here
 
-let subtype 
+let subtype;
 
 if (food === "pizza") {
   let pizzaType = prompt(`Select a pizza type
@@ -44,16 +47,20 @@ if (food === "pizza") {
   switch (pizzaType) {
     case "1":
       alert(`You've chosen napolitana!`);
-      subtype="napolitana"
+      subtype = "napolitana";
       break;
     case "2":
       alert(`You've chosen hawian!"`);
-      subtype="hawian"
+      subtype = "hawian";
       break;
     case "3":
       alert(`You've chosen pepperoni!`);
-      subtype="pepperoni"
+      subtype = "pepperoni";
       break;
+    default: {
+      alert(`Invalid choice!`);
+      throw new Error("invalid");
+    }
   }
 }
 
@@ -67,16 +74,20 @@ if (food === "pasta") {
   switch (pastaType) {
     case "1":
       alert(`You've chosen spagetti carbonara!`);
-      subtype="spagetti carbonara"
+      subtype = "spagetti carbonara";
       break;
     case "2":
       alert(`You've chosen fettuccine Alfredo!`);
-      subtype="fettuccine Alfredo"
+      subtype = "fettuccine Alfredo";
       break;
     case "3":
       alert(`You've chosen cheesy tortellini!`);
-      subtype="cheesy tortellini"
+      subtype = "cheesy tortellini";
       break;
+    default: {
+      alert(`Invalid choice!`);
+      throw new Error("invalid");
+    }
   }
 }
 
@@ -90,16 +101,20 @@ if (food === "salad") {
   switch (saladType) {
     case "1":
       alert(`You've chosen ceasar salad!`);
-      subtype="ceasar salad"
+      subtype = "ceasar salad";
       break;
     case "2":
       alert(`You've chosen caprese salad!`);
-      subtype="caprese salad"
+      subtype = "caprese salad";
       break;
     case "3":
       alert(`You've chosen greek salad!`);
-      subtype="greek salad"
+      subtype = "greek salad";
       break;
+    default: {
+      alert(`Invalid choice!`);
+      throw new Error("invalid");
+    }
   }
 }
 
@@ -117,22 +132,19 @@ age = parseInt(age);
 // age
 
 if (age < 18) {
-  price=10
-  size="child"
+  price = 10;
+  size = "child";
 } else {
-  price=15
-  size="adult"
+  price = 15;
+  size = "adult";
 }
-
-
-  
 
 // Step 5 - Order confirmation
 // Your code goes here
 
-
-let order = prompt (`One ${size} ${food} ${subtype} will be prepared for you. That will be ${price}. Are you sure you want to order this? Press 1 for yes and 2 for no:`);
-
+let order = prompt(
+  `One ${size} ${food} ${subtype} will be prepared for you. That will be € ${price}. Are you sure you want to order this? Press 1 for yes and 2 for no:`
+);
 
 if (order === "1") {
   alert(`You have placed your order! Your delicous food it's on it's way!`);
