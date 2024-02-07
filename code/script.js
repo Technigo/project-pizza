@@ -107,10 +107,20 @@ else {
 
 alert(`You have selected ${subtypeDish}! Click 'OK' to continue.`)
 
-
-
 // Step 4 - Age
 // Your code goes here
+
+let age = prompt(`How old are you?`)
+if (age>=18 && age<=120) {
+  alert("You will be served an adult portion, that will be €15.")
+}
+else if (age>=0 && age<18) {
+  alert("You will be served a children's portion, that will be €7.50.")
+}
+else {
+  alert("Invalid choice, please try again!")
+  exit(1)
+}
 
 // Step 5 - Order confirmation
 // Your code goes here
