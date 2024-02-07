@@ -1,2 +1,2 @@
 ## Netlify link
-Add your Netlify link here.
+https://wens-javascript-pizzeria.netlify.app/
