@@ -1,7 +1,4 @@
-// Start here
-
 // Step 1 - Welcome and introduction
-// Your code goes here
 alert(
   "Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin."
 )
@@ -13,8 +10,6 @@ let yourName = prompt(`Please enter your name!`)
 alert(`Hi ${yourName}, nice to see you!`)
 
 // Step 2 - Food choice
-// Your code goes here
-
 //Promts the costumer to enter a number for prefered food
 let foodChoice = prompt(
   `What do you want to eat today?
@@ -43,16 +38,14 @@ if (foodChoice === "1") {
 
 // Display a message to confirm the user's selection
 if (foodType) {
-  alert(`You chose ${foodType}. Great choise ${yourName}!`)
+  alert(`You chose ${foodType}. Great choice ${yourName}!`)
 }
 
 // Step 3 - Subtype choice
-// Your code goes here
-
 let foodSubtype
 
 if (foodType === "Pizza") {
-  // Prompt the user to choose a pizza subtype
+// Prompt the user to choose a pizza subtype
   let pizzaSubtype = prompt(
     `What type of pizza do you want?
 
@@ -63,7 +56,7 @@ if (foodType === "Pizza") {
     Please enter the number of your choice.`
   )
 
-  // Determine the chosen pizza subtype based on user input
+// Determine the chosen pizza subtype based on user input
   if (pizzaSubtype === "1") {
     foodSubtype = "Margherita"
   } else if (pizzaSubtype === "2") {
@@ -76,7 +69,7 @@ if (foodType === "Pizza") {
   }
 
 } else if (foodType === "Pasta") {
-  // Prompt the user to choose a pasta subtype
+// Prompt the user to choose a pasta subtype
   let pastaSubtype = prompt(
     `What type of pasta do you want?
 
@@ -87,7 +80,7 @@ if (foodType === "Pizza") {
     Please enter the number of your choice.`
   )
 
-  // Determine the chosen pasta subtype based on user input
+// Determine the chosen pasta subtype based on user input
   if (pastaSubtype === "1") {
     foodSubtype = "Spaghetti Carbonara"
   } else if (pastaSubtype === "2") {
@@ -100,7 +93,7 @@ if (foodType === "Pizza") {
   }
 } else if (foodType === "Salad") {
   
-  // Prompt the user to choose a salad subtype
+// Prompt the user to choose a salad subtype
   let saladSubtype = prompt(
     `What type of salad do you want?
 
@@ -111,7 +104,7 @@ if (foodType === "Pizza") {
     Please enter the number of your choice.`
   )
 
-  // Determine the chosen salad subtype based on user input
+// Determine the chosen salad subtype based on user input
   if (saladSubtype === "1") {
     foodSubtype = "Caesar Salad"
   } else if (saladSubtype === "2") {
@@ -129,15 +122,42 @@ if (foodSubtype) {
   alert(`You chose the delicious ${foodSubtype}!`)
 }
 
-// // Display a message to confirm the user's selection
-// if (subtypeChoice) {
-//   alert(`You chose the delicious ${foodType} ${subtypeChoic}. Nice!`)
-// }
-
 // Step 4 - Age
-// Your code goes here
+//Prompt user to enter their age
+let age = prompt(
+  `Enter your age (so we know if your dish should be prepared in adult or child size)`
+)
 
+//If age is equal to or under 10 dish size and price should be for adult. Prompt user to confirm order or go back to start.
+if (age <= 10) {
+  let = prompt(`Thank you!
+  
+  This is your order:
+  1 x ${foodSubtype} (child size)
+  Total price 10€
 
+  Is this correct? 
+  Confirm your order or go back to the start to make changes.
+  1 - Confirm
+  2 - Make changes
+  `
+  )
+
+  //If age is above 10 dish size and price should be for adult. Prompt user to confirm order or go back to start.
+} else {
+  let = prompt(`Thank you!
+  
+  This is your order:
+  1 x ${foodSubtype} (adult size)
+  Total price 15€
+
+  Is this correct? 
+  Confirm your order or go back to the start to make changes.
+  1 - Confirm
+  2 - Make changes
+  `
+  )
+}
 
 // Step 5 - Order confirmation
-// Your code goes here
+// Determine if the order is confirmeed or not based on user input
