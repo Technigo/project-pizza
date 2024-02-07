@@ -22,7 +22,7 @@ while (foodChoice === "apple") {
   );
   console.log("Answer:", foodAnswer);
 
-  switch (foodAnswer) {
+  switch (foodAnswer.toLowerCase()) {
     case "pizza":
       foodChoice = "pizza";
       break;
@@ -39,21 +39,56 @@ while (foodChoice === "apple") {
 
 console.log("Choice:", foodChoice);
 
-let pizzaMenu =
-  ("Margerita (tomato, cheese)", "Al Funghi (tomato, cheese, mushrooms)");
-
 // Step 3 - Subtype choice
-// Your code goes here
+const pizzaMenu = [
+  "1. Margerita (tomato, cheese)",
+  "2. Al Funghi (tomato, cheese, mushrooms)",
+  "3. Vegetariana (tomato, cheese, onion, bell pepper, mushrooms, olives, artichoke",
+  "4. Chicken No Chicken (tomato, cheese, banana, curry, peanuts",
+];
+const burgerMenu = [
+  "1. Small burger",
+  "2. Big burger",
+  "3. Small cheeseburger",
+  "4. Big cheeseburger",
+];
+const saladMenu = [
+  "1. Greek salad",
+  "2. Ceasar salad",
+  "3. Pasta salad",
+  "4. Avocado salad",
+];
 
-/*if foodChoice === pizza {
-  prompt ("What type of pizza do you want? Write the number on the menu:")
-  table (pizzaMenu)
+let subType = null;
+let order = null;
+
+if (foodChoice === "pizza") {
+  subType = prompt(
+    `What type of pizza do you want? Write the number on the menu: ${pizzaMenu}`
+  );
+  console.log("Answer:", subType);
+  console.log("Option:", pizzaMenu[subType - 1]);
+  order = pizzaMenu[subType - 1];
+} else if (foodChoice === "burger") {
+  subType = prompt(
+    `Here is our burger menu ${burgerMenu}. Write the number of your choice of burger:`
+  );
+  console.log("Answer:", subType);
+  console.log("Option:", burgerMenu[subType - 1]);
+  order = burgerMenu[subType - 1];
 } else {
-  prompt ("What type of salad do you want? Write the number on the menu:")
-}*/
+  subType = prompt(
+    `What type of salad do you want? Write the number on the menu: ${saladMenu}`
+  );
+  console.log("Answer:", subType);
+  console.log("Option:", saladMenu[subType - 1]);
+  order = saladMenu[subType - 1];
+}
 
+console.log("Order:", order);
 // Step 4 - Age
 // Your code goes here
 
 // Step 5 - Order confirmation
-// Your code goes here
+
+alert(`Thank you for your order! Your ${order} is on its way.`);
