@@ -11,9 +11,22 @@ const customerName = prompt(
 )
 
 // Step 3 - Food choice
-alert(
-`Nice of you to pop by, ${customerName}! Now let's get you some food, shall we?`
-)
+
+//I had to use two case inputs for this one to work properly.
+switch (customerName) {
+    case null:
+    case "":
+        alert(
+            `Hmm... Looks like no name was entered, and I'm pretty sure you have a name. Please try again.`
+        )
+    break
+    
+    default:
+        alert(
+            `Nice of you to pop by, ${customerName}! Now let's get you some food, shall we?`
+            )
+    break
+}
 
 const food = prompt(
 `What do you feel like eating today? \nChoose your preference by typing in the corresponding number.
