@@ -6,21 +6,17 @@ alert(
   "Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin."
 )
 
-// prompt (
-//   "Please enter your name!"
-// )
-
+//Aks for the costumers name with a prompt
 let yourName = prompt(`Please enter your name!`)
-// console.log("Hi " + yourName + ", nice to see you!")
 
-alert(
-  `Hi ${yourName}, nice to see you!`
-)
+//Greets the costumer by name using alert
+alert(`Hi ${yourName}, nice to see you!`)
 
 // Step 2 - Food choice
 // Your code goes here
 
-const preferedFood = prompt(
+//Promts the costumer to enter a number for prefered food
+let foodChoice = prompt(
   `What do you want to eat today?
 
   1 - Pizza
@@ -31,67 +27,117 @@ const preferedFood = prompt(
   `
 )
 
-let selectedFood = ""
+// Determine the chosen food type based on user input
+let foodType
 
-if (preferedFood === "1") {
-  selectedFood = "Pizza"
-} else if (preferedFood === "2") {
-  selectedFood = "Pasta"
-} else if (preferedFood === "3") {
-  selectedFood = "Salad"
+if (foodChoice === "1") {
+    foodType = "Pizza"
+} else if (foodChoice === "2") {
+    foodType = "Pasta"
+} else if (foodChoice === "3") {
+    foodType = "Salad"
 } else {
   alert("I'm afraid that's not an option. Please start again and select one of the options (1-3).")
   exit(1)
 }
 
-alert(
-  `You chose ${selectedFood}. Great choise!`)
+// Display a message to confirm the user's selection
+if (foodType) {
+  alert(`You chose ${foodType}. Great choise ${yourName}!`)
+}
 
 // Step 3 - Subtype choice
 // Your code goes here
 
-if (selectedFood === "Pizza"){
-  let specifiedFood = prompt(
-    `What pizza would you like?
+let foodSubtype
 
-    1 - Margerita
+if (foodType === "Pizza") {
+  // Prompt the user to choose a pizza subtype
+  let pizzaSubtype = prompt(
+    `What type of pizza do you want?
+
+    1 - Margherita
     2 - Capricciosa
     3 - Quattro Stagioni
 
-    Please enter the number of your choice.
-    `
-  )}
-  else if (selectedFood === "Pasta"){
-    let specifiedFood = prompt(
-      `What pasta would you like?
+    Please enter the number of your choice.`
+  )
 
-      1 - Spaghetti Carbonara
-      2 - Fettuccine Alfredo
-      3 - Cheesy Tortellini
-
-      Please enter the number of your choice.
-      `
-  )}
-  else if (selectedFood === "Salad"){
-    let specifiedFood = prompt(
-      `What salad would you like?
-
-      1 - Caesar Salad
-      2 - Caprese Salad
-      3 - Greek Salad
-
-      Please enter the number of your choice.
-      `
-  )}
-  else {
+  // Determine the chosen pizza subtype based on user input
+  if (pizzaSubtype === "1") {
+    foodSubtype = "Margherita"
+  } else if (pizzaSubtype === "2") {
+    foodSubtype = "Capricciosa"
+  } else if (pizzaSubtype === "3") {
+    foodSubtype = "Quattro Stagioni"
+  } else {
     alert("I'm afraid that's not an option. Please start again and select one of the options (1-3).")
-      exit(1)
+    exit(1)
   }
 
+} else if (foodType === "Pasta") {
+  // Prompt the user to choose a pasta subtype
+  let pastaSubtype = prompt(
+    `What type of pasta do you want?
 
+    1 - Spaghetti Carbonara
+    2 - Fettuccine Alfredo
+    3 - Cheesy Tortellini
+
+    Please enter the number of your choice.`
+  )
+
+  // Determine the chosen pasta subtype based on user input
+  if (pastaSubtype === "1") {
+    foodSubtype = "Spaghetti Carbonara"
+  } else if (pastaSubtype === "2") {
+    foodSubtype = "Fettuccine Alfredo"
+  } else if (pastaSubtype === "3") {
+    foodSubtype = "Cheesy Tortellini"
+  } else {
+    alert("I'm afraid that's not an option. Please start again and select one of the options (1-3).")
+    exit(1)
+  }
+} else if (foodType === "Salad") {
+  
+  // Prompt the user to choose a salad subtype
+  let saladSubtype = prompt(
+    `What type of salad do you want?
+
+    1 - Caesar Salad
+    2 - Greek Salad
+    3 - Caprese Salad
+
+    Please enter the number of your choice.`
+  )
+
+  // Determine the chosen salad subtype based on user input
+  if (saladSubtype === "1") {
+    foodSubtype = "Caesar Salad"
+  } else if (saladSubtype === "2") {
+    foodSubtype = "Greek Salad"
+  } else if (saladSubtype === "3") {
+    foodSubtype = "Caprese Salad"
+  } else {
+    alert("I'm afraid that's not an option. Please start again and select one of the options (1-3).")
+    exit(1)
+  }
+}
+
+// Display a message to confirm the user's selection
+if (foodSubtype) {
+  alert(`You chose the delicious ${foodSubtype}!`)
+}
+
+// // Display a message to confirm the user's selection
+// if (subtypeChoice) {
+//   alert(`You chose the delicious ${foodType} ${subtypeChoic}. Nice!`)
+// }
 
 // Step 4 - Age
 // Your code goes here
+
+
 
 // Step 5 - Order confirmation
 // Your code goes here
