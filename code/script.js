@@ -141,3 +141,34 @@ if (order === "1") {
 } else if (order === "2") {
   alert(`No problem! Come back and order anytime!👋`);
 }
+
+// Step 6 – Optional alternative
+
+let reason =
+  prompt(`Psst, ${customerName}, may we ask why you cancelled your order?
+  Enter a reason:
+1 - The price 
+2 - No longer hungry
+3 - Not enough alternatives
+4 - Other`);
+
+switch (reason) {
+  case "1":
+    alert(`You've chosen the price.`);
+    break;
+  case "2":
+    alert(`You've chosen no longer hungry.`);
+    break;
+  case "3":
+    alert(`You've chosen not enough alternatives.`);
+    break;
+  case "4":
+    alert(`You've chosen other.`);
+    break;
+  default: {
+    alert(`Invalid choice!`);
+    throw new Error("invalid");
+  }
+}
+
+prompt(`Tell us more:`);
