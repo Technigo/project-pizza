@@ -16,12 +16,13 @@ alert ("Hello" + " " + chosenName + "!")
 // Your code goes here
 
 let choice = prompt (`What food are we getting today? 
-Please choose 1 for Pizza,
- 2 for Pasta
-  and 3 for Salad` )
+Please choose 
+1 for Pizza,
+2 for Salad
+3 for Pasta` )
 switch (choice){
   case "1":
-    alert("You chose pizza");
+    alert("You chose Pizza");
     break;
     case "2":
       alert("You chose Salad");
@@ -36,53 +37,49 @@ switch (choice){
 // Step 3 - Subtype choice
 // Your code goes here
 
-if (choice === 1){
-  prompt ("Choose extra: Please choose 1 for Margarita, 2 for Pepperoni or 3 for quatro")
-} else if (choice === 2) {
-  prompt ("Choose extra: Please choose 1 for Beetroot, 2 for Greek, 3 for special")
-} else if (choice == 3) {
-prompt ("Choose extra: Please choose 1 for Meetballs, 2 for Ketchup, 3 for ...")
-} else if (choice >=4) {
-  prompt ("You have to choose a number between 1 and 3 for your extra, no extra is your choice")}
-
-  let initialChoice = prompt("Choose 1 for pizza, 2 for salad, or 3 for pasta:");
-
-  if (initialChoice === "1") {
-      let pizzaSubchoice = prompt("Choose pizza size: Small, Medium, or Large?")
-      alert(`You chose pizza and selected ${pizzaSubchoice} size.`)
-  } else if (initialChoice === "2") {
-      let saladType = prompt("Choose salad type: Caesar or Garden?")
-      alert(`You chose salad and selected ${saladType} type.`)
-  } else if (initialChoice === "3") {
-      let pastaStyle = prompt("Choose pasta style: Spaghetti or Penne?")
-      alert(`You chose pasta and selected ${pastaStyle} style.`)
-  } else {
-      alert("Invalid choice. Please choose 1, 2, or 3.")
-  }
+if (choice === "1"){
+  let pizzaSubchoice = prompt ("Choose extra: Please choose Small, Medium or Grande")
+  alert (`Yoou chose Pizza and selected ${pizzaSubchoice} size.`)
+} else if (choice === "2") {
+  let saladType = prompt ("Choose extra: Please choose Beetroot, Greek, Plane")
+  alert(`You chose salad and selected ${saladType} type.`)
+} else if (choice == "3") {
+  let pastaStyle = prompt ("Choose extra: Please choose Penne, Spagetti, Tagliatelle, ")
+  alert(`You chose pasta and selected ${pastaStyle} style.`)
+} else {
+  prompt ("Please choose a numner between 1 and 3")}
 
 
 // Step 4 - Age
 // Your code goes here
 
- let age = prompt ("Please enter your age")
- if(age >= 17){
- alert ("You are above 18 and can proceed to the checkout")
-} else {
-  alert (`Kids menu, that will be $()`)
+ let userAge = prompt ("Please enter your age")
+ let age = parseInt(userAge)
+ let price;
+ if(age >= 18){
+  price = 10;
+ alert(`The price will be ${price}`)
+} else if (age <18){
+  price = 5;
+  alert (`Kids menu, that will be ${price}`)
 }
-
 
 
 // Step 5 - Order confirmation
 // Your code goes here
-alert(
-  'Order confirmation, please hold'
-)
 
+let payment = prompt("Confirm payment? Type in Yes or No");
+
+if (payment === "Yes") {
+    let confirmPurchase = confirm("Yes");
+
+    if (confirmPurchase) {
+        alert("Purchase confirmed. Thank you!");
+      
+    } else {
+        alert("Purchase cancelled. If you change your mind, feel free to return!");
+    }
+
+  }
  //thank you message
-
-
-
-
-
-
+alert ( `Have a nice day!`)
