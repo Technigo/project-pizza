@@ -107,15 +107,29 @@ if (food == 1 && choice == 1) {
 
 
 // Step 4 - Age
-// Your code goes here 
+// Your code goes here
+
 
 let age = prompt (`Do you want to order the child menu or the adult menu. Please type your age:`)
 
+
+let foodName = ["Pizza", "Pasta", "Lasagne"]
+let subtypeName = [
+  ["Margherita", "Pepperoni", "Hawaiian"],
+  ["Carbonara", "Bolognese", "Alfredo"],
+  ["with meet", "vegetarian", "vegan"]
+]
+
+let foodResult = foodName [food - 1]
+
+let subtypeResult = subtypeName [food - 1] [choice - 1]
+
+
 if (age >= 18) {
-  alert (`We will prepare one adult size ${food} ${choice} for you. That'll cost 20 CHF in total. `)
+  alert (`We will prepare one adult size ${foodResult} ${subtypeResult} for you. That'll cost 20 CHF in total. `)
 }
 else {
-  alert (`We will prepare one child size ${food} ${choice} for you. That'll cost 15 CHF in total.`)
+  alert (`We will prepare one child size ${foodResult} ${subtypeResult} for you. That'll cost 15 CHF in total.`)
 }
 
 
