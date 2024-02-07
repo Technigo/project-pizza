@@ -73,44 +73,6 @@ if (foodName === "Pizza") {
   );
 }
 
-/* -- do not delete - this works!!!!! --
-let pizzaChoice;
-if (foodName === "Pizza" && yourSubchoice === "1") {
-  pizzaChoice = "Pizza Margherita";
-  alert("Good choice! You've put a " + pizzaChoice + " in your basket.");
-} else if (foodName === "Pizza" && yourSubchoice === "2") {
-  pizzaChoice = "Pizza ai Funghi";
-  alert("Good choice! You've put a " + pizzaChoice + " in your basket.");
-} else if (foodName === "Pizza" && yourSubchoice === "3") {
-  pizzaChoice = "Pizza Vegetariana";
-  alert("Good choice! You've put a " + pizzaChoice + " in your basket.");
-}
-
-let pastaChoice;
-if (foodName === "Pasta" && yourSubchoice === "1") {
-  pastaChoice = "Pasta Arrabiata";
-  alert("Good choice! You've put a " + pastaChoice + " in your basket.");
-} else if (foodName === "Pasta" && yourSubchoice === "2") {
-  ppastaChoice = "Pasta Aglio e Olio";
-  alert("Good choice! You've put a " + pastaChoice + " in your basket.");
-} else if (foodName === "Pasta" && yourSubchoice === "3") {
-  pastaChoice = "Pasta Carbonara";
-  alert("Good choice! You've put a " + pastaChoice + " in your basket.");
-}
-
-let saladChoice;
-if (foodName === "Salad" && yourSubchoice === "1") {
-  saladChoice = "Green Salad";
-  alert("Good choice! You've put a " + saladChoice + " in your basket.");
-} else if (foodName === "Salad" && yourSubchoice === "2") {
-  saladChoice = "Mixed Salad";
-  alert("Good choice! You've put a " + saladChoice + " in your basket.");
-} else if (foodName === "Salad" && yourSubchoice === "3") {
-  saladChoice = "Greek Salad";
-  alert("Good choice! You've put a " + saladChoice + " in your basket.");
-}
-*/
-
 let foodChoice;
 if (foodName === "Pizza" && yourSubchoice === "1") {
   foodChoice = "Pizza Margherita";
@@ -141,9 +103,8 @@ if (foodName === "Pizza" && yourSubchoice === "1") {
   alert("Good choice! You've put a " + foodChoice + " in your basket.");
 }
 
-// Step 4.1 - Age
+// Step
 // This part defines size of the meal based on the age of the person ordering
-// Step 4.2 - This part associates costs to the meal
 let yourAge = prompt("Please enter your age to define the size of your meal:");
 
 let orderCost = 10;
@@ -166,22 +127,18 @@ if (yourAge <= 12) {
       " " +
       foodChoice +
       " for " +
-      orderCost + //check math here - it's not working!!
-      5 +
-      " EUR!"
+      (orderCost + 5) +
+      " EUR! "
   );
 }
 
-let yourOrder = prompt(
-  "Thank you for ordering with us. Based on your choices you ordered " +
-    yourAge +
-    " " +
-    foodChoice +
-    " for " +
-    orderCost + // Check math here - it's not working!!
-    " EUR. " +
-    "Please confirm your order now. Enter Yes or No to confirm."
-);
-
 // Step 5 - Order confirmation
 // Your code goes here*/
+let confirmation = prompt("Do you want to place your order? Type yes or no");
+if (confirmation === "yes") {
+  alert("Thank you for ordering with us. We start preparing your meal now.");
+} else if (confirmation === "no") {
+  alert("You changed your mind? Please come back for future orders.");
+} else {
+  alert("Invalid response. Please start over!");
+}
