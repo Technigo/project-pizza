@@ -6,8 +6,8 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #0026ff;
-  color: white;
+  background: #429247;
+  color: #CE3037;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,4 +17,11 @@ body {
 
 p {
   font-size: 1.5em;
+}
+
+.box {
+  text-align: center;
+  background-color: whitesmoke;
+  padding: 25px;
+  border-radius: 20px;
 }
