@@ -1,10 +1,17 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+<!--
+pizza site
+we will make a pizza site with if statements and alert.
+learning javascript
+-->
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+<!--
+my alert pop-up didn't have okey just said close.
+the biggest "problem" was probably writing so many if statements
+-->
 
 ## View it live
 
