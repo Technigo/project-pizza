@@ -109,9 +109,9 @@ if (age >= 18) {
 }
 if (confirmation === "1") {
   alert(
-    "Thank you for your order! Your delicious meal will be prepared. See you soon!"
+    "Thank you for your order! Your delicious meal will be prepared. See you soon!👋"
   );
 } else {
-  alert("Order cancelled. Please order again if you change your mind.");
+  alert("Order cancelled. Please order again if you change your mind.🙏");
 }
 // Step 5 - Order confirmation
