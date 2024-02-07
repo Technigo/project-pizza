@@ -62,6 +62,7 @@ if (food == 1) {
 }
 
 let choice = prompt (`Please select your meal from the following by entering the number\n ${subtype.join("\n")}`)
+
 if (food == 1 && choice == 1) {
   alert (
     `You choose Margherita.`
@@ -106,7 +107,28 @@ if (food == 1 && choice == 1) {
 
 
 // Step 4 - Age
-// Your code goes here
+// Your code goes here 
+
+let age = prompt (`Do you want to order the child menu or the adult menu. Please type your age:`)
+
+if (age >= 18) {
+  alert (`We will prepare one adult size ${food} ${choice} for you. That'll cost 20 CHF in total. `)
+}
+else {
+  alert (`We will prepare one child size ${food} ${choice} for you. That'll cost 15 CHF in total.`)
+}
+
 
 // Step 5 - Order confirmation
 // Your code goes here
+
+let confirmation = prompt (`Are you sure you want to order this?
+Please select a number to confirm:
+1 - Yes
+2 - No`)
+
+if (confirmation == 1) {
+  alert (`Thank you for your order. We will prepare it for you!`)
+} else {
+  alert (`You cancelled your order. Please start from the beginning.`)
+}
