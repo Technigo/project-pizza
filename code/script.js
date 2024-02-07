@@ -6,8 +6,8 @@ alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 );
 
-let customerName = prompt("What's your name?");
-alert(`Hi ${customerName}!`);
+let customerName = prompt("Please enter your name?");
+alert(`Nice to meet you, ${customerName}!`);
 
 // Step 2 - Food choice
 
@@ -36,7 +36,7 @@ if (food === "1") {
 let subtype;
 
 if (food === "pizza") {
-  let pizzaType = prompt(`Select a pizza type
+  let pizzaType = prompt(`Select a pizza type.
   Enter a number:
 1 - Napolitana
 2 - Hawaian
@@ -133,11 +133,11 @@ if (age < 18) {
 // Step 5 - Order confirmation
 
 let order = prompt(
-  `One ${size} ${food} ${subtype} will be prepared for you. That will be € ${price}. Are you sure you want to order this? Press 1 for yes and 2 for no:`
+  `One ${size} ${food} ${subtype} will be prepared for you. That will be €${price}. Are you sure you want to order this? Press 1 for yes and 2 for no:`
 );
 
 if (order === "1") {
-  alert(`You have placed your order! Your delicous food it's on it's way!`);
+  alert(`You have placed your order! Your delicous food it's on it's way!🎉`);
 } else if (order === "2") {
-  alert(`No problem! Come back and order anytime!`);
+  alert(`No problem! Come back and order anytime!👋`);
 }
