@@ -3,20 +3,41 @@ alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 );
 
-// Ask for name.
+// Ask for name
 let userName = prompt(`What is your name?`);
-console.log(userName);
+console.log("Name:", userName);
 
 //Welcome with name
 alert(`Welcome ${userName}! Let's order some food`);
 
 // Step 2 - Food choice
-let foodChoice = prompt(
-  `What do you want to eat? 
-  Choose between pizza, burger or salad and write your answer.`
-);
 
-console.log(foodChoice);
+//Ask for type of food until answer is pizza, burger or salad
+let foodChoice = "apple";
+
+while (foodChoice === "apple") {
+  let foodAnswer = prompt(
+    `What do you want to eat? 
+  Choose between pizza, burger or salad and write your answer.`
+  );
+  console.log("Answer:", foodAnswer);
+
+  switch (foodAnswer) {
+    case "pizza":
+      foodChoice = "pizza";
+      break;
+    case "burger":
+      foodChoice = "burger";
+      break;
+    case "salad":
+      foodChoice = "salad";
+      break;
+    default:
+      alert(`I'm sorry. We don't have ${foodAnswer}. Choose again!`);
+  }
+}
+
+console.log("Choice:", foodChoice);
 
 let pizzaMenu =
   ("Margerita (tomato, cheese)", "Al Funghi (tomato, cheese, mushrooms)");
