@@ -7,6 +7,7 @@ alert(
 )
 let guestName = prompt("What is your first name?");
 
+//re-prompt if the value is null until the user inputs the name
 function getGuestName(guestName){
   if(guestName) {
     alert(`Welcome ${guestName}! - Click 'OK' to order.`);
@@ -26,9 +27,10 @@ let chosenType = prompt(
   2. Pasta🍝
   3. Salad🥗`
 ); 
+// Types of main food types
 const foodType = ["Pizza", "Pasta", "Salad"];
 
-function selectFood(chosenType, foodType){
+function confirmSelection(chosenType, foodType){
   switch (chosenType) {
     case "1":
       alert(`You've chosen ${foodType[0]}!`);
@@ -45,11 +47,11 @@ function selectFood(chosenType, foodType){
       1. ${foodType[0]}
       2. ${foodType[1]}
       3. ${foodType[2]}`);
-      selectFood(chosenType, foodType);
+      confirmSelection(chosenType, foodType);
   }
 }
 
-selectFood(chosenType, foodType);
+confirmSelection(chosenType, foodType);
 
 // Step 3 - Subtype choice
 // Your code goes here
@@ -72,7 +74,7 @@ if (chosenType == 1){
   3. Veggie Pizza`
   );
   // const pizzaType = ["Margherita Pizza", "Pepperoni Pizza", "Veggie Pizza"];
-  order = selectFood(subType, pizzaType);
+  order = confirmSelection(subType, pizzaType);
 } else if (chosenType == 2){
   subType = prompt(`What kind of pasta would you like?
   Please enter the number of the pasta type:
@@ -80,7 +82,7 @@ if (chosenType == 1){
   2. Lasagne
   3. Fettuccine Alfredo`);
   // const pastaType = ["Spaghetti Bolognaise", "Lasagne", "Fettuccine Alfredo"];
-  order = selectFood(subType, pastaType);
+  order = confirmSelection(subType, pastaType);
 } else {
   subType = prompt(`What kind of salad would you like?
   Please enter the number of the salad type:
@@ -88,7 +90,7 @@ if (chosenType == 1){
   2. Greek salad
   3. Caprese salad`);
   // const saladType = ["Caesar salad", "Greek salad", "Caprese salad"];
-  order = selectFood(subType, saladType);
+  order = confirmSelection(subType, saladType);
 }
 
 
@@ -96,6 +98,8 @@ if (chosenType == 1){
 // Your code goes here
 let confirmOrder = ""
 let age = prompt("Is this food for a child or an adult? Type your age:");
+
+//check the age and ensure the age is a valid range of ages
 function checkAge(age){
   if (Number(age) <= 123 && Number(age) >= 18){
     confirmOrder = prompt(`One adult sized ${order} will be prepared for you. That'll be 99kr.
