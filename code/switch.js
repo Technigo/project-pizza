@@ -48,9 +48,8 @@ function makePrompt(food) {
 2. Looping through the prompt if the input is invalid, i.e. not 1 OR 2 OR 3 until the input is valid.
 3. return the value of food name.
 */
-let typeNumber;
 function confirmSelection(food) {
-  typeNumber = makePrompt(food);
+  let typeNumber = makePrompt(food);
   switch (typeNumber) {
     case "1":
       alert(`You've chosen ${menu[food][0]}! - Click 'OK' to procceed.`);
@@ -83,7 +82,7 @@ That'll be 99kr.
 1. Yes
 2. No`;
 
-// Declare the confirmOrder variable so the value of this variable can be reassigned within the function.
+// Declare the confirmOrder variable so the value of this variable can be reassigned within the function and further can be used in the order confirmation part.
 let confirmOrder;
 /* Created a function to check the age and customise the prompt message based on the range of the age.
 */
