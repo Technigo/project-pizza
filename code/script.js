@@ -135,9 +135,17 @@ if (yourAge <= 12) {
 // Step 5 - Order confirmation
 // Your code goes here*/
 let confirmation = prompt("Do you want to place your order? Type yes or no");
-if (confirmation === "yes") {
+if (
+  confirmation === "yes" ||
+  confirmation === "Yes" ||
+  confirmation === "YES"
+) {
   alert("Thank you for ordering with us. We start preparing your meal now.");
-} else if (confirmation === "no") {
+} else if (
+  confirmation === "no" ||
+  confirmation === "No" ||
+  confirmation === "NO"
+) {
   alert("You changed your mind? Please come back for future orders.");
 } else {
   alert("Invalid response. Please start over!");
