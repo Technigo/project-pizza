@@ -52,11 +52,11 @@ Please enter the corresponding number:
 3 - Quattro Formaggi
   `)
   if (dishSelection === "1") {
-    subtypeDish = "Ortolana pizza"
+    subtypeDish = "Ortolana"
   } else if (dishSelection === "2") {
-    subtypeDish = "Margherita pizza"
+    subtypeDish = "Margherita"
   } else if (dishSelection === "3") {
-    subtypeDish = "Quattro Formaggi pizza"
+    subtypeDish = "Quattro Formaggi"
   } else {
     alert("Invalid choice, please try again!")
     exit(1)
@@ -71,7 +71,7 @@ Please enter the corresponding number:
 3 - Cacio e pepe
   `)
   if (dishSelection === "1") {
-    subtypeDish = "Pasta Carbonara"
+    subtypeDish = "Carbonara"
   } else if (dishSelection === "2") {
     subtypeDish = "Puttanesca"
   } else if (dishSelection === "3") {
@@ -90,11 +90,11 @@ Please enter the corresponding number:
 3 - Caprese salad
   `)
   if (dishSelection === "1") {
-    subtypeDish = "Salade niçoise"
+    subtypeDish = "Niçoise"
   } else if (dishSelection === "2") {
-    subtypeDish = "Caesar salad"
+    subtypeDish = "Caesar"
   } else if (dishSelection === "3") {
-    subtypeDish = "Caprese salad"
+    subtypeDish = "Caprese"
   } else {
     alert("Invalid choice, please try again!")
     exit(1)
@@ -124,3 +124,7 @@ else {
 
 // Step 5 - Order confirmation
 // Your code goes here
+
+prompt(`You have ordered a ${subtypeDish} ${selectedDish} 
+for a ${age} year old person. Please confirm your order by typing 'Yes' or 'No'`)
+
