@@ -8,4 +8,5 @@ I had some issues with the switch-tags, but I changed the order flow a bit to ma
 
 ## View it live
 
+https://javascriptpizza.netlify.app/
 
