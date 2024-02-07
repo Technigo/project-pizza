@@ -6,19 +6,18 @@ alert(
   "Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin."
 )
 
-prompt(
-  "Please enter your name"
-  )
+//Asking person for name with promt
 
-  let person = prompt("Please enter your name")
-
-  if (person != null) {
-    document.getElementById(elementId, string) ="Hello" + person + "Nice to meet you!"
-  }
-
+let person = prompt("Please enter your name")
+if (person) {
   alert (
-    `Hi and Welcome [$person]`
+    `Hi and welcome ${person}`
     )
+  } else {
+  alert (
+  `Hi and welcome anonymous.`
+  )
+  }
 
 // Step 2 - Food choice
 // Your code goes here
