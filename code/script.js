@@ -11,29 +11,87 @@ alert(`Hi ${name}, it's nice to see you here!`);
 const foodOption = prompt(`What would you like to order?
 
 Enter the number of your choice.
-1 - Pizza Margherita
-2 - Pizza Kebab
-3 - Caesar Salad
+1 - Pizza 
+2 - Hamburger
+3 - Salad
 `);
 
 console.log(foodOption);
 
 let foodSelected = "";
 if (foodOption === "1") {
-   foodSelected = "Pizza Margherita";
+   foodSelected = "Pizza";
 } else if (foodOption === "2") {
-   foodSelected = "Pizza Kebab";
+   foodSelected = "Hamburger";
 } else if (foodOption === "3") {
-   foodSelected = "Caesar Salad";
+   foodSelected = "Salad";
 } else {
    alert(`Couldn't you decide what to choose? 
     Please, start over and choose what you want to eat.`);
 }
 
-alert(`Good choice, you chosed to order ${foodSelected}`);
+alert(`You chosed ${foodSelected}`);
 
 // Step 3 - Subtype choice
-// Your code goes here
+
+let pizzaSelected = "";
+
+if (foodOption === "1") {
+   const foodChoice = prompt(`What type of pizza would you like to order?
+   
+   Enter the number of your choice.
+1 - Napolitan
+2 - Margherita
+3 - Capricciosa
+`);
+   if (foodChoice === "1") {
+      pizzaSelected = "Napolitan";
+   } else if (foodChoice === "2") {
+      pizzaSelected = "Margherita";
+   } else {
+      pizzaSelected = "Capricciosa";
+   }
+}
+
+let hamburgerSelected = "";
+
+if (foodOption === "2") {
+   const foodChoice = prompt(`What type of hamburger would you like to order?
+  
+  Enter the number of your choice.
+1 - Halloumi burger
+2 - Plant-based burger
+3 - Classic burger
+`);
+   if (foodChoice === "1") {
+      hamburgerSelected = "Halloumi burger";
+   } else if (foodChoice === "2") {
+      hamburgerSelected = "Plant-based burger";
+   } else {
+      hamburgerSelected = "Classic burger";
+   }
+}
+
+let saladSelected = "";
+
+if (foodOption === "3") {
+   const foodChoice = prompt(`What type of salad would you like to order?
+ 
+ Enter the number of your choice.
+1 - Vegan salad
+2 - Caesar salad
+3 - Greek salad
+`);
+   if (foodChoice === "1") {
+      saladSelected = "Vegan salad";
+   } else if (foodChoice === "2") {
+      saladSelected = "Caesar salad";
+   } else {
+      saladSelected = "Greek salad";
+   }
+}
+
+alert(`Good choice, you chosed to order a ${pizzaSelected || hamburgerSelected || saladSelected}`);
 
 // Step 4 - Age
 // Your code goes here
