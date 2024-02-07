@@ -133,7 +133,7 @@ if (age < 18) {
 // Step 5 - Order confirmation
 
 let order = prompt(
-  `One ${size} ${food} ${subtype} will be prepared for you. That will be €${price}. Are you sure you want to order this? Press 1 for yes and 2 for no:`
+  `One ${size} ${subtype} ${food}  will be prepared for you. That will be €${price}. Are you sure you want to order this? Press 1 for yes and 2 for no:`
 );
 
 if (order === "1") {
