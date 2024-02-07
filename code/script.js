@@ -50,6 +50,46 @@ alert(
 // Step 3 - Subtype choice
 // Your code goes here
 
+if (selectedFood === "Pizza"){
+  let specifiedFood = prompt(
+    `What pizza would you like?
+
+    1 - Margerita
+    2 - Capricciosa
+    3 - Quattro Stagioni
+
+    Please enter the number of your choice.
+    `
+  )}
+  else if (selectedFood === "Pasta"){
+    let specifiedFood = prompt(
+      `What pasta would you like?
+
+      1 - Spaghetti Carbonara
+      2 - Fettuccine Alfredo
+      3 - Cheesy Tortellini
+
+      Please enter the number of your choice.
+      `
+  )}
+  else if (selectedFood === "Salad"){
+    let specifiedFood = prompt(
+      `What salad would you like?
+
+      1 - Caesar Salad
+      2 - Caprese Salad
+      3 - Greek Salad
+
+      Please enter the number of your choice.
+      `
+  )}
+  else {
+    alert("I'm afraid that's not an option. Please start again and select one of the options (1-3).")
+      exit(1)
+  }
+
+
+
 // Step 4 - Age
 // Your code goes here
 
