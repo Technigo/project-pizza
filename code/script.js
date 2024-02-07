@@ -18,7 +18,7 @@ const menuSelect = prompt(
     2. Pasta 
     3. Salad
     `
-)
+);
 
 // let selectedItem = ""
 
@@ -29,19 +29,17 @@ if (menuSelect === "1") {
 } else if (menuSelect === "2") {
   selectedItem = "pasta";
 } else {
-  selectedItem = "salad"
+  selectedItem = "salad";
 }
 
 alert(`You chose ${selectedItem}!`)
-
 
 
 // Step 3 - Subtype choice
 let pizzaChoice = ""
 let pastaChoice = ""
 let saladChoice = ""
-let pizza = ""
-let pasta = ""
+let subItem = ""
 
 if (menuSelect === "1") {
   pizzaChoice = prompt(
@@ -51,7 +49,7 @@ if (menuSelect === "1") {
     2. Margherita
     3. Pepperoni
     `
-  )
+  );
 } 
 else if (menuSelect === "2") {
    pastaChoice = prompt(
@@ -61,7 +59,7 @@ else if (menuSelect === "2") {
     2. Carbonara
     3. Pesto alla Genovese
     `
-  ) 
+  );
 } else { 
     saladChoice = prompt(
     `Select the type of salad:
@@ -70,9 +68,28 @@ else if (menuSelect === "2") {
     2. Insalata di Riso
     3. Panzanella
     `
-  )
-    }
+  );
+}
 
+if (pizzaChoice === "1") {
+  subItem = "Hawaiian";
+} else if (pizzaChoice === "2") {
+  subItem = "Margherita"; 
+} else if (pizzaChoice === "3") {
+  subItem = "Pepperoni"; 
+} else if (pastaChoice === "1") {
+  subItem = "Spaghetti"; 
+} else if (pastaChoice === "2") {
+  subItem = "Carbonara"; 
+} else if (pastaChoice === "3") {
+  subItem = "Pesto"; 
+} else if (saladChoice === "1") {
+  subItem = "Caprese"; 
+} else if (saladChoice === "2") {
+  subItem = "Insalata"; 
+} else {
+  subItem = "Panzanella"; 
+}
 
 if (pizzaChoice === "1") {
   alert("You chose Hawaiian!");
@@ -95,20 +112,33 @@ if (pizzaChoice === "1") {
 }
 
 
-
-
-
-
-
-
-
-
-
 // Step 4 - Age
+let age = prompt("Is the order for a child or an adult? Enter your age:")
 
+let confirm = ""
 
+if (age >= 13) {
+  confirm = prompt(
+    `One adult size ${subItem} will be $20. 
+     Do you confirm this order? Enter a number:
+     1. Yes
+     2. No
+     `
+    );
+} else {
+  confirm = prompt(
+    `One child size ${subItem} will be $10.
+    Do you confirm this order? Enter a number:
+    1. Yes
+    2. No
+    `
+  );
+}
 
-// }
 
 // Step 5 - Order confirmation
-// Your code goes here
+if (confirm === "1" ) {
+  alert("Thank you for your order, enjoy! ");
+} else {
+  alert("No worries, see you soon!")
+}
