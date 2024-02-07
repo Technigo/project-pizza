@@ -37,16 +37,14 @@ alert(`You chose ${selectedItem}!`)
 
 
 // Step 3 - Subtype choice
-
-let subChoicePizza = ""
-let subChoicePasta = ""
-let subChoiceSalad = ""
-let choicePizza = ""
-let choicePasta = ""
-let choiceSalad = ""
+let pizzaChoice = ""
+let pastaChoice = ""
+let saladChoice = ""
+let pizza = ""
+let pasta = ""
 
 if (menuSelect === "1") {
-  subChoicePizza = prompt(
+  pizzaChoice = prompt(
     `Select the type of pizza:
     Enter the number of your choice:
     1. Hawaiian
@@ -54,17 +52,18 @@ if (menuSelect === "1") {
     3. Pepperoni
     `
   )
-} else if (selectedItem === "pasta") {
-  let subItemPasta = prompt(
+} 
+else if (menuSelect === "2") {
+   pastaChoice = prompt(
     `Select the type of pasta:
     Enter the number of your choice:
     1. Spaghetti alla Puttanesca
     2. Carbonara
     3. Pesto alla Genovese
     `
-  )
+  ) 
 } else { 
-  let subItem = prompt(
+    saladChoice = prompt(
     `Select the type of salad:
     Enter the number of your choice:
     1. Caprese
@@ -72,48 +71,38 @@ if (menuSelect === "1") {
     3. Panzanella
     `
   )
-}
+    }
 
-if (subChoicePizza === "1") {
-  choicePizza = "Hawaiian";
-} else if (subChoicePizza === "2") {
-  choicePizza = "Marherita";
+
+if (pizzaChoice === "1") {
+  alert("You chose Hawaiian!");
+} else if (pizzaChoice === "2") {
+  alert("You chose Margherita!");
+} else if (pizzaChoice === "3") {
+  alert("You chose Pepperoni!") 
+} else if (pastaChoice === "1") {
+  alert("You chose Spaghetti alla Puttanesca!");
+} else if (pastaChoice === "2") {
+  alert("You chose Carbonara!");
+} else if (pastaChoice === "3") {
+  alert("You chose Pesto alla Genovese!"); 
+} else if (saladChoice === "1") {
+  alert("You chose Caprese!"); 
+} else if (saladChoice === "2") {
+  alert("You chose Insalata di Riso!");
 } else {
-  choicePizza = "Pepperoni"
+  alert("You chose Panzanella!");
 }
 
-alert(`You chose ${choicePizza} pizza!`)
 
 
-// if (pizzaChoice === "1") {
-//   pizzaType = "Hawaiian";
-// } else if (pizzaChoice === "2") {
-//   pizzaType = "Margherita";
-// } else {
-//   pizzaTypee = "pepperoni"
-// }
 
-// alert(`You chose ${pizzaType} pizza!`)
 
-// let subItemPasta = ""
 
-// if (pastaChoice === "1") {
-//   subItemPasta = "Spaghetti alla Puttanesca";
-// } else if (pastaChoice === "2") {
-//   subItemPasta = "Carbonara";
-// } else {
-//   subItemPasta = "Pesto alla Genovese"
-// }
 
-// let subItemSalad = ""
 
-// if (saladChoice === "1") {
-//   subItemSalad = "Caprese";
-// } else if (saladChoice === "2") {
-//   subItemSalad = "Insalata di Riso";
-// } else {
-//   subItemSalad = "Panzanella"
-// }
+
+
 
 // Step 4 - Age
 
