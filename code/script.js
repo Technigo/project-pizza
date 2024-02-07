@@ -11,9 +11,17 @@ const customerName = prompt(
 )
 
 // Step 3 - Food choice
-alert(
-`Nice of you to pop by, ${customerName}! Now let's get you some food, shall we?`
-)
+if (customerName == "") {
+  alert(
+    `Hmm... Looks like no name was entered, and I'm pretty sure you have a name. Please try again.`
+    )
+}
+
+else {
+  alert(
+    `Nice of you to pop by, ${customerName}! Now let's get you some food, shall we?`
+  )
+}
 
 const food = prompt(
 `What do you feel like eating today? \nChoose your preference by typing in the corresponding number.
