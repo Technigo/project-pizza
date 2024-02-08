@@ -1,11 +1,13 @@
-# Project Name
-
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+# Javascript Pizzeria
+The project is about basic JavaScript concepts like variables, conditional and native methods. 
 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+(1)
+Created a script.js to approach a functioning site. Mostly if ... else statements. Including logical operators like && and ||. 
+Techniques used: I to us mainly the resources made available by Technigo and used Google. 
+(2)
+Created an extra switch.js to tackle the stretch goals. In a first step I used backticks and ${} to make the code easiert to read then I added exists in case of an invalid reponse. In a last step I tried to replace all the if ... else statements witch switch statements. Step 3 (Subtype Choice) was the hardest. Learned that you can a switch statement in a switch statement. 
 
 ## View it live
+Deployed here: https://snazzy-dango-e4f6f2.netlify.app/
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
