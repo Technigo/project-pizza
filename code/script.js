@@ -10,6 +10,7 @@ const userName = prompt ("Please enter your name")
 
 console.log(userName)
 alert (`Hello ${userName}! Let´s feed you!`)
+
 // Step 2 - Food choice
 // Your code goes here
 
@@ -37,7 +38,7 @@ if(foodChoice === 1) {
 
 console.log ("selected food", selectedFood);
 
-alert (`You chose ${selectedFood}`);
+alert (`You choose ${selectedFood}`);
 
 //exit(1)
 
@@ -55,7 +56,7 @@ switch (selectedFood) {
         1.Cheeseburger
         2.Chicken Burger
         3.Vegan Burger 
-        Please chose a number:`)
+        Please choose a number:`)
     )
       foodNames = ["Cheesburger", "Chicken Burger", "Vegan Burger"]
      break
@@ -66,7 +67,7 @@ switch (selectedFood) {
       1.Peperoni Pizza
       2.Greek Pizza
       3.New Haven Pizza
-      Please chose a number:`)
+      Please choose a number:`)
   )
     foodNames = ["Peperoni Pizza", "Greek Pizza", "New Haven Pizza"]
     break
@@ -77,12 +78,12 @@ switch (selectedFood) {
       1. Crunchy Munchy Salad
       2. Leafy Green Salad
       3. Zesty Zoodle Zinger Salad
-          Please chose a number:`)
+          Please choose a number:`)
       )
       foodNames = ["Crunchy Munchy Salad", "Leafy Green Salad", "Zezty Zoodle Zinger Salad"]
       break
       default:
-      alert("You chose ${foodNames}")
+      alert("You choose ${foodNames}")
       exit(1)
     }
 
@@ -94,37 +95,54 @@ console.log ("choiceSlot", choiceSlot)
 
 //Define age
 let age = parseInt(prompt("Find out your size by typing your age:"));
+let size = age < 18 ? "Small" : "Large";
 
 //Declare size variable
-let size;
+//let size;
 
 //Determine size based on age
 
-  if (age < 18) {
+  /*if (age < 18) {
     size = "Small"
   } else {
     size = "Large";
-  }
+  }*/
 
-  //Define burger variable
-  let burgerName;
+  //Display the chosen food item
+  let foodItem ="";
 
   //Switch statement to determine burger name
-  switch (choiceSlot) {
-    case 1:
-      burgerName = "Cheesburger";
+  switch (selectedFood) {
+    case "Burger":
+      foodItem = foodNames[choiceSlot - 1];
       break;
-    case 2:
-      burgerName =  "Chicken Burger";
+    case "Pizza":
+      foodItem = foodNames[choiceSlot - 1];
       break;
-    case 3:
-      burgerName = "Vegan Burger";
+    case "Salad":
+      foodItem = foodNames[choiceSlot - 1];
       break;
+      default:
+        console.log("That item is not in our list")
   }
 
- alert (`You chose a ${size} ${burgerName}`);
+ alert (`You chose a ${size} ${foodItem}`);
 
-
+/*let pizzaName;
+switch (choiceSlot) {
+  case 1:
+    pizzaName = "Peperoni Pizza";
+    break;
+  case 2:
+    pizzaName =  "Greek Pizza";
+    break;
+  case 3:
+    pizzaName = "New Heaven Pizza";
+    break;
+}
+alert (`You chose a ${size} ${pizzaName}`);*/
 
 // Step 5 - Order confirmation
 // Your code goes here*/
+
+alert(`Thank you for your order, ${userName}! You ordered a ${size} ${foodItem}. Your food is beeing prepared by humans. Now you can relax while the food is being prepared. Enjooooy!🤗 ` )
