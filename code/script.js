@@ -100,35 +100,35 @@ console.log(typeof subtypeDishNumber)
 
 
 if (mainDishNumber === 1 && subtypeDishNumber === 1) {
-  subtypeDish = "Margherita"; 
+  subtypeDish = "Margherita" 
 } else if (mainDishNumber === 1 && subtypeDishNumber === 2) {
-  subtypeDish = "Cheese";
+  subtypeDish = "Cheese"
 } else if (mainDishNumber === 1 && subtypeDishNumber === 3) {
-  subtypeDish = "Caprichosa";
+  subtypeDish = "Caprichosa"
 } else if (mainDishNumber === 1 && subtypeDishNumber === 4) {
-  subtypeDish = "Pepperoni";
+  subtypeDish = "Pepperoni"
 } else if (mainDishNumber === 1 && subtypeDishNumber === 5) {
-  subtypeDish = "Meatballs";
+  subtypeDish = "Meatballs"
 } else if (mainDishNumber === 2 && subtypeDishNumber === 1) {
-  subtypeDish = "Spaghetti Carbonara";
+  subtypeDish = "Spaghetti Carbonara"
 } else if (mainDishNumber === 2 && subtypeDishNumber === 2) {
-  subtypeDish = "Mac & Cheese";
+  subtypeDish = "Mac & Cheese"
 } else if (mainDishNumber === 2 && subtypeDishNumber === 3) {
-  subtypeDish = "Pesto";
+  subtypeDish = "Pesto"
 } else if (mainDishNumber === 2 && subtypeDishNumber === 4) {
-  subtypeDish = "Spaghetti and Meatballs";
+  subtypeDish = "Spaghetti and Meatballs"
 } else if (mainDishNumber === 2 && subtypeDishNumber === 5) {
-  subtypeDish = "Beef & Cheese Lasagna";
+  subtypeDish = "Beef & Cheese Lasagna"
 } else if (mainDishNumber === 3 && subtypeDishNumber === 1) {
-  subtypeDish = "Mediterranian";
+  subtypeDish = "Mediterranian"
 } else if (mainDishNumber === 3 && subtypeDishNumber === 2) {
-  subtypeDish = "Cesar";
+  subtypeDish = "Cesar"
 } else if (mainDishNumber === 3 && subtypeDishNumber === 3) {
-  subtypeDish = "Vegana";
+  subtypeDish = "Vegana"
 } else if (mainDishNumber === 3 && subtypeDishNumber === 4) {
-  subtypeDish = "Salmon";
+  subtypeDish = "Salmon"
 } else if (mainDishNumber === 3 && subtypeDishNumber === 5) {
-  subtypeDish = "Chèvre";
+  subtypeDish = "Chèvre"
 } else {
   alert (`Make sure you are typing one the options available.)
   
