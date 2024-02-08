@@ -126,7 +126,7 @@ alert(`You've chosen ${orderedFood}, a delicious dish in the ${foodType} categor
 
 // Step 4 - Age
 
-const age = prompt("Is this food for a child or an adult? Type your age:");
+const age = parseInt(prompt("Is this food for a child or an adult? Type your age:"));
 
 if (age) {
     portionSize = age <= 17 ? "child-sized" : "adult-sized";

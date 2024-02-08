@@ -107,7 +107,7 @@ alert(`You've chosen ${orderedFood}!`);
 
 // Step 4 - Age
 
-const age = (prompt("Is this food for a child or an adult? Type your age:"));
+const age = parseInt(prompt("Is this food for a child or an adult? Type your age:"));
 
 if (age) {  
   if (age <= 17) {
