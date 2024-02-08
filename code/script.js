@@ -38,6 +38,7 @@ if (foodChoice === "1") {
   alert(
     "Invalid choice, please start again and select an option between 1 and 3."
   );
+  exit(1);
 }
 
 //Testing to print it out
@@ -68,8 +69,9 @@ if (selectedFood === "Pizza") {
   3 - Caprese Salad`);
 } else {
   alert(
-    "Invalid choice selected, please start again and select an option between 1 and 3."
+    `Invalid ${selectedFood} choice selected, please start again and select an option between 1 and 3.`
   );
+  exit(1);
 }
 
 console.log(subtypeChoice);
@@ -90,6 +92,7 @@ if (selectedFood === "Pizza") {
     alert(
       "Invalid choice, please start again and select an option between 1 and 3."
     );
+    exit(1);
   }
 } else if (selectedFood === "Pasta") {
   if (subtypeChoice === "1") {
@@ -105,6 +108,7 @@ if (selectedFood === "Pizza") {
     alert(
       "Invalid choice, please start again and select an option between 1 and 3."
     );
+    exit(1);
   }
 } else if (selectedFood === "Salad") {
   if (subtypeChoice === "1") {
@@ -120,6 +124,7 @@ if (selectedFood === "Pizza") {
     alert(
       "Invalid choice, please start again and select an option between 1 and 3."
     );
+    exit(1);
   }
 }
 
@@ -139,7 +144,6 @@ if (age < 18) {
   cost = 7;
   orderMessage = `One adult sized Hawaii will be prepared for you. That'll be ${cost} euros. Are you sure you want to order this?`;
 }
-
 
 // Step 5 - Order confirmation
 // Your code goes here
