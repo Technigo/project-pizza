@@ -1,7 +1,7 @@
 // Start here
 
 // Defining some useful variables 
-let orderedFood;
+let orderedFood = "";
 
 // Step 1 - Welcome and introduction
 

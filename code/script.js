@@ -1,10 +1,10 @@
 // Start here
 
 // Defining some useful variables 
-let orderedFood;
-let price;
-let portionSize;
-
+let orderedFood = "";
+let price = "";
+let portionSize = "";
+ 
 // Step 1 - Welcome and introduction
 
 alert(
