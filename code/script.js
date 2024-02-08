@@ -80,5 +80,18 @@ alert ((`Nice one!`))
 // Step 4 - Age
 // Your code goes here
 
+//Boolean
+prompt((`
+Are you ordering a meal for an adult? Please enter your age:`
+))
+
+if (age <= 15)
+alert ((`Hey kiddo, you get a discount!`))
+
+else if (age >=16)
+  alert ((`Adult meal it is!`))
+
+console.log ("age", age)
+
 // Step 5 - Order confirmation
 // Your code goes here
