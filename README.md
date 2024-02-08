@@ -8,4 +8,4 @@ I tried to make it as simple as I could, however, I was struggling with point th
 
 ## View it live
 
-Here is my project:
+Here is my project: https://project-pizza-erica.netlify.app/
