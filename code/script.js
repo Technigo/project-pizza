@@ -10,15 +10,15 @@ const userName = prompt(`Please type your name`);
 
 console.log(userName);
 //An alert saying Hi and whatever the userName is
-alert(`Hi, ${userName}!`);
+alert(`Hi, ${userName}! 👋`);
 
 // Step 2 - Food choice
 /*Variable foodChoice collecting & storing the answer from the food menu-prompt*/
 const foodChoice =
   prompt(`What type of food would you like to order? Enter a number:
- 1 - Pizza
- 2 - Pasta
- 3 - Salad 
+ 1 - Pizza 🍕
+ 2 - Pasta 🍝
+ 3 - Salad 🥗
  `);
 
 console.log(foodChoice);
@@ -27,19 +27,18 @@ let selectedFood = "";
 
 if (foodChoice === "1") {
   selectedFood = "Pizza";
-  alert(`You chose ${selectedFood}`);
 } else if (foodChoice === "2") {
   selectedFood = "Pasta";
-  alert(`You chose ${selectedFood}`);
 } else if (foodChoice === "3") {
   selectedFood = "Salad";
-  alert(`You chose ${selectedFood}`);
 } else {
   alert(
-    "Invalid choice, please start again and select an option between 1 and 3."
+    "You typed an invalid choice, please start again and select an option between 1 and 3 😉"
   );
   exit(1);
 }
+
+alert(`You chose ${selectedFood}. Nice choice ${userName} 😋`);
 
 //Testing to print it out
 console.log(selectedFood);
@@ -49,100 +48,97 @@ console.log(selectedFood);
 let subtypeChoice = "";
 
 if (selectedFood === "Pizza") {
-  subtypeChoice =
-    prompt(`What type of pizza would you like to order? Enter a number:
-  1 - Kebab
-  2 - Hawaii
-  3 - Vegetarian
+  subtypeChoice = prompt(`What type of pizza would you like to order? 🍕 
+    Enter a number:
+  1 - Kebab Pizza
+  2 - Hawaii Pizza
+  3 - Vegetarian Pizza
   `);
 } else if (selectedFood === "Pasta") {
-  subtypeChoice =
-    prompt(`What type of pasta would you like to order? Enter a number:
+  subtypeChoice = prompt(`What type of pasta would you like to order? 🍝 
+    Enter a number:
   1 - Spaghetti Carbonara
   2 - Fettuccine Alfredo
   3 - Penne Arrabbiata`);
 } else if (selectedFood === "Salad") {
-  subtypeChoice =
-    prompt(`What type of salad would you like to order? Enter a number:
+  subtypeChoice = prompt(`What type of salad would you like to order? 🥗 
+    Enter a number:
   1 - Caesar Salad
   2 - Greek Salad
   3 - Caprese Salad`);
-} else {
-  alert(
-    `Invalid ${selectedFood} choice selected, please start again and select an option between 1 and 3.`
-  );
-  exit(1);
 }
 
+//Testing to print it out
 console.log(subtypeChoice);
 
 let selectedSubtype = "";
 
 if (selectedFood === "Pizza") {
   if (subtypeChoice === "1") {
-    selectedSubtype = "Kebab";
-    alert(`You have chosen ${selectedSubtype}`);
+    selectedSubtype = "Kebab Pizza";
   } else if (subtypeChoice === "2") {
-    selectedSubtype = "Hawaii";
-    alert(`You have chosen ${selectedSubtype}`);
+    selectedSubtype = "Hawaii Pizza";
   } else if (subtypeChoice === "3") {
-    selectedSubtype = "Vegetarian";
-    alert(`You have chosen ${selectedSubtype}`);
+    selectedSubtype = "Vegetarian Pizza";
   } else {
-    alert(
-      "Invalid choice, please start again and select an option between 1 and 3."
-    );
+    alert(`Invalid ${selectedFood} choice.`);
     exit(1);
   }
 } else if (selectedFood === "Pasta") {
   if (subtypeChoice === "1") {
     selectedSubtype = "Spaghetti Carbonara";
-    alert(`You have chosen ${selectedSubtype}`);
   } else if (subtypeChoice === "2") {
     selectedSubtype = "Fettuccine Alfredo";
-    alert(`You have chosen ${selectedSubtype}`);
   } else if (subtypeChoice === "3") {
     selectedSubtype = "Penne Arrabbiata";
-    alert(`You have chosen ${selectedSubtype}`);
   } else {
-    alert(
-      "Invalid choice, please start again and select an option between 1 and 3."
-    );
+    alert(`Invalid ${selectedFood} choice.`);
     exit(1);
   }
 } else if (selectedFood === "Salad") {
   if (subtypeChoice === "1") {
     selectedSubtype = "Caesar Salad";
-    alert(`You have chosen ${selectedSubtype}`);
   } else if (subtypeChoice === "2") {
     selectedSubtype = "Greek salad";
-    alert(`You have chosen ${selectedSubtype}`);
   } else if (subtypeChoice === "3") {
     selectedSubtype = "Caprese Salad";
-    alert(`You have chosen ${selectedSubtype}`);
   } else {
-    alert(
-      "Invalid choice, please start again and select an option between 1 and 3."
-    );
+    alert(`Invalid ${selectedFood} choice.`);
     exit(1);
   }
 }
 
+alert(`You have chosen ${selectedSubtype} 😋`);
+
+//Testing to print it out
 console.log(selectedSubtype);
 
 // Step 4 - Age
-/*In this iteration, the program should prompt the user to specify if the food is intended for a child or an adult. The prompt() method should be used to present the question and get the user's input. Based on the user's answer, an appropriate order message should be constructed. The program should use the alert() method to display the order message and the associated cost. The user's confirmation should be obtained using the prompt() method.
-
-Child or adult, alert displaying order message and associated cost. User's confirmation should be obtained using the prompt method. Adult age is above or equal to*/
+/*Child or adult, alert displaying order message and associated cost. User's confirmation should be obtained using the prompt method. Adult age is above or equal to 18*/
 
 const age = prompt(`Is this food for a child or an adult? Type your age:`);
 
+console.log(age);
+
 let orderMessage = "";
-let cost = 0;
 
 if (age < 18) {
-  cost = 7;
-  orderMessage = `One adult sized Hawaii will be prepared for you. That'll be ${cost} euros. Are you sure you want to order this?`;
+  orderMessage = prompt(`Thank you ${userName}!
+  This is your order: 
+  One childsized ${selectedSubtype} will be prepared for you. That'll be 8 euros. Are you sure you want to order this?
+  Enter a number to confirm: 
+  1 - Yes
+  2 - No `);
+} else if (age >= 18) {
+  orderMessage = prompt(`Thank you ${userName}! 
+  This is your order: 
+  1 adultsized ${selectedSubtype} will be prepared for you. That'll be 15 euros. Are you sure you want to order this?
+  Enter a number to confirm: 
+  1 - Yes
+  2 - No `);
+} else {
+  alert(`Invalid age. Please type a number`);
+  exit(1);
 }
 
 // Step 5 - Order confirmation
