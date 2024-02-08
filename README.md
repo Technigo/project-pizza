@@ -8,6 +8,8 @@ Describe how you approached to problem, and what tools and techniques you used t
 
 I realised that I wanted a loop that continued to ask the costumer for their choice of food, untilthey wrote a valid answer. So I had to google how to do that (w3school was helpful). Then I had to try a few different versions of my code before i finally worked (For example: Setting foodChoice to null in wait of an answer did not work. Setting it to "Apple" worked.).
 
+I had a hard time making the subtype ordering function to work. After a while, I moved the declaration of subtype and order outside of the conditional statement, and just reassigned the values inside the conditional statement. Then it worked!
+
 ## View it live
 
 Here is my site:

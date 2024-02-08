@@ -43,22 +43,22 @@ console.log("Choice:", foodChoice);
 
 //menus:
 const pizzaMenu = [
-  "1. Margerita (tomato, cheese)",
-  "2. Al Funghi (tomato, cheese, mushrooms)",
-  "3. Vegetariana (tomato, cheese, onion, bell pepper, mushrooms, olives, artichoke",
-  "4. Chicken No Chicken (tomato, cheese, banana, curry, peanuts",
+  "Margerita",
+  "Al Funghi",
+  "Vegetariana",
+  "Chicken No Chicken",
 ];
 const burgerMenu = [
-  "1. Small burger",
-  "2. Big burger",
-  "3. Small cheeseburger",
-  "4. Big cheeseburger",
+  "Small burger",
+  "Big burger",
+  "Small cheeseburger",
+  "Big cheeseburger",
 ];
 const saladMenu = [
-  "1. Greek salad",
-  "2. Ceasar salad",
-  "3. Pasta salad",
-  "4. Avocado salad",
+  "Greek salad",
+  "Ceasar salad",
+  "Pasta salad",
+  "Avocado salad",
 ];
 
 //Ask for choice within a specific menu
@@ -67,21 +67,34 @@ let order = null;
 
 if (foodChoice === "pizza") {
   subType = prompt(
-    `What type of pizza do you want? Write the number on the menu: ${pizzaMenu}`
+    `What type of pizza do you want? Write the number on the menu: 
+    1. Margerita (tomato, cheese)
+    2. Al Funghi (tomato, cheese, mushrooms)
+    3. Vegetariana (tomato, cheese, onion, bell pepper, mushrooms, olives, artichoke)
+    4. Chicken No Chicken (tomato, cheese, banana, curry, peanuts)`
   );
   console.log("Answer:", subType);
   console.log("Option:", pizzaMenu[subType - 1]);
   order = pizzaMenu[subType - 1];
 } else if (foodChoice === "burger") {
   subType = prompt(
-    `Here is our burger menu ${burgerMenu}. Write the number of your choice of burger:`
+    `Here is our burger menu:
+    1. Small burger
+    2. Big burger
+    3. Small cheeseburger
+    4. Big cheeseburger 
+    Write the number of your choice of burger.`
   );
   console.log("Answer:", subType);
   console.log("Option:", burgerMenu[subType - 1]);
   order = burgerMenu[subType - 1];
 } else {
   subType = prompt(
-    `What type of salad do you want? Write the number on the menu: ${saladMenu}`
+    `What type of salad do you want? Write the number on the menu:
+    1. Greek salad
+    2. Ceasar salad
+    3. Pasta salad
+    4. Avocado salad`
   );
   console.log("Answer:", subType);
   console.log("Option:", saladMenu[subType - 1]);
