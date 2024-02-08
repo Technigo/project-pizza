@@ -11,7 +11,7 @@ alert(
   let person = prompt("Please enter your name")
   
   switch (person) {
-    case `${person}`:
+    case person:
         alert (
             `Hi and welcome ${person}`
         )
@@ -20,6 +20,7 @@ alert(
         alert (
             `Hi and welcome anonymous.`
         )
+    break
   } 
 
   /*if (person) {
@@ -36,12 +37,39 @@ alert(
   // Step 2 - Food choice
   // Your code goes here
   
-  let food = prompt(`Please select your choice of Food by entering the number.
+// We can use parseInt or use "1"
+
+  let food = parseInt (
+    prompt(`Please select your choice of Food by entering the number.
   1 - Pizza
   2 - Pasta
   3 - Lasagne`)
+  )
+
+  switch (food) {
+    case 1:
+        alert (
+            `You chose Pizza.`
+        )
+    break
+    case 2:
+        alert (
+            `You chose Pasta.`
+        )
+    break
+    case 3:
+        alert (
+            `You chose Lasagne`
+        )
+    default:
+        alert (
+            `You haven't chosen anything.`
+        ) 
+        exit (1)
+  }
+    
   
-  if (food == 1) {
+  /*if (food == 1) {
     alert (
       `You choose Pizza.`
     )
@@ -57,7 +85,7 @@ alert(
     alert (
       `You haven't choosen anything.`
     )
-  }
+  }*/
   
   
   // Step 3 - Subtype choice

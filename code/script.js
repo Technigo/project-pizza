@@ -30,20 +30,21 @@ let food = prompt(`Please select your choice of Food by entering the number.
 
 if (food == 1) {
   alert (
-    `You choose Pizza.`
+    `You chose Pizza.`
   )
 } else if (food == 2) {
   alert (
-    `You choose Pasta.`
+    `You chose Pasta.`
   )
 } else if (food == 3) {
   alert (
-    `You choose Lasagne.`
+    `You chose Lasagne.`
   )
 } else {
   alert (
-    `You haven't choosen anything.`
+    `You haven't chosen anything.`
   )
+  exit (1)
 }
 
 
@@ -65,44 +66,45 @@ let choice = prompt (`Please select your meal from the following by entering the
 
 if (food == 1 && choice == 1) {
   alert (
-    `You choose Margherita.`
+    `You chose Margherita.`
   )
 } else if (food == 1 && choice == 2) {
   alert (
-    `You choose Pepperoni.`
+    `You chose Pepperoni.`
   )
 } else if (food == 1 && choice == 3) {
   alert (
-    `You choose Hawaiian.`
+    `You chose Hawaiian.`
   )
 } else if (food == 2 && choice == 1) {
   alert (
-    `You choose Carbonara.`
+    `You chose Carbonara.`
   )
 } else if (food == 2 && choice == 2) {
   alert (
-    `You choose Bolognese.`
+    `You chose Bolognese.`
   )
 } else if (food == 2 && choice == 3) {
   alert (
-    `You choose Alfredo.`
+    `You chose Alfredo.`
   )
 } else if (food == 3 && choice == 1) {
   alert (
-    `You choose with meet.`
+    `You chose with meet.`
   )
 } else if (food == 3 && choice == 2) {
   alert (
-    `You choose vegetarian.`
+    `You chose vegetarian.`
   )
 } else if (food == 3 && choice == 3) {
   alert (
-    `You choose vegan.`
+    `You chose vegan.`
   )
 } else {
   alert (
-    `You choose nothing.`
+    `You chose nothing.`
   )
+  exit (1)
 }
 
 
@@ -144,5 +146,6 @@ Please select a number to confirm:
 if (confirmation == 1) {
   alert (`Thank you for your order. We will prepare it for you!`)
 } else {
-  alert (`You cancelled your order. Please start from the beginning.`)
+  alert (`You cancelled your order. Please start from the beginning.`) 
+  exit (1)
 }
