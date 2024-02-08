@@ -1,4 +1,4 @@
-# Project Name
+# Javasqript Pizzeria
 
 Assignment to create a simple javasqript pizzeria where costumers can choose and order different dishes.
 
