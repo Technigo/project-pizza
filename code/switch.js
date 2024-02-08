@@ -29,6 +29,7 @@ if (yourChoice === "1") {
 } else {
   alert(`Invalid response.
 Please choose a number between 1 and 3.`);
+  exit(1);
 }
 
 if (foodName === "Pizza") {
@@ -95,6 +96,7 @@ if (foodName === "Pizza" && yourSubchoice === "1") {
   alert(`Good choice! You've put a ${foodChoice} in your basket.`);
 } else {
   alert(`Please choose a number between 1 and 3. Try again!`);
+  exit(1);
 }
 
 // Step 4
@@ -114,6 +116,7 @@ if (yourAge <= 12) {
   alert(`You ordered a ${yourAge} ${foodChoice} for ${orderCost + 5} EUR!`);
 } else {
   alert("Invalid response. Please start over!");
+  exit(1);
 }
 
 // Step 5 - Order confirmation
