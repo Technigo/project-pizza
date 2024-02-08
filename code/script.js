@@ -40,6 +40,8 @@ while (foodChoice === "apple") {
 console.log("Choice:", foodChoice);
 
 // Step 3 - Subtype choice
+
+//menus:
 const pizzaMenu = [
   "1. Margerita (tomato, cheese)",
   "2. Al Funghi (tomato, cheese, mushrooms)",
@@ -59,6 +61,7 @@ const saladMenu = [
   "4. Avocado salad",
 ];
 
+//Ask for choice within a specific menu
 let subType = null;
 let order = null;
 
@@ -86,8 +89,27 @@ if (foodChoice === "pizza") {
 }
 
 console.log("Order:", order);
+
 // Step 4 - Age
-// Your code goes here
+//Ask for age
+let age = prompt(
+  `We need to know if the food is for an adult or a child. Please write your age:`
+);
+console.log("Age:", age);
+//Decide if the size is child or adult
+let size = "";
+
+if (age < 18) {
+  alert(
+    `Since you are younger than 18. We will make a child-size ${foodChoice}.`
+  );
+  size = "child";
+  console.log(size);
+} else {
+  alert(`Since you are 18 or older. We will make an adult-size ${foodChoice}.`);
+  size = "adult";
+  console.log(size);
+}
 
 // Step 5 - Order confirmation
 
