@@ -66,42 +66,61 @@ let subType = null;
 let order = null;
 
 if (foodChoice === "pizza") {
-  subType = prompt(
+  subType = parseInt (prompt(
     `What type of pizza do you want? Write the number on the menu: 
-    1. Margerita (tomato, cheese)
-    2. Al Funghi (tomato, cheese, mushrooms)
-    3. Vegetariana (tomato, cheese, onion, bell pepper, mushrooms, olives, artichoke)
-    4. Chicken No Chicken (tomato, cheese, banana, curry, peanuts)`
+    1. Margerita (tomato, cheese) 100:-
+    2. Al Funghi (tomato, cheese, mushrooms) 110:-
+    3. Vegetariana (tomato, cheese, onion, bell pepper, mushrooms, olives, artichoke) 120:-
+    4. Chicken No Chicken (tomato, cheese, banana, curry, peanuts) 110:-`
+  )
   );
   console.log("Answer:", subType);
-  console.log("Option:", pizzaMenu[subType - 1]);
-  order = pizzaMenu[subType - 1];
+
+    if (subType <= 4) {
+    console.log("Option:", pizzaMenu[subType - 1]);
+    order = pizzaMenu[subType - 1];
+    } else {
+    exit(1)
+    }
+
 } else if (foodChoice === "burger") {
-  subType = prompt(
+  subType = parseInt (prompt(
     `Here is our burger menu:
     1. Small burger
     2. Big burger
     3. Small cheeseburger
     4. Big cheeseburger 
-    Write the number of your choice of burger.`
+  Write the number of your choice of burger.`
+  )
   );
   console.log("Answer:", subType);
-  console.log("Option:", burgerMenu[subType - 1]);
-  order = burgerMenu[subType - 1];
+
+  if (subType <= 4) {
+    console.log("Option:", burgerMenu[subType - 1]);
+    order = burgerMenu[subType - 1];
+  } else {
+    exit(1);
+  }
+  
 } else {
-  subType = prompt(
+  subType = parseInt (prompt(
     `What type of salad do you want? Write the number on the menu:
     1. Greek salad
     2. Ceasar salad
     3. Pasta salad
     4. Avocado salad`
+  )
   );
   console.log("Answer:", subType);
-  console.log("Option:", saladMenu[subType - 1]);
-  order = saladMenu[subType - 1];
-}
 
-console.log("Order:", order);
+  if (subType <= 4) {
+    console.log("Option:", saladMenu[subType - 1]);
+    order = saladMenu[subType - 1];
+  } else {
+    exit(1);
+  }
+  
+}
 
 // Step 4 - Age
 //Ask for age
@@ -117,13 +136,13 @@ if (age < 18) {
     `Since you are younger than 18. We will make a child-size ${foodChoice}.`
   );
   size = "child";
-  console.log(size);
 } else {
   alert(`Since you are 18 or older. We will make an adult-size ${foodChoice}.`);
   size = "adult";
-  console.log(size);
 }
 
+console.log("Size:", size);
+console.log("Order:", order);
 // Step 5 - Order confirmation
 
 alert(`Thank you for your order! Your ${order} is on its way.`);
