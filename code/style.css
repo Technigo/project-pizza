@@ -13,8 +13,9 @@ body {
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
+  background-image: "https://unsplash.com/photos/pizza-with-berries-MQUqbmszGGM";
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 2em;
 }
