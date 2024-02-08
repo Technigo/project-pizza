@@ -12,7 +12,6 @@ let yourName = prompt("Please enter your name:", "Eliane");
 alert("Hello " + yourName + "!");
 
 // Step 2 - Food choice
-
 let yourChoice = prompt(
   `Please choose between Pizza, Pasta or Salad.
   Enter the number:
@@ -47,10 +46,7 @@ if (foodName === "Pizza") {
     3 for Salad`
   );
 }
-//Loop!?!?
 // Step 3 - Subtype choice
-// Your code goes here
-
 let yourSubchoice;
 if (foodName === "Pizza") {
   yourSubchoice = prompt(
