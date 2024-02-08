@@ -37,7 +37,7 @@ switch (foodChoice) {
     foodName = "Soup";
     break;
   default:
-    foodName = "An Invalid Number";
+    throw alert("please choose a number between 1 and 4.");
     break;
 }
 alert(`You chose ${foodName}!`);
@@ -101,8 +101,10 @@ if (foodName === "Pizza" && foodOrder === "1") {
 } else if (foodName === "Pizza" && foodOrder === "4") {
   pizzaType = " Pizza 4 Formaggi";
   alert(`You chose ${pizzaType}`);
+} else {
+  alert("please type a number between 1 and 4");
 }
-
+// Why is the code still running after the "else" statement?
 let pastaType;
 if (foodName === "Pasta" && foodOrder === "1") {
   pastaType = "Pasta al pomodoro";
@@ -116,7 +118,10 @@ if (foodName === "Pasta" && foodOrder === "1") {
 } else if (foodName === "Pasta" && foodOrder === "4") {
   pastaType = "Pasta alla diavola";
   alert(`You chose ${pastaType}!`);
+} else {
+  alert("please type a number between 1 and 4");
 }
+// why is the code running the "else" statement inside ---if (foodName === "Pasta" && foodOrder === "1") ---statement even if I type a correct choice into ---if (foodName === "Pizza" && foodOrder === "1") ---statement ?
 
 let saladType;
 if (foodName === "Salad" && foodOrder === "1") {
