@@ -1,4 +1,4 @@
-# Instructions about the project
+<!-- # Instructions about the project
 
 ## Navigating this repository
 
@@ -47,15 +47,15 @@ The goal of this iteration is to allow the user to select the type of food they 
 - Pasta
 - Salad
 
-The program should use the prompt() method to present the user with a menu of options (Pizza, Pasta, Salad) and prompt them to enter a number corresponding to their choice. Based on the user's input, the program should determine the chosen food type (Pizza, Pasta, Salad) and display a message using the alert() method to confirm the user's selection.
-
+The program should use the prompt() method to present the user with a menu of options (Pizza, Pasta, Salad) and prompt them to enter a number corresponding to their choice. Based on the user's input, the program should determine the chosen food type (Pizza, Pasta, Salad) and display a message using the alert() method to confirm the user's selection. -->
+<!--
 ### Step 3 - Subtype choice
 
-For this iteration, the focus is on enabling the user to choose a subtype of the selected food type. Depending on the previously chosen food type (Pizza, Pasta, Salad), the program should present the user with subtype options specific to that food type. The prompt() method should be used to get the user's input. The program should then determine the chosen subtype and provide feedback using the alert() method to confirm the selection. Tip: Use conditional statements for this.
+For this iteration, the focus is on enabling the user to choose a subtype of the selected food type. Depending on the previously chosen food type (Pizza, Pasta, Salad), the program should present the user with subtype options specific to that food type. The prompt() method should be used to get the user's input. The program should then determine the chosen subtype and provide feedback using the alert() method to confirm the selection. Tip: Use conditional statements for this. -->
 
-### Step 4 - Age
+<!-- ### Step 4 - Age
 
-In this iteration, the program should prompt the user to specify if the food is intended for a child or an adult. The prompt() method should be used to present the question and get the user's input. Based on the user's answer, an appropriate order message should be constructed. The program should use the alert() method to display the order message and the associated cost. The user's confirmation should be obtained using the prompt() method.
+In this iteration, the program should prompt the user to specify if the food is intended for a child or an adult. The prompt() method should be used to present the question and get the user's input. Based on the user's answer, an appropriate order message should be constructed. The program should use the alert() method to display the order message and the associated cost. The user's confirmation should be obtained using the prompt() method. -->
 
 ### Step 5 - Order confirmation
 
@@ -79,4 +79,3 @@ We recommend creating an extra script.js file under the name `switch.js` to have
 - **Test and validate:** Thoroughly test your refactored code with various inputs to ensure that it behaves as expected and produces the correct outputs.
 
 Refactoring the code using a switch case approach not only showcases your coding versatility but also contributes to writing cleaner and more efficient code. It's a valuable skill that can lead to more readable and maintainable programs in the long run.
-
