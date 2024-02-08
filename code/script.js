@@ -180,7 +180,7 @@ if (confirmation === "1") {
   alert(
     `Your order has been confirmed and we will start preparing your ${foodType} ✌🏼. Bon appétit!`
   );
-} else if (confirmation === "2") {
+} else if (confirmation === "2" || confirmation === null) {
   alert(
     `Maybe you decided on eating something else today. We just want to let you know that whenever you feel like eating a pizza, pasta or a really delicious sallad. You are welcome back! `
   );
