@@ -13,3 +13,4 @@ If I would have more time I would go over the code to make it easier and brush u
 ## View it live
 
 Here you can find my project:
+https://linda-f-project-pizza.netlify.app/
