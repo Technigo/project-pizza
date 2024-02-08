@@ -5,9 +5,15 @@
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
+const clientName = prompt("Please start by writing your name")
+
+console.log(clientName)
+
+alert(`Hi ${clientName}! Let's order some delicious food! Are you ready?`)
 
 // Step 2 - Food choice
 // Your code goes here
+
 
 // Step 3 - Subtype choice
 // Your code goes here
