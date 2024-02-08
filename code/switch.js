@@ -32,31 +32,43 @@ mainDishNumber = parseInt(prompt(`What are you going to eat? You have 3 options:
 
 (answer by typing 1, 2 or 3)`))
 
-if (mainDishNumber===1){
-  mainDish = "pizza"
-  alert (`Pizza 🍕 Youmy! 
+switch (mainDishNumber){
+  case 1:
+    alert (`Pizza 🍕 Youmy! 
   
-  Press OK to continue.`)
-} else if (mainDishNumber===2) { 
-  mainDish = "pasta"
-  alert (`The HGI option:D Pasta!! 🍝
+  OK to continue.`)
+    mainDish = "pizza"
+    break
+
+  case 2:
+    alert (`The HGI option:D Pasta!! 🍝
 
   Press OK to continue.`)
-} else if ( mainDishNumber===3) { 
-  mainDish = "salad"
+    mainDish = "pasta"
+    break
+
+  case 3:
   alert (`Salad 🥗, the healthy choise!
  
   Press OK to continue.`)
-} else {
-  alert (`Make sure you are typing one the options available.)
- 
-  You have to start again.`)
-  exit(1)}
+    mainDish = "salad"
+    break
+
+  default:
+    alert (`Make sure you are typing one the options available.)
+   
+    You have to start again.`)
+    exit(1)
+}
 
 /* Some testing in the console here: console.log(typeof mainDish) */
 // Step 3 - Subtype choice
 
-if (mainDishNumber===1) {
+console.log ("mainDish", mainDishNumber)
+console.log (typeof(mainDishNumber))
+
+switch (mainDishNumber){
+  case 1:
   subtypeDishNumber = parseInt(prompt(`Which pizza do you want?
 
   1 - Margherita
@@ -66,7 +78,28 @@ if (mainDishNumber===1) {
   5 - Meatballs
   
   Type the number`))
-} else if (mainDishNumber===2) {   
+
+  switch (subtypeDishNumber){
+
+    case 1:
+      subtypeDish = "Margherita"
+    break
+    case 2:
+      subtypeDish = "Cheese"
+    break
+    case 3:
+      subtypeDish = "Caprichosa"
+    break
+    case 4:
+      subtypeDish = "Pepperoni"
+    break
+    case 5:
+      subtypeDish = "Meatballs"
+    break
+  }
+  break
+
+  case 2:  
   subtypeDishNumber = parseInt(prompt(`Which kind of pasta do you want?
 
   1 - Spaghetti Carbonara
@@ -76,8 +109,28 @@ if (mainDishNumber===1) {
   5 - Beef & Cheese Lasagna
   
   Type the number`))
-} else if (mainDishNumber===3) { 
-subtypeDishNumber = parseInt(prompt(`What kind of sallad do you want?
+
+  switch (subtypeDishNumber){
+    case 1:
+      subtypeDish = "Spaghetti Carbonara"
+    break
+    case 2:
+      subtypeDish = "Mac & Cheese"
+    break
+    case 3:
+      subtypeDish = "Pesto"
+    break
+    case 4:
+      subtypeDish = "Spaghetti and Meatballs"
+    break
+    case 5:
+      subtypeDish = "Beef & Cheese Lasagna"
+    break
+  }
+  break
+  
+  default: //default refers to the last option 3 "salad"
+  subtypeDishNumber = parseInt(prompt(`What kind of sallad do you want?
 
   1 - Mediterranian
   2 - Cesar 
@@ -86,11 +139,33 @@ subtypeDishNumber = parseInt(prompt(`What kind of sallad do you want?
   5 - Chèvre
   
   Type the number`))
-} else {
-alert (`Make sure you are typing one the options available.)
+
+  switch (subtypeDishNumber){
+  case 1:
+    subtypeDish = "Mediterranian"
+  break
+  case 2:
+    subtypeDish = "Cesar"
+  break
+  case 3:
+    subtypeDish = "Vegana"
+  break
+  case 4:
+    subtypeDish = "Salmon"
+  break
+  case 5:
+    subtypeDish = "Chèvre"
+  break
+
+  default:
+  alert (`Make sure you are typing one the options available.
 
 You have to start again.`)
-exit(1)}
+  exit(1)
+  }
+}
+
+
 
 // This was some testing in the console
 console.log("mainDish", mainDishNumber)
@@ -99,41 +174,10 @@ console.log("subtypeDish",subtypeDishNumber)
 console.log(typeof subtypeDishNumber)
 
 
-if (mainDishNumber === 1 && subtypeDishNumber === 1) {
-  subtypeDish = "Margherita" 
-} else if (mainDishNumber === 1 && subtypeDishNumber === 2) {
-  subtypeDish = "Cheese"
-} else if (mainDishNumber === 1 && subtypeDishNumber === 3) {
-  subtypeDish = "Caprichosa"
-} else if (mainDishNumber === 1 && subtypeDishNumber === 4) {
-  subtypeDish = "Pepperoni"
-} else if (mainDishNumber === 1 && subtypeDishNumber === 5) {
-  subtypeDish = "Meatballs"
-} else if (mainDishNumber === 2 && subtypeDishNumber === 1) {
-  subtypeDish = "Spaghetti Carbonara"
-} else if (mainDishNumber === 2 && subtypeDishNumber === 2) {
-  subtypeDish = "Mac & Cheese"
-} else if (mainDishNumber === 2 && subtypeDishNumber === 3) {
-  subtypeDish = "Pesto"
-} else if (mainDishNumber === 2 && subtypeDishNumber === 4) {
-  subtypeDish = "Spaghetti and Meatballs"
-} else if (mainDishNumber === 2 && subtypeDishNumber === 5) {
-  subtypeDish = "Beef & Cheese Lasagna"
-} else if (mainDishNumber === 3 && subtypeDishNumber === 1) {
-  subtypeDish = "Mediterranian"
-} else if (mainDishNumber === 3 && subtypeDishNumber === 2) {
-  subtypeDish = "Cesar"
-} else if (mainDishNumber === 3 && subtypeDishNumber === 3) {
-  subtypeDish = "Vegana"
-} else if (mainDishNumber === 3 && subtypeDishNumber === 4) {
-  subtypeDish = "Salmon"
-} else if (mainDishNumber === 3 && subtypeDishNumber === 5) {
-  subtypeDish = "Chèvre"
-} else {
   alert (`Make sure you are typing one the options available.)
   
   You have to start again.`)
-  exit(1)}
+  exit(1)
 
 alert (`Your order is ${subtypeDish} ${mainDish}!
 
