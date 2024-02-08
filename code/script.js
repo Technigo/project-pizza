@@ -163,21 +163,24 @@ let age = prompt(`
    if("1"===food) {
     if("1"===foodTyp) {
       alert(`
-        You have choice a adult size pizza margarira
+        You have choice a adult size
+        pizza margherita
         the price will be 10€
         `
       )
     }
     else if("2"===foodTyp) {
       alert(`
-        You have choice a adult size kebab pizza
+        You have choice a adult size
+        kebab pizza
         the price will be 10€
         `
       )
     }
     else if("3"===foodTyp) {
       alert(`
-        You have choice a adult size pizza capricciosa,
+        You have choice a adult size
+        pizza capricciosa,
         the price will be 10€
         `
       )
@@ -187,21 +190,24 @@ let age = prompt(`
    else if("2"===food) {
     if("1"===foodTyp) {
       alert(`
-        You have choice a adult size pasta carbonara
+        You have choice a adult size
+        pasta carbonara
         the price will be 10€
         `
       )
     }
     else if("2"===foodTyp) {
       alert(`
-        You have choice a adult size pasta bolognese
+        You have choice a adult size
+        pasta bolognese
         the price will be 10€
         `
       )
     }
     else if("3"===foodTyp) {
       alert(`
-        You have choice a adult size pasta alfredo
+        You have choice a adult size
+        pasta alfredo
         the price will be 10€
         `
       )
@@ -211,21 +217,24 @@ let age = prompt(`
    else if("3"===food) {
     if("1"===foodTyp) {
       alert(`
-        You have choice a adult size caesar salad
+        You have choice a adult size
+        caesar salad
         the price will be 10€
         `
       )
     }
     else if("2"===foodTyp) {
       alert(`
-        You have choice a adult size greek salad
+        You have choice a adult size
+        greek salad
         the price will be 10€
         `
       )
     }
     else if("3"===foodTyp) {
       alert(`
-        You have choice a adult size tuna salad
+        You have choice a adult size
+        tuna salad
         the price will be 10€
         `
       )
@@ -237,21 +246,24 @@ let age = prompt(`
    if("1"===food) {
     if("1"===foodTyp) {
       alert(`
-        You have choice a kid size pizza margarira
+        You have choice a kid size
+        pizza margarira
         the price will be 4,5€
         `
       )
     }
     else if("2"===foodTyp) {
       alert(`
-        You have choice a kid size kebab pizza
+        You have choice a kid size
+        kebab pizza
         the price will be 4,5€
         `
       )
     }
     else if("3"===foodTyp) {
       alert(`
-        You have choice a kid size pizza capricciosa
+        You have choice a kid size
+        pizza capricciosa
         the price will be 4,5€
         `
       )
@@ -261,21 +273,24 @@ let age = prompt(`
    else if("2"===food) {
     if("1"===foodTyp) {
       alert(`
-        You have choice a kid size pasta carbonara
+        You have choice a kid size
+        pasta carbonara
         the price will be 4,5€
         `
       )
     }
     else if("2"===foodTyp) {
       alert(`
-        You have choice a kid size pasta bolognese
+        You have choice a kid size
+        pasta bolognese
         the price will be 4,5€
         `
       )
     }
     else if("3"===foodTyp) {
       alert(`
-        You have choice a kid size pasta alfredo
+        You have choice a kid size
+        pasta alfredo
         the price will be 4,5€
         `
       )
@@ -285,21 +300,24 @@ let age = prompt(`
    else if("3"===food) {
     if("1"===foodTyp) {
       alert(`
-        You have choice a kid size caesar salad
+        You have choice a kid size
+        caesar salad
         the price will be 4,5€
         `
       )
     }
     else if("2"===foodTyp) {
       alert(`
-        You have choice a kid size greek salad
+        You have choice a kid size
+        greek salad
         the price will be 4,5€
         `
       )
     }
     else if("3"===foodTyp) {
       alert(`
-        You have choice a kid size tuna salad
+        You have choice a kid size
+        tuna salad
         the price will be 4,5€
         `
       )
@@ -316,7 +334,8 @@ let age = prompt(`
      if("1"===food) {
       if("1"===foodTyp) {
         confirmation = prompt(`
-           you have ordered a adult size pizza margarira
+           you have ordered:
+           adult size pizza margherita
            the price will be 10€
            Do you want to place your order?🛒
            
@@ -326,7 +345,8 @@ let age = prompt(`
       }
       else if("2"===foodTyp) {
         confirmation = prompt(`
-           you have ordered a adult size kebab pizza
+           you have ordered:
+           adult size kebab pizza
            the price will be 10€
            Do you want to place your order?🛒
            
@@ -336,7 +356,8 @@ let age = prompt(`
       }
       else if("3"===foodTyp) {
         confirmation = prompt(`
-           you have ordered a adult size pizza capricciosa
+           you have ordered:
+           adult size pizza capricciosa
            the price will be 10€
            Do you want to place your order?🛒
            
@@ -349,7 +370,8 @@ let age = prompt(`
      else if("2"===food) {
       if("1"===foodTyp) {
         confirmation = prompt(`
-           you have ordered a adult size pasta carbonara
+           you have ordered:
+           adult size pasta carbonara
            the price will be 10€
            Do you want to place your order?🛒
            
@@ -359,7 +381,8 @@ let age = prompt(`
       }
       else if("2"===foodTyp) {
         confirmation = prompt(`
-           you have ordered a adult size pasta bolognese
+           you have ordered:
+           adult size pasta bolognese
            the price will be 10€
            Do you want to place your order?🛒
            
@@ -369,7 +392,8 @@ let age = prompt(`
       }
       else if("3"===foodTyp) {
         confirmation = prompt(`
-           you have ordered a adult size pasta alfredo
+           you have ordered:
+           adult size pasta alfredo
            the price will be 10€
            Do you want to place your order?🛒
            
@@ -382,7 +406,8 @@ let age = prompt(`
      else if("3"===food) {
       if("1"===foodTyp) {
         confirmation = prompt(`
-           you have ordered a adult size caesar salad
+           you have ordered:
+           adult size caesar salad
            the price will be 10€
            Do you want to place your order?🛒
            
@@ -392,7 +417,8 @@ let age = prompt(`
       }
       else if("2"===foodTyp) {
         confirmation = prompt(`
-           you have ordered a adult size greek salad
+           you have ordered:
+           adult size greek salad
            the price will be 10€
            Do you want to place your order?🛒
            
@@ -402,7 +428,8 @@ let age = prompt(`
       }
       else if("3"===foodTyp) {
         confirmation = prompt(`
-           you have ordered a adult size tuna salad
+           you have ordered:
+           adult size tuna salad
            the price will be 10€
            Do you want to place your order?🛒
            
@@ -417,7 +444,8 @@ let age = prompt(`
      if("1"===food) {
       if("1"===foodTyp) {
         confirmation = prompt(`
-           you have ordered a kid size pizza margarira
+           you have ordered:
+           kid size pizza margherita
            the price will be 4,5€
            Do you want to place your order?🛒
            
@@ -427,7 +455,8 @@ let age = prompt(`
       }
       else if("2"===foodTyp) {
         confirmation = prompt(`
-           you have ordered a kid size kebab pizza
+           you have ordered: 
+           kid size kebab pizza
            the price will be 4,5€
            Do you want to place your order?🛒
            
@@ -437,7 +466,8 @@ let age = prompt(`
       }
       else if("3"===foodTyp) {
         confirmation = prompt(`
-           you have ordered a kid size pizza capricciosa
+           you have ordered:
+           kid size pizza capricciosa
            the price will be 4,5€
            Do you want to place your order?🛒
            
@@ -450,7 +480,8 @@ let age = prompt(`
      else if("2"===food) {
       if("1"===foodTyp) {
         confirmation = prompt(`
-           you have ordered a kid size pasta carbonara
+           you have ordered: 
+           kid size pasta carbonara
            the price will be 4,5€
            Do you want to place your order?🛒
           
@@ -460,7 +491,8 @@ let age = prompt(`
       }
       else if("2"===foodTyp) {
         confirmation = prompt(`
-           you have ordered a kid size pasta bolognese
+           you have ordered:
+           kid size pasta bolognese
            the price will be 4,5€
            Do you want to place your order?🛒
            
@@ -470,7 +502,8 @@ let age = prompt(`
       }
       else if("3"===foodTyp) {
         confirmation = prompt(`
-           you have ordered a kid size pasta alfredo
+           you have ordered:
+           kid size pasta alfredo
            the price will be 4,5€
            Do you want to place your order?🛒
            
@@ -483,7 +516,8 @@ let age = prompt(`
      else if("3"===food) {
       if("1"===foodTyp) {
         confirmation = prompt(`
-           you have ordered a kid size caesar salad
+           you have ordered:
+           kid size caesar salad
            the price will be 4,5€
            Do you want to place your order?🛒
           
@@ -493,7 +527,8 @@ let age = prompt(`
       }
       else if("2"===foodTyp) {
         confirmation = prompt(`
-           you have ordered a kid size greek salad
+           you have ordered:
+           kid size greek salad
            the price will be 4,5€
            Do you want to place your order?🛒
            
@@ -503,7 +538,8 @@ let age = prompt(`
       }
       else if("3"===foodTyp) {
         confirmation = prompt(`
-           you have ordered a kid size tuna salad
+           you have ordered:
+           kid size tuna salad
            the price will be 4,5€
            Do you want to place your order?🛒
           
@@ -517,7 +553,7 @@ let age = prompt(`
      if (confirmation === "yes") {
       alert(`
         Thank you for ordering from us!
-        Your order is being prepared👩🏼‍🍳
+        Your order is being prepared 👩🏼‍🍳
         `
       )
      }
