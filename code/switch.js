@@ -109,13 +109,13 @@ alert(
   let age = prompt("Is the food for a child or an adult? Please enter your age?")
   let confirmation;
   
-  if (age >= 18) {
+  if (age >= 13) {
     confirmation = prompt(`One adult size ${lastChoice} will be prepared for you and that will be 15$!
     Do you want to confirm your order?
     1 - Yes
     2 - No
     `)
-  } else if (age <= 18) {
+  } else if (age <= 13) {
     confirmation = prompt(`One child size ${lastChoice} will be prepared for you and that will be 10$!
     Do you want to confirm your order?
     1 - Yes
