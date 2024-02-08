@@ -6,8 +6,6 @@ alert(
     "Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin."
   )
   
-  //Asking person for name
-  
   let person = prompt("Please enter your name")
   
   switch (person) {
