@@ -1,6 +1,6 @@
-# Project Name
+# The Cheeziest Pizzeria - 1st javascript project
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week we started with the javascript basics. To excercise this we made an alert+prompt website, where the user can make an order. 
 
 ## The problem
 
