@@ -11,8 +11,11 @@ alert(`Hi ${userNameUp} !`)
 
 // Step 2 - Food choice
 // Your code goes here
-/*const orderFood = ;
 
+// Step 3 - Subtype choice
+// Your code goes here
+
+/*const orderFood = ;
 if (orderFood == 1 ){
   console.log (alert (`You have chosen pizza! Good choice!`))
 } else if (orderFood == 2){
@@ -66,14 +69,20 @@ switch (orderMain) {
 
 console.log("subtype menu", subtypeMenu, typeof subtypeMenu)
 
+if (subtypeMenu === 1){
+  alert (`You have chosen ${mainSelected} and ${subtypeOrder[0]}`)
+} else if (subtypeMenu === 2){
+  alert (`You have chosen ${mainSelected} and ${subtypeOrder[1]}`)
+} else if (subtypeMenu === 3){
+  alert (`You have chosen ${mainSelected} and ${subtypeOrder[3]}`)
+}
 
 
-// Step 3 - Subtype choice
-// Your code goes here
 
 
 // Step 4 - Age
 // Your code goes here
+
 
 // Step 5 - Order confirmation
 // Your code goes here
