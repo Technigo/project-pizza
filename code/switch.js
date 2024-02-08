@@ -3,30 +3,32 @@ alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
 
-let yourName = prompt("What is your name?");
+const yourName = prompt("What is your name?");
 
 alert(`Welcome, ${yourName}!`);
 
 // Step 2 - Food choice
-const menuSelect = prompt(
-  `What would you like to order?
+const menuSelect = parseInt(
+  prompt(`
+  What would you like to order?
     Enter the number of your choice:
     1. Pizza  
     2. Pasta 
     3. Salad
     `
+  )
 );
 
-let selectedItem = ""
+let selectedItem
 
 switch (menuSelect) {
-  case "1":
+  case 1:
     selectedItem = "pizza";
     break
-  case "2":
+  case 2:
     selectedItem = "pasta"
     break
-  case "3":
+  case 3:
     selectedItem = "salad"
     break
   default:
@@ -34,46 +36,91 @@ switch (menuSelect) {
     exit(1)
 };
 
+console.log("selected menu item", selectedItem)
+
 alert(`You chose ${selectedItem}!`)
 
 // Step 3 - Subtype choice
-let pizzaChoice = ""
-let pastaChoice = ""
-let saladChoice = ""
-let subItem = ""
+let subTypePizza
+let subTypePasta 
+let subTypeSalad
 
-switch (menuSelect) {
-  case "1":
-    pizzaChoice = prompt(
-      `Select the type of pizza:
+switch (selectedItem) {
+  case "pizza":
+    subTypePizza = parseInt(
+      prompt(`
+      Select the type of pizza:
       Enter the number of your choice:
       1. Hawaiian
       2. Margherita
       3. Pepperoni
       `
+      ) 
     )
-    break
-  case "2":
-    pastaChoice = prompt(
-      `Select the type of pasta:
+    break;
+  case "pasta":
+    subTypePasta = parseInt(
+      prompt(`
+      Select the type of pasta:
       Enter the number of your choice:
       1. Spaghetti alla Puttanesca
       2. Carbonara
       3. Pesto alla Genovese
       `
+      )
     )
-    break
-  case "3":
-    saladChoice = prompt(
-      `Select the type of salad:
+    break;
+  case "salad":
+    subTypeSalad = parseInt(
+      prompt(`
+      Select the type of salad:
       Enter the number of your choice:
       1. Caprese
       2. Insalata di Riso
       3. Panzanella
       `
-    );
-    break
+      )
+    )
+    break;
   default:
-    alert("Please enter a value between 1 and 3.");
+    alert("Please enter a value between 1 and 3.")
+    exit(1)
+};
+
+console.log("pizza type", subTypePizza, "pasta type", subTypePasta, "salad type", subTypeSalad)
+
+switch (subTypePizza) {
+  case 1:
+    subTypeName = "Hawaiian";
+    break
+  case 2:
+    subTypeName = "Margherita";
+    break
+  case 3:
+    subTypeName = "Pepperoni";
+    break
 }
 
+switch (subTypePasta) {
+  case 1:
+    subTypeName = "Spaghetti alla Puttanesca";
+    break
+  case 2:
+    subTypeName = "Carbonara";
+    break
+  case 3:
+    subTypeName = "Pesto alla Genovese";
+    break
+}
+
+switch (subTypePizza) {
+  case 1:
+    subTypeName = "Caprese";
+    break
+  case 2:
+    subTypeName = "Margherita";
+    break
+  case 3:
+    subTypeName = "Pepperoni";
+    break
+}
