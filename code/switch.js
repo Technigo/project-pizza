@@ -2,7 +2,7 @@
 // Step 1 - Welcome and introduction
 
 alert(
-  `Welcome to Wen's Java Pizzeria🍕. Ready to Start? - Click 'OK' to begin.`
+  `Welcome to Wen's Javascript Pizzeria🍕. Ready to Start? - Click 'OK' to begin.`
 );
 
 /* Created a function that ensures the value is not null. If the input is null, the function reprompt until it gets the input from the user.
