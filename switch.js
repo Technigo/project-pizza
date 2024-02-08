@@ -1,18 +1,15 @@
 // Start here
 
 // Step 1 - Welcome and introduction
-// Your code goes here
-
 alert(
   "Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin."
 );
 
-let yourName = prompt("Please enter your name:", "Eliane");
+let yourName = prompt("Please enter your name:", "Eliane"); // after the "," is the default value
 
-alert("Hello " + yourName + "!");
+alert(`Hello ${yourName}!`);
 
 // Step 2 - Food choice
-// Your code goes here
 
 const yourChoice = prompt(
   `Please choose between Pizza, Pasta or Salad.
@@ -32,11 +29,11 @@ if (yourChoice === "1") {
 }
 
 if (foodName === "Pizza") {
-  alert("You've chosen " + foodName);
+  alert(`You've chosen ${foodName}`);
 } else if (foodName === "Pasta") {
-  alert("You've chosen " + foodName);
+  alert(`You've chosen ${foodName}`);
 } else if (foodName === "Salad") {
-  alert("You've chosen " + foodName);
+  alert(`You've chosen ${foodName}`);
 } else {
   alert(
     `Please choose a number between 1 and 3:
@@ -45,7 +42,8 @@ if (foodName === "Pizza") {
       3 for Salad`
   );
 }
-//Loop!?!?
+// exit!!
+
 // Step 3 - Subtype choice
 // Your code goes here
 
@@ -76,66 +74,51 @@ if (foodName === "Pizza") {
 const foodChoice = "";
 if (foodName === "Pizza" && yourSubchoice === "1") {
   foodChoice = "Pizza Margherita";
-  alert("Good choice! You've put a " + foodChoice + " in your basket.");
+  alert(`Good choice! You've put a ${foodChoice} in your basket.`);
 } else if (foodName === "Pizza" && yourSubchoice === "2") {
   foodChoice = "Pizza ai Funghi";
-  alert("Good choice! You've put a " + foodChoice + " in your basket.");
+  alert(`Good choice! You've put a ${foodChoice} in your basket.`);
 } else if (foodName === "Pizza" && yourSubchoice === "3") {
   foodChoice = "Pizza Vegetariana";
-  alert("Good choice! You've put a " + foodChoice + " in your basket.");
+  alert(`Good choice! You've put a ${foodChoice} in your basket.`);
 } else if (foodName === "Pasta" && yourSubchoice === "1") {
   foodChoice = "Pasta Arrabiata";
-  alert("Good choice! You've put a " + foodChoice + " in your basket.");
+  alert(`Good choice! You've put a ${foodChoice} in your basket.`);
 } else if (foodName === "Pasta" && yourSubchoice === "2") {
   foodChoice = "Pasta Aglio e Olio";
-  alert("Good choice! You've put a " + foodChoice + " in your basket.");
+  alert(`Good choice! You've put a ${foodChoice} in your basket.`);
 } else if (foodName === "Pasta" && yourSubchoice === "3") {
   foodChoice = "Pasta Carbonara";
-  alert("Good choice! You've put a " + foodChoice + " in your basket.");
+  alert(`Good choice! You've put a ${foodChoice} in your basket.`);
 } else if (foodName === "Salad" && yourSubchoice === "1") {
   foodChoice = "Green Salad";
-  alert("Good choice! You've put a " + foodChoice + " in your basket.");
+  alert(`Good choice! You've put a ${foodChoice} in your basket.`);
 } else if (foodName === "Salad" && yourSubchoice === "2") {
   foodChoice = "Mixed Salad";
-  alert("Good choice! You've put a " + foodChoice + " in your basket.");
+  alert(`Good choice! You've put a ${foodChoice} in your basket.`);
 } else if (foodName === "Salad" && yourSubchoice === "3") {
   foodChoice = "Greek Salad";
-  alert("Good choice! You've put a " + foodChoice + " in your basket.");
+  alert(`Good choice! You've put a ${foodChoice} in your basket.`);
 }
 
 // Step
 // This part defines size of the meal based on the age of the person ordering
 const yourAge = prompt(
-  "Please enter your age to define the size of your meal:"
+  `Please enter your age to define the size of your meal.
+  Children under the age of 13 get a child sized meal.`
 );
 
 const orderCost = 10;
 if (yourAge <= 12) {
   yourAge = "child size";
-  alert(
-    "You ordered a " +
-      yourAge +
-      " " +
-      foodChoice +
-      " for " +
-      orderCost +
-      " EUR!"
-  );
+  alert(`
+    You ordered a ${yourAge} ${foodChoice} for ${orderCost} EUR!`);
 } else if (yourAge > 12) {
   yourAge = "regular size";
-  alert(
-    "You ordered a " +
-      yourAge +
-      " " +
-      foodChoice +
-      " for " +
-      (orderCost + 5) +
-      " EUR! "
-  );
+  alert(`You ordered a ${yourAge} ${foodChoice} for ${orderCost + 5} EUR!`);
 }
 
 // Step 5 - Order confirmation
-// Your code goes here*/
 const confirmation = prompt("Do you want to place your order? Type yes or no");
 if (
   confirmation === "yes" ||
