@@ -80,8 +80,8 @@ if (foodName === "Pasta"){
     lastChoice = "Vegetarian pasta"
     alert(`You chose the ${lastChoice}!`)
   } else if (subChoice === "2") {
-    lastChoice = "Meat pasta"
-    alert(`You 0<chose the ${lastChoice}!`)
+    lastChoice = "pasta with meat"
+    alert(`You chose the ${lastChoice}!`)
   } else if (subChoice === "3") {
     lastChoice = "Seafood pasta"
     alert(`You chose ${lastChoice}!`)
