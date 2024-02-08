@@ -12,7 +12,7 @@ alert(`Hi ${yourName}, nice to see you! 👋🏼`);
 // Step 2 - Food choice
 //Promts the costumer to enter a number for prefered food
 let foodChoice = prompt(
-  `What do you want to eat today?
+  `What do you like to eat today?
 
   1 - Pizza 🍕
   2 - Pasta 🍝
