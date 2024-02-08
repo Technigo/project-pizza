@@ -6,19 +6,17 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  /* background: #0026ff; */
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  min-height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/tim-mossholder-FH3nWjvia-U-unsplash.jpg");
-  /* background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative; */
-}
+    background-image: url("images/tim-mossholder-FH3nWjvia-U-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100vh;
+  }
 
 p {
   font-size: 1.5em;
