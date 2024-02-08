@@ -137,6 +137,11 @@ let age = prompt(
   `Enter your age (so we know if your dish should be prepared in adult or child size):`
 );
 
+if (isNaN(age)) {
+  alert(`You have to enter a valid age (a number). Please start over.`);
+  exit(1);
+}
+
 //If age is equal to or under 10 dish size and price should be for child.
 let confirmation = "";
 if (age <= 10) {
