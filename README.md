@@ -4,15 +4,14 @@ Create a simple food ordering system in js, by following the instructions.
 
 ## The problem
 
-I followed the instructions. First, I used switch before realizing that would be a stretch. Finished using conditional if statements and later created a separate switch solution.
+I followed the instructions as closely as possible. Wrote down all the steps as comments and "filled them in".
+First, I started using switch before realizing that would be a stretch. Finished basic scope using conditional if statements and later created a separate switch solution. I focused on going step by step and not changing the flow.
 
-I focused on going step by step and not changing the flow. 
+For stretching I focused mainly on the switch version.
+I tried to cover "invalid" inputs and catch if the user wanted to exit/cancel.
+Played around with displaying the order in the site.
 
-As a stretch I played around with displaying the order in the site (in the switch file). 
-
-Will also make an attempt with more loops for validation, in case the user input is incorrect. If I have time, I will explore a third solution with the menu as an object, which seems cool.
-
-Before hand in I will go through it again to make it DRY and cleaner.
+If I have time, I will explore a third solution with the menu as an object.
 
 ## View it live
 
