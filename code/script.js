@@ -1,6 +1,6 @@
-// Start here
 
 // Step 1 - Welcome and introduction
+
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
@@ -9,7 +9,7 @@ alert(
 const yourName = prompt(`What's your name? 😊`)
 
 alert(
-  `Hello ${yourName}!`
+  `Hello ${yourName}!🌟`
 )
 
 
@@ -22,44 +22,85 @@ const foodSelection = prompt(
   2 - 🍝 Pasta
   3 - 🥗 Sallad`
 )
- 
+
 let selectedFood = ""
 
-if (foodSelection === "1"){
+if (foodSelection === "1") {
   selectedFood = "Pizza"
 } else if (foodSelection === "2") {
-  selectedFood = "Pasta" 
-} else if (foodSelection === "3"){
+  selectedFood = "Pasta"
+} else if (foodSelection === "3") {
   selectedFood = "Sallad"
-} else { 
+} else {
   alert("Number input is invalid!☹️ please return and select a valid number.")
-  exit(1)}
+  exit(1)
+}
 
-  alert(`You choose ${selectedFood}, Yummy!😃`) 
+alert(`You choose ${selectedFood}, Yummy!😃`)
 
- // Step 3 - Subtype choice
 
- let pizzaSelection = "1"
- let pastaSelection = "2"
- let salladSelection = "3"
 
- if (foodSelection === "1"){
-  pizzaSelection = prompt (`Which type of pizza do you want to order?(please select the pizza of your choice with the corresponding number )
-  1 - Margherita
-  2 - Capriccosa
-  3 - Vegetariana`)
- } else if (foodSelection === "2"){
-  pastaSelection = prompt (`Which type of pasta do you want to order?(please select the pasta of your choice with the corresponding number
-    1 - Carbonara
-    2 - Cacio e pepe
-    3 - Bolognese`)
- } else if (foodSelection === "3"){
-  salladSelection = prompt (`Which type of sallad do you want to order?(please select the sallad of your choice with the corresponding number
-    1 - Caesar
-    2 - Scampi
-    3 - Vegetariana`)
- } 
 
+
+
+// Step 3 - Subtype choice
+
+let aSubtype = ""
+
+
+ if (foodSelection === "1") {selectedSubtype = prompt(`Which type of pizza do you want to order?🍕\n (please select the pizza of your choice with the corresponding number )
+  1 - Pizza Margharita
+  2 - Pizza Vegetariana
+  3 - Pasta Capriccosa`)
+
+ if (selectedSubtype === "1") {
+  aSubtype = "Pizza Margharita"
+} else if (selectedSubtype === "2") { 
+  aSubtype = "Pizza Vegetariana" 
+} else if (selectedSubtype === "3") { 
+  aSubtype = "Pizza Capriccosa" 
+} else {
+  alert("Number input is invalid!☹️ please return and select a valid number.")
+  exit(1)
+      }
+}
+
+
+if (foodSelection === "2") {selectedSubtype = prompt(`Which type of pasta do you want to order?🍝\n (please select the pasta of your choice with the corresponding number )
+ 1 - Pasta Fungi
+ 2 - Pasta Cacio e pepe
+ 3 - Pasta Bolognese`)
+
+if (selectedSubtype === "1") {
+ aSubtype = "Pasta Fungi"
+} else if (selectedSubtype === "2") { 
+ aSubtype = "Pasta Cacio e pepe" 
+} else if (selectedSubtype === "3") { 
+ aSubtype = "Pasta Bolognese" 
+} else {
+ alert("Number input is invalid!☹️ please return and select a valid number.")
+ exit(1)
+     }
+}
+
+if (foodSelection === "3") {selectedSubtype = prompt(`Which type of Sallad do you want to order?🥗\n(please select the sallad of your choice with the corresponding number )
+ 1 - Caesar Sallad
+ 2 - Scampi Sallad
+ 3 - Avocado Sallad`)
+
+if (selectedSubtype === "1") {
+ aSubtype = "Caesar Sallad"
+} else if (selectedSubtype === "2") { 
+ aSubtype = "Scampi Sallad" 
+} else if (selectedSubtype === "3") { 
+ aSubtype = "Avocado Sallad" 
+} else {
+ alert("Number input is invalid!☹️ please return and select a valid number.")
+ exit(1)
+     }
+}
+
+alert(`You choose ${aSubtype} If this is correct click 🆗`)
 
 
 // Step 4 - Age
