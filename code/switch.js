@@ -7,12 +7,12 @@ alert(
 
 /* Created a function that ensures the value is not null. If the input is null, the function reprompt until it gets the input from the user.
 */
-function getGuestName() {
+function welcomeGuest() {
   let guestName = prompt("What is your first name?");
   switch (true) {
     case !guestName:
 			// call the function itself and run the function again
-      getGuestName();
+      welcomeGuest();
       break;
     default:
       alert(`Welcome my dear guest ${guestName}! - Click 'OK' to order.`);
@@ -20,10 +20,10 @@ function getGuestName() {
 }
 
 // call the function to get the guestname
-getGuestName();
+welcomeGuest();
 
 // Step 2 - Food choice
-/* Create an object for menu, i.e. main food types and subtypes which contains arrays for each category.
+/* Create an object for menu, i.e. main food types and foodSubtypes which contains arrays for each category.
 */
 const menu = {
   food: ["Pizza", "Pasta", "Salad"],
@@ -34,7 +34,7 @@ const menu = {
 
 // Created a function that can be used for every single prompt about the type choice.
 
-function makePrompt(food) {
+function askFoodChoice(food) {
   let userInput = prompt(`What kind of ${food} would you like?
   Please enter the number of the ${food} type:
   1. ${menu[food][0]}
@@ -44,13 +44,13 @@ function makePrompt(food) {
 }
 
 /* Created a function that can be used for:
-1. Main food type & subtype prompt and alert;
+1. food choice & subtype prompt and alert;
 2. Looping through the prompt if the input is invalid, i.e. not 1 OR 2 OR 3 until the input is valid.
 3. return the value of food name.
 */
-function confirmSelection(food) {
-  let typeNumber = makePrompt(food);
-  switch (typeNumber) {
+function getFoodChoice(food) {
+  let foodChoiceNum = askFoodChoice(food);
+  switch (foodChoiceNum) {
     case "1":
       alert(`You've chosen ${menu[food][0]}! - Click 'OK' to procceed.`);
       return menu[food][0];
@@ -62,37 +62,37 @@ function confirmSelection(food) {
       return menu[food][2];
     default:
 			alert("Unfortunately, what you have chosen is not on our menu. - Click 'OK' to see the menu.")
-      return confirmSelection(food);
+      return getFoodChoice(food);
   }
 }
 
 // call the function to prompt the first round of food choice
-let mainFoodType = confirmSelection("food");
+let foodChoice = getFoodChoice("food");
 /* call the function again to prompt the second round of food choice. The first letter of mainfood is capitalised, hence we need to use the lowercase method to get the correct string that equals the property of menu object.
 */
-let order = confirmSelection(mainFoodType.toLowerCase());
+let foodSubtype = getFoodChoice(foodChoice.toLowerCase());
 
 // Step 4 - Age
 let age = prompt("Is this food for a child or an adult? Type your age:");
 
 // Created the price confirmation message that can be used in the adult and child sized situations.
-let priceConfirmation = `One adult sized ${order} will be prepared for you.
+let priceConfirmation = `One adult sized ${foodSubtype} will be prepared for you.
 That'll be 99kr.
 🚨Are you sure to order?
 1. Yes
 2. No`;
 
-// Declare the confirmOrder variable so the value of this variable can be reassigned within the function and further can be used in the order confirmation part.
-let confirmOrder;
+// Declare the orderConfirmation variable so the value of this variable can be reassigned within the function and further can be used in the order confirmation part.
+let orderConfirmation;
 /* Created a function to check the age and customise the prompt message based on the range of the age.
 */
 function ageCheck(age) {
   switch (true) {
     case Number(age) <= 123 && Number(age) >= 18:
-      confirmOrder = prompt(priceConfirmation);
+      orderConfirmation = prompt(priceConfirmation);
       break;
     case Number(age) >= 0 && Number(age) < 18:
-      confirmOrder = prompt(
+      orderConfirmation = prompt(
         priceConfirmation.replaceAll("adult", "child").replaceAll("99", "79")
       );
       break;
@@ -101,16 +101,16 @@ function ageCheck(age) {
       ageCheck(age);
   }
 }
-// call the function to perform the prompt about order confirmation
+// call the function to perform the prompt about foodSubtype confirmation
 ageCheck(age);
 
-// Step 5 - Order confirmation
+// Step 5 - order confirmation
 /* Switch conditions to check the status of order confirmation.
 */
-switch (confirmOrder) {
+switch (orderConfirmation) {
   case "1":
     alert(
-      `Thank you for your order! Your delicious ${order} will be ready in 10min. Bon Appétit 🍽️ !`
+      `Thank you for your order! Your delicious ${foodSubtype} will be ready in 10min. Bon Appétit 🍽️ !`
     );
     break;
   case "2":
