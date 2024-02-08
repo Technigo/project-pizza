@@ -130,3 +130,13 @@ if (confirmation === 1) {
 
 // Step 5 - Order confirmation
 // Your code goes here
+
+if (confirmation === 1) {
+  alert(
+    `Thank you for your order. Your ${foodName} will be prepared. See you soon! ⏲`
+  );
+} else if (confirmation === 2) {
+  alert(
+    `Order cancelled. If you change your mind, please revisit JavaScript Pizzeria. Bye 👋`
+  );
+}
