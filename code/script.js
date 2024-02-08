@@ -162,3 +162,17 @@ if (age >= 12) {
     1 - yes
     2 - no`)
 }
+
+
+// Step 5 - Order confirmation
+if (confirmation === "1") {
+  alert(
+    `Thank you for your order!
+  
+Your meal will be ready in 10 to 15 minutes`
+  )
+} else {
+  alert(
+    `I understand, you're welcome back some other time!`
+  )
+}
