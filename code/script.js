@@ -5,8 +5,6 @@ alert(
   let userName = prompt("Please enter your name:")
 alert("Hi, " + userName + "!")
 
---> byt ut let till const 
-
 let userChoice = prompt("Please enter the number corresponding to your choice:\n1. Pizza\n2. Pasta\n3. Salad")
 switch(userChoice) {
     case "1":
