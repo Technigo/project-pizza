@@ -12,7 +12,6 @@ let yourName = prompt("Please enter your name:", "Eliane");
 alert("Hello " + yourName + "!");
 
 // Step 2 - Food choice
-// Your code goes here
 
 let yourChoice = prompt(
   `Please choose between Pizza, Pasta or Salad.
@@ -29,6 +28,9 @@ if (yourChoice === "1") {
   foodName = "Pasta";
 } else if (yourChoice === "3") {
   foodName = "Salad";
+} else {
+  alert(`Invalid response.
+Please choose a number between 1 and 3.`);
 }
 
 if (foodName === "Pizza") {
@@ -101,9 +103,11 @@ if (foodName === "Pizza" && yourSubchoice === "1") {
 } else if (foodName === "Salad" && yourSubchoice === "3") {
   foodChoice = "Greek Salad";
   alert("Good choice! You've put a " + foodChoice + " in your basket.");
+} else {
+  alert(`Please choose a number between 1 and 3. Try again!`);
 }
 
-// Step
+// Step 4
 // This part defines size of the meal based on the age of the person ordering
 let yourAge = prompt("Please enter your age to define the size of your meal:");
 
@@ -130,10 +134,11 @@ if (yourAge <= 12) {
       (orderCost + 5) +
       " EUR! "
   );
+} else {
+  alert("Invalid response. Please start over!");
 }
 
 // Step 5 - Order confirmation
-// Your code goes here*/
 let confirmation = prompt("Do you want to place your order? Type yes or no");
 if (
   confirmation === "yes" ||

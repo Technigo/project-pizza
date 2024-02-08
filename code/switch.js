@@ -11,7 +11,7 @@ alert(`Hello ${yourName}!`);
 
 // Step 2 - Food choice
 
-const yourChoice = prompt(
+let yourChoice = prompt(
   `Please choose between Pizza, Pasta or Salad.
     Enter the number:
     1 for Pizza
@@ -19,13 +19,16 @@ const yourChoice = prompt(
     3 for Salad`
 );
 
-const foodName = "";
+let foodName = "";
 if (yourChoice === "1") {
   foodName = "Pizza";
 } else if (yourChoice === "2") {
   foodName = "Pasta";
 } else if (yourChoice === "3") {
   foodName = "Salad";
+} else {
+  alert(`Invalid response.
+Please choose a number between 1 and 3.`);
 }
 
 if (foodName === "Pizza") {
@@ -34,20 +37,11 @@ if (foodName === "Pizza") {
   alert(`You've chosen ${foodName}`);
 } else if (foodName === "Salad") {
   alert(`You've chosen ${foodName}`);
-} else {
-  alert(
-    `Please choose a number between 1 and 3:
-      1 for Pizza
-      2 for Pasta
-      3 for Salad`
-  );
 }
-// exit!!
 
 // Step 3 - Subtype choice
-// Your code goes here
 
-const yourSubchoice = "";
+let yourSubchoice;
 if (foodName === "Pizza") {
   yourSubchoice = prompt(
     `You can now choose between:
@@ -71,7 +65,7 @@ if (foodName === "Pizza") {
   );
 }
 
-const foodChoice = "";
+let foodChoice;
 if (foodName === "Pizza" && yourSubchoice === "1") {
   foodChoice = "Pizza Margherita";
   alert(`Good choice! You've put a ${foodChoice} in your basket.`);
@@ -99,16 +93,18 @@ if (foodName === "Pizza" && yourSubchoice === "1") {
 } else if (foodName === "Salad" && yourSubchoice === "3") {
   foodChoice = "Greek Salad";
   alert(`Good choice! You've put a ${foodChoice} in your basket.`);
+} else {
+  alert(`Please choose a number between 1 and 3. Try again!`);
 }
 
-// Step
+// Step 4
 // This part defines size of the meal based on the age of the person ordering
-const yourAge = prompt(
+let yourAge = prompt(
   `Please enter your age to define the size of your meal.
-  Children under the age of 13 get a child sized meal.`
+Children under the age of 13 get a child sized meal.`
 );
 
-const orderCost = 10;
+let orderCost = 10;
 if (yourAge <= 12) {
   yourAge = "child size";
   alert(`
@@ -116,10 +112,12 @@ if (yourAge <= 12) {
 } else if (yourAge > 12) {
   yourAge = "regular size";
   alert(`You ordered a ${yourAge} ${foodChoice} for ${orderCost + 5} EUR!`);
+} else {
+  alert("Invalid response. Please start over!");
 }
 
 // Step 5 - Order confirmation
-const confirmation = prompt("Do you want to place your order? Type yes or no");
+let confirmation = prompt("Do you want to place your order? Type yes or no");
 if (
   confirmation === "yes" ||
   confirmation === "Yes" ||
