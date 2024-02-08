@@ -1,45 +1,40 @@
 
+console.log("Pizzeria order")
+
 alert(
-  `Welcome to Pizzeria Estockholmo. Ready to order? - Click 'OK' to begin.`)
+  "Welcome to Pizzeria. Ready to order? - Click 'OK' to begin.")
 
-  let userName = prompt("Please enter your name:")
-alert("Hi, " + userName + "!")
+const userName = prompt("Please enter your name:")
 
-let userChoice = prompt("Please enter the number corresponding to your choice:\n1. Pizza\n2. Pasta\n3. Salad")
-switch(userChoice) {
-    case "1":
-        alert("You have chosen Pizza!")
-        break;
-    case "2":
-        alert("You have chosen Pasta!")
-        break;
-    case "3":
-        alert("You have chosen Salad!")
-        break;
-    default:
-        alert("Invalid choice. Please enter 1, 2, or 3.")
-}
+console.log(userName)
 
-let customerType = prompt ("Is the order for a child or an adult?")
+alert (`Hi ${userName}! Get ready to order! `)
 
-if (customerType === "child") {
-  alert("Your price will be 5€")
-} else if (customerType ==="adult") {
-  alert("Your price will be 10€")
+const userChoice = parseInt(
+  prompt(`
+Select your choice:
+1 - Pizza
+2 - Pasta
+3 - Salad
+Please enter the number of your choice
+`)
+)
+
+console.log("user choice", userChoice, typeof userChoice)
+
+let selectedMeal = ""
+
+if (userChoice === 1) {
+  selectedMeal = "Pizza"
+} else if (userChoice === 2) {
+  selectedMeal = "Pasta"
+} else if (userChoice === 3) {
+  selectedMeal = "Salad"
 } else {
-  alert ("Not valid, please try again")
+  alert("Invaild choice, please start again")
 }
 
-let order = "You have chosen " + (userChoice === "1" ? "Pizza" : userChoice === "2" ? "Pasta" : "Salad") +
-  " ,your price will be  " + (customerType === "child" ? "5€" : "10€") +
-  ". Please let us know if you want to place this order? Type 'yes' to confirm, 'no' to cancel.";
+console.log("selected meal", selectedMeal)
+alert(`You chose ${selectedMeal}`)
 
-let confirmOrder = prompt(order);
 
-if (confirmOrder.toLowerCase() === "yes") {
-    alert("Thank you " + userName + "! Your " + (userChoice === "1" ? "Pizza" : userChoice === "2" ? "Pasta" : "Salad") + " will be made.");
-} else if (confirmOrder.toLowerCase() === "no") {
-    alert("Thanks for visiting Pizzeria Estockholmo. See you soon!");
-} else {
-    alert("Please try again.");
-}
