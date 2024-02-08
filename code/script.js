@@ -58,7 +58,7 @@ if("1"===food){
   foodTyp = prompt (`
    Choose type of pizza🍕 
 
-   1 - pizza margarira
+   1 - pizza margherita
    2 - kebab
    3 - capricciosa
 
