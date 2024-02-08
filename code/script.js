@@ -1,12 +1,11 @@
 // Start here
 
 // Step 1 - Welcome and introduction
-alert(
-  `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
-);
+alert(`Welcome to our Yia's Pizzeria. Ready to Start? - Click 'OK' to begin.`);
 let firstName = prompt("What is your name?");
-alert("Hi " + firstName + "!");
-
+// alert("Hi " + firstName + "!");
+alert(`Hello ${firstName}!`);
+console.log(firstName);
 // Step 2 - Food choice
 let orderFood = prompt(
   "What type of food would you like to order? \nEnter your choice:\n1 - Pizza\n2 - Pasta\n3 - Salad"
@@ -45,6 +44,7 @@ if (foodType === "Pizza") {
       break;
     default:
       subType = "Unknown";
+    // alert(Please select the pizza type again!);
   }
 } else if (foodType === "Pasta") {
   subType = prompt(
@@ -91,27 +91,29 @@ alert("You have chosen " + subType + "!");
 
 // Step 4 - Age
 let age = prompt("Is this food for an adult or a child? Type your age:");
-let confirmation;
+let customerAge;
 if (age < 18) {
-  confirmation = prompt(
+  customerAge = prompt(
     "One child sized " +
       subType +
+      foodType +
       " will be prepared for you. That'll be €10. Are you sure you want to order this? \nEnter a number to confirm: \n1 - Yes\n2 - No"
   );
 }
+// Step 5 - Order confirmation
 
 if (age >= 18) {
-  confirmation = prompt(
+  customerAge = prompt(
     "One adult sized " +
       subType +
+      foodType +
       " will be prepared for you. That'll be €15. Are you sure you want to order this? \nEnter a number to confirm: \n1 - Yes\n2 - No"
   );
 }
-if (confirmation === "1") {
+if (customerAge === "1") {
   alert(
     "Thank you for your order! Your delicious meal will be prepared. See you soon!👋"
   );
 } else {
   alert("Order cancelled. Please order again if you change your mind.🙏");
 }
-// Step 5 - Order confirmation
