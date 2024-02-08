@@ -117,3 +117,48 @@ if (selectedFood === "delicious pizza") {
 }
 
 alert(`I see you want to order a ${selectedFood} ${selectedSubType}`)
+
+
+// Step 4 - Age
+// Your code goes here
+
+let portionSize = ""
+let cost = ""
+let confirmation = ""
+let age = prompt(
+  `We serve both adult portion and child sized portion.
+
+Choose your preffered portion size
+by entering your age:`
+)
+
+if (age >= 12) {
+  portionSize = "adult portion"
+  cost = "10"
+  confirmation = prompt(
+    `So,  ${nameInput}, you have selected an ${portionSize} ${selectedFood}, ${selectedSubType}.
+  That will be ${cost} euros.
+
+  Shall I forward your order to the chef?
+
+    Enter a number to confirm:
+    1 - yes
+    2 - no`)
+
+} else if (age === "") {
+  alert(`Please redo and type in your age`)
+  exit(1)
+
+} else if (age < 12) {
+  portionSize = "child portion"
+  cost = "6"
+  confirmation = prompt(
+    `So, ${nameInput}, you have selected a ${portionSize} ${selectedFood}, ${selectedSubType}.
+  That will be ${cost} euros.
+
+  Shall I forward your order to the chef?
+
+    Enter a number to confirm:
+    1 - yes
+    2 - no`)
+}
