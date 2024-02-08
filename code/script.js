@@ -8,7 +8,7 @@ alert(
 /*Variable userName collecting & storing the answer from the prompt*/
 const userName = prompt(`Please type your name`);
 
-console.log(userName);
+console.log("Username", userName);
 //An alert saying Hi and whatever the userName is
 alert(`Hi, ${userName}! 👋`);
 
@@ -21,7 +21,9 @@ const foodChoice =
  3 - Salad 🥗
  `);
 
-console.log(foodChoice);
+//Testing to print it out
+console.log("Food choice", foodChoice);
+
 /*The variable selectedFood will get the value based on the user's input*/
 let selectedFood = "";
 
@@ -41,7 +43,7 @@ if (foodChoice === "1") {
 alert(`You chose ${selectedFood}. Nice choice ${userName} 😋`);
 
 //Testing to print it out
-console.log(selectedFood);
+console.log("Selected Food", selectedFood);
 
 // Step 3 - Subtype choice
 /*We want to choose a subtype for the selected food type. Subtype options specific to that food type. Promt method to get user's input. Determine the chosen subtype & provide feedback with alert-method*/
@@ -69,7 +71,7 @@ if (selectedFood === "Pizza") {
 }
 
 //Testing to print it out
-console.log(subtypeChoice);
+console.log("Subtype Choice", subtypeChoice);
 
 let selectedSubtype = "";
 
@@ -111,14 +113,14 @@ if (selectedFood === "Pizza") {
 alert(`You have chosen ${selectedSubtype} 😋`);
 
 //Testing to print it out
-console.log(selectedSubtype);
+console.log("Selected Subtype", selectedSubtype);
 
 // Step 4 - Age
 /*Child or adult, alert displaying order message and associated cost. User's confirmation should be obtained using the prompt method. Adult age is above or equal to 18*/
 
 const age = prompt(`Is this food for a child or an adult? Type your age:`);
 
-console.log(age);
+console.log("age", age);
 
 let orderMessage = "";
 
@@ -141,5 +143,21 @@ if (age < 18) {
   exit(1);
 }
 
+console.log("Order message", orderMessage);
+
 // Step 5 - Order confirmation
-// Your code goes here
+/*If orderMessage is confirmed with "1", then a confirmation message, if not (with "2"), another message*/
+
+if (orderMessage === "1") {
+  alert(
+    `Your order has been confirmed and we will start preparing your ${selectedSubtype} 👩‍🍳. See you soon! `
+  );
+} else if (orderMessage === "2") {
+  alert(
+    `Sorry to hear you didn't want to order from us. You are most welcome back whenever you feel like pizza, pasta or salad 🥰`
+  );
+} else {
+  alert(
+    `"You typed an invalid choice, please start again and select the option 1 or 2 😉`
+  );
+}
