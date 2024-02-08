@@ -6,6 +6,7 @@ alert(
 )
 
 //b)
+
 const yourName = prompt(`What's your name? 😊`)
 
 alert(
@@ -41,8 +42,6 @@ alert(`You choose ${selectedFood}, Yummy!😃`)
 
 
 
-
-
 // Step 3 - Subtype choice
 
 let aSubtype = ""
@@ -64,7 +63,6 @@ let aSubtype = ""
   exit(1)
       }
 }
-
 
 if (foodSelection === "2") {selectedSubtype = prompt(`Which type of pasta do you want to order?🍝\n (please select the pasta of your choice with the corresponding number )
  1 - Pasta Fungi
@@ -100,11 +98,22 @@ if (selectedSubtype === "1") {
      }
 }
 
-alert(`You choose ${aSubtype} If this is correct click 🆗`)
+alert(`You choose ${aSubtype}😃 If this is correct click 🆗`)
+
+
 
 
 // Step 4 - Age
-// Your code goes here
+
+let age = prompt (`Is the meal intended for an adult or child?😊\n(Please type in your age)`)
+
+if (age >= 15 ) { alert ("Got it, a regular sized portion it is!🌟") }
+  else if ( age <= 15 ){ alert ("Understood, we'll fix a smaller portion for you!☺️")
+} else {
+alert (`Input incorrect, please enter a valid number.`)
+}
+  
+
 
 
 
