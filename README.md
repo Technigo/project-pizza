@@ -1,11 +1,14 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This is my first play with JavaScript and it´s an easy command for food ordering.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I had some issue with the age integration part as I wanted to be connected with the zise and the final outcome, to have a pizza size based on the age.
+But after a coding sesion with Antonella, I had an idea how to do it.
+However, I did had some challenges with defining different options, and give an attribute correctly.
+I did use chat GPT for helping me by naming variables properly and for a better structure. 
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+
