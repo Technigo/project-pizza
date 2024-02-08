@@ -53,3 +53,67 @@ if (foodChoice === "1") {
 }
 
 alert(`I see! One ${selectedFood} coming up.`)
+
+// Step 3 - Subtype choice
+// Your code goes here
+
+
+let subType = ""
+let selectedSubType = ""
+
+if (selectedFood === "delicious pizza") {
+  subType = prompt(
+    `What kind of pizza would you prefer?
+    1 - Calzone
+    2 - Funghi
+    3 - Quatro Staggioni`
+  )
+  if (subType === "1") {
+    selectedSubType = "Calzone"
+  } else if (subType === "2") {
+    selectedSubType = "Funghi"
+  } else if (subType === "3") {
+    selectedSubType = "Quatro Staggioni"
+  } else {
+    alert("Choose a number to make an order")
+    exit(1)
+  }
+} else if (selectedFood === "pasta") {
+  subType = prompt(
+    `What kind of pasta would you prefer?
+    1 - Carbonara
+    2 - Bolognese
+    3 - Tomato basilica`
+  )
+  if (subType === "1") {
+    selectedSubType = "Carbonara"
+  } else if (subType === "2") {
+    selectedSubType = "Bolognese"
+  } else if (subType === "3") {
+    selectedSubType = "tomato basilica"
+  } else {
+    alert("Choose a number to make an order")
+    exit(1)
+  }
+} else if (selectedFood === "salad") {
+  subType = prompt(
+    `What kind of salad would you prefer?
+    1 - Chicken
+    2 - Avocado
+    3 - Shrimp`
+  )
+  if (subType === "1") {
+    selectedSubType = "with chicken"
+  } else if (subType === "2") {
+    selectedSubType = "with avocado"
+  } else if (subType === "3") {
+    selectedSubType = "with shrimps"
+  } else {
+    alert("Choose a number to make an order")
+    exit(1)
+  }
+} else {
+  alert(`Please try again, choose a number`)
+}
+
+alert(`I see you want to order a ${selectedFood} ${selectedSubType}`)
