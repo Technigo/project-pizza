@@ -3,17 +3,28 @@
 // Step 1 - Welcome and introduction
 // Your code goes here
 alert(
-  `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
+  `Welcome to the Cheeziest Pizzeria. 
+Ready to order some delicious food?
+  
+  Click 'OK' to begin.`
 )
-
 // Step 2 - Food choice
 // Your code goes here
 
-// Step 3 - Subtype choice
-// Your code goes here
 
-// Step 4 - Age
-// Your code goes here
+const nameInput = prompt(
+  `What is your name?`
+)
 
-// Step 5 - Order confirmation
-// Your code goes here
+if (nameInput === "") {
+  alert(
+    `Please reload the page, write your name to procees`)
+  exit(1)
+} else if (nameInput != null) {
+  alert(
+    `Welcome ${nameInput}!
+    
+Let's begin.
+We'll make sure to fill your belly!`
+  )
+}
