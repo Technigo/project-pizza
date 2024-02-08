@@ -6,15 +6,21 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #0026ff;
+  background-image: url(pablo-pizza.jpg);
+  background-size: cover;
+  width: fit-content;
+  height: fit-content;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
+  padding-top: 50px;;
 }
 
-p {
+
+h1, p {
   font-size: 1.5em;
+  text-align: center;
 }

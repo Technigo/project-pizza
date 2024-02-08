@@ -16,6 +16,7 @@ alert (`Hello ${userName}! Let´s feed you!`)
 
 const foodChoice = parseInt(
   prompt (`Select your favorite dish:
+
   1.Burger
   2.Pizza 
   3.Salad
@@ -52,10 +53,12 @@ let foodNames = []
 switch (selectedFood) {
   case "Burger":
     choiceSlot = parseInt (
-      prompt(`Please enter your burger preference 
+      prompt(`Enter your burger preference 
+
         1.Cheeseburger
         2.Chicken Burger
         3.Vegan Burger 
+
         Please choose a number:`)
     )
       foodNames = ["Cheesburger", "Chicken Burger", "Vegan Burger"]
@@ -63,10 +66,12 @@ switch (selectedFood) {
 
   case "Pizza":
    choiceSlot = parseInt (
-    prompt(`Please enter your pizza preference
+    prompt(`Enter your pizza preference
+
       1.Peperoni Pizza
       2.Greek Pizza
       3.New Haven Pizza
+
       Please choose a number:`)
   )
     foodNames = ["Peperoni Pizza", "Greek Pizza", "New Haven Pizza"]
@@ -74,16 +79,18 @@ switch (selectedFood) {
 
     case "Salad":
     choiceSlot = parseInt (
-      prompt(`Please enter your salad preference
+      prompt(`Enter your salad preference
+
       1. Crunchy Munchy Salad
       2. Leafy Green Salad
       3. Zesty Zoodle Zinger Salad
+
           Please choose a number:`)
       )
       foodNames = ["Crunchy Munchy Salad", "Leafy Green Salad", "Zezty Zoodle Zinger Salad"]
       break
       default:
-      alert("You choose ${foodNames}")
+      alert("That item is not in our list")
       exit(1)
     }
 
