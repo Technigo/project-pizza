@@ -5,139 +5,133 @@ alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
 
-let yourName = prompt("What is your name?");
+const yourName = prompt("What is your name?");
 
 alert(`Welcome, ${yourName}!`);
 
+
+
 // Step 2 - Food choice
-const menuSelect = prompt(
-  `What would you like to order?
+const menuSelect = parseInt(
+  prompt(`
+  What would you like to order?
     Enter the number of your choice:
     1. Pizza  
     2. Pasta 
     3. Salad
     `
+  )
 );
 
-// let selectedItem = ""
+let selectedItem
 
-let selectedItem = ""
-
-if (menuSelect === "1") {
+if (menuSelect === 1) {
   selectedItem = "pizza";
-} else if (menuSelect === "2") {
+} else if (menuSelect === 2) {
   selectedItem = "pasta";
 } else {
   selectedItem = "salad";
 }
 
-alert(`You chose ${selectedItem}!`)
-
+alert(`You chose ${selectedItem}.`)
 
 // Step 3 - Subtype choice
-let pizzaChoice = ""
-let pastaChoice = ""
-let saladChoice = ""
-let subItem = ""
+let subTypePizza
+let subTypePasta 
+let subTypeSalad
 
-if (menuSelect === "1") {
-  pizzaChoice = prompt(
-    `Select the type of pizza:
+if (selectedItem === "pizza") {
+  subTypePizza = parseInt(
+    prompt(`
+    Select the type of pizza:
     Enter the number of your choice:
     1. Hawaiian
     2. Margherita
     3. Pepperoni
     `
-  );
-} 
-else if (menuSelect === "2") {
-   pastaChoice = prompt(
-    `Select the type of pasta:
+    ) 
+  )
+} else if (selectedItem === "pasta") {
+  subTypePasta = parseInt(
+    prompt(`
+    Select the type of pasta:
     Enter the number of your choice:
     1. Spaghetti alla Puttanesca
     2. Carbonara
     3. Pesto alla Genovese
     `
-  );
-} else { 
-    saladChoice = prompt(
-    `Select the type of salad:
+    )
+  )
+} else {
+  subTypeSalad = parseInt(
+    prompt(`
+    Select the type of salad:
     Enter the number of your choice:
     1. Caprese
     2. Insalata di Riso
     3. Panzanella
     `
-  );
-}
+    )
+  )
+};
 
-if (pizzaChoice === "1") {
-  subItem = "Hawaiian";
-} else if (pizzaChoice === "2") {
-  subItem = "Margherita"; 
-} else if (pizzaChoice === "3") {
-  subItem = "Pepperoni"; 
-} else if (pastaChoice === "1") {
-  subItem = "Spaghetti"; 
-} else if (pastaChoice === "2") {
-  subItem = "Carbonara"; 
-} else if (pastaChoice === "3") {
-  subItem = "Pesto"; 
-} else if (saladChoice === "1") {
-  subItem = "Caprese"; 
-} else if (saladChoice === "2") {
-  subItem = "Insalata"; 
+
+if (subTypePizza === 1) {
+  subTypeName = "Hawaiian";
+} else if (subTypePizza === 2) {
+  subTypeName = "Margherita";
+} else if (subTypePizza === 3) {
+  subTypeName = "Pepperoni";
+} else if (subTypePasta === 1) {
+  subTypeName = "Spaghetti alla Puttanesca";
+} else if (subTypePasta === 2) {
+  subTypeName = "Carbonara";
+} else if (subTypePasta === 3) {
+  subTypeName = "Pesto alla Genovese";
+} else if (subTypeSalad === 1) {
+  subTypeName = "Caprese";
+} else if (subTypeSalad === 2) {
+  subTypeName = "Insalata di Riso";
 } else {
-  subItem = "Panzanella"; 
+  subTypeName = "Panzanella";
 }
 
-if (pizzaChoice === "1") {
-  alert("You chose Hawaiian!");
-} else if (pizzaChoice === "2") {
-  alert("You chose Margherita!");
-} else if (pizzaChoice === "3") {
-  alert("You chose Pepperoni!") 
-} else if (pastaChoice === "1") {
-  alert("You chose Spaghetti alla Puttanesca!");
-} else if (pastaChoice === "2") {
-  alert("You chose Carbonara!");
-} else if (pastaChoice === "3") {
-  alert("You chose Pesto alla Genovese!"); 
-} else if (saladChoice === "1") {
-  alert("You chose Caprese!"); 
-} else if (saladChoice === "2") {
-  alert("You chose Insalata di Riso!");
-} else {
-  alert("You chose Panzanella!");
-}
+console.log("sub type name", subTypeName)
+alert(`You chose ${subTypeName}`)
 
 
-// Step 4 - Age
-let age = prompt("Is the order for a child or an adult? Enter your age:")
+// // Step 4 - Age
+const age = prompt("Is the order for a child or an adult? Enter your age:")
 
-let confirm = ""
+let confirm
 
 if (age >= 13) {
-  confirm = prompt(
-    `One adult size ${subItem} will be $20. 
+  confirm = parseInt(
+    prompt(`
+    One adult size ${subTypeName} ${selectedItem} will be $20. 
      Do you confirm this order? Enter a number:
      1. Yes
      2. No
      `
-    );
+    )
+  )
 } else {
-  confirm = prompt(
-    `One child size ${subItem} will be $10.
+  confirm = parseInt(
+    prompt(`
+    One child size ${subTypeName} ${selectedItem} will be $10.
     Do you confirm this order? Enter a number:
     1. Yes
     2. No
     `
-  );
+    )
+  )
 }
 
+console.log("age and confirmation", age, confirm)
 
 // Step 5 - Order confirmation
-if (confirm === "1" ) {
-  alert("Thank you for your order, enjoy! ");
+if (confirm === 1 ) {
+  alert("Thank you for your order, enjoy!");
 } else {
   alert("No worries, see you soon!")
 }

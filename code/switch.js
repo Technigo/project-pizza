@@ -31,6 +31,7 @@ switch (menuSelect) {
     break
   default:
     alert("Please enter a value between 1 and 3.")
+    exit(1)
 };
 
 alert(`You chose ${selectedItem}!`)
@@ -73,5 +74,6 @@ switch (menuSelect) {
     );
     break
   default:
-    alert("Please enter a value between 1 and 3.")
+    alert("Please enter a value between 1 and 3.");
 }
+
