@@ -28,3 +28,28 @@ Let's begin.
 We'll make sure to fill your belly!`
   )
 }
+
+
+const foodChoice = prompt(
+  `What would you like to order? 
+  
+  Please choose a number from our meny:
+  1 - Delicious Pizza
+  2 - Pasta
+  3 - Salad`
+)
+
+let selectedFood = ""
+
+if (foodChoice === "1") {
+  selectedFood = "delicious pizza"
+} else if (foodChoice === "2") {
+  selectedFood = "pasta"
+} else if (foodChoice === "3") {
+  selectedFood = "salad"
+} else {
+  alert("Choose a number to make an order")
+  exit(1)
+}
+
+alert(`I see! One ${selectedFood} coming up.`)
