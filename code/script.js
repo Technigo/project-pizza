@@ -110,12 +110,12 @@ alert(`You have selected ${subtypeDish}! Click 'OK' to continue.`)
 // Step 4 - Age
 // Your code goes here
 
-let age = prompt(`How old are you?`)
+let age = prompt(`Is this order for a child or an adult? Please enter your age:`)
 if (age>=18 && age<=120) {
-  alert("You will be served an adult portion, that will be €15.")
+  alert("You will be served an adult portion, that will be 150 SEK.")
 }
 else if (age>=0 && age<18) {
-  alert("You will be served a children's portion, that will be €7.50.")
+  alert("You will be served a children's portion, that will be 75 SEK.")
 }
 else {
   alert("Invalid choice, please try again!")
@@ -125,6 +125,8 @@ else {
 // Step 5 - Order confirmation
 // Your code goes here
 
-prompt(`You have ordered a ${subtypeDish} ${selectedDish} 
-for a ${age} year old person. Please confirm your order by typing 'Yes' or 'No'`)
+prompt(`You have ordered a ${subtypeDish} ${selectedDish} for a ${age} year old person. 
+Please confirm your order by typing the corresponding number:
+1 - 'Yes' 
+2 - 'No'`)
 
