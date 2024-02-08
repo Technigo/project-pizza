@@ -51,72 +51,86 @@ console.log("Food Category", foodCategory, categoryName);
 
 let foodName;
 
-if (foodCategory === 1) {
-  const pizzaType = parseInt(
-    prompt(`What kind of pizza would you like?
-  1 - Margherita
-  2 - Salame Piccante
-  3 - Verdure
-  Please enter the number of your choice`)
-  );
-  if (pizzaType === 1) {
-    foodName = "Pizza Margherita";
-  } else if (pizzaType === 2) {
-    foodName = "Pizza Salame Piccante";
-  } else if (pizzaType === 3) {
-    foodName = "Pizza Verdure";
-  } else {
-    alert(
-      "Mamma Mia! This number is not in our menu. Please start again and select a valid option. Arrivederci! 👋"
+switch (foodCategory) {
+  case 1:
+    const pizzaType = parseInt(
+      prompt(`What kind of pizza would you like?
+    1 - Pizza Margherita
+    2 - Salame Piccante
+    3 - Pizza Verdure
+    Please enter the number of your choice`)
     );
-    exit(1);
-  }
-} else if (foodCategory === 2) {
-  const pastaType = parseInt(
-    prompt(`What kind of pasta would you like?
+    switch (pizzaType) {
+      case 1:
+        foodName = "Pizza Margherita";
+        break;
+      case 2:
+        foodName = "Salame Piccante";
+        break;
+      case 3:
+        foodName = "Pizza Verdure";
+        break;
+      default:
+        alert(
+          "Mamma Mia! This number is not in our menu. Please start again and select a valid option. Arrivederci! 👋"
+        );
+        exit(1);
+    }
+  case 2:
+    const pastaType = parseInt(
+      prompt(`What kind of pasta would you like?
   1 - Spaghetti Bolognese
   2 - Fettucine Alfredo
   3 - Pasta Arrabbiata
   Please enter the number of your choice`)
-  );
-  if (pastaType === 1) {
-    foodName = "Spaghetti Bolognese";
-  } else if (pastaType === 2) {
-    foodName = "Fettucine Alfredo";
-  } else if (pastaType === 3) {
-    foodName = "Pasta Arrabbiata";
-  } else {
-    alert(
-      "Mamma Mia! This number is not in our menu. Please start again and select a valid option. Arrivederci! 👋"
     );
-    exit(1);
-  }
-} else if (foodCategory === 3) {
-  const saladType = parseInt(
-    prompt(`What kind of salad would you like?
-  1 - Insalata Caprese
-  2 - Salata Panzanella
-  3 - Insalata di Polpo
-  Please enter the number of your choice`)
-  );
-  if (saladType === 1) {
-    foodName = "Insalata Caprese";
-  } else if (saladType === 2) {
-    foodName = "Salata Panzanella";
-  } else if (saladType === 3) {
-    foodName = "Insalata di Polpo";
-  } else {
-    alert(
-      "Mamma Mia! This number is not in our menu. Please start again and select a valid option. Arrivederci! 👋"
+    switch (pastaType) {
+      case 1:
+        foodName = "Spaghetti Bolognese";
+        break;
+      case 2:
+        foodName = "Fettucine Alfredo";
+        break;
+      case 3:
+        foodName = "Pasta Arrabiata";
+        break;
+      default:
+        alert(
+          "Mamma Mia! This number is not in our menu. Please start again and select a valid option. Arrivederci! 👋"
+        );
+        exit(1);
+    }
+  case 3:
+    const saladType = parseInt(
+      prompt(`What kind of salad would you like?
+    1 - Insalata Caprese
+    2 - Salata Panzanella
+    3 - Insalata di Polpo
+    Please enter the number of your choice`)
     );
-  }
+    switch (saladType) {
+      case 1:
+        foodName = "Insalata Caprese";
+        break;
+      case 2:
+        foodName = "Salata Panzanella";
+        break;
+      case 3:
+        foodName = "Insalata di Polpa";
+        break;
+      default:
+        alert(
+          "Mamma Mia! This number is not in our menu. Please start again and select a valid option. Arrivederci! 👋"
+        );
+        exit(1);
+    }
 }
 alert(`You selected ${foodName}!`);
 
 // Step 4 - Age
 // Your code goes here
 
-const age = prompt(`Is the meal intended for an adult?
+const age = prompt(`Is the meal intended for a child or an adult?
 Please enter your age`);
 if (age <= 12) {
   alert(`A child portion of ${foodName}, that'll be 10 €.`);
