@@ -25,24 +25,56 @@ prompt (`
   Enter the number of your choice to proceed:`)
 )
 
-console.log ("food choice", foodChoice)
 
 if (foodChoice === 1)
-  alert ((`Great choice, ${userName}, you'll now get the opportunity to modify your Pizza.`)
+  alert ((`Great choice, ${userName}, you'll now get the opportunity to pimp your Pizza.`)
 )
 
 else if (foodChoice === 2)
-  alert (`Great choice, ${userName}, you'll now get the opportunity to 
-  modify your Pan Pizza.`)
+  alert (`Great choice, ${userName}. You'll now get the opportunity to pimp your Pan Pizza.`)
 
 else if (foodChoice === 3)
   alert (`Great choice, ${userName}, you'll now get the opportunity to 
-  modify your Pasta.`) 
+  pimp your Pasta.`) 
 
 console.log ("plate number", foodChoice)
 
 // Step 3 - Subtype choice
 // Your code goes here
+
+
+//let modifyOptions = parseInt 
+//I struggled a lot with finding a variable for the following prompts
+//til I realised it was absolutely unneccesary
+//I understand that the JS runs all statements until the end
+
+if (foodChoice === 1)
+prompt((`
+Let's pimp your Pizza with:
+1 - Extra cheese
+2 - Extra everything
+3 - Extra oregano`
+))
+
+else if (foodChoice === 2)
+prompt((`
+Let's pimp your Pan Pizza with:
+1 - Extra crusty border
+2 - Extra hot sauce
+3 - Extra olives
+`))
+
+
+else if (foodChoice === 3)
+prompt((`
+Let's pimp your Pasta with:
+1 - Extra parmesan
+2 - Extra salsiccia
+3 - Extra gambas
+`))
+
+alert ((`Nice one!`))
+
 
 
 // Step 4 - Age
