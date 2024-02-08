@@ -139,4 +139,15 @@ const orderConfirmation = prompt(`Do you want to place the order?
 console.log(`Want to finish the order (1=Yes 2=No): ${orderConfirmation}`);
 
 // Step 5 - Order confirmation
-// Your code goes here
+
+if (orderConfirmation === "1") {
+   alert(`Thank you for your order, your order will be ready in 20 min. 
+  Bon appetit!`);
+} else if (orderConfirmation === "2") {
+   alert(`No problem, welcome back another time.
+  Have a good day!`);
+} else {
+   alert(`We didn't get any confirmation if you wanted to place the order.
+Please start over if you still want to order.`);
+   exit(1);
+}
