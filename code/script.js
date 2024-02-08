@@ -144,16 +144,15 @@ if (age <= 10) {
   
   This is your order:
   1 x ${foodSubtype} (child size)
-  Total price 10€
+  Total price 15€
 
-  Is this correct? 
-  Confirm your order or go back to the start to make changes.
-  1 - Confirm
-  2 - Make changes
+  Do you want to confirm you order? 
+  1 - Yes 👍🏼
+  2 - No 👎🏼
   `);
 
   //If age is above 10 dish size and price should be for adult.
-} else {
+} else if (age > 10) {
   confirmation = prompt(`Thank you ${yourName}!
   
   This is your order:
@@ -164,6 +163,10 @@ if (age <= 10) {
   1 - Yes 👍🏼
   2 - No 👎🏼
   `);
+} else {
+  alert(
+    `I'm afraid that's not an option. Please start again and select one of the options (1-2). ❌`
+  );
 }
 
 // Step 5 - Order confirmation
