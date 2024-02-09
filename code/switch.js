@@ -30,15 +30,15 @@ Are you ready to order?`);
 	// using switch for simple values.
 	switch (foodChoice) {
 		case `1`:
-			foodChoice = `pizza`;
+			foodChoice = `Pizza`;
 			alert(`You have chosen pizza. Can't go wrong with pizza.`);
 			break;
 		case `2`:
-			foodChoice = `pasta`;
+			foodChoice = `Pasta`;
 			alert(`You have chosen pasta. Delicious al dente pasta for you.`);
 			break;
 		case `3`:
-			foodChoice = `salad`;
+			foodChoice = `Salad`;
 			alert(`You have chosen salad. A light meal coming up for you.`);
 			break;
 		case null:
@@ -70,7 +70,7 @@ Are you ready to order?`);
 	// continue using switch.
 	let subtypeChoice;
 	switch (foodChoice) {
-		case `pizza`:
+		case `Pizza`:
 			subtypeChoice = prompt(
 				`We have three different type of pizza to chose from. Which one would you like, ${username}?
       
@@ -101,7 +101,7 @@ Are you ready to order?`);
 			}
 			break;
 
-		case `pasta`:
+		case `Pasta`:
 			subtypeChoice = prompt(
 				`What kind of pasta dish would you like? Here are your options, ${username}:
         
@@ -132,7 +132,7 @@ Are you ready to order?`);
 			}
 			break;
 
-		case `salad`:
+		case `Salad`:
 			subtypeChoice = prompt(
 				`What kind of salad would you like, ${username}? These are your options:
         
@@ -174,13 +174,13 @@ Maybe you are eligable for a discount 😉`)
 	);
 
 	switch (foodChoice) {
-		case "pizza":
+		case "Pizza":
 			price = 20;
 			break;
-		case "pasta":
+		case "Pasta":
 			price = 15;
 			break;
-		case "salad":
+		case "Salad":
 			price = 12;
 			break;
 		default:
@@ -216,7 +216,7 @@ Maybe you are eligable for a discount 😉`)
 		case `YES`:
 			const orderSummary = `Amazing! Please, see your order confirmation below.
     
-    Order Summary #123456:\n\nName: ${username}\nFood: ${foodChoice}\nType: ${subtypeChoice}\nPrice: ${price} Euro\nDiscount: ${discountpercentage}%\nTotal: ${discountedPrice} Euro
+    Order Summary #123456:\n\nName: ${username}\nFood: ${foodChoice}\nType: ${subtypeChoice}\nPrice: ${price} EUR\nDiscount: ${discountpercentage}%\nTotal: ${discountedPrice} EUR
     
     Thank you ${username} for choosing Nathalie's Pizzeria.`;
 			alert(orderSummary);
@@ -230,7 +230,11 @@ Maybe you are eligable for a discount 😉`)
 			alert(`Don't feel like ${foodChoice}? No problem. Come visit us again`);
 			break;
 		default:
-			alert(orderSummary);
+			alert(`Amazing! Please, see your order confirmation below.
+    
+      Order Summary #123456:\n\nName: ${username}\nFood: ${foodChoice}\nType: ${subtypeChoice}\nPrice: ${price} EUR\nDiscount: ${discountpercentage}%\nTotal: ${discountedPrice} EUR
+      
+      Thank you ${username} for choosing Nathalie's Pizzeria.`);
 
 			displayOrder();
 			break;
