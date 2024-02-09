@@ -45,9 +45,15 @@ console.log("type of food", selectedDish);
 // Step 3 - Subtype choice
 // Your code goes here
 let selectedSubtype = "";
+let subtypeNames = {};
 
 if (foodType === "1") {
   // Pizza
+  subtypeNames = {
+    1: "Margherita",
+    2: "Pepperoni",
+    3: "Hawaiian",
+  };
   selectedSubtype = prompt(
     `🍕 Choose your desired type of pizza. Write the number of your choice and click 'OK'.
      1 - Margherita 
@@ -55,25 +61,13 @@ if (foodType === "1") {
      3 - Hawaiian 
     `
   );
-  if (selectedSubtype === "1") {
-    alert(
-      "You've selected Margherita pizza. Excellent choice! ✨ Click 'OK' to continue."
-    );
-  } else if (selectedSubtype === "2") {
-    alert(
-      "You've selected Pepperoni pizza. Excellent choice! ✨ Click 'OK' to continue."
-    );
-  } else if (selectedSubtype === "3") {
-    alert(
-      "You've selected Hawaiian pizza. Excellent choice! ✨ Click 'OK' to continue."
-    );
-  } else {
-    alert(
-      "🫢 Oops! Invalid selection for pizza subtype. Please try again and write the corresponding number in the box."
-    );
-  }
 } else if (foodType === "2") {
   // Pasta
+  subtypeNames = {
+    1: "Fettucine",
+    2: "Pesto",
+    3: "Carbonara",
+  };
   selectedSubtype = prompt(
     `🍝 Choose your desired type of pasta. Write the number of your choice and click 'OK'.
      1 - Fettucine
@@ -81,25 +75,13 @@ if (foodType === "1") {
      3 - Carbonara
     `
   );
-  if (selectedSubtype === "1") {
-    alert(
-      "You've selected Fettucine. Excellent choice! ✨ Click 'OK' to continue."
-    );
-  } else if (selectedSubtype === "2") {
-    alert(
-      "You've selected Pesto. Excellent choice! ✨ Click 'OK' to continue."
-    );
-  } else if (selectedSubtype === "3") {
-    alert(
-      "You've selected Carbonara. Excellent choice! ✨ Click 'OK' to continue."
-    );
-  } else {
-    alert(
-      "🫢 Oops! Invalid selection for pasta subtype. Please try again and write the corresponding number in the box."
-    );
-  }
 } else if (foodType === "3") {
   // Salad
+  subtypeNames = {
+    1: "Caesar",
+    2: "Greek",
+    3: "Caprese",
+  };
   selectedSubtype = prompt(
     `🥗 Choose your desired type of salad. Write the number of your choice and click 'OK'.
      1 - Caesar 
@@ -107,45 +89,49 @@ if (foodType === "1") {
      3 - Caprese 
     `
   );
-  if (selectedSubtype === "1") {
-    alert(
-      "You've selected Caesar salad. Excellent choice! ✨ Click 'OK' to continue."
-    );
-  } else if (selectedSubtype === "2") {
-    alert(
-      "You've selected Greek salad. Excellent choice! ✨ Click 'OK' to continue."
-    );
-  } else if (selectedSubtype === "3") {
-    alert(
-      "You've selected Caprese salad. Excellent choice! ✨ Click 'OK' to continue."
-    );
-  } else {
-    alert(
-      "🫢 Oops! Invalid selection for salad subtype. Please try again and write the corresponding number in the box."
-    );
-  }
 }
 
-// Step 4 - Age
-// Your code goes here
+if (subtypeNames[selectedSubtype]) {
+  alert(
+    `You've selected ${subtypeNames[selectedSubtype]} ${
+      foodType === "1" ? "pizza" : foodType === "2" ? "pasta" : "salad"
+    }. Excellent choice! ✨ Click 'OK' to continue.`
+  );
+} else {
+  alert(
+    `🫢 Oops! Invalid selection for ${
+      foodType === "1" ? "pizza" : foodType === "2" ? "pasta" : "salad"
+    } subtype. Please try again and write the corresponding number in the box.`
+  );
+}
+
 const portionType = prompt(
   `👨‍👩‍👦 Please let us know which portion size you'd like with your order. Write the number of your choice and click 'OK'.
   1 - Small Portion: Ideal for children or those with smaller appetites.
   2 - Regular Portion: Perfect for adults or those with average appetites.
-  `
+`
 );
 
 let selectedCustomer = "";
+let portionSize = "";
+let confirmation = "";
+
+const portionSizeNames = {
+  1: "Small Portion",
+  2: "Regular Portion",
+};
 
 if (portionType === "1") {
-  const confirmation = prompt(
-    `✨ Your order includes a Small Portion of ${selectedSubtype}. That'll be €8. Enter a number to confirm the order and then click 'OK'
+  portionSize = portionSizeNames["1"];
+  confirmation = prompt(
+    `✨ Your order includes a ${portionSize} of ${subtypeNames[selectedSubtype]}. That'll be €8. Enter a number to confirm the order and then click 'OK'
     1 - Yes 🙌
     2 - No 👎`
   );
 } else if (portionType === "2") {
-  const confirmation = prompt(
-    `✨ Your order includes a Regular Portion ${selectedSubtype}. That'll be €14. Enter a number to confirm the order and then click 'OK'
+  portionSize = portionSizeNames["2"];
+  confirmation = prompt(
+    `✨ Your order includes a ${portionSize} of ${subtypeNames[selectedSubtype]}. That'll be €14. Enter a number to confirm the order and then click 'OK'
     1 - Yes 🙌
     2 - No 👎`
   );
@@ -159,3 +145,14 @@ console.log("type of portion", portionType);
 
 // Step 5 - Order confirmation
 // Your code goes here
+if (confirmation === "1") {
+  alert(
+    "🎉 Thank you for your order! Your meal will be prepared and delivered shortly. Enjoy!"
+  );
+} else if (confirmation === "2") {
+  alert(
+    "👋 Thank you for considering us. We hope to see you again soon for your next order!"
+  );
+} else {
+  alert("🫢 Invalid input. Please try again.");
+}
