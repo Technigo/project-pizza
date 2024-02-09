@@ -10,6 +10,13 @@ let userName = prompt("Write your name in the box below 👇");
 
 console.log("Hello, " + userName + "!");
 alert("👋 Hello, " + userName + "! Click 'OK' to unlock the menu!");
+  `Welcome to our Javascript Pizzeria.🍕 Ready to Start? - Click 'OK' to begin.`
+);
+
+let userName = prompt("Write your name in the box below 👇");
+
+console.log("Hello, " + userName + "!");
+alert("👋 Hello, " + userName + "! Click 'OK' to unlock the menu!");
 
 // Step 2 - Food choice
 // Your code goes here
