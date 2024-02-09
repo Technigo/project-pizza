@@ -34,12 +34,11 @@ if(foodChoice === 1) {
 } else if (foodChoice === 3) {
   selectedFood = "Salad";
 } else {
-  alert("Invalid choice, please start again.")
+  alert("Invalid choice, please start again. 🔄️ ")
   exit(1)
 }
 
 console.log ("selected food", selectedFood);
-
 alert (`You choose ${selectedFood}`);
 
 
@@ -155,4 +154,9 @@ alert (`You chose a ${size} ${pizzaName}`);*/
 // Step 5 - Order confirmation
 // Your code goes here*/
 
-alert(`Thank you for your order, ${userName}! You ordered a ${size} ${foodItem}. Your food is beeing prepared by humans. Now you can relax while the food is being prepared. Enjooooy!🤗 ` )
+alert(`Thank you for your order, ${userName}! You ordered a ${size} ${foodItem}. 
+
+Your food is beeing prepared by humans.
+Now you can relax while the food is being prepared.
+
+Enjooooy!🤗 `)

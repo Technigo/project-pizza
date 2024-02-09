@@ -8,7 +8,7 @@
 body {
   font-family: "Montserrat", sans-serif;
   background-image: url(pablo-pizza.jpg);
-  background-size: cover;
+  background-size:100%;
   width: fit-content;
   height: fit-content;
   color: white;
