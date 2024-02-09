@@ -204,13 +204,12 @@ console.log("Final price:", finalPrice);
 
 // Step 5 - Order confirmation
 let confirmation = prompt(
-  `You have ordered a ${
-    (size, menuChoice)
-  } for the price of ${finalPrice}:-. Is this order correct? Write yes or no:`
+  `You have ordered a ${size}-size ${menuChoice} for the price of ${finalPrice}:-. Is this order correct? Write yes or no:`
 );
+console.log("Confirmed:", confirmation);
 
-if (confirmation.toLowerCase === "yes") {
-  alert(`Thank you for your order! Your ${foodChoice} is on its way.`);
+if (confirmation === "yes") {
+  alert(`Thank you for your order! Your ${menuChoice} is on its way.`);
 } else {
   alert(
     "I'm sorry to hear that we got it wrong. Please start over and place a new order."
