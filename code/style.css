@@ -6,15 +6,49 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #0026ff;
+  background-image: url("./assets/marialaura-gionfriddo-II3Vo7MJ9Z0-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
   min-height: 100vh;
+  position: relative;
 }
 
 p {
   font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover {
+  background-color: #fff;
+}
+
+.button:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
 }
