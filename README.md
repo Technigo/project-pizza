@@ -1,10 +1,11 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Introduction to Javascript creating a way to order from a restaurant site. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+This project when pretty smooth but had some issues on the way. I was a bit unsure of how to make the confirmation tell what the person had ordered in the fifth step but managed to find a way to make it kind of simple. My first thought was that I would have to do it through if, else-if and else for all the options but that would have been messy and taken a lot more time. This project did not need so much of planning since the structure was already built. If I had more time it would have been fun to play around more and see what more you can create with Javascript. 
+
 
 ## View it live
 
