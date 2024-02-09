@@ -13,4 +13,4 @@ In this practice, we used some data types like variables, if, else if, else, swi
 I look forward to knowing more about arrays, functions, and objects and how to implement them.
 
 
-## View it live [here](https://xxxxxxxxxxxxxxx.netlify.app/)
+## View it live [here](https://js-pizzeria.netlify.app/)
