@@ -20,7 +20,7 @@ while (confirmedOrder === false) {
   // Your code goes here
 
   alert(
-    `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
+    `Welcome to our Raglan Pizzeria. Ready to Start? - Click 'OK' to begin.`
   );
   const name = prompt("Hey! What should we call you?");
   alert("Hey " + name + "!");
