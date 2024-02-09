@@ -211,10 +211,12 @@ let confirmation = prompt(
 console.log("Confirmed:", confirmation);
 
 if (confirmation === "yes") {
-  alert(`Thank you for your order! Your ${menuChoice} is on its way.`);
+  alert(
+    `Thank you for your order, ${userName}! Your ${menuChoice} is on its way.`
+  );
 } else {
   alert(
-    "I'm sorry to hear that we got it wrong. Please start over and place a new order."
+    `I'm sorry to hear that ${userName}. You're welcome to start over and place a new order. Otherwise - have a good one, and I hope to see you again soon!`
   );
   exit(1);
 }
