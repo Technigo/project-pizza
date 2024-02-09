@@ -7,16 +7,8 @@ alert(
 );
 
 let userName = prompt("Write your name in the box below 👇");
-
-console.log("Hello, " + userName + "!");
 alert("👋 Hello, " + userName + "! Click 'OK' to unlock the menu!");
-  `Welcome to our Javascript Pizzeria.🍕 Ready to Start? - Click 'OK' to begin.`
-);
-
-let userName = prompt("Write your name in the box below 👇");
-
 console.log("Hello, " + userName + "!");
-alert("👋 Hello, " + userName + "! Click 'OK' to unlock the menu!");
 
 // Step 2 - Food choice
 // Your code goes here
@@ -27,8 +19,6 @@ const foodType = prompt(
   3 - Salad 🥗
   `
 );
-
-console.log("type of food", foodType);
 
 let selectedDish = "";
 
@@ -49,6 +39,8 @@ if (selectedDish !== "") {
     `You've selected ${selectedDish}. Click 'OK' to explore available options.`
   );
 }
+
+console.log("type of food", selectedDish);
 
 // Step 3 - Subtype choice
 // Your code goes here
@@ -143,29 +135,27 @@ const portionType = prompt(
   `
 );
 
-console.log("type of portion", portionType);
-
 let selectedCustomer = "";
 
 if (portionType === "1") {
-  orderMessage = `✨ Your order includes a Small Portion of ${selectedSubtype}. That'll be €8. Write the corresponding number in the box and click 'OK' to confirm the order.`;
+  const confirmation = prompt(
+    `✨ Your order includes a Small Portion of ${selectedSubtype}. That'll be €8. Enter a number to confirm the order and then click 'OK'
+    1 - Yes 🙌
+    2 - No 👎`
+  );
 } else if (portionType === "2") {
-  orderMessage = `✨ Your order includes a Regular Portion ${selectedSubtype}. That'll be €14.  Write the corresponding number in the box and click 'OK' to confirm the order.`;
+  const confirmation = prompt(
+    `✨ Your order includes a Regular Portion ${selectedSubtype}. That'll be €14. Enter a number to confirm the order and then click 'OK'
+    1 - Yes 🙌
+    2 - No 👎`
+  );
 } else {
   alert(
     "🫢 Oops! Invalid number. Please try again and write the corresponding number in the box."
   );
 }
 
+console.log("type of portion", portionType);
+
 // Step 5 - Order confirmation
 // Your code goes here
-if (orderMessage !== "") {
-  const confirmation = prompt(orderMessage);
-  if (confirmation === "yes") {
-    alert("Order confirmed! Your delicious meal will be prepared. Thank you for choosing us.👋🏼");
-  } else {
-    alert("Order cancelled. Please feel free to reorder anytime. 🌻");
-  }
-}
-
-
