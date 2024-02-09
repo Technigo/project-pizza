@@ -1,11 +1,12 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+I tried to recreate the provided Pizzaria example with Javascript. I used switch and if else method to make most of the commands. I was a bit too focus on recreating the exact result, so I didn't have a creative work in the end. But overall, I got to practice the basic javascript methods and that was really helpful.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I encountered quite a lot of problems. After the first prompt, I had to try many times to get the switch and if else right. Especially I was having a hard time understanding "parseInt" and how could I make my prompt look EXACTLY the same as the example.
+If I have more time, I will definitely spend less time on making my project looks exactly the same but try more different method and have fun with using javascript.
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+https://w1-javascript.netlify.app/
