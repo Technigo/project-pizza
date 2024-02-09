@@ -1,8 +1,14 @@
 //Most of the variables are declared up here:
 let mainDishNumber
 let mainDish
+let subtypeDishPrompt
+let subtypeDishNumber
 let subtypeDish
 let userName
+
+let unavailableOption = `Make sure you are typing one of the options available.
+   
+You have to start again.`
 
 /* 
 I tryied to create an array but then I couldn't figure out how I could use it:
@@ -15,12 +21,16 @@ I tryied to create an array but then I couldn't figure out how I could use it:
 
 // Step 1 - Welcome and introduction
 
-alert (`Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`)
+alert (`Welcome to our Javascript Pizzeria. Ready to Start?
+
+Click 'OK' to begin.`)
 userName = prompt(`What's your name?`)
 alert (`Hi ${userName}! What a preatty name you have!
 Welcome into our pizzeria,
 
 Press Ok to continue.`)
+
+console.log("User name:", userName)
 
 // Step 2 - Food choice
 
@@ -30,192 +40,238 @@ mainDishNumber = parseInt(prompt(`What are you going to eat? You have 3 options:
   2 - Pasta 🍝
   3 - Salad 🥗
 
-(answer by typing 1, 2 or 3)`))
+(answer by typing 1, 2 or 3)
+`))
 
 switch (mainDishNumber){
   case 1:
     alert (`Pizza 🍕 Youmy! 
-  
-  OK to continue.`)
+    
+    OK to continue.`)
     mainDish = "pizza"
     break
 
   case 2:
-    alert (`The HGI option:D Pasta!! 🍝
-
-  Press OK to continue.`)
+    alert (`The HGI option:D Pasta!! 🍝 
+    
+    OK to continue.`)
     mainDish = "pasta"
     break
 
   case 3:
-  alert (`Salad 🥗, the healthy choise!
- 
-  Press OK to continue.`)
+  alert (`Salad 🥗, the healthy choise! 
+  
+  OK to continue.`)
     mainDish = "salad"
     break
 
   default:
-    alert (`Make sure you are typing one the options available.)
-   
-    You have to start again.`)
+    alert (`${unavailableOption}`)
     exit(1)
 }
 
 /* Some testing in the console here: console.log(typeof mainDish) */
 // Step 3 - Subtype choice
 
-console.log ("mainDish", mainDishNumber)
-console.log (typeof(mainDishNumber))
+console.log ("mainDishNumber:", mainDishNumber)
+console.log ("mainDish:", mainDish)
 
-switch (mainDishNumber){
-  case 1:
-  subtypeDishNumber = parseInt(prompt(`Which pizza do you want?
+switch (mainDish){
+  case "pizza":
+    subtypeDishPrompt = (`Which pizza do you want?
+    
+    1 - Margherita
+    2 - Cheese 
+    3 - Caprichosa
+    4 - Pepperoni
+    5 - Meatballs`)
+    break
+    
+  case "pasta":
+    subtypeDishPrompt = (`Which kind of pasta do you want?
+    
+    1 - Spaghetti Carbonara
+    2 - Mac & Cheese
+    3 - Pesto
+    4 - Spaghetti and Meatballs
+    5 - Beef & Cheese Lasagna`)
+    break
 
-  1 - Margherita
-  2 - Cheese 
-  3 - Caprichosa
-  4 - Pepperoni
-  5 - Meatballs
-  
-  Type the number`))
+  case "salad":
+    subtypeDishPrompt = (`What kind of sallad do you want?
+    
+    1 - Mediterranian
+    2 - Cesar 
+    3 - Vegana
+    4 - Salmon
+    5 - Chèvre`)
+    break
+  }
+    
+subtypeDishNumber = parseInt(prompt (`${subtypeDishPrompt}
 
-  switch (subtypeDishNumber){
+Type the number`))
 
-    case 1:
+console.log ("subtypeDishPromp", subtypeDishPrompt)
+console.log (typeof(subtypeDishPrompt))
+console.log ("subtypeDishNummer", subtypeDishNumber)
+console.log (typeof(subtypeDishNumber))
+
+switch (mainDish){
+  case "pizza":
+    switch (subtypeDishNumber){
+      case 1:
       subtypeDish = "Margherita"
-    break
-    case 2:
-      subtypeDish = "Cheese"
-    break
-    case 3:
-      subtypeDish = "Caprichosa"
-    break
-    case 4:
-      subtypeDish = "Pepperoni"
-    break
-    case 5:
-      subtypeDish = "Meatballs"
-    break
+      break
+        
+      case 2:
+      subtypeDish = "Cheese"           
+      break
+        
+      case 3:
+      subtypeDish = "Caprichosa"          
+      break
+          
+      case 4:
+      subtypeDish = "Pepperoni"        
+      break
+      
+      case 5:
+      subtypeDish = "Meatballs"  
+      break
+
+      default:
+      alert (`${unavailableOption}`)
+      exit(1)
   }
   break
 
-  case 2:  
-  subtypeDishNumber = parseInt(prompt(`Which kind of pasta do you want?
-
-  1 - Spaghetti Carbonara
-  2 - Mac & Cheese
-  3 - Pesto
-  4 - Spaghetti and Meatballs
-  5 - Beef & Cheese Lasagna
-  
-  Type the number`))
-
-  switch (subtypeDishNumber){
-    case 1:
+  case "pasta":
+    switch (subtypeDishNumber){
+      case 1:
       subtypeDish = "Spaghetti Carbonara"
-    break
-    case 2:
-      subtypeDish = "Mac & Cheese"
-    break
-    case 3:
-      subtypeDish = "Pesto"
-    break
-    case 4:
-      subtypeDish = "Spaghetti and Meatballs"
-    break
-    case 5:
-      subtypeDish = "Beef & Cheese Lasagna"
-    break
+      break
+        
+      case 2:
+      subtypeDish = "Mac & Cheese"           
+      break
+        
+      case 3:
+      subtypeDish = "Pesto"          
+      break
+          
+      case 4:
+      subtypeDish = "Spaghetti and Meatballs"        
+      break
+      
+      case 5:
+      subtypeDish = "Beef & Cheese Lasagna"  
+      break
+
+      default:
+      alert (`${unavailableOption}`)
+      exit(1)
   }
   break
   
-  default: //default refers to the last option 3 "salad"
-  subtypeDishNumber = parseInt(prompt(`What kind of sallad do you want?
+  case "salad":
+    switch (subtypeDishNumber){
+      case 1:
+      subtypeDish = "Mediterranian"
+      break
+        
+      case 2:
+      subtypeDish = "Cesar"           
+      break
+        
+      case 3:
+      subtypeDish = "Vegan"          
+      break
+          
+      case 4:
+      subtypeDish = "Salmon"        
+      break
+      
+      case 5:
+      subtypeDish = "Chèvre"  
+      break
 
-  1 - Mediterranian
-  2 - Cesar 
-  3 - Vegana
-  4 - Salmon
-  5 - Chèvre
-  
-  Type the number`))
-
-  switch (subtypeDishNumber){
-  case 1:
-    subtypeDish = "Mediterranian"
-  break
-  case 2:
-    subtypeDish = "Cesar"
-  break
-  case 3:
-    subtypeDish = "Vegana"
-  break
-  case 4:
-    subtypeDish = "Salmon"
-  break
-  case 5:
-    subtypeDish = "Chèvre"
-  break
-
-  default:
-  alert (`Make sure you are typing one the options available.
-
-You have to start again.`)
-  exit(1)
+      default:
+      alert (`${unavailableOption}`)
+      exit(1)
   }
-}
+} 
 
-
-
-// This was some testing in the console
-console.log("mainDish", mainDishNumber)
-console.log(typeof mainDishNumber)
-console.log("subtypeDish",subtypeDishNumber)
-console.log(typeof subtypeDishNumber)
-
-
-  alert (`Make sure you are typing one the options available.)
+console.log("subtypeDishNumber:", subtypeDishNumber)
+console.log("subtypeDish:", subtypeDish)
   
-  You have to start again.`)
-  exit(1)
+alert (`Your order is a youmy ${subtypeDish} ${mainDish}
 
-alert (`Your order is ${subtypeDish} ${mainDish}!
-
-OK to continue.`)
-
+Ok to continue`)
 
 // Step 4 - Age
-let age = parseInt (prompt(`How old are you?`))
-let ageSize 
 
-if (age >= 15) { ageSize = ("ADULT SIZE")
-  alert (`You will get an ADULT SIZE ${subtypeDish} ${mainDish}.`)
-} else if (age < 15){ageSize = ("CHILD SIZE")
-  alert(`You will get cheaper CHILD SIZE ${subtypeDish} ${mainDish}.`)
-} else { 
-  alert (`this is an invalid input, you will need to start again`)
-exit(1)}
+let age = parseInt(prompt(`How old are you?
+
+Adult size: 14€  >  over 16
+Medium size: 12€ >  under 16
+Child size: 10€  >  under 6
+`))
+let dishSize
+
+switch (true){
+  case age >= 16:    
+    dishSize = (`Adult size: 14€`)
+    break
+
+  case age < 16 && age >= 6:    
+    dishSize = (`Medium size: 12€`)
+    break
+
+  case age < 6:
+    dishSize = (`Child menu: 10€`)
+    break
+
+  default:
+    alert (`${unavailableOption}`)
+    exit(1)
+}
+
+alert (`Acording to your age:
+You will get a ${dishSize}`)
 
 // Step 5 - Order confirmation
-orderConfirmation = prompt (`To accept your delicious ${subtypeDish} ${mainDish} - ${ageSize}
 
-  Press 1 - to confirm
 
-  Press 0 - to Cancel`
+orderConfirmation = parseInt(prompt (`To accept your delicious: 
+
+${subtypeDish} ${mainDish} - ${dishSize}
+
+Press:
+1 - to Confirm
+0 - to Cancel`
   
-  )
+))
 
-if (orderConfirmation === "1") {
-  (alert (`Your order is in the way. 
+switch (orderConfirmation){
+  case 1:
+    alert (`Your order is in the way. 
   
-We will make sure you enjoy your meal😋
+  We will make sure you enjoy your meal😋
 
-Thank you! We hope to see you again soon, have a nice day`))
-} else if (orderConfirmation === "0"){
-  alert (`Order Canceled, start again if you would like to order some thing else.`)
-} else {
-  alert (`This options isn't available.
+  Thank you! We hope to see you again soon, have a nice day.`)
+    break
+   
+  case 0:
+    alert (`Order Canceled, start again if you would like to order some thing else.
+    
+    Otherways we hope to see you again in another ocasion. 
+    
+    Have a nice day.`)
+    break
 
-  We are sorry but. You will have to start again.`)
-  exit(1)}
+  default:
+    alert (`${unavailableOption}`)
+    exit(1)
+}
 
