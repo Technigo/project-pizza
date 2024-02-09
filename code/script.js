@@ -61,16 +61,40 @@ const pizzaMenu = [
   },
 ];
 const burgerMenu = [
-  "Small burger",
-  "Big burger",
-  "Small cheeseburger",
-  "Big cheeseburger",
+  {
+    item: "Small burger",
+    price: 70,
+  },
+  {
+    item: "Big burger",
+    price: 100,
+  },
+  {
+    item: "Small cheeseburger",
+    price: 80,
+  },
+  {
+    item: "Big cheeseburger",
+    price: 110.
+  },
 ];
 const saladMenu = [
-  "Greek salad",
-  "Ceasar salad",
-  "Pasta salad",
-  "Avocado salad",
+  {
+    item: "Greek salad",
+    price: 90,
+  },
+  {
+    item: "Ceasar salad",
+    price: 90,
+  },
+  {
+    item: "Pasta salad",
+    price: 90,
+  },
+  {
+    item: "Avocado salad",
+    price: 100,
+  },
 ];
 
 //Ask for choice within a specific menu
@@ -86,11 +110,12 @@ if (foodChoice === "pizza") {
     1. Margerita (tomato, cheese) 100:-
     2. Al Funghi (tomato, cheese, mushrooms) 110:-
     3. Vegetariana (tomato, cheese, onion, bell pepper, mushrooms, olives, artichoke) 120:-
-    4. Chicken No Chicken (tomato, cheese, banana, curry, peanuts) 110:-`
+    4. Chicken No Chicken (tomato, cheese, banana, curry, peanuts) 110:-
+    (Children's size -10:-)`
     )
   );
   console.log("Answer:", menuAnswer);
-
+  //Log chosen item and price
   if (menuAnswer >= 1 && menuAnswer <= 4) {
     menuChoice = pizzaMenu[menuAnswer - 1]["item"];
     console.log("Option:", menuChoice);
@@ -99,42 +124,50 @@ if (foodChoice === "pizza") {
   } else {
     exit(1);
   }
+
   //Choose within burger menu
 } else if (foodChoice === "burger") {
   menuAnswer = parseInt(
     prompt(
       `Here is our burger menu:
-    1. Small burger
-    2. Big burger
-    3. Small cheeseburger
-    4. Big cheeseburger 
-  Write the number of your choice of burger.`
+    1. Small burger 70:-
+    2. Big burger 100:-
+    3. Small cheeseburger 80:-
+    4. Big cheeseburger 110:-
+  Write the number of your choice of burger.
+  (Children's size -10:-)`
     )
   );
   console.log("Answer:", menuAnswer);
-
-  if (subType <= 4) {
-    console.log("Option:", burgerMenu[subType - 1]);
-    order = burgerMenu[subType - 1];
+  //Log chosen item and price
+  if (menuAnswer >= 1 && menuAnswer <= 4) {
+    menuChoice = burgerMenu[menuAnswer - 1]["item"];
+    console.log("Option:", menuChoice);
+    menuPrice = burgerMenu[menuAnswer - 1]["price"];
+    console.log("Price:", menuPrice);
   } else {
     exit(1);
   }
+  
   //Choose within salad menu
 } else {
   menuAnswer = parseInt(
     prompt(
       `What type of salad do you want? Write the number on the menu:
-    1. Greek salad
-    2. Ceasar salad
-    3. Pasta salad
-    4. Avocado salad`
+    1. Greek salad 90:-
+    2. Ceasar salad 90:-
+    3. Pasta salad 90:-
+    4. Avocado salad 100:-
+    (Children's size -10:-)`
     )
   );
   console.log("Answer:", menuAnswer);
-
-  if (subType <= 4) {
-    console.log("Option:", saladMenu[subType - 1]);
-    order = saladMenu[subType - 1];
+  //Log chosen item and price
+  if (menuAnswer >= 1 && menuAnswer <= 4) {
+    menuChoice = saladMenu[menuAnswer - 1]["item"];
+    console.log("Option:", menuChoice);
+    menuPrice = saladMenu[menuAnswer - 1]["price"];
+    console.log("Price:", menuPrice);
   } else {
     exit(1);
   }
@@ -148,20 +181,28 @@ let age = prompt(
 console.log("Age:", age);
 //Decide if the size is child or adult
 let size = "";
+let finalPrice = null;
 
 if (age < 18) {
   alert(
     `Since you are younger than 18. We will make a child-size ${foodChoice}.`
   );
   size = "child";
+  console.log("Size:", size);
+  finalPrice = menuPrice-10;
+
 } else {
   alert(`Since you are 18 or older. We will make an adult-size ${foodChoice}.`);
   size = "adult";
+  console.log("Size:", size);
+  finalPrice = menuPrice;
 }
 
-console.log("Size:", size);
+//Log order with size and correct price
+
 console.log("Order:", size, menuChoice);
-//order =
+console.log ("Final price:", finalPrice)
+
 // Step 5 - Order confirmation
 
 //alert(`Thank you for your order! Your ${order} is on its way.`);
