@@ -128,9 +128,9 @@ Please enter your age:`
 let age =""
 
 if (ageInput >=18 && ageInput<=120) { age = "an adult",
-  alert (`You want to order ${subtypeDish} ${selectedDish} for ${age}. That will be 150 SEK. Click 'OK' to continue 👉`)
+  alert (`You are ordering ${age} size portion. That will be 150 SEK. Click 'OK' to continue 👉`)
 } else if (ageInput>=0 && ageInput<18) { age ="a child"
-  alert (`You want to order ${subtypeDish} ${selectedDish} for ${age}. That will be 75 SEK. Click 'OK' to continue 👉`)
+  alert (`You are ordering ${age} size portion. That will be 75 SEK. Click 'OK' to continue 👉`)
 } else {
   alert("Invalid choice, please try again! 🍕")
   exit(1)
@@ -142,14 +142,14 @@ if (ageInput >=18 && ageInput<=120) { age = "an adult",
 let finalConfirmation = parseInt(
   prompt(`Order summary: ${subtypeDish} ${selectedDish} for ${age}. 
 Please confirm your order by typing the corresponding number:
-1 - 'Yes' 
-2 - 'No'`)
+1 - 'Yes, I want to proceed with my order' 
+2 - 'No, I want to cancel'`)
 )
 
 if (finalConfirmation === 1) {
   alert (`Your order has been confirmed and we will start preparing your ${subtypeDish}. Enjoy your meal! 👋`)
 } else if (finalConfirmation === 2) {
-  alert (`Your order has been cancelled. Please come back another time 👋`)
+  alert (`Your order has been cancelled. You're welcome back another time 👋`)
 } else {
   alert("Invalid choice, please try again! 🍕")
   exit(1)
