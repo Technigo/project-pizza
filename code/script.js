@@ -30,11 +30,11 @@ switch (orderMain) {
     mainSelected = "Pizza"
     alert (`You have chosen ${mainSelected}`)
     subtypeMenu = parseInt(prompt(`Select your Pizza type, please enter the number:
-    1. Napolitana
-    2. Hawaian
-    3. Pepperoni
+    1. Napolitana Pizza
+    2. Hawaian Pizza
+    3. Pepperoni Pizza
     `))
-    subtypeOrder = ["Napolitana", "Hawaian", "Pepperoni"]
+    subtypeOrder = ["Napolitana pizza", "Hawaian pizza", "Pepperoni pizza"]
     break;
   case 2:
     mainSelected = "Pasta"
