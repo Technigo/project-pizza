@@ -9,12 +9,34 @@ alert(
 let person = prompt('Enter your name')
 
 alert(
-  'Hi there, ' person
+  'Hi there, ' + person
 )
-
 
 // Step 2 - Food choice
 // Your code goes here
+
+let Pizza = 1
+let Pasta = 2
+let Salad = 3
+
+let food = prompt('Choose what food you want to order by entering a number: \n1. Pizza \n2. Pasta \n3. Salad ')
+
+
+if (food === '1') {
+  alert('You have choosen Pizza')
+}
+
+else if (food === '2') {
+  alert('You have choosen Pasta')
+}
+
+else if (food === '3') {
+  alert('You have choosen Salad')
+}
+
+else {
+  alert('Invalid choice')
+}
 
 // Step 3 - Subtype choice
 // Your code goes here
