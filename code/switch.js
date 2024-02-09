@@ -213,7 +213,7 @@ Maybe you are eligable for a discount 😉`)
 	);
 
 	switch (orderConfirmation) {
-		case `yes`:
+		case `YES`:
 			const orderSummary = `Amazing! Please, see your order confirmation below.
     
     Order Summary #123456:\n\nName: ${username}\nFood: ${foodChoice}\nType: ${subtypeChoice}\nPrice: ${price} Euro\nDiscount: ${discountpercentage}%\nTotal: ${discountedPrice} Euro
@@ -223,16 +223,16 @@ Maybe you are eligable for a discount 😉`)
 
 			displayOrder();
 			break;
-		case `no`:
+		case `NO`:
 			alert(`Don't feel like ${foodChoice}? No problem. Come visit us again.`);
 			break;
 		case null:
 			alert(`Don't feel like ${foodChoice}? No problem. Come visit us again`);
 			break;
 		default:
-			alert(
-				`Your order will automatically processed. Thank you for your visit.`
-			);
+			alert(orderSummary);
+
+			displayOrder();
 			break;
 	}
 }
