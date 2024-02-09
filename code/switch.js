@@ -117,11 +117,11 @@ while (confirmedOrder === false) {
           exit(1);
       }
       break;
-      default:
-        alert(
-            "We cannot process orders outside of our categories.\nPlease restart the application."
-          );
-          exit(1);
+    default:
+      alert(
+        "We cannot process orders outside of our categories.\nPlease restart the application."
+      );
+      exit(1);
   }
 
   alert(subName + " is a great choice!");
@@ -156,7 +156,9 @@ while (confirmedOrder === false) {
   );
 
   switch (confirm) {
-    case "1" || "Yes" || "yes":
+    case "1":
+    case "Yes":
+    case "yes":
       alert(
         `That will be ${price}! The order will be delivered shortly. Thank you!`
       );
