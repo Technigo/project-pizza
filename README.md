@@ -5,9 +5,9 @@ Goal of this project is to learn the basics of JavaScript by creating a virtual 
 ## The problem
 
 First I had to get familiar with the JS functions.
-I tried to use first if and else if functions. After I changed moste of the part with switch. I left the only if function for the pricing calculation. 
-My problem currently is that the loop is not perfect. 
+I tried to use first if and else if functions. After I changed moste of the part with switch. I left the only if function for the pricing calculation.
+My problem currently is that the loop is not perfect.
 
 ## View it live
 
-You will see the link here as soon as I'm done.
+https://nathalie-pizzeria.netlify.app/
