@@ -3,7 +3,7 @@
 // Step 1 - Welcome and introduction
 // Your code goes here
 alert(
-  `Welcome to the Cheeziest Pizzeria. 
+  `Welcome to the Cheesiest Pizzeria. 
 Ready to order some delicious food?
   
   Click 'OK' to begin.`
