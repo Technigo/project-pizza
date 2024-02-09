@@ -4,24 +4,29 @@
   padding: 0;
 }
 
-
 body {
   font-family: "Montserrat", sans-serif;
-  background-image: url(pablo-pizza.jpg);
-  background-size:100%;
-  width: fit-content;
-  height: fit-content;
+  background-image: url(pizza.jpg);
+  background-size: contain;
+  background-position: center;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
-  padding-top: 50px;
-}
-
-
-h1, p {
-  font-size: 1.5em;
   text-align: center;
 }
+
+
+p,h1 {
+  font-size: 1.5em;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+ 
+
+
