@@ -29,6 +29,8 @@ We'll make sure to fill your belly!`
   )
 }
 
+console.log(nameInput)
+
 
 const foodChoice = prompt(
   `What would you like to order? 
@@ -54,6 +56,8 @@ if (foodChoice === "1") {
 
 alert(`I see! One ${selectedFood} coming up.`)
 
+console.log(selectedFood)
+
 // Step 3 - Subtype choice
 // Your code goes here
 
@@ -66,14 +70,14 @@ if (selectedFood === "delicious pizza") {
     `What kind of pizza would you prefer?
     1 - Calzone
     2 - Funghi
-    3 - Quatro Staggioni`
+    3 - Quattro Stagioni`
   )
   if (subType === "1") {
     selectedSubType = "Calzone"
   } else if (subType === "2") {
     selectedSubType = "Funghi"
   } else if (subType === "3") {
-    selectedSubType = "Quatro Staggioni"
+    selectedSubType = "Quattro Stagioni"
   } else {
     alert("Choose a number to make an order")
     exit(1)
@@ -117,6 +121,8 @@ if (selectedFood === "delicious pizza") {
 }
 
 alert(`I see you want to order a ${selectedFood} ${selectedSubType}`)
+
+console.log(selectedSubType)
 
 
 // Step 4 - Age
@@ -163,6 +169,7 @@ if (age >= 12) {
     2 - no`)
 }
 
+console.log(age, portionSize, cost)
 
 // Step 5 - Order confirmation
 if (confirmation === "1") {
@@ -176,3 +183,4 @@ Your meal will be ready in 10 to 15 minutes`
     `I understand, you're welcome back some other time!`
   )
 }
+console.log(confirmation)
