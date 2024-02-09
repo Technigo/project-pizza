@@ -125,36 +125,32 @@ Please enter your age:`
 )
 )
 
-/*if (ageInput >=18 && ageInput<=120) {
-  age = "an adult"
-} else if (ageInput>=0 && ageInput<18) {
-  age = "a child"
-} else {
-  alert("Invalid choice, please try again! 🍕")
-  exit(1)
-}
-
-alert(`You are ordering food for ${age}! Click 'OK' to continue.`)*/
-
 let age =""
 
 if (ageInput >=18 && ageInput<=120) { age = "an adult",
-  alert (`You're ordering ${subtypeDish} ${selectedDish} for ${age}. That will be 150 SEK.`)
+  alert (`You want to order ${subtypeDish} ${selectedDish} for ${age}. That will be 150 SEK. Click 'OK' to continue 👉`)
 } else if (ageInput>=0 && ageInput<18) { age ="a child"
-  alert (`You're ordering ${subtypeDish} ${selectedDish} for ${age}. That will be 75 SEK.`)
+  alert (`You want to order ${subtypeDish} ${selectedDish} for ${age}. That will be 75 SEK. Click 'OK' to continue 👉`)
 } else {
   alert("Invalid choice, please try again! 🍕")
   exit(1)
 }
-
-//alert(`You are ordering food for ${age}! Click 'OK' to continue.`)
-
 
 // Step 5 - Order confirmation
 // Your code goes here
 
-prompt(`You have ordered a ${subtypeDish} ${selectedDish} for ${age}. 
+let finalConfirmation = parseInt(
+  prompt(`Order summary: ${subtypeDish} ${selectedDish} for ${age}. 
 Please confirm your order by typing the corresponding number:
 1 - 'Yes' 
 2 - 'No'`)
+)
 
+if (finalConfirmation === 1) {
+  alert (`Your order has been confirmed and we will start preparing your ${subtypeDish}. Enjoy your meal! 👋`)
+} else if (finalConfirmation === 2) {
+  alert (`Your order has been cancelled. Please come back another time 👋`)
+} else {
+  alert("Invalid choice, please try again! 🍕")
+  exit(1)
+}
