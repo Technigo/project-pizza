@@ -22,7 +22,7 @@ while (confirmedOrder === false) {
   alert(
     `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
   );
-  const name = prompt("Hey What should we call you?");
+  const name = prompt("Hey! What should we call you?");
   alert("Hey " + name + "!");
 
   // Step 2 - Food choice
