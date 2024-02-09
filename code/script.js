@@ -21,8 +21,10 @@ switch (parseInt(orderFood)) {
   case 3:
     foodType = "Salad";
     break;
+  default:
+    alert("Invalid choice, please place your order again!");
+    exit(1);
 }
-alert("You have chosen " + foodType + "!");
 
 // Step 3 - Subtype choice
 let subType;
@@ -43,8 +45,8 @@ if (foodType === "Pizza") {
       subType = "Hawaiian";
       break;
     default:
-      subType = "Unknown";
-    // alert(Please select the pizza type again!);
+      alert("Invalid choice, please place your order again!");
+      exit(1);
   }
 } else if (foodType === "Pasta") {
   subType = prompt(
@@ -110,6 +112,7 @@ if (age >= 18) {
       " will be prepared for you. That'll be €15. Are you sure you want to order this? \nEnter a number to confirm: \n1 - Yes\n2 - No"
   );
 }
+//How to add a space between two variables 
 if (customerAge === "1") {
   alert(
     "Thank you for your order! Your delicious meal will be prepared. See you soon!👋"
