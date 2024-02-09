@@ -41,7 +41,6 @@ alert(`You choose ${selectedFood}, Yummy!😃`)
 
 
 
-
 // Step 3 - Subtype choice
 
 let aSubtype = ""
@@ -98,7 +97,7 @@ if (selectedSubtype === "1") {
      }
 }
 
-alert(`You choose ${aSubtype}😃 If this is correct click 🆗`)
+alert(`You chose ${aSubtype}😃 If this is correct click 🆗`)
 
 
 
@@ -107,15 +106,38 @@ alert(`You choose ${aSubtype}😃 If this is correct click 🆗`)
 
 let age = prompt (`Is the meal intended for an adult or child?😊\n(Please type in your age)`)
 
-if (age >= 15 ) { alert ("Got it, a regular sized portion it is!🌟") }
-  else if ( age <= 15 ){ alert ("Understood, we'll fix a smaller portion for you!☺️")
+if (age >= 16) { alert ("Got it, a regular sized portion it is!🌟\nThat will be 11$\nClick 🆗 to continue")
+} else if ( age <= 15) {
+alert ("Understood, we'll fix a smaller portion for you!☺️\nThat will be 6$\nClick 🆗 to continue")
 } else {
 alert (`Input incorrect, please enter a valid number.`)
+exit(1)
 }
   
 
-
-
-
 // Step 5 - Order confirmation
-// Your code goes here
+
+let price = ""
+
+if (age >= 16) {price = 11
+alert (`You have selected a ${aSubtype} with a total of ${price}$\n`)  
+} else if (age <= 15)  {price = 6
+alert (`You have selected a ${aSubtype} with a total of ${price}$\n`)
+}
+
+
+
+finalConfirmation = prompt (`Do you want to confirm this order: One ${aSubtype} ${price}$\n
+(please enter a valid number):
+1 - YES 
+2 - NO`)
+if (finalConfirmation === "1") { 
+alert (`Thank you for your order ${yourName}🎉 `)
+} else if (finalConfirmation ==="2"){ 
+alert (`Sorry to see you go, welcome back another time🥰`)
+} else { 
+alert (`Input incorrect, please enter a valid number.`)
+exit(1)}
+
+
+
