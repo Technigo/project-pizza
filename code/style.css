@@ -10,9 +10,9 @@ body {
   font-family: "Protest Guerrilla";
   background-image: url("pizza.jpg");
   background-size: cover;
-  background-color: rgb(241, 9, 9);
+  background-color: rgb(233, 19, 19);
   color: white;
-  font-size: 50px;
+  font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,4 +28,10 @@ div {
 
 p {
   font-size: 1.5em;
+}
+
+@media (min-width: 668px) {
+  body {
+    font-size: 50px;
+  }
 }
