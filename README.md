@@ -14,8 +14,6 @@ Before I started, I simplely thought I can only use if... else statement to writ
 
 4. From the step 4, I stucked again and struggled a while. I knew that how to ask age by alert, but I did not know how to add the order food on the alert, e.g. "Your adult sized Spaghetti will be prepared". I tried different ways but failed, then cam back to step 3 -- the alert of subtype selection, made a nest if...else statement. I don't know whether it is the best solution, I believe there will be a better solution to write the code cleaner and easier to read.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+trista-project-pizza.netlify.app
