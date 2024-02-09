@@ -6,6 +6,13 @@ alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
 
+let person = prompt('Enter your name')
+
+alert(
+  'Hi there, ' person
+)
+
+
 // Step 2 - Food choice
 // Your code goes here
 
