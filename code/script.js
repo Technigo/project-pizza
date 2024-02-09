@@ -8,7 +8,7 @@ alert(
 
 //Asking person for name with prompt
 
-let person = prompt("Please enter your name")
+const person = prompt("Please enter your name")
 if (person) {
   alert (
     `Hi and welcome ${person}`
@@ -23,7 +23,7 @@ if (person) {
 // Step 2 - Food choice
 // Your code goes here
 
-let food = parseInt 
+const food = parseInt 
 (prompt(`Please select your choice of Food by entering the number.
 1 - Pizza
 2 - Pasta
@@ -63,7 +63,7 @@ if (food === 1) {
   subtype = ["nothing"]
 }
 
-let choice = parseInt 
+const choice = parseInt 
 (prompt (`Please select your meal from the following by entering the number\n ${subtype.join("\n")}`))
 
 if (food === 1 && choice === 1) {
@@ -114,20 +114,20 @@ if (food === 1 && choice === 1) {
 // Your code goes here
 
 
-let age = parseInt 
+const age = parseInt 
 (prompt (`Do you want to order the child menu or the adult menu. Please type your age:`))
 
 
-let foodName = ["Pizza", "Pasta", "Lasagne"]
-let subtypeName = [
+const foodName = ["Pizza", "Pasta", "Lasagne"]
+const subtypeName = [
   ["Margherita", "Pepperoni", "Hawaiian"],
   ["Carbonara", "Bolognese", "Alfredo"],
   ["with meet", "vegetarian", "vegan"]
 ]
 
-let foodResult = foodName [food - 1]
+const foodResult = foodName [food - 1]
 
-let subtypeResult = subtypeName [food - 1] [choice - 1]
+const subtypeResult = subtypeName [food - 1] [choice - 1]
 
 
 if (age >= 18) {
@@ -141,7 +141,7 @@ else {
 // Step 5 - Order confirmation
 // Your code goes here
 
-let confirmation = parseInt 
+const confirmation = parseInt 
 (prompt (`Are you sure you want to order this?
 Please select a number to confirm:
 1 - Yes

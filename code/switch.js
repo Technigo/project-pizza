@@ -6,7 +6,7 @@ alert(
     "Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin."
   )
   
-  let person = prompt("Please enter your name")
+  const person = prompt("Please enter your name")
   
   switch (person) {
     case "Anna":
@@ -35,7 +35,7 @@ alert(
   // Your code goes here
   
 
-  let food = parseInt (
+  const food = parseInt (
     prompt(`Please select your choice of Food by entering the number.
   1 - Pizza
   2 - Pasta
@@ -85,7 +85,7 @@ alert(
       exit (1)
   }
   
-  let choice = parseInt 
+  const choice = parseInt 
     (prompt (`Please select your meal from the following by entering the number\n ${subtype.join("\n")}`))
 
   switch (food) {
@@ -149,22 +149,22 @@ alert(
   // Your code goes here
   
   
-  let age = parseInt 
+  const age = parseInt 
   (prompt (`Do you want to order the child menu or the adult menu. Please type your age:`))
 
   console.log(typeof age)
   
   
-  let foodName = ["Pizza", "Pasta", "Lasagne"]
-  let subtypeName = [
+  const foodName = ["Pizza", "Pasta", "Lasagne"]
+  const subtypeName = [
     ["Margherita", "Pepperoni", "Hawaiian"],
     ["Carbonara", "Bolognese", "Alfredo"],
     ["with meet", "vegetarian", "vegan"]
   ]
   
-  let foodResult = foodName [food - 1]
+  const foodResult = foodName [food - 1]
   
-  let subtypeResult = subtypeName [food - 1] [choice - 1]
+  const subtypeResult = subtypeName [food - 1] [choice - 1]
   
   switch (age) {
     case 100:
@@ -280,7 +280,7 @@ alert(
   // Step 5 - Order confirmation
   // Your code goes here
   
-  let confirmation = parseInt (prompt (`Are you sure you want to order this?
+  const confirmation = parseInt (prompt (`Are you sure you want to order this?
   Please select a number to confirm:
   1 - Yes
   2 - No`))
