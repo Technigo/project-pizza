@@ -104,5 +104,19 @@ else if (food === '3') {
 // Step 4 - Age
 // Your code goes here
 
+let age = prompt('Are the order for an adult or a child? Please enter your age: ')
+
+if (age > 12 ) {
+  alert('Your total cost will be 15$')
+}
+
+else if (age < 13){
+  alert('Your total cost will be 10$')
+}
+
+ else {
+  alert('Invalid choice')
+}
+
 // Step 5 - Order confirmation
 // Your code goes here
