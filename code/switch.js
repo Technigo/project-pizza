@@ -25,7 +25,7 @@ alert (`Welcome to our Javascript Pizzeria. Ready to Start?
 
 Click 'OK' to begin.`)
 userName = prompt(`What's your name?`)
-alert (`Hi ${userName}! What a preatty name you have!
+alert (`Hi ${userName}! What a pretty name you have!
 Welcome into our pizzeria,
 
 Press Ok to continue.`)
@@ -45,7 +45,7 @@ mainDishNumber = parseInt(prompt(`What are you going to eat? You have 3 options:
 
 switch (mainDishNumber){
   case 1:
-    alert (`Pizza 🍕 Youmy! 
+    alert (`Pizza 🍕 Yumy! 
     
     OK to continue.`)
     mainDish = "pizza"
@@ -98,7 +98,7 @@ switch (mainDish){
     break
 
   case "salad":
-    subtypeDishPrompt = (`What kind of sallad do you want?
+    subtypeDishPrompt = (`What kind of salad do you want?
     
     1 - Mediterranian
     2 - Cesar 
@@ -205,7 +205,7 @@ switch (mainDish){
 console.log("subtypeDishNumber:", subtypeDishNumber)
 console.log("subtypeDish:", subtypeDish)
   
-alert (`Your order is a youmy ${subtypeDish} ${mainDish}
+alert (`Your order is a yumy ${subtypeDish} ${mainDish}
 
 Ok to continue`)
 
@@ -237,8 +237,10 @@ switch (true){
     exit(1)
 }
 
-alert (`Acording to your age:
-You will get a ${dishSize}`)
+alert (`According to your age:
+You will get a:
+
+${dishSize}`)
 
 // Step 5 - Order confirmation
 
@@ -257,9 +259,9 @@ switch (orderConfirmation){
   case 1:
     alert (`Your order is in the way. 
   
-  We will make sure you enjoy your meal😋
+  We will make sure you enjoy your meal😋push 
 
-  Thank you! We hope to see you again soon, have a nice day.`)
+  Thank you! We hope to see you again soon, have a nice day 🌞`)
     break
    
   case 0:
@@ -267,7 +269,7 @@ switch (orderConfirmation){
     
     Otherways we hope to see you again in another ocasion. 
     
-    Have a nice day.`)
+    Have a nice day 🌞`)
     break
 
   default:
