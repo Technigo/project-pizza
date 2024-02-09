@@ -11,7 +11,7 @@ const customerName = prompt(
 console.log(customerName)
 
 alert(
-  `Hello, ${customerName}!`
+  `Hello ${customerName}, welcome!`
 )
   
 // Step 2 - Food choice
@@ -19,9 +19,9 @@ alert(
 const foodChoice = prompt(
   `What would you like to order?
   Please enter the number of your choice:
-  1 - Pizza
-  2 - Pasta
-  3 - Salad
+  1 - Pizza 🍕
+  2 - Pasta 🍝
+  3 - Salad 🥗
   `
 )
 
@@ -40,7 +40,7 @@ if (foodChoice === "1") {
 }
 
 alert(
-  `You chose ${selectedFood}, is that correct?`)
+  `You have chosen ${selectedFood}`)
 
 
 // Step 3 - Subtype choice
@@ -50,10 +50,10 @@ alert(
 if (selectedFood === "Pizza")
 {
   const pizzaChoice = prompt(
-    `What kind of pizza do you want?
-      1 - Margherita
-      2 - Salsiccia
-      3 - Quattro Formaggi`
+    `Which pizza would you like to order? 🍕
+      1 - Pizza Margherita
+      2 - Pizza Salsiccia
+      3 - Pizza Quattro Formaggi`
   )
 
 let selectedPizza = ""
@@ -70,7 +70,7 @@ if (pizzaChoice === "1"){
 }
 
 alert(
-  `You chose ${selectedPizza}, is that correct?`)
+  `You have chosen ${selectedPizza} 🍕`)
 }
 
 
@@ -78,7 +78,7 @@ alert(
 
   if (selectedFood === "Pasta") {
     const pastaChoice = prompt(
-      `Which pasta would you like to order?
+      `Which pasta would you like to order? 🍝
         1 - Spaghetti Carbonara
         2 - Pasta Bolognese
         3 - Pasta Pollo`
@@ -98,7 +98,7 @@ if (pastaChoice === "1"){
 }
 
 alert(
-  `You chose ${selectedPasta}, is that correct?`)
+  `You have chosen ${selectedPasta} 🍝`)
 }
 
   // Salad selection
@@ -106,7 +106,7 @@ alert(
   if (selectedFood === "Salad")
   {
     const saladChoice = prompt(
-      `Which salad would you like to order?
+      `Which salad would you like to order? 🥗
       1 - Caesar salad
       2 - Greek salad
       3 - Pasta salad`
@@ -126,15 +126,40 @@ alert(
   }
   
   alert(
-    `You chose ${selectedSalad}, is that correct?`)
+    `You have chosen ${selectedSalad} 🥗`)
   }
 
 // Step 4 - Age
 
+const priceChild = 10
+const priceAdult = 15
+const customerAge = prompt(
+`Is the meal for a child or an adult? Please type your age:`
+)
 
 
+
+if (customerAge <= 12) { 
+confirmOrder = prompt (`One child sized ${selectedFood} will be prepared for you. That will be ${priceChild}€. 
+Do you want to continue with your order? 
+Enter a number to confirm: 
+1 - Yes 
+2 - No`)
+} else {
+confirmOrder = prompt (`One adult sized ${selectedFood} will be prepared for you. That will be ${priceAdult}€.
+Do you want to continue with your order? 
+Enter a number to confirm: 
+1 - Yes 
+2 - No`)
+}
 
 
 // Step 5 - Order confirmation
 
-
+if (confirmOrder === "1") {
+  alert (`Your food is now being prepared 👩‍🍳 
+  Thank you for your order and welcome back! 👋`)
+  exit(1)
+} else (confirmOrder === "2") 
+  alert (`Thank you for visiting, have a nice day!`)
+  exit(1)
