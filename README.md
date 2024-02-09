@@ -1,10 +1,13 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to use basic JavaScript to make it possible to order food from a pizzeria website.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started by going through this week material again regarding if .. else if and else-statements. Then I coded one step at a time going through the structure if this is chosen what should happen then and so on. In the meantime I googled if I was unsure of something and also used inspect in the browser to see how the code behaved when running and see what errors I would get.
+I also did some rubber ducking both with myself and to a friend.
+
+If I had more time I would have wanted to do it in a more realistic way of how this normally is implemented and not use alert and prompt.
 
 ## View it live
 
