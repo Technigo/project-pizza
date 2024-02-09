@@ -2,12 +2,12 @@
 
 // Step 1 - Welcome and introduction
 // Your code goes here
-alert(
+alert (
   `Welcome to our JavaScript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
 
-let userName = prompt("What is your name?")
-alert(
+let userName = prompt ("What is your name?")
+alert (
   `Ciao ${userName}, great to see you! Click 'OK' to begin your order.`
   )
 
@@ -33,11 +33,11 @@ if (foodSelection === 1) {
 } else if (foodSelection === 3) {
   selectedDish = "salad"
 } else {
-  alert("Invalid choice, please try again! 🍕")
-  exit(1)
+  alert ("Invalid choice, please start again! 🍕")
+  exit (1)
 }
 
-alert(`You have selected ${selectedDish}! Click 'OK' to continue.`)
+alert (`You have selected ${selectedDish}! Click 'OK' to continue.`)
 
 
 // Step 3 - Subtype choice
@@ -62,7 +62,7 @@ Please enter the corresponding number:
   } else if (dishSelection === 3) {
     subtypeDish = "Quattro Formaggi"
   } else {
-    alert("Invalid choice, please try again! 🍕")
+    alert("Invalid choice, please start again! 🍕")
     exit(1)
   }
 } 
@@ -83,8 +83,8 @@ Please enter the corresponding number:
   } else if (dishSelection === 3) {
     subtypeDish = "Cacio e pepe"
   } else {
-    alert("Invalid choice, please try again! 🍕")
-    exit(1)
+    alert ("Invalid choice, please start again! 🍕")
+    exit (1)
   }
 } 
 //Subchoice if they selected salad
@@ -104,16 +104,16 @@ Please enter the corresponding number:
   } else if (dishSelection === 3) {
     subtypeDish = "Caprese"
   } else {
-    alert("Invalid choice, please try again!")
-    exit(1)
+    alert ("Invalid choice, please start again! 🍕")
+    exit (1)
   }
 } 
 else {
-  alert("Invalid choice, please try again! 🍕")
-  exit(1)
+  alert ("Invalid choice, please start again! 🍕")
+  exit (1)
 }
 
-alert(`You have selected ${subtypeDish}! Click 'OK' to continue.`)
+alert (`You have selected ${subtypeDish}! Click 'OK' to continue.`)
 
 // Step 4 - Age
 // Your code goes here
@@ -132,8 +132,8 @@ if (ageInput >=18 && ageInput<=120) { age = "an adult",
 } else if (ageInput>=0 && ageInput<18) { age ="a child"
   alert (`You are ordering ${age} size portion. That will be 75 SEK. Click 'OK' to continue 👉`)
 } else {
-  alert("Invalid choice, please try again! 🍕")
-  exit(1)
+  alert ("Invalid choice, please start again! 🍕")
+  exit (1)
 }
 
 // Step 5 - Order confirmation
@@ -151,6 +151,6 @@ if (finalConfirmation === 1) {
 } else if (finalConfirmation === 2) {
   alert (`Your order has been cancelled. You're welcome back another time 👋`)
 } else {
-  alert("Invalid choice, please try again! 🍕")
-  exit(1)
+  alert ("Invalid choice, please start again! 🍕")
+  exit (1)
 }
