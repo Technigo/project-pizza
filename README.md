@@ -1,11 +1,11 @@
-# Project Name
+# Pizzeria Penguin
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Our firt step in to the world of Java Script, to create an online servie to order food.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Started to work mainly with the let and after the Q&A changed to const. Kept it to the basics to get it correct. I am really working to understand the logic of it all. Taking the time to repeat all material to get a grip.
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+I have problems to get it to work.
