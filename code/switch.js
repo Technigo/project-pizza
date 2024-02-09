@@ -238,7 +238,6 @@ switch (true){
 }
 
 alert (`According to your age:
-You will get a:
 
 ${dishSize}`)
 
@@ -259,7 +258,7 @@ switch (orderConfirmation){
   case 1:
     alert (`Your order is in the way. 
   
-  We will make sure you enjoy your meal😋push 
+  We will make sure you enjoy your meal😋 
 
   Thank you! We hope to see you again soon, have a nice day 🌞`)
     break
