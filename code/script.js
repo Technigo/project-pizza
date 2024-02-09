@@ -9,6 +9,7 @@ let subSalad;
 let subName;
 let portion;
 let price;
+let priceAge = 18;
 
 let confirmedOrder = false;
 
@@ -21,13 +22,13 @@ while (confirmedOrder === false) {
   alert(
     `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
   );
-  let name = prompt("Hey What should we call you?");
+  const name = prompt("Hey What should we call you?");
   alert("Hey " + name + "!");
 
   // Step 2 - Food choice
   // Your code goes here
 
-  let category = prompt(
+  const category = prompt(
     "Ok, " +
       name +
       " what would you like to order:\n1. Pizza\n2. Milkshake\n3. Salad"
@@ -42,7 +43,7 @@ while (confirmedOrder === false) {
     alert(
       "We cannot process orders outside of our categories.\nPlease restart the application."
     );
-    exit();
+    exit(1);
   }
   alert(catName + " is a great choice!");
 
@@ -62,7 +63,7 @@ while (confirmedOrder === false) {
       alert(
         "We cannot process orders outside of our categories.\nPlease restart the application."
       );
-      exit();
+      exit(1);
     }
   } else if (catName === "Milkshake") {
     subMilkshake = prompt(
@@ -78,7 +79,7 @@ while (confirmedOrder === false) {
       alert(
         "We cannot process orders outside of our categories.\nPlease restart the application."
       );
-      exit();
+      exit(1);
     }
   } else if (catName === "Salad") {
     subSalad = prompt(
@@ -94,7 +95,7 @@ while (confirmedOrder === false) {
       alert(
         "We cannot process orders outside of our categories.\nPlease restart the application."
       );
-      exit();
+      exit(1);
     }
   } else {
     alert(
@@ -106,14 +107,14 @@ while (confirmedOrder === false) {
   // Step 4 - Age
   // Your code goes here
 
-  let age = prompt(
+  const age = prompt(
     name + ", we need to verify your age to determine the portion size:"
   );
 
   // Step 5 - Order confirmation
   // Your code goes here
 
-  if (age <= 18) {
+  if (age <= priceAge) {
     portion = "child ";
     price = "€5";
   } else {
@@ -121,7 +122,7 @@ while (confirmedOrder === false) {
     price = "€10";
   }
 
-  let confirm = prompt(
+  const confirm = prompt(
     "To comfirm your order " +
       name +
       ", One " +
