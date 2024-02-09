@@ -135,7 +135,7 @@ if (mainDishNumber === 1 && subtypeDishNumber === 1) {
   You have to start again.`)
   exit(1)}
 
-alert (`Your order is ${subtypeDish} ${mainDish}!
+alert (`Your order is a ${subtypeDish} ${mainDish}!
 
 OK to continue.`)
 
@@ -147,7 +147,7 @@ let ageSize
 if (age >= 15) { ageSize = ("ADULT SIZE")
   alert (`You will get an ADULT SIZE ${subtypeDish} ${mainDish}.`)
 } else if (age < 15){ageSize = ("CHILD SIZE")
-  alert(`You will get cheaper CHILD SIZE ${subtypeDish} ${mainDish}.`)
+  alert(`You will get a cheaper CHILD SIZE ${subtypeDish} ${mainDish}.`)
 } else { 
   alert (`this is an invalid input, you will need to start again`)
 exit(1)}
