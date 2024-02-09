@@ -13,7 +13,7 @@ alert(`Hi ${clientName}! Let's order some delicious food! Are you ready?`)
 
 // Step 2 - Food choice
 // Your code goes here
-const foodChoice = prompt(`
+const foodChoice = parseInt(prompt`
 Select your food:
 1 - Pizza
 2 - Pasta
