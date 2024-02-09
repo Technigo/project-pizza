@@ -74,6 +74,7 @@ while (confirmedOrder === false) {
           );
           exit(1);
       }
+      break;
     case "Milkshake":
       subMilkshake = prompt(
         "Milkshake? Great choice. Which flavour would you like?\n1. Vanilla\n2. Chocolate\n3. Strawberry"
@@ -94,6 +95,7 @@ while (confirmedOrder === false) {
           );
           exit(1);
       }
+      break;
     case "Salad":
       subSalad = prompt(
         "What type of salad would you like?\n1. Ceasar salad\n2. Halloumi salad\n3. Ham and cheese salad"
@@ -114,6 +116,12 @@ while (confirmedOrder === false) {
           );
           exit(1);
       }
+      break;
+      default:
+        alert(
+            "We cannot process orders outside of our categories.\nPlease restart the application."
+          );
+          exit(1);
   }
 
   alert(subName + " is a great choice!");
