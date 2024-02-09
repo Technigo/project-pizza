@@ -1,4 +1,4 @@
-# The Cheeziest Pizzeria - 1st javascript project
+# The Cheesiest Pizzeria - 1st javascript project
 
 This week we started with the javascript basics. To excercise this we made an alert+prompt website, one version with if statements and one version with switch, so that the user can make an order. 
 
