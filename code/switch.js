@@ -47,7 +47,7 @@ while (confirmedOrder === false) {
       alert(
         "We cannot process orders outside of our categories.\nPlease restart the application."
       );
-      break;
+      exit(1);
   }
   alert(catName + " is a great choice!");
 
