@@ -1,32 +1,36 @@
 // Step 1 - Welcome and introduction
-alert(`Welcome to our Javascript Pizzeria. Ready to order? - Click 'OK' to begin.`);
+alert(`Welcome to our Virtual Pizzeria. Ready to order? - Click 'OK' to begin.`);
 
 const name = prompt(`Please enter your name:`);
 console.log(`Customer: ${name}`);
 
+//this will return a message with the name that the user typed and make it dynamic.
 alert(`Hi ${name}, it's nice to see you here!`);
 
 // Step 2 - Food choice
 
-const foodOption = prompt(`What would you like to order?
+//by assign foodOption with parseInt it will require the input to be a number an override the default of a prompt.
+const foodOption = parseInt(
+   prompt(`What would you like to order?
 
 Enter the number of your choice.
 1 - Pizza 
 2 - Hamburger
 3 - Salad
-`);
+`)
+);
 
 let foodSelected;
-if (foodOption === "1") {
+if (foodOption === 1) {
    foodSelected = "Pizza";
-} else if (foodOption === "2") {
+} else if (foodOption === 2) {
    foodSelected = "Hamburger";
-} else if (foodOption === "3") {
+} else if (foodOption === 3) {
    foodSelected = "Salad";
 } else {
    alert(`Couldn't you decide what to choose? 
-    Please, start over and choose what you want to eat.`);
-   exit(1);
+Please, start over and type the number representing what you want to eat.`);
+   exit(1); //Will exit the application and stop it from continue if the fields are not correctly filled.
 }
 
 console.log(`Food type selected: ${foodSelected}`);
@@ -37,23 +41,25 @@ alert(`You chosed ${foodSelected}`);
 
 let pizzaSelected;
 
-if (foodOption === "1") {
-   const foodChoice = prompt(`What type of pizza would you like to order?
+if (foodOption === 1) {
+   const foodChoice = parseInt(
+      prompt(`What type of pizza would you like to order?
    
 Enter the number of your choice.
     1 - Napolitan
     2 - Margherita
     3 - Capricciosa
-`);
-   if (foodChoice === "1") {
+`)
+   );
+   if (foodChoice === 1) {
       pizzaSelected = "Napolitan";
-   } else if (foodChoice === "2") {
+   } else if (foodChoice === 2) {
       pizzaSelected = "Margherita";
-   } else if (foodChoice === "3") {
+   } else if (foodChoice === 3) {
       pizzaSelected = "Capricciosa";
    } else {
       alert(`Couldn't you decide what to choose? 
-     Please, start over and choose what you want to eat.`);
+  Please, start over and type the number representing your choice.`);
       exit(1);
    }
    console.log(`Food subtype selected: ${pizzaSelected}`);
@@ -61,23 +67,25 @@ Enter the number of your choice.
 
 let hamburgerSelected;
 
-if (foodOption === "2") {
-   const foodChoice = prompt(`What type of hamburger would you like to order?
+if (foodOption === 2) {
+   const foodChoice = parseInt(
+      prompt(`What type of hamburger would you like to order?
   
   Enter the number of your choice.
 1 - Halloumi burger
 2 - Plant-based burger
 3 - Classic burger
-`);
-   if (foodChoice === "1") {
+`)
+   );
+   if (foodChoice === 1) {
       hamburgerSelected = "Halloumi burger";
-   } else if (foodChoice === "2") {
+   } else if (foodChoice === 2) {
       hamburgerSelected = "Plant-based burger";
-   } else if (foodChoice === "3") {
+   } else if (foodChoice === 3) {
       hamburgerSelected = "Classic burger";
    } else {
       alert(`Couldn't you decide what to choose? 
-     Please, start over and choose what you want to eat.`);
+  Please, start over and type the number representing your choice.`);
       exit(1);
    }
 
@@ -86,23 +94,25 @@ if (foodOption === "2") {
 
 let saladSelected;
 
-if (foodOption === "3") {
-   const foodChoice = prompt(`What type of salad would you like to order?
+if (foodOption === 3) {
+   const foodChoice = parseInt(
+      prompt(`What type of salad would you like to order?
  
  Enter the number of your choice.
 1 - Vegan salad
 2 - Caesar salad
 3 - Greek salad
-`);
-   if (foodChoice === "1") {
+`)
+   );
+   if (foodChoice === 1) {
       saladSelected = "Vegan salad";
-   } else if (foodChoice === "2") {
+   } else if (foodChoice === 2) {
       saladSelected = "Caesar salad";
-   } else if (foodChoice === "3") {
+   } else if (foodChoice === 3) {
       saladSelected = "Greek salad";
    } else {
       alert(`Couldn't you decide what to choose? 
-     Please, start over and choose what you want to eat.`);
+  Please, start over and type the number representing your choice.`);
       exit(1);
    }
    console.log(`Food subtype selected: ${saladSelected}`);
@@ -112,8 +122,10 @@ alert(`Good choice, you chosed to order a ${pizzaSelected || hamburgerSelected |
 
 // Step 4 - Age
 
-const age = prompt(`Is this meal for a child or an adult? 
-Type your age:`);
+const age = parseInt(
+   prompt(`Is this meal for a child or an adult? 
+Type your age:`)
+);
 console.log(`${age} years`);
 
 if (age >= 15) {
@@ -131,19 +143,21 @@ That will be €10`);
    exit(1);
 }
 
-const orderConfirmation = prompt(`Do you want to place the order?
+const orderConfirmation = parseInt(
+   prompt(`Do you want to place the order?
   \nEnter the number that represents your choice:
     1 - Yes
-    2 - No`);
+    2 - No`)
+);
 
 console.log(`Want to finish the order (1=Yes 2=No): ${orderConfirmation}`);
 
 // Step 5 - Order confirmation
 
-if (orderConfirmation === "1") {
+if (orderConfirmation === 1) {
    alert(`Thank you for your order, your order will be ready in 20 min. 
   Bon appetit!`);
-} else if (orderConfirmation === "2") {
+} else if (orderConfirmation === 2) {
    alert(`No problem, welcome back another time.
   Have a good day!`);
 } else {
