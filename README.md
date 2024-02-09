@@ -9,4 +9,6 @@ This project when pretty smooth but had some issues on the way. I was a bit unsu
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+https://pizzeriajavascript.netlify.app
+
+
