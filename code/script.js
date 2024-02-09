@@ -33,7 +33,7 @@ if (isNaN(foodChoiceInput) || Number(foodChoiceInput) < 1 || Number(foodChoiceIn
 // Step 3 - Subtype choice
 // Your code goes here
 
-const foodSubtypePanini =  ['Avocado & Tomatoes', 'Cheese & Jam', '4-Cheese'];
+const foodSubtypePanini =  ['Avocado & Tomatoes', 'Cheese & Jam', 'Four Cheese'];
 const foodSubtypePizza =  ['Vegan', 'Hawaiian', 'Kebab'];
 const foodSubtypeSalad =  ['Grilled Chicken', 'Shrimp', 'Greek'];
 const foodSubtypeCalzone =  ['Peperoni', 'Ricotta & Spinach', 'BBQ Chicken'];
