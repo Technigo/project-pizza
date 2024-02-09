@@ -35,13 +35,13 @@ if(foodChoice === 1) {
   selectedFood = "Salad";
 } else {
   alert("Invalid choice, please start again.")
+  exit(1)
 }
 
 console.log ("selected food", selectedFood);
 
 alert (`You choose ${selectedFood}`);
 
-//exit(1)
 
 // Step 3 - Subtype choice
 // Your code goes here
@@ -53,7 +53,7 @@ let foodNames = []
 switch (selectedFood) {
   case "Burger":
     choiceSlot = parseInt (
-      prompt(`Enter your burger preference 
+      prompt(`Enter your burger preference:
 
         1.Cheeseburger
         2.Chicken Burger
@@ -89,8 +89,9 @@ switch (selectedFood) {
       )
       foodNames = ["Crunchy Munchy Salad", "Leafy Green Salad", "Zezty Zoodle Zinger Salad"]
       break
+
       default:
-      alert("That item is not in our list")
+      alert("That item is not in our list. Please try again. :)")
       exit(1)
     }
 
@@ -129,8 +130,10 @@ let size = age < 18 ? "Small" : "Large";
     case "Salad":
       foodItem = foodNames[choiceSlot - 1];
       break;
+
       default:
         console.log("That item is not in our list")
+        exit(1)
   }
 
  alert (`You chose a ${size} ${foodItem}`);
