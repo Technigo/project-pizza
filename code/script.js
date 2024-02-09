@@ -75,7 +75,7 @@ const burgerMenu = [
   },
   {
     item: "Big cheeseburger",
-    price: 110.
+    price: 110,
   },
 ];
 const saladMenu = [
@@ -148,7 +148,7 @@ if (foodChoice === "pizza") {
   } else {
     exit(1);
   }
-  
+
   //Choose within salad menu
 } else {
   menuAnswer = parseInt(
@@ -189,8 +189,7 @@ if (age < 18) {
   );
   size = "child";
   console.log("Size:", size);
-  finalPrice = menuPrice-10;
-
+  finalPrice = menuPrice - 10;
 } else {
   alert(`Since you are 18 or older. We will make an adult-size ${foodChoice}.`);
   size = "adult";
@@ -201,9 +200,20 @@ if (age < 18) {
 //Log order with size and correct price
 
 console.log("Order:", size, menuChoice);
-console.log ("Final price:", finalPrice)
+console.log("Final price:", finalPrice);
 
 // Step 5 - Order confirmation
+let confirmation = prompt(
+  `You have ordered a ${
+    (size, menuChoice)
+  } for the price of ${finalPrice}:-. Is this order correct? Write yes or no:`
+);
 
-//alert(`Thank you for your order! Your ${order} is on its way.`);
-alert(`Thank you for your order! Your ${foodChoice} is on its way.`);
+if (confirmation.toLowerCase === "yes") {
+  alert(`Thank you for your order! Your ${foodChoice} is on its way.`);
+} else {
+  alert(
+    "I'm sorry to hear that we got it wrong. Please start over and place a new order."
+  );
+  exit(1);
+}
