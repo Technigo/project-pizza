@@ -173,6 +173,8 @@ if (foodChoice === "pizza") {
   }
 }
 
+alert(`You chose the ${menuChoice}. Great choice!`);
+
 // Step 4 - Age
 //Ask for age
 let age = prompt(
@@ -187,12 +189,12 @@ if (age < 18) {
   alert(
     `Since you are younger than 18. We will make a child-size ${foodChoice}.`
   );
-  size = "child";
+  size = "a child";
   console.log("Size:", size);
   finalPrice = menuPrice - 10;
 } else {
   alert(`Since you are 18 or older. We will make an adult-size ${foodChoice}.`);
-  size = "adult";
+  size = "an adult";
   console.log("Size:", size);
   finalPrice = menuPrice;
 }
@@ -204,7 +206,7 @@ console.log("Final price:", finalPrice);
 
 // Step 5 - Order confirmation
 let confirmation = prompt(
-  `You have ordered a ${size}-size ${menuChoice} for the price of ${finalPrice}:-. Is this order correct? Write yes or no:`
+  `You have ordered ${size}-size ${menuChoice} for the price of ${finalPrice}:-. Is this order correct? Write yes or no:`
 );
 console.log("Confirmed:", confirmation);
 
