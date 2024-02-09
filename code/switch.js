@@ -19,9 +19,7 @@ while (confirmedOrder === false) {
   // Step 1 - Welcome and introduction
   // Your code goes here
 
-  alert(
-    `Welcome to Raglan Pizzeria. Ready to Start? - Click 'OK' to begin.`
-  );
+  alert(`Welcome to Raglan Pizzeria. Ready to Start? - Click 'OK' to begin.`);
   const name = prompt("Hey! What should we call you?");
   alert("Hey " + name + "!");
 
@@ -135,15 +133,12 @@ while (confirmedOrder === false) {
 
   // Step 5 - Order confirmation
   // Your code goes here
-  switch (age) {
-    case age <= priceAge:
-      portion = "child ";
-      price = "€5";
-      break;
-    default:
-      portion = "adult ";
-      price = "€10";
-      break;
+  if (age <= priceAge) {
+    portion = "child ";
+    price = "€5";
+  } else {
+    portion = "adult ";
+    price = "€10";
   }
 
   const confirm = prompt(
