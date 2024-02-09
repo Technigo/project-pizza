@@ -1,4 +1,4 @@
-# Project Name
+# JavaScript Pizzeria
 
 The assignment was to build a JavaScript pizzeria using basic JavaScript concept such as variables, conditionals and native methods. 
 
