@@ -23,5 +23,6 @@ p {
   text-align: center;
   background-color: whitesmoke;
   padding: 25px;
+  margin: 10px;
   border-radius: 20px;
 }
