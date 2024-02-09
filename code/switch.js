@@ -81,13 +81,13 @@ while (confirmedOrder === false) {
       );
       switch (subMilkshake) {
         case "1":
-          subName = "Vanilla";
+          subName = "Vanilla milkshake";
           break;
         case "2":
-          subName = "Chocolate";
+          subName = "Chocolate milkshake";
           break;
         case "3":
-          subName = "Strawberry";
+          subName = "Strawberry milkshake";
           break;
         default:
           alert(
