@@ -1,5 +1,5 @@
 alert(
-  "Welcome to Pizzeria Penguen. Ready to order? - Click 'OK' to begin.")
+  "Welcome to Pizzeria Penguin. Ready to order? - Click 'OK' to begin.")
 
 //user name//
 const userName = prompt("Please enter your name:")
@@ -43,8 +43,7 @@ if (customerType === "child") {
 } else {
   alert ("Not valid, please try again")
 }
-
-//order confirmation//
+//order information//
 let orderConfirmation = "";
 
 if (customerType === "child" || customerType === "adult") {
@@ -52,9 +51,9 @@ if (customerType === "child" || customerType === "adult") {
 } else {
   alert("Invalid customer type. Please restart your order.");
 }
-
+//order confirmation//
 if (orderConfirmation.toLowerCase() === "yes") {
-  alert(`Thank you, ${userName}! Your order for ${selectedMeal} has been confirmed.`);
+  alert(`Thank you, ${userName}! Your order for ${selectedMeal} is being prepared.`);
 } else if (orderConfirmation.toLowerCase() === "no") {
   alert("No problem, your order has been canceled. Welcome back any time!");
 } else {
