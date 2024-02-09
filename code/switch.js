@@ -16,7 +16,7 @@ const nameInput = prompt(
 
 switch (nameInput) {
   case "":
-    alert(`NONONO, give me your actual name`)
+    alert(`No point in cheating here, we need your actual name`)
     exit(1)
   break
   default: 
@@ -26,21 +26,6 @@ switch (nameInput) {
   We'll make sure to fill your belly!`)
 
 }
-
-/*
-if (nameInput === "") {
-  alert(
-    `Please reload the page, write your name to procees`)
-  exit(1)
-} else if (nameInput != null) {
-  alert(
-    `Welcome ${nameInput}!
-    
-Let's begin.
-We'll make sure to fill your belly!`
-  )
-}*/
-
 console.log(nameInput)
 
 // Step 2 + 3, Food choice + subtype
