@@ -41,13 +41,12 @@ console.log("selected menu item", selectedItem)
 alert(`You chose ${selectedItem}!`)
 
 // Step 3 - Subtype choice
-let subTypePizza
-let subTypePasta 
-let subTypeSalad
+let subItem
+let subItemNames
 
 switch (selectedItem) {
   case "pizza":
-    subTypePizza = parseInt(
+    subItem = parseInt(
       prompt(`
       Select the type of pizza:
       Enter the number of your choice:
@@ -56,10 +55,11 @@ switch (selectedItem) {
       3. Pepperoni
       `
       ) 
-    )
-    break;
+    );
+    subItemNames = ["Hawaiian", "Margherita", "Pepperoni"]
+    break
   case "pasta":
-    subTypePasta = parseInt(
+    subItem = parseInt(
       prompt(`
       Select the type of pasta:
       Enter the number of your choice:
@@ -68,10 +68,12 @@ switch (selectedItem) {
       3. Pesto alla Genovese
       `
       )
-    )
-    break;
+    );
+    subItemNames = ["Spaghetti alla Puttanesca", "Carbonara", "Pesto alla Genovese"]
+
+    break
   case "salad":
-    subTypeSalad = parseInt(
+    subItem = parseInt(
       prompt(`
       Select the type of salad:
       Enter the number of your choice:
@@ -80,47 +82,121 @@ switch (selectedItem) {
       3. Panzanella
       `
       )
-    )
-    break;
+    );
+    subItemNames = ["Caprese", "Insalata di Riso", "Panzanella"]
+
+    break
+  
   default:
-    alert("Please enter a value between 1 and 3.")
+    alert("Please enter a value between 1 and 3.");
     exit(1)
 };
 
-console.log("pizza type", subTypePizza, "pasta type", subTypePasta, "salad type", subTypeSalad)
+console.log("entered sub type value", subItem)
 
-switch (subTypePizza) {
+let subItemChoice
+
+switch (subItem) {
   case 1:
-    subTypeName = "Hawaiian";
+    alert(`You chose ${subItemNames[0]}!`)
     break
   case 2:
-    subTypeName = "Margherita";
+    alert(`You chose ${subItemNames[1]}!`)
     break
   case 3:
-    subTypeName = "Pepperoni";
-    break
+    alert(`You chose ${subItemNames[2]}!`)
+  default: 
+    alert("Choose valid")
+    exit(1)
+
 }
 
-switch (subTypePasta) {
-  case 1:
-    subTypeName = "Spaghetti alla Puttanesca";
-    break
-  case 2:
-    subTypeName = "Carbonara";
-    break
-  case 3:
-    subTypeName = "Pesto alla Genovese";
-    break
+
+
+/* My initial switch statement below did not work with the default. Each switch statement would run only the default despite valid user input. Maybe my logic was wrong. */
+
+// let subTypeName
+
+// switch (subTypePizza) {
+//   case 1:
+//     subTypeName = "Hawaiian";
+//     break
+//   case 2:
+//     subTypeName = "Margherita";
+//     break
+//   case 3:
+//     subTypeName = "Pepperoni";
+//     break
+//   default:
+//     alert("Choose valid")
+// }
+
+// switch (subTypePasta) {
+//   case 1:
+//     subTypeName = "Spaghetti alla Puttanesca";
+//     break
+//   case 2:
+//     subTypeName = "Carbonara";
+//     break
+//   case 3:
+//     subTypeName = "Pesto alla Genovese";
+//     break
+
+// };
+
+// switch (subTypeSalad) {
+//   case 1:
+//     subTypeName = "Caprese";
+//     break
+//   case 2:
+//     subTypeName = "Insalata di Riso";
+//     break
+//   case 3:
+//     subTypeName = "Panzanella";
+//     break   
+// };
+
+console.log("sub type name", subTypeName)
+
+alert(`You chose ${subTypeName}!`)
+
+const age = parseInt(
+  prompt(`
+  Is your food for an adult or a child?
+  Please enter you age:
+  `
+)
+)
+
+let confirm
+
+if (age >= 13) {
+  confirm = parseInt(
+    prompt(`
+    One adult size ${subTypeName} ${selectedItem} will be $20. 
+     Do you confirm this order? Enter a number:
+     1. Yes
+     2. No
+     `
+    )
+  )
+} else {
+  confirm = parseInt(
+    prompt(`
+    One child size ${subTypeName} ${selectedItem} will be $10.
+    Do you confirm this order? Enter a number:
+    1. Yes
+    2. No
+    `
+    )
+  )
 }
 
-switch (subTypePizza) {
-  case 1:
-    subTypeName = "Caprese";
-    break
-  case 2:
-    subTypeName = "Margherita";
-    break
-  case 3:
-    subTypeName = "Pepperoni";
-    break
+console.log("age")
+
+if (confirm === 1) {
+  alert("Thank you for your order, enjoy!");
+} else {
+  alert("No worries, see you soon!");
 }
+

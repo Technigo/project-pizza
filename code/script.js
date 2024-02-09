@@ -73,6 +73,7 @@ if (selectedItem === "pizza") {
   )
 };
 
+let subTypeName
 
 if (subTypePizza === 1) {
   subTypeName = "Hawaiian";
@@ -90,8 +91,11 @@ if (subTypePizza === 1) {
   subTypeName = "Caprese";
 } else if (subTypeSalad === 2) {
   subTypeName = "Insalata di Riso";
-} else {
+} else if (subTypeSalad === 3) {
   subTypeName = "Panzanella";
+} else {
+  alert("Please select valid choice.")
+  exit(1)
 }
 
 console.log("sub type name", subTypeName)
