@@ -1,3 +1,3 @@
 ## Netlify link
 
-pizzaplay.netlify.app
+[pizzaplay.netlify.app](https://pizzaplay.netlify.app/)https://pizzaplay.netlify.app/
