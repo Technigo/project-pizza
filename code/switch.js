@@ -1,4 +1,15 @@
 window.addEventListener("load", function () {
+  // Setting variables
+  const foodTypes = ["Pizza", "Pasta", "Salad"];
+  const pizzaSubtypes = ["Napolitana", "Hawaian", "Pepperoni"];
+  const pastaSubtypes = [
+    "Spaghetti Carbonara",
+    "Fettucine Alfredo",
+    "Cheesy Tortellini",
+  ];
+  const saladSubtypes = ["Ceaser Salad", "Caprese Salad", "Greek Salad"];
+  let foodSubtypes = [];
+
   // Step 1 - Welcome and introduction
   alert(
     `Welcome to our Javascript Pizzeria. Ready to Start? 
@@ -28,22 +39,22 @@ window.addEventListener("load", function () {
     What type of food would you like to order?
 
     Enter a number:
-    1. Pizza
-    2. Pasta
-    3. Salad
+    1. ${foodTypes[0]}
+    2. ${foodTypes[1]}
+    3. ${foodTypes[2]}
 
   `)
     );
 
     switch (foodChoice) {
       case 1:
-        foodChoice = "Pizza";
+        foodChoice = foodTypes[0];
         break;
       case 2:
-        foodChoice = "Pasta";
+        foodChoice = foodTypes[1];
         break;
       case 3:
-        foodChoice = "Salad";
+        foodChoice = foodTypes[2];
         break;
       default:
         alert(`Invalid choice. Please select a number between 1 and 3.`);
@@ -54,23 +65,23 @@ window.addEventListener("load", function () {
   }
 
   // Step 3 - Subtype choice
-  const pizzaSubtypes = ["Napolitana", "Hawaian", "Pepperoni"];
-  const pastaSubtypes = [
-    "Spaghetti Carbonara",
-    "Fettucine Alfredo",
-    "Cheesy Tortellini",
-  ];
-  const saladSubtypes = ["Ceaser Salad", "Caprese Salad", "Greek Salad"];
-  let foodSubtypes = [];
+  // const pizzaSubtypes = ["Napolitana", "Hawaian", "Pepperoni"];
+  // const pastaSubtypes = [
+  //   "Spaghetti Carbonara",
+  //   "Fettucine Alfredo",
+  //   "Cheesy Tortellini",
+  // ];
+  // const saladSubtypes = ["Ceaser Salad", "Caprese Salad", "Greek Salad"];
+  // let foodSubtypes = [];
 
   switch (foodChoice) {
-    case "Pizza":
+    case foodTypes[0]:
       foodSubtypes = pizzaSubtypes;
       break;
-    case "Pasta":
+    case foodTypes[1]:
       foodSubtypes = pastaSubtypes;
       break;
-    case "Salad":
+    case foodTypes[2]:
       foodSubtypes = saladSubtypes;
       break;
     default:
@@ -160,10 +171,10 @@ window.addEventListener("load", function () {
     switch (confirmOrder) {
       case 1:
         alert(`
-        Thank you for your order! Your delicous meal will be 
-        prepared.
-        See you soon! 👋
-      `);
+      Thank you for your order! Your delicous meal will be 
+      prepared.
+      See you soon! 👋
+    `);
         break;
       case 2:
         alert(`No problem, come back and order anytime you want.`);
