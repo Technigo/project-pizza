@@ -1,6 +1,6 @@
 // Welcome and introduction
 alert(
-  `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
+  `Welcome to Hungry Hugo's! Ready to Start? - Click 'OK' to begin.`
 );
 
 const userName = prompt("Please enter your name", "Hungry Hugo");
