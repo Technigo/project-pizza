@@ -1,15 +1,19 @@
 // Step 1 - Welcome and introduction
 alert(`Welcome to our Virtual Pizzeria. Ready to order? - Click 'OK' to begin.`);
 
+//A statement which variable value will be the name the user enters.
 const name = prompt(`Please enter your name:`);
+
+//will log the users name in the console.
 console.log(`Customer: ${name}`);
 
-//this will return a message with the name that the user typed and make it dynamic.
+//this will return an alert message with the name that the user typed in.
 alert(`Hi ${name}, it's nice to see you here!`);
 
 // Step 2 - Food choice
 
-//by assigning foodOption with parseInt it will require the input to be a number an override the default data type of a prompt.
+//the variable value parseInt is used to parse a string and return an integer. By using parseInt in this case we override the default data type (string) of a prompt and the user can only type a number to don't get an error.
+
 const foodType = parseInt(
    prompt(
       `What would you like to order?
@@ -23,6 +27,8 @@ const foodType = parseInt(
 
 let foodSelected;
 
+//Depending on which number the user choose above, the if statement will check if any of the if, else if och else statements is true and "create" a new variable with a new value that represent the number.
+
 if (foodType === 1) {
    foodSelected = "Pizza";
 } else if (foodType === 2) {
@@ -34,7 +40,7 @@ if (foodType === 1) {
       `Couldn't you decide what to choose? 
       Please, start over and type the number representing what you want to eat.`
    );
-   exit(1); //Will exit the application and stop it from continue if the fields are not correctly filled.
+   exit(1); //Will exit the application with a failure code if used correctly.
 }
 
 console.log(`Selected food type: ${foodSelected}`);
