@@ -62,15 +62,15 @@ switch (foodName) {
         );
         exit(1);
     }
-  }
-    console.log("sub choice", typeof lastChoice, lastChoice);
+}
+console.log("sub choice", typeof lastChoice, lastChoice);
 
-    switch (foodName) {
-      case 2:
-        foodChoice = "Pasta";
-        alert(`${foodChoice}, sounds great!`);
-        subChoice = parseInt(
-          prompt(`
+switch (foodName) {
+  case 2:
+    foodChoice = "Pasta";
+    alert(`${foodChoice}, sounds great!`);
+    subChoice = parseInt(
+      prompt(`
       What kind of ${foodChoice} would you like to order?
 
       1 = Vegetarian pasta
@@ -78,36 +78,36 @@ switch (foodName) {
       3 = Seafood pasta
 
       Type the number of your choice here please!`)
-        );
+    );
 
-        switch (subChoice) {
-          case 1:
-            lastChoice = "Vegetarian pasta";
-            alert(`You selected the ${lastChoice}, yum!`);
-            break;
-          case 2:
-            lastChoice = "Meaty pasta";
-            alert(`You selected the ${lastChoice}, yum!`);
-            break;
-          case 3:
-            lastChoice = "Seafood pasta";
-            alert(`You selected the ${lastChoice}, yum!`);
-            break;
-          default:
-            alert(
-              "Hey, looks like you tried to order something else, please start over to order what you want!"
-            );
-            exit(1);
-        }
-        console.log("sub choice", typeof subChoice, subChoice);
-    }
-  
-    switch (foodName) {
+    switch (subChoice) {
+      case 1:
+        lastChoice = "Vegetarian pasta";
+        alert(`You selected the ${lastChoice}, yum!`);
+        break;
+      case 2:
+        lastChoice = "Meaty pasta";
+        alert(`You selected the ${lastChoice}, yum!`);
+        break;
       case 3:
-        foodChoice = "Salad";
-        alert(`${foodChoice}, sounds great!`);
-        subChoice = parseInt(
-          prompt(`
+        lastChoice = "Seafood pasta";
+        alert(`You selected the ${lastChoice}, yum!`);
+        break;
+      default:
+        alert(
+          "Hey, looks like you tried to order something else, please start over to order what you want!"
+        );
+        exit(1);
+    }
+    console.log("sub choice", typeof subChoice, subChoice);
+}
+
+switch (foodName) {
+  case 3:
+    foodChoice = "Salad";
+    alert(`${foodChoice}, sounds great!`);
+    subChoice = parseInt(
+      prompt(`
       What kind of ${foodChoice} would you like to order?
 
       1 = Vegetarian salad
@@ -115,73 +115,80 @@ switch (foodName) {
       3 = Shrimp salad
 
       Type the number of your choice here please!`)
-        );
+    );
 
-        switch (subChoice) {
-          case 1:
-            lastChoice = "Vegetarian salad";
-            alert(`You selected the ${lastChoice}, yum!`);
-            break;
-          case 2:
-            lastChoice = "Cheese salad";
-            alert(`You selected the ${lastChoice}, yum!`);
-            break;
-          case 3:
-            lastChoice = "Shrimp salad";
-            alert(`You selected the ${lastChoice}, yum!`);
-            break;
-          default:
-            alert(
-              "Hey, looks like you tried to order something else, please start over to order what you want!"
-            );
-            exit(1);
-        }
-        console.log("sub choice", typeof lastChoice, lastChoice);
+    switch (subChoice) {
+      case 1:
+        lastChoice = "Vegetarian salad";
+        alert(`You selected the ${lastChoice}, yum!`);
+        break;
+      case 2:
+        lastChoice = "Cheese salad";
+        alert(`You selected the ${lastChoice}, yum!`);
+        break;
+      case 3:
+        lastChoice = "Shrimp salad";
+        alert(`You selected the ${lastChoice}, yum!`);
+        break;
+      default:
+        alert(
+          "Hey, looks like you tried to order something else, please start over to order what you want!"
+        );
+        exit(1);
     }
+    console.log("sub choice", typeof lastChoice, lastChoice);
+}
 
 // Step 4 - Age // Step 5 - Order confirmation
 
 const age = parseInt(
   prompt(
     `Is the food intended for a child or an adult? 
-    Please enter your age?`));
-let portionSize = ""
+    Please enter your age?`
+  )
+);
+let portionSize = "";
+let confirmation = "";
+let finalConfirmation = "";
 
-switch(age)
-case 1: 
+switch (true) {
+  case age <= 13:
+    portionSize = "Child";
+    alert(
+      `A small ${lastChoice} costs 10$, please click OK to continue to confirmation!`
+    );
+    confirmation = parseInt(
+      prompt(
+        `Please confirm or decline your order by typing
+        1 = confirm
+        2 = decline
+      `
+      )
+    );
+    break;
+  case age >= 13:
+    portionSize = "Adult";
+    alert(
+      `A large ${lastChoice} costs 15$, please click OK to continue to confirmation!`
+    );
+    confirmation = parseInt(
+      prompt(
+        `Please confirm or decline your order by typing
+        1 = confirm
+        2 = decline
+      `
+      )
+    );
+}
+console.log(portionSize);
 
-
-
-// portionSize = age <= 13 ? "child-sized" : "adult-sized";
-
-
-// if (age >= 13) {
-//   confirmation =
-//     prompt(`One adult size ${lastChoice} will be prepared for you and that will be 15$!
-//   Do you want to confirm your order?
-//   1 - Yes
-//   2 - No
-//   `);
-// } else if (age <= 13) {
-//   confirmation =
-//     prompt(`One child size ${lastChoice} will be prepared for you and that will be 10$!
-//   Do you want to confirm your order?
-//   1 - Yes
-//   2 - No
-//   `);
-// } else {
-//   prompt("Invalid choice, please start over!");
-// }
-// console.log("age", age);
-
-// if (confirmation === "1") {
-//   alert(
-//     `Your ${lastChoice} is being prepared! Thank you for ordering food from the Technigo Pizzeria!`
-//   );
-// } else if (confirmation === "2") {
-//   alert(
-//     `Ok! Please come back for some yummy food some other time! Have a great day!`
-//   );
-// } else {
-//   exit(1);
-// }
+switch (confirmation) {
+  case 1:
+    finalConfirmation = "confirm";
+    alert(`${userName}, your ${foodChoice} is being prepared! Bon Appétit! `);
+    break;
+  case 2:
+    finalConfirmation = "decline";
+    alert(`Please come back any time!`);
+    exit(1)
+}
