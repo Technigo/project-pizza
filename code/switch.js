@@ -49,12 +49,12 @@ let foodSelection = parseInt (
       dishSelection = parseInt (
       prompt(
       `What kind of pizza would you like to order?
-      Please enter the corresponding number:
-      1 - Ortolana 
-      2 - Margherita 
-      3 - Quattro Formaggi
+    Please enter the corresponding number:
+    1 - Ortolana 
+    2 - Margherita 
+    3 - Quattro Formaggi
         `)
-    )
+        )
         switch (dishSelection) {
           case 1:
             subtypeDish = "Ortolana"
@@ -81,12 +81,12 @@ let foodSelection = parseInt (
       dishSelection = parseInt (
       prompt(
       `What kind of pasta would you like to order?
-      Please enter the corresponding number:
-      1 - Carbonara 
-      2 - Puttanesca 
-      3 - Cacio e pepe
-    `)
-    )
+    Please enter the corresponding number:
+    1 - Carbonara 
+    2 - Puttanesca 
+    3 - Cacio e pepe
+        `)
+        )
         switch (dishSelection) {
           case 1:
             subtypeDish = "Carbonara"
@@ -114,12 +114,12 @@ let foodSelection = parseInt (
         dishSelection = parseInt (
         prompt(
         `What kind of salad would you like to order?
-        Please enter the corresponding number:
-        1 - Salade niçoise 
-        2 - Caesar salad
-        3 - Caprese salad
+    Please enter the corresponding number:
+    1 - Salade niçoise 
+    2 - Caesar salad
+    3 - Caprese salad
         `)
-      )
+        )
           switch (dishSelection) {
             case 1:
               subtypeDish = "Niçoise"
