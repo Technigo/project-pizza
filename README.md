@@ -1,10 +1,9 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
+Used Javascript to create a pizzeria order program with alerts, prompts, if & if-else statements. Also tried switch statements in place of the if-else statements.
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I couldn't write my if-else statements into switch statements for question 3 maybe because my logic was not correct. So I wrote the switch statements not using the original logic.
 
 ## View it live
 
