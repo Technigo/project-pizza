@@ -1,11 +1,12 @@
 # Project Pizza
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Made a pizza order bot with if/else logic, and another pizzabot with switch logic as instructed in instructions.md
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+added logic so the user couldn't break the flow with faulty input.
+would have looked into a way to add more orders than one if I would spend more time on this. Would also see if I could not repeat myself as much.
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+take a look here: https://pizzabytez.netlify.app/
