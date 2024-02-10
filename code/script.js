@@ -1,25 +1,28 @@
 // Step 1 - Welcome and introduction
 alert(
-  `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
+  `Welcome to our Javascript Pizzeria 🧚🏼‍♀️ 
+  Ready to Start?
+  Click 🆗 to begin!
+  `
 )
 
 const yourName = prompt("What is your name?");
 
-alert(`Welcome, ${yourName}!`);
-
-
+alert(`✨ Welcome ${yourName} ✨`);
 
 // Step 2 - Food choice
 const menuSelect = parseInt(
   prompt(`
   What would you like to order?
     Enter the number of your choice:
-    1. Pizza  
-    2. Pasta 
-    3. Salad
+    1. Pizza 🍕
+    2. Pasta 🍝
+    3. Salad 🥗
     `
   )
 );
+
+console.log("selected menu value", menuSelect)
 
 let selectedItem
 
@@ -31,7 +34,7 @@ if (menuSelect === 1) {
   selectedItem = "salad";
 }
 
-alert(`You chose ${selectedItem}.`)
+alert(`✨ You chose ${selectedItem} ✨`)
 
 // Step 3 - Subtype choice
 let subTypePizza
@@ -41,7 +44,7 @@ let subTypeSalad
 if (selectedItem === "pizza") {
   subTypePizza = parseInt(
     prompt(`
-    Select the type of pizza:
+    Select your pizza type:
     Enter the number of your choice:
     1. Hawaiian
     2. Margherita
@@ -52,7 +55,7 @@ if (selectedItem === "pizza") {
 } else if (selectedItem === "pasta") {
   subTypePasta = parseInt(
     prompt(`
-    Select the type of pasta:
+    Select your pasta type:
     Enter the number of your choice:
     1. Spaghetti alla Puttanesca
     2. Carbonara
@@ -63,7 +66,7 @@ if (selectedItem === "pizza") {
 } else {
   subTypeSalad = parseInt(
     prompt(`
-    Select the type of salad:
+    Select your salad type:
     Enter the number of your choice:
     1. Caprese
     2. Insalata di Riso
@@ -94,16 +97,22 @@ if (subTypePizza === 1) {
 } else if (subTypeSalad === 3) {
   subTypeName = "Panzanella";
 } else {
-  alert("Please select valid choice.")
+  alert("Please try again 🧚🏼‍♀️")
   exit(1)
 }
 
 console.log("sub type name", subTypeName)
-alert(`You chose ${subTypeName}`)
+
+alert(`✨ You chose ${subTypeName} ✨`)
 
 
 // // Step 4 - Age
-const age = prompt("Is the order for a child or an adult? Enter your age:")
+
+const age = prompt(`
+Is your order for a child or an adult? 
+Enter your age:
+`
+)
 
 let confirm
 
@@ -111,7 +120,7 @@ if (age >= 13) {
   confirm = parseInt(
     prompt(`
     One adult size ${subTypeName} ${selectedItem} will be $20. 
-     Do you confirm this order? Enter a number:
+     To confirm your order, enter a number:
      1. Yes
      2. No
      `
@@ -121,7 +130,7 @@ if (age >= 13) {
   confirm = parseInt(
     prompt(`
     One child size ${subTypeName} ${selectedItem} will be $10.
-    Do you confirm this order? Enter a number:
+    To confirm your order, enter a number:
     1. Yes
     2. No
     `
@@ -133,7 +142,7 @@ console.log("age and confirmation", age, confirm)
 
 // Step 5 - Order confirmation
 if (confirm === 1 ) {
-  alert("Thank you for your order, enjoy!");
+  alert("✨ Thanks for ordering with us, enjoy! ✨");
 } else {
-  alert("No worries, see you soon!")
+  alert("No worries, see you soon! 🧚🏼‍♀️")
 }

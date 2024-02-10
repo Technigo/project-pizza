@@ -1,20 +1,23 @@
 // Step 1 - Welcome and introduction
 alert(
-  `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
+  `Welcome to our Javascript Pizzeria 🧚🏼‍♀️ 
+  Ready to Start?
+  Click 🆗 to begin!
+  `
 )
 
 const yourName = prompt("What is your name?");
 
-alert(`Welcome, ${yourName}!`);
+alert(`✨ Welcome ${yourName} ✨`);
 
 // Step 2 - Food choice
 const menuSelect = parseInt(
   prompt(`
   What would you like to order?
     Enter the number of your choice:
-    1. Pizza  
-    2. Pasta 
-    3. Salad
+    1. Pizza 🍕
+    2. Pasta 🍝
+    3. Salad 🥗
     `
   )
 );
@@ -32,13 +35,13 @@ switch (menuSelect) {
     selectedItem = "salad"
     break
   default:
-    alert("Please enter a value between 1 and 3.")
+    alert("Please try again 🧚🏼‍♀️")
     exit(1)
 };
 
 console.log("selected menu item", selectedItem)
 
-alert(`You chose ${selectedItem}!`)
+alert(`✨ You chose ${selectedItem} ✨`)
 
 // Step 3 - Subtype choice
 let subItem
@@ -48,7 +51,7 @@ switch (selectedItem) {
   case "pizza":
     subItem = parseInt(
       prompt(`
-      Select the type of pizza:
+      Select your pizza type:
       Enter the number of your choice:
       1. Hawaiian
       2. Margherita
@@ -61,7 +64,7 @@ switch (selectedItem) {
   case "pasta":
     subItem = parseInt(
       prompt(`
-      Select the type of pasta:
+      Select your pasta type:
       Enter the number of your choice:
       1. Spaghetti alla Puttanesca
       2. Carbonara
@@ -70,12 +73,11 @@ switch (selectedItem) {
       )
     );
     subItemNames = ["Spaghetti alla Puttanesca", "Carbonara", "Pesto alla Genovese"]
-
     break
   case "salad":
     subItem = parseInt(
       prompt(`
-      Select the type of salad:
+      Select your salad type:
       Enter the number of your choice:
       1. Caprese
       2. Insalata di Riso
@@ -84,36 +86,32 @@ switch (selectedItem) {
       )
     );
     subItemNames = ["Caprese", "Insalata di Riso", "Panzanella"]
-
-    break
-  
+    break 
   default:
-    alert("Please enter a value between 1 and 3.");
+    alert("Please try again 🧚🏼‍♀️");
     exit(1)
 };
 
 console.log("entered sub type value", subItem)
 
-let subItemChoice
-
 switch (subItem) {
   case 1:
-    alert(`You chose ${subItemNames[0]}!`)
+    alert(`✨ You chose ${subItemNames[0]} ✨`)
     break
   case 2:
-    alert(`You chose ${subItemNames[1]}!`)
+    alert(`✨ You chose ${subItemNames[1]} ✨`)
     break
   case 3:
-    alert(`You chose ${subItemNames[2]}!`)
+    alert(`✨ You chose ${subItemNames[2]} ✨`)
+    break
   default: 
-    alert("Choose valid")
+    alert("Please try again 🧚🏼‍♀️")
     exit(1)
-
 }
 
+console.log("sub item name", subItemNames)
 
-
-/* My initial switch statement below did not work with the default. Each switch statement would run only the default despite valid user input. Maybe my logic was wrong. */
+/* My initial switch statement below did not work with the default case. Each switch statement would only run the default case despite valid user input. Maybe my logic was wrong. */
 
 // let subTypeName
 
@@ -156,10 +154,8 @@ switch (subItem) {
 //     break   
 // };
 
-console.log("sub type name", subTypeName)
 
-alert(`You chose ${subTypeName}!`)
-
+// Step 4 - Age
 const age = parseInt(
   prompt(`
   Is your food for an adult or a child?
@@ -170,33 +166,44 @@ const age = parseInt(
 
 let confirm
 
-if (age >= 13) {
-  confirm = parseInt(
-    prompt(`
-    One adult size ${subTypeName} ${selectedItem} will be $20. 
-     Do you confirm this order? Enter a number:
-     1. Yes
-     2. No
-     `
-    )
-  )
-} else {
-  confirm = parseInt(
-    prompt(`
-    One child size ${subTypeName} ${selectedItem} will be $10.
-    Do you confirm this order? Enter a number:
-    1. Yes
-    2. No
-    `
-    )
-  )
+switch (true) {
+  case (age >= 13):
+    confirm = parseInt(
+      prompt(`
+      One adult size ${subItemNames[0] || subItemNames[1] || subItemNames[2]} ${selectedItem} will be $20. 
+      To confirm your order, enter a number:
+      1. Yes
+      2. No
+      `
+      )
+    );
+    break
+  case (age <= 12):
+    confirm = parseInt(
+      prompt(`
+      One child size ${subItemNames[0] || subItemNames[1] || subItemNames[2]} ${selectedItem} will be $10.
+      To confirm your order, enter a number:
+      1. Yes
+      2. No
+      `
+      )
+    );
+    break
+  case (age == ""):
+     alert("Please try again 🧚🏼‍♀️");
+     break
+  default:
+    alert("Please try again 🧚🏼‍♀️");
 }
 
 console.log("age")
 
-if (confirm === 1) {
-  alert("Thank you for your order, enjoy!");
-} else {
-  alert("No worries, see you soon!");
+switch (confirm) {
+  case 1:
+    alert("✨ Thanks for ordering with us, enjoy! ✨");
+    break
+  case 2:
+    alert("No worries, see you soon! 🧚🏼‍♀️");
+    break
 }
 
