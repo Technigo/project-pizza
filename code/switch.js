@@ -59,7 +59,7 @@ window.addEventListener("load", function () {
   ];
   const saladSubtypes = ["Ceaser Salad", "Caprese Salad", "Greek Salad"];
   let foodSubtypes = [];
-
+  console.log(foodChoice);
   switch (foodChoice) {
     case "Pizza":
       foodSubtypes = pizzaSubtypes;
@@ -73,7 +73,7 @@ window.addEventListener("load", function () {
     default:
       alert(`Invalid ${foodChoice} type choice.`);
   }
-
+  console.log(foodSubtypes);
   while (true) {
     // Prompt the subtypes corresponding food choice
     let subtypeChoice = parseInt(
@@ -87,17 +87,17 @@ window.addEventListener("load", function () {
 
     `)
     );
-
+    console.log(subtypeChoice); // 3 pizza napolitana
     // Translate number into corresponding subtype
     switch (subtypeChoice) {
       case 1:
-        subtypeChoice = `${pizzaSubtypes[subtypeChoice - 1]}`;
+        subtypeChoice = `${foodSubtypes[0]}`;
         break;
       case 2:
-        subtypeChoice = `${pastaSubtypes[subtypeChoice - 1]}`;
+        subtypeChoice = `${foodSubtypes[1]}`;
         break;
       case 3:
-        subtypeChoice = `${saladSubtypes[subtypeChoice - 1]}`;
+        subtypeChoice = `${foodSubtypes[2]}`;
         break;
       default:
         alert(`Invalid choice. Please select a number between 1 and 3.`);
