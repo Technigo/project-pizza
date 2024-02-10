@@ -3,7 +3,7 @@
 // Step 1 - Welcome and introduction
 // Your code goes here
 alert (
-  `Welcome to our JavaScript Pizzeria. Ready to Start? - Click 'OK' to begin.`
+  `Welcome to our JavaScript Pizzeria. Ready to order? - Click 'OK' to begin.`
 )
 
 let userName = prompt ("What is your name?")
@@ -118,6 +118,10 @@ alert (`You have selected ${subtypeDish}! Click 'OK' to continue.`)
 // Step 4 - Age
 // Your code goes here
 
+
+let priceAdult = 150
+let priceChild = 75
+let age =""
 let ageInput = parseInt ( 
   prompt (
   `Is this order for a child or an adult? 
@@ -125,12 +129,10 @@ Please enter your age:`
 )
 )
 
-let age =""
-
 if (ageInput >=18 && ageInput<=120) { age = "an adult",
-  alert (`You are ordering ${age} size portion. That will be 150 SEK. Click 'OK' to continue 👉`)
+  alert (`You are ordering ${age} size portion. That will be ${priceAdult} SEK. Click 'OK' to continue 👉`)
 } else if (ageInput>=0 && ageInput<18) { age ="a child"
-  alert (`You are ordering ${age} size portion. That will be 75 SEK. Click 'OK' to continue 👉`)
+  alert (`You are ordering ${age} size portion. That will be ${priceChild} SEK. Click 'OK' to continue 👉`)
 } else {
   alert ("Invalid choice, please start again! 🍕")
   exit (1)
@@ -141,6 +143,7 @@ if (ageInput >=18 && ageInput<=120) { age = "an adult",
 
 let finalConfirmation = parseInt(
   prompt(`Order summary: ${subtypeDish} ${selectedDish} for ${age}. 
+
 Please confirm your order by typing the corresponding number:
 1 - 'Yes, I want to proceed with my order' 
 2 - 'No, I want to cancel'`)

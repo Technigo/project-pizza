@@ -3,13 +3,23 @@
 // Step 1 - Welcome and introduction
 // Your code goes here
 alert(
-    `Welcome to our JavaScript Pizzeria. Ready to Start? - Click 'OK' to begin.`
+    `Welcome to our JavaScript Pizzeria. Ready to order? - Click 'OK' to begin.`
   )
   
-  let userName = prompt("What is your name?")
-  alert(
-    `Ciao ${userName}, great to see you! Click 'OK' to begin your order.`
+  let userName = prompt(
+    "What is your name?"
     )
+  
+  switch (userName) {
+    case "":
+        alert(`We didn't catch that, please try again!`)
+        exit(1)
+    break
+    default:
+         alert(
+            `Ciao ${userName}, great to see you! Click 'OK' to begin your order.`
+    )
+    }
   
   // Step 2 - Food choice
   // Your code goes here
