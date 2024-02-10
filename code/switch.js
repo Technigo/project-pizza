@@ -69,7 +69,7 @@ let foodSelection = parseInt (
             alert (`You have selected ${subtypeDish}! Click 'OK' to continue.`)
           break
           default:
-            alert ("Invalid choice, please start again! 🍕")
+            alert(`That is unfortunately not on our menu, please refresh the page and try again! 🍕`)
             exit (1)
         } 
     
@@ -100,6 +100,9 @@ let foodSelection = parseInt (
             subtypeDish = "Cacio e pepe"
             alert (`You have selected ${subtypeDish}! Click 'OK' to continue.`)
           break
+          default:
+            alert(`That is unfortunately not on our menu, please refresh the page and try again! 🍕`)
+            exit (1)
         } 
   
   
@@ -130,6 +133,9 @@ let foodSelection = parseInt (
               subtypeDish = "Caprese"
               alert (`You have selected ${subtypeDish}! Click 'OK' to continue.`)
             break
+            default:
+            alert(`That is unfortunately not on our menu, please refresh the page and try again! 🍕`)
+            exit (1)
           } 
        
       break
@@ -159,7 +165,7 @@ Please enter your age:`
         alert (`You are ordering ${age} size portion. That will be 75 SEK. Click 'OK' to continue 👉`)
     break
     default:
-        alert(`That age is not possible, please refresh the page and try again! 🍕`)
+        alert(`That age is not possible, please refresh the page and try again with your real age! 🍕`)
         exit(1)   
     }
   
@@ -167,17 +173,21 @@ Please enter your age:`
   // Your code goes here
   
   let finalConfirmation = parseInt(
-    prompt(`Order summary: ${subtypeDish} ${selectedDish} for ${age}. 
-  Please confirm your order by typing the corresponding number:
+    prompt(`📝 Order summary: ${subtypeDish} ${selectedDish} for ${age}. 
+  
+    Please confirm your order by typing the corresponding number:
   1 - 'Yes, I want to proceed with my order' 
   2 - 'No, I want to cancel'`)
   )
-  
-  if (finalConfirmation === 1) {
+
+  switch (finalConfirmation) {
+    case 1: 
     alert (`Your order has been confirmed and we will start preparing your ${subtypeDish}. Enjoy your meal! 👋`)
-  } else if (finalConfirmation === 2) {
+    break
+    case 2:
     alert (`Your order has been cancelled. You're welcome back another time 👋`)
-  } else {
+    break
+    default:
     alert("Invalid choice, please try again! 🍕")
     exit(1)
   }
