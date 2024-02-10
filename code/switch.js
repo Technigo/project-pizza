@@ -20,7 +20,7 @@ const foodType = parseInt(
    )
 );
 
-//depending on which number the user choose above, the number will be checked if it matches to a case and interpret it and run the code that the case holds. In this case "change" the number into a new variable with a new value. Giving the number a name.
+//Giving the food type number a name.
 
 let foodSelected;
 
@@ -51,9 +51,9 @@ alert(`You chosed ${foodSelected}`);
 // Step 3 - Subtype choice
 
 let foodOption;
-let pizzaSelected;
-let hamburgerSelected;
-let saladSelected;
+let foodChoice;
+
+//presents a new menu depending on which food type that was selected, and a nested switch statement to declare the food options number with a name.
 
 switch (foodSelected) {
    case "Pizza":
@@ -69,15 +69,15 @@ switch (foodSelected) {
       );
       switch (foodOption) {
          case 1:
-            pizzaSelected = "Napolitan";
+            foodChoice = "Napolitan";
             break;
 
          case 2:
-            pizzaSelected = "Margherita";
+            foodChoice = "Margherita";
             break;
 
          case 3:
-            pizzaSelected = "Capricciosa";
+            foodChoice = "Capricciosa";
             break;
 
          default:
@@ -87,7 +87,7 @@ switch (foodSelected) {
             );
             exit(1);
       }
-      console.log(`Selected pizza: ${pizzaSelected}`);
+      console.log(`Selected pizza: ${foodChoice}`);
       break;
 
    case "Hamburger":
@@ -103,15 +103,15 @@ switch (foodSelected) {
       );
       switch (foodOption) {
          case 1:
-            hamburgerSelected = "Halloumi burger";
+            foodChoice = "Halloumi burger";
             break;
 
          case 2:
-            hamburgerSelected = "Plant-based burger";
+            foodChoice = "Plant-based burger";
             break;
 
          case 3:
-            hamburgerSelected = "Classic burger";
+            foodChoice = "Classic burger";
             break;
 
          default:
@@ -121,7 +121,7 @@ switch (foodSelected) {
             );
             exit(1);
       }
-      console.log(`Selected burger: ${hamburgerSelected}`);
+      console.log(`Selected burger: ${foodChoice}`);
       break;
 
    case "Salad":
@@ -137,15 +137,15 @@ switch (foodSelected) {
       );
       switch (foodOption) {
          case 1:
-            saladSelected = "Vegan salad";
+            foodChoice = "Vegan salad";
             break;
 
          case 2:
-            saladSelected = "Caesar salad";
+            foodChoice = "Caesar salad";
             break;
 
          case 3:
-            saladSelected = "Greek salad";
+            foodChoice = "Greek salad";
             break;
 
          default:
@@ -155,11 +155,11 @@ switch (foodSelected) {
             );
             exit(1);
       }
-      console.log(`Selected salad: ${saladSelected}`);
+      console.log(`Selected salad: ${foodChoice}`);
       break;
 }
 
-alert(`Good choice, you chosed to order a ${pizzaSelected || hamburgerSelected || saladSelected}`);
+alert(`Good choice, you chosed to order a ${foodChoice}`);
 
 // Step 4 - Age
 
@@ -177,14 +177,14 @@ console.log(`${age} years`);
 switch (true) {
    case age >= 15:
       alert(
-         `One adult sized ${pizzaSelected || hamburgerSelected || saladSelected} will be prepared for you.
+         `One adult sized ${foodChoice} will be prepared for you.
          That will be €10`
       );
       break;
 
    case age <= 14:
       alert(
-         `One child sized ${pizzaSelected || hamburgerSelected || saladSelected} will be prepared for you.
+         `One child sized ${foodChoice} will be prepared for you.
          That will be €8`
       );
       break;
@@ -208,3 +208,28 @@ const orderConfirmation = parseInt(
 );
 
 console.log(`Want to finish the order (1=Yes 2=No): ${orderConfirmation}`);
+
+// Step 5 - Order confirmation
+
+switch (orderConfirmation) {
+   case 1:
+      alert(
+         `Thank you for your order, your order will be ready in 20 min. 
+         Bon appetit!`
+      );
+      break;
+
+   case 2:
+      alert(
+         `No problem, welcome back another time.
+         Have a good day!`
+      );
+      break;
+
+   default:
+      alert(
+         `We didn't get any confirmation if you wanted to place the order.
+         Please start over if you still want to order.`
+      );
+      exit(1);
+}
