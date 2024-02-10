@@ -12,21 +12,22 @@ alert(
   
   switch (userName) {
     case "":
-        alert(`We didn't catch that, please try again!`)
+        alert(`We didn't catch that, please refresh the page and try again!`)
         exit(1)
     break
     default:
-         alert(
-            `Ciao ${userName}, great to see you! Click 'OK' to begin your order.`
+         alert(`Ciao ${userName}, great to see you! Click 'OK' to begin your order.`
     )
     }
   
-  // Step 2 - Food choice
+  // Step 2 - Food choice &
+  // Step 3 - Subtype choice
   // Your code goes here
   
-  let foodSelection = parseInt ( 
+//foodselection is input for pizza/pasta/salad
+let foodSelection = parseInt ( 
     prompt (
-    `What do you want to eat?
+    `What do you want to order?
   Please enter the corresponding number:
   1 - Pizza
   2 - Pasta
@@ -34,147 +35,113 @@ alert(
   )
   )
   
+  //selecteddish - variable food for template literals (pizza pasta salad)
   let selectedDish =""
+  //dishselection - subtype input (ortolana margharita 4 formaggi)
+  let dishSelection=""
+  //subtypedish - variable subtype for template literals (ortolana/margherita/4formaggi)
+  let subtypeDish=""
   
-  if (foodSelection === 1) {
-    selectedDish = "pizza"
-  } else if (foodSelection === 2) {
-    selectedDish = "pasta"
-  } else if (foodSelection === 3) {
-    selectedDish = "salad"
-  } else {
-    alert("Invalid choice, please try again! 🍕")
-    exit(1)
-  }
+  switch (foodSelection) {
+    case 1:
+      selectedDish = "pizza"
+      alert(`You have selected ${selectedDish}! Click 'OK' to continue.`)
+      dishSelection = parseInt (
+      prompt(
+      `What kind of pizza would you like to order?
+      Please enter the corresponding number:
+      1 - Ortolana 
+      2 - Margherita 
+      3 - Quattro Formaggi
+        `)
+    )
+        switch (dishSelection) {
+          case 1:
+            subtypeDish = "Ortolana"
+            alert (`You have selected ${subtypeDish}! Click 'OK' to continue.`)
+          break
+          case 2:
+            subtypeDish = "Margherita"
+            alert (`You have selected ${subtypeDish}! Click 'OK' to continue.`)
+          break
+          case 3:
+            subtypeDish = "Quattro Formaggi"
+            alert (`You have selected ${subtypeDish}! Click 'OK' to continue.`)
+          break
+          default:
+            alert ("Invalid choice, please start again! 🍕")
+            exit (1)
+        } 
+    
+    break
   
-  alert(`You have selected ${selectedDish}! Click 'OK' to continue.`)
-  
-  
-  // Step 3 - Subtype choice
-  // Your code goes here
-  
-  let subMessage = ""
-
-  let subtypeDish = []
-  
-  //Switch case below
-
-  switch (selectedDish) {
-    case "Pizza":
-        subMessage = parseInt (
-            prompt (
-            `Select the type of pizza you would like to order.
-            Please enter the corresponding number:
-            1 - Ortolana 
-            2 - Margherita 
-            3 - Quattro Formaggi`
-            )
-        )
-
-            subtypeDish = ["Ortolana", "Margherita", "Quattro Formaggi"]
-
-    case "Pasta":
-        subMessage = parseInt (
-            prompt (
-            `Select the type of pasta you would like to order.
-            Please enter the corresponding number:
-            1 - Carbonara 
-            2 - Puttanesca 
-            3 - Cacio e pepe`
-            )
-        )
-
-            subtypeDish = ["Carbonara", "Puttanesca", "Cacio e pepe"]
-
-    case "Pasta":
-        subMessage = parseInt (
-            prompt (
-            `Select the type of salad you would like to order.
-            Please enter the corresponding number:
-            1 - Salade Niçoise 
-            2 - Caesar salad 
-            3 - Caprese salad`
-            )
-        )
-        
-            subtypeDish = ["Niçoise", "Caesar", "Caprese"]
-  }
-
-
-
-
- /* if (foodSelection === 1) {dishSelection = parseInt( 
-    prompt (
-    `What kind of pizza would you like to order?
-  Please enter the corresponding number:
-  1 - Ortolana 
-  2 - Margherita 
-  3 - Quattro Formaggi
+    case 2:
+      selectedDish = "pasta"
+      alert(`You have selected ${selectedDish}! Click 'OK' to continue.`)
+      dishSelection = parseInt (
+      prompt(
+      `What kind of pasta would you like to order?
+      Please enter the corresponding number:
+      1 - Carbonara 
+      2 - Puttanesca 
+      3 - Cacio e pepe
     `)
     )
-    if (dishSelection === 1) {
-      subtypeDish = "Ortolana"
-    } else if (dishSelection === 2) {
-      subtypeDish = "Margherita"
-    } else if (dishSelection === 3) {
-      subtypeDish = "Quattro Formaggi"
-    } else {
-      alert("Invalid choice, please try again! 🍕")
-      exit(1)
-    }
-  } 
-  //Subchoice if they selected pasta
-  else if (foodSelection === 2) {dishSelection = parseInt( 
-    prompt(
-  `What kind of pasta would you like to order?
-  Please enter the corresponding number:
-  1 - Carbonara 
-  2 - Puttanesca 
-  3 - Cacio e pepe
-    `)
-  )
-    if (dishSelection === 1) {
-      subtypeDish = "Carbonara"
-    } else if (dishSelection === 2) {
-      subtypeDish = "Puttanesca"
-    } else if (dishSelection === 3) {
-      subtypeDish = "Cacio e pepe"
-    } else {
-      alert("Invalid choice, please try again! 🍕")
-      exit(1)
-    }
-  } 
-  //Subchoice if they selected salad
-  else if (foodSelection === 3) {dishSelection = parseInt(
-    prompt (
-  `What kind of salad would you like to order?
-  Please enter the corresponding number:
-  1 - Salade niçoise 
-  2 - Caesar salad
-  3 - Caprese salad
-    `)
-  )
-    if (dishSelection === 1) {
-      subtypeDish = "Niçoise"
-    } else if (dishSelection === 2) {
-      subtypeDish = "Caesar"
-    } else if (dishSelection === 3) {
-      subtypeDish = "Caprese"
-    } else {
-      alert("Invalid choice, please try again!")
-      exit(1)
-    }
-  } 
-  else {
-    alert("Invalid choice, please try again! 🍕")
-    exit(1)
-  }
+        switch (dishSelection) {
+          case 1:
+            subtypeDish = "Carbonara"
+            alert (`You have selected ${subtypeDish}! Click 'OK' to continue.`)
+          break
+          case 2:
+            subtypeDish = "Puttanesca"
+            alert (`You have selected ${subtypeDish}! Click 'OK' to continue.`)
+          break
+          case 3:
+            subtypeDish = "Cacio e pepe"
+            alert (`You have selected ${subtypeDish}! Click 'OK' to continue.`)
+          break
+        } 
   
-  alert(`You have selected ${subtypeDish}! Click 'OK' to continue.`)*/
+  
+    break
+  
+    case 3:
+        selectedDish = "salad"
+        alert(`You have selected ${selectedDish}! Click 'OK' to continue.`)
+        dishSelection = parseInt (
+        prompt(
+        `What kind of salad would you like to order?
+        Please enter the corresponding number:
+        1 - Salade niçoise 
+        2 - Caesar salad
+        3 - Caprese salad
+        `)
+      )
+          switch (dishSelection) {
+            case 1:
+              subtypeDish = "Niçoise"
+              alert (`You have selected ${subtypeDish}! Click 'OK' to continue.`)
+            break
+            case 2:
+              subtypeDish = "Caesar"
+              alert (`You have selected ${subtypeDish}! Click 'OK' to continue.`)
+            break
+            case 3:
+              subtypeDish = "Caprese"
+              alert (`You have selected ${subtypeDish}! Click 'OK' to continue.`)
+            break
+          } 
+       
+      break
+      default:
+        alert(`That is unfortunately not on our menu, please refresh the page and try again! 🍕`)
+        exit(1)        
+    }
+  
   
   // Step 4 - Age
   // Your code goes here
-  /*-------------
+
   let ageInput = parseInt ( 
     prompt (
     `Is this order for a child or an adult? 
@@ -193,6 +160,7 @@ alert(
     exit(1)
   }
   
+  /*
   // Step 5 - Order confirmation
   // Your code goes here
   

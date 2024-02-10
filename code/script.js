@@ -118,7 +118,6 @@ alert (`You have selected ${subtypeDish}! Click 'OK' to continue.`)
 // Step 4 - Age
 // Your code goes here
 
-
 let priceAdult = 150
 let priceChild = 75
 let age =""
@@ -142,7 +141,7 @@ if (ageInput >=18 && ageInput<=120) { age = "an adult",
 // Your code goes here
 
 let finalConfirmation = parseInt(
-  prompt(`Order summary: ${subtypeDish} ${selectedDish} for ${age}. 
+  prompt(`📝Order summary: ${subtypeDish} ${selectedDish} for ${age}. 
 
 Please confirm your order by typing the corresponding number:
 1 - 'Yes, I want to proceed with my order' 
