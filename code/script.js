@@ -122,6 +122,9 @@ if (foodChoice === "pizza") {
     menuPrice = pizzaMenu[menuAnswer - 1]["price"];
     console.log("Price:", menuPrice);
   } else {
+    alert(
+      `I'm sorry. Number ${menuAnswer} is not an option. Please start over.`
+    );
     exit(1);
   }
 
@@ -146,6 +149,9 @@ if (foodChoice === "pizza") {
     menuPrice = burgerMenu[menuAnswer - 1]["price"];
     console.log("Price:", menuPrice);
   } else {
+    alert(
+      `I'm sorry. Number ${menuAnswer} is not an option. Please start over.`
+    );
     exit(1);
   }
 
@@ -169,6 +175,9 @@ if (foodChoice === "pizza") {
     menuPrice = saladMenu[menuAnswer - 1]["price"];
     console.log("Price:", menuPrice);
   } else {
+    alert(
+      `I'm sorry. Number ${menuAnswer} is not an option. Please start over.`
+    );
     exit(1);
   }
 }
