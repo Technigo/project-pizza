@@ -8,9 +8,12 @@ window.addEventListener("load", function () {
   while (true) {
     // Store name in variable and greet new user
     const username = prompt(`Please enter your name:`);
+
     if (username === "") {
       alert(`Oops, no name was entered.`);
       continue;
+    } else if (!isNaN(parseInt(username))) {
+      alert(`Oops, no numbers are aloud.`);
     } else {
       alert(`Nice to meet you, ${username}!`);
       break;
@@ -29,7 +32,7 @@ window.addEventListener("load", function () {
     2. Pasta
     3. Salad
 
-`)
+  `)
     );
 
     switch (foodChoice) {
@@ -59,7 +62,7 @@ window.addEventListener("load", function () {
   ];
   const saladSubtypes = ["Ceaser Salad", "Caprese Salad", "Greek Salad"];
   let foodSubtypes = [];
-  console.log(foodChoice);
+
   switch (foodChoice) {
     case "Pizza":
       foodSubtypes = pizzaSubtypes;
@@ -73,7 +76,7 @@ window.addEventListener("load", function () {
     default:
       alert(`Invalid ${foodChoice} type choice.`);
   }
-  console.log(foodSubtypes);
+
   while (true) {
     // Prompt the subtypes corresponding food choice
     let subtypeChoice = parseInt(
@@ -87,7 +90,7 @@ window.addEventListener("load", function () {
 
     `)
     );
-    console.log(subtypeChoice); // 3 pizza napolitana
+
     // Translate number into corresponding subtype
     switch (subtypeChoice) {
       case 1:
