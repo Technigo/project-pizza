@@ -7,4 +7,4 @@ I couldn't write my if-else statements into switch statements for question 3 may
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+https://gentle-seahorse-6cf1e3.netlify.app/
