@@ -138,29 +138,31 @@ let foodSelection = parseInt (
         exit(1)        
     }
   
-  
   // Step 4 - Age
   // Your code goes here
 
+  let age = ""
   let ageInput = parseInt ( 
     prompt (
     `Is this order for a child or an adult? 
-  Please enter your age:`
+Please enter your age:`
   )
   )
+
+  switch (true) {
+    case ageInput >= 16 && ageInput <= 120:
+        age = "an adult"
+        alert (`You are ordering ${age} size portion. That will be 150 SEK. Click 'OK' to continue 👉`)
+    break
+    case ageInput >= 0 && ageInput < 16:
+        age = "a child"
+        alert (`You are ordering ${age} size portion. That will be 75 SEK. Click 'OK' to continue 👉`)
+    break
+    default:
+        alert(`That age is not possible, please refresh the page and try again! 🍕`)
+        exit(1)   
+    }
   
-  let age =""
-  
-  if (ageInput >=18 && ageInput<=120) { age = "an adult",
-    alert (`You are ordering ${age} size portion. That will be 150 SEK. Click 'OK' to continue 👉`)
-  } else if (ageInput>=0 && ageInput<18) { age ="a child"
-    alert (`You are ordering ${age} size portion. That will be 75 SEK. Click 'OK' to continue 👉`)
-  } else {
-    alert("Invalid choice, please try again! 🍕")
-    exit(1)
-  }
-  
-  /*
   // Step 5 - Order confirmation
   // Your code goes here
   
@@ -178,4 +180,4 @@ let foodSelection = parseInt (
   } else {
     alert("Invalid choice, please try again! 🍕")
     exit(1)
-  }*/
+  }
