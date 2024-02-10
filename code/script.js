@@ -27,7 +27,7 @@ const foodType = parseInt(
 
 let foodSelected;
 
-//Depending on which number the user choose above, the if statement will check if any of the if, else if och else statements is true and "create" a new variable with a new value that represent the number.
+//Depending on which number the user choose above, the if statement will check if any of the if, else if och else statements is true and "create" a new variable with a new value that represent the number. Giving the number a name.
 
 if (foodType === 1) {
    foodSelected = "Pizza";
@@ -50,6 +50,8 @@ alert(`You chosed ${foodSelected}`);
 // Step 3 - Subtype choice
 
 let pizzaSelected;
+
+//presents a new menu depending on which food type that was selected, and a nested if-statement to declare the food options number with a name.
 
 if (foodType === 1) {
    const foodOption = parseInt(
