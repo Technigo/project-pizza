@@ -9,8 +9,12 @@ window.addEventListener("load", function () {
   ];
   const saladSubtypes = ["Ceaser Salad", "Caprese Salad", "Greek Salad"];
   let foodSubtypes = [];
+  let foodChoice;
+  let userAge;
+  let price;
+  let confirmOrder;
 
-  // Step 1 - Welcome and introduction
+  // Welcome and introduction
   alert(
     `Welcome to our Javascript Pizzeria. Ready to Start? 
     - Click 'OK' to begin.`
@@ -20,20 +24,20 @@ window.addEventListener("load", function () {
     // Store name in variable and greet new user
     const username = prompt(`Please enter your name:`);
 
+    // Check if the username is correct with no numbers or empty string
     if (username === "") {
       alert(`Oops, no name was entered.`);
       continue;
     } else if (!isNaN(parseInt(username))) {
-      alert(`Oops, no numbers are aloud.`);
+      alert(`Oops, no numbers are allowed in the name.`);
     } else {
       alert(`Nice to meet you, ${username}!`);
       break;
     }
   }
 
-  let foodChoice;
   while (true) {
-    // Step 2 - Food choice
+    // Make user select food type
     foodChoice = parseInt(
       prompt(`
     What type of food would you like to order?
@@ -46,6 +50,7 @@ window.addEventListener("load", function () {
   `)
     );
 
+    // Replace number with corresponding food type
     switch (foodChoice) {
       case 1:
         foodChoice = foodTypes[0];
@@ -64,16 +69,7 @@ window.addEventListener("load", function () {
     break;
   }
 
-  // Step 3 - Subtype choice
-  // const pizzaSubtypes = ["Napolitana", "Hawaian", "Pepperoni"];
-  // const pastaSubtypes = [
-  //   "Spaghetti Carbonara",
-  //   "Fettucine Alfredo",
-  //   "Cheesy Tortellini",
-  // ];
-  // const saladSubtypes = ["Ceaser Salad", "Caprese Salad", "Greek Salad"];
-  // let foodSubtypes = [];
-
+  // Make user select food subtype
   switch (foodChoice) {
     case foodTypes[0]:
       foodSubtypes = pizzaSubtypes;
@@ -122,10 +118,8 @@ window.addEventListener("load", function () {
     break;
   }
 
-  let userAge;
-  let price;
   while (true) {
-    // Step 4 - Age
+    // Ask user if adult or child
     userAge = parseInt(
       prompt(`Is this food for a child or adult? Type your age:`)
     );
@@ -152,7 +146,6 @@ window.addEventListener("load", function () {
     break;
   }
 
-  let confirmOrder;
   while (true) {
     // Ask user to confirm order
     confirmOrder = parseInt(
@@ -167,7 +160,7 @@ window.addEventListener("load", function () {
 `)
     );
 
-    // Step 5 - Order confirmation
+    // Order confirmation
     switch (confirmOrder) {
       case 1:
         alert(`
