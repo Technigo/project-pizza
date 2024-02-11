@@ -80,18 +80,29 @@ alert ((`Nice one!`))
 // Step 4 - Age
 // Your code goes here
 
-//Boolean
-prompt((`
-Are you ordering a meal for an adult? Please enter your age:`
-))
+let age = prompt 
+  (`Are you ordering a meal for a child or an adult? Please enter your age:`)
+  
+let price
 
-if (age <= 15)
-alert ((`Hey kiddo, you get a discount!`))
+if (age <= "18"){
+alert (`Hey kiddo, you got it!`)
+age = "child"
+price = 50
+}
 
-else if (age >=16)
-  alert ((`Adult meal it is!`))
+else if (age >= "19"){
+alert (`Adult meal it is!`)
+age = "adult"
+price = 100
+}
+
 
 console.log ("age", age)
 
+
 // Step 5 - Order confirmation
 // Your code goes here
+let orderConfirmation = prompt (`
+Your ${age} ${foodChoice} is just about to get made for the price of ${price}
+`)
