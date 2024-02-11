@@ -44,12 +44,6 @@ console.log ("plate number", foodChoice
 // Step 3 - Subtype choice
 // Your code goes here
 
-
-//let modifyOptions = parseInt 
-//I struggled a lot with finding a variable for the following prompts
-//til I realised it was absolutely unneccesary
-//I understand that the JS runs all statements until the end
-
 if (foodChoice === 1)
 prompt((`
 Let's pimp your Pizza with:
@@ -82,20 +76,20 @@ alert ((`Nice one!`))
 // Step 4 - Age
 // Your code goes here
 
-let age = prompt 
-  (`Are you ordering a meal for a child or an adult? Please enter your age:`)
-let price
-
-if (age >"1"){
-  alert (`Hey kiddo, you got it!`)
-  age = "child"
-  price = "50 SEK"
-  }
+  let age = prompt(
+    `Are you ordering a meal for a child or an adult? Please enter your age:`)
+  let price
   
-  else if (age >= "18"){
-  alert (`Adult meal it is!`)
-  age = "adult"
-  price = "100 SEK"
+  if (age <= 17) {
+    alert (`Child meal it is!`)
+    age = "child"
+    price = "50 SEK"
+    
+
+  } else if (age >= 18) {
+    alert (`Adult meal it is!`)
+    age = "adult"
+    price = "100 SEK"
   }
 
 
