@@ -31,7 +31,7 @@ if (foodSelection === "1") {
 } else if (foodSelection === "2") {
   selectedFood = "Pasta"
 } else if (foodSelection === "3") {
-  selectedFood = "Sallad"
+  selectedFood = "Salad"
 } else {
   alert("Number input is invalid!☹️ please return and select a valid number.")
   exit(1)
@@ -41,12 +41,13 @@ alert(`You choose ${selectedFood}, Yummy!😃`)
 
 
 
+
 // Step 3 - Subtype choice
 
 let aSubtype = ""
 
 
- if (foodSelection === "1") {selectedSubtype = prompt(`Which type of pizza do you want to order?🍕\n (please select the pizza of your choice with the corresponding number )
+ if (foodSelection === "1") {selectedSubtype = prompt(`Which type of pizza do you want to order?🍕\n (please select the pizza of your choice with the corresponding number)
   1 - Pizza Margharita
   2 - Pizza Vegetariana
   3 - Pasta Capriccosa`)
@@ -80,10 +81,10 @@ if (selectedSubtype === "1") {
      }
 }
 
-if (foodSelection === "3") {selectedSubtype = prompt(`Which type of Sallad do you want to order?🥗\n(please select the sallad of your choice with the corresponding number )
- 1 - Caesar Sallad
- 2 - Scampi Sallad
- 3 - Avocado Sallad`)
+if (foodSelection === "3") {selectedSubtype = prompt(`Which type of Salad do you want to order?🥗\n(please select the salad of your choice with the corresponding number )
+ 1 - Caesar Salad
+ 2 - Scampi Salad
+ 3 - Avocado Salad`)
 
 if (selectedSubtype === "1") {
  aSubtype = "Caesar Sallad"
@@ -124,7 +125,6 @@ alert (`You have selected a ${aSubtype} with a total of ${price}$\n`)
 } else if (age <= 15)  {price = 6
 alert (`You have selected a ${aSubtype} with a total of ${price}$\n`)
 }
-
 
 
 finalConfirmation = prompt (`Do you want to confirm this order: One ${aSubtype} ${price}$\n
