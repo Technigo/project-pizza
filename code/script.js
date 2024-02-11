@@ -34,7 +34,8 @@ switch (mainChoice) {
     foodCategory= "Soup";
     break;
   default:
-    alert("Invalid choice. Please select a valid number");
+    alert("Invalid choice. Please select a valid number"
+    );
 }
 
 // Confirmation of Category
@@ -65,7 +66,8 @@ else if (foodCategory === "Soup") {
      Choose from:
   1 - Pumpkin Soup
   2 - Veggie Soup
-  3 - Chicken Soup`);
+  3 - Chicken Soup`
+  );
 }
 
 let pastaType;
@@ -109,6 +111,64 @@ alert (`You´ve chosen ${soupType}`);
 }
 // Step 4 - Age
 // Your code goes here
+let age = prompt(
+  `Are you ordering for a child 👦🏻 or an adult👩🏻‍🦰👨🏻?
+  Please type your age:`,
+);
 
+let pizzaSize = age >= "18" ? "One adult sized" : "One child sized";
+let pastaSize = age >= "18" ? "One adult sized" : "One child sized";
+let soupSize = age >= "18" ? "One adult sized" : "One child sized";
+
+let confirmation;
+if (foodCategory === "Pasta" && age >= "18") {
+  confirmation = prompt(
+    `${pastaSize} ${pastaType} will be prepared for you. That'll be €15.
+Are you sure you want to order this?
+Please enter a number to confirm:
+1 - 🟢Yes
+2 - 🔴No`,
+  );
+} else if (foodCategory === "Pizza" && age >= "18") {
+  confirmation = prompt(
+    `${pizzaSize} ${pizzaType} will be prepared for you. That'll be €15.
+Are you sure you want to order this?
+Please enter a number to confirm:
+1 - 🟢Yes
+2 - 🔴No`,
+  );
+} else if (foodCategory === "Soup" && age >= "18") {
+  confirmation = prompt(
+    `${soupSize} ${soupType} will be prepared for you. That'll be €15.
+Are you sure you want to order this?
+Please enter a number to confirm:
+1 - 🟢Yes
+2 - 🔴No`,
+  );
+}if (foodCategory === "Pasta" && age < "18") {
+  confirmation = prompt(
+    `${pastaSize} ${pastaType} will be prepared for you. That'll be €10.
+Are you sure you want to order this?
+Please enter a number to confirm:
+1 - 🟢Yes
+2 - 🔴No`,
+  );
+}else if (foodCategory === "Pizza" && age < "18") {
+  confirmation = prompt(
+    `${pizzaSize} ${pizzaType} will be prepared for you. That'll be €10.
+Are you sure you want to order this?
+Please enter a number to confirm:
+1 - 🟢Yes
+2 - 🔴No`,
+  );
+}else if (foodCategory === "Soup" && age < "18") {
+  confirmation = prompt(
+    `${soupSize} ${soupType} will be prepared for you. That'll be €10.
+Are you sure you want to order this?
+Please enter a number to confirm:
+1 - 🟢Yes
+2 - 🔴No`,
+  );
+} 
 // Step 5 - Order confirmation
 // Your code goes here
