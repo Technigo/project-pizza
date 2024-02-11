@@ -6,8 +6,13 @@ alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
 
+// User Name Entry
+let userName = prompt("Please enter your name:", "Joe Biden");
+alert(`👋😀 Hello ${userName} nice to see you!`);
+
 // Step 2 - Food choice
 // Your code goes here
+
 
 // Step 3 - Subtype choice
 // Your code goes here
