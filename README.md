@@ -1,6 +1,6 @@
 # Project Name
 
-Here is my project is pizza ordering. I made it by javascript if-else if and switch. 
+Here is my project - pizza. People can order food from this website. 
 
 ## The problem
 
