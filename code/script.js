@@ -22,6 +22,20 @@ let mainChoice = prompt(
 
 // Step 3 - Subtype choice
 // Your code goes here
+let foodCategory;
+switch (mainChoice) {
+  case "1":
+    foodCategory = "Pasta";
+    break;
+  case "2":
+    foodCategory = "Pizza";
+    break;
+  case "3":
+    foodCategory= "Soup";
+    break;
+  default:
+    alert("Invalid choice. Please select a valid number");
+}
 
 // Step 4 - Age
 // Your code goes here
