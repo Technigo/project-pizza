@@ -9,15 +9,14 @@ alert(
 let userName = prompt("Hi! What's your name?"
 )
 if (userName != null)
-  console.log 
   alert((`Hi, ${userName}! Get ready to place your food order!`)
   )
 
 
 // Step 2 - Food choice
 // Your code goes here
-let foodChoice = parseInt (
-prompt (`
+
+let foodChoice = parseInt (prompt (`
   What would you like to eat?
   1 - Pizza
   2 - Pan Pizza
@@ -85,16 +84,16 @@ let age = prompt
   
 let price
 
-if (age <= "18"){
+if (age >"1"){
 alert (`Hey kiddo, you got it!`)
 age = "child"
-price = 50
+price = "50 SEK"
 }
 
-else if (age >= "19"){
+else if (age >= "18"){
 alert (`Adult meal it is!`)
 age = "adult"
-price = 100
+price = "100 SEK"
 }
 
 
@@ -103,6 +102,18 @@ console.log ("age", age)
 
 // Step 5 - Order confirmation
 // Your code goes here
-let orderConfirmation = prompt (`
-Your ${age} ${foodChoice} is just about to get made for the price of ${price}
-`)
+let orderConfirmation = parseInt (
+prompt (`
+Your ${age} meal for the price of ${price} will soon be prepared.
+Are you shure you want to order?
+Please enter a number:
+1 - for YES
+2 - for NO`))
+
+if (orderConfirmation === 1) {
+  alert (`Thank you! Your meal is being prepared.`)
+}
+
+else if (orderConfirmation === 2) {
+  alert (`Sorry to see you leave without an order. If you change your mind, you know where to find us!`)
+}
