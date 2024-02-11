@@ -1,5 +1,18 @@
 // Start here
 
+const mainType = ["Pizza", "Pasta", "Salad"];
+
+const pizzaType = ["Napolitana", "Hawaian", "Pepperoni"];
+const pastaType = [
+  "Spaghetti Carbonara",
+  "Fettuccine Alfredo",
+  "Cheesy Tortellini",
+];
+const saladType = ["Caesar Salad", "Caprese Salad", "Greek Salad"];
+
+const angryChief =
+  "The chief gets angry: You aren't choosing carefully! No food for you!";
+
 // Step 1 - Welcome and introduction
 // Your code goes here
 alert(
@@ -18,137 +31,55 @@ if (userName.length === 0) {
 // Your code goes here
 let userInput = prompt(
   `What type of food would you like to order?Enter a number:
-     1 - Pizza
-     2 - Pasta
-     3 - Salad`
+     1 - ${mainType[0]}
+     2 - ${mainType[1]}
+     3 - ${mainType[2]}`
 );
 
 let orderNumber = parseInt(userInput);
 let mealType;
+const mainTypeIndex = orderNumber - 1;
 
-switch (orderNumber) {
-  case 1:
-    mealType = "Pizza";
-    break;
-
-  case 2:
-    mealType = "Pasta";
-    break;
-
-  case 3:
-    mealType = "Salad";
-    break;
-
-  default:
-    alert("Invaild input. Please choose a number between 1-3.");
-    break;
+if (orderNumber > 0 && orderNumber <= mainType.length) {
+  mealType = mainType[mainTypeIndex];
+  alert(`You've chosen ${mealType}!`);
+} else {
+  alert(`${angryChief}`);
 }
-
-alert(`You've chosen ${mealType}!`);
 
 // Step 3 - Subtype choice
 // Your code goes here
-let subInput;
-let subMealType;
+let subTypeArray;
 
 switch (orderNumber) {
   case 1:
-    subInput = prompt(
-      `Select a Pizza type: 
-      Enter a number:
-      1 - Napolitana
-      2 - Hawaian
-      3 - Pepperoni`
-    );
-
-    let pizzaType = parseInt(subInput);
-
-    switch (pizzaType) {
-      case 1:
-        subMealType = "Napolitana";
-        break;
-
-      case 2:
-        subMealType = "Hawaian";
-        break;
-
-      case 3:
-        subMealType = "Pepperoni";
-        break;
-
-      default:
-        alert("Invaild pizza type choice.");
-        break;
-    }
-
+    subTypeArray = pizzaType;
     break;
 
   case 2:
-    subInput = prompt(
-      `Select a Pasta type: 
-      Enter a number:
-      1 - Spaghetti Carbonara
-      2 - Fettuccine Alfredo
-      3 - Cheesy Tortellini`
-    );
-
-    let pastaType = parseInt(subInput);
-
-    switch (pastaType) {
-      case 1:
-        subMealType = "Spaghetti Carbonara";
-        break;
-
-      case 2:
-        subMealType = "Fettuccine Alfredo";
-        break;
-
-      case 3:
-        subMealType = "Cheesy Tortellini";
-        break;
-
-      default:
-        alert("Invaild pasta type choice.");
-        break;
-    }
-
+    subTypeArray = pastaType;
     break;
 
   case 3:
-    subInput = prompt(
-      `Select a Salad type: 
-      Enter a number:
-      1 - Caesar Salad
-      2 - Caprese Salad
-      3 - Greek Salad`
-    );
-
-    let saladType = parseInt(subInput);
-
-    switch (saladType) {
-      case 1:
-        subMealType = "Caesar Salad";
-        break;
-
-      case 2:
-        subMealType = "Caprese Salad";
-        break;
-
-      case 3:
-        subMealType = "Greek Salad";
-        break;
-
-      default:
-        alert("Invaild salad type choice.");
-        break;
-    }
-
+    subTypeArray = saladType;
     break;
 
   default:
-    alert(`Hmm..something seems to be wrong. Please choose again!`);
+    alert(`${angryChief}`);
     break;
 }
+
+let subInput = prompt(
+  `Select a ${mealType} type: 
+      Enter a number:
+      1 - ${subTypeArray[0]}
+      2 - ${subTypeArray[1]}
+      3 - ${subTypeArray[2]}`
+);
+
+let subIndex = parseInt(subInput);
+
+let subMealType = subTypeArray[subIndex - 1];
 
 alert(`You've chosen ${subMealType}!`);
 
@@ -164,14 +95,14 @@ const adultPrice = 15;
 
 let userConfirm;
 
-if (ageNumber > 0 && ageNumber <= 17) {
+if (ageNumber > 0 && ageNumber <= 15) {
   userConfirm = prompt(
     `One child sized ${subMealType} ${mealType} will be prepared for you. That'll be ${childPrice}€. Are you sure you want to order this?
     Enter a number to confirm:
     1 - Yes 
     2 - No`
   );
-} else if (ageNumber > 17) {
+} else if (ageNumber > 15) {
   userConfirm = prompt(
     `One adult sized ${subMealType} ${mealType} will be prepared for you. That'll be ${adultPrice}€. Are you sure you want to order this? 
     Enter a number to confirm: 
@@ -179,7 +110,9 @@ if (ageNumber > 0 && ageNumber <= 17) {
     2 - No`
   );
 } else {
-  alert("Invalid age choice. Please type a number.");
+  alert(
+    "The cheif doesn't understand how old you are and can't decide what size the meal should be."
+  );
 }
 
 // Step 5 - Order confirmation
@@ -192,5 +125,7 @@ if (Number(userConfirm) === 1) {
 } else if (Number(userConfirm) === 2) {
   alert("Alright! Thank you for visiting. See you next time!");
 } else {
-  alert("Invalid number. Please enter number 1 or 2.");
+  alert(
+    "Almost there. But you didn't choose carefully. Now we need to start over again!"
+  );
 }
