@@ -3,8 +3,8 @@ The assigned project for this case is a pizzeria where customers can order vario
 
 ## The problem
 
-For this project, I used the CodePen platform. I downloaded the project guidelines and tried to write the various steps to formulate the variable names and concatenate the commands to execute in the console. I encountered many difficulties during the code development, especially regarding the "age" part. Several times I searched on Google, and on multiple occasions, I followed some suggestions from the AI. I am very satisfied with the result achieved. Finally, I decided to embellish the various messages with emojis.
-
+For this project, I used the CodePen platform. I downloaded the project guidelines and tried to write the various steps to formulate the variable names and concatenate the commands to execute in the console. I encountered many difficulties during the code development, especially regarding the "age" part. Several times I searched on Google, and on multiple occasions, I followed some suggestions from the AI. I am very satisfied with the result achieved. Unfortunately, I still haven't managed to insert the part regarding exit(1).
+Finally, I decided to embellish the various messages with emojis. 
 ## View it live
 
 Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
