@@ -41,7 +41,20 @@ alert(`You choose ${selectedFood} Excellent choice!!`)
 
 // Step 3 - Subtype choice
 // Your code goes here
+let subFoodtype = ""
+let foodName = []
 
+switch (selectedFood) {
+  case "Pizza":
+    subFoodtype = parseInt(prompt
+      `Select what pasta you want 
+   1 - Aribiata
+   2 - Carbonara
+   3 - Bolgonese
+   Please enter the number of your choice:
+   `
+    )
+}
 // Step 4 - Age
 // Your code goes here
 
