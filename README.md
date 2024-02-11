@@ -6,5 +6,4 @@ I used conditional statements and the prompt() method as was recommended to inte
  If I had more time, I would improve the user interface to make it more intuitive and enhance error handling for invalid inputs. 
 
 ## View it live
-
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+https://aquamarine-smakager-2e2e92.netlify.app/
