@@ -7,4 +7,4 @@ For this project, I used the CodePen platform. I downloaded the project guidelin
 Finally, I decided to embellish the various messages with emojis. 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+You can find the project here: https://lorenzos-pizzeria.netlify.app/
