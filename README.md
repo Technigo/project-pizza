@@ -7,4 +7,4 @@ This project is a web-based application designed to simulate a food ordering sys
 The main challenge was to create an intuitive and user-friendly interface that guides the user through the ordering process without overwhelming them with options or requiring extensive input. 
 
 ## View it live
-
+https://stockholm-pizzaria.netlify.app
