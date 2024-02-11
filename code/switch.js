@@ -1,7 +1,7 @@
 // Start here
 
-// Step 1 - Welcome and introduction
-// Your code goes here
+// Welcome and introduction
+
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 );
@@ -9,10 +9,9 @@ alert(
 const firstName = prompt(`What's your name?`);
 alert(`Hello ${firstName}! 👋
 Let's get started with your order.`);
-console.log(`Hello ${firstName}! 👋`);
+console.log("Customer name:", firstName);
 
-// Step 2 - Food choice
-// Your code goes here
+// Food choice and subtype
 
 const foodCategory = parseInt(
   prompt(
@@ -25,34 +24,13 @@ const foodCategory = parseInt(
 );
 
 let categoryName;
+let foodName = "";
 
 switch (foodCategory) {
   case 1:
     categoryName = "Pizza";
-    break;
-  case 2:
-    categoryName = "Pasta";
-    break;
-  case 3:
-    categoryName = "Salad";
-    break;
-  default:
-    alert(
-      "Mamma Mia! This number is not in our menu. Please start again and select a valid option. Arrivederci! 👋"
-    );
-    exit(1);
-}
-alert(`You selected ${categoryName}!`);
-
-console.log("Food Category", foodCategory, categoryName);
-
-// Step 3 - Subtype choice
-// Your code goes here
-
-let foodName;
-
-switch (foodCategory) {
-  case 1:
+    console.log("Food Category:", foodCategory, categoryName);
+    alert(`You selected ${categoryName}!`);
     const pizzaType = parseInt(
       prompt(`What kind of pizza would you like?
     1 - Pizza Margherita
@@ -72,18 +50,23 @@ switch (foodCategory) {
         break;
       default:
         alert(
-          "Mamma Mia! This number is not in our menu. Please start again and select a valid option. Arrivederci! 👋"
+          "Mamma Mia! This number is not in our menu. Please start again and select a number between 1 and 3. Arrivederci! 👋"
         );
         exit(1);
     }
+    break;
   case 2:
+    categoryName = "Pasta";
+    console.log("Food Category:", foodCategory, categoryName);
+    alert(`You selected ${categoryName}!`);
     const pastaType = parseInt(
       prompt(`What kind of pasta would you like?
-  1 - Spaghetti Bolognese
-  2 - Fettucine Alfredo
-  3 - Pasta Arrabbiata
-  Please enter the number of your choice`)
+    1 - Spaghetti Bolognese
+    2 - Fettucine Alfredo
+    3 - Pasta Arrabbiata
+    Please enter the number of your choice`)
     );
+
     switch (pastaType) {
       case 1:
         foodName = "Spaghetti Bolognese";
@@ -96,18 +79,23 @@ switch (foodCategory) {
         break;
       default:
         alert(
-          "Mamma Mia! This number is not in our menu. Please start again and select a valid option. Arrivederci! 👋"
+          "Mamma Mia! This number is not in our menu. Please start again and select a number between 1 and 3. Arrivederci! 👋"
         );
         exit(1);
     }
+    break;
   case 3:
+    categoryName = "Salad";
+    console.log("Food Category:", foodCategory, categoryName);
+    alert(`You selected ${categoryName}!`);
     const saladType = parseInt(
       prompt(`What kind of salad would you like?
-    1 - Insalata Caprese
-    2 - Salata Panzanella
-    3 - Insalata di Polpo
-    Please enter the number of your choice`)
+      1 - Insalata Caprese
+      2 - Salata Panzanella
+      3 - Insalata di Polpo
+      Please enter the number of your choice`)
     );
+
     switch (saladType) {
       case 1:
         foodName = "Insalata Caprese";
@@ -120,23 +108,38 @@ switch (foodCategory) {
         break;
       default:
         alert(
-          "Mamma Mia! This number is not in our menu. Please start again and select a valid option. Arrivederci! 👋"
+          "Mamma Mia! This number is not in our menu. Please start again and select a number between 1 and 3. Arrivederci! 👋"
         );
         exit(1);
     }
+    break;
+  default:
+    alert(
+      "Mamma Mia! This number is not in our menu. Please start again and select a number between 1 and 3. Arrivederci! 👋"
+    );
+    exit(1);
 }
 alert(`You selected ${foodName}!`);
+console.log("Selected dish:", foodName);
 
-// Step 4 - Age
-// Your code goes here
+// Portion size and price
+
+let ageCategory;
+let foodPrice;
 
 const age = prompt(`Is the meal intended for a child or an adult?
 Please enter your age`);
 if (age <= 12) {
-  alert(`A child portion of ${foodName}, that'll be 10 €.`);
+  ageCategory = "A child";
+  foodPrice = "10 €";
 } else {
-  alert(`An adult portion of ${foodName}, that'll be 15 €.`);
+  ageCategory = "An adult";
+  foodPrice = "15 €";
 }
+console.log("Age:", age, "Age category:", ageCategory, "Price:", foodPrice);
+alert(`${ageCategory} portion of ${foodName}, that'll be ${foodPrice}.`);
+
+// Confirmation
 
 const confirmation = parseInt(
   prompt(`Do you want to confirm this order?
@@ -145,20 +148,18 @@ const confirmation = parseInt(
 Please enter a number`)
 );
 if (confirmation === 1) {
-  console.log("Order confirmed");
-} else if (confirmation === 2) {
-  console.log("Order cancelled");
-}
-
-// Step 5 - Order confirmation
-// Your code goes here
-
-if (confirmation === 1) {
   alert(
     `Thank you for your order. Your ${foodName} will be prepared. See you soon! ⏲`
   );
+  console.log("Order confirmed");
 } else if (confirmation === 2) {
   alert(
-    `Order cancelled. If you change your mind, please revisit JavaScript Pizzeria. Bye 👋`
+    `Order cancelled. If you change your mind, please revisit JavaScript Pizzeria. Arrivederci 👋`
   );
+  console.log("Order cancelled");
+} else {
+  alert(
+    "Invalid input. Please start again and select a number between 1 and 2. Arrivederci! 👋"
+  );
+  exit(1);
 }
