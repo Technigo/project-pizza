@@ -172,3 +172,8 @@ Please enter a number to confirm:
 } 
 // Step 5 - Order confirmation
 // Your code goes here
+if (confirmation === "1") {
+  alert(`✅ Thank you for your order, your ${pastaType || pizzaType || soupType} will be prepared soon!👌`);
+} else if (confirmation === "2") {
+  alert(`Ok, come back if you change your mind!✋😊 `);
+}
