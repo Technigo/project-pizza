@@ -3,7 +3,7 @@
 // Step 1 - Welcome and introduction
 // Your code goes here
 alert(
-  `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
+  `Welcome to our Javascript Pizzeria. Ready to place an order? - Click 'OK' to begin.`
 )
 const clientName = prompt("Please start by writing your name")
 
@@ -37,7 +37,7 @@ if (foodChoice === 1) {
 }
 
 console.log(selectedFood)
-alert(`You choose ${selectedFood} Excellent choice!!`)
+alert(`${selectedFood}! Excellent choice! In the next step please select what typ of ${selectedFood} you want`)
 
 // Step 3 - Subtype choice
 // Your code goes here
@@ -48,7 +48,7 @@ switch (selectedFood) {
   case "Pizza":
     subFoodtype = parseInt
       (prompt(
-        `Select what pasta you want 
+        `Select what pizza you want 
    1 - Margarita
    2 - Vesuvio
    3 - Quattro formaggi
@@ -63,36 +63,55 @@ switch (selectedFood) {
     subFoodtype = parseInt
       (prompt(
         `Select what pasta you want 
- 1 - Aribiata
+ 1 - Arrabiata
  2 - Carbonara
  3 - Bolgonese
  Please enter the number of your choice:
  `
       )
       )
-    foodName = ["Aribiata", "Carbonara", "Bolognese"]
+    foodName = ["Arrabiata", "Carbonara", "Bolognese"]
     break
 
   case "Salad":
     subFoodtype = parseInt
       (prompt(
-        `Select what pasta you want 
+        `Select what salad you want 
  1 - Chicken salad
  2 - Greek salad
- 3 - Salomon salad
+ 3 - Salmon salad
  Please enter the number of your choice:
  `
       )
       )
-    foodName = ["Chicken salad", "Greek salad", "Salomon salad"]
+    foodName = ["Chicken salad", "Greek salad", "Salmon salad"]
     break
 
   default:
     alert("Sorry - you need to make a choice in order to continue. Please start over.")
+    exit(1)
 }
 
 // Step 4 - Age
 // Your code goes here
+
+console.log("portion size", portionSize)
+
+let adultChild
+switch (portionSize) {
+  case 1:
+    adultChild = "adult size"
+    break
+
+  case 2:
+    adultChild = "child size"
+    break
+
+  default:
+    alert("invalid choice")
+    exit(1)
+}
+
 
 // Step 5 - Order confirmation
 // Your code goes here
@@ -100,5 +119,12 @@ console.log("food name", foodName)
 
 if (foodName === 1) {
   alert
-    `Excellent choise! You have ordered ${foodName[0]} and it will be ready in 10-15 minutes. Welcome!`
+    `Excellent choice! You have ordered a ${adultChild}${foodName[0]} and it will be ready in 10-15 minutes. Welcome!`
+} else if (foodName === 2) {
+
+  `Excellent choice! You have ordered a ${adultChild}${foodName[1]} and it will be ready in 10-15 minutes. Welcome!`
+} else if (foodName === 3) {
+
+  `Excellent choice! You have ordered a ${adultChild}${foodName[2]} and it will be ready in 10-15 minutes. Welcome!`
 }
+
