@@ -30,13 +30,16 @@ if (foodChoice === 1)
 )
 
 else if (foodChoice === 2)
-  alert (`Great choice, ${userName}. You'll now get the opportunity to pimp your Pan Pizza.`)
+  alert (`Great choice, ${userName}. You'll now get the opportunity to pimp your Pan Pizza.`
+)
 
 else if (foodChoice === 3)
   alert (`Great choice, ${userName}, you'll now get the opportunity to 
-  pimp your Pasta.`) 
+  pimp your Pasta.`
+  ) 
 
-console.log ("plate number", foodChoice)
+console.log ("plate number", foodChoice
+)
 
 // Step 3 - Subtype choice
 // Your code goes here
@@ -81,20 +84,19 @@ alert ((`Nice one!`))
 
 let age = prompt 
   (`Are you ordering a meal for a child or an adult? Please enter your age:`)
-  
 let price
 
 if (age >"1"){
-alert (`Hey kiddo, you got it!`)
-age = "child"
-price = "50 SEK"
-}
-
-else if (age >= "18"){
-alert (`Adult meal it is!`)
-age = "adult"
-price = "100 SEK"
-}
+  alert (`Hey kiddo, you got it!`)
+  age = "child"
+  price = "50 SEK"
+  }
+  
+  else if (age >= "18"){
+  alert (`Adult meal it is!`)
+  age = "adult"
+  price = "100 SEK"
+  }
 
 
 console.log ("age", age)
@@ -105,7 +107,7 @@ console.log ("age", age)
 let orderConfirmation = parseInt (
 prompt (`
 Your ${age} meal for the price of ${price} will soon be prepared.
-Are you shure you want to order?
+Are you sure you want to order?
 Please enter a number:
 1 - for YES
 2 - for NO`))
