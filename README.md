@@ -1,11 +1,10 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project is a web-based application designed to simulate a food ordering system for a fictional Pizzeria. The primary goal is to provide an interactive experience for users to select their preferred food items, specify details such as type and quantity, and complete their order with an automated pricing system based on their selection and user category (adult or child).
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The main challenge was to create an intuitive and user-friendly interface that guides the user through the ordering process without overwhelming them with options or requiring extensive input. 
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
