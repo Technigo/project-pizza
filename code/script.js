@@ -59,11 +59,11 @@ if (selectedFood === "Pizza")
 let selectedPizza = ""
 
 if (pizzaChoice === "1"){
-  selectedPizza = "Margherita"
+  selectedPizza = "Pizza Margherita"
 } else if (pizzaChoice === "2") {
-  selectedPizza = "Salsiccia"
+  selectedPizza = "Pizza Salsiccia"
 } else if (pizzaChoice === "3") {
-  selectedPizza = "Quattro Formaggi"
+  selectedPizza = "Pizza Quattro Formaggi"
 } else {
     alert("Invalid choice, please try again.")
     exit(1)
