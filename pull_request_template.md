@@ -1,10 +1,7 @@
 ## Netlify link
-Add your Netlify link here like this (update with the correct one):
 
-https://my-netlify-link.netlify.app
-
-PS. Don't forget to add it in your readme as well.
+https://cosmic-ganache-90f1e4.netlify.app/
 
 ## Collaborators
-Add your collaborators here. Write their GitHub usernames in square brackets. If there's more than one, separate them with a comma, like this:
-[github-username-1, github-username-2]
+
+Individual project.
