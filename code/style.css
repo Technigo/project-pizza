@@ -6,8 +6,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #0026ff;
-  color: white;
+  background-image: url("/pexels.jpg");  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,3 +17,5 @@ body {
 p {
   font-size: 1.5em;
 }
+
+
