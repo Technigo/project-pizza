@@ -1,11 +1,16 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week was my first time coding in JS, and it was a great start! 
+This project is a JS pizzeria, where you can "order" from a menu by navigating through interactive windows in the browser.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The main problem was starting from zero to learn the different data types in JS, how to use them, and implement them...
+I did follow Technigo's recommendations as well as ChatGPT as a consistent assistant. 
+I see the improvement I have done using VSC shortcuts, and this is making my coding experience much more comfortable and enjoyable.
 
-## View it live
+In this practice, we used some data types like variables, if, else if, else, switch, and some methods. 
+I look forward to knowing more about arrays, functions, and objects and how to implement them.
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+
+## View it live [here](https://js-pizzeria.netlify.app/)
