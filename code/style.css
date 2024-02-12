@@ -6,8 +6,8 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #0026ff;
-  color: white;
+  background-image: linear-gradient(to right, red , yellow);
+  color: rgb(255, 254, 234);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,6 +15,53 @@ body {
   min-height: 100vh;
 }
 
+h1 {
+  position: absolute;
+  top: 35%;
+  align-self: center;
+  background-color: rgba(255, 0, 0, 0.404);
+  padding: 4rem 3rem;
+  border: 6px solid;
+  border-color: rgb(255, 230, 147);
+  border-radius: 50%;
+}
+
 p {
   font-size: 1.5em;
+  position: absolute;
+  top: 60%;
+  align-self: center;
+  text-align: center;
+  background-color: rgba(255, 0, 0, 0.404);
+  padding: 4rem 3rem;
+  border: 4px solid;
+  border-color: rgb(255, 230, 147);
+  border-radius: 50%;
+}
+
+.background-img {
+  position:absolut;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.background-img img {
+ width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .background-img {
+    height: 100vh;
+    object-fit: cover;
+  }
+  p {
+    top: 50%;
+    font-size: 0.9em;
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 0.9em;
+    padding: 1rem;
+  }
 }
