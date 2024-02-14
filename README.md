@@ -8,4 +8,4 @@ Started to work mainly with the let and after the Q&A changed to const. Kept it 
 
 ## View it live
 
-Struggeling really much to get it all to work with github and netlify.
+https://pizzeria-penguin.netlify.app/
