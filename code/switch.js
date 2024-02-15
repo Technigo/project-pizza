@@ -20,8 +20,6 @@ switch (customerName) {
      break;
 };
 
-console.log("Customer name: ", customerName);
-
 //step 1.b, Greet customer
 customerName = customerName === "" ? "friend" : customerName;
 alert(`YEY, great to see you ${customerName}!`);
@@ -38,8 +36,6 @@ let foodChoice = prompt(
   2 - Pasta
   3 - Salad`
 );
-
-console.log("Food input: ", foodChoice);  // Log to console
 
 // 2.b Alert choice confirmation
 // Convert menu number to text
@@ -98,8 +94,6 @@ switch (foodChoice) {
     };
 };
 
-console.log("Food choice: ", foodChoice);  // Log to console
-
 // Step 3 - Subtype choice
 // Your code goes here
 
@@ -115,8 +109,6 @@ switch (foodChoice) {
       
       1 - With pineapple
       2 - Without pineapple`);
-
-      console.log("Subtype input: ", subType);  // Log to console
 
     // Convert menu number to text
     switch (subType) {
@@ -149,8 +141,6 @@ switch (foodChoice) {
      2 - Penne`
     );
 
-    console.log("Subtype input: ", subType);  // Log to console
-
     // Convert menu number to text
     switch (subType) {
       case "1":
@@ -182,8 +172,6 @@ switch (foodChoice) {
       2 - Vegetarian`
     );
 
-    console.log("Subtype input: ", subType);  // Log to console
-
     // Convert menu number to text
     switch (subType) {
       case "1":
@@ -207,8 +195,6 @@ switch (foodChoice) {
     break;
 };
 
-console.log("Sub type: ", subType);  // Log to console
-
 // 3.b Alert subtype choice
 alert(`Awesome, ${subType} it is.`);
 
@@ -222,13 +208,9 @@ const age = prompt(
   How old are you, ${customerName}?`
 );
 
-console.log("Age input: ", age);  // Log to console
-
 // Descide child or adult size portion
 const isChild = (age < 18); // Is the customer under 18 yo?
 const portionSize = isChild ? "A child's" : "An adult's"; // Set portion size to dispay in order message
-
-console.log("Portion size: ", portionSize);  // Log to console
 
 // Set price
 let price;
@@ -247,8 +229,6 @@ switch (foodChoice) {
     break;
 };
 
-console.log("Price: ", price); // Log to console
-
 // Step 5 - Order confirmation
 // Your code goes here
 
@@ -260,8 +240,6 @@ const orderConfirmation = prompt(
   - NO`
 );
 
-console.log("Order confirmation: ", orderConfirmation); // Log to console
-
 // Display thank you
 switch (orderConfirmation) {
   case "YES":
@@ -272,18 +250,15 @@ switch (orderConfirmation) {
       ${portionSize} portion of ${foodChoice} ${subType} for ${price} SEK`;
     };
     displayOrder();
-    console.log("Order confirmed"); // Log to console
     break;
 
   case "NO":
   case null:
     alert("No worries, come back another time.");
-    console.log("Order cancelled"); // Log to console
     break;
 
   default:
     alert(`We'll take that as a yes, ${customerName}. Your order is on it's way!`)
-    console.log("Order confirmed by default"); // Log to console
     break;
 }
 
