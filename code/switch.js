@@ -249,49 +249,6 @@ switch (foodChoice) {
 
 console.log("Price: ", price); // Log to console
 
-// 4.b Alert price
-alert(`${portionSize} portion is ${price} SEK.`);
-
-// 4.c Prompt price confirmation
-let priceConfirmation = prompt(
-  `Is that OK?
-
-  - YES
-  - NO`
-);
-console.log("Price confirmation: ", priceConfirmation); // Log to console
-
-// Act on price confirmation
-switch (priceConfirmation) {
-  case "YES": // if YES, continue to order confirmation
-    break;
-
-  default: // if NO or nothing, ask if order should be canceled
-    priceConfirmation = prompt(
-      `Ok, do you want to cancel your order?
-    
-      YES - Cancel my order
-      NO - Price is OK`
-    );
-
-    console.log("Cancel order? ", priceConfirmation); // Log to console
-
-    // if "YES" cancel order, otherwise set to confirmed
-    switch (priceConfirmation) {
-      case "YES":
-        priceConfirmation = "NO";
-        alert("Ok, your order is cancelled. Bye!")
-        console.log("Order cancelled"); // Log to console
-        exit(1);
-
-        default:
-          priceConfirmation = "YES";
-          console.log("Continue to order confirmation");
-          break;
-    };  
-    break;
-};
-
 // Step 5 - Order confirmation
 // Your code goes here
 
