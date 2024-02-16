@@ -1,11 +1,14 @@
-# Project Name
+# Project Pizza
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project was started by reading through the instruction and also browsing through the examples.
+Then, I started with the script.js file which contains several IF/ELSE and also the code was a bit repetitive.
+After finishing the script.js, I started working on switch.js and the aim of that is to make the code cleaner and most importantly, change all the IF/ELSE statements into SWITCH statements.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I approached this project by sketching the flowchart. Followed by the flowchart, I started building each block by block. The highlight of this project is I built sort of validation, that prevents the user from proceeding until they input what we deem is valid.
+Moreover, this project used recursive function that is a function calls itself inside itself. Though I might have neglected some technical or backend limitations, it still seems a good practice at least for this small project.
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+Live website on Netlify: https://wens-javascript-pizzeria.netlify.app/
