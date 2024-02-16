@@ -64,7 +64,7 @@ function ageCheck() {
 	let age = parseInt(prompt("How old are you?"));
 
 	if (age <= 0 || age > 124) {
-		alert("invalid");
+		alert("invalid - souls need a body to order and eat pizza");
 		ageCheck();
 	}
 	else if (age <= 5) {
@@ -86,7 +86,6 @@ function ageCheck() {
 		ageCheck();
 	}
 }
-
 
 function checkOut() {
 	let confirm = prompt(`You have ordered: ${order[0]}  \nThe cost is: ${order[1]} ByteCoin \n Do you want to proceed with the order?  \n Type 'Yes' for confirm or 'No' for cancel.`);

@@ -1,5 +1,3 @@
-// Start here
-
 let foodCost;
 let order;
 let age;
@@ -7,7 +5,6 @@ let food;
 let customer;
 
 // Step 1 - Welcome and introduction
-// Your code goes here
 
 alert(
 	`Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
@@ -19,7 +16,6 @@ while (customer === "Type you name here!") {
 };
 
 // Step 2 - Food choice
-// Your code goes here
 
 food = prompt(`Hi ${customer}! \nWhat would you like to eat? \nType 1 for Pizza\n Type 2 for Salad \n Type 3 for Pasta`);
 
@@ -41,7 +37,6 @@ function foodChoice() {
 		food = "pasta";
 		pastaType();
 	}
-	//subType(food);
 }
 
 foodChoice();
@@ -68,7 +63,7 @@ function pizzaType() {
 		food = order;
 		foodCost = 180;
 	}
-	//}
+
 	finalOrder();
 }
 
@@ -121,7 +116,6 @@ function pastaType() {
 	}
 	finalOrder();
 }
-
 // Step 4 - Age
 
 function finalOrder() {
@@ -143,11 +137,9 @@ function finalOrder() {
 		age = 'regular';
 		confirmOrder();
 	}
-
 }
 
 // Step 5 - Order confirmation
-// Your code goes here
 
 function confirmOrder() {
 	let confirm = parseInt(prompt(`You have ordered a ${age} size ${food}. \ncost: ${foodCost} Bytecoin.\nPress 1 if this is correct. \nPress 2 if it's wrong.`));
