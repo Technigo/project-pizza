@@ -1,4 +1,3 @@
-
 // Step 1 - Welcome and introduction
 
 alert(
@@ -6,12 +5,12 @@ alert(
 );
 
 /* Created a function that ensures the value is not null. If the input is null, the function reprompt until it gets the input from the user.
-*/
+ */
 function welcomeGuest() {
   let guestName = prompt("What is your first name?");
   switch (true) {
     case !guestName:
-			// call the function itself and run the function again
+      // call the function itself and run the function again
       welcomeGuest();
       break;
     default:
@@ -24,7 +23,7 @@ welcomeGuest();
 
 // Step 2 - Food choice
 /* Create an object for menu, i.e. main food types and foodSubtypes which contains arrays for each category.
-*/
+ */
 const menu = {
   food: ["Pizza", "Pasta", "Salad"],
   pizza: ["Margherita Pizza", "Pepperoni Pizza", "Veggie Pizza"],
@@ -61,7 +60,9 @@ function getFoodChoice(food) {
       alert(`You've chosen ${menu[food][2]}! - Click 'OK' to procceed.`);
       return menu[food][2];
     default:
-			alert("Unfortunately, what you have chosen is not on our menu. - Click 'OK' to see the menu.")
+      alert(
+        "Unfortunately, what you have chosen is not on our menu. - Click 'OK' to see the menu."
+      );
       return getFoodChoice(food);
   }
 }
@@ -69,7 +70,7 @@ function getFoodChoice(food) {
 // call the function to prompt the first round of food choice
 let foodChoice = getFoodChoice("food");
 /* call the function again to prompt the second round of food choice. The first letter of mainfood is capitalised, hence we need to use the lowercase method to get the correct string that equals the property of menu object.
-*/
+ */
 let foodSubtype = getFoodChoice(foodChoice.toLowerCase());
 
 // Step 4 - Age
@@ -85,7 +86,7 @@ That'll be 99kr.
 // Declare the orderConfirmation variable so the value of this variable can be reassigned within the function and further can be used in the order confirmation part.
 let orderConfirmation;
 /* Created a function to check the age and customise the prompt message based on the range of the age.
-*/
+ */
 function ageCheck(age) {
   switch (true) {
     case Number(age) <= 123 && Number(age) >= 18:
@@ -106,7 +107,7 @@ ageCheck(age);
 
 // Step 5 - order confirmation
 /* Switch conditions to check the status of order confirmation.
-*/
+ */
 switch (orderConfirmation) {
   case "1":
     alert(
