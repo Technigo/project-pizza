@@ -44,7 +44,6 @@ function foodChoice() {
 	//subType(food);
 }
 
-
 foodChoice();
 // Step 3 - Subtype choice
 
@@ -73,7 +72,6 @@ function pizzaType() {
 	finalOrder();
 }
 
-
 function saladType() {
 	order = prompt('Press 1 for Greek salad\npress 2 for Caesar salad \npress 3 for Watermelon salad');
 
@@ -98,7 +96,6 @@ function saladType() {
 	}
 	finalOrder();
 }
-
 
 function pastaType() {
 	order = prompt('Press 1 for Penne pasta\n press 2 for Spaghetti \n press 3 for Gnocchi');
@@ -125,10 +122,7 @@ function pastaType() {
 	finalOrder();
 }
 
-
 // Step 4 - Age
-
-
 
 function finalOrder() {
 
@@ -150,10 +144,7 @@ function finalOrder() {
 		confirmOrder();
 	}
 
-
 }
-
-
 
 // Step 5 - Order confirmation
 // Your code goes here
