@@ -3,7 +3,6 @@ alert(
 
 //user name//
 const userName = prompt("Please enter your name:")
-console.log(userName)
 alert (`Hi ${userName}! Get ready to order! `)
 
 //User selection of food//
@@ -16,8 +15,6 @@ Select your choice:
 Please enter the number of your choice
 `)
 )
-console.log("user choice", userChoice, typeof userChoice)
-
 let selectedMeal = ""
 
 if (userChoice === 1) {
@@ -30,11 +27,10 @@ if (userChoice === 1) {
   alert("Invaild choice, please start again")
 }
 
-console.log("selected meal", selectedMeal)
 alert(`You chose ${selectedMeal} ,exellent choice!`)
 
 //user selection of age//
-let customerType = prompt ("Is the order for a child or an adult?")
+let customerType = prompt ("Is the order for a child or an adult? Please type 'child' or 'adult'. ")
 
 if (customerType === "child") {
   alert("Your price will be 5€")

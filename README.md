@@ -8,4 +8,8 @@ Started to work mainly with the let and after the Q&A changed to const. Kept it 
 
 ## View it live
 
+<<<<<<< HEAD
 https://pizzeria-penguin.netlify.app/
+=======
+
+>>>>>>> 16bb425 (required chages  made)
