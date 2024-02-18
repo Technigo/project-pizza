@@ -8,15 +8,14 @@ alert(`Hi ${name}, it's nice to see you here!`);
 
 // Step 2 - Food choice
 
-const foodType = parseInt(
-  prompt(
-    `What would you like to order?
+const foodType = parseIn;
+prompt(
+  `What would you like to order?
  
        Enter the number of your choice.
        1 - Pizza 
        2 - Hamburger
        3 - Salad`
-  )
 );
 
 //Giving the food type number a name.
