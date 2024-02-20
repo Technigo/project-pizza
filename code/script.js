@@ -22,8 +22,6 @@ const menuSelect = parseInt(
   )
 );
 
-console.log("selected menu value", menuSelect)
-
 let selectedItem
 
 if (menuSelect === 1) {
@@ -101,8 +99,6 @@ if (subTypePizza === 1) {
   exit(1)
 }
 
-console.log("sub type name", subTypeName)
-
 alert(`✨ You chose ${subTypeName} ✨`)
 
 
@@ -137,8 +133,6 @@ if (age >= 13) {
     )
   )
 }
-
-console.log("age and confirmation", age, confirm)
 
 // Step 5 - Order confirmation
 if (confirm === 1 ) {
