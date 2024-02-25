@@ -1,7 +1,3 @@
-### Step 4 - Age
-
-In this iteration, the program should prompt the user to specify if the food is intended for a child or an adult. The `prompt()` method should be used to present the question and get the user's input. Based on the user's answer, an appropriate order message should be constructed. The program should use the `alert()` method to display the order message and the associated cost. The user's confirmation should be obtained using the `prompt()` method.
-
 ### Step 5 - Order confirmation
 
 The final iteration involves confirming the user's order based on their previous choices. The program should evaluate the user's confirmation, and if the user confirms, a thank you message should be displayed using the `alert()` method, indicating that their meal will be prepared. If the user declines, a polite farewell message should be displayed using the `alert()` method, encouraging them to return for future orders.

@@ -120,7 +120,16 @@ alert(`One ${ageType} sized ${dishOfChoice} ${foodOfChoice} costs ${price} Swedi
 
 // Step 5 - Order confirmation
 // Your code goes here
-const confirm = prompt(`Would you like to order a ${dishOfChoice} ${foodOfChoice} (${ageType} meal). Total price of ${price} Swedish kronor. Is this correct?
+const confirm = prompt(`You'd like to order a ${dishOfChoice} ${foodOfChoice} (${ageType} meal). Total price of ${price} Swedish kronor. Is this correct?
 1. Yes
 2. No`
 );
+
+if (confirm === "1") {
+  alert(`Thank you for your order! Your dish will be prepared ASAP!`);
+} else if (confirm === "2") {
+  alert(`We are sorry to hear that. But please know that you're always welcome back to Javascript Pizzeria!`);
+} else {
+  alert(`Please type either 1 for Yes or 2 for No`);
+  exit(1);
+}
