@@ -26,17 +26,17 @@ const typeOfFood = prompt(
 let foodOfChoice = "";
 
 if (typeOfFood === "1") {
-  foodOfChoice = "Pizza"
+  foodOfChoice = "Pizza";
   alert(
   `What a great choice, we love pizza too! You chose ${foodOfChoice}.`
 );
 } else if (typeOfFood === "2") {
-  foodOfChoice = "Pasta"
+  foodOfChoice = "Pasta";
   alert(
     `Mmm our famous homemade pasta. You chose ${foodOfChoice}.`
   );
 } else if (typeOfFood === "3") {
-  foodOfChoice = "Salad"
+  foodOfChoice = "Salad";
   alert(
   `Green and oh so fresh! You chose ${foodOfChoice}.`
 );
@@ -44,6 +44,7 @@ if (typeOfFood === "1") {
   alert(
     `I'm sorry. That's not on the menu. Please select a number between 1-3.`
   );
+  exit(1);
 }
 
 // Step 3 - Subtype choice
@@ -54,20 +55,20 @@ if (foodOfChoice === "Pizza") {
   subtypeChoice = prompt(`What kind of pizza would you like? Type a number 1-3.
   1. Margherita
   2. Capricciosa
-  3. Calzone
-`);
+  3. Calzone`
+);
 } else if (foodOfChoice === "Pasta") {
   subtypeChoice = prompt(`What kind of pasta would you like? Type a number 1-3.
   1. Bolognese
   2. Aglio e olio
-  3. Alfredo
-  `);
+  3. Alfredo`
+  );
 } else if (foodOfChoice === "Salad") {
   subtypeChoice = prompt(`What kind of salad would you like? Type a number 1-3.
   1. Greek
   2. Caesar
-  3. Garden
-  `);
+  3. Garden`
+  );
 }
 
 let dishOfChoice = "";
@@ -111,6 +112,15 @@ alert(`One ${dishOfChoice} ${foodOfChoice} coming up!`);
   
 // Step 4 - Age
 // Your code goes here
+const age = prompt(`Do you want an adult meal or a child meal? Please tell us your age.`);
+let price = (age >= 14) ? 120 : 70;
+let ageType = (age >= 14 ? "adult" : "child");
+
+alert(`One ${ageType} sized ${dishOfChoice} ${foodOfChoice} costs ${price} Swedish kronor`);
 
 // Step 5 - Order confirmation
 // Your code goes here
+const confirm = prompt(`Would you like to order a ${dishOfChoice} ${foodOfChoice} (${ageType} meal). Total price of ${price} Swedish kronor. Is this correct?
+1. Yes
+2. No`
+);
