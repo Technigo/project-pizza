@@ -2,26 +2,23 @@
 
 // Step 1 - Welcome and introduction
 // Your code goes here
-alert(
-  `Welcome to our Javascript Pizzeria. Ready to place an order? - Click 'OK' to begin.`
+alert("Welcome to our Javascript Pizzeria. Ready to place an order? - Click 'OK' to begin."
 )
 const clientName = prompt("Please start by writing your name")
-
-console.log(clientName)
 
 alert(`Hi ${clientName}! Let's order some delicious food! Are you ready?`)
 
 // Step 2 - Food choice
 // Your code goes here
-const foodChoice = parseInt(prompt`
+const foodChoice = parseInt(
+  prompt(`
 Select your food:
 1 - Pizza
 2 - Pasta
 3 - Salad
 Please enter the number of your choice.
 `)
-
-console.log(foodChoice)
+)
 
 let selectedFood = ""
 
@@ -32,12 +29,11 @@ if (foodChoice === 1) {
 } else if (foodChoice === 3) {
   selectedFood = "Salad"
 } else {
-  alert("Sorry - that's not a valid option. Please start over and choose a valid option. Thank you!")
+  alert(`Sorry - that's not a valid option. Please start over and choose a valid option. Thank you!`)
   exit(1)
 }
 
-console.log(selectedFood)
-alert(`${selectedFood}! Excellent choice! In the next step please select what typ of ${selectedFood} you want`)
+alert(`${selectedFood}! Excellent choice ${clientName}! In the next step please select what typ of ${selectedFood} you want`)
 
 // Step 3 - Subtype choice
 // Your code goes here
@@ -88,43 +84,57 @@ switch (selectedFood) {
     break
 
   default:
-    alert("Sorry - you need to make a choice in order to continue. Please start over.")
+    alert(`Sorry - you need to make a choice in order to continue. Please start over.`)
     exit(1)
 }
-
+if (subFoodtype === 1) {
+  alert(
+    `Great choice - Our chef will start to make a ${foodName[0]}`
+  )
+}
+if (subFoodtype === 2) {
+  alert(
+    `Great choice - Our chef will start to make a ${foodName[1]}`
+  )
+}
+if (subFoodtype === 3) {
+  alert(
+    `Great choice - Our chef will start to make a ${foodName[2]}`
+  )
+}
 // Step 4 - Age
 // Your code goes here
 
-console.log("portion size", portionSize)
+const age = prompt(`Please enter your age in order to get the correct meal size`)
 
-let adultChild
-switch (portionSize) {
-  case 1:
-    adultChild = "adult size"
-    break
+let orderConfirmation = "";
 
-  case 2:
-    adultChild = "child size"
-    break
-
-  default:
-    alert("invalid choice")
-    exit(1)
+if (age >= 15) {
+  orderConfirmation = prompt(`Thank you - we'll prepair an regular sized portion for you. It will be 15 €
+  To confirm please select
+  1 - Yes
+  2 - No`)
+} else if (age <= 14) {
+  orderConfirmation = prompt(`Thank you - we'll prepair a smaller sized portion for you. Please press OK to confim order of 10 €
+To confirm please select
+  1 - Yes
+  2 - No`)
+}
+else {
+  alert(`Invalid input - please enter a valid age`)
+  exit(1)
 }
 
 
 // Step 5 - Order confirmation
 // Your code goes here
-console.log("food name", foodName)
 
-if (foodName === 1) {
-  alert
-    `Excellent choice! You have ordered a ${adultChild}${foodName[0]} and it will be ready in 10-15 minutes. Welcome!`
-} else if (foodName === 2) {
-
-  `Excellent choice! You have ordered a ${adultChild}${foodName[1]} and it will be ready in 10-15 minutes. Welcome!`
-} else if (foodName === 3) {
-
-  `Excellent choice! You have ordered a ${adultChild}${foodName[2]} and it will be ready in 10-15 minutes. Welcome!`
+if (orderConfirmation === "1") {
+  alert(
+    `Thank you for your confirmation ${clientName}. We'll start preparing your meal. It'll be ready within 15 minutes. Welcome!`)
+} else if (orderConfirmation === "2") {
+  alert(`No worries ${clientName}! You're welcome back when you're in a mood for great food!`)
 }
-
+else {
+  alert(`Our apologies ${clientName}! Something went wrong - please try again.`)
+}
