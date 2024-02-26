@@ -1,7 +1,3 @@
-### Step 5 - Order confirmation
-
-The final iteration involves confirming the user's order based on their previous choices. The program should evaluate the user's confirmation, and if the user confirms, a thank you message should be displayed using the `alert()` method, indicating that their meal will be prepared. If the user declines, a polite farewell message should be displayed using the `alert()` method, encouraging them to return for future orders.
-
 ## Stretch Goals
 
 So you’ve completed all the steps above? Great job! Make sure you've committed and pushed a version of your project before starting on the stretch goals. Remember that the stretch goals are optional.

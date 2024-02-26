@@ -116,11 +116,11 @@ const age = prompt(`Do you want an adult meal or a child meal? Please tell us yo
 let price = (age >= 14) ? 120 : 70;
 let ageType = (age >= 14 ? "adult" : "child");
 
-alert(`One ${ageType} sized ${dishOfChoice} ${foodOfChoice} costs ${price} Swedish kronor`);
+alert(`One ${ageType} sized ${dishOfChoice} ${foodOfChoice} costs ${price} Swedish kronor.`);
 
 // Step 5 - Order confirmation
 // Your code goes here
-const confirm = prompt(`You'd like to order a ${dishOfChoice} ${foodOfChoice} (${ageType} meal). Total price of ${price} Swedish kronor. Is this correct?
+const confirm = prompt(`You'd like to order one ${dishOfChoice} ${foodOfChoice} (${ageType} meal). Total price of ${price} Swedish kronor. Is this correct?
 1. Yes
 2. No`
 );
