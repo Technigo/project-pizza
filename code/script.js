@@ -3,7 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
   alert(`Welcome to Bella Italia Pizzeria! Click 'OK' to start your order.`);
 
   // Step 1 – Ask for name
-  const userName = prompt("What is your name?");
+  let userName = prompt("What is your name?");
+
+  if (!userName) {
+    userName = "Anonymous";
+  }
 
   // Step 2 – Welcome with name + ask for type of food
   // Using Do...while statement to prompt again if invalid value is entered
@@ -118,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let orderConfirmation;
 
   do {
-    if (pizzaSize === "Adult" || pizzaSize === "adult" || pizzaSize === "1") {
+    if (pizzaSize.toLowerCase() === "adult" || pizzaSize === "1") {
       orderConfirmation = prompt(`Fantastico ${userName}! 
       Please confirm your order:
       A delicious ${subFoodSelection} ${foodType} in adult size.
@@ -126,11 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
       To confirm your order, type 'Yes'. 
       To decline, type anything else.
       `);
-    } else if (
-      pizzaSize === "Child" ||
-      pizzaSize === "child" ||
-      pizzaSize === "2"
-    ) {
+    } else if (pizzaSize.toLowerCase === "child" || pizzaSize === "2") {
       orderConfirmation = prompt(`Bellissimo ${userName}! 
       Please confirm your order:
       A perfectly crafted ${subFoodSelection} ${foodType} in child size.
