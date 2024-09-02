@@ -6,8 +6,16 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #0026ff;
-  color: white;
+  background: linear-gradient(
+    to left,
+    #ce2b37 0%,
+    #ce2b37 33.33333333333333%,
+    #f1f2f1 33.33333333333333%,
+    #f1f2f1 66.66666666666666%,
+    #009246 66.66666666666666%,
+    #009246 99.99999999999999%
+  );
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
