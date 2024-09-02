@@ -37,26 +37,26 @@ document.addEventListener("DOMContentLoaded", function () {
   } while (foodType === null);
 
   // Step 3 - Subtype choice
-  let subFoodType;
+  let subFoodTypes;
   let subFoodSelection;
 
   if (foodType === "Pizza") {
-    subFoodType = `Enter a number:
+    subFoodTypes = `Enter a number:
           1 – Margaritha
           2 – Capricciosa 
           3 – Hawaiis`;
   } else if (foodType === "Pasta") {
-    subFoodType = `Enter a number:
+    subFoodTypes = `Enter a number:
           1 – Carbonara
-          2 – Spaghetti Alle Vongole 
+          2 – Vongole 
           3 – Lasagne`;
   } else if (foodType === "Salad") {
-    subFoodType = `Enter a number:
+    subFoodTypes = `Enter a number:
           1 – Caprese
           2 – Insalata Russa 
           3 – Giardiniera`;
   } else {
-    subFoodType = null;
+    subFoodTypes = null;
   }
 
   do {
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `${foodType}, what an excellent choice! 
         What type would you like?
         
-        ${subFoodType}
+        ${subFoodTypes}
         `
       )
     );
@@ -110,8 +110,42 @@ document.addEventListener("DOMContentLoaded", function () {
   } while (subFoodSelection === null);
 
   // Step 5 - Age
-  // Your code goes here
+  let pizzaSize = prompt(
+    `Is the pizza for an adult or a child? Please respond with 'adult' or 'child,' or enter 1 for adult and 2 for child.`
+  );
 
   // Step 6 - Order confirmation
-  // Your code goes here
+  let orderConfirmation;
+
+  do {
+    if (pizzaSize === "Adult" || pizzaSize === "adult" || pizzaSize === "1") {
+      orderConfirmation = prompt(`Fantastico ${userName}! 
+      Please confirm your order:
+      A delicious ${subFoodSelection} ${foodType} in adult size.
+        
+      To confirm your order, type 'Yes'. 
+      To decline, type anything else.
+      `);
+    } else if (
+      pizzaSize === "Child" ||
+      pizzaSize === "child" ||
+      pizzaSize === "2"
+    ) {
+      orderConfirmation = prompt(`Bellissimo ${userName}! 
+      Please confirm your order:
+      A perfectly crafted ${subFoodSelection} ${foodType} in child size.
+        
+      To confirm your order, type 'Yes'. 
+      To decline, type anything else.
+      `);
+    } else {
+      pizzaSize = null;
+    }
+  } while (pizzaSize === null);
+
+  if (orderConfirmation === "Yes") {
+    alert(`Splendido ${userName}! Your order is on it's way.`);
+  } else {
+    alert("No worries, hope too see you soon again. Arrivederci!");
+  }
 });
