@@ -47,14 +47,13 @@ if (foodType === "Pizza") {
     subtype = "Marinara";
 
     //alert message for subtype of pizza
-    alert("You have selected " + subtype + ".");
   } else {
     alert("Invalid choice. Please refresh and try again.");
   }
-
+  alert("You have selected " + subtype + ".");
 }
-// Pasta subtypes
 
+// Pasta subtypes
 else if (foodType === "Pasta") {
   subtype = prompt("Please choose a Pasta type:\n1. Carbonara\n2. Arrabiata\n3. Bolognese\nPlease enter a number:");
 
@@ -84,16 +83,15 @@ else if (foodType === "Salad") {
     subtype = "Salad Nicoise";
   } else if (subtype === "3") {
     subtype = "Caesar salad";
-
-    //alert message for subtyoe of salad
-    alert("You have selected " + subtype + ".");
-  } else {
-    alert("Invalid choice. Please refresh and try again.");
   }
+  //alert message for subtyoe of salad
+  alert("You have selected " + subtype + ".");
+} else {
+  alert("Invalid choice. Please refresh and try again.");
 }
+
 // Step 4 - Age
 let age = prompt("Is this food for a child or an adult? Please type your age:");
-
 let ageGroup, cost;
 
 if (age < 16) {
@@ -102,15 +100,20 @@ if (age < 16) {
 } else if (age >= 16) {
   ageGroup = "Adult";
   cost = "€10.00";
+
+  //alert message for age and cost
 } else {
   alert("Invalid age entered. Please try again.");
+}
+if (ageGroup && cost) {
+  alert("You have selected food for a " + ageGroup + ". The cost will be " + cost + ".");
 }
 
 
 
 // Step 5 - Order confirmation
 if (ageGroup && foodType && subtype) {
-  let orderDetails = "You have selected a " + foodType + " (" + subtype + ") for a " + ageGroup + ". The cost will be " + cost + ". Would you like to confirm your order?";
+  let orderDetails = "You are about to order a " + foodType + " (" + subtype + ") for a " + ageGroup + ". The cost will be " + cost + ". Would you like to confirm your order?";
   let confirmation = prompt(orderDetails + "\n1. Yes\n2. No\nPlease enter a number:");
 
   if (confirmation === "1") {
