@@ -13,24 +13,19 @@ alert("Hi, " + userName + "!");
 // Your code goes here
 let foodChoices = ["Pizza", "Pasta", "Salad"];
 
-let choice = prompt("Choose your food: Pizza, Pasta, or Salad");
+let choice = prompt("Choose your food by entering a number (1, 2 or 3):\n1. Pizza\n2. Pasta\n3. Salad");
 
-// Convert the choice to lowercase for case-insensitive comparison
-choice = choice.toLowerCase();
+// Convert the choice to a number
+choice = parseInt(choice);
 
-switch (choice) {
-  case "pizza":
-    alert("You chose Pizza");
-    break;
-  case "pasta":
-    alert("You chose Pasta");
-    break;
-  case "salad":
-    alert("You chose Salad");
-    break;
-  default:
-    alert("Invalid choice. Please enter Pizza, Pasta, or Salad.");
+// Check if the choice is valid and within the range of food choices
+if (isNaN(choice) || choice < 1 || choice > foodChoices.length) {
+  alert("Invalid choice. Please enter a number between 1 and " + foodChoices.length);
+} else {
+  let chosenFood = foodChoices[choice - 1];
+  alert("You chose " + chosenFood);
 }
+
 // Step 3 - Subtype choice
 // Your code goes here
 
