@@ -43,8 +43,10 @@ alert(
 
 // Step 3 - Subtype choice
 // Your code goes here
+let subType = "";
+
 if (foodChoice === `1`) {
-  let pizzaChoice = prompt(
+  subType = prompt(
     `What kind of Pizza would you like to order?
     Enter a number:
     1 - Margeritha
@@ -53,23 +55,18 @@ if (foodChoice === `1`) {
     `
   )
 
-  let pizzaName
-
-  if (pizzaChoice === `1`) {
-    pizzaName = `Margeritha`
-  } else if (pizzaChoice === `2`) {
-    pizzaName = `Napolitana`
-  } else if (pizzaChoice === `3`) {
-    pizzaName = `Bussola`
+  if (subType === `1`) {
+    subType = `Margeritha`
+  } else if (subType === `2`) {
+    subType = `Napolitana`
+  } else if (subType === `3`) {
+    subType = `Bussola`
   } else {
-    pizzaChoice = `no food`
+    subType = `no food`
   }
 
-  alert(
-    `You have chosen ${pizzaName}. Yum!`
-  )
 } else if (foodChoice === `2`) {
-  let pastaChoice = prompt(
+  subType = prompt(
     `What kind of Pasta would you like to order?
     Enter a number:
     1 - Arrabiata
@@ -78,23 +75,18 @@ if (foodChoice === `1`) {
     `
   )
 
-  let pastaName
-
-  if (pastaChoice === `1`) {
-    pastaName = `Arrabiata`
-  } else if (pastaChoice === `2`) {
-    pastaName = `Garlic`
-  } else if (pastaChoice === `3`) {
-    pastaName = `Meat and sauce`
+  if (subType === `1`) {
+    subType = `Arrabiata`
+  } else if (subType === `2`) {
+    subType = `Garlic`
+  } else if (subType === `3`) {
+    subType = `Meat and sauce`
   } else {
-    pastaChoice = `no food`
+    subType = `no food`
   }
 
-  alert(
-    `You have chosen ${pastaName}. Yum!`
-  )
 } else if (foodChoice === `3`) {
-  let saladChoice = prompt(
+  subType = prompt(
     `What kind of Salad would you like to order?
     Enter a number:
     1 - Tuna
@@ -103,27 +95,53 @@ if (foodChoice === `1`) {
     `
   )
 
-  let saladName
-
-  if (saladChoice === `1`) {
-    saladName = `Tuna`
-  } else if (saladChoice === `2`) {
-    saladName = `Ham and cheese`
-  } else if (saladChoice === `3`) {
-    saladName = `Veggi`
+  if (subType === `1`) {
+    subType = `Tuna`
+  } else if (subType === `2`) {
+    subType = `Ham and cheese`
+  } else if (subType === `3`) {
+    subType = `Veggi`
   } else {
-    saladChoice = `no food`
+    subType = `no food`
   }
 
-  alert(
-    `You have chosen ${saladName}. Yum!`
-  )
 } else {
   foodChoice = `no food`
 }
 
 // Step 4 - Age
 // Your code goes here
+let userAge = prompt(
+  `Is this food for a child or an adult?
+  Please type your age:`
+)
 
-// Step 5 - Order confirmation
-// Your code goes here
+let confirmation
+
+if (userAge <= 12) {
+  confirmation = prompt(
+    `You'd like to order a child portion of ${subType}.
+    price $7
+    
+    Are you sure you want to order this?
+    Enter a number to confirm:
+    1 - Yes
+    2 - No
+    `
+  )
+
+} else {
+  confirmation = prompt(
+    `You'd like to order an adult portion of ${subType}.
+    price $10
+    
+    Are you sure you want to order this?
+    Enter a number to confirm:
+    1 - Yes
+    2 - No
+    `
+  )
+
+}
+//Step 5 - Order confirmation
+//Your code goes here
