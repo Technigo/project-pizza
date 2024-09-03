@@ -27,33 +27,99 @@ if (isNaN(choice) || choice < 1 || choice > foodChoices.length) {
   alert("You chose " + chosenFood);
 }
 
+// Declare chosenSubtype outside the switch statement
+let chosenSubtype;
 
 // Step 3 - Subtype choice
 // Your code goes here
-// Prompt for subtype based on chosen food
-switch (chosenFood) {
-  case "Pizza":
-    let pizzaTypes = ["Pepperoni", "Margherita", "Hawaiian"];
-    let pizzaChoice = prompt("Choose your pizza type by entering a number (1, 2 or 3):\n1. Pepperoni\n2. Margherita\n3. Hawaiian");
-    // ... handle pizza subtype choice
-    break;
-  case "Pasta":
-    let pastaTypes = ["Spaghetti", "Mac and Cheese", "Lasagna"];
-    let pastaChoice = prompt("Choose your pasta type by entering a number (1, 2 or 3):\n1. Spaghetti\n2. Mac and Cheese\n3. Lasagna");
-    // ... handle pasta subtype choice
-    break;
-  case "Salad":
-    let saladTypes = ["Caesar", "Greek", "Cobb"];
-    let saladChoice = prompt("Choose your salad type by entering a number (1, 2 or 3):\n1. Caesar\n2. Greek\n3. Cobb");
-    // ... handle salad subtype choice
-    break;
-  default:
-    alert("Error: Invalid food choice.");
-}
+// Prompt for subtype only if chosenFood has subtypes
+if (chosenFood === "Pizza" || chosenFood === "Pasta" || chosenFood === "Salad") {
+  let subtypes = {
+    Pizza: ["Pepperoni", "Margherita", "Hawaiian"],
+    Pasta: ["Spaghetti", "Mac and Cheese", "Lasagna"],
+    Salad: ["Caesar", "Greek", "Cobb"]
+  };
 
+  chosenSubtype = subtypes[chosenFood][parseInt(prompt(`Choose your ${chosenFood} type by entering a number (1, 2 or 3):\n1. ${subtypes[chosenFood][0]}\n2. ${subtypes[chosenFood][1]}\n3. ${subtypes[chosenFood][2]}`)) - 1];
+}
 
 // Step 4 - Age
 // Your code goes here
+// Step 4 - Child or adult
+let age = parseInt(prompt("Enter the age of the person the food is for:"));
+
+// Calculate the cost based on food type, subtype, and age
+let foodPrices = {
+  Pizza: {
+    Pepperoni: {
+      adult: 100,
+      child: 80
+    },
+    Margherita: {
+      adult: 90,
+      child: 70
+    },
+    Hawaiian: {
+      adult: 110,
+      child: 90
+    }
+  },
+  Pasta: {
+    Spaghetti: {
+      adult: 80,
+      child: 60
+    },
+    "Mac and Cheese": {
+      adult: 70,
+      child: 50
+    },
+    Lasagna: {
+      adult: 90,
+      child: 70
+    }
+  },
+  Salad: {
+    Caesar: {
+      adult: 60,
+      child: 40
+    },
+    Greek: {
+      adult: 70,
+      child: 50
+    },
+    Cobb: {
+      adult: 80,
+      child: 60
+    }
+  }
+};
+
+// Construct the order message based on food type, subtype, and age
+let orderMessage = `You ordered ${chosenFood}`;
+
+if (chosenSubtype) {
+  orderMessage += ` - ${chosenSubtype}`;
+}
+
+if (age < 12) {
+  orderMessage += " (child portion)";
+}
+
+// Calculate the cost based on food type, subtype, and age
+let cost = foodPrices[chosenFood][chosenSubtype][age < 12 ? "child" : "adult"];
+
+// Display the order message and cost
+alert(`Your order: ${orderMessage}\nTotal cost: ${cost} SEK`);
+
+
 
 // Step 5 - Order confirmation
 // Your code goes here
+// Get confirmation
+let confirmOrder = prompt("Confirm your order? (yes/no)");
+
+if (confirmOrder.toLowerCase() === "yes") {
+  alert("Order confirmed!");
+} else {
+  alert("Order canceled.");
+}
