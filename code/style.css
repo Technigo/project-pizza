@@ -23,6 +23,21 @@ body {
   min-height: 100svh;
 }
 
-p {
-  font-size: 1.35em;
+button {
+  all: unset;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  margin-top: 1.5rem;
+  position: relative;
+  top: 0;
+  transition: 0.25s ease;
+  transition-property: background, top;
+
+  &:hover {
+    background-color: rgba(0,0,0,0.85);
+    top: -3px;
+  }
 }

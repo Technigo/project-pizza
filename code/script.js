@@ -1,6 +1,7 @@
-document.addEventListener("DOMContentLoaded", function () {
+function startOrder() {
   // Step 1 - Welcome and introduction
-  alert(`Welcome to Bella Italia Pizzeria! Click 'OK' to start your order.`);
+  alert(`Benvenuto! Welcome! 
+Click the button below to begin your order.`);
 
   // Step 1 – Ask for name
   let userName = prompt("What is your name?");
@@ -14,16 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
   let foodType;
   do {
     foodType = parseInt(
-      prompt(
-        `Ciao ${userName} 👋 
-        What would you like to eat today?
-  
-        Enter a number:
-          1 – Pizza 🍕
-          2 – Pasta 🍝
-          3 – Salad 🥗
-          `
-      )
+      prompt(`
+Ciao ${userName} 👋 
+What would you like to eat today?
+
+Enter a number:
+  1 – Pizza 🍕
+  2 – Pasta 🍝
+  3 – Salad 🥗
+`)
     );
 
     if (foodType === 1) {
@@ -46,32 +46,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (foodType === "Pizza") {
     subFoodTypes = `Enter a number:
-          1 – Margaritha
-          2 – Capricciosa 
-          3 – Hawaiis`;
+  1 – Margaritha
+  2 – Capricciosa 
+  3 – Hawaiis`;
   } else if (foodType === "Pasta") {
     subFoodTypes = `Enter a number:
-          1 – Carbonara
-          2 – Vongole 
-          3 – Lasagne`;
+  1 – Carbonara
+  2 – Vongole 
+  3 – Lasagne`;
   } else if (foodType === "Salad") {
     subFoodTypes = `Enter a number:
-          1 – Caprese
-          2 – Insalata Russa 
-          3 – Giardiniera`;
+  1 – Caprese
+  2 – Insalata Russa 
+  3 – Giardiniera`;
   } else {
     subFoodTypes = null;
   }
 
   do {
     subFoodSelection = parseInt(
-      prompt(
-        `${foodType}, what an excellent choice! 
-        What type would you like?
-        
-        ${subFoodTypes}
-        `
-      )
+      prompt(`
+${foodType}, what an excellent choice!
+What type would you like?
+          
+${subFoodTypes}
+`)
     );
 
     if (foodType === "Pizza") {
@@ -115,7 +114,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Step 5 - Age
   let pizzaSize = prompt(
-    `Is the pizza for an adult or a child? Please respond with 'adult' or 'child,' or enter 1 for adult and 2 for child.`
+    `Is the pizza for an adult or a child? 
+
+Respond with 'adult' or 'child,' or enter 1 for adult and 2 for child.`
   );
 
   // Step 6 - Order confirmation
@@ -124,28 +125,28 @@ document.addEventListener("DOMContentLoaded", function () {
   do {
     if (pizzaSize.toLowerCase() === "adult" || pizzaSize === "1") {
       orderConfirmation = prompt(`Fantastico ${userName}! 
-      Please confirm your order:
-      A delicious ${subFoodSelection} ${foodType} in adult size.
-        
-      To confirm your order, type 'Yes'. 
-      To decline, type anything else.
-      `);
-    } else if (pizzaSize.toLowerCase === "child" || pizzaSize === "2") {
+Please confirm your order:
+A delicious ${subFoodSelection} ${foodType} in adult size.
+          
+To confirm your order, type 'Yes'. 
+To decline, type anything else.
+        `);
+    } else if (pizzaSize.toLowerCase() === "child" || pizzaSize === "2") {
       orderConfirmation = prompt(`Bellissimo ${userName}! 
-      Please confirm your order:
-      A perfectly crafted ${subFoodSelection} ${foodType} in child size.
-        
-      To confirm your order, type 'Yes'. 
-      To decline, type anything else.
-      `);
+Please confirm your order:
+A perfectly crafted ${subFoodSelection} ${foodType} in child size.
+          
+To confirm your order, type 'Yes'. 
+To decline, type anything else.
+        `);
     } else {
       pizzaSize = null;
     }
   } while (pizzaSize === null);
 
-  if (orderConfirmation === "Yes") {
+  if (orderConfirmation.toLowerCase() === "yes") {
     alert(`Splendido ${userName}! Your order is on it's way.`);
   } else {
     alert("No worries, hope too see you soon again. Arrivederci!");
   }
-});
+}
