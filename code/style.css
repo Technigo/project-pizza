@@ -6,13 +6,28 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #0026ff;
+  background: #221213;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-top: 200px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2.5em; 
+}
+
+.header p {
+  margin: 0;
+  font-size: 1.2em; 
 }
 
 p {
