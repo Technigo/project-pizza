@@ -5,7 +5,7 @@ alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
 
-const Cname = prompt(
+const userName = prompt(
   `Hi hungry fellow! What's your name?`
 )
 
@@ -15,7 +15,12 @@ alert(
 
 // Step 2 - Food choice
 const mealchoice = prompt(
-  `What would you like to order? 1. Pizza, 2. Pasta, 3. Salad. Please enter the number of your choice`
+  `What would you like to order? Please enter the number of your choice.
+  
+  1. Pizza
+  2. Pasta
+  3. Salad
+  `
 )
 if (mealchoice === "1") {
   alert(
@@ -35,6 +40,8 @@ if (mealchoice === "1") {
   )
 }
 // Step 3 - Subtype choice
+//Pizza
+
 // Your code goes here
 
 
