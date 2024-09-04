@@ -1,5 +1,5 @@
 // URL of the background image
-const bgImageUrl = "trattoria1.png";
+const bgImageUrl = "trattoria1.jpg";
 
 // Create a new Image object to preload the image
 const img = new Image();
@@ -127,7 +127,7 @@ img.onload = function () {
 
   // Confirm order details
   let confirmation = confirm(
-    `You have ordered ${foodType} (${subtype}) for a ${ageLabel}. That will be ${cost}. Click "OK" to confirm or "Cancel" to modify.`
+    `You have ordered ${foodType} (${subtype}) for one ${ageLabel}. That will be ${cost}. Click "OK" to confirm or "Cancel" to modify.`
   );
 
   if (confirmation) {
