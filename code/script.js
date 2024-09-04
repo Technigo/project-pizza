@@ -41,6 +41,34 @@ if (mealchoice === "1") {
 }
 // Step 3 - Subtype choice
 //Pizza
+if (mealchoice === "1") {
+  prompt(
+    `What type of Pizza you like to order? Please enter the number of your choice.
+    
+    1. Capricciosa
+    2. Hawaii
+    3. Vesuvius
+    `
+  )
+} else if (mealchoice === "2") {
+  prompt(
+    `What type of Pasta you like to order? Please enter the number of your choice.
+    
+    1. Spagetti Bolognese
+    2. Pasta Carbonara
+    3. Fettuccine Alfredo
+    `
+  )
+} else if (mealchoice === "3") {
+  prompt(
+    `What type of Salad you like to order? Please enter the number of your choice.
+      
+      1. Pasta salad 
+      2. Noodle salad
+      3. Something
+      `
+  )
+}
 
 // Your code goes here
 
