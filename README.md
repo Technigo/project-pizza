@@ -1,11 +1,12 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This is an javascript pizzeria "machine" built so you can order pizza, pasta or salad online.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+It is built mainly with methods like alert() and prompt() and with Conditional statements to tie the answers from the prompts() (that are stored in variables) together.
+This was a tought nut to crack and it took a few rounds of thinking (and some help from the team) to get it working. The toughest though I think was how to actually think of the problem before starting to code. I started the coding first and noticed that I had to redo it all almost on every step. Which made me realise the importance of writing down the solution in text first.
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+View site: https://js-pizzeria-place.netlify.app/ 
