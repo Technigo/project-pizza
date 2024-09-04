@@ -40,7 +40,7 @@ alert(
 )
 
 // Step 3 - Subtype choice
-let subType = "";
+let subType
 
 if (foodChoice === `1`) {
   subType = prompt(
