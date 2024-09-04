@@ -37,10 +37,13 @@ h1 {
 /* Style for links */
 a {
   color: white; /* Always white */
-  text-decoration: none; /* Remove underline by default * /
-  font-weight: bold; /* Make the link text bold */
+
+  text-decoration: underline;
+  font-size: 1em; /* Default font size */
+  transition: font-size 0.3s ease, text-decoration 0.3s ease; /* Smooth transition */
 }
 
 a:hover {
+  font-size: 1.2em; /* Increase the font size on hover */
   text-decoration: underline; /* Underline on hover */
 }
