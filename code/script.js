@@ -127,13 +127,25 @@ alert(`Yum! You've selected ${subType}! Excellent choice! Click 'OK' to start pl
 let userAge = prompt("Is this order intended for a child or an adult? Please respond with 'adult' or 'child' in the field below:")
 console.log("User's age is:", userAge)
 
-// Step 5 - Order confirmation
+let confirmation
+
 if (userAge === "adult") {
-  alert(`One Adult-sized ${subType} coming straight up! Thanks for dining with us at Pizzeria Fresco! 🍕`)
+  confirmation = prompt(`One Adult-sized ${subType} coming straight up! Do you accept?
+    Please enter 'yes' to confirm or 'no' to decline`)
 } else if (userAge === "child") {
-  alert(`One Child-sized ${subType} coming straight up! Thanks for dining with us at Pizzeria Fresco! 🍕`)
+  confirmation = prompt(`One Child-sized ${subType} coming straight up! 
+    Do you accept?
+    Please enter: "yes" to confirm "no" to decline`)
 } else {
   console.log("Invalid selection. Please choose:", "child", "adult")
+}
+// Step 5 - Order confirmation
+if (confirmation === "yes") {
+  alert(`Woho! 🎉 Your ${subType} is on it's way! Thanks for dining with us at Pizzeria Fresco! 🍕`)
+} else if (confirmation === "no") {
+  alert(`Your order has been cancelled. Hope to see you here again soon!`)
+} else {
+  console.log("Invalid selection. Please choose:", "yes", "no")
 }
 
 
