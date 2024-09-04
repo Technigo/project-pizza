@@ -6,7 +6,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #0026ff;
+  background: linear-gradient(135deg, rgb(8, 163, 39) 60%, rgb(255, 0, 0));
   color: white;
   display: flex;
   justify-content: center;
