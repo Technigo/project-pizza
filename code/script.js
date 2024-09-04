@@ -36,12 +36,14 @@ if (typeOfFood === "1") {
 
 // Step 3 - Subtype choice
 // Your code goes here
+let chooseFoodSub = ""
 
 if (typeOfFood === "1") {
   let choosePizza = prompt("What type of pizza do you want?\n1. Margaritha\n2. Hawaii\n3. Vesuvio");
   if (choosePizza === "1") {
+    chooseFoodSub = Margaritha
     alert(
-      `You have chosen Margaritha!`
+      `You have chosen ${chooseFoodSub}!`
     )
   } else if (choosePizza === "2") {
     alert(
@@ -68,25 +70,21 @@ if (typeOfFood === "1") {
     )
   }
 } else if (typeOfFood === "3") {
-  let chooseSallad = prompt("What type of sallad do you want?\n1. Greek\n2. Shrimp\n3. Falafel");
-  if (chooseSallad === "1") {
+  let chooseSallad = parseInt(prompt("What type of sallad do you want?\n1. Greek\n2. Shrimp\n3. Falafel"))
+  if (chooseSallad === 1) {
     alert(
       `You have chosen Greek!`
     )
-  } else if (chooseSallad === "2") {
+  } else if (chooseSallad === 2) {
     alert(
       `You have chosen Shrimp!`
     )
-  } else if (chooseSallad === "3") {
+  } else if (chooseSallad === 3) {
     alert(
       `You have chosen Falafel!`
     )
   }
 }
-
-
-
-
 
 
 // Step 4 - Age
