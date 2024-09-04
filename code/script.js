@@ -1,7 +1,6 @@
 // Start here
 
 // Step 1 - Welcome and introduction
-// Your code goes here
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
 )
@@ -15,7 +14,6 @@ alert(
 )
 
 // Step 2 - Food choice
-// Your code goes here
 let foodChoice = prompt(
   `What kind of food would you like to order?
   Enter a number:
@@ -42,7 +40,6 @@ alert(
 )
 
 // Step 3 - Subtype choice
-// Your code goes here
 let subType = "";
 
 if (foodChoice === `1`) {
@@ -106,22 +103,26 @@ if (foodChoice === `1`) {
   }
 
 } else {
-  foodChoice = `no food`
+  subType = `no food`
 }
 
+alert(
+  `You have chosen ${subType}. Yum!`
+)
+
 // Step 4 - Age
-// Your code goes here
 let userAge = prompt(
   `Is this food for a child or an adult?
   Please type your age:`
 )
 
+//Step 5 - Order confirmation
 let confirmation
 
 if (userAge <= 12) {
   confirmation = prompt(
     `You'd like to order a child portion of ${subType}.
-    price $7
+    - price $7
     
     Are you sure you want to order this?
     Enter a number to confirm:
@@ -133,7 +134,7 @@ if (userAge <= 12) {
 } else {
   confirmation = prompt(
     `You'd like to order an adult portion of ${subType}.
-    price $10
+    - price $10
     
     Are you sure you want to order this?
     Enter a number to confirm:
@@ -141,7 +142,19 @@ if (userAge <= 12) {
     2 - No
     `
   )
-
 }
-//Step 5 - Order confirmation
-//Your code goes here
+
+if (confirmation === `1`) {
+  alert(
+    `Thank you for your order, your food is now being prepared`
+  )
+} else if (confirmation === `2`) {
+  alert(
+    `Your order has been canceled, please return for future orders`
+  )
+
+} else {
+  alert(
+    `Your order has ben canceled due to a type error, please return for future orders`
+  )
+}
