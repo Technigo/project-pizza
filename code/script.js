@@ -136,8 +136,3 @@ img.onload = function () {
     alert("Order cancelled. We hope to see you again!");
   }
 };
-
-// Handle errors if the image fails to load
-img.onerror = function () {
-  alert("Failed to load background image.");
-};
