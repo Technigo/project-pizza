@@ -19,5 +19,6 @@ If given more time, I would:
 - Extend Functionality: Allow more complex customizations, such as toppings for pizzas or dressings for salads.
 
 View it Live:
-Deployed Project: Pizzeria Fresco on Netlify
+Deployed Project: https://main--pizzeriafresco.netlify.app
+
 
