@@ -1,7 +1,5 @@
-// Start here
 
 // Step 1 - Welcome and introduction
-// Your code goes here
 alert(
   `Hey there, pizza lover! 🍕 Welcome to Pizzeria Fresco! Click 'OK' to get started!`
 )
