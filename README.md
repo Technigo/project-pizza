@@ -1,11 +1,24 @@
-# Project Name
+Project: Pizzeria Fresco!
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Pizzeria Fresco is ment to be; an interactive JavaScript-based bot that takes a user's order at a virtual pizzeria. It starts by greeting the user, asking for their name, and guiding them through choosing a dish from the menu. The bot also collects the user's age and provides an order confirmation.
 
-## The problem
+The Problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The primary challenges in this project were:
 
-## View it live
+Properly handerling the Variables: Structuring the code to ensure variables were introduced at the correct time.
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+Initially, a lot of variables (like foodType or pizzaType) were embedded within conditional blocks (such as if statements), which led to scope issues. To fix this, I restructured the code so that these variables were declared in the right order.
+
+Ensuring User Input Validation:
+The goal was to continuously prompt the user until they provided a valid input. This was achieved using a while (true) loop, which only breaks when the user selects a valid option. If an invalid option is selected, the loop will prompt the user again.
+
+If given more time, I would:
+
+- Refactor the code: To clean it up further by breaking parts of the code into functions for better readability and maintainability.
+- Extend Functionality: Allow more complex customizations, such as toppings for pizzas or dressings for salads.
+
+View it Live:
+Deployed Project: https://main--pizzeriafresco.netlify.app
+
+
