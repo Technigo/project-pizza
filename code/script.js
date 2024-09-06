@@ -152,4 +152,3 @@ if (confirmation === "1") {
     
 Thank you for visiting our Javascript Pizzeria. We hope to serve you next time!`);
 }
-
