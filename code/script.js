@@ -4,7 +4,7 @@ function startOrder() {
 Click the button below to begin your order.`);
 
   // Step 1 – Ask for name
-  let userName = prompt("What is your name?");
+  const userName = prompt("What is your name?");
 
   if (!userName) {
     userName = "Anonymous";
@@ -116,14 +116,14 @@ ${subFoodTypes}
   let pizzaSize = prompt(
     `Is the pizza for an adult or a child? 
 
-Respond with 'adult' or 'child,' or enter 1 for adult and 2 for child.`
+Please enter your age.`
   );
 
   // Step 6 - Order confirmation
   let orderConfirmation;
 
   do {
-    if (pizzaSize.toLowerCase() === "adult" || pizzaSize === "1") {
+    if (Number(pizzaSize) > 12) {
       orderConfirmation = prompt(`Fantastico ${userName}! 
 Please confirm your order:
 A delicious ${subFoodSelection} ${foodType} in adult size.
@@ -131,7 +131,7 @@ A delicious ${subFoodSelection} ${foodType} in adult size.
 To confirm your order, type 'Yes'. 
 To decline, type anything else.
         `);
-    } else if (pizzaSize.toLowerCase() === "child" || pizzaSize === "2") {
+    } else if (Number(pizzaSize) < 12) {
       orderConfirmation = prompt(`Bellissimo ${userName}! 
 Please confirm your order:
 A perfectly crafted ${subFoodSelection} ${foodType} in child size.
