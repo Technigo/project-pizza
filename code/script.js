@@ -2,25 +2,25 @@
 
 // Step 1 - Welcome and introduction
 // Your code goes here
-alert(
+alert (
   "Welcome to my Javascript Pizzeria.Ready to Start ? - Click 'OK' to begin."
 )
 
-const userName = prompt("What's your name?")
-if(userName == "") {
-  alert("Invalid entry, please try again. See you!")
-  exit(1)
+const userName = prompt ("What's your name?")
+if (userName == "") {
+  alert ("Invalid entry, please try again. See you!")
+  exit (1)
 }
 
-alert(
+alert (
     `Nice to meet you ${userName.toUpperCase()}!`
   )
 
 
 
 // Step 2 - Food choice
-const typeOfFood = parseInt(
-  prompt(`
+const typeOfFood = parseInt (
+  prompt (`
     What type of food would you like to order?
     Enter a number:
     1 - Pizza
@@ -31,18 +31,18 @@ const typeOfFood = parseInt(
 
 let selectedFood = ""
 
-if(typeOfFood === 1) {
+if (typeOfFood === 1) {
   selectedFood = "Pizza"
-} else if(typeOfFood === 2) {
+} else if (typeOfFood === 2) {
   selectedFood = "Pasta"
-} else if(typeOfFood === 3) {
+} else if (typeOfFood === 3) {
   selectedFood = "Salad"
 } else {
-  alert("Invalid choice. Please start over again and select a valid number between 1 to 3.")
-  exit(1)
+  alert ("Invalid choice. Please start over again and select a valid number between 1 to 3.")
+  exit (1)
 }
 
-alert(
+alert (
   `You've chosen ${selectedFood}!`
 )
 
@@ -50,10 +50,10 @@ alert(
 let subFoodNr = ""
 let subFood = []
 
-switch(selectedFood) {
+switch (selectedFood) {
   case "Pizza":
     subFoodNr = parseInt(
-      prompt(`
+      prompt (`
         Select a Pizza type, enter a number:
         1 - Napolitana
         2 - Hawaian
@@ -64,8 +64,8 @@ switch(selectedFood) {
     break
 
   case "Pasta":
-    subFoodNr = parseInt(
-      prompt(`
+    subFoodNr = parseInt (
+      prompt (`
         Select a Pasta type, enter a number:
         1 - Spaghetti Carbonara
         2 - Fettuccine Alfredo
@@ -76,8 +76,8 @@ switch(selectedFood) {
     break
 
   case "Salad":
-    subFoodNr = parseInt(
-      prompt(`
+    subFoodNr = parseInt (
+      prompt (`
         Select a Salad type, enter a number:
         1 - Caesar Salad
         2 - Caprese Salad
@@ -88,26 +88,46 @@ switch(selectedFood) {
     break
   
   default:
-    alert("Invalid entry, please try again. See you!")
-    exit(1)
+    alert ("Invalid entry, please try again. See you!")
+    exit (1)
 }
 
 if (subFoodNr === 1) {
-  alert(`
+  alert (`
     You've chosen ${subFood[0]}!
   `)
 } else if (subFoodNr === 2) {
-  alert(`
+  alert (`
     You've chosen ${subFood[1]}!
   `)
 } else if (subFoodNr === 3) {
-  alert(`
+  alert (`
     You've chosen ${subFood[2]}!
   `)
 }
 
 // Step 4 - Age
+let age = prompt ("Is this food for a child or an adult? Type your age:")
+let ageGroup = ""
+let cost = ""
 
+if (age <= 17) {
+  ageGroup = "Child"
+  cost = "€10"
+} else if (age > 17) {
+  ageGroup = "Adult"
+  cost = "€15"
+} else {
+  alert ("Invalid entry, please try again. See you!")
+  exit (1)
+}
+
+//display the order message and the associated cost
+if (ageGroup && cost) {
+  alert(`
+    You've chosen ${subFood[]} ${selectedFood} for a ${ageGroup}. The cost will be ${cost}.
+    `)
+}
 
 // Step 5 - Order confirmation
 
