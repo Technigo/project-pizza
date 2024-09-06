@@ -12,7 +12,7 @@ if (mealchoice === 1) {
   alert(”Thanks, ${name}! You wish to order Pizza!”)
 }
 
-After a while, I figured it must be because I was using digits, not text. I tested”, ’ and ´ until I spotted that a backtick/grave/grave accent was used in the first alert that came with the fork. Changed all string/text values to that specific tick and just like that, the code worked. This also made me discover that everything between two quotation marks turns into text, while the ${name} still function when using `.  So I used ”” for the meal choices (since it has to be only text) and for the alert, I used ` since it has ${name} in it. 
+After a while, I figured it must be because I was using digits, not text. I tested”, ’ and ´ until I spotted that a backtick/grave/grave accent was used in the first alert that came with the fork. Changed all string/text values to that specific tick and just like that, the code worked. This also made me discover that everything between two quotation marks turns into text, while the ${name} still function when using the backtick. So I used ”” for the meal choices (since it has to be only text) and for the alert, I used ` since it has ${name} in it. 
 
 ### Old variable? 
 ${name} turned into a strikethrough text. When I hovered over it, it said ”'name' is deprecated.” Googled it, and read that the warning is being shown because the name variable may be removed in future versions. Not sure if it affects my code, but to avoid any issues I changed it to $userName and the strikethough disappeared. 
@@ -27,7 +27,7 @@ Update: I started to do this in the switch.js file.
 2. I would check if there's a way to avoid repeating different phrases (Like "`Thanks, ${userName}! You wish to order...") and parts of the code. I copy/pasted different sections of my code (like the Pizza else/if to the Pasta and Salad) and did minor changes. It must be an easier way to do this. 
 Update: I started to do this in the switch.js file. 
 
-4. I would also like to get the "return" to function in order to stop the script and/or create a loop, so you don't have to start all over when you select a invalid option. 
+4. I would also like to get the "return" to function to stop the script and/or create a loop, so you don't have to start all over when you select a invalid option. 
 
 4. Maybe add ingredients to the different dishes, that the orderer can deselect? Add more than one dish at the time, etc. 
 
