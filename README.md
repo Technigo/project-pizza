@@ -21,9 +21,9 @@ ${name} turned into a strikethrough text. When I hovered over it, it said ”'na
 At one point when my code didn't work, it was because of a nesting problem. That I couldn't solve myself, because every time I saved the code, it moved to the left-hand side. Asked ChatGPT how to solve this and to fix the nesting issue for me without edit the code itself, and it did. It also asked me to uncheck "formatOnSave" under settings, and I did.  
 
 ## If I had more time 
-1. Focus more on clean code. I think my code is messy. I had to scroll, search, copy/paste and repeat myself a lot when writing the code. 
+1. Focus more on clean code. I think my code is messy. I had to scroll, search, copy/paste and repeat myself a lot when writing the code. Update: I started to do this in the switch.js file. 
 
-2. I would check if there's a way to avoid repeating different phrases (Like "`Thanks, ${userName}! You wish to order...") and parts of the code. I copy/pasted different sections of my code (like the Pizza else/if to the Pasta and Salad) and did minor changes. It must be an easier way to do this. 
+2. I would check if there's a way to avoid repeating different phrases (Like "`Thanks, ${userName}! You wish to order...") and parts of the code. I copy/pasted different sections of my code (like the Pizza else/if to the Pasta and Salad) and did minor changes. It must be an easier way to do this. Update: I started to do this in the switch.js file. 
 
 3. I would also like to create a loop, so you don't have to start all over when you select a invalid option. 
 
