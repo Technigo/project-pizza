@@ -130,10 +130,19 @@ alert(
 )
 
 // Step 5 - Order confirmation
-const confirmation = confirm
+const confirmation = prompt(
+  `Thank you, ${userName}, for your order of a ${portion} of ${orderedFood}!
+  
+  Are you sure you want to order this?
 
-if (confirmation) {
-  alert(`Thank you for your order, ${userName}! 
+  1. Yes
+  2. No
+`
+)
+
+if (confirmation === "1") {
+  alert(`
+  Thank you for your order, ${userName}! 
     
   Your ${orderedFood} (${portion}) will be prepared shortly. 
     
