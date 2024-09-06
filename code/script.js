@@ -3,14 +3,15 @@
 // Step 1 - Welcome and introduction
 alert(
   `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
-)
+);
 
 // b) user's name using the prompt
-let userName = prompt("What is your name?");
+let name = prompt("What is your name?");
 
 // c)  alert using the name variable to greet the user
 alert(
-  "Hi, " + userName + "!");
+  `Hi, ${name}!`
+);
 
 
 // Step 2 - Food choice
@@ -27,7 +28,7 @@ if (choice === "1") {
 }
 //alert message for choice of food
 if (foodType) {
-  alert("You have selected " + foodType + ".");
+  alert(`You have selected ${foodType}.`);
 } else {
   alert("Invalid choice. Please try again.");
 }
@@ -50,7 +51,7 @@ if (foodType === "Pizza") {
   } else {
     alert("Invalid choice. Please refresh and try again.");
   }
-  alert("You have selected " + subtype + ".");
+  alert(`You have selected ${subtype}.`);
 }
 
 // Pasta subtypes
@@ -69,7 +70,7 @@ else if (foodType === "Pasta") {
     alert("Invalid choice. Please refresh and try again.");
   }
   if (subtype) {
-    alert("You have selected " + subtype + ".");
+    alert(`You have selected ${subtype}.`);
   }
 }
 
@@ -84,8 +85,8 @@ else if (foodType === "Salad") {
   } else if (subtype === "3") {
     subtype = "Caesar salad";
   }
-  //alert message for subtyoe of salad
-  alert("You have selected " + subtype + ".");
+  //alert message for subtype of salad
+  alert(`You have selected ${subtype}.`);
 } else {
   alert("Invalid choice. Please refresh and try again.");
 }
@@ -106,15 +107,13 @@ if (age < 16) {
   alert("Invalid age entered. Please try again.");
 }
 if (ageGroup && cost) {
-  alert("You have selected food for a " + ageGroup + ". The cost will be " + cost + ".");
+  alert(`You have selected food for a ${ageGroup}. The cost will be ${cost}.`);
 }
-
-
 
 // Step 5 - Order confirmation
 if (ageGroup && foodType && subtype) {
-  let orderDetails = "You are about to order a " + foodType + " (" + subtype + ") for a " + ageGroup + ". The cost will be " + cost + ". Would you like to confirm your order?";
-  let confirmation = prompt(orderDetails + "\n1. Yes\n2. No\nPlease enter a number:");
+  let orderDetails = `You are about to order a ${foodType} (${subtype}) for a ${ageGroup}. The cost will be ${cost}. Would you like to confirm your order?`;
+  let confirmation = prompt(`${orderDetails}\n1. Yes\n2. No\nPlease enter a number:`);
 
   if (confirmation === "1") {
     alert("Thank you! Your meal will be prepared shortly.");
