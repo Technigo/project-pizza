@@ -1,11 +1,10 @@
 # Project Name
-
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment for this week was to create a Javascript pizzeria based on user inputs using methods like prompt and alert.
 
 ## The problem
+During this week I approached many problems and it was hard to keep my head straight at times. I ended up trying stuff out and then deleting the code a few times to start over. I also got some help from a friend who's a programmer and he introduced me to functions in javascript. Afterwards I somehow ended up even more confused so I started over again and skipped using functions. Instead I used google, chatgpt and stack overflow to help me move forward. I also used the javascript pizzeria example on disco and took a lot of inspiration from that. Before I started coding I went to the example and tried to identify the different steps in the requirments and match them with the stages in the pizzeria example. 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+If I had more time I would add while loops to my code to make sure the user has to choose an option before they leave for the next step or the page. In my code now the user has to refresh the page and start over if they would like to change something or picked the wrong option etc.
 
 ## View it live
-
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+https://elinasjavascriptpizzeria.netlify.app/
