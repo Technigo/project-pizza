@@ -1,11 +1,12 @@
-# Project Name
+# Pizza-bot-Project
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+In this project I have been built a Javascript Pizzeria. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+To interact with the user, I used the prompt() and alert() methods. 
+I used if, else-if and else statements to make choices and I used while statements to make sure that the given information by the user is valid.
+Challenging for me was to think through the different options and how to organize and write them in a good way.
 
 ## View it live
-
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+https://pizza-pasta-salad.netlify.app/
