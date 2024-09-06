@@ -39,11 +39,11 @@ if (mealchoice === "1") {
   )
 
   if (pizzachoice === "1") {
-    orderedFood = "Capricciosa"
+    orderedFood = "Capricciosa pizza"
   } else if (pizzachoice === "2") {
-    orderedFood = "Hawaii"
+    orderedFood = "Hawaii pizza"
   } else if (pizzachoice === "3") {
-    orderedFood = "Vesuvius"
+    orderedFood = "Vesuvius pizza"
   } else {
     alert("Sorry, we don't have that kind of pizza.")
   }
@@ -104,7 +104,7 @@ if (mealchoice === "1") {
     alert("Sorry, we don't have that kind of salad.")
   }
   if (orderedFood) {
-    alert(`You've chosen ${orderedFood}`)
+    alert(`You've selected ${orderedFood}`)
   }
 
 } else {
@@ -117,12 +117,30 @@ if (mealchoice === "1") {
 const age = prompt (
   `Is this food for a child or an adult? Type your age:`
 )
-if (age >= 18) 
-   alert("The food is for an adult")
-  else {
-    alert ("The food is for a child")
-  }
+let portion = ""
+if (parseInt(age) >= 18) {
+  portion = "regular portion" 
+}
+else {
+  portion = "kid's meal"
+}
+
+alert(
+  `You wish to order a ${portion}`
+)
 
 // Step 5 - Order confirmation
-// Your code goes here
+const confirmation = confirm
+
+if (confirmation) {
+  alert(`Thank you for your order, ${userName}! 
+    
+  Your ${orderedFood} (${portion}) will be prepared shortly. 
+    
+  We hope you enjoy your meal!`)
+}else {
+  alert(`No worries, ${userName}. 
+    
+Thank you for visiting our Javascript Pizzeria. We hope to serve you next time!`);
+}
 
