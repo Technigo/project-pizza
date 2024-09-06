@@ -1,4 +1,3 @@
-// Start here
 
 // Step 1 - Welcome and introduction
 alert(
