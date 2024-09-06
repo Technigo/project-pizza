@@ -3,7 +3,7 @@
 // A while loop is a control flow structure in programming that repeatedly executes a block of code as long as a given condition evaluates to true. The condition is checked before each iteration of the loop, and if the condition is false, the loop terminates.
 
 
-alert(`Welcome to Mama Mia Pizzeria. Ready to order? - Click 'OK' to begin.`)
+alert(`Welcome to Mama Mia Pizzeria 🍕 Ready to order? - Click 'OK' to begin.`)
 
 let userName = prompt(`What's your name?`) 
 
@@ -42,7 +42,7 @@ if (mealchoice === "1") {
   mealType = "Pizza"
   alert(`Thank you ${userName}, you have chosen no 1, Pizza`)
 
-  // Step 3 - Subtype choice for Pizza. // Added while loops to check if the user's input is not one of the valid options by using === (equals)
+  // Step 3 - Subtype choice for Pizza. // Added while loops to check if the user's input is not one of the valid options by using === (strict equality operator)
   let pizzatype = ''
 
   while (!(pizzatype === "1" || pizzatype === "2" || pizzatype === "3")) {
@@ -60,26 +60,26 @@ if (mealchoice === "1") {
 
       subType = "Capricciosa"
       alert(`You have chosen no 1, Capricciosa. Love your choice!`)
-    
+
     } else if (pizzatype === "2") {
       subType = "Hawaii"
-
       alert(`You have chosen no 2, Hawaii. Aloha!`)
     } else if (pizzatype === "3") {
-
       subType = "Kebab pizza"
       alert(`You have chosen no 3, Kebab pizza. Great choice!`)
+
     } else {
 
       alert(`I'm sorry ${userName}, that is not a valid option. Please choose number 1, 2 or 3.`)
     }
   }
+ 
 
 } else if (mealchoice === "2") {
   mealType = "Pasta"
   alert(`Thank you ${userName}, you have chosen no 2, Pasta`)
 
-  // Step 3 - Subtype choice for Pasta. // Added while loops to check if the user's input is not one of the valid options by using === (equals)
+// Step 3 - Subtype choice for Pasta. // Added while loops to check if the user's input is not one of the valid options by using === (equals)
 
   let pastatype = ""
 
@@ -97,17 +97,13 @@ if (mealchoice === "1") {
     if (pastatype === "1") 
     {
       subType = 'Bolognese'
-
       alert(`You have chosen no 1, Bolognese. Great choice!`)
 
     } else if (pastatype === "2") {
       subType = 'Carbonara'
-
       alert(`You have chosen no 2, Carbonara. Splendido!`)
-
     } else if (pastatype === "3") {
       subType = 'Lasagna'
-
       alert(`You have chosen no 3, Lasagna. Delicious choice!`)
 
     } else {
@@ -139,17 +135,12 @@ if (mealchoice === "1") {
       subType = "Caesar"
 
       alert (`You have chosen no 1, Caesar salad. Fresh choice!`)
-
     } else if (saladtype === "2") {
-
       subType = "Greek"
       alert (`You have chosen no 2, Greek salad. Healthy choice!`)
-
     } else if (saladtype === "3") {
       subType = "Ham & cheese"
-
       alert (`You have chosen no 3, Ham & cheese salad. Great choice!`)
-
     } else {
       alert (`I'm sorry ${userName}, that is not a valid option. Please choose number 1, 2 or 3.`)
     }
@@ -174,28 +165,22 @@ while (!(age === "1" || age === "2")) {
     portionSize = 'adult'
 
     alert(`You have chosen an adult portion.`)
-
   } else if (age === "2") {
-
     portionSize = 'child'
 
     alert(`You have chosen a child portion.`)
-
   } else {
-
     alert (`I'm sorry ${userName}, that is not a valid option. Please choose number 1 or 2.`)
   }
 }
 
 // Step 5 - Order confirmation  I used confirmOrder.toLowercase to make sure that the user input is not case sensitive. In other words, they can write YES, yes or No, no and it will be valid. 
 
-let confirmOrder = prompt (`Do you confirm the order of ${portionSize} portion, ${subType} ${mealType}? Yes or No`)
+let confirmOrder = prompt (`Do you confirm the order of ${portionSize} portion, ${subType} ${mealType}? Confirm by writing Yes or No.`)
 
 if (confirmOrder.toLowerCase() === "yes") {
-
-  alert(`Thank you for your order, ${userName}! We will start preparing your meal now and we hope you will enjoy the food!`)
+  alert(`Thank you for your order, ${userName}! We will start preparing your meal and we hope you will enjoy the food!`)
 
 } else {
-
   alert(`You have declined the order, ${userName}. Please come back again if you want to order another time!`)
 }
