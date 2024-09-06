@@ -125,9 +125,30 @@ if (age <= 17) {
 //display the order message and the associated cost
 if (ageGroup && cost) {
   alert(`
-    You've chosen ${subFood[]} ${selectedFood} for a ${ageGroup}. The cost will be ${cost}.
+    You've chosen a ${subFood[subFoodNr-1]} for a ${ageGroup}. The cost will be ${cost}.
     `)
 }
 
 // Step 5 - Order confirmation
+let detail = `You are about to order a ${selectedFood} (${subFood[subFoodNr-1]}) for a ${ageGroup}. The cost will be ${cost}. Would you like to confirm your order?`
 
+let confirmNr = parseInt(
+  prompt(`
+    ${detail}
+    Enter a number to comfirm:
+    1 - Yes
+    2 - No
+    `)
+)
+
+if (confirmNr === 1) {
+  alert(`
+    Thank you for your order! Your delicious meal will be prepared. See you soon!👍
+  `)
+} else if (confirmNr === 2) {
+  alert(`
+    No problem. Come back and order anytime you want!🖖
+  `)
+} else {
+  alert ("Invalid entry, please select 1 for Yes or 2 for No.")  
+}
