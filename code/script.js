@@ -7,13 +7,38 @@ alert(
 )
 
 const userName = prompt("What's your name?")
-console.log("name is ", userName)
 
-alert(`Nice to meet you ${userName.toUpperCase()}!`)
+alert(
+  `Nice to meet you ${userName.toUpperCase()}!`
+)
 
 
 // Step 2 - Food choice
+const typeOfFood = parseInt(
+  prompt(`
+    What type of food would you like to order?
+    Enter a number:
+    1 - Pizza
+    2 - Pasta
+    3 - Salad
+    `)
+)
 
+let selectedFood = ""
+if (typeOfFood === 1) {
+  selectedFood = "Pizza"
+} else if (typeOfFood === 2) {
+  selectedFood = "Pasta"
+} else if (typeOfFood === 3) {
+  selectedFood = "Salad"
+} else {
+  alert("Invalid choice. Please start over again and select a valid number between 1 to 3.")
+  exit (1)
+}
+
+alert(
+  `You've chosen ${selectedFood}!`
+)
 
 // Step 3 - Subtype choice
 
