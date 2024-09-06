@@ -16,8 +16,6 @@ alert (
     `Nice to meet you ${userName.toUpperCase()}!`
   )
 
-
-
 // Step 2 - Food choice
 const typeOfFood = parseInt (
   prompt (`
