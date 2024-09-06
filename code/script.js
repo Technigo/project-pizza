@@ -9,15 +9,17 @@ alert(
 const userName = prompt("What's your name?")
 console.log("name is ", userName)
 
+alert(`Nice to meet you ${userName.toUpperCase()}!`)
+
 
 // Step 2 - Food choice
-// Your code goes here
+
 
 // Step 3 - Subtype choice
-// Your code goes here
+
 
 // Step 4 - Age
-// Your code goes here
+
 
 // Step 5 - Order confirmation
-// Your code goes here
+
