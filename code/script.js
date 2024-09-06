@@ -1,75 +1,104 @@
-// Start here
-
 // Step 1 - Welcome and introduction
 alert(
   "Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin."
 )
 
 let userName = prompt("Please enter your name:");
-// add a console log here maybe
 
 alert(`Hi, ${userName}!`)
 
 // Step 2 - Food choice
 let foodChoice = prompt("What type of food would you like to order?\nEnter a number:\n1 - Pizza\n2 - Pasta\n3 - Salad");
 
-// check user food coice
+// User food coice
+let foodName = "";
 if (foodChoice === "1") {
+  foodName = "Pizza";
   alert("You have selected Pizza!");
-
-  // Ask for pizza type only if pizza is selected
-  let pizzaType = prompt("Select a Pizza type:\nEnter a number:\n1 - Napolitana\n2 - Hawaian\n3 - Peperoni");
-  if (pizzaType === "1") {
-    alert("You have selected Napolitana!");
-  } else if (pizzaType === "2") {
-    alert("You have selected Hawaian");
-  } else if (pizzaType === "3") {
-    alert("You have selected Peperoni");
-  } else {
-    alert("Invalid choice! Please enter a number between 1 and 3.");
-  }
-
 } else if (foodChoice === "2") {
-  alert("You have selected Pasta!");
-
-  // Ask for pasta type only if pasta is selected
-  let pastaType = prompt("Select a Pasta type:\nEnter a number:\n1 - Spaghetti Carbonara\n2 - Fettuccine Alfredo\n3 - Cheesy Tortellini");
-  if (pastaType === "1") {
-    alert("You have selected Spaghetti Carbonara!");
-  } else if (pastaType === "2") {
-    alert("You have selected Fettuccine Alfredo");
-  } else if (pastaType === "3") {
-    alert("You have selected Cheesy Tortellini");
-  } else {
-    alert("Invalid choice! Please enter a number between 1 and 3.");
-  }
-
+  foodName = "Pasta";
+  alert("You've selected Pasta");
 } else if (foodChoice === "3") {
-  alert("You have selected Salad!");
+  foodName = "Salad";
+  alert("You've selected Salad");
+} else {
+  alert("Invalid choice, please enter a number between 1 and 3.");
+}
 
-  // Ask for pizza type only if pizza is selected
-  let saladType = prompt("Select a Salad type:\nEnter a number:\n1 - Ceasar Salad\n2 - Caprese Salad\n3 - Greek Salad");
-  if (saladType === "1") {
-    alert("You have selected Ceasar salad!");
-  } else if (saladType === "2") {
-    alert("You have selected Caprese Salad");
-  } else if (saladType === "3") {
-    alert("You have selected Greek salad");
+//Step 3 Subtype choice
+let subTypeChoice = "";
+let subTypeName = "";
+
+if (foodChoice === "1") {
+  // subtypes for pizza
+  subTypeChoice = prompt("Which type of Pizza would you like?\n1 - Margherita\n2 - Pepperoni\n3 - Vesuvio");
+  if (subTypeChoice === "1") {
+    subTypeName = "Margherita";
+    alert("You've selected Margherita!");
+  } else if (subTypeChoice === "2") {
+    subTypeName = "Pepperoni";
+    alert("You've selected Pepperoni!");
+  } else if (subTypeChoice === "3") {
+    subTypeName = "Vesuvio";
+    alert("You've selected Vesuvio!");
   } else {
-    alert("Invalid choice! Please enter a number between 1 and 3.");
+    alert("Invalid choice, please enter a number between 1 and 3.");
+  }
+} else if (foodChoice === "2") {
+  // subtypes for pasta
+  subTypeChoice = prompt("Which type of Pasta would you like?\n1 - Spaghetti Carbonara!\n2 - Lasagna!\n3 - Cheesy Tortellini!");
+  if (subTypeChoice === "1") {
+    subTypeName = "Spaghetti Carbonara";
+    alert("You've selected Spaghetti Carbonara!");
+  } else if (subTypeChoice === "2") {
+    subTypeName = "Lasagna";
+    alert("You've selected Lasagna!");
+  } else if (subTypeChoice === "3") {
+    subTypeName = "Cheesy Tortellini";
+    alert("You've selected Cheesy Tortellini!");
+  } else {
+    alert("Invalid choice, please enter a number between 1 and 3.");
+  }
+} else if (foodChoice === "3") {
+  //subtypes for salad
+  subTypeChoice = prompt("Which type of salad would you like?\n1 - Ceasar Salad!\n2 - Greek Salad!\n3 - Garden Salad!");
+  if (subTypeChoice === "1") {
+    subTypeName = "Ceasar Salad";
+    alert("You've selected Ceasar Salad!");
+  } else if (subTypeChoice === "2") {
+    subTypeName = "Greek Salad";
+    alert("You've selected Greek Salad!");
+  } else if (subTypeChoice === "3") {
+    subTypeName = "Garden Salad";
+    alert("You've selected Garden Salad!");
+  } else {
+    alert("Invalid choice, please enter a number between 1 and 3.");
   }
 }
 
+// Step 4 - Identify user's age 
+let userAge = prompt("Please enter your age:");
 
+//variable to store the size and price based on age
+let size = "";
+let price = "";
 
+// check if user is a child or an adult
+if (userAge >= 18) {
+  size = "adult";
+  price = 15;
+} else if (userAge > 0 && userAge < 18) {
+  size = "child";
+  price = 10;
+} else {
+  alert("Invalid input, please enter a valid age");
+}
 
-
-
-// Step 3 - Subtype choice
-// Your code goes here
-
-// Step 4 - Age
-// Your code goes here
+let confirmation = prompt(`One ${size} sized ${subTypeName} will be prepared for you. That'll be €${price}. Are you sure you want to order this?\nEnter a number to confirm:\n1 - Yes\n2 - No`);
 
 // Step 5 - Order confirmation
-// Your code goes here
+if (confirmation === "1") {
+  alert("Your order has been confirmed. Enjoy your meal!");
+} else {
+  alert("Your order has been cancelled. Feel free to order our delicious food in the future!");
+}
