@@ -4,8 +4,10 @@ The task is to create a order functionality for a fictional pizzeria using JavaS
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started with the basic logic and tried to get that to work. After that was working I started looking into how I could improve my code. I wanted to make sure the prompt asked again when the user had an invalid option and also that it would stop executing the code if the user clicked "Cancel".
+
+I also did the stretch goals and did a version where I use 'switch' instead of if/else statements.
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+[View it live here »](https://bellaitaliapizzeria.netlify.app/)
