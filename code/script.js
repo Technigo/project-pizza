@@ -68,10 +68,31 @@ while (foodType == ""){
   } 
 }
 
-alert("You have selected: " + foodType + " great choice!")
+alert("You have selected: " + foodType + ", great choice!")
 
 // Step 4 - Age
 // Your code goes here
 
+let confirm = ""
+while (confirm != "1"){
+  let age 
+  while (isNaN(age) == true ||  age < 1 || 100 < age) {
+    age = prompt("How old are you?", "Please type your age here")
+    if (isNaN(age) == true || age < 1 || 100 < age) {
+      alert("Please enter a valid age.")
+    }
+  }
+  let price, size
+  if (age > 15 ){
+    size = "an adult size "
+    price = 150
+  } else {
+    size = "a kid size "
+    price = 75
+  }
+
+  confirm = prompt("You have chosen " + size + foodType + " " + foodChoice + ". This will cost you " + price + " kr. \nIs this correct? Please enter 1 - for Yes or 2 - for No")
+    
+}
 // Step 5 - Order confirmation
 // Your code goes here
