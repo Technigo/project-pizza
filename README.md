@@ -1,6 +1,6 @@
 # Trattoria Pizzeria
 
-The task was to create an interactive JavaScript-based food ordering system where users select their name, food choices, and order details. The solution is built using JavaScript's alert() and prompt() methods to interact with the user. Conditional statements were used to handle different choices.
+An interactive JavaScript-based food ordering system where users select their name, food choices, and order details. The program is built using JavaScript's alert() and prompt() methods to interact with the user. Conditional statements were used to handle different choices.
 
 The project consists of five steps:
 
