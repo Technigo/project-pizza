@@ -1,22 +1,22 @@
-// Start here
+// Step 1 - The program starts by showing an alert() to welcome the user, and the ordering process begins after they click "OK."
 
-// Step 1 - Welcome and introduction
 alert(
-  `Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`
+  `Welcome to Jonas' pizza restaurant. When you are ready to order - Click 'OK' to start.`
 )
 
-let userName = prompt("Hi there, whats your name?");
-alert(`Hi ${userName}! Order your food in the next step`)
+// Step 2 - A prompt() asks for the user’s name, and the input is stored in the userName variable, followed by an alert() displaying a personalized greeting.
 
+let userName = prompt("Hi there, what's your name?");
+alert(`Hi ${userName}! You'll order your food in the next step.`)
+
+// This makes the variables accessible throughout the entire program.
 let selectedFood;
-let subChoice = "";  // Vi skapar subChoice här så alla kan se den!
+let subChoice = "";
 
 
-// Step 2 - Food choice
+// Step 3 - The user selects a main dish (Pizza, Pasta, or Salad) using a prompt(), and the choice is saved in the foodChoice variable. The if-else structure sets the selectedFood variable based on this input.
 
-let foodChoice = prompt(" What kind of food do you want?  1. Pizza 2. Pasta 3. Sallad ")
-
-
+let foodChoice = prompt("What kind of food do you want? 1. Pizza 2. Pasta 3. Salad")
 
 if (foodChoice === "1") {
   selectedFood = "Pizza";
@@ -25,14 +25,16 @@ else if (foodChoice === "2") {
   selectedFood = "Pasta";
 }
 else if (foodChoice === "3") {
-  selectedFood = "Sallad";
+  selectedFood = "Salad";
 } else {
   selectedFood = "unknown";
   alert("Error");
 }
 
+alert(`Thanks, you chose ${selectedFood}!`)
 
-// Step 3 - Subtype choice
+
+// Step 4 - If the user selected a main dish, a prompt() asks for a specific type (e.g., Hawaii for pizza), storing the result in the subChoice variable. The if-else structure determines which subtype is selected or sets subChoice to "Unknown" for invalid inputs.
 
 if (foodChoice === "1") {
   selectedFood = "Pizza";
@@ -67,25 +69,25 @@ if (foodChoice === "1") {
   }
 
 } else if (foodChoice === "3") {
-  selectedFood = "Sallad";
+  selectedFood = "Salad";
 
-  subChoice = prompt("What kind of sallad do you want? 1. Caesar 2. Chicken 3. Cheese & Ham");
+  subChoice = prompt("What kind of salad do you want? 1. Caesar salad 2. Chicken salad 3. Cheese & Ham salad");
 
   if (subChoice === "1") {
-    subChoice = "Caesar";
+    subChoice = "Caesar salad";
   } else if (subChoice === "2") {
-    subChoice = "Chicken";
+    subChoice = "Chicken salad";
   } else if (subChoice === "3") {
-    subChoice = "Cheese & Ham";
+    subChoice = "Cheese & Ham salad";
   } else {
-    subChoice = "Unknown sallad";
+    subChoice = "Unknown salad";
     alert("Invalid choice");
   }
 }
 
-// Step 4 - Age
+// Step 5 - The program asks the user with a prompt() whether the order is for an adult or child, storing the input in the age variable, and an if-else checks the response.
 
-let age = prompt(" Is this order for an 1. Adult or 2. Child?")
+let age = prompt("Is this order for an 1. Adult or 2. Child?")
 
 if (age === "1") {
   age = "Adult";
@@ -93,11 +95,6 @@ if (age === "1") {
   age = "Child";
 }
 
+// Step 6 - An alert() displays a confirmation message combining the userName, subChoice, and age variables to summarize the order.
 
-// Step 5 - Order confirmation
-
-alert(`Thank you, ${userName}! You have ordered a ${subChoice} for an ${age}.`);
-
-
-
-
+alert(`Thank you, ${userName}! You have ordered a ${subChoice} for an ${age}. This will be 300 SEK, you pay at the restaurant. See you soon!`);
