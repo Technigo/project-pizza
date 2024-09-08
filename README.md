@@ -1,11 +1,11 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Introduction to javascript and use of alert messages and prompt method for a simple food ordering page. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+tt was my first time using javascript so the challenge was mainly in understanding and learning the basics. The problems I ran into were mainly getting the conditional statements right, but doing to the project step by step made it easier to solve the problems along the way. 
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+https://gilded-marzipan-59036d.netlify.app/
