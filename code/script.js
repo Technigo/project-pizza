@@ -60,7 +60,7 @@ if ( parseInt(age) <= 15 ) {
 // Your code goes here
 let confirmation = confirm(`Please confirm that your name is ${person}, that the food you ordered is ${foodChoice} and ${subChoice} and that 
   you are ${age} years old `)
-  if ( confirm ) {
+  if ( confirmation === true ) {
     alert("Thank you for your order! Your food will arrive soon.")
   } else {
     alert("Sorry, please return in the future.")
