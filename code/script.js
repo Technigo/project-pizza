@@ -81,7 +81,7 @@ if (mealchoice === "1") {
 
 // Step 3 - Subtype choice for Pasta. // Added while loops to check if the user's input is not one of the valid options by using === (equals)
 
-  let pastatype = ""
+  let pastatype = ''
 
   while (!(pastatype === "1" || pastatype === "2" || pastatype === "3")) {
     
