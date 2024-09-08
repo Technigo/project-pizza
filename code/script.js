@@ -39,7 +39,7 @@ let mealType = ''
 let subType = ''
 
 if (mealchoice === "1") {
-  mealType = "Pizza"
+  mealType = "pizza"
   alert(`Thank you ${userName}, you have chosen no 1, Pizza`)
 
   // Step 3 - Subtype choice for Pizza. // Added while loops to check if the user's input is not one of the valid options by using === (strict equality operator)
@@ -52,7 +52,7 @@ if (mealchoice === "1") {
 
       1. Capricciosa 
       2. Hawaii
-      3. Kebab pizza
+      3. Kebab
     `
     )
 
@@ -65,7 +65,7 @@ if (mealchoice === "1") {
       subType = "Hawaii"
       alert(`You have chosen no 2, Hawaii. Aloha!`)
     } else if (pizzatype === "3") {
-      subType = "Kebab pizza"
+      subType = "Kebab"
       alert(`You have chosen no 3, Kebab pizza. Great choice!`)
 
     } else {
@@ -76,7 +76,7 @@ if (mealchoice === "1") {
  
 
 } else if (mealchoice === "2") {
-  mealType = "Pasta"
+  mealType = "pasta"
   alert(`Thank you ${userName}, you have chosen no 2, Pasta`)
 
 // Step 3 - Subtype choice for Pasta. // Added while loops to check if the user's input is not one of the valid options by using === (equals)
@@ -112,7 +112,7 @@ if (mealchoice === "1") {
   }
 
 } else if (mealchoice === "3") {
-  mealType = "Salad"
+  mealType = "salad"
 
   alert(`Thank you ${userName}, you have chosen no 3, Salad`)
 
