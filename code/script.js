@@ -15,7 +15,7 @@ alert(`Thank you for choosing our restaurant, ${userName.toUpperCase()}! We're h
 
 // Step 2 - What type of food
 
-// Added while loops to check if the user's input is not one of the valid options by using === ( strict equality operator)
+// Added while loops to check if the user's input is not one of the valid options by using === ( strict equality operator) and with the loop keep prompting the user until he/she provide the valid input (one of the alternative meal choices or subtypes)
 
 let mealchoice = ''
 while (!(mealchoice === "1" || mealchoice === "2" || mealchoice === "3")) {
