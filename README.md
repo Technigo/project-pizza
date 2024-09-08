@@ -12,7 +12,7 @@ The project consists of five steps:
 
 - Age Confirmation: Confirming whether the food is for an adult or a child.
 
--Order Confirmation: Asking the user to confirm their order or decline.
+- Order Confirmation: Asking the user to confirm their order or decline.
 
 ## The problem
 
