@@ -4,13 +4,13 @@ The task was to create an interactive JavaScript-based food ordering system wher
 
 The project consists of five steps:
 
--Welcome and Introduction: Welcoming the user and collecting their name.
+- Welcome and Introduction: Welcoming the user and collecting their name.
 
--Food Choice: Letting the user select a food type (Pizza, Pasta, Salad).
+- Food Choice: Letting the user select a food type (Pizza, Pasta, Salad).
 
--Subtype Choice: Choosing a subtype based on the previous food choice.
+- Subtype Choice: Choosing a subtype based on the previous food choice.
 
--Age Confirmation: Confirming whether the food is for an adult or a child.
+- Age Confirmation: Confirming whether the food is for an adult or a child.
 
 -Order Confirmation: Asking the user to confirm their order or decline.
 
