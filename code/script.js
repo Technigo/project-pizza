@@ -1,15 +1,13 @@
-// Start here
-
 // Step 1 - Welcome and introduction
-// Your code goes here
+
 const person = prompt("Please enter your name", "Harry Potter");
 
-alert(`Hi ${person}`);
+person && alert(`Hi ${person}`);
 
 // Step 2 - Food choice
 
 const food = prompt(
-  "What type of food do you want ${person}? Enter a number: 1 - Pizza 2 - Pasta 3 - Salad",
+  "What type of food do you want? Enter a number: 1 - Pizza 2 - Pasta 3 - Salad",
   ""
 );
 
@@ -23,49 +21,70 @@ if (foodNumber >= 1 && foodNumber <= 3) {
 
 // Step 3 - Subtype choice
 
-if (foodNumber === 1) {
-  const pizza = prompt(
-    `What type of pizza do you want? 1 - Margerita 2 - Capricciosa 3 - Hawaii`,
-    ""
-  );
+let selectedFoodType = "";
 
-  if (pizza === "1") {
-    const pizzaType = "Margerita";
-    alert(`${pizzaType} is a great choice!`);
-  } else if (pizza === "2") {
-    const pizzaType = "Capricciosa";
-    alert(`${pizzaType} is a great choice!`);
-  } else if (pizza === "3") {
-    const pizzaType = "Hawaii";
-    alert(`${pizzaType} is a great choice!`);
-  } else {
-    alert(`Invalid input, please choose a number between 1-3`);
+switch (food) {
+  case "1":
+    {
+      const pizza = prompt(
+        `What type of pizza do you want? 1 - Margerita 2 - Capricciosa 3 - Hawaii`,
+        ""
+      );
+      if (pizza === "1") {
+        selectedFoodType = "Margerita";
+        alert(`${selectedFoodType} is a great choice!`);
+      } else if (pizza === "2") {
+        selectedFoodType = "Capricciosa";
+        alert(`${selectedFoodType} is a great choice!`);
+      } else if (pizza === "3") {
+        selectedFoodType = "Hawaii";
+        alert(`${selectedFoodType} is a great choice!`);
+      } else {
+        alert(`Invalid input, please choose a number between 1-3`);
+      }
+    }
+    break;
+  case "2":
+    {
+      const pasta = prompt(
+        `What type of pasta do you want? 1 - Pomodoro 2 - Carbonara 3 - Arrabiata`,
+        ""
+      );
+      if (pasta === "1") {
+        selectedFoodType = "Pomodoro";
+        alert(`${selectedFoodType} is a great choice!`);
+      } else if (pasta === "2") {
+        selectedFoodType = "Carbonara";
+        alert(`${selectedFoodType} is a great choice!`);
+      } else if (pasta === "3") {
+        selectedFoodType = "Arrabiata";
+        alert(`${selectedFoodType} is a great choice!`);
+      } else {
+        alert(`Invalid input, please choose a number between 1-3`);
+      }
+    }
+    break;
+  case "3": {
+    const salad = prompt(
+      `What type of salad do you want? 1 - Cucumber 2 - Tomato 3 - Carrot`,
+      ""
+    );
+    if (salad === "1") {
+      selectedFoodType = "Cucumber salad";
+      alert(`${selectedFoodType} is a great choice!`);
+    } else if (salad === "2") {
+      selectedFoodType = "Tomoato salad";
+      alert(`${selectedFoodType} is a great choice!`);
+    } else if (salad === "3") {
+      selectedFoodType = "Carrot salad";
+      alert(`${selectedFoodType} is a great choice!`);
+    } else {
+      alert(`Invalid input, please choose a number between 1-3`);
+    }
+    break;
   }
-} else if (foodNumber === 2) {
-  const pasta = prompt(
-    `What type of pasta do you want? 1 - Pomodoro 2 - Carbonare 3 - Arrabiata`,
-    ""
-  );
-
-  const pastaNumber = Number(pasta);
-
-  if (pastaNumber >= 1 && pastaNumber <= 3) {
-    alert(`Great choice!`);
-  } else {
-    alert(`Invalid input, please choose a number between 1-3`);
-  }
-} else if (foodNumber === 3) {
-  const salad = prompt(
-    `What type of salad do you want? 1 - Cucumner 2 - Tomato 3 - Carrot`,
-    ""
-  );
-  const saladNumber = Number(salad);
-
-  if (saladNumber >= 1 && saladNumber <= 3) {
-    alert(`Great choice!`);
-  } else {
-    alert(`Invalid input, please choose a number between 1-3`);
-  }
+  default:
+    alert("Invalid food selection");
 }
 
 // Step 4 - Age
@@ -82,45 +101,12 @@ const ageString = () => {
   }
 };
 
-// const foodNames = () => {
-//   // Pizzatypes
-//   if (foodNumber === 1 && pizzaNumber === 1) {
-//     return "Pizza Margarita";
-//   }
-//   if (foodNumber === 1 && pizzaNumber === 1) {
-//     return "Pizza Capricciosa";
-//   }
-//   if (foodNumber === 1 && pizzaNumber === 1) {
-//     return "Pizza Hawaii";
-//   }
-//   // pastatypes
-//   if (foodNumber === 2 && pastaNumber === 1) {
-//     return "Pasta Pomodoro";
-//   }
-//   if (foodNumber === 2 && pastaNumber === 2) {
-//     return "Pasta Carbonara";
-//   }
-//   if (foodNumber === 1 && pastaNumber === 3) {
-//     return "Pizza Arrabiata";
-//   }
-//   // saladtypes
-//   if (foodNumber === 3 && saladNumber === 1) {
-//     return "Cucumber Salad";
-//   }
-//   if (foodNumber === 3 && saladNumber === 2) {
-//     return "Tomato Salad";
-//   }
-//   if (foodNumber === 3 && saladNumber === 2) {
-//     return "Carrot Salad";
-//   }
-// };
-
-// const foodResult = foodNames();
 const ageResult = ageString();
+
 // Step 5 - Order confirmation
 
 const confirmation =
-  prompt(`One ${foodNumber} ${ageResult} ordered! That'll be 150SEK. Do you want to proceed with the order? 
+  prompt(`One ${ageResult} ${selectedFoodType} ordered! That'll be 150SEK. Do you want to proceed with the order? 
 1 - Yes 
 2 - No `);
 
