@@ -157,6 +157,7 @@ img.onload = function () {
       alert("Order cancelled. We hope to see you again!");
     }
   }
+  // ------------Closing function startOrder---------------------
 
   // Add event listener to start the order process when "here" is clicked
   document
