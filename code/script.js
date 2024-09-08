@@ -1,8 +1,6 @@
 // Step 1 - The program starts by showing an alert() to welcome the user, and the ordering process begins after they click "OK."
 
-alert(
-  `Welcome to Jonas' pizza restaurant. When you are ready to order - Click 'OK' to start.`
-)
+alert(`Welcome to Jonas pizza restaurant. When you are ready to order - Click 'OK' to start.`)
 
 // Step 2 - A prompt() asks for the user’s name, and the input is stored in the userName variable, followed by an alert() displaying a personalized greeting.
 
