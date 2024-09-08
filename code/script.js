@@ -79,7 +79,7 @@ if (foodChoice === "1") {
 // Step 4 - Age
 // Asks the user for their age
 const age = parseInt(
-  prompt("Is this food for a child or an adult? Type your age:")
+  prompt(`One ${whatKind} it is! Is this food for a child or an adult? Type your age:`)
 );
 
 let price = "";
