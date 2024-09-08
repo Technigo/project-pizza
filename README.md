@@ -1,11 +1,14 @@
 # Project Name
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+
+The assignment was to create a site with JavaScript (my first approach to JavaScript on the boot camp) to include a bot on the page.  The main goal of the site is the introduction to JavaScript, not the layout. it's a basic site!
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Although I am on my Software engineers first course so I don't have had JavaScript yet, I have had Java course as well as C+- language course (different but with variables, strings, arrays, etc) so I have a little background on this coding problems. 
+
+If I will have had a little more time I would like to create a properly layouted bot (in a box, with the colors and the images, etc) as well as a fully web page (with all the menus and options). 
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+I have deployed the project on Netlify: https://66dde3fcd116e57b6d1fefd1--merry-gecko-a9c5af.netlify.app/
