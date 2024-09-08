@@ -1,14 +1,18 @@
 # Trattoria Pizzeria
 
-The task was to create an interactive JavaScript-based food ordering system where users select their name, food choices, and order details. The solution is built using JavaScript's alert() and prompt() methods to interact with the user. Conditional statements were used to handle different choices.
+An interactive JavaScript-based food ordering system where users select their name, food choices, and order details. The program is built using JavaScript's alert() and prompt() methods to interact with the user. Conditional statements were used to handle different choices.
 
 The project consists of five steps:
 
--Welcome and Introduction: Welcoming the user and collecting their name.
--Food Choice: Letting the user select a food type (Pizza, Pasta, Salad).
--Subtype Choice: Choosing a subtype based on the previous food choice.
--Age Confirmation: Confirming whether the food is for an adult or a child.
--Order Confirmation: Asking the user to confirm their order or decline.
+- Welcome and Introduction: Welcoming the user and collecting their name.
+
+- Food Choice: Letting the user select a food type (Pizza, Pasta, Salad).
+
+- Subtype Choice: Choosing a subtype based on the previous food choice.
+
+- Age Confirmation: Confirming whether the food is for an adult or a child.
+
+- Order Confirmation: Asking the user to confirm their order or decline.
 
 ## The problem
 
