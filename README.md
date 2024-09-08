@@ -5,7 +5,7 @@ The assignment was to create a site with JavaScript (my first approach to JavaSc
 
 ## The problem
 
-Although I am on my Software engineers first course so I don't have had JavaScript yet, I have had Java course as well as C+- language course (different but with variables, strings, arrays, etc) so I have a little background on this coding problems. 
+Although I am on my Software engineers first course I don't have had JavaScript yet, I have had Java course as well as C+- language course (different but with variables, strings, arrays, etc on use) so I have a little background on this coding problems. 
 
 If I will have had a little more time I would like to create a properly layouted bot (in a box, with the colors and the images, etc) as well as a fully web page (with all the menus and options). 
 
