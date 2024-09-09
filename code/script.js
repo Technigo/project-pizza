@@ -176,7 +176,8 @@ while (!(age === "1" || age === "2")) {
 
 // Step 5 - Order confirmation  I used confirmOrder.toLowercase to make sure that the user input is not case sensitive. In other words, they can write YES, yes or No, no and it will be valid. 
 
-let confirmOrder = prompt (`Do you confirm the order of ${portionSize} portion, ${subType} ${mealType}? Confirm by writing Yes or No.`)
+let confirmOrder = prompt (`Do you confirm the order of ${portionSize} portion, 
+  ${subType} ${mealType}? Confirm by writing Yes or No.`)
 
 if (confirmOrder.toLowerCase() === "yes") {
   alert(`Thank you for your order, ${userName}! We will start preparing your meal and we hope you will enjoy the food!`)
