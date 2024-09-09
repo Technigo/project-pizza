@@ -1,4 +1,4 @@
-function startOrder() {
+const startOrder = () => {
   // Step 1 - Welcome and introduction
   alert(`Benvenuto! Welcome! 
 Click the button below to begin your order.`);
@@ -174,4 +174,4 @@ To decline, type anything else.
   } else {
     alert("No worries, hope too see you soon again. Arrivederci!");
   }
-}
+};
