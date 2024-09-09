@@ -50,7 +50,7 @@ let subFood = []
 
 switch (selectedFood) {
   case "Pizza":
-    subFoodNr = parseInt(
+    subFoodNr = parseInt (
       prompt (`
         Select a Pizza type, enter a number:
         1 - Napolitana
@@ -86,8 +86,7 @@ switch (selectedFood) {
     break
   
   default:
-    alert ("Invalid entry, please try again. See you!")
-    exit (1)
+    alert("Invalid entry, please try again. See you!")
 }
 
 if (subFoodNr === 1) {
@@ -102,7 +101,12 @@ if (subFoodNr === 1) {
   alert (`
     You've chosen ${subFood[2]}!
   `)
+} else if (subFood !== 1 || subFood !== 2 || subFood !== 3) {
+  alert("Invalid entry, please try again. See you!")
+  exit(1)
 }
+
+// Debug and solve by adding else if alear with !== conditions/20240909
 
 // Step 4 - Age
 let age = prompt ("Is this food for a child or an adult? Type your age:")
