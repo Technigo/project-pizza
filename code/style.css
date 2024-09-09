@@ -6,15 +6,38 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background: #0026ff;
-  color: white;
+  background: linear-gradient(
+    to left,
+    #ce2b37 0%,
+    #ce2b37 33.33333333333333%,
+    #f1f2f1 33.33333333333333%,
+    #f1f2f1 66.66666666666666%,
+    #009246 66.66666666666666%,
+    #009246 99.99999999999999%
+  );
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100svh;
 }
 
-p {
-  font-size: 1.5em;
+button {
+  all: unset;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  font-weight: 500;
+  padding: 1rem 2rem;
+  margin-top: 1.5rem;
+  position: relative;
+  top: 0;
+  transition: 0.25s ease;
+  transition-property: background, top;
+
+  &:hover {
+    background-color: rgba(0,0,0,0.85);
+    top: -3px;
+  }
 }

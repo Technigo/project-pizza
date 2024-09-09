@@ -32,21 +32,24 @@ Enter a number:
     }
 
     // Parse the user's input
-    foodType = parseInt(foodInput);
+    foodType = Number(foodInput);
 
     // Assign the appropriate food type based on the user's input
-    if (foodType === 1) {
-      foodType = "Pizza";
-    } else if (foodType === 2) {
-      foodType = "Pasta";
-    } else if (foodType === 3) {
-      foodType = "Salad";
-    } else {
-      // Alert the user if an invalid selection was made
-      foodType = null;
-      alert(
-        "Sorry, that's not on the menu today. Please type 1, 2 or 3 to make your selection."
-      );
+    switch (foodType) {
+      case 1:
+        foodType = "Pizza";
+        break;
+      case 2:
+        foodType = "Pasta";
+        break;
+      case 3:
+        foodType = "Salad";
+        break;
+      default:
+        foodType = null;
+        alert(
+          "Sorry, that's not on the menu today. Please type 1, 2 or 3 to make your selection."
+        );
     }
   } while (foodType === null); // Keep asking until a valid option is chosen
 
@@ -55,23 +58,30 @@ Enter a number:
   let subFoodSelection = "";
 
   // Set the sub-food options based on the selected food type
-  if (foodType === "Pizza") {
-    subFoodTypes = `Enter a number:
+  switch (foodType) {
+    case "Pizza":
+      subFoodTypes = `Enter a number:
   1 – Margaritha
   2 – Capricciosa 
   3 – Hawaii`;
-  } else if (foodType === "Pasta") {
-    subFoodTypes = `Enter a number:
+      break;
+
+    case "Pasta":
+      subFoodTypes = `Enter a number:
   1 – Carbonara
   2 – Vongole 
   3 – Lasagna`;
-  } else if (foodType === "Salad") {
-    subFoodTypes = `Enter a number:
+      break;
+
+    case "Salad":
+      subFoodTypes = `Enter a number:
   1 – Caprese
   2 – Insalata Russa 
   3 – Giardiniera`;
-  } else {
-    subFoodTypes = null;
+      break;
+
+    default:
+      subFoodTypes = null;
   }
 
   // Use another do...while loop to get valid input for sub-food selection
@@ -81,7 +91,7 @@ ${foodType}, what an excellent choice!
 What type would you like?
           
 ${subFoodTypes}
-  `);
+`);
 
     // If user clicks cancel abort the order process
     if (subFoodInput === null) {
@@ -90,39 +100,55 @@ ${subFoodTypes}
     }
 
     // Parse the user's input
-    subFoodSelection = parseInt(subFoodInput);
+    subFoodSelection = Number(subFoodInput);
 
     // Assign the sub-food based on user's input
-    if (foodType === "Pizza") {
-      if (subFoodSelection === 1) {
-        subFoodSelection = "Margaritha";
-      } else if (subFoodSelection === 2) {
-        subFoodSelection = "Capricciosa";
-      } else if (subFoodSelection === 3) {
-        subFoodSelection = "Hawaii";
-      } else {
-        subFoodSelection = null;
-      }
-    } else if (foodType === "Pasta") {
-      if (subFoodSelection === 1) {
-        subFoodSelection = "Carbonara";
-      } else if (subFoodSelection === 2) {
-        subFoodSelection = "Spaghetti Alle Vongole";
-      } else if (subFoodSelection === 3) {
-        subFoodSelection = "Lasagne";
-      } else {
-        subFoodSelection = null;
-      }
-    } else if (foodType === "Salad") {
-      if (subFoodSelection === 1) {
-        subFoodSelection = "Caprese";
-      } else if (subFoodSelection === 2) {
-        subFoodSelection = "Insalata Russa";
-      } else if (subFoodSelection === 3) {
-        subFoodSelection = "Giardiniera";
-      } else {
-        subFoodSelection = null;
-      }
+    switch (foodType) {
+      case "Pizza":
+        switch (subFoodSelection) {
+          case 1:
+            subFoodSelection = "Margaritha";
+            break;
+          case 2:
+            subFoodSelection = "Capricciosa";
+            break;
+          case 3:
+            subFoodSelection = "Hawaii";
+            break;
+          default:
+            subFoodSelection = null;
+        }
+        break;
+      case "Pasta":
+        switch (subFoodSelection) {
+          case 1:
+            subFoodSelection = "Carbonara";
+            break;
+          case 2:
+            subFoodSelection = "Spaghetti Alle Vongole";
+            break;
+          case 3:
+            subFoodSelection = "Lasagne";
+            break;
+          default:
+            subFoodSelection = null;
+        }
+        break;
+      case "Salad":
+        switch (subFoodSelection) {
+          case 1:
+            subFoodSelection = "Caprese";
+            break;
+          case 2:
+            subFoodSelection = "Insalata Russa";
+            break;
+          case 3:
+            subFoodSelection = "Giardiniera";
+            break;
+          default:
+            subFoodSelection = null;
+        }
+        break;
     }
 
     // Alert the user if they make an invalid sub-food selection
@@ -145,7 +171,7 @@ Please enter your age.`
 
   do {
     if (Number(pizzaSize) >= 12) {
-      // Confirm adult-sized order if age is higher than 12
+      // Confirm adult-sized order if age is equal or higher than 12
       orderConfirmation = prompt(`Fantastico ${userName}! 
 Please confirm your order:
 A delicious ${subFoodSelection} ${foodType} in adult size.
