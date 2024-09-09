@@ -14,8 +14,6 @@ const foodChoice = prompt(
   "What would you like to order? Please choose a number:\n1. Pizza\n2. Pasta\n3. Salad"
 );
 
-let whatKind = ""; // This will store the specific food item
-
 // Display their food of choice
 if (foodChoice === "1") {
   alert("You've ordered a pizza!");
@@ -28,6 +26,9 @@ if (foodChoice === "1") {
 }
 
 // Step 3 - Subtype choice
+
+let whatKind = ""; // This will store the specific food item
+
 if (foodChoice === "1") {
   // if the user chooses Pizza
   whatKind = prompt(
