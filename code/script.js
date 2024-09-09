@@ -17,7 +17,7 @@ alert(`Thank you for choosing our restaurant, ${userName.toUpperCase()}! We're h
 
 // Added while loops to check if the user's input is not one of the valid options by using === ( strict equality operator) and with the loop keep prompting the user until he/she provide the valid input (one of the alternative meal choices or subtypes)
 
-let mealchoice = ''
+let mealchoice = ""
 while (!(mealchoice === "1" || mealchoice === "2" || mealchoice === "3")) {
   mealchoice = prompt(
 
@@ -35,15 +35,15 @@ while (!(mealchoice === "1" || mealchoice === "2" || mealchoice === "3")) {
   }
 }
 
-let mealType = ''
-let subType = ''
+let mealType = ""
+let subType = ""
 
 if (mealchoice === "1") {
   mealType = "pizza"
   alert(`Thank you ${userName}, you have chosen no 1, Pizza`)
 
   // Step 3 - Subtype choice for Pizza. // Added while loops to check if the user's input is not one of the valid options by using === (strict equality operator)
-  let pizzatype = ''
+  let pizzatype = "" 
 
   while (!(pizzatype === "1" || pizzatype === "2" || pizzatype === "3")) {
     pizzatype = prompt(
@@ -81,7 +81,7 @@ if (mealchoice === "1") {
 
 // Step 3 - Subtype choice for Pasta. // Added while loops to check if the user's input is not one of the valid options by using === (equals)
 
-  let pastatype = ''
+  let pastatype = ""
 
   while (!(pastatype === "1" || pastatype === "2" || pastatype === "3")) {
     
@@ -117,7 +117,7 @@ if (mealchoice === "1") {
   alert(`Thank you ${userName}, you have chosen no 3, Salad`)
 
   // Step 3 - Subtype choice for Salad
-  let saladtype = ''
+  let saladtype = ""
 
   while (!(saladtype === "1" || saladtype === "2" || saladtype === "3")) {
 
@@ -148,8 +148,8 @@ if (mealchoice === "1") {
 }
 
 // Step 4 - Portion size   // Added while loops to check if the user's input is not one of the valid options by using === (equals)
-let age = ''
-let portionSize = ''   
+let age = ""
+let portionSize = ""   
 
 while (!(age === "1" || age === "2")) {
   age = prompt(
