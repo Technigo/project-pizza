@@ -1,4 +1,4 @@
-// preloads the background img to avoid delays--------------------------
+// preloads the background img to avoid delays
 // URL of the background image
 const bgImageUrl = "trattoria.jpg";
 
