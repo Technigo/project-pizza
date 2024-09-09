@@ -1,7 +1,8 @@
 // Start here
 
 // Step 1 - Welcome and introduction
-alert(`Welcome to our Javascript Pizzeria. Ready to Start? - Click 'OK' to begin.`);
+alert(`Hey stranger! Welcome to our Pizza Popup! Ready to Start? - Click 'OK' to begin.`);
+
 // Ask the user for their name
 const name = prompt("What is your name?");
 
@@ -79,11 +80,11 @@ if (foodChoice === "1") {
 // Step 4 - Age
 // Asks the user for their age
 const age = parseInt(
-  prompt(`One ${whatKind} it is! Is this food for a child or an adult? Type your age:`)
+  prompt(`One ${whatKind} it is! Is this order for a child or an adult? Type your age:`)
 );
 
-let price = "";
-let portionSize = "";
+let price = ""; //stores the price
+let portionSize = ""; //stores the portion size (adult/child)
 
 if (age) {
   if (age <= 10) {
