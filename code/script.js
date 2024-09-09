@@ -13,7 +13,7 @@ Click the button below to begin your order.`);
 
   // Step 3 – Welcome with their name + Ask for the type of food they want to order
   // Using Do...while statement to prompt again if invalid value is entered
-  let foodType;
+  let foodType = "";
   do {
     let foodInput = prompt(`
 Ciao ${userName} 👋 
@@ -51,8 +51,8 @@ Enter a number:
   } while (foodType === null); // Keep asking until a valid option is chosen
 
   // Step 4 - Ask for the specific type of food within the chosen category
-  let subFoodTypes;
-  let subFoodSelection;
+  let subFoodTypes = "";
+  let subFoodSelection = "";
 
   // Set the sub-food options based on the selected food type
   if (foodType === "Pizza") {
@@ -141,7 +141,7 @@ Please enter your age.`
   );
 
   // Step 6 - Confirm the order details and ask for confirmation
-  let orderConfirmation;
+  let orderConfirmation = "";
 
   do {
     if (Number(pizzaSize) >= 12) {
