@@ -22,7 +22,7 @@ img.onload = () => {
       return userSelection;
     } else {
       alert("Invalid selection. Please choose a valid option.");
-      return getValidSelection(promptText, options); // Recursive call
+      return getValidSelection(promptText, options); // Recursive call, ensures that the user keeps getting prompted until they provide a valid input
     }
   };
 
@@ -121,16 +121,17 @@ img.onload = () => {
 
     while (true) {
       age = parseInt(
+        //convert a string into an integer
         prompt("Is this food for a child or an adult? Type your age:"),
         10
       );
-
+      //checks if a value is Not a Number (NaN)
       if (isNaN(age)) {
         alert("Invalid input. Please type a valid number.");
       } else {
-        ageLabel = age >= 18 ? "adult" : "child";
+        ageLabel = age >= 18 ? "adult" : "child"; //ternary operator, a shorthand way of writing an if-else
         cost = age >= 18 ? "€15" : "€10";
-        break;
+        break; // stops the loop from running further
       }
     }
 
