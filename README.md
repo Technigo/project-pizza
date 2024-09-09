@@ -30,7 +30,7 @@ Planning:
 
 Technologies:
 
-JavaScript, HTML, CSS
+- JavaScript, HTML, CSS
 
 ## View it live
 
