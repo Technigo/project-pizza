@@ -1,4 +1,4 @@
-// I have used while loops and let before const, so the variable can change in the loop. I have also assigned empty strings. 
+// I have used while loops and let before const, so the variable can change in the loop. I have also assigned empty strings. The empty string is useful since it doesn’t imply any pre-selection or default choice, which means the code will rely entirely on user input, in this case the different meal choices.  
 
 // A while loop is a control flow structure in programming that repeatedly executes a block of code as long as a given condition evaluates to true. The condition is checked before each iteration of the loop, and if the condition is false, the loop terminates.
 
@@ -17,9 +17,9 @@ alert(`Thank you for choosing our restaurant, ${userName.toUpperCase()}! We're h
 
 // Added while loops to check if the user's input is not one of the valid options by using === ( strict equality operator) and with the loop keep prompting the user until he/she provide the valid input (one of the alternative meal choices or subtypes)
 
-let mealchoice = ""
-while (!(mealchoice === "1" || mealchoice === "2" || mealchoice === "3")) {
-  mealchoice = prompt(
+let mealChoice = ""
+while (!(mealChoice === "1" || mealChoice === "2" || mealChoice === "3")) {
+  mealChoice = prompt(
 
     `What would you like to order? Choose the dish number 1, 2 or 3 according to below:
 
@@ -30,23 +30,23 @@ while (!(mealchoice === "1" || mealchoice === "2" || mealchoice === "3")) {
   )
 // If none of the valid options (!) are chosen the alert below will show)
 
-  if (!(mealchoice === "1" || mealchoice === "2" || mealchoice === "3")) {
+  if (!(mealChoice === "1" || mealChoice === "2" || mealChoice === "3")) {
     alert(`I'm sorry ${userName}, that is not a valid option. Please choose number 1, 2 or 3.`)
   }
 }
 
-let mealType = ""
+let selectedMeal = ""
 let subType = ""
 
-if (mealchoice === "1") {
-  mealType = "pizza"
+if (mealChoice === "1") {
+  selectedMeal = "pizza"
   alert(`Thank you ${userName}, you have chosen no 1, Pizza`)
 
   // Step 3 - Subtype choice for Pizza. // Added while loops to check if the user's input is not one of the valid options by using === (strict equality operator)
-  let pizzatype = "" 
+  let pizzaType = "" 
 
-  while (!(pizzatype === "1" || pizzatype === "2" || pizzatype === "3")) {
-    pizzatype = prompt(
+  while (!(pizzaType === "1" || pizzaType === "2" || pizzaType === "3")) {
+    pizzaType = prompt(
 
       `What kind of Pizza would you like? Choose between no 1, 2 or 3 according to below:
 
@@ -56,15 +56,15 @@ if (mealchoice === "1") {
     `
     )
 
-    if (pizzatype === "1") {
+    if (pizzaType === "1") {
 
       subType = "Capricciosa"
       alert(`You have chosen no 1, Capricciosa. Love your choice!`)
 
-    } else if (pizzatype === "2") {
+    } else if (pizzaType === "2") {
       subType = "Hawaii"
       alert(`You have chosen no 2, Hawaii. Aloha!`)
-    } else if (pizzatype === "3") {
+    } else if (pizzaType === "3") {
       subType = "Kebab"
       alert(`You have chosen no 3, Kebab pizza. Great choice!`)
 
@@ -75,17 +75,17 @@ if (mealchoice === "1") {
   }
  
 
-} else if (mealchoice === "2") {
-  mealType = "pasta"
+} else if (mealChoice === "2") {
+  selectedMeal = "pasta"
   alert(`Thank you ${userName}, you have chosen no 2, Pasta`)
 
 // Step 3 - Subtype choice for Pasta. // Added while loops to check if the user's input is not one of the valid options by using === (equals)
 
-  let pastatype = ""
+  let pastaType = ""
 
-  while (!(pastatype === "1" || pastatype === "2" || pastatype === "3")) {
+  while (!(pastaType === "1" || pastaType === "2" || pastaType === "3")) {
     
-    pastatype = prompt(
+    pastaType = prompt(
       `What kind of pasta would you like? Choose between no 1, 2 or 3 according to below:
 
       1. Bolognese 
@@ -94,15 +94,15 @@ if (mealchoice === "1") {
     `
     )
 
-    if (pastatype === "1") 
+    if (pastaType === "1") 
     {
       subType = 'Bolognese'
       alert(`You have chosen no 1, Bolognese. Great choice!`)
 
-    } else if (pastatype === "2") {
+    } else if (pastaType === "2") {
       subType = 'Carbonara'
       alert(`You have chosen no 2, Carbonara. Splendido!`)
-    } else if (pastatype === "3") {
+    } else if (pastaType === "3") {
       subType = 'Lasagna'
       alert(`You have chosen no 3, Lasagna. Delicious choice!`)
 
@@ -111,17 +111,17 @@ if (mealchoice === "1") {
     }
   }
 
-} else if (mealchoice === "3") {
-  mealType = "salad"
+} else if (mealChoice === "3") {
+  selectedMeal = "salad"
 
   alert(`Thank you ${userName}, you have chosen no 3, Salad`)
 
   // Step 3 - Subtype choice for Salad
-  let saladtype = ""
+  let saladType = ""
 
-  while (!(saladtype === "1" || saladtype === "2" || saladtype === "3")) {
+  while (!(saladType === "1" || saladType === "2" || saladType === "3")) {
 
-    saladtype = prompt(
+    saladType = prompt(
 
       ` What kind of salad would you like? Choose between no 1, 2 or 3 according to below:
 
@@ -131,14 +131,14 @@ if (mealchoice === "1") {
     `
     )
 
-    if (saladtype === "1") {
+    if (saladType === "1") {
       subType = "Caesar"
 
       alert (`You have chosen no 1, Caesar salad. Fresh choice!`)
-    } else if (saladtype === "2") {
+    } else if (saladType === "2") {
       subType = "Greek"
       alert (`You have chosen no 2, Greek salad. Healthy choice!`)
-    } else if (saladtype === "3") {
+    } else if (saladType === "3") {
       subType = "Ham & cheese"
       alert (`You have chosen no 3, Ham & cheese salad. Great choice!`)
     } else {
@@ -177,7 +177,7 @@ while (!(age === "1" || age === "2")) {
 // Step 5 - Order confirmation  I used confirmOrder.toLowercase to make sure that the user input is not case sensitive. In other words, they can write YES, yes or No, no and it will be valid. 
 
 let confirmOrder = prompt (`Do you confirm the order of ${portionSize} portion, 
-  ${subType} ${mealType}? Confirm by writing Yes or No.`)
+  ${subType} ${selectedMeal}? Confirm by writing Yes or No.`)
 
 if (confirmOrder.toLowerCase() === "yes") {
   alert(`Thank you for your order, ${userName}! We will start preparing your meal and we hope you will enjoy the food!`)
