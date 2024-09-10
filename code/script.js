@@ -149,7 +149,7 @@ img.onload = () => {
 
   // Add event listener to start the order process when "here" is clicked
   document.getElementById("startOrder").addEventListener("click", (event) => {
-    event.preventDefault();
+    event.preventDefault(); //the default action is stopped i.e promt
     startOrder();
   });
 };
