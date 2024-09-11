@@ -12,17 +12,15 @@ const name = prompt('What is your name?')
 alert(`Ciao ${name.toUpperCase()}, Let's get started with your order!`)
 
 // Step 2 - Food choice
-// Your code goes here
-// Step 2a
-// Prompt with a meal selection
 
+// Prompt with a meal selection
 const mealSelection = prompt(`Please, select what dish you would have us cook for you:
 
   Press: 1 - for Pizza
   Press: 2 - for Pasta
   Press: 3 - for Salad`)
 
-// Step 2b
+
 if (mealSelection === '1') {
   alert('You have selected a pizza!')
 } else if (mealSelection === '2') {
@@ -34,7 +32,6 @@ if (mealSelection === '1') {
 }
 
 // Step 3 - Subtype choice
-// Your code goes here
 
 let subChoice = '' 
 
@@ -103,10 +100,10 @@ if (mealSelection === '1') {
 
 // Step 4 - Age
 // Prompt where client is asked about their age to determine meal size
-let age = prompt(`${name}, to ensure you get full by your meal we would like to know your age. Please, type in your age and click 'OK'`)
+let age = prompt(`${name.toUpperCase()}, to ensure you get full by your meal we would like to know your age. Please, type in your age and click 'OK'`)
 
 
-if (age > 12) {
+if (age > 12) {g
   age = 'Adult sized, 120kr'
   alert(`You will be delivered an Adult sized ${subChoice}`)
   // If the age is greater than 12 the meal will become adult sized 120kr
@@ -117,4 +114,4 @@ if (age > 12) {
 }
 
 // Step 5 - Order confirmation
-// Your code goes here
+alert(`Thank you ${name.toUpperCase()}, you have ordered our ${age} ${subChoice}. Coming right up! `)
