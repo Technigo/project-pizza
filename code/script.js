@@ -79,7 +79,7 @@ if (mealSelection === '1') {
     }
 
 
-    
+
   } else if (mealSelection === '3') {
     //if the client selects Pasta to order
     subChoice = prompt(`Choose your preffered refreshing salad. 
@@ -99,8 +99,22 @@ if (mealSelection === '1') {
     } 
   }
 
+  alert(`You have chosen a ${subChoice}`)
+
 // Step 4 - Age
-// Your code goes here
+
+let age = prompt(`${name}, to ensure you get full by your meal we would like to know your age. Please, type in your age and click 'OK'`)
+
+
+if (age > 12) {
+  age = 'Adult sized'
+  alert(`You will be delivered an Adult sized ${subChoice}`)
+  // If the age is greater than 12 the meal will become adult sized 100kr
+} else if (age <= 12) {
+  age = 'Child sized'
+  alert(`You will be delivered a Child sized ${subChoice}`)
+  // If the age is smaller than 12 the meal will become children's sized 50kr
+}
 
 // Step 5 - Order confirmation
 // Your code goes here
