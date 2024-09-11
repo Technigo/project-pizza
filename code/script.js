@@ -102,18 +102,18 @@ if (mealSelection === '1') {
   alert(`You have chosen a ${subChoice}`)
 
 // Step 4 - Age
-
+// Prompt where client is asked about their age to determine meal size
 let age = prompt(`${name}, to ensure you get full by your meal we would like to know your age. Please, type in your age and click 'OK'`)
 
 
 if (age > 12) {
-  age = 'Adult sized'
+  age = 'Adult sized, 120kr'
   alert(`You will be delivered an Adult sized ${subChoice}`)
-  // If the age is greater than 12 the meal will become adult sized 100kr
+  // If the age is greater than 12 the meal will become adult sized 120kr
 } else if (age <= 12) {
-  age = 'Child sized'
+  age = 'Child sized 65kr'
   alert(`You will be delivered a Child sized ${subChoice}`)
-  // If the age is smaller than 12 the meal will become children's sized 50kr
+  // If the age is smaller than 12 the meal will become children's sized 65kr
 }
 
 // Step 5 - Order confirmation
