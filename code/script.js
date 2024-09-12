@@ -89,24 +89,15 @@ switch (selectedFood) {
     alert("Invalid entry, please try again. See you!")
 }
 
-if (subFoodNr === 1) {
+if (subFoodNr === 1 || subFoodNr === 2 || subFoodNr === 3) {
   alert (`
-    You've chosen ${subFood[0]}!
+    You've chosen ${subFood[subFoodNr-1]}!
   `)
-} else if (subFoodNr === 2) {
-  alert (`
-    You've chosen ${subFood[1]}!
-  `)
-} else if (subFoodNr === 3) {
-  alert (`
-    You've chosen ${subFood[2]}!
-  `)
-} else if (subFood !== 1 || subFood !== 2 || subFood !== 3) {
+} else {
   alert("Invalid entry, please try again. See you!")
   exit(1)
 }
-
-// Debug and solve by adding else if alear with !== conditions/20240909
+// Dry js code by using ||
 
 // Step 4 - Age
 let age = prompt ("Is this food for a child or an adult? Type your age:")
