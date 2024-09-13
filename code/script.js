@@ -148,7 +148,7 @@ img.onload = () => {
   }; // closing startOrder function----------------------------------------
 
   // Add event listener to start the order process when "here" is clicked
-  document.getElementById("startOrder").addEventListener("click", (event) => {
+  document.getElementById("start-order").addEventListener("click", (event) => {
     event.preventDefault(); //the default action is stopped i.e promt
     startOrder();
   });
