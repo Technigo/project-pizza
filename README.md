@@ -1,11 +1,37 @@
-# Project Name
+# Trattoria Pizzeria
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+An interactive JavaScript-based food ordering system where users select their name, food choices, and order details. The program is built using JavaScript's alert() and prompt() methods to interact with the user. Conditional statements and functions were used to handle different choices.
+
+The project consists of five steps:
+
+- Welcome and Introduction: Welcoming the user and collecting their name.
+
+- Food Choice: Letting the user select a food type (Pizza, Pasta, Salad).
+
+- Subtype Choice: Choosing a subtype based on the previous food choice.
+
+- Age Confirmation: Confirming whether the food is for an adult or a child.
+
+- Order Confirmation: Asking the user to confirm their order or decline.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The approach to the problem was structured into logical steps, focusing on user interaction through prompts and alerts. Each step progressively built on the previous one, guiding the user through a food ordering process.
+
+Planning:
+
+- Background Image: Preloaded to ensure smooth user experience.
+
+- Input Handling: Designed a reusable getValidSelection() function to validate user choices for food and subtypes.
+
+- Iterative Process: Built the order process step by step (welcome, food choice, subtype, age, confirmation).
+
+- Edge Case Handling: Added error handling for invalid inputs (e.g., non-numeric age, incorrect food options).
+
+Technologies:
+
+- JavaScript, HTML, CSS
 
 ## View it live
 
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+https://trattoria-pizzeria.netlify.app/
