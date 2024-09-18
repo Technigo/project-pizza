@@ -22,31 +22,33 @@ const mealChoice = prompt(
   3. Salad
   `
 )
- //Pizza
+
+let orderedFood = ""
+
+ // Pizza
 if (mealChoice === "1") {
   const pizzaChoice = prompt(
-       `Thanks, ${userName}! You wish to order Pizza!
+    `Thanks, ${userName}! You wish to order Pizza!
       
-       What type of Pizza you like to order? Please enter the number of your choice.
+     What type of Pizza you like to order? Please enter the number of your choice.
     
-          1. Capricciosa 
-          2. Hawaii
-          3. Vesuvius
-          `
-    )
-    if (pizzaChoice === "1") {
-        orderedFood = "Capricciosa pizza"
-    } else if (pizzaChoice === "2") {
-        orderedFood = "Hawaii pizza"
-    } else if (pizzaChoice === "3") {
-        orderedFood = "Vesuvius pizza"
-    } else {
-        alert("Sorry, we don't have that kind of pizza.")
-    }
+        1. Capricciosa 
+        2. Hawaii
+        3. Vesuvius
+     `
+  )
+  if (pizzaChoice === "1") {
+    orderedFood = "Capricciosa pizza"
+  } else if (pizzaChoice === "2") {
+    orderedFood = "Hawaii pizza"
+  } else if (pizzaChoice === "3") {
+    orderedFood = "Vesuvius pizza"
+  } else {
+    alert("Sorry, we don't have that kind of pizza.")
+  }
   if (orderedFood) {
     alert(`You've chosen ${orderedFood}`)
   }
-
 } else if (mealChoice === "2") {
   alert(
     `Thanks, ${userName}! You wish to order Pasta!`
