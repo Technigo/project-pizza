@@ -14,7 +14,7 @@ alert(
 )
 
 // Step 2 - Food choice
-const mealchoice = prompt(
+const mealChoice = prompt(
   `What would you like to order? Please enter the number of your choice.
   
   1. Pizza
@@ -23,8 +23,8 @@ const mealchoice = prompt(
   `
 )
  //Pizza
-if (mealchoice === "1") {
-  const pizzachoice = prompt(
+if (mealChoice === "1") {
+  const pizzaChoice = prompt(
        `Thanks, ${userName}! You wish to order Pizza!
       
        What type of Pizza you like to order? Please enter the number of your choice.
@@ -34,11 +34,11 @@ if (mealchoice === "1") {
           3. Vesuvius
           `
     )
-    if (pizzachoice === "1") {
+    if (pizzaChoice === "1") {
         orderedFood = "Capricciosa pizza"
-    } else if (pizzachoice === "2") {
+    } else if (pizzaChoice === "2") {
         orderedFood = "Hawaii pizza"
-    } else if (pizzachoice === "3") {
+    } else if (pizzaChoice === "3") {
         orderedFood = "Vesuvius pizza"
     } else {
         alert("Sorry, we don't have that kind of pizza.")
@@ -47,13 +47,13 @@ if (mealchoice === "1") {
     alert(`You've chosen ${orderedFood}`)
   }
 
-} else if (mealchoice === "2") {
+} else if (mealChoice === "2") {
   alert(
     `Thanks, ${userName}! You wish to order Pasta!`
   )
 
   //Pasta
-  const pastachoice = prompt(
+  const pastaChoice = prompt(
     `What type of Pasta you like to order ? Please enter the number of your choice.
      
      1. Spagetti Bolognese
@@ -62,11 +62,11 @@ if (mealchoice === "1") {
   `
   )
   
-  if (pastachoice === "1") {
+  if (pastaChoice === "1") {
     orderedFood = "Spagetti Bolognese"
-  } else if (pastachoice === "2") {
+  } else if (pastaChoice === "2") {
     orderedFood = "Pasta Carbonara"
-  } else if (pastachoice === "3") {
+  } else if (pastaChoice === "3") {
     orderedFood = "Fettuccine Alfredo"
   } else {
     alert("Sorry, we don't have that kind of pasta.")
@@ -75,13 +75,13 @@ if (mealchoice === "1") {
     alert(`You've chosen ${orderedFood}`)
   }
 
-} else if (mealchoice === "3") {
+} else if (mealChoice === "3") {
   alert(
     `Thanks, ${userName}! You wish to order Salad!`
   )
 
   //Salad
-  const saladchoice = prompt(
+  const saladChoice = prompt(
     `What type of Salad you like to order ? Please enter the number of your choice.
       
       1. Pasta salad 
@@ -90,11 +90,11 @@ if (mealchoice === "1") {
     `
   )
 
-  if (saladchoice === "1") {
+  if (saladChoice === "1") {
     orderedFood = "Pasta salad"
-  } else if (saladchoice === "2") {
+  } else if (saladChoice === "2") {
     orderedFood = "Noodle salad"
-  } else if (saladchoice === "3") {
+  } else if (saladChoice === "3") {
     orderedFood = "Ceaser salad"
   } else {
     alert("Sorry, we don't have that kind of salad.")
