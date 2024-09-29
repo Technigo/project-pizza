@@ -1,12 +1,11 @@
 # Project Pizza bot 
-This website is an interactive platform where you can order Pizza, kebab and sallad. 
+This website is an interactive platform where you can order Pizza,Pasta and Arancini. 
 
 
 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I had some problems with the curly brackets when to add them and not but as soon as I started commenting the code more it got more clear. 
+I also realise that I need to be quiet concentrated when coding so that I dont get stuck because of miss-spelling a variable. 
 
 ## View it live
-
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+https://sherryspizzabot.netlify.app/
