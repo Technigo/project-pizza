@@ -37,7 +37,7 @@ if (foodChoice === '1') {
     selectedFoodType = 'Margherita'
   } else if (pizzaType === '2') {
     alert('You have chosen Pepperoni!')
-    selectedFoodType = Pepperoni
+    selectedFoodType = 'Pepperoni'
   }
   else if (pizzaType === '3') {
     alert('You have chosen Hawaiian!')
@@ -92,11 +92,11 @@ if (foodChoice === '3') {
 }
 
 // Step 4 - Age
-const guestAge = prompt('Is this food for a child or an adult? Type your age:')
-const age = Number(guestAge);
+const userInputAge = prompt('Is this food for a child or an adult? Type your age:')
+const ageConvertedToNumber = Number(userInputAge);
 
 let finalPrice;
-if (guestAge >= '13') {
+if (userInputAge >= '13') {
   // Adult
   finalPrice = 15;
   alert(`One ${selectedFoodType} will be prepared for you. That'll be €15.`);
