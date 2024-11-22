@@ -1,11 +1,39 @@
-# Project Name
+# JavaScript Pizzeria & Café Order System
+This project is a hands-on exercise to practice handling user input, control structures, and basic order management in JavaScript. It implements a dynamic ordering system for a pizzeria and café using JavaScript. It allows users to choose from a range of food and drink options, while incorporating basic control flow techniques such as if, else, and switch statements.
 
-Replace this readme with your own information about your project. Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+# Key Features
+User Input: Collects the user’s name, food and drink preferences, and age to customize the order.
 
-## The problem
+Control Flow: Utilizes both if/else if and switch methods to handle different types of orders for food and drinks.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Age-based Size: Suggests meal sizes based on the user’s age (e.g., regular or kids' sizes).
+
+Flexible Options: Users can select from multiple food options (Pizza, Pasta, Salad) and drinks (Coffee, Lemonade, Juice).
+
+# How it works:
+Start: The program begins by greeting the user and prompting them for their name.
+
+Food Ordering: The user chooses from a list of food items (Pizza, Pasta, Salad). Depending on their choice, they are asked to select the specific type of food.
+
+Age Input: Based on the user’s age, the program determines the appropriate size for their order (e.g., small for kids).
+
+Drink Ordering: Users can also choose a drink from Coffee, Lemonade, or Juice, with additional selection options.
+
+Confirmation: After selecting both food and drink, the user receives a confirmation of their order with size based on age.
+
+# Technical Details
+Control Flow: The project showcases both if/else and switch control flow methods to handle multiple user inputs.
+
+Comments & Flexibility: By commenting and uncommenting specific sections of code (such as the if/else or switch statements), the program can run in different configurations, showcasing flexibility between two methods of handling logic.
+
+# Files
+index.html: The main HTML file containing the structure of the web page.
+
+style.css: The CSS file for basic styling.
+
+script.js: JavaScript code using if/else for order flow.
+
+switch.js: JavaScript code using switch statements for order flow.
 
 ## View it live
-
-Have you deployed your project somewhere? Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about
+https://pizza-pasta-salad.netlify.app/
